@@ -1,7 +1,7 @@
 {
   "project": "SC12 Rev D-2",
   "status": "Unbuilt prototype",
-  "created_utc": "2026-09-08T21:55:30.046621+00:00",
+  "created_utc": "2026-09-08T22:00:14.077257+00:00",
   "file_count": 389,
   "files": [
     {
@@ -11,8 +11,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4728,
-      "sha256": "a34e4db961d55dd1dcd1e94afd5768c650a92f4deae0f58f8400f55a1f9da64d"
+      "bytes": 7540,
+      "sha256": "7f2381af967441baeed2940c034fe45911968bc3f2aae8ff065f434d784c4c03"
     },
     {
       "path": "TOOLS.md",
@@ -56,8 +56,8 @@
     },
     {
       "path": "bom/README.md",
-      "bytes": 1424,
-      "sha256": "eff23014ba12cbffc6b4abc260285908b2718f017902d52e9d0c90b9d4dbcc32"
+      "bytes": 2185,
+      "sha256": "584a6fd914dab946820fc5b306a8854a618811a62ccb374fb585e79173aa7392"
     },
     {
       "path": "bom/catalog_china.json",
@@ -146,8 +146,8 @@
     },
     {
       "path": "examples/README.md",
-      "bytes": 2492,
-      "sha256": "7137130ced1c3a5df77f8659afca2a7c9804105b564552676610d5dcc57aa780"
+      "bytes": 2850,
+      "sha256": "df1db16f3b21ddde27bea338f12aa1dd26ebc8a3c474ab87312242916b03cdef"
     },
     {
       "path": "examples/cpp/ReadSensorExample.cpp",
@@ -196,8 +196,8 @@
     },
     {
       "path": "firmware/README.md",
-      "bytes": 3074,
-      "sha256": "431780147a2ee9e8f6f836ce32e5fcb76d86fd70ba59f5d7393aabc42fe94ddf"
+      "bytes": 3587,
+      "sha256": "4ecb27a06c4a61e20c3362a8aea8104a72e7e265e6a62a9d77301271a1b3b6ab"
     },
     {
       "path": "firmware/build/sensor_can.bin",
@@ -1436,8 +1436,8 @@
     },
     {
       "path": "output/documentation/SC12_RevD2_Handbook.pdf",
-      "bytes": 1978220,
-      "sha256": "b48e7688541206ce9ee2c56e9ed26044657c369cdf73a4ff49cf9095e41c467a"
+      "bytes": 1981400,
+      "sha256": "e3aa8e8c1ee45a83c168bdfd8be8fd015ce2335dbf4e18f2c39e89636d7dd48f"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl",
@@ -1586,8 +1586,8 @@
     },
     {
       "path": "reports/document_review.json",
-      "bytes": 950,
-      "sha256": "a1e7ac6868fb949a6647ffcc1741f91d48a0e15a5a63fb8bceff06a0b25d9750"
+      "bytes": 951,
+      "sha256": "412b1f949a74a18a1d9b001992ab41e53296ecbfb04d111e7e675fa1d7c31e9a"
     },
     {
       "path": "reports/drc/final.json",
@@ -1676,8 +1676,8 @@
     },
     {
       "path": "reports/visual_review.json",
-      "bytes": 3348,
-      "sha256": "921c03665b71efcd485e1bc409f7f03379379bcde2f11d065c74493f091fc568"
+      "bytes": 3532,
+      "sha256": "890c1febd672f7e9270a405b10929a06f3812978609d21bd71b593af357183c6"
     },
     {
       "path": "scripts/add_ground_planes.py",

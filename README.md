@@ -12,9 +12,26 @@ Rev D and D-2 provide regulated 12 V sensor power: three inputs, selectable 5 V 
 
 [Rev D-2 guide](rev_d2/README.md) · [SMT BOM](rev_d2/bom/Factory_BOM.csv) · [Hand-solder parts](rev_d2/bom/Hand_solder_BOM.csv) · [Wiring](rev_d2/docs/WIRING.md) · [Handbook](rev_d2/output/documentation/SC12_RevD2_Handbook.pdf) · [Prototype release](rev_d2/release/FRC_Sensor_CAN_RevD2_SC12_Prototype.zip) · [Factory packet](rev_d2/order/RevD2_SC12_Factory_Upload.zip)
 
-Rev D and D-2 target **6–22 V input and 300 mA shared per output rail**. Its buck-boost converter maintains nominal 12 V above and below the battery's 12 V crossing. Firmware reports qualified rail-health indications and pauses counts during power faults; Java/C++ input helpers reject stale or faulted data. Verify the exact Omron/Banner sensor model—some NPN residual-voltage limits require special attention. See the [compatibility notes](rev_d/docs/WIRING.md).
+Rev D and D-2 target **6–22 V input and 300 mA shared per output rail**. Their buck-boost converter maintains nominal 12 V above and below the battery's 12 V crossing. Firmware reports qualified rail-health indications and pauses counts during power faults; Java/C++ input helpers reject stale or faulted data. Verify the exact Omron/Banner sensor model—some NPN residual-voltage limits require special attention. See the [compatibility notes](rev_d2/docs/WIRING.md).
 
-D-2 has **107 fitted parts**; the preserved D design has 104. Both use mostly 0805 or larger passives, with four local 0402 capacitors and a fine-pitch power QFN that requires stencil/reflow work. D’s dated DigiKey quantity-one consumed-parts estimate is **$54.89**; D-2’s split purchasing basis is explained below. Board area is 14.3% above C and 18.4% below B/B-2. [Design choices and capacitor review](rev_d/docs/SIMPLIFICATION.md).
+D-2 has **107 fitted parts**; the preserved D design has 104. Both use mostly 0805 or larger passives, with four local 0402 capacitors and a fine-pitch power QFN that requires stencil/reflow work. D’s dated DigiKey quantity-one consumed-parts estimate is **$54.89**; D-2’s split purchasing basis is explained below. Board area is 14.3% above C and 18.4% below B/B-2. [Design choices and capacitor review](rev_d2/docs/SIMPLIFICATION.md).
+
+## Rev D-2 ordering and assembly
+
+**All components mount on the top side; the PCB still has four copper layers.** Factory assembly covers 98 SMT parts. You hand solder J1–J6 (six terminal blocks) and JP101/JP201/JP301 (three voltage headers), then fit three separately purchased closed-top caps.
+
+| Boards ordered | Parts purchase cost per board |
+|---|---:|
+| 1 | $55.27 |
+| 5 | $40.50 |
+| 10 | $34.69 |
+| 25 | $32.23 |
+
+These dated estimates include all SMT parts, your connectors/headers/caps and supplier purchase minimums. PCB fabrication, assembly, attrition, freight and tax are extra. A delivered price below $50 is not confirmed. [Full cost basis](rev_d2/docs/COST_REDUCTION.md).
+
+For a China SMT quote, upload the [Gerber ZIP](rev_d2/order/RevD2_SC12_Gerbers.zip), [JLCPCB BOM](rev_d2/bom/BOM_JLCPCB.csv) and [placement file](rev_d2/output/assembly/CPL_JLCPCB.csv); use the [exact-MPN BOM](rev_d2/bom/Factory_BOM.csv) to resolve unmatched parts. Buy the [hand-solder parts](rev_d2/bom/Hand_solder_BOM.csv) and [caps](rev_d2/bom/ACCESSORIES.csv) separately. Confirm component availability and destination-specific express delivery against the one-month target. [Factory instructions](rev_d2/docs/FACTORY_ORDER.md).
+
+Each power header uses one removable 2 mm cap: **pins 1–2 select 5 V; pins 2–3 select 12 V; leaving the cap off disconnects port power**. Configure only with input power disconnected. Bias and CAN termination remain solder settings. The caps are friction-retained and need vibration qualification with the final mounting arrangement. [Jumper and retention guide](rev_d2/docs/WIRING.md).
 
 ## Revision comparison
 
@@ -50,15 +67,15 @@ D-2’s one-board procurement cash is $55.27 after supplier minimums; its ten-bo
 | [BOM](bom/README.md) | [BOM](rev_b/bom/BOM_grouped.csv) | [Factory BOM](rev_b2/bom/BOM_turnkey.csv) | [BOM](rev_c/bom/BOM_grouped.csv) |
 | [Release](release/FRC_Sensor_CAN_RevA_Prototype.zip) | [Release](rev_b/release/FRC_Sensor_CAN_RevB_Prototype.zip) | [Release](rev_b2/release/FRC_Sensor_CAN_RevB2_Prototype.zip) | [Release](rev_c/release/FRC_Sensor_CAN_RevC_Lite_Prototype.zip) |
 
-Use each revision's PCB, BOM, firmware and wiring guide together. Root design directories belong to **Rev A**; the other revisions are self-contained in `rev_b/`, `rev_b2/`, `rev_c/`, `rev_d/` and `rev_d2/`. Rev C protocol v2 and Rev D protocol v3 share API numbers but have different payload validation and hardware identities. They are not interchangeable.
+Use each revision's PCB, BOM, firmware and wiring guide together. Root design directories belong to **Rev A**; the other revisions are self-contained in `rev_b/`, `rev_b2/`, `rev_c/`, `rev_d/` and `rev_d2/`. D and D-2 share firmware 0.4.0, hardware identity 4 and protocol v3. Rev C protocol v2 and D/D-2 protocol v3 share API numbers but have different payload validation and hardware identities; C firmware/drivers are not interchangeable with D/D-2.
 
 ## Horizontal push connectors and mechanical files
 
 B/B-2/C/D/D-2 use **Weidmüller 1824420000**, LSF-SMT 3.50/02/90 3.5SN BK TU, and **1824430000**, LSF-SMT 3.50/03/90 3.5SN BK TU. `/90` gives horizontal wire entry parallel to the PCB. These exact parts are THT/THR despite “SMT” in the family name; each pole has two solder legs.
 
-The renders use official manufacturer STEP geometry, aligned with the footprint pins, with project display colors. [Connector provenance](rev_d/docs/CONNECTORS.md). Rev D's conservative connector envelope is **52 × 72.1 mm**, plus wire bends, strain relief and button access. [STEP](rev_d/output/mechanical/FRC_Sensor_CAN.step) and [dimensioned drawing](rev_d/output/mechanical/mechanical_drawing.pdf) provide the nominal handoff for a later enclosure design; physical fit is untested.
+The renders use official manufacturer STEP geometry, aligned with the footprint pins, with project display colors. [Connector provenance](rev_d2/docs/CONNECTORS.md). D/D-2's conservative terminal envelope is **52 × 72.1 mm**, plus wire bends, strain relief and button access. The D-2 [STEP](rev_d2/output/mechanical/FRC_Sensor_CAN.step) and [dimensioned drawing](rev_d2/output/mechanical/mechanical_drawing.pdf) include its voltage headers; allow access to remove their caps. Physical fit is untested.
 
-![Rev D horizontal connector view](rev_d/output/review/board_connectors.png)
+![Rev D-2 horizontal connector view](rev_d2/output/review/board_connectors.png)
 
 ## Operation and verification
 
@@ -66,6 +83,6 @@ Inputs target positive 0–30 V signals with a common ground. A/B/B-2 have selec
 
 A/B/B-2/C battery outputs follow the input and can brown out industrial sensors during battery sag. **D replaces that battery output with regulated 12 V.** The board uses STM32F042 plus an external TCAN3413 transceiver and an original Team Use protocol; it is not a CTRE Phoenix/Tuner device.
 
-[Rev D qualification plan](rev_d/docs/VALIDATION.md) distinguishes native ERC/DRC, manufacturing geometry, numerical budgets and software tests from the pending physical tests and FRC integration requirements. [Revision history](REVISIONS.md), [tools](TOOLS.md), and [repository policy](CONTRIBUTING.md) explain the preserved designs and generated deliverables.
+[Rev D-2 qualification plan](rev_d2/docs/VALIDATION.md) distinguishes native ERC/DRC, manufacturing geometry, numerical budgets and software tests from the pending physical tests and FRC integration requirements. [Revision history](REVISIONS.md), [D-2 tools](rev_d2/TOOLS.md), and [repository policy](CONTRIBUTING.md) explain the preserved designs and generated deliverables.
 
 No blanket license has been selected for original project work. Third-party notices and manufacturer source provenance remain in each revision's `licenses/` and source documentation.

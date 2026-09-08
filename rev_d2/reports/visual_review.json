@@ -25,8 +25,9 @@
     },
     {
       "file": "output/documentation/SC12_RevD2_Handbook.pdf",
-      "sha256": "b48e7688541206ce9ee2c56e9ed26044657c369cdf73a4ff49cf9095e41c467a",
-      "scope": "23 pages reviewed as raster sheets; final ordering, sourcing and cost pages rechecked after edits."
+      "sha256": "e3aa8e8c1ee45a83c168bdfd8be8fd015ce2335dbf4e18f2c39e89636d7dd48f",
+      "scope": "24 pages reviewed as raster sheets after README refresh; ordering/cost tables, voltage jumper summary, firmware/driver identity and page transitions checked.",
+      "reviewed_utc": "2026-09-08T22:00:14.010943+00:00"
     },
     {
       "file": "output/documentation/BOM_RevD2_SC12.pdf",
@@ -60,5 +61,6 @@
     "Closed-top cap geometry checked against Sullins drawing 11502; 2 mm pitch and 0.50 mm square mating pins match the selected header nominal geometry.",
     "No cap STEP is included; shipped caps are loose and physical mating/retention remains untested."
   ],
-  "limitations": "Generated CAD/documents only; not physical fit, vibration, electrical qualification, solder yield or factory DFM acceptance."
+  "limitations": "Generated CAD/documents only; not physical fit, vibration, electrical qualification, solder yield or factory DFM acceptance.",
+  "documentation_refresh_utc": "2026-09-08T22:00:14.010943+00:00"
 }

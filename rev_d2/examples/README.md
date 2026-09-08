@@ -1,6 +1,8 @@
-# Rev D robot drivers and host utility
+# Rev D-2 robot drivers and host utility
 
-Java 17 and C++ examples target WPILib 2026.2.1. Rev D uses protocol **3**, firmware **0.4.0**, hardware **4**. Rev C Lite frames and the earlier four-input protocols are rejected. Copy the relevant `SensorCan12` and `SensorCan12Codec` files into a robot project, then set the same unique device ID provisioned over UART.
+Java 17 and C++ examples target WPILib 2026.2.1. D and D-2 share protocol **3**, firmware **0.4.0**, hardware **4** and the same driver interface. D-2's passive substitutions and removable voltage jumpers do not change the CAN messages. Rev C Lite frames and the earlier four-input protocols are rejected. Copy the relevant `SensorCan12` and `SensorCan12Codec` files into a robot project, then set the same unique device ID provisioned over UART.
+
+Choose each sensor's 5 V / 12 V supply using the physical jumper before operation; the drivers do not select port voltage. See the [D-2 setup guide](../README.md) and [wiring](../docs/WIRING.md).
 
 ```java
 private final SensorCan12 sensorBoard = new SensorCan12(17);
@@ -16,7 +18,7 @@ C++: `sensorcan12::SensorCan12 board{17};` then `board.ReadInput(1)` returns `st
 
 Reads do not transmit or resume telemetry. `configureRuntime` / `ConfigureRuntime` sends volatile input inversion/debounce; it does not set persistent ID. `resumeTelemetry` / `ResumeTelemetry` is an explicit action after investigating broadcast disable, not a periodic automatic retry. Status timeout is 100 ms; count/diagnostic timeout 350 ms; identity timeout 1500 ms.
 
-The Python [host tool](../host/sensor_can.py) supports UART `info`, `configure`, `resume` and passive CAN `monitor`. UART uses 3.3 V levels at 115200 8N1; disconnect adapter power. CAN monitor requires a suitable external CAN interface; a UART adapter is not a CAN interface.
+The Python [host tool](../host/sensor_can.py) supports UART `info`, `configure`, `resume` and passive CAN `monitor`. UART uses 3.3 V levels at 115200 8N1; disconnect adapter power. CAN monitor requires a suitable external CAN interface; a UART adapter is not a CAN interface. Run the following from `rev_d2/`:
 
 ```sh
 source tools/env.sh

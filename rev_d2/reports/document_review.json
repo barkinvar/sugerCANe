@@ -1,11 +1,11 @@
 {
   "result": "PASS",
-  "local_links_checked": 81,
+  "local_links_checked": 106,
   "broken_links": [],
   "pdfs": [
     {
       "file": "output/documentation/SC12_RevD2_Handbook.pdf",
-      "pages": 23,
+      "pages": 24,
       "text_within_page": true
     },
     {

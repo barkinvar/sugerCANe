@@ -9,4 +9,15 @@
 - [cost_estimate.csv](cost_estimate.csv) / [cost_detail.csv](cost_detail.csv): supplier tier/MOQ arithmetic for 1, 5, 10 and 25 boards; not a PCBA quote.
 - [catalog_china.json](catalog_china.json): dated supplier observations and source links; [substitutions.json](substitutions.json): the 27 changed placements.
 
+Pair the factory BOM with [CPL_JLCPCB.csv](../output/assembly/CPL_JLCPCB.csv) and the [Gerber ZIP](../order/RevD2_SC12_Gerbers.zip). Factory assembly is top-side SMT only. J1–J6 and JP101/JP201/JP301 are user-fitted; the complete BOM/placement drawings include them for reference.
+
+| Boards | All parts purchase cost per board | Parts purchase cost for the lot |
+|---|---:|---:|
+| 1 | $55.27 | $55.27 |
+| 5 | $40.50 | $202.49 |
+| 10 | $34.69 | $346.87 |
+| 25 | $32.23 | $805.83 |
+
+Source: [cost_estimate.csv](cost_estimate.csv), from September 7–8, 2026 observations. Includes the connectors, headers, caps and supplier minimums; rounded per-board figures may not multiply exactly to the lot totals. PCB, assembly, attrition, freight and tax are excluded.
+
 The first-tier $44.16 consumed-parts figure does not include buying minimum quantities. The one-board parts purchase model is $55.27. Factory sourcing can differ from distributor purchasing and may add attrition or procurement fees. LCSC stock and part numbers do not establish JLCPCB allocation, Basic/Extended classification or order eligibility. See [cost details](../docs/COST_REDUCTION.md) and [factory scope](../docs/FACTORY_ORDER.md).
