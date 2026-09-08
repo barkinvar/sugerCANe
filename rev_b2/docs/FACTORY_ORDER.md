@@ -1,5 +1,7 @@
 # Rev B-2 factory order instructions
 
+**Scope: Rev B-2.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b2/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 This package is ready to submit for a **prototype fabrication and turnkey assembly quotation**. Factory stock matching, panel/fixture review and placement-orientation approval remain necessary before manufacture. It is not a completed JLCPCB checkout or a qualified production release.
 
 ## Files to submit

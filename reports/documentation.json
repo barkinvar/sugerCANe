@@ -5,22 +5,22 @@
     "FRC_Sensor_CAN_RevA_Handbook.pdf": {
       "pages": 34,
       "out_of_page_words": 0,
-      "sha256": "229bf21bd679fdb4290b51352d8f245dc56364581f7e973ebb24dda4e4e55061"
+      "sha256": "e9658cce5ad0554282b80066e1a553f2ae720d152e67c4fc7dc11642a096abdf"
     },
     "BOM_RevA.pdf": {
       "pages": 4,
       "out_of_page_words": 0,
-      "sha256": "5c87cd2ef4a2ab1d5c4da3a445b10e53641787fc983246117476d6b4fcf6df44"
+      "sha256": "5b1a9c720c547e11c7702b1f6f124778ecc0a16b43d032c77a2ea1d3f1ff18cc"
     },
     "wiring_card.pdf": {
       "pages": 2,
       "out_of_page_words": 0,
-      "sha256": "3b19d5ab797663aaf1edeac2bca7c95cfa7116fe8a270b70ce2338455f5d5be5"
+      "sha256": "6b4d3c12234ceb595f5588846944e77f23ce62e657921c47c4ff6bff703bae8c"
     },
     "mounting_template.pdf": {
       "pages": 1,
       "out_of_page_words": 0,
-      "sha256": "f97aa39dcfe06f8e8fcf7a0ecf174db3a87d575c191c93204dd5f2afb1c96f57"
+      "sha256": "9fd0505ab0d2357100e54d3be66504f08bae56b46f624ea83a5bb507aa695438"
     }
   },
   "mounting_nominal_scale": {

@@ -1,5 +1,7 @@
 # Rev B-2 validation evidence
 
+**Scope: Rev B-2.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b2/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 These results apply to the supplied Rev B-2 native board and its exported files. They are computational evidence for an unbuilt prototype. Physical soldering, temperature, surge behavior, real sensor/CAN traffic and programming-cable mating remain untested.
 
 | Check | Result | Evidence |

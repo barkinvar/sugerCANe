@@ -1,5 +1,7 @@
 **Revision A prototype fabrication package**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Use the supplied Gerber X2 files and separate Excellon PTH/NPTH drills. The native KiCad board is the design authority. This package is for prototype fabrication; physical electrical/thermal qualification remains pending.
 
 | Parameter | Request |

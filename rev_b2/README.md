@@ -1,5 +1,7 @@
 # FRC Sensor CAN — Rev B-2
 
+**Scope: Rev B-2.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b2/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 **China factory-assembly variant of the horizontal-connector Rev B.** Three sensor inputs, selectable regulated 5 V or battery sensor power, a 5–22 V board-input target and a 60 × 68 mm PCB. All 144 components mount on top. This is an unbuilt prototype with a complete quotation/build-data package; factory sourcing, panel engineering and placement review are still required.
 
 ![Rev B-2 assembly](output/review/board_3d_final.png)
@@ -27,6 +29,14 @@ Budget roughly **$300–390 total for two assembled boards**, or **$435–535 fo
 
 The input range is a design target measured at the board connector under load. VBAT follows the input and is not regulated 12 V. Shared sensor budgets are 300 mA on 5 V and 300 mA on VBAT, not per-port. A low battery can stop an industrial sensor with a 10 V minimum supply. Signal inputs accept positive 0–30 V through the protected divider with common ground; logic-mode targets are LOW ≤0.8 V / HIGH ≥2.4 V. The design does not promise 1.8 V logic or CTRE Phoenix/Tuner compatibility.
 
-Native and exported-data checks are computational evidence. Actual thermal, surge, CAN, sensor and programmer tests remain pending. All shunts ship loose and all sensor-power selectors open. No physical board, purchase, factory upload or external publication has been made.
+Native and exported-data checks are computational evidence. Actual thermal, surge, CAN, sensor and programmer tests remain pending. All shunts ship loose and all sensor-power selectors open. No physical board, purchase or factory upload has been made.
 
 See [tools](TOOLS.md), [sources](docs/SOURCES_AND_LICENSES.md) and [factory requirements](docs/FACTORY_ORDER.md) before manufacturing.
+
+## Additional board views
+
+![Top assembly view](output/review/board_top.png)
+
+![Bottom board view](output/review/board_bottom.png)
+
+Connector housings use official manufacturer STEP geometry; see [connector verification](docs/CONNECTORS.md). Render colors are illustrative.

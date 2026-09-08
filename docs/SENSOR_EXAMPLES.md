@@ -1,5 +1,7 @@
 **Representative sensor checks — examples, not a tested compatibility list**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 No sensor was physically connected during this design session. These examples show how to apply the board's electrical limits to real products. They are separate from the PCB BOM and are not included in its cost. Confirm the exact purchased sensor's datasheet, cable and output behavior before use.
 
 | Example | Published electrical information | Board setup / remaining check |

@@ -7,10 +7,20 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 files = [ROOT/'README.md', ROOT/'DESIGN_PLAN.md', ROOT/'TOOLS.md']
+files += [ROOT/p for p in ['REV_A.md','TOOLS_RevA.md','REVISIONS.md','CONTRIBUTING.md'] if (ROOT/p).exists()]
 files += list((ROOT/'docs').glob('*.md'))
 files += [ROOT/p for p in ['bom/README.md', 'firmware/README.md', 'examples/README.md',
                           'hardware/design/README.md', 'output/fabrication/README.md',
                           'output/documentation/setup_worksheet.html']]
+files += [ROOT/'hardware/library/README.md']
+for directory in ['rev_b', 'rev_b2']:
+    revision = ROOT/directory
+    if not revision.exists():
+        continue
+    files += [revision/p for p in ['README.md', 'TOOLS.md', 'DESIGN_PLAN.md',
+                                    'firmware/README.md', 'examples/README.md',
+                                    'hardware/library/README.md', 'output/fabrication/README.md']]
+    files += list((revision/'docs').glob('*.md'))
 checked=[]; missing=[]
 for path in files:
     text=path.read_text()

@@ -166,35 +166,34 @@ vstim#branch                                 0
 vlogic#branch                     -3.46871e-05
 vbat#branch                       -0.000274998
 
- Reference value :  1.03122e-01
- Reference value :  2.07028e-01
- Reference value :  3.13222e-01
- Reference value :  4.17372e-01
- Reference value :  5.22451e-01
- Reference value :  6.24328e-01
- Reference value :  7.30716e-01
- Reference value :  8.37666e-01
- Reference value :  9.43696e-01
- Reference value :  1.04491e+00
- Reference value :  1.14840e+00
- Reference value :  1.25205e+00
- Reference value :  1.35756e+00
- Reference value :  1.46437e+00
- Reference value :  1.57136e+00
- Reference value :  1.67702e+00
- Reference value :  1.78421e+00
- Reference value :  1.89162e+00
- Reference value :  1.99751e+00
- Reference value :  2.10259e+00
- Reference value :  2.20876e+00
- Reference value :  2.31465e+00
- Reference value :  2.41945e+00
- Reference value :  2.52545e+00
- Reference value :  2.63074e+00
- Reference value :  2.73600e+00
- Reference value :  2.84146e+00
- Reference value :  2.94719e+00
- Reference value :  3.05541e+00
+ Reference value :  1.05427e-01
+ Reference value :  2.11507e-01
+ Reference value :  3.19732e-01
+ Reference value :  4.25892e-01
+ Reference value :  5.30092e-01
+ Reference value :  6.35951e-01
+ Reference value :  7.43386e-01
+ Reference value :  8.49857e-01
+ Reference value :  9.55627e-01
+ Reference value :  1.06348e+00
+ Reference value :  1.17075e+00
+ Reference value :  1.27799e+00
+ Reference value :  1.38341e+00
+ Reference value :  1.49150e+00
+ Reference value :  1.59975e+00
+ Reference value :  1.70611e+00
+ Reference value :  1.81427e+00
+ Reference value :  1.92161e+00
+ Reference value :  2.02900e+00
+ Reference value :  2.13689e+00
+ Reference value :  2.24611e+00
+ Reference value :  2.35465e+00
+ Reference value :  2.46191e+00
+ Reference value :  2.56863e+00
+ Reference value :  2.67522e+00
+ Reference value :  2.78368e+00
+ Reference value :  2.89006e+00
+ Reference value :  2.99730e+00
 No. of Data Rows : 650659
 ngspice-42 done
 Using SPARSE 1.3 as Direct Linear Solver

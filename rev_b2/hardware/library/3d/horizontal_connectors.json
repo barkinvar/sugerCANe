@@ -11,7 +11,7 @@
     "seated_height_mm": 8.5,
     "wire_entry": "parallel to PCB, local +Y",
     "source": "https://datasheet.weidmueller.com/pdf/en/1824420000/scope/1/",
-    "note": "Drawing body 11.7 mm, rear pin offset 1.7 mm, front pin to front body 3 mm. Larger tabulated 14.75 mm total depth reserved. Mechanical model is an original envelope, not vendor production CAD."
+    "note": "Drawing body 11.7 mm, rear pin offset 1.7 mm, front pin to front body 3 mm. Larger tabulated 14.75 mm total depth reserved. The model uses vendor STEP; see vendor_connectors.json for source and alignment."
   },
   {
     "mpn": "1824430000",
@@ -25,6 +25,6 @@
     "seated_height_mm": 8.5,
     "wire_entry": "parallel to PCB, local +Y",
     "source": "https://datasheet.weidmueller.com/pdf/en/1824430000/scope/1/",
-    "note": "Drawing body 11.7 mm, rear pin offset 1.7 mm, front pin to front body 3 mm. Larger tabulated 14.75 mm total depth reserved. Mechanical model is an original envelope, not vendor production CAD."
+    "note": "Drawing body 11.7 mm, rear pin offset 1.7 mm, front pin to front body 3 mm. Larger tabulated 14.75 mm total depth reserved. The model uses vendor STEP; see vendor_connectors.json for source and alignment."
   }
 ]

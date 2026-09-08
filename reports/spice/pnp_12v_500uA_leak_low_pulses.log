@@ -162,33 +162,33 @@ vstim#branch                                 0
 vlogic#branch                      -3.0466e-05
 vbat#branch                       -0.000274998
 
- Reference value :  1.07869e-01
- Reference value :  2.17144e-01
- Reference value :  3.28589e-01
- Reference value :  4.38049e-01
- Reference value :  5.48534e-01
- Reference value :  6.57830e-01
- Reference value :  7.70309e-01
- Reference value :  8.82465e-01
- Reference value :  9.92975e-01
- Reference value :  1.10345e+00
- Reference value :  1.21282e+00
- Reference value :  1.32285e+00
- Reference value :  1.43152e+00
- Reference value :  1.54025e+00
- Reference value :  1.64905e+00
- Reference value :  1.75758e+00
- Reference value :  1.86612e+00
- Reference value :  1.97538e+00
- Reference value :  2.08548e+00
- Reference value :  2.19415e+00
- Reference value :  2.30395e+00
- Reference value :  2.41380e+00
- Reference value :  2.52458e+00
- Reference value :  2.63417e+00
- Reference value :  2.74587e+00
- Reference value :  2.85599e+00
- Reference value :  2.96777e+00
+ Reference value :  1.11500e-01
+ Reference value :  2.22239e-01
+ Reference value :  3.33897e-01
+ Reference value :  4.45649e-01
+ Reference value :  5.57274e-01
+ Reference value :  6.68230e-01
+ Reference value :  7.79889e-01
+ Reference value :  8.88908e-01
+ Reference value :  1.00064e+00
+ Reference value :  1.11207e+00
+ Reference value :  1.22216e+00
+ Reference value :  1.33564e+00
+ Reference value :  1.44874e+00
+ Reference value :  1.56028e+00
+ Reference value :  1.67286e+00
+ Reference value :  1.78516e+00
+ Reference value :  1.89755e+00
+ Reference value :  2.00985e+00
+ Reference value :  2.12308e+00
+ Reference value :  2.23404e+00
+ Reference value :  2.34535e+00
+ Reference value :  2.45668e+00
+ Reference value :  2.56889e+00
+ Reference value :  2.67905e+00
+ Reference value :  2.79096e+00
+ Reference value :  2.90166e+00
+ Reference value :  3.01294e+00
 No. of Data Rows : 638958
 ngspice-42 done
 Using SPARSE 1.3 as Direct Linear Solver

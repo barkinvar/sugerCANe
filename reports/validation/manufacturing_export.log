@@ -39,28 +39,28 @@ Plotted to 'output/assembly/bottom_copper.svg'.
 Done.
 Plotted to 'output/assembly/schematic.pdf'.
 Done.
-15:25:09: Debug: Adding duplicate image handler for 'PNG file'
-15:25:09: Debug: Adding duplicate image handler for 'JPEG file'
-15:25:09: Debug: Adding duplicate image handler for 'TIFF file'
-15:25:09: Debug: Adding duplicate image handler for 'GIF file'
-15:25:09: Debug: Adding duplicate image handler for 'PNM file'
-15:25:09: Debug: Adding duplicate image handler for 'PCX file'
-15:25:09: Debug: Adding duplicate image handler for 'IFF file'
-15:25:09: Debug: Adding duplicate image handler for 'Windows icon file'
-15:25:09: Debug: Adding duplicate image handler for 'Windows cursor file'
-15:25:09: Debug: Adding duplicate image handler for 'Windows animated cursor file'
-15:25:09: Debug: Adding duplicate image handler for 'TGA file'
-15:25:09: Debug: Adding duplicate image handler for 'XPM file'
-15:25:09: Debug: Adding duplicate image handler for 'WebP file'
+21:36:57: Debug: Adding duplicate image handler for 'PNG file'
+21:36:57: Debug: Adding duplicate image handler for 'JPEG file'
+21:36:57: Debug: Adding duplicate image handler for 'TIFF file'
+21:36:57: Debug: Adding duplicate image handler for 'GIF file'
+21:36:57: Debug: Adding duplicate image handler for 'PNM file'
+21:36:57: Debug: Adding duplicate image handler for 'PCX file'
+21:36:57: Debug: Adding duplicate image handler for 'IFF file'
+21:36:57: Debug: Adding duplicate image handler for 'Windows icon file'
+21:36:57: Debug: Adding duplicate image handler for 'Windows cursor file'
+21:36:57: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+21:36:57: Debug: Adding duplicate image handler for 'TGA file'
+21:36:57: Debug: Adding duplicate image handler for 'XPM file'
+21:36:57: Debug: Adding duplicate image handler for 'WebP file'
 Loading hardware/FRC_Sensor_CAN.kicad_pcb
-2026-09-07 15:25:09,663 WARNING Component H3 is missing from schematic data.
-2026-09-07 15:25:09,663 WARNING Component H4 is missing from schematic data.
-2026-09-07 15:25:09,663 WARNING Component H2 is missing from schematic data.
-2026-09-07 15:25:09,663 WARNING Component H1 is missing from schematic data.
-2026-09-07 15:25:09,663 WARNING Netlist/xml file is likely out of date.
-2026-09-07 15:25:09,714 INFO Compressing pcb data
-2026-09-07 15:25:10,132 INFO Dumping pcb data
-2026-09-07 15:25:10,134 INFO Created file /home/neuro/candi-clone/hardware/../output/assembly/interactive_bom.html
+2026-09-07 21:36:57,758 WARNING Component H3 is missing from schematic data.
+2026-09-07 21:36:57,758 WARNING Component H4 is missing from schematic data.
+2026-09-07 21:36:57,758 WARNING Component H2 is missing from schematic data.
+2026-09-07 21:36:57,758 WARNING Component H1 is missing from schematic data.
+2026-09-07 21:36:57,758 WARNING Netlist/xml file is likely out of date.
+2026-09-07 21:36:57,811 INFO Compressing pcb data
+2026-09-07 21:36:58,203 INFO Dumping pcb data
+2026-09-07 21:36:58,204 INFO Created file /home/neuro/candi-clone/hardware/../output/assembly/interactive_bom.html
 STEP file 'output/mechanical/FRC_Sensor_CAN.step' created.
 
-Export time 1.173 s
+Export time 1.137 s

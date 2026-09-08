@@ -1,5 +1,7 @@
 # Firmware 0.2.0 — hardware revision B
 
+**Scope: Rev B.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Bare-metal STM32F042K6 firmware for three inputs. The fourth protocol channel is reserved and always zero. Two final 1 KiB flash pages hold redundant CRC-protected configuration. The image uses 7,148 bytes of flash and 1,832 bytes of RAM including reserved stack; these are linker allocations, not measured stack depth.
 
 From `rev_b/`:

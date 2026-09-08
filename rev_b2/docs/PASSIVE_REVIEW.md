@@ -1,5 +1,7 @@
 # Why the small components are fitted
 
+**Scope: Rev B-2.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b2/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 This design has 34 capacitors. They are not all interchangeable filtering capacitors, and the present count is not proven to be the absolute minimum. This audit retains them until a reduction has measurement evidence.
 
 | References | Job | Decision |

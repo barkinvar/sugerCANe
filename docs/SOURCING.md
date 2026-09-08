@@ -1,5 +1,7 @@
 **Regional sourcing review — observations on 2026-09-07**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 The delivered PCB BOM contains exact DigiKey order codes for every purchased component. The design favors familiar leaded packages, common passive sizes and active products. Global availability cannot be guaranteed from a catalog listing; regional storefronts can use the same warehouse, show different cached inventory, and apply different shipping/import conditions.
 
 The following additional checks support the availability preference for several critical parts. They supplement the dated US BOM rather than replacing it with mixed currencies or inconsistent timestamps.

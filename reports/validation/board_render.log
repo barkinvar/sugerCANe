@@ -71,13 +71,13 @@ Load Raytracing: layers
 Loading 3D models...
 Reload time 0.180 s
 Rendering: 15 %
-Rendering: 27 %
-Rendering: 41 %
-Rendering: 55 %
-Rendering: 70 %
-Rendering: 84 %
-Rendering: 98 %
+Rendering: 28 %
+Rendering: 42 %
+Rendering: 56 %
+Rendering: 71 %
+Rendering: 85 %
+Rendering: 99 %
 Rendering: 100 %
 Rendering: Post processing shader
-Rendering time 3.035 s
+Rendering time 3.003 s
 Successfully created 3D render image

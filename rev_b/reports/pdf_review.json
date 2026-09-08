@@ -40,9 +40,9 @@
     },
     {
       "path": "output/documentation/FRC_Sensor_CAN_RevB_Handbook.pdf",
-      "pages": 26,
+      "pages": 30,
       "outside_page_words": [],
-      "sha256": "335208e20f9bc9d582a0446e8a17307fefb2e01d3f88dd774e201790cdb92c80"
+      "sha256": "655fdb5b8613938067cb8533003d3e18d94e553bfa797bb448128d4e68145e20"
     },
     {
       "path": "output/documentation/Mechanical_RevB_1to1.pdf",

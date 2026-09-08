@@ -45,14 +45,14 @@ for pattern in [
     'reports/driver/deps/*', 'reports/driver/cpp-deps/**/*',
     'output/fabrication/*', 'output/assembly/*', 'output/mechanical/*',
     'output/documentation/*', 'output/boost_simulation.*',
-    'output/review/board_3d_final.png', 'output/review/board_top.png',
+    'output/review/board_3d_final.png', 'output/review/board_connectors.png', 'output/review/board_top.png',
     'output/review/board_bottom.png', 'output/review/size_comparison.png',
     'output/review/gerber_*',
 ]:
     add(pattern)
 
-scripts = '''build_release.py validate_release.sh build_bom.py build_bom_pdf.py
-build_handbook.py build_mechanical_template.py build_validation_summary.py audit_passives.py prepare_horizontal_connectors.py
+scripts = '''review_documents.py build_release.py validate_release.sh build_bom.py build_bom_pdf.py
+build_handbook.py build_mechanical_template.py build_validation_summary.py audit_passives.py prepare_horizontal_connectors.py import_connector_models.py
 export_manufacturing.sh export_assembly_drawing.py export_board_manifest.py
 check_design_parity.py check_programming_geometry.py verify_manufacturing.py
 verify_gerber_connectivity.py verify_gerber_geometry.py audit_power_routes.py

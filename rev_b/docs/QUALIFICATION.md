@@ -1,5 +1,7 @@
 # Prototype qualification worksheet
 
+**Scope: Rev B.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Status: **not physically built or tested**. Record board serial number, PCB lot, firmware hash, instruments, ambient temperature and operator for every run. Start with current-limited laboratory supplies and controlled loads. Exported design checks establish file consistency; they do not establish a production rating.
 
 | Test | Method and acceptance target | Measured result |

@@ -1,5 +1,7 @@
 # Purchasing and substitutions
 
+**Scope: Rev B.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 The grouped BOM and DigiKey import CSV specify exact manufacturer and distributor part numbers. The estimate is **$59.30 per board in components**, using conservative single-unit prices, including ten 2 mm configuration shunts. PCB fabrication, stencil, tax, freight, tools, programming cable and assembly are excluded. This is a dated engineering estimate, not a reserved-stock quote.
 
 Prices and inventory were observed on 2026-09-07/08. Regional DigiKey listings can expose different quantities, currencies and pack sizes. The selected parts favor established manufacturers and common leaded packages; global availability is a sourcing preference, not a guarantee. Recheck exact MPN, currency, cut-tape quantity, lifecycle and delivery location before placing an order.

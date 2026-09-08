@@ -1,5 +1,7 @@
 **Validation status — revision A prototype, 2026-09-07**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 The editable design, exports and software have been checked computationally. **No physical PCB, sensor, CAN adapter or roboRIO was available for bench validation.** Passing software/design checks does not establish electrical ratings, EMC compliance, assembly yield or competition approval.
 
 | Check | Result | Evidence and scope |

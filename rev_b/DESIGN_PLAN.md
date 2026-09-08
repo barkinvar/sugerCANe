@@ -1,3 +1,7 @@
+# Rev B fabrication files
+
+**Scope: Rev B.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Revision B compact redesign, started 2026-09-08 UTC.
 
 User priorities: substantially smaller than 96 x 96 mm, three inputs acceptable,
@@ -5,7 +9,7 @@ User priorities: substantially smaller than 96 x 96 mm, three inputs acceptable,
 5 V / battery sensor supply selection. Retain industrial and 3.3/5 V detection,
 repairable hand assembly, DigiKey sourcing, and original CAN firmware.
 
-Design decisions under implementation:
+Implemented design decisions (physical qualification pending):
 
 - Three sensor channels; retain a reserved zero fourth slot in the wire protocol.
 - Selected 60 x 68 mm; 55.7% less board area than the 96 x 96 mm revision A.

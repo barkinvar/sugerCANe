@@ -1,5 +1,7 @@
 **Programming, mounting and bench accessories**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 These are reusable tools and mounting supplies, separate from the board's US$49.61 component estimate. Use equipment already owned when it meets the stated requirements. The [accessory CSV](../bom/Accessories_DigiKey.csv) records exact order codes and dated observations; nothing has been purchased.
 
 | Item | Selected part | Observed USD | Purpose |

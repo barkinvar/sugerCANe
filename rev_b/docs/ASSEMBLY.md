@@ -1,5 +1,7 @@
 # Rev B assembly and bring-up
 
+**Scope: Rev B.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Use the exact Rev B BOM and board files together. Rev A has a different outline, connectors, comparator supply and power conversion. Do not mix the revisions.
 
 1. Check the bare board, paste openings and drill sizes against the assembly drawing. Confirm that the terminal footprints have two plated holes per pole and that J8 has three nonplated alignment holes.

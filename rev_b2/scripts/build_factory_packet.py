@@ -67,6 +67,7 @@ files={
     'docs/WIRING.md':'WIRING.md','docs/FACTORY_ORDER.md':'FACTORY_ORDER.md',
     'docs/PART_CHANGES.md':'PART_CHANGES.md',
     'docs/CAN_PROTOCOL.md':'CAN_PROTOCOL.md',
+    'docs/TIMING.md':'TIMING.md',
     'firmware/README.md':'PROGRAMMING.md',
     'firmware/build/sensor_can.hex':'sensor_can.hex','firmware/build/sensor_can.bin':'sensor_can.bin',
     'sources/weidmuller_horizontal_1824420000.pdf':'connector_1824420000.pdf',
@@ -80,4 +81,20 @@ with zipfile.ZipFile(R/'order/RevB2_Factory_Upload.zip','w',zipfile.ZIP_DEFLATED
         p=R/path;z.write(p,name)
         hashes.append(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {name}')
     z.writestr('SHA256SUMS.txt','\n'.join(hashes)+'\n')
+with zipfile.ZipFile(R/'order/RevB2_Factory_Upload.zip') as z:
+    import posixpath
+    import re
+    assert z.testzip() is None
+    names = set(z.namelist())
+    for line in z.read('SHA256SUMS.txt').decode().splitlines():
+        digest, name = line.split('  ', 1)
+        assert hashlib.sha256(z.read(name)).hexdigest() == digest, name
+    for name in names:
+        if not name.endswith('.md'):
+            continue
+        for target in re.findall(r'!?\[[^\]]*\]\(([^)]+)\)', z.read(name).decode()):
+            if re.match(r'^[a-z]+:|^#', target):
+                continue
+            destination = posixpath.normpath(posixpath.join(posixpath.dirname(name), target.split('#')[0]))
+            assert destination in names, (name, target)
 print(R/'order/RevB2_Factory_Upload.zip')

@@ -152,7 +152,7 @@ toc = TableOfContents()
 toc.levelStyles = [ParagraphStyle('TOC', fontName='Guide', fontSize=10, leading=19, textColor=INK)]
 story.extend([toc, PageBreak()])
 chapters = [
-    ('1  Product overview', 'README.md'),
+    ('1  Product overview', 'REV_A.md'),
     ('2  Architecture and design choices', 'docs/ARCHITECTURE.md'),
     ('3  Wiring and jumper settings', 'docs/WIRING.md'),
     ('4  Purchasing and accessories', 'docs/ACCESSORIES.md'),

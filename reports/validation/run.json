@@ -1,10 +1,10 @@
 {
-  "completed_utc": "2026-09-07T22:25:50.675998+00:00",
+  "completed_utc": "2026-09-08T04:37:37.691031+00:00",
   "result": "PASS",
   "physical_validation": "NOT PERFORMED",
   "sha256": {
     "bom/BOM_grouped.csv": "754340df5c834ab62cefd61eb28ab86b40c1e5aa34d8b95807f82f3e306cf474",
-    "examples/README.md": "61924b4793dcb5d00c857348aea6d226ea331d49bd0719ffc9dc3aa83c551dea",
+    "examples/README.md": "95436cf1dbfba490950a3b6c709ea3d3db8518b20b2df2c4973cc09f2954b852",
     "examples/cpp/IntakeSensorExample.cpp": "a277561d3af8082e6c66f6c46ce988a4db85a348ac25de8f455c513148271b7f",
     "examples/cpp/include/SensorCan.h": "23368af5a6b5795bf40fe5a00a048c60a2a04a5abe3593d221911e7243fad447",
     "examples/cpp/include/SensorCanCodec.h": "81ac55a7f5bb9afbbec5ad7326f23e36d7711239c814550fefc45cbd0b006d75",
@@ -98,7 +98,7 @@
     "hardware/library/FRC_Sensor_CAN.pretty/TestPoint_Pad_D2.0mm.kicad_mod": "0a1ce94753a7b270c8ff6c20698b4de7ce95606b643549926acc04bb698d0120",
     "hardware/library/FRC_Sensor_CAN.pretty/Wuerth_691137710002.kicad_mod": "e310e6da32b7f6f43a22e5dfdda7a9c501aef46ac6fb40eb9262cc694dc04841",
     "hardware/library/FRC_Sensor_CAN.pretty/Wuerth_691137710003.kicad_mod": "efc030aa535cce706a1db77b5c99b693b4ba6e484d8db3ac51b92e96d7bea570",
-    "hardware/library/README.md": "abd7f3e9f2331b33d0b81ea6e32e01904ddc371dc835c8fc0338dc4ffbc5579c",
+    "hardware/library/README.md": "98a51bc879b186c95fea4918164b5b52dfdf26e9697fb6a57e3ca97de0a54427",
     "hardware/library/footprint_provenance.json": "0802d2104b8c5c07cab810001bc7dbd3d3b90785e8bcd85e54ffa1738eebad52",
     "hardware/power.kicad_sch": "22fa70f36365ee0d5de276cc10b0be9532aa95d2a38621edb3f77144b866353d",
     "hardware/sensor_power.kicad_sch": "ed88bed7c4d332833e40a863678a0787ec89693ad9e237eda267ae0c0ccbf923",

@@ -3,7 +3,7 @@
   "source_manifest_sha256": "d8b0ae39405aa3ddc4fe0d4ce337a4715b26e143bea86bb3aa2c7ba649c8d170",
   "method": "Connector/pin positions and mounting centers read from PCB manifest; jumper examples use native top-view orientation.",
   "files": {
-    "wiring_card.pdf": "3b19d5ab797663aaf1edeac2bca7c95cfa7116fe8a270b70ce2338455f5d5be5",
-    "mounting_template.pdf": "f97aa39dcfe06f8e8fcf7a0ecf174db3a87d575c191c93204dd5f2afb1c96f57"
+    "wiring_card.pdf": "6b4d3c12234ceb595f5588846944e77f23ce62e657921c47c4ff6bff703bae8c",
+    "mounting_template.pdf": "9fd0505ab0d2357100e54d3be66504f08bae56b46f624ea83a5bb507aa695438"
   }
 }

@@ -1,8 +1,10 @@
 # Firmware 0.2.0 — hardware revision B
 
+**Scope: Rev B-2.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b2/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Bare-metal STM32F042K6 firmware for three inputs. The fourth protocol channel is reserved and always zero. Two final 1 KiB flash pages hold redundant CRC-protected configuration. The image uses 7,148 bytes of flash and 1,832 bytes of RAM including reserved stack; these are linker allocations, not measured stack depth.
 
-From `rev_b/`:
+From `rev_b2/`:
 
 ```sh
 source tools/env.sh
@@ -20,7 +22,7 @@ openocd -f interface/stlink.cfg -f target/stm32f0x.cfg \
   -c 'program firmware/build/sensor_can.elf verify reset exit'
 ```
 
-This has not been exercised on physical Rev B hardware. Verify target identity, voltage and flash readback. Normal application updates preserve configuration; a full-chip erase removes it.
+This has not been exercised on physical Rev B/B-2 hardware. Verify target identity, voltage and flash readback. Normal application updates preserve configuration; a full-chip erase removes it.
 
 For UART, connect a 3.3 V adapter's TX→J8.2, RX→J8.3, ground→J8.8 or 10. Leave adapter power disconnected. UART is 115200 baud, 8N1.
 
@@ -30,7 +32,7 @@ python host/sensor_can.py configure --port /dev/ttyUSB0 \
   --device 17 --invert 1 --debounce 2 --rails 0
 ```
 
-Device IDs are 0–63 and must be unique for this Team Use protocol. Rev B inversion masks are 0–7; bit 0 is sensor 1. Debounce is 1–100 ms. Rail masks: 0=off, 1=5 V, 2=VBAT, 3=both. Voltage selection is physical. UART `SET id invert debounce_ms rails` disables rails, writes configuration, and resets. A stored nonzero rail mask enables those rails after ordinary startup; provision rails=0 until wiring is verified. Avoid repeated persistent writes from robot code.
+Device IDs are 0–63 and must be unique for this Team Use protocol. Rev B/B-2 inversion masks are 0–7; bit 0 is sensor 1. Debounce is 1–100 ms. Rail masks: 0=off, 1=5 V, 2=VBAT, 3=both. Voltage selection is physical. UART `SET id invert debounce_ms rails` disables rails, writes configuration, and resets. A stored nonzero rail mask enables those rails after ordinary startup; provision rails=0 until wiring is verified. Avoid repeated persistent writes from robot code.
 
 Unconfigured boards keep both rails off and CAN in standby. Valid configuration enables the original 1 Mbit/s, 29-bit Team Use protocol. Inputs are sampled at 1 kHz; counters report debounced logical rising edges. Input LEDs show logical state. This is not an encoder, IO-Link or analog-input device.
 

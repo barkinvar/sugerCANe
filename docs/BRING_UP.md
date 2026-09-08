@@ -1,5 +1,7 @@
 **Revision A bench qualification worksheet**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 No physical board has been assembled or tested in this project session. Every item below is **pending** until someone records actual measurements. Start with the robot disconnected and use a current-limited bench supply. Save scope captures, board serial number, firmware hash, ambient temperature, load and instrument settings with the results.
 
 | Stage | Procedure | Initial acceptance target / action |

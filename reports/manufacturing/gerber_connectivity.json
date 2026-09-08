@@ -17,6 +17,6 @@
   "opens": {},
   "unassigned_copper_islands": 0,
   "unassigned_copper_area_mm2": 0.0,
-  "elapsed_seconds": 0.8846347549988423,
+  "elapsed_seconds": 0.8570384180056863,
   "limitations": "Plated holes represented as connected filled pad centers; no barrel manufacturing defect, annular-ring fracture, impedance, thermal or EMC model. Positive Gerber primitives only."
 }

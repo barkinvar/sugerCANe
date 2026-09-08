@@ -1,5 +1,7 @@
 **Rev B: use channels 0–2.** The shared version-1 wire format and driver arrays retain a fourth slot, which this board always reports as zero. Identity hardware=2 distinguishes this variant; runtime inversion masks are 0–7.
 
+**Scope: Rev B.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 **Robot integration — WPILib 2026.2.1**
 
 The Java and C++ interfaces read this board's original Team Use CAN protocol. They compile against WPILib 2026.2.1 APIs. Host tests replace the transport boundary; an actual roboRIO integration test remains required.

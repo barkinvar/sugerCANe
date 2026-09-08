@@ -13,7 +13,7 @@ PASS UART RX overflow ordering and bounded TX buffer under flooding
 PASS ADC-ready timeout and implausible supply-reference rejection
 {
   "result": "PASS",
-  "elapsed_seconds": 0.5745724379958119,
+  "elapsed_seconds": 0.6831671260297298,
   "emulator": "Unicorn2.1.4 Cortex-M0",
   "elf_sha256": "d58ada4002975da6d8e41c80af224715ea29de41e732ed74fd06a7cd40b4d5ea",
   "binary_sha256": "f5cd4308fa73eef40a8ac2783e90ea543ca056f57f967ec074adc38461027011",

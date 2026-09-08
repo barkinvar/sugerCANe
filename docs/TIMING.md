@@ -1,5 +1,7 @@
 **Sensor timing and short pulses — revision A**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Voltage compatibility does not establish how short a beam interruption the complete robot program can observe. This revision samples inputs every 1 ms, applies a configurable 1–100 ms debounce, sends status every 10 ms, and sends each pair of rising-edge counters every 100 ms. The service example selects 2 ms debounce.
 
 The additional pulse study uses the same seven typical comparator circuits as the input-transient analysis, both pulse polarities, 84 widths from 0.25 to 15 ms, four debounce settings, and 100 sample phases. The sampled comparator output is passed through the actual compiled production debounce code. There are 470,400 pulse/setting/phase decisions. Every recognized pulse is counted once; the study also checks that increasing pulse width beyond the first fully captured test point does not lose capture.

@@ -39,6 +39,8 @@ summary={'observation_date':'2026-09-07','board_components_to_purchase':len(per_
 (ROOT/'bom/catalog_selected.json').write_text(json.dumps({r['mpn']:CATALOG[r['mpn']] for r in rows},indent=2)+'\n')
 text=f'''# Revision A purchasing files
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 All {len(rows)} purchase lines have a DigiKey order code. The board uses {len(per_ref)} fitted components; buy 13 configuration shunts separately. Ten test pads and four mounting holes are PCB features.
 
 Indicative one-board parts total: **US${total:.2f}**, calculated conservatively using catalog quantity-one prices for every unit. This excludes PCB fabrication, stencil, shipping, tax, tools and mounting hardware. It is not a live quote. Stock and price observations were collected 2026-09-07; some distributor pages are indexed snapshots and disagree across regions. Reconfirm the exact SKU in a cart before ordering.

@@ -1,5 +1,7 @@
 **Robot integration — WPILib 2026.2.1**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 The Java and C++ interfaces read this board's original Team Use CAN protocol. They compile against WPILib 2026.2.1 APIs. Host tests replace the transport boundary; an actual roboRIO integration test remains required.
 
 For Java, copy `java/src/main/java/frc/robot/sensors/SensorCan.java` and `SensorCanCodec.java` into the matching package in a Java 17 robot project. Construct one `SensorCan` per physical board as a subsystem member, using the ID provisioned through UART. `status()`, `diagnostic()`, `counts12()`, `counts34()` and `identity()` return `Optional<Sample<...>>`. Missing, malformed or stale data returns empty. Close the object when disposing the subsystem.

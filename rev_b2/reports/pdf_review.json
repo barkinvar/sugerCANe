@@ -40,15 +40,15 @@
     },
     {
       "path": "output/documentation/FRC_Sensor_CAN_RevB2_Handbook.pdf",
-      "pages": 26,
+      "pages": 30,
       "outside_page_words": [],
-      "sha256": "5880f57d8defc18ffd23451200f3e10dcef065eb07f8203883c442b5cdceb72c"
+      "sha256": "c766b8eacb90914046311f72062470f4099f294195edd3a0cb214557db17d686"
     },
     {
       "path": "output/documentation/Factory_RevB2.pdf",
       "pages": 4,
       "outside_page_words": [],
-      "sha256": "a6e83f2eda9466a9ca4d223b9769d4fbd3153440c4931e2e12b41314a946dc15"
+      "sha256": "cbeaf297ae099cc56eb43faf0cb5bec11f4b470c67889f4bd0f9c2a5eacdb6b6"
     },
     {
       "path": "output/documentation/Mechanical_RevB2_1to1.pdf",

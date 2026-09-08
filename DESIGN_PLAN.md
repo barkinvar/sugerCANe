@@ -1,5 +1,9 @@
 **FRC industrial sensor to CAN interface — design and verification plan**
 
+This is the original Rev A planning record. Candidate parts and early options below are historical; the final [Rev A architecture](docs/ARCHITECTURE.md) and [revision comparison](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md) describe the delivered designs.
+
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Prepared 2026-09-07. This is the original planning record. The subsequent routed prototype, BOM, firmware and computational checks are now complete as described in [README.md](README.md) and [VALIDATION.md](docs/VALIDATION.md). Physical hardware validation remains pending. Targets and candidate parts below document the planning stage; the final architecture and BOM control the delivered revision.
 
 Build an original, repairable CAN sensor interface using DigiKey-orderable components. Prioritize reliable photoelectric-sensor detection, FRC integration, straightforward hand assembly, and replacement-part availability. Optimize total assembled cost, including connectors, protection, programming equipment, and rework—not just the microcontroller price.

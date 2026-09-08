@@ -1,5 +1,7 @@
 **Revision A wiring and configuration**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 The [offline setup worksheet](../output/documentation/setup_worksheet.html) can produce a per-channel jumper table and a UART provisioning command for the common modes below. The [two-page bench card](../output/documentation/wiring_card.pdf) shows the actual top-view connector orientation and six illustrated jumper examples.
 
 Disconnect board power before moving jumpers or wiring terminals. Use the square pad, pin number and assembly drawing to identify pin 1; connector orientation on the page is not a pin-number definition.

@@ -1,3 +1,7 @@
+# Rev B fabrication files
+
+**Scope: Rev B.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Rev B has three physical channels. Only inversion/state bits 0–2 are used. The fourth state bit and fourth counter slot stay zero for protocol compatibility. Firmware identity is 0.2.0, hardware 2.
 
 **FRC Sensor CAN protocol version 1**

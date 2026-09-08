@@ -165,6 +165,7 @@ chapters = [
  ('11  Tools and reproduction','TOOLS.md'),
  ('12  Capacitor review','docs/PASSIVE_REVIEW.md'),
  ('13  Sources and notices','docs/SOURCES_AND_LICENSES.md'),
+ ('Connector geometry and sourcing','docs/CONNECTORS.md'),
 ]
 
 for i, (title, path) in enumerate(chapters):

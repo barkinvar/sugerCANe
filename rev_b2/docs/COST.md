@@ -1,5 +1,7 @@
 # Rev B-2 China assembly budget
 
+**Scope: Rev B-2.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b2/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 These are USD engineering estimates dated 2026-09-08, not a submitted quotation. The PCB has not been physically qualified. Pricing assumes full SMT and through-hole assembly, ENIG, bagged shunts and ordinary international shipping; destination taxes and tariffs are excluded.
 
 JLCPCB publishes a minimum of **two assembled boards**. If you only need one, the first realistic JLCPCB order still pays for two. The one-board row in the CSV is hypothetical and must not be treated as an available service. PCBWay's current capability page publishes a five-piece minimum.

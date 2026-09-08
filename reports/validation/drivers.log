@@ -7,7 +7,7 @@ test_uart_cli_real_pty (test_sensor_can.ProtocolTests.test_uart_cli_real_pty)
 Run the actual CLI against a simulated ASCII board over Linux PTY. ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 2.151s
+Ran 5 tests in 2.208s
 
 OK
 PASS C++ codec and driver: 75828 assertions; WPILib2026.2.1 headers, simulated transport

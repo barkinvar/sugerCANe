@@ -1,5 +1,7 @@
 # Rev B tools and reproduction
 
+**Scope: Rev B.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 The saved native schematic and routed PCB are authoritative. Reproduction starts with those files and regenerates reports and exports; it does not rerun the placement experiments or autorouter.
 
 Tools used: KiCad 10.0.6 with matching Python bindings and standard libraries, Arm GNU GCC 13.2.1, GNU make, ngspice 42, Python 3.12, Java 17, native GCC/G++ with sanitizers, InteractiveHtmlBom 2.11.2 and Poppler. Python packages are pinned in `tools-requirements.lock`. Freerouting 2.4.1 and CadQuery 2.8.0 were design aids. Manufacturing verification uses Gerbonara 1.6.3 and Shapely 2.1.2; the DC ground estimate uses PyAMG 5.3.0.
@@ -44,4 +46,13 @@ python scripts/build_bom_pdf.py
 python scripts/build_handbook.py
 ```
 
-The documentation uses local DejaVu fonts from the standard Linux font directory. The PCB models resolve through `${KIPRJMOD}/library/3d`; they should not require this development machine's paths. Custom connector and inductor STEP files are nominal envelopes, not manufacturer-certified tooling models.
+The documentation uses local DejaVu fonts from the standard Linux font directory. The PCB models resolve through `${KIPRJMOD}/library/3d`; they should not require this development machine's paths. Horizontal /90 connector models use manufacturer STEP geometry with a rigid translation and project colors; run `python scripts/import_connector_models.py` to recreate them. Other custom models, including inductors, remain nominal envelopes. CAD checks do not establish physical fit.
+
+To check refreshed documentation and package the revision, run:
+
+```bash
+python scripts/review_documents.py
+python scripts/build_release.py
+```
+
+The review checks local links in every maintained guide and PDF text bounds; visually inspect the affected pages too.

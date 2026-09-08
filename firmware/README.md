@@ -1,5 +1,7 @@
 **Firmware 0.1.0 for revision A**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 This is a small bare-metal STM32F042K6 firmware, built with Arm GNU Toolchain 13.2.Rel1. ST CMSIS device files and Arm CMSIS headers are included with their licenses. The final two 1 KiB flash pages are reserved for redundant configuration records; the application linker permits 30 KiB of code and 6 KiB of RAM.
 
 From the repository root:

@@ -19,7 +19,7 @@ bottom 753 primitives, 97 copper islands
   "opens": {},
   "unassigned_copper_islands": 0,
   "unassigned_copper_area_mm2": 0.0,
-  "elapsed_seconds": 0.8846347549988423,
+  "elapsed_seconds": 0.8570384180056863,
   "limitations": "Plated holes represented as connected filled pad centers; no barrel manufacturing defect, annular-ring fracture, impedance, thermal or EMC model. Positive Gerber primitives only."
 }
 Analytic rectangular-sheet calibration PASS: 1.9000000000000046 squares
@@ -94,7 +94,7 @@ Analytic rectangular-sheet calibration PASS: 1.9000000000000046 squares
         "R307.2": 0.7532410934391488,
         "R407.2": 0.6796630167478153
       },
-      "elapsed_seconds": 6.492297755001346
+      "elapsed_seconds": 6.377451043983456
     },
     {
       "mesh_mm": 0.1,
@@ -143,22 +143,22 @@ Analytic rectangular-sheet calibration PASS: 1.9000000000000046 squares
         "R307.2": 0.7453021332450257,
         "R407.2": 0.6722409768318078
       },
-      "elapsed_seconds": 13.528210232994752
+      "elapsed_seconds": 13.215703708992805
     }
   ],
   "limitations": "Grid boundaries and equipotential contacts approximate actual geometry. Filled pad interiors omit hole voids. DC only: no inductance, ground bounce, contact resistance, thermal rise, manufacturing tolerance or EMI model. Mesh convergence is a numerical sensitivity check, not hardware validation.",
   "maximum_route_change_fraction": 0.04376748799962394,
   "sha256": {
-    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "985b19d1d77e653e6a1bbd0a930d64b698f4235e953a1814cddd7f32db6c5dc4",
-    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "fad321815242cc858161b420d68e338d9f8c36feb203a11d7968564a52ef2c01",
-    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "548ae060eb405cef7c17a210ed3190cda8235e48c19956f763cfaf14b03a36f6",
-    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "489daa2e72d948d59d8abb95dacf9c30f036e70ee7047fb9af5cdb1c45779601",
-    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "afa07fbd880abcd00ff54845dc4aa3dcbafa5859d672d48ca21633c7f5969ba4",
-    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "bd01e792b05e0ea91b317722e6ae067616256cfcef5a0395be9b004daad5ca92",
-    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "8bb7dce0db0d88c88ec8491f62be9d36f99915c87cd2ddc78302ff9acb492f22",
-    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "4ff5dc27ac85a22a9146494386181915189fcb60ab902f72852efb9aa9411355",
-    "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": "063c6901dac0dce83c0fd821e205afabfae1a0d4b267979f4904277a8a72d8ee",
-    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "42d26445e398cab8e37c88b07ffb50e8a2cf83aebee3cd10397a64fede0e59e9",
-    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "d457a76d64afb4b56e06fadbf8509cf1759a43829b20ed8a11fc11f1ada0c099"
+    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "ccd38eb60ef193e891b3a24291a1916285311e95a387ea3a9440914f3ba543ad",
+    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "978e5a1049fd142199d39188bec457ee75a507f926723e90322736d22aca9bd3",
+    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "eca59c3d43b1b1082b54f134174881daea180b44f216e2fd3d041c610980270d",
+    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "2be16858f0d3e45f470f5c16a4cc0c000350e2e9794a291d03150213583143a3",
+    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "b83fbde22a732ffc745573bd67072c97ed539ce52e864a2f153ea58805c59131",
+    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "2f2687f3301e7be0e6a9f3922209443e3b535d93dc222f970aa6d850e68fc855",
+    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "b18d4ee3c1562435f0764a64079c2e5c110b737b2dc07b4be183ade2f80f00ef",
+    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "7b55fe36d1e4392affdc4f88cc6d41e8c5a5288c8a7c034bc6c43645c2c645c3",
+    "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": "1224829d9cf68526961eb051eaca92082557d93de4726270f99d78407b4c8637",
+    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "aeeaa6f584483a71a36c85b537baf237fce2d78fb98a63a0c421e0a42543f377",
+    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "1964e6c64de653b7f2d219ee3a25c7e73d3f54ff640a7127e3543e029dcf0e59"
   }
 }

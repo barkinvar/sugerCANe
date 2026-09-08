@@ -1,5 +1,7 @@
 # Sampling and event timing — Rev B-2
 
+**Scope: Rev B-2.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b2/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Inputs are sampled every 1 ms. Firmware applies configurable 1–100 ms debounce, sends status every 10 ms and sends each pair of rising-edge counters every 100 ms. The service example selects 2 ms debounce. There are three active inputs; the fourth protocol slot remains zero.
 
 A short pulse can fall between samples. A pulse detected by one sample can also disappear before the debounce interval completes. Allow at least the configured debounce interval plus a sampling interval, analog/sensor delay and margin; establish the actual minimum pulse width on hardware. A 5 ms pulse is a useful initial bench test with 2 ms debounce, followed by shorter and longer pulses at varied phase. Rev B-2 has no measured pulse-capture guarantee.

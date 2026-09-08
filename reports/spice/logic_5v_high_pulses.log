@@ -161,34 +161,33 @@ vstim#branch                                 0
 vlogic#branch                     -0.000359365
 vbat#branch                       -0.000274999
 
- Reference value :  1.07303e-01
- Reference value :  2.16027e-01
- Reference value :  3.27343e-01
- Reference value :  4.36548e-01
- Reference value :  5.47933e-01
- Reference value :  6.56780e-01
- Reference value :  7.67329e-01
- Reference value :  8.77593e-01
- Reference value :  9.85888e-01
- Reference value :  1.09685e+00
- Reference value :  1.20744e+00
- Reference value :  1.31742e+00
- Reference value :  1.42591e+00
- Reference value :  1.53573e+00
- Reference value :  1.64539e+00
- Reference value :  1.75534e+00
- Reference value :  1.86432e+00
- Reference value :  1.97521e+00
- Reference value :  2.08566e+00
- Reference value :  2.19539e+00
- Reference value :  2.30458e+00
- Reference value :  2.41464e+00
- Reference value :  2.52449e+00
- Reference value :  2.63278e+00
- Reference value :  2.74395e+00
- Reference value :  2.85159e+00
- Reference value :  2.96186e+00
- Reference value :  3.07201e+00
+ Reference value :  1.09643e-01
+ Reference value :  2.19277e-01
+ Reference value :  3.31348e-01
+ Reference value :  4.41058e-01
+ Reference value :  5.52858e-01
+ Reference value :  6.62673e-01
+ Reference value :  7.74139e-01
+ Reference value :  8.84137e-01
+ Reference value :  9.94463e-01
+ Reference value :  1.10652e+00
+ Reference value :  1.21628e+00
+ Reference value :  1.32803e+00
+ Reference value :  1.43914e+00
+ Reference value :  1.54912e+00
+ Reference value :  1.65868e+00
+ Reference value :  1.76863e+00
+ Reference value :  1.87735e+00
+ Reference value :  1.98678e+00
+ Reference value :  2.09616e+00
+ Reference value :  2.20716e+00
+ Reference value :  2.31682e+00
+ Reference value :  2.42582e+00
+ Reference value :  2.53510e+00
+ Reference value :  2.64519e+00
+ Reference value :  2.75556e+00
+ Reference value :  2.86616e+00
+ Reference value :  2.97705e+00
 No. of Data Rows : 642003
 ngspice-42 done
 Using SPARSE 1.3 as Direct Linear Solver

@@ -1,5 +1,7 @@
 **Revision A architecture — frozen prototype direction, 2026-09-07**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 The design favors inspectable solder joints, explicit sensor-mode selection, and fault containment. It uses four independent digital front ends and two shared, separately switched sensor-power rails. A two-layer 96 mm square board leaves room for an iron, tweezers, test probes, screw terminals and mounting holes.
 
 ![Implemented architecture](../output/documentation/architecture.png)

@@ -1,5 +1,7 @@
 # Revision A purchasing files
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 All 51 purchase lines have a DigiKey order code. The board uses 161 fitted components; buy 13 configuration shunts separately. Ten test pads and four mounting holes are PCB features.
 
 Indicative one-board parts total: **US$49.61**, calculated conservatively using catalog quantity-one prices for every unit. This excludes PCB fabrication, stencil, shipping, tax, tools and mounting hardware. It is not a live quote. Stock and price observations were collected 2026-09-07; some distributor pages are indexed snapshots and disagree across regions. Reconfirm the exact SKU in a cart before ordering.

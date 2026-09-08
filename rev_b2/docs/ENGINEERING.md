@@ -1,5 +1,7 @@
 # Rev B-2 design decisions and limits
 
+**Scope: Rev B-2.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b2/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 The 60 × 68 mm outline occupies 4,080 mm², versus 9,216 mm² for Rev A: 55.7% less area. Three sensor ports preserve useful capacity while leaving space for push-in terminals, consistent selector placement and an accessible programming cable. Four 3.2 mm mounting holes are centered at (3.5,3.5), (56.5,3.5), (3.5,64.5), and (56.5,64.5) mm. Use insulated mounting hardware and confirm the selected washer/enclosure clearances. The terminal housings extend approximately 8.5 mm above the PCB; the 3.5 mm leads project below the top seating plane.
 
 The design retains a STM32F042K6T6 in LQFP32 and a separate TCAN3413 CAN transceiver. An ESP32-C3 has a CAN/TWAI controller, not an integrated physical CAN transceiver. Retaining the small bare-metal STM32 implementation avoids introducing a radio/module, new firmware dependencies and another untested CAN implementation during the mechanical redesign. This is an original Team Use protocol, not CTRE compatibility.

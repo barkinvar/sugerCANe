@@ -3,7 +3,70 @@ __pycache__/
 *.pyc
 .cache/
 tmp/
+.playwright-cli/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+*~
+*.swp
 *-backups/
 *.kicad_prl
 *.lck
 reports/toolchain/work/
+
+# Compiler scratch. Keep ready-to-program images and link maps as deliverables.
+*.o
+*.d
+*.su
+*.class
+**/firmware/build/*
+!**/firmware/build/sensor_can.bin
+!**/firmware/build/sensor_can.hex
+!**/firmware/build/sensor_can.elf
+!**/firmware/build/sensor_can.map
+
+# Restore host-test dependencies from tools/driver_dependencies.json.
+**/reports/driver/classes/
+**/reports/driver/deps/
+**/reports/driver/cpp-deps/
+**/reports/driver/test_cpp
+**/reports/driver/test_sensor_can_cpp
+
+# Large transient dumps; retain decks, sampled CSVs, plots and reports.
+**/simulation/*.raw
+**/calculations/spice/*.raw
+
+# Saved native product files are authoritative; router snapshots are scratch.
+**/hardware/*.kicad_pcb
+!**/hardware/FRC_Sensor_CAN.kicad_pcb
+**/hardware/*.kicad_pro
+!**/hardware/FRC_Sensor_CAN.kicad_pro
+**/hardware/design/*.dsn
+**/hardware/design/*.ses
+**/hardware/design/last_route*.json
+**/hardware/design/routing_geometry.json
+**/hardware/design/routed.routes.json
+**/hardware/design/*_route[0-9]*.json
+
+# Keep the complete superseded connector revision as its release package.
+rev_b/history/before_horizontal_connectors/*
+!rev_b/history/before_horizontal_connectors/README.md
+!rev_b/history/before_horizontal_connectors/release/
+
+# PDF-review rasterizations and unfinished screenshots can be recreated.
+**/output/review/*handbook*.png
+**/output/review/*bom_page*.png
+**/output/review/*bom_contact*.png
+**/output/review/final_schematic-*.png
+**/output/review/schematic_page-*.png
+**/output/review/sheet-*.png
+**/output/review/kicad_gui_*.png
+**/output/review/*_draft.png
+**/output/review/board_3d_first.png
+**/output/review/board_3d_assembled.png
+**/output/review/current_board.*
+**/output/review/placed.svg
+**/output/review/routed.*
+**/output/review/grounded.*
+**/output/review/layout.*

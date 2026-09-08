@@ -6,7 +6,8 @@ import re
 import pdfplumber
 R=Path(__file__).resolve().parents[1]
 missing=[];documents=0
-for p in [R/'README.md',R/'TOOLS.md']+list((R/'docs').glob('*.md')):
+guides = [R/p for p in ['README.md','TOOLS.md','DESIGN_PLAN.md','firmware/README.md','examples/README.md','hardware/library/README.md','output/fabrication/README.md']]
+for p in guides + list((R/'docs').glob('*.md')):
     documents+=1
     for target in re.findall(r'!?\[[^\]]*\]\(([^)]+)\)',p.read_text()):
         if re.match(r'^[a-z]+:|^#',target):continue

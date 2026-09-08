@@ -1,5 +1,7 @@
 # Rev B-2 wiring and setup
 
+**Scope: Rev B-2.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b2/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 This revision has three independent digital sensor inputs, two shared switched power rails, and a custom 1 Mbit/s CAN interface. It is a prototype design; physical bring-up and qualification remain outstanding. It does not implement CTRE Phoenix or Tuner.
 
 | Connector | Pin 1 | Pin 2 | Pin 3 |

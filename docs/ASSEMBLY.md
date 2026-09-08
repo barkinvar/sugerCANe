@@ -1,5 +1,7 @@
 **Hand assembly — revision A prototype**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Use the [interactive BOM](../output/assembly/interactive_bom.html), [top assembly drawing](../output/assembly/top_assembly.pdf) and exact [per-reference BOM](../bom/BOM_per_reference.csv). The board has 161 fitted components, ten bare test pads and four nonplated mounting holes. All fitted components are on the top side. Configuration shunts are installed only after inspection.
 
 In the interactive BOM, filter by reference or manufacturer part number, then select a row to highlight its board position. Enable pin-1 highlighting when checking orientation. The 60 grouped assembly rows retain component-specific notes; the purchasing BOM combines these into 51 order lines. Widen the table with its divider or hide the Notes column when using a small screen. Sourced and placed checkboxes stay in that browser's local storage; they are personal assembly notes, not an inspection record shared with another computer.

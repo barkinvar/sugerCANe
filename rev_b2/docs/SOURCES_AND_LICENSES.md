@@ -1,5 +1,7 @@
 **Source register and third-party notices**
 
+**Scope: Rev B-2.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b2/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Sources were consulted on 2026-09-07/08. Exact purchase SKUs, product-page links, stock observations and procurement prices are stored in `bom/catalog_china.json` and `BOM_grouped.csv`. They are dated distributor observations, sometimes from indexed listings, not reserved inventory or proof of worldwide delivery. The B-2 BOM uses LCSC and DigiKey sources. Its five incorporated substitutions are reviewed in PART_CHANGES.md; further substitutions require engineering review.
 
 **Primary technical references**
@@ -39,10 +41,14 @@ KiCad standard footprints and package models came from the verified KiCad 10.0.6
 
 Firmware includes ST CMSIS device headers/startup and Arm CMSIS headers with their original license files. WPILib headers/jars are used for integration compilation and retain the WPILib notice. InteractiveHtmlBom generates the standalone assembly page; its license is included. TI's original TPS613222A model and copyright header are preserved. The ngspice-compatible copy changes initial-condition syntax, and the test deck supplies the startup parameter documented in the engineering report. See `licenses/` and the respective third-party directories for the complete notices.
 
-No blanket public license has been selected for the user's original hardware, firmware or documentation in this private workspace. Third-party licenses continue to apply to their own material. This project has not been published, sold, submitted to a manufacturer or ordered. CTRE, FIRST, WPILib, DigiKey and component names identify compatibility targets or sources, not endorsement.
+No blanket public license has been selected for the user's original hardware, firmware or documentation in this repository. Third-party licenses continue to apply to their own material. The project is versioned in Git; no physical board has been built and no manufacturing order has been placed. CTRE, FIRST, WPILib, DigiKey and component names identify compatibility targets or sources, not endorsement.
 
 ## B-2 procurement and substitutions
 
 The underlying Rev B circuit and firmware are retained. Same-value substitutions are documented in [PART_CHANGES.md](PART_CHANGES.md), using the UNI-ROYAL manufacturer resistor-family data sheet and Samsung exact capacitor specification. The Samsung sheet is included in `sources/samsung_CL21B104KCFNNNE.pdf`. UNI-ROYAL's PDF was read through the web viewer; direct download returned HTTP 403, so it is linked rather than claimed as an included local PDF.
 
 LCSC prices/stock and JLCPCB fees were checked 2026-09-08 UTC. URLs and dates accompany the BOM and cost model. They are dated observations, not reservations. The package is not affiliated with CTRE, Weidmüller, JLCPCB or LCSC.
+
+## Horizontal connector CAD refresh
+
+Official Weidmüller STEP geometry now replaces the simplified /90 terminal envelopes. The original supplier files, transformed-model hashes, public source URLs and alignment method are retained in [vendor_connectors.json](../hardware/library/3d/vendor_connectors.json). Geometry is translated only; display colors are project-assigned. Supplier material retains its original ownership and is not relicensed by this repository. See [CONNECTORS.md](CONNECTORS.md). Other custom models remain nominal project envelopes.

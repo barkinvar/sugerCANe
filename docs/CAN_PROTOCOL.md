@@ -1,5 +1,7 @@
 **FRC Sensor CAN protocol version 1**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 The interface uses 1 Mbit/s Classical CAN with 29-bit extended data frames. It is an original Team Use protocol, with device type 10 (Miscellaneous) and manufacturer 8 (Team Use), following the [WPILib addressing layout](https://docs.wpilib.org/en/stable/docs/software/can-devices/can-addressing.html). It does not implement CTRE Phoenix or impersonate CTRE hardware. Coordinate IDs with any other team devices using this same type/manufacturer pair.
 
 `identifier = (10 << 24) | (8 << 16) | (api << 6) | device_id`

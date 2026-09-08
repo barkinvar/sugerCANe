@@ -1,5 +1,9 @@
 # Rev B-2 assembly and bring-up
 
+For turnkey assembly, use [FACTORY_ORDER.md](FACTORY_ORDER.md). This guide covers bench assembly, inspection and rework of the same B-2 hardware.
+
+**Scope: Rev B-2.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b2/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Use the exact Rev B-2 BOM and board files together. Rev A has a different outline, connectors, comparator supply and power conversion. Do not mix the revisions.
 
 1. Check the bare board, paste openings and drill sizes against the assembly drawing. Confirm that the terminal footprints have two plated holes per pole and that J8 has three nonplated alignment holes.

@@ -1,24 +1,34 @@
 {
   "revision": "A prototype",
-  "created_utc": "2026-09-07T22:26:28.711564+00:00",
+  "created_utc": "2026-09-08T04:37:55.398975+00:00",
   "physical_validation": "NOT PERFORMED",
   "design_validation": "reports/validation/run.json",
-  "scope": "Private review/build package; no manufacturing order or publication performed.",
+  "scope": "Rev A prototype review/build package; no manufacturing order or physical qualification performed.",
   "files": [
     {
       "path": "DESIGN_PLAN.md",
-      "bytes": 19644,
-      "sha256": "3ba4e86b846a21a66df5e1790dbcf271fbee77ff20ad7cb89ce6d8cf3929ab86"
+      "bytes": 20106,
+      "sha256": "be119b985d9cfa6458896e1ef1152b5c0ec63596bed58bbba96db0c0d75c2af9"
     },
     {
       "path": "README.md",
-      "bytes": 4278,
-      "sha256": "cbb80e4f4e72c6f4487b5ef2ea69660deaf83699318ace5f80b0eda8f58d3ec3"
+      "bytes": 4506,
+      "sha256": "b8e227cd87093537c7acbc4df40c28f0f176ac71d488517326b116d840d7bbf0"
+    },
+    {
+      "path": "REV_A.md",
+      "bytes": 4506,
+      "sha256": "b8e227cd87093537c7acbc4df40c28f0f176ac71d488517326b116d840d7bbf0"
     },
     {
       "path": "TOOLS.md",
-      "bytes": 9887,
-      "sha256": "45025aa9dae71ee1f5c36b54ac246ca6989272c158b57c3e26751d2d8fd8c209"
+      "bytes": 10069,
+      "sha256": "7d9da3f8f0139525665bada6305b991b23d71179861623b9f3567cf18112a503"
+    },
+    {
+      "path": "TOOLS_RevA.md",
+      "bytes": 10069,
+      "sha256": "7d9da3f8f0139525665bada6305b991b23d71179861623b9f3567cf18112a503"
     },
     {
       "path": "bom/Accessories_DigiKey.csv",
@@ -47,8 +57,8 @@
     },
     {
       "path": "bom/README.md",
-      "bytes": 2038,
-      "sha256": "13b957265dbf1e60b698b9359618808a0eff2ba659ea895f151a0d030975544f"
+      "bytes": 2223,
+      "sha256": "18af53f95eabe15e78b9902f6e54d5a2d1485d64013f1f15a6b22333d11e8a30"
     },
     {
       "path": "bom/catalog.py",
@@ -97,68 +107,68 @@
     },
     {
       "path": "docs/ACCESSORIES.md",
-      "bytes": 5041,
-      "sha256": "952f987b3e9745425bb8b57bcf358846c75dc056a4a7507a589197cd3fd84b05"
+      "bytes": 5226,
+      "sha256": "43bd03705a49996fd8368d84026785a8072e425fdb99e32a7aa86944472e6e5f"
     },
     {
       "path": "docs/ARCHITECTURE.md",
-      "bytes": 7311,
-      "sha256": "afe76a4b8500ddc239025650f0b44d830d0f8400a7eda674bfe5d8a1edd5a680"
+      "bytes": 7496,
+      "sha256": "63911184f7698da509049655bbdf5fcab1ae8a01b3b866d38c57a97bac87baa2"
     },
     {
       "path": "docs/ASSEMBLY.md",
-      "bytes": 6542,
-      "sha256": "c503b8c878783ae8c054f91dadf84a037a8c3197e2ccf88d383459fbc8c93554"
+      "bytes": 6727,
+      "sha256": "8911b69a1e403654b70ddae43c357e4d2e91d3aca66972024550919d7eb5905b"
     },
     {
       "path": "docs/BRING_UP.md",
-      "bytes": 9356,
-      "sha256": "5316412717e146064df5973fca1c9a9af5a46e0859ab3767c87bda8902045106"
+      "bytes": 9541,
+      "sha256": "8b1033ce58ef567ad2eb06c54066811b84d543c802aa225f5b57ea5499d5ce9d"
     },
     {
       "path": "docs/CAN_PROTOCOL.md",
-      "bytes": 6831,
-      "sha256": "8749ffe142145f4adb529a0ced47e558057643d054da6a6b21e2fc7b43ee87a2"
+      "bytes": 7016,
+      "sha256": "0fb7a00ae57985c27c7a8f1bea8dd32519e5a6cfa349ad111235cee2310c43b7"
     },
     {
       "path": "docs/ELECTRICAL_REVIEW.md",
-      "bytes": 14087,
-      "sha256": "f4bdc1b0f3df6b2c481d63e77cc13713e06fa430a978d7db7da4c6e30188851c"
+      "bytes": 14272,
+      "sha256": "fe0c2b701ce122eba08e7937f23b795337d167e26f45dab27d392b32b94fb219"
     },
     {
       "path": "docs/SENSOR_EXAMPLES.md",
-      "bytes": 4067,
-      "sha256": "2848929d3f4e3059a64c897ef6e1d5fbebe31f3d118ca92b76236f5895150be5"
+      "bytes": 4252,
+      "sha256": "e666916067f87fd33440a417a18774b26e68080b76498d0a52a5cda0062255c6"
     },
     {
       "path": "docs/SOURCES_AND_LICENSES.md",
-      "bytes": 6672,
-      "sha256": "d9c5792c94e187a85cd77a83a7cfc059acc4e96b55345746687725121fe0bbaf"
+      "bytes": 6877,
+      "sha256": "463a2e085ea544f8ca2ac35c96a21667680743a2c65620d57042738edbc203a7"
     },
     {
       "path": "docs/SOURCING.md",
-      "bytes": 2932,
-      "sha256": "b42a6b7b3cae99b59c510ba60d68ef1c4f6531b7f31ff184334dea27b3fae657"
+      "bytes": 3117,
+      "sha256": "5bdbb950344a180af2c3d5574cb8d9d9c4b99afb440f1b6f5bf9faa5c5830c89"
     },
     {
       "path": "docs/TIMING.md",
-      "bytes": 3780,
-      "sha256": "ca46f4ed428ec3fba368e33708a95630d8080059396dc6dfb27cbf6f92c57c22"
+      "bytes": 3965,
+      "sha256": "b50605d30c842879655bef0bec8a792ae08e97810d1e31eb354f1c4e788adb2b"
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 6622,
-      "sha256": "ad2e8bcdc05d4e4dbe07ea1c9e08249902033d3a4f45c69d09363e58f7122b1a"
+      "bytes": 6807,
+      "sha256": "17bd8a0ac1930d54a38f5a64d8838d265f6ac85ff94f0d0cfb6dabe2a01e33d8"
     },
     {
       "path": "docs/WIRING.md",
-      "bytes": 7537,
-      "sha256": "e95ff49af18bdc7d5bb903fb08e52f324927b88efb68254a08f216a259fd1297"
+      "bytes": 7722,
+      "sha256": "421694156f64f10c5efb8bf8f1b1e647f1a6459b862edececa255dc178ab5a71"
     },
     {
       "path": "examples/README.md",
-      "bytes": 3214,
-      "sha256": "61924b4793dcb5d00c857348aea6d226ea331d49bd0719ffc9dc3aa83c551dea"
+      "bytes": 3399,
+      "sha256": "95436cf1dbfba490950a3b6c709ea3d3db8518b20b2df2c4973cc09f2954b852"
     },
     {
       "path": "examples/cpp/IntakeSensorExample.cpp",
@@ -207,8 +217,8 @@
     },
     {
       "path": "firmware/README.md",
-      "bytes": 8158,
-      "sha256": "f5f620370da4a550fb7383d6dde333066bb485d71a09e3f8c2f054842e78f9df"
+      "bytes": 8343,
+      "sha256": "26051aeba08c003f355b09d555d7b40a0b9f9edba8af1df473d15e0343cbaff8"
     },
     {
       "path": "firmware/build/sensor_can.bin",
@@ -927,8 +937,8 @@
     },
     {
       "path": "hardware/design/README.md",
-      "bytes": 1601,
-      "sha256": "6bd438b3d61b765b54e3c0f9ae3e46c6f43fcc26c687f02b7db2d4ef0e136d5f"
+      "bytes": 1786,
+      "sha256": "48285793d37bddbd4b75c58db534427dfde575f0be61046619cc30661c8e8d69"
     },
     {
       "path": "hardware/design/circuit.json",
@@ -943,7 +953,7 @@
     {
       "path": "hardware/design/schematic.net.xml",
       "bytes": 236845,
-      "sha256": "4def1190ae2c613ef719de331d70f2767c2848fa4e181aaafdb8e879a16c8350"
+      "sha256": "8bf2dec0dd7f3fc4dd5f85e9bd8853c1d80b2eb1cfe92340ed831275d674fa1f"
     },
     {
       "path": "hardware/fp-lib-table",
@@ -1287,8 +1297,8 @@
     },
     {
       "path": "hardware/library/README.md",
-      "bytes": 692,
-      "sha256": "abd7f3e9f2331b33d0b81ea6e32e01904ddc371dc835c8fc0338dc4ffbc5579c"
+      "bytes": 902,
+      "sha256": "98a51bc879b186c95fea4918164b5b52dfdf26e9697fb6a57e3ca97de0a54427"
     },
     {
       "path": "hardware/library/footprint_provenance.json",
@@ -1358,17 +1368,17 @@
     {
       "path": "output/assembly/bottom_copper.svg",
       "bytes": 461574,
-      "sha256": "f77d5c3e93b5edc6dee18306c2e85ae9c962befa3528426d801b95344a1bd403"
+      "sha256": "7fda540680c5942df92fd8a1010a234f8c4c77df278c3f972eabbf94fe4f564d"
     },
     {
       "path": "output/assembly/bottom_markings.pdf",
       "bytes": 137511,
-      "sha256": "36ff04205e395409cdb3f196c8cb4d239efe9741ebda109a391eb3bb0a1172a6"
+      "sha256": "158f8ecaf51643279e058b7409dcb47af4aece8b3fba02fcb214c597c8531fc1"
     },
     {
       "path": "output/assembly/crystal_land_review.pdf",
       "bytes": 27891,
-      "sha256": "5c1e1be168799231b34f5df5622e886435b23cdd2f6ad7c774cb9defba56b12c"
+      "sha256": "5e80016ad0f530a5763b8119a141d3a9e9cca71e49e183597a47b11ad53d3756"
     },
     {
       "path": "output/assembly/crystal_land_review.png",
@@ -1378,7 +1388,7 @@
     {
       "path": "output/assembly/gerber_copper_review.pdf",
       "bytes": 770343,
-      "sha256": "857dd5282dd15ee7723979ca2f5456f0e92a84c5769337cac2fa7b184f0d4762"
+      "sha256": "c7b767611b18c0dd2d72b1b8a01b430adf8036b94c53bd105bdf20c1b3030e73"
     },
     {
       "path": "output/assembly/interactive_bom.html",
@@ -1398,7 +1408,7 @@
     {
       "path": "output/assembly/power_layout_review.pdf",
       "bytes": 811570,
-      "sha256": "45985f4ccaa3f88eb7ca3032b450479269700ec14448c9fbc0830a80a777ffcf"
+      "sha256": "644b9cbed08de59349add7de28a956af8bed96c5a37ac9300107b1da64bc687f"
     },
     {
       "path": "output/assembly/power_layout_review.png",
@@ -1408,32 +1418,32 @@
     {
       "path": "output/assembly/schematic.pdf",
       "bytes": 508692,
-      "sha256": "8ecfa576ce82c28f0a9fec17a713c433030ac23312673dd222638b33b468150d"
+      "sha256": "a262b216c6fc45ce10aeba1a73aaf484eec0a937628efff84cb8c05dc48ad1b6"
     },
     {
       "path": "output/assembly/top_assembly.pdf",
       "bytes": 147907,
-      "sha256": "fff56b7c780db648dfb2471b1a14decc04b7b0d4a2b3abe0eb0ee0b135394d1a"
+      "sha256": "5923dbb82dbc87d8935d18e0f23f9ee5b572934b10f6cd39acc19f64a4292b98"
     },
     {
       "path": "output/assembly/top_copper.svg",
       "bytes": 1513398,
-      "sha256": "a41431a367018846f9a1bfa97c6fa2486ad0ae60864af595ab36aba12c0a400a"
+      "sha256": "7f0122552ddd9864582ac84ac17ad9af42eed00ec31d1bf1bb8f54b8d14c074e"
     },
     {
       "path": "output/documentation/BOM_RevA.pdf",
       "bytes": 65585,
-      "sha256": "5c87cd2ef4a2ab1d5c4da3a445b10e53641787fc983246117476d6b4fcf6df44"
+      "sha256": "5b1a9c720c547e11c7702b1f6f124778ecc0a16b43d032c77a2ea1d3f1ff18cc"
     },
     {
       "path": "output/documentation/FRC_Sensor_CAN_RevA_Handbook.pdf",
-      "bytes": 1338747,
-      "sha256": "229bf21bd679fdb4290b51352d8f245dc56364581f7e973ebb24dda4e4e55061"
+      "bytes": 1347184,
+      "sha256": "e9658cce5ad0554282b80066e1a553f2ae720d152e67c4fc7dc11642a096abdf"
     },
     {
       "path": "output/documentation/architecture.pdf",
       "bytes": 44749,
-      "sha256": "82e1becc6381a9b40bd8f07b2830a3c2892d7b5bf3cd412b80e5b61d17f436a6"
+      "sha256": "431b41cd4ae057d421a965f28109d36e945ce2ac8ef97b4fc5bd3a28149cbea9"
     },
     {
       "path": "output/documentation/architecture.png",
@@ -1443,7 +1453,7 @@
     {
       "path": "output/documentation/architecture.svg",
       "bytes": 147123,
-      "sha256": "57bbfa897d66bdc64ffa7cd1e2e7d0aa0a97050b3e97df623d84f18f156cb8aa"
+      "sha256": "0cb21d4696b5bc968a7b27ab49c60f84658e1f23a82950d1904bb1a29766ba52"
     },
     {
       "path": "output/documentation/connector_map.png",
@@ -1458,7 +1468,7 @@
     {
       "path": "output/documentation/mounting_template.pdf",
       "bytes": 3158,
-      "sha256": "f97aa39dcfe06f8e8fcf7a0ecf174db3a87d575c191c93204dd5f2afb1c96f57"
+      "sha256": "9fd0505ab0d2357100e54d3be66504f08bae56b46f624ea83a5bb507aa695438"
     },
     {
       "path": "output/documentation/setup_worksheet.html",
@@ -1468,92 +1478,92 @@
     {
       "path": "output/documentation/wiring_card.pdf",
       "bytes": 66867,
-      "sha256": "3b19d5ab797663aaf1edeac2bca7c95cfa7116fe8a270b70ce2338455f5d5be5"
+      "sha256": "6b4d3c12234ceb595f5588846944e77f23ce62e657921c47c4ff6bff703bae8c"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl",
       "bytes": 285473,
-      "sha256": "985b19d1d77e653e6a1bbd0a930d64b698f4235e953a1814cddd7f32db6c5dc4"
+      "sha256": "ccd38eb60ef193e891b3a24291a1916285311e95a387ea3a9440914f3ba543ad"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs",
       "bytes": 48817,
-      "sha256": "fad321815242cc858161b420d68e338d9f8c36feb203a11d7968564a52ef2c01"
+      "sha256": "978e5a1049fd142199d39188bec457ee75a507f926723e90322736d22aca9bd3"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp",
       "bytes": 466,
-      "sha256": "548ae060eb405cef7c17a210ed3190cda8235e48c19956f763cfaf14b03a36f6"
+      "sha256": "eca59c3d43b1b1082b54f134174881daea180b44f216e2fd3d041c610980270d"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo",
       "bytes": 168131,
-      "sha256": "489daa2e72d948d59d8abb95dacf9c30f036e70ee7047fb9af5cdb1c45779601"
+      "sha256": "2be16858f0d3e45f470f5c16a4cc0c000350e2e9794a291d03150213583143a3"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1",
       "bytes": 628,
-      "sha256": "afa07fbd880abcd00ff54845dc4aa3dcbafa5859d672d48ca21633c7f5969ba4"
+      "sha256": "b83fbde22a732ffc745573bd67072c97ed539ce52e864a2f153ea58805c59131"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl",
       "bytes": 708315,
-      "sha256": "bd01e792b05e0ea91b317722e6ae067616256cfcef5a0395be9b004daad5ca92"
+      "sha256": "2f2687f3301e7be0e6a9f3922209443e3b535d93dc222f970aa6d850e68fc855"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-F_Mask.gts",
       "bytes": 508240,
-      "sha256": "8bb7dce0db0d88c88ec8491f62be9d36f99915c87cd2ddc78302ff9acb492f22"
+      "sha256": "b18d4ee3c1562435f0764a64079c2e5c110b737b2dc07b4be183ade2f80f00ef"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp",
       "bytes": 15279,
-      "sha256": "4ff5dc27ac85a22a9146494386181915189fcb60ab902f72852efb9aa9411355"
+      "sha256": "7b55fe36d1e4392affdc4f88cc6d41e8c5a5288c8a7c034bc6c43645c2c645c3"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto",
       "bytes": 868052,
-      "sha256": "063c6901dac0dce83c0fd821e205afabfae1a0d4b267979f4904277a8a72d8ee"
+      "sha256": "1224829d9cf68526961eb051eaca92082557d93de4726270f99d78407b4c8637"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-NPTH-drl_map.pdf",
       "bytes": 12190,
-      "sha256": "c21d6c6e1bbb7ea205920a11725888e16d513990c6873a85f5974786b64d36b8"
+      "sha256": "84425bde7be8f0748407a5290a8dfbaade51f09cbf74df08ea276c3246e86afc"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-NPTH.drl",
       "bytes": 372,
-      "sha256": "42d26445e398cab8e37c88b07ffb50e8a2cf83aebee3cd10397a64fede0e59e9"
+      "sha256": "aeeaa6f584483a71a36c85b537baf237fce2d78fb98a63a0c421e0a42543f377"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-PTH-drl_map.pdf",
       "bytes": 21269,
-      "sha256": "2aba2a67c993bf3048a60df22e848a29d9af08096899c96d2503a869f8cf8840"
+      "sha256": "34aaa85695bd926a01fcd771ea45a4f8cf3b40000a3a7e4e55683f9ebc4220e5"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-PTH.drl",
       "bytes": 4248,
-      "sha256": "d457a76d64afb4b56e06fadbf8509cf1759a43829b20ed8a11fc11f1ada0c099"
+      "sha256": "1964e6c64de653b7f2d219ee3a25c7e73d3f54ff640a7127e3543e029dcf0e59"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-job.gbrjob",
       "bytes": 2760,
-      "sha256": "074644a858ac19eb8e7db0b471a6662ff1ab1e378fd43f8112fa3988bcacc4e6"
+      "sha256": "3b1136a9252f1135afaf07b0633bdcdd66fe44297c708d34faac244466c0f22d"
     },
     {
       "path": "output/fabrication/README.md",
-      "bytes": 2593,
-      "sha256": "3694d088fe53cb9d398aab8daae1f5b61342f99111079691a5e4ce2afd6ec7f9"
+      "bytes": 2778,
+      "sha256": "d3695aaf7a3d3828b2ece1c3e225bb1d1f5574781e525e5870f9444d95390f1e"
     },
     {
       "path": "output/fabrication/drill_report.txt",
       "bytes": 821,
-      "sha256": "2e30a82ea31fb168be356f791485f5e9d05052475f54393d877e890c15291105"
+      "sha256": "a47f2a374d5bec2da76bd1d329619cbee7e30f6b74ddd07324888f210c49efb5"
     },
     {
       "path": "output/mechanical/FRC_Sensor_CAN.step",
       "bytes": 4504153,
-      "sha256": "91b06356c99447a7f9d391404815ea6fce08e80643bc90a9d19d589616bd580c"
+      "sha256": "fa14a391346eca7ab3ea5937db8e491a8e04663ecf1b85cd867dce1b4230be1f"
     },
     {
       "path": "output/playwright/assembly_bom_overview.png",
@@ -1582,8 +1592,8 @@
     },
     {
       "path": "output/review/board_3d_final.png",
-      "bytes": 965552,
-      "sha256": "a4d34b485eadcd6f113167c9bc69a92605d7489b2c8d43acc20d39d898305258"
+      "bytes": 965213,
+      "sha256": "b4e20f166661c1f61ddf153bb94b1e99f75d2765330192345f83faae65b38406"
     },
     {
       "path": "output/review/board_bottom_final.png",
@@ -1637,23 +1647,23 @@
     },
     {
       "path": "reports/document_links.json",
-      "bytes": 169,
-      "sha256": "6da6826d6acfd148a3c2e13a6515e36897b96d8f2633a5c0237d376e4d12dd90"
+      "bytes": 170,
+      "sha256": "02cfa06b6821d28352542ffb349ce8ceee625f63cf115ce04e0be51e23f1d93a"
     },
     {
       "path": "reports/documentation.json",
       "bytes": 1017,
-      "sha256": "5c8a9a3b4f77b376b13dbfc63b87612fac3068d7516244b73f84e149b8f5d4fe"
+      "sha256": "105e72d5c623e0ecd9638e699c917a1c9cc740f1657586abc0e7f4a15d9899fa"
     },
     {
       "path": "reports/drc/final.json",
       "bytes": 1092,
-      "sha256": "a68030abbdc9de4281fb5d562673a76eb58184304a85278512436a6166a4362f"
+      "sha256": "7f44850bcf45b076c480c5e14c20c7b2c06a65e7fc927f2c49b484aee88b28ad"
     },
     {
       "path": "reports/driver-tests.log",
       "bytes": 711,
-      "sha256": "1d789e52a61f38618d2dd9038356c9af6726a36cadaec50053e93d2239cba212"
+      "sha256": "cacba7b4ea67b2b1fdb1fa1694105ca644975ae57e64c8701c6ef2ca4f8308ee"
     },
     {
       "path": "reports/electrical/calculations.json",
@@ -1673,7 +1683,7 @@
     {
       "path": "reports/electrical/capacitor_derating.pdf",
       "bytes": 17719,
-      "sha256": "602ba58011a11e48efeb548e4660b67caa7c1cccb710c20ad59d985215d3d8d0"
+      "sha256": "dfca537e6a3fde18e9aad3ccec14757935c0c446454b5ed02a647104344be50e"
     },
     {
       "path": "reports/electrical/capacitor_derating.png",
@@ -1698,7 +1708,7 @@
     {
       "path": "reports/electrical/ground_return_model.json",
       "bytes": 5208,
-      "sha256": "c0ad49a548c0a3bc7334cf6a4f8e3dff7b445433df0e0c970fa76eab4aa3b685"
+      "sha256": "41429dcbf8ccb33f108f16493843966340b96a55d2bfb8a35335262609863300"
     },
     {
       "path": "reports/electrical/ground_return_model.log",
@@ -1723,17 +1733,17 @@
     {
       "path": "reports/erc/final.json",
       "bytes": 2724,
-      "sha256": "14729fc1b2d66dab0219ba306284d2f25d5005e0d351db9089558c1097066462"
+      "sha256": "dfbd1d2b39dac5838c8f0aeee14ff0d7844e8e9785b2b1284059ac3e76c1037c"
     },
     {
       "path": "reports/firmware-arm-registers.json",
       "bytes": 1926,
-      "sha256": "3e34c747c5792f9dbf98b908f8bf351db394dbe0246c28bc2499815e6b8672f5"
+      "sha256": "df187bfdca79af111f3e3096bf2f7f3555d285aca1540ab821431bde17550da2"
     },
     {
       "path": "reports/firmware-arm-registers.log",
       "bytes": 1872,
-      "sha256": "4a6339a9828492d5d856657f0e84ac133fb2e08b97fdb89bd4d3a96d6ddf6a2d"
+      "sha256": "ef8838d3a0d5f72179ab435b18682197f28a9d4427b1842016b896fbe77779c4"
     },
     {
       "path": "reports/firmware-build.log",
@@ -1783,7 +1793,7 @@
     {
       "path": "reports/manufacturing/gerber_connectivity.json",
       "bytes": 746,
-      "sha256": "cba7235cb9ec16d3f1e8443b8e50f94b324e9b2b1520715533eb986c213db227"
+      "sha256": "bb0f1b27247151893a79682f6cdf9df86933a2cd2ed281c512d839bc084c8046"
     },
     {
       "path": "reports/manufacturing/gerber_connectivity.log",
@@ -1793,7 +1803,7 @@
     {
       "path": "reports/manufacturing/gerber_geometry.json",
       "bytes": 3305,
-      "sha256": "f6eed551174a17b75d16f7d591ae03db5a43d322062c345c1729992d9a2975fa"
+      "sha256": "8299dbb3d13dd3a38bb3384e878d112a29992c865a00106e148a59f15baf172c"
     },
     {
       "path": "reports/manufacturing/gerber_geometry.log",
@@ -1803,7 +1813,7 @@
     {
       "path": "reports/manufacturing/power_layout_review.json",
       "bytes": 948,
-      "sha256": "5d142aef08aa1f0b2af8157a292a96a92fbe52d336022d413c3b2234cf742d1a"
+      "sha256": "7ba17c44e7a2e980ff7384c7285cd098c65911dfffe5a6d59031767ab50b63a8"
     },
     {
       "path": "reports/manufacturing/power_layout_review.log",
@@ -1818,7 +1828,7 @@
     {
       "path": "reports/manufacturing/preview_source.json",
       "bytes": 533,
-      "sha256": "b7421fbf6599e9763b3b5203c7301a549abffd567ec7d660452324c7cb4a8ea7"
+      "sha256": "3ddc251d49f292f837a4edc269f626ab07734a0dcf6ee0608939bef76b376ce8"
     },
     {
       "path": "reports/manufacturing/render.log",
@@ -1833,42 +1843,42 @@
     {
       "path": "reports/manufacturing/wiring_card.json",
       "bytes": 462,
-      "sha256": "3e6a2d2343f823a9ab755ace66eaec4fe121dcf7fb5685ca9cfa872f65ea903e"
+      "sha256": "3939b86ecee191d850adacd95a167d57581d4924f9be2b74ec713fc946e2f925"
     },
     {
       "path": "reports/spice/industrial_12v.log",
       "bytes": 7444,
-      "sha256": "0a46327a104431c7ceb6475f23f3623c8b6d93128322160ca1c5b744321bfc66"
+      "sha256": "0a1ac92c8c7afda4114dbf517e9afee018f67b2c695269460d97c027a686c2ee"
     },
     {
       "path": "reports/spice/industrial_12v_high_pulses.log",
-      "bytes": 8501,
-      "sha256": "be8f64c74a8baa3453a03552baa9ef9e2e268af6efee1531e0d27c270d2cfca5"
+      "bytes": 8277,
+      "sha256": "8a007332c830f7bbf75efa560a9a98bedd46235931cf865eeea7d80edbd17340"
     },
     {
       "path": "reports/spice/industrial_12v_low_pulses.log",
-      "bytes": 8309,
-      "sha256": "a812464d27e0c8ac95fe283b32ceb280e3f3193772dd81e4d8f44124b1d88f58"
+      "bytes": 8277,
+      "sha256": "18bda0c06fe08e959001a9eda1e8be082ca80568eddee64eb27647a9ea0e007c"
     },
     {
       "path": "reports/spice/industrial_30v_at_6v_battery.log",
       "bytes": 7458,
-      "sha256": "e854b5984c91ce03762bc663976238c38a753f1751d71b2a2862da46c3138749"
+      "sha256": "a5b6708eecebd297afed493193c9e1f514556aa23eb15b90e40f6d8a474d8d97"
     },
     {
       "path": "reports/spice/industrial_30v_at_6v_battery_high_pulses.log",
-      "bytes": 8323,
-      "sha256": "c86ac60ca03eba9ccba41d294e3c35ca960133e1109aa1ada61352891bd22eef"
+      "bytes": 8451,
+      "sha256": "4801f918f6a7c2fd5a821f638fa2dd6744226b2d403b4d7f98d582d7111bc2be"
     },
     {
       "path": "reports/spice/industrial_30v_at_6v_battery_low_pulses.log",
       "bytes": 8355,
-      "sha256": "e6910346df325f355f04d25513ccdaa9bcac5e84908172c3e16267c357f9b87e"
+      "sha256": "5ea5052914ec37c93ea38739f891e6d967df63210364dfa85606db97fd128c92"
     },
     {
       "path": "reports/spice/input_filtering.pdf",
       "bytes": 23392,
-      "sha256": "0564f08f78a49e31fb69efe77e14e38c318b5ea6b4b65bdcef7800b3470d04c4"
+      "sha256": "b8d30e6b7a1df42d4708b6ccad487203e13158a38af63536d8e1599a51e09c84"
     },
     {
       "path": "reports/spice/input_filtering.png",
@@ -1893,7 +1903,7 @@
     {
       "path": "reports/spice/inrush.pdf",
       "bytes": 25351,
-      "sha256": "74a296614cbba154e8a15165f270d90ba3817af3c198252d72dbcabc80b9955a"
+      "sha256": "258527a8519d4833558ffeb18ecad56754a9c06d70868bb425a253c21da4424c"
     },
     {
       "path": "reports/spice/inrush.png",
@@ -1913,77 +1923,77 @@
     {
       "path": "reports/spice/logic_3v3.log",
       "bytes": 7439,
-      "sha256": "e1f456b3aac3147abd393be784957c7b5f742d209f28a5790f3d436bbdb97f7c"
+      "sha256": "ca9087d0594cb4415528e417c6758d7d0c8a417b5aaddd921c8f527bf37ba237"
     },
     {
       "path": "reports/spice/logic_3v3_high_pulses.log",
-      "bytes": 8272,
-      "sha256": "7391398ed37cf8c1fae66e53617f75365135ad483fdb1ee69516114d6c383c4c"
+      "bytes": 8784,
+      "sha256": "f791bb346df35cd3784e640d800b76132c98245ef4f3524848c42fab7d6c2a8f"
     },
     {
       "path": "reports/spice/logic_3v3_low_pulses.log",
       "bytes": 8272,
-      "sha256": "8a73982f97c709d7f00ddef2228fc25ca66decf91d2521c70c03288d0771227d"
+      "sha256": "0d3f09b4b7ade59f9fbfd52fad580f5aec33f9a16bfc2ff5925ef149247d0380"
     },
     {
       "path": "reports/spice/logic_5v.log",
       "bytes": 7438,
-      "sha256": "5d6868606eb3b88346471e84bf27431384684063e2e0017a83a21b6bf81e2442"
+      "sha256": "2fd51337b9c96f7e8edfae385b650aa3c2d73e50c731a8443f5b4dc7ee4041cc"
     },
     {
       "path": "reports/spice/logic_5v_high_pulses.log",
-      "bytes": 8303,
-      "sha256": "b32d194b89784c59df3f8115b3932bfd108957f63c754395120d7f27927eb529"
+      "bytes": 8271,
+      "sha256": "740e5e66c6707619b95a887d764c3e651d13a30dcbba035f8ba172d6af4943da"
     },
     {
       "path": "reports/spice/logic_5v_low_pulses.log",
-      "bytes": 8303,
-      "sha256": "b56157162422ee29a2133c88f2b13d75182979c1ef4554b33d1e84fc327e379f"
+      "bytes": 8271,
+      "sha256": "10e70a66f201ec60937ea112b5c25ab8891a99eeb2bd03b273cd2a7abc9e8d3f"
     },
     {
       "path": "reports/spice/npn_10v_500uA_leak.log",
       "bytes": 7683,
-      "sha256": "48d4780554fe0e7f1011843081f4136b504234f08d1f0f50b4688ca929d48cc7"
+      "sha256": "443aaa04869f468f34cf74fa70534e217ff7f0264f28615bd051c98e6ef55747"
     },
     {
       "path": "reports/spice/npn_10v_500uA_leak_high_pulses.log",
       "bytes": 8580,
-      "sha256": "afb42491a44d2e4f05be0296c7e0eb640b7396dcbec12d8d8081bc1842d02900"
+      "sha256": "250c019f87ee4a9526cc35439fc7cf0c998a530b65787df88c94f0d465b237ed"
     },
     {
       "path": "reports/spice/npn_10v_500uA_leak_low_pulses.log",
       "bytes": 8580,
-      "sha256": "5e26fb1a1251327220402820b232143eff27ac367a52166fd2554e540cbf4346"
+      "sha256": "c59e03d9c254a53a94b3aaf23c3ae14bd765e315489b23abb59f02a6fcd67347"
     },
     {
       "path": "reports/spice/open_drain_3v3_50uA_leak.log",
       "bytes": 7689,
-      "sha256": "670084ac490d0fcc495d64734b097f00712bde9c50d73ca41f1c28b9133ec6fc"
+      "sha256": "3efcff4120c9316a98d30247478ee99d00875658c3b6d72c1e0ead459841da06"
     },
     {
       "path": "reports/spice/open_drain_3v3_50uA_leak_high_pulses.log",
-      "bytes": 8586,
-      "sha256": "5bd1f1ce568e8da98dd94f53f12b8b72fde1a436b544d0ae212d1a3509f68857"
+      "bytes": 8554,
+      "sha256": "c1c2328a435f2c74f109f0e395b4816b778354c77858b6827f24e386efc1ae92"
     },
     {
       "path": "reports/spice/open_drain_3v3_50uA_leak_low_pulses.log",
-      "bytes": 8586,
-      "sha256": "9a34a4cc4aa3ed707837cfe1288b936f25d1ac7df0335b47e4934a1cdcfdf25f"
+      "bytes": 8554,
+      "sha256": "95d61b0ddfee5b490a22e6a5d97660a91575bced8fade1bb08672990f1bad9e6"
     },
     {
       "path": "reports/spice/pnp_12v_500uA_leak.log",
       "bytes": 7495,
-      "sha256": "1c130961e1a6e52e1d602c9bfe566b2df5991f38550806e860c1ac34431c7498"
+      "sha256": "de59998c7af40d98b1c3960e7a38f00642d1d9aebd8fd2f10a188242e75ecf79"
     },
     {
       "path": "reports/spice/pnp_12v_500uA_leak_high_pulses.log",
       "bytes": 8328,
-      "sha256": "c5e952ac6fd5babb997459315fa20333456b0e6dc3d6de94061f1c38bd4eeebc"
+      "sha256": "865dd0dd0134c9f9eff50af61d1dbe31997a6e6867506da4389bf0842944bba9"
     },
     {
       "path": "reports/spice/pnp_12v_500uA_leak_low_pulses.log",
       "bytes": 8328,
-      "sha256": "3db39b78b166e1ba65fb3d4d4c53afd91763dc320871b8518f2799a99fd15e41"
+      "sha256": "0aab47973ad1b583ab23c7d619d7860f8d0e0ed0419a9edf979eb5f747af505d"
     },
     {
       "path": "reports/spice/pulse_response.json",
@@ -1998,7 +2008,7 @@
     {
       "path": "reports/spice/pulse_response.pdf",
       "bytes": 86832,
-      "sha256": "6c4dac45f0be2491dfe5d067059d74f46896be6297ab0877e9f3f09df9257480"
+      "sha256": "1a4a3202e10e4f85438b14d17aaac5446280d03e36f6532e3d09ddd23db534ac"
     },
     {
       "path": "reports/spice/pulse_response.png",
@@ -2023,7 +2033,7 @@
     {
       "path": "reports/validation/board_render.log",
       "bytes": 1673,
-      "sha256": "870d361ec796b22494545557544d72262ab6b5c7bd36749de2153550788771c8"
+      "sha256": "737ef9bf43113cb38fc0e8e7c51078a9315b32760e85e2b7ec4990dba491316c"
     },
     {
       "path": "reports/validation/bom.log",
@@ -2047,13 +2057,13 @@
     },
     {
       "path": "reports/validation/documentation.log",
-      "bytes": 1636,
-      "sha256": "2c57f5b25309541a87ccf1d944f9eb0c702a251069021b3579c8b2b9fa584ece"
+      "bytes": 1637,
+      "sha256": "2f6bb37fc35d8f776c76c09b21a271c92ac10e8e7c9e565c60b619ac092385b3"
     },
     {
       "path": "reports/validation/drivers.log",
       "bytes": 711,
-      "sha256": "1d789e52a61f38618d2dd9038356c9af6726a36cadaec50053e93d2239cba212"
+      "sha256": "cacba7b4ea67b2b1fdb1fa1694105ca644975ae57e64c8701c6ef2ca4f8308ee"
     },
     {
       "path": "reports/validation/electrical.log",
@@ -2068,7 +2078,7 @@
     {
       "path": "reports/validation/firmware_arm_registers.log",
       "bytes": 1872,
-      "sha256": "4a6339a9828492d5d856657f0e84ac133fb2e08b97fdb89bd4d3a96d6ddf6a2d"
+      "sha256": "ef8838d3a0d5f72179ab435b18682197f28a9d4427b1842016b896fbe77779c4"
     },
     {
       "path": "reports/validation/firmware_stack.log",
@@ -2077,23 +2087,23 @@
     },
     {
       "path": "reports/validation/gerber_connectivity.log",
-      "bytes": 827,
-      "sha256": "fff47992826db240db12ed36b27ec768679f25a80f20a20f5fd8c5d2926a53f6"
+      "bytes": 826,
+      "sha256": "3176b14a013f52c42ec8a854646a7e23cdb6dfab86c7b599ef3126362f574054"
     },
     {
       "path": "reports/validation/gerber_geometry.log",
       "bytes": 4132,
-      "sha256": "a3c8409645e750ce57988a355c2701dda2bee500a744ddb0a63dd8dea902783f"
+      "sha256": "c653bf0c73d4af9f1d30201c76bc157f00ca8553439fd2ba8cae30276e4f15c3"
     },
     {
       "path": "reports/validation/gerber_previews.log",
       "bytes": 894,
-      "sha256": "566567f522e3b97de07cd5aab57427a79da09ca6423a330919877bb98d867b2b"
+      "sha256": "f5b3414e70a0ed8786d55090d24098ce40384cb983573139366ecdcff5d7e0fe"
     },
     {
       "path": "reports/validation/ground_return.log",
       "bytes": 6720,
-      "sha256": "b39b73752e89423ad24e53362b18c5bfcb16bda6b655e51a81c2c1fb88f16188"
+      "sha256": "88828deba8c53f7e43c09db1884113ddd1a98de94e1be6a26e13c3b644b62eb8"
     },
     {
       "path": "reports/validation/input_spice.log",
@@ -2108,7 +2118,7 @@
     {
       "path": "reports/validation/manufacturing_export.log",
       "bytes": 3157,
-      "sha256": "a59a29bb2e1156a1f5a1235629a563c731908aeb1b7486ea1aac22e36316d56d"
+      "sha256": "33be03d29a558db045ddfd966228b03b0004f21fb27924db2e4413f8ac8da1c5"
     },
     {
       "path": "reports/validation/manufacturing_parser.log",
@@ -2117,8 +2127,8 @@
     },
     {
       "path": "reports/validation/power_layout_review.log",
-      "bytes": 1775,
-      "sha256": "f12c44a7603c4b719234e2b6734995c6a1443d4b6ed3cf32aa5042c2b71dc393"
+      "bytes": 1774,
+      "sha256": "7997ee36d04f2a7dd5748f8c6c06ad76d677cd98ce667cc4c9fbda24bd860cbe"
     },
     {
       "path": "reports/validation/pulse_response.log",
@@ -2133,7 +2143,7 @@
     {
       "path": "reports/validation/run.json",
       "bytes": 12636,
-      "sha256": "3d7ced18c969e80d25b5ade75028ce3d89ad2b1a3c01891710f432106662cce3"
+      "sha256": "1170e8b9bfc26e944368f12eee56d22e783660f2db2a09cd8f4d58c65c3cdd4e"
     },
     {
       "path": "reports/worksheet-browser-review.log",
@@ -2177,13 +2187,13 @@
     },
     {
       "path": "scripts/build_handbook.py",
-      "bytes": 9703,
-      "sha256": "b3c971b587bfbecd9eca8a9f45602e3fcfdaa9b631cc8f7817285d23f4d53f77"
+      "bytes": 9702,
+      "sha256": "1f17e878a5b97cc114afa8c02399e7f6bdbde7e6424df749a5281d3f0a21df58"
     },
     {
       "path": "scripts/build_release.py",
-      "bytes": 6720,
-      "sha256": "b3ce32da42b1f94437d702daa61133a038da64df0a45c1aeef1a6570b4e7e433"
+      "bytes": 6994,
+      "sha256": "6b79562a923a37d82d4d1710b824f8062000ebb9d8d8fc7944bff0f6d3308f9a"
     },
     {
       "path": "scripts/build_source_manifest.py",
@@ -2202,8 +2212,8 @@
     },
     {
       "path": "scripts/check_document_links.py",
-      "bytes": 1610,
-      "sha256": "095928f8bee41503c31fd48095176b7aa06249552078d2da13d857957bd16eb4"
+      "bytes": 2187,
+      "sha256": "8db307699a8630f36289c3c506784c3b51db38c50e428252a485aaffff8de135"
     },
     {
       "path": "scripts/export_assembly_drawing.py",
@@ -2217,8 +2227,8 @@
     },
     {
       "path": "scripts/export_bom.py",
-      "bytes": 5558,
-      "sha256": "b7414da6e840f45f68023535cef6a65a412e1df392897e9c736f8e1b19d70f4d"
+      "bytes": 5743,
+      "sha256": "bac0e5aa27111a75bb5c340248fa8eca772d83e1beec495525796c62b664c6f2"
     },
     {
       "path": "scripts/export_manufacturing.sh",
@@ -2496,9 +2506,19 @@
       "sha256": "9a90d9411907d535f131f22f476f8213fdb3a207952492f69767500139199128"
     },
     {
+      "path": "sources/models/lm2901_ti.zip",
+      "bytes": 46935,
+      "sha256": "ec028444e0ce80957f31c6b1146caf77a71efaf903e1684fa070667ddc94b03b"
+    },
+    {
       "path": "sources/models/lm2901_ti/LM2901-PSpiceFiles/SCHEMATIC1/schematic1.net",
       "bytes": 326,
       "sha256": "4a3a65dfefc8ed7970a360388f4315d6016c4cd9acc24b39ffc939925cc0d5f2"
+    },
+    {
+      "path": "sources/models/lm2901_ti/LM2901-PSpiceFiles/SCHEMATIC1/test.sim",
+      "bytes": 1823,
+      "sha256": "297a25f88e0158ba575fc1d46837605769c155baa644dcbbd551da6edad722eb"
     },
     {
       "path": "sources/models/lm2901_ti/LM2901-PSpiceFiles/SCHEMATIC1/test/test.1OP",
@@ -2541,11 +2561,6 @@
       "sha256": "42f4abb05adecdf9ed991e28284d4391d8e504ec43876ce442031493b5489b45"
     },
     {
-      "path": "sources/models/lm2901_ti/LM2901-PSpiceFiles/SCHEMATIC1/test.sim",
-      "bytes": 1823,
-      "sha256": "297a25f88e0158ba575fc1d46837605769c155baa644dcbbd551da6edad722eb"
-    },
-    {
       "path": "sources/models/lm2901_ti/library/lm2901.olb",
       "bytes": 51200,
       "sha256": "d14bd98dea079aae65dc9f8f28d601ff872217f8fcdc0624b4d4ff8b975995a1"
@@ -2564,11 +2579,6 @@
       "path": "sources/models/lm2901_ti/lm2901.opj",
       "bytes": 2558,
       "sha256": "7e100e6e0a72c66a40c4be873a32befa48cc325313766f776c89325e4ca63cd8"
-    },
-    {
-      "path": "sources/models/lm2901_ti.zip",
-      "bytes": 46935,
-      "sha256": "ec028444e0ce80957f31c6b1146caf77a71efaf903e1684fa070667ddc94b03b"
     },
     {
       "path": "sources/models/lmr51420x_ti/LMR51420X_PSPICE_TRANS/LMR51420DDC_TRANS.OLB",
@@ -2596,6 +2606,11 @@
       "sha256": "2c58acb7bc189d68114444b3954d0bc562d708ce08f3cd79dffcda040ab3427f"
     },
     {
+      "path": "sources/models/lmr51420x_ti/LMR51420X_PSPICE_TRANS/lmr51420x_trans-PSpiceFiles/Startup/trans.sim",
+      "bytes": 1854,
+      "sha256": "b6919656c8c2d7bcdae73d884f9031c857bfbab5ea7de56818f69930a4a807a7"
+    },
+    {
       "path": "sources/models/lmr51420x_ti/LMR51420X_PSPICE_TRANS/lmr51420x_trans-PSpiceFiles/Startup/trans/trans.mrk",
       "bytes": 898,
       "sha256": "a012345435b748e3dafe3b576e8ad5150c6978a9a8b4070403023acca3894b2d"
@@ -2606,9 +2621,9 @@
       "sha256": "a2c007d971b898951f8aeb2b255b8d495d565dd49b0084b8f34c5cacf131f38f"
     },
     {
-      "path": "sources/models/lmr51420x_ti/LMR51420X_PSPICE_TRANS/lmr51420x_trans-PSpiceFiles/Startup/trans.sim",
-      "bytes": 1854,
-      "sha256": "b6919656c8c2d7bcdae73d884f9031c857bfbab5ea7de56818f69930a4a807a7"
+      "path": "sources/models/lmr51420x_ti/LMR51420X_PSPICE_TRANS/lmr51420x_trans-PSpiceFiles/Steady_State/trans.sim",
+      "bytes": 1866,
+      "sha256": "c7d18529a1f447574d339bf69d28f11fc0e9dfea9f295cf7e1ccd25141b8997c"
     },
     {
       "path": "sources/models/lmr51420x_ti/LMR51420X_PSPICE_TRANS/lmr51420x_trans-PSpiceFiles/Steady_State/trans/trans.mrk",
@@ -2619,11 +2634,6 @@
       "path": "sources/models/lmr51420x_ti/LMR51420X_PSPICE_TRANS/lmr51420x_trans-PSpiceFiles/Steady_State/trans/trans.prb",
       "bytes": 2869,
       "sha256": "b3d72d1ff2ac9faca5919336066e2676fffa0d3364a93db0517d0a425f55fdfe"
-    },
-    {
-      "path": "sources/models/lmr51420x_ti/LMR51420X_PSPICE_TRANS/lmr51420x_trans-PSpiceFiles/Steady_State/trans.sim",
-      "bytes": 1866,
-      "sha256": "c7d18529a1f447574d339bf69d28f11fc0e9dfea9f295cf7e1ccd25141b8997c"
     },
     {
       "path": "sources/models/lmr51420x_ti/LMR51420X_PSPICE_TRANS/lmr51420x_trans.opj",
@@ -2651,6 +2661,11 @@
       "sha256": "8fc8eac42f812bb785883239ec164746cf388e80fbb7f92109274d27e46c8a26"
     },
     {
+      "path": "tools-requirements.lock",
+      "bytes": 1647,
+      "sha256": "641708b01e9156c361d3a3a0bc2d86c9e70e7a61a0abfd7b3674643f9baba473"
+    },
+    {
       "path": "tools/driver_dependencies.json",
       "bytes": 2060,
       "sha256": "3be0c1981d076fabdb751024cbbdcd347fb0101488606480a687949154aa2b1b"
@@ -2669,11 +2684,6 @@
       "path": "tools/verify_toolchain.py",
       "bytes": 5108,
       "sha256": "84a39941793c263aeee6e8442ced1c1ad074b961673e83d94c82aac2a3c0ad82"
-    },
-    {
-      "path": "tools-requirements.lock",
-      "bytes": 1647,
-      "sha256": "641708b01e9156c361d3a3a0bc2d86c9e70e7a61a0abfd7b3674643f9baba473"
     }
   ]
 }

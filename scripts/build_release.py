@@ -23,7 +23,7 @@ def add(path):
                      and p.suffix not in ('.pyc','.lck','.kicad_prl'))
     else:raise FileNotFoundError(path)
 
-for p in ['README.md','DESIGN_PLAN.md','TOOLS.md','tools-requirements.lock','docs','bom',
+for p in ['REV_A.md','DESIGN_PLAN.md','TOOLS_RevA.md','tools-requirements.lock','docs','bom',
           'licenses','tools','host','examples','firmware/src','firmware/include',
           'firmware/tests','firmware/third_party','firmware/README.md','firmware/Makefile',
           'firmware/stm32f042k6.ld','hardware/library','sources',
@@ -61,6 +61,11 @@ for p in ['board_3d_final.png','board_bottom_final.png','schematic_contact_sheet
 for p in ['worksheet_desktop.png','worksheet_mobile.png','worksheet_example_print.pdf','assembly_u3_highlight.png','assembly_bom_overview.png']:
     add('output/playwright/'+p)
 
+# Standalone Rev A entry points; repository-wide README/TOOLS are not bundled.
+archive_sources = {str(p.relative_to(ROOT)): p for p in files}
+archive_sources['README.md'] = ROOT / 'REV_A.md'
+archive_sources['TOOLS.md'] = ROOT / 'TOOLS_RevA.md'
+
 # Generated drawings and firmware must correspond to the verified design.
 run=json.loads((ROOT/'reports/validation/run.json').read_text())
 assert run['result']=='PASS'
@@ -68,9 +73,9 @@ for name,digest in run['sha256'].items():
     assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==digest, f'Validation stale: {name}'
 manifest=dict(revision='A prototype',created_utc=datetime.now(timezone.utc).isoformat(),
               physical_validation='NOT PERFORMED',design_validation='reports/validation/run.json',
-              scope='Private review/build package; no manufacturing order or publication performed.',
-              files=[dict(path=str(p.relative_to(ROOT)),bytes=p.stat().st_size,
-                          sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in sorted(files)])
+              scope='Rev A prototype review/build package; no manufacturing order or physical qualification performed.',
+              files=[dict(path=name,bytes=p.stat().st_size,
+                          sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for name,p in sorted(archive_sources.items())])
 manifest_path=DEST/'manifest.json';manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
 
 fabrication=DEST/'FRC_Sensor_CAN_RevA_Fabrication.zip'
@@ -79,7 +84,7 @@ with zipfile.ZipFile(fabrication,'w',compression=zipfile.ZIP_DEFLATED,compressle
         if p.is_file():z.write(p,p.name)
 prototype=DEST/'FRC_Sensor_CAN_RevA_Prototype.zip'
 with zipfile.ZipFile(prototype,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
-    for p in sorted(files):z.write(p,'FRC_Sensor_CAN_RevA/'+str(p.relative_to(ROOT)))
+    for name,p in sorted(archive_sources.items()):z.write(p,'FRC_Sensor_CAN_RevA/'+name)
     z.write(manifest_path,'FRC_Sensor_CAN_RevA/release/manifest.json')
     z.write(fabrication,'FRC_Sensor_CAN_RevA/release/'+fabrication.name)
 

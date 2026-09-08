@@ -1,5 +1,7 @@
 **Revision A electrical review — calculated and simulated evidence**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 The authoritative circuit is `hardware/design/circuit.py`, exported into the native KiCad schematic. The final PCB is checked against its exported netlist and this model. This review describes the actual 171-symbol / 161-purchased-component revision, including Q1 reverse-polarity protection and the final 101 kΩ feedback resistor.
 
 **Input levels and component stress**

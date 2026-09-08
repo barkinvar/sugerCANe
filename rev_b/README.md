@@ -1,5 +1,7 @@
 # FRC Sensor CAN — Rev B
 
+**Scope: Rev B.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 **A compact three-sensor CAN interface with push-in wiring and selectable sensor power.** Rev B is a 60 × 68 mm, two-layer redesign, 55.7% smaller in area than the previous 96 × 96 mm board. It is an unbuilt prototype with computational checks and manufacturing files; hardware qualification remains pending.
 
 ![Rev B assembled view](output/review/board_3d_final.png)
@@ -32,7 +34,7 @@ Logic-mode targets are LOW ≤0.8 V and HIGH ≥2.4 V; industrial-mode targets a
 - [Wiring, shunts and pogo pin map](docs/WIRING.md), [hand assembly](docs/ASSEMBLY.md), [firmware](firmware/README.md), [robot examples](examples/README.md)
 - [Validation evidence](docs/VALIDATION.md), [engineering decisions](docs/ENGINEERING.md), [bench worksheet](docs/QUALIFICATION.md), [design plan](DESIGN_PLAN.md)
 
-Use Rev B hardware, BOM and firmware together. Rev A remains intact in the parent development workspace. Open the supplied native board as the authoritative routed design; placement/router scripts are engineering history, not a substitute for the saved board. Rebuilding the full routing from the initial placement is not part of release reproduction.
+Use Rev B hardware, BOM and firmware together. Rev A remains available in the repository root and its archived build package. Open the supplied native board as the authoritative routed design; placement/router scripts are engineering history, not a substitute for the saved board. Rebuilding the full routing from the initial placement is not part of release reproduction.
 
 ## Validation and limits
 
@@ -40,4 +42,12 @@ The final native ERC/DRC, model/schematic/PCB parity and independent exported-co
 
 Electrical calculations support the stated targets under their recorded assumptions. The 5 V output is nominal: the full-load routed-copper budget estimates roughly 4.75 V at the most distant port, before external cable loss. Boost startup simulations settle near 4.99 V, but do not validate the cascaded converters, real parasitics or temperature behavior. Complete the bench worksheet before treating any target as a qualified product rating.
 
-See [TOOLS.md](TOOLS.md) for reproduction commands and [source notices](docs/SOURCES_AND_LICENSES.md) for provenance. No fabrication order, purchase or external publication has been made.
+See [TOOLS.md](TOOLS.md) for reproduction commands and [source notices](docs/SOURCES_AND_LICENSES.md) for provenance. No fabrication order or purchase has been made.
+
+## Additional board views
+
+![Top assembly view](output/review/board_top.png)
+
+![Bottom board view](output/review/board_bottom.png)
+
+Connector housings use official manufacturer STEP geometry; see [connector verification](docs/CONNECTORS.md). Render colors are illustrative.

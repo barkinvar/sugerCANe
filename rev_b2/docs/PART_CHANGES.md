@@ -1,5 +1,7 @@
 # Rev B-2 part changes and substitution review
 
+**Scope: Rev B-2.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b2/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Rev B-2 changes procurement while preserving Rev B's circuit, 60 × 68 mm outline, horizontal connectors, copper routing, pin assignments and firmware. There are still 144 fitted components and ten loose shunts. No protection, filtering or decoupling part has been deleted.
 
 | Rev B part | Rev B-2 fitted part | Count | Review basis |

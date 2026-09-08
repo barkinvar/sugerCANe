@@ -1,5 +1,7 @@
 # Rev B-2 factory-assembly design plan and outcome
 
+**Scope: Rev B-2.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b2/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 The aim is a lower-cost China-assembled prototype of the 60 x 68 mm horizontal-connector Rev B, preserving its three channels, 5-22 V input target, 5 V / VBAT sensor power, service pads and firmware.
 
 1. Freeze the reviewed Rev B circuit, pad positions and copper. Preserve its separate hand-assembly release.

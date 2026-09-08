@@ -1,5 +1,7 @@
 # Rev B-2 fabrication notes
 
+**Scope: Rev B-2.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/rev_b2/README.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Use all Gerber and Excellon files in this directory from the same release. Outline: **60 × 68 mm**, two copper layers, nominal **1.6 mm FR-4 and 35 µm / 1 oz copper per side**. All components mount on top. Files are in millimeters.
 
 The project uses 0.20 mm minimum electrical copper clearance and a 0.30 mm copper-to-edge rule. The narrowest signal traces are 0.18 mm. Standard small vias are 0.60 mm copper diameter with 0.30 mm drill; other sizes also occur. Preserve all drill diameters from the Excellon files. Fabrication must support a nominal 0.15 mm annular ring and the reported hole-to-hole web. Review the independent geometry report and the fabrication house's CAM results.

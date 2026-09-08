@@ -1,5 +1,7 @@
 **Source register and third-party notices**
 
+**Scope: Rev A.** [Revision overview](https://github.com/barkinvar/candi-clone/blob/main/REV_A.md) · [All revisions](https://github.com/barkinvar/candi-clone/blob/main/REVISIONS.md).
+
 Sources were consulted on 2026-09-07. Exact purchase SKUs, product-page links, stock observations and quantity-one prices are stored in `bom/catalog_selected.json` and `BOM_grouped.csv`. They are dated distributor observations, sometimes from indexed listings, not reserved inventory or proof of worldwide delivery. All fitted purchase lines use DigiKey order codes. Alternative MPNs are candidates for engineering review, not approved substitutions.
 
 **Primary technical references**
@@ -36,4 +38,4 @@ KiCad standard footprints and package models came from the verified KiCad 10.0.6
 
 Firmware includes ST CMSIS device headers/startup and Arm CMSIS headers with their original license files. WPILib headers/jars are used for integration compilation and retain the WPILib notice. InteractiveHtmlBom generates the standalone assembly page; its license is included. TI's original LM2901 model and copyright header are preserved, and the ngspice-compatible adaptation changes only the diode area-parameter syntax needed by the simulator. See `licenses/` and the respective third-party directories for the complete notices.
 
-No blanket public license has been selected for the user's original hardware, firmware or documentation in this private workspace. Third-party licenses continue to apply to their own material. This project has not been published, sold, submitted to a manufacturer or ordered. CTRE, FIRST, WPILib, DigiKey and component names identify compatibility targets or sources, not endorsement.
+No blanket public license has been selected for the user's original hardware, firmware or documentation in this repository. Third-party licenses continue to apply to their own material. The project is versioned in Git; no physical board has been built and no manufacturing order has been placed. CTRE, FIRST, WPILib, DigiKey and component names identify compatibility targets or sources, not endorsement.
