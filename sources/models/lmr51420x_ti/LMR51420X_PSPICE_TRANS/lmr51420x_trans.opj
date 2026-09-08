@@ -1,0 +1,61 @@
+(ExpressProject "PARTNAME_TRANS"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "17.4-2019 S024 (3998392)  [12/6/2021]-[10/19/22]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\lmr51420ddc_trans.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\lmr51420x_trans.DSN"
+      (Type "Schematic Design")
+      (DisplayName ".\lmr51420x_trans.DSN"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (RootChangedForceReNetlist "x")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (Display_Online_DRC_Results "FALSE")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Layout")
+  (Folder "Outputs")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lmr51420x_trans-pspicefiles\steady_state\trans.sim"
+        (DisplayName "Steady_State-trans")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lmr51420x_trans-pspicefiles\startup\trans.sim"
+        (DisplayName "Startup-trans")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\lmr51420x_trans-pspicefiles\startup\trans.sim"))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\lmr51420x_trans.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\lmr51420x_trans.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 0 275 0 516"))
+      (Tab 0)))
+  (Folder "Logs")
+  (MPSSessionName "x0252215")
+  (PartMRUSelector
+    (LMR51420DDC_TRANS
+      (FullPartName "LMR51420DDC_TRANS.Normal")
+      (LibraryName
+         "C:\BSR_PROJECTS\PART_NUMBERS\LMR51420X\TEMP\LMR51420X_PSPICE_TRANS\LMR51420DDC_TRANS.OLB")
+      (DeviceIndex "0")))
+  (ISPCBBASICLICENSE "false"))

@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.cache/
+tmp/
+*-backups/
+*.kicad_prl
+*.lck
+reports/toolchain/work/

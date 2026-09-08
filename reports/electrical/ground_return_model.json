@@ -1,0 +1,127 @@
+{
+  "method": "Gerber copper polygons, center-sampled square-grid resistor sheets; PyAMG5.3.0",
+  "assumptions": {
+    "copper_thickness_mm": 0.035,
+    "copper_temperature_C": 85,
+    "copper_resistivity_ohm_mm": 2.1643958e-05,
+    "board_thickness_mm": 1.6,
+    "barrel_plating_mm": 0.02,
+    "equipotential_top_pad_contacts": true
+  },
+  "analytic_sheet_calibration_squares": 1.9000000000000046,
+  "results": [
+    {
+      "mesh_mm": 0.15,
+      "grid_cells": 564345,
+      "solved_nodes": 561151,
+      "omitted_disconnected_grid_nodes": 1,
+      "ground_barrels": 85,
+      "routes": [
+        {
+          "port": "J4.2",
+          "to_input_ground_ohm": 0.002790583683418788,
+          "to_buck_cap_ground_ohm": 0.003530036290531755
+        },
+        {
+          "port": "J5.2",
+          "to_input_ground_ohm": 0.002926877126696969,
+          "to_buck_cap_ground_ohm": 0.0035861463635131954
+        },
+        {
+          "port": "J6.2",
+          "to_input_ground_ohm": 0.003098989404178508,
+          "to_buck_cap_ground_ohm": 0.0036368253521930796
+        },
+        {
+          "port": "J7.2",
+          "to_input_ground_ohm": 0.003122226137628717,
+          "to_buck_cap_ground_ohm": 0.003582144499251679
+        }
+      ],
+      "residual_norms": {
+        "J4.2": 3.579803542837417e-11,
+        "J5.2": 8.550446038844381e-11,
+        "J6.2": 5.841001918917223e-11,
+        "J7.2": 3.185266170634335e-11,
+        "C4.2": 8.673956150949699e-11
+      },
+      "worst_5v_return_port": "J6.2",
+      "estimated_ground_samples_mV_at_310mA": {
+        "U7.12": 0.8197493371256752,
+        "U5.16": 0.6421604835590019,
+        "U5.32": 0.3560442058195866,
+        "R24.2": 0.25618675850454115,
+        "R26.2": 0.6412334910521456,
+        "R107.2": 0.5632613569251844,
+        "R207.2": 0.31411411264156663,
+        "R307.2": 0.7532410934391488,
+        "R407.2": 0.6796630167478153
+      },
+      "elapsed_seconds": 6.492297755001346
+    },
+    {
+      "mesh_mm": 0.1,
+      "grid_cells": 1263714,
+      "solved_nodes": 1255791,
+      "omitted_disconnected_grid_nodes": 0,
+      "ground_barrels": 85,
+      "routes": [
+        {
+          "port": "J4.2",
+          "to_input_ground_ohm": 0.002694125683609466,
+          "to_buck_cap_ground_ohm": 0.003456809215449274
+        },
+        {
+          "port": "J5.2",
+          "to_input_ground_ohm": 0.0028041466709279447,
+          "to_buck_cap_ground_ohm": 0.003483553800346225
+        },
+        {
+          "port": "J6.2",
+          "to_input_ground_ohm": 0.003008158849103203,
+          "to_buck_cap_ground_ohm": 0.003564790210622136
+        },
+        {
+          "port": "J7.2",
+          "to_input_ground_ohm": 0.00303722258679161,
+          "to_buck_cap_ground_ohm": 0.003513847291939893
+        }
+      ],
+      "residual_norms": {
+        "J4.2": 6.873460288077654e-11,
+        "J5.2": 5.476329311495797e-11,
+        "J6.2": 6.149790989509996e-11,
+        "J7.2": 8.310723289415313e-11,
+        "C4.2": 6.109191473058243e-11
+      },
+      "worst_5v_return_port": "J6.2",
+      "estimated_ground_samples_mV_at_310mA": {
+        "U7.12": 0.8125686916101091,
+        "U5.16": 0.6347035904914661,
+        "U5.32": 0.34943899628159847,
+        "R24.2": 0.24789569227460953,
+        "R26.2": 0.6337291217704016,
+        "R107.2": 0.5575227437990062,
+        "R207.2": 0.3066000747657567,
+        "R307.2": 0.7453021332450257,
+        "R407.2": 0.6722409768318078
+      },
+      "elapsed_seconds": 13.528210232994752
+    }
+  ],
+  "limitations": "Grid boundaries and equipotential contacts approximate actual geometry. Filled pad interiors omit hole voids. DC only: no inductance, ground bounce, contact resistance, thermal rise, manufacturing tolerance or EMI model. Mesh convergence is a numerical sensitivity check, not hardware validation.",
+  "maximum_route_change_fraction": 0.04376748799962394,
+  "sha256": {
+    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "985b19d1d77e653e6a1bbd0a930d64b698f4235e953a1814cddd7f32db6c5dc4",
+    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "fad321815242cc858161b420d68e338d9f8c36feb203a11d7968564a52ef2c01",
+    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "548ae060eb405cef7c17a210ed3190cda8235e48c19956f763cfaf14b03a36f6",
+    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "489daa2e72d948d59d8abb95dacf9c30f036e70ee7047fb9af5cdb1c45779601",
+    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "afa07fbd880abcd00ff54845dc4aa3dcbafa5859d672d48ca21633c7f5969ba4",
+    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "bd01e792b05e0ea91b317722e6ae067616256cfcef5a0395be9b004daad5ca92",
+    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "8bb7dce0db0d88c88ec8491f62be9d36f99915c87cd2ddc78302ff9acb492f22",
+    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "4ff5dc27ac85a22a9146494386181915189fcb60ab902f72852efb9aa9411355",
+    "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": "063c6901dac0dce83c0fd821e205afabfae1a0d4b267979f4904277a8a72d8ee",
+    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "42d26445e398cab8e37c88b07ffb50e8a2cf83aebee3cd10397a64fede0e59e9",
+    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "d457a76d64afb4b56e06fadbf8509cf1759a43829b20ed8a11fc11f1ada0c099"
+  }
+}

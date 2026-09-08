@@ -1,0 +1,23 @@
+* Actual input network with TI LM2901 2023 typical comparator model
+.include lm2901_ngspice.lib
+Vbat vbat 0 12
+Vlogic vlogic 0 3.3
+Vsignal signal 0 PWL(0 0 1m 0 1.001m 3.3 1.05m 3.3 1.051m 0 3m 0 3.001m 3.3 8m 3.3 8.001m 0 12m 0)
+R101 signal mid 110k
+R102 mid sense 110k
+R103 sense 0 20k
+R104 sense output 910k
+R105 output vlogic 10k
+C101 sense 0 1n
+R106 vlogic reference 100k
+R107 reference 0 17.8k
+R108 reference 0 7.15k
+Xcomp sense reference vbat 0 output LM2901
+.control
+set wr_singlescale
+set wr_vecnames
+tran .5u 12m
+wrdata ../../reports/spice/input_logic.txt v(signal) v(sense) v(reference) v(output)
+quit
+.endc
+.end

@@ -1,0 +1,14 @@
+src/sensor_core.c:7:10:sc_crc32	20	static
+src/sensor_core.c:17:6:sc_config_valid	8	static
+src/sensor_core.c:23:5:sc_config_newest	16	static
+src/sensor_core.c:35:6:sc_inputs_init	24	static
+src/sensor_core.c:45:6:sc_inputs_update	40	static
+src/sensor_core.c:62:9:sc_power_faults	12	static
+src/sensor_core.c:72:6:sc_rails_init	24	static
+src/sensor_core.c:80:6:sc_rails_update	32	static
+src/sensor_core.c:97:6:sc_rails_emergency_off	0	static
+src/sensor_core.c:102:6:sc_rails_clear	16	static
+src/sensor_core.c:112:10:sc_can_id	0	static
+src/sensor_core.c:116:6:sc_can_is_ours	0	static
+src/sensor_core.c:119:6:sc_put_u16	0	static
+src/sensor_core.c:123:6:sc_put_u32	0	static

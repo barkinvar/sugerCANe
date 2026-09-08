@@ -1,0 +1,37 @@
+### Ran Playwright code
+```js
+await (async () => {
+  const check = (v,m) => { if(!v) throw new Error(m); };
+  const text = id => page.locator('#'+id).textContent();
+  await page.locator('#mode1').selectOption('npn');
+  check(await page.locator('#copy').isDisabled(),'Missing current should block command');
+  await page.locator('#current1').fill('25');
+  await page.locator('#mode2').selectOption('pnp');
+  await page.locator('#current2').fill('35');
+  await page.locator('#mode3').selectOption('push5');
+  await page.locator('#current3').fill('50');
+  await page.locator('#mode4').selectOption('contact');
+  check((await text('command')).endsWith('--rails 0'),'Startup should default off');
+  await page.locator('#startupPower').check();
+  check((await text('command')).includes('--invert 9 --debounce 2 --rails 3'),'Mixed configuration');
+  check((await text('batCurrent'))==='68.0 / 300 mA','Battery allowance');
+  check((await text('v5Current'))==='50.1 / 300 mA','5V allowance');
+  await page.locator('#current1').fill('280');
+  check(await page.locator('#copy').isDisabled(),'Over-budget rail must block command');
+  await page.locator('#current1').fill('25');
+  await page.locator('#device').fill('64');
+  check(await page.locator('#copy').isDisabled(),'ID64 must be rejected');
+  await page.locator('#device').fill('17');
+  await page.locator('#serial').fill('COM3');
+  check((await text('command')).includes('--port COM3'),'Windows serial port');
+  await page.locator('#serial').fill('/dev/ttyUSB0');
+  await page.setViewportSize({width:390,height:844});
+  check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Mobile overflow');
+  await page.screenshot({path:'output/playwright/worksheet_mobile.png',fullPage:true});
+  await page.setViewportSize({width:1365,height:1000});
+  await page.screenshot({path:'output/playwright/worksheet_desktop.png',fullPage:true});
+  await page.pdf({path:'output/playwright/worksheet_example_print.pdf',format:'A4',printBackground:true});
+  const report = {result:'PASS',checks:['mixed NPN/PNP/5V/contact pin settings','startup rails default off','inversion mask9 and rails3','bias allowance68mA battery and50.1mA5V','missing current rejection','rail overload rejection','invalid device ID rejection','Windows serial port','390px mobile no overflow'],command:await text('command'),jumpers:await text('jumperRows')};
+  console.log(JSON.stringify(report));
+})(page);
+```

@@ -1,0 +1,25 @@
+PASS GPIO directions, SWD preservation, all rail/fault masks, LEDs and safe-off
+PASS 8 MHz HSE to 48 MHz PLL, flash wait state and clock-security setup
+PASS Bounded HSE startup failure
+PASS PVD and watchdog register setup; undervoltage handler forces safe-off
+PASS Compiled CAN timing, pin mux, Team Use filters and dedicated Broadcast Disable FIFO
+PASS All CAN transmit mailboxes, byte order, busy and bus-off rejection
+PASS Receive FIFO priority, payload extraction and invalid frame rejection
+PASS ADC calibration/setup, channel order, factory-reference scaling and invalid calibration
+PASS UART baud/pin mux, ISR receive/transmit buffers and error reporting
+PASS Actual flash unlock/erase/halfword order, alternating pages and corrupt-record fallback
+PASS 34 compiled flash halfword power-cut cases and programming-error rejection
+PASS UART RX overflow ordering and bounded TX buffer under flooding
+PASS ADC-ready timeout and implausible supply-reference rejection
+{
+  "result": "PASS",
+  "elapsed_seconds": 0.5745724379958119,
+  "emulator": "Unicorn2.1.4 Cortex-M0",
+  "elf_sha256": "d58ada4002975da6d8e41c80af224715ea29de41e732ed74fd06a7cd40b4d5ea",
+  "binary_sha256": "f5cd4308fa73eef40a8ac2783e90ea543ca056f57f967ec074adc38461027011",
+  "limits": "Execute the actual linked Cortex-M0 functions against explicit register models.\n\nUnicorn emulates CPU instructions, not STM32 peripherals. The small behavioral\nmodels below supply ready bits, ADC samples, FIFO contents, flash erase and GPIO\nBSRR effects. These tests check compiled register/pin intent and data handling;\nno electrical behavior, interrupt timing, CAN arbitration or silicon erratum is\nvalidated by this harness. Host application/core tests remain separate.",
+  "sources": [
+    "https://github.com/unicorn-engine/unicorn",
+    "firmware/third_party/cmsis_device_f0/Include/stm32f042x6.h"
+  ]
+}

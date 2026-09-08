@@ -1,0 +1,585 @@
+{
+  "scope": "Passive network simulation with PMOS represented by20mohm already on; representative piecewise-linear TVS. Does not verify gate dynamics, reverse-recovery, SOA, actual component tolerances or standardized transient immunity.",
+  "sweep_cases": 54,
+  "capacitance_upper_values_uF": [
+    56.4,
+    11
+  ],
+  "fuse_nominal_melting_I2t_A2s": 0.853,
+  "pulse_design_screen_fraction_of_nominal": 0.25,
+  "pulse_screen_is_not_guarantee": "25% is an engineering screening allowance, not a manufacturer-qualified repetitive-pulse limit.",
+  "worst": {
+    "input_I2t_A2s": {
+      "vin_V": 18,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 112.7489,
+      "peak_protected_V": 17.9999978,
+      "input_I2t_A2s": 0.0796652841807196,
+      "TVS_energy_J": 0.0
+    },
+    "peak_protected_V": {
+      "vin_V": 18,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 36.3322128,
+      "peak_protected_V": 25.3224957,
+      "input_I2t_A2s": 0.06113233793569769,
+      "TVS_energy_J": 0.009897047105168335
+    },
+    "peak_input_A": {
+      "vin_V": 18,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 112.7489,
+      "peak_protected_V": 17.9999978,
+      "input_I2t_A2s": 0.0796652841807196,
+      "TVS_energy_J": 0.0
+    }
+  },
+  "cases": [
+    {
+      "vin_V": 6,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 37.5829667,
+      "peak_protected_V": 5.99999926,
+      "input_I2t_A2s": 0.00885169824215151,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 30.3398725,
+      "peak_protected_V": 5.99999926,
+      "input_I2t_A2s": 0.0038424288176361803,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 25.4087358,
+      "peak_protected_V": 6.71072946,
+      "input_I2t_A2s": 0.008847278974099343,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 16.9355755,
+      "peak_protected_V": 5.99999926,
+      "input_I2t_A2s": 0.003473475148419847,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 12.1107376,
+      "peak_protected_V": 9.40171807,
+      "input_I2t_A2s": 0.008846646165422797,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 8.88141559,
+      "peak_protected_V": 7.45362722,
+      "input_I2t_A2s": 0.00326739001139701,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 25.4592947,
+      "peak_protected_V": 5.99999878,
+      "input_I2t_A2s": 0.005589093010806546,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 22.2068764,
+      "peak_protected_V": 5.99999878,
+      "input_I2t_A2s": 0.0029426261458721393,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 19.5401431,
+      "peak_protected_V": 6.01215813,
+      "input_I2t_A2s": 0.005587554867085661,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 14.1458034,
+      "peak_protected_V": 5.99999878,
+      "input_I2t_A2s": 0.002801794241611105,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 10.6798024,
+      "peak_protected_V": 8.38608813,
+      "input_I2t_A2s": 0.005587268814406596,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 8.05615768,
+      "peak_protected_V": 6.85610468,
+      "input_I2t_A2s": 0.0026876271450456696,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 1,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 5.34766182,
+      "peak_protected_V": 5.99999337,
+      "input_I2t_A2s": 0.0010859290893457595,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 1,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 5.27703478,
+      "peak_protected_V": 5.99999294,
+      "input_I2t_A2s": 0.0009020372935227359,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 1,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 5.14947482,
+      "peak_protected_V": 5.99999337,
+      "input_I2t_A2s": 0.0010860128254448838,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 1,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 4.76432552,
+      "peak_protected_V": 5.99999299,
+      "input_I2t_A2s": 0.0009008551229575775,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 1,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 4.39470218,
+      "peak_protected_V": 5.99999338,
+      "input_I2t_A2s": 0.0010859939584778723,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 6,
+      "source_R_ohm": 1,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 3.8406301,
+      "peak_protected_V": 5.99999328,
+      "input_I2t_A2s": 0.0008971863430577506,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 75.1659334,
+      "peak_protected_V": 11.9999985,
+      "input_I2t_A2s": 0.035406792975556184,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 60.6797449,
+      "peak_protected_V": 11.9999985,
+      "input_I2t_A2s": 0.015369715296876687,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 50.8174717,
+      "peak_protected_V": 13.4214589,
+      "input_I2t_A2s": 0.03538911590372234,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 33.8711583,
+      "peak_protected_V": 11.9999985,
+      "input_I2t_A2s": 0.013893900572638014,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 24.2214752,
+      "peak_protected_V": 18.8034361,
+      "input_I2t_A2s": 0.03538658465756683,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 17.7628456,
+      "peak_protected_V": 14.9072526,
+      "input_I2t_A2s": 0.013069559987578055,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 50.9185894,
+      "peak_protected_V": 11.9999976,
+      "input_I2t_A2s": 0.022356372044587566,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 44.4137526,
+      "peak_protected_V": 11.9999976,
+      "input_I2t_A2s": 0.011770504605068571,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 39.0802862,
+      "peak_protected_V": 12.0243163,
+      "input_I2t_A2s": 0.02235021946407815,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 28.2916118,
+      "peak_protected_V": 11.9999976,
+      "input_I2t_A2s": 0.011207176935583592,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 21.3596048,
+      "peak_protected_V": 16.7721763,
+      "input_I2t_A2s": 0.02234907526309075,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 16.1122843,
+      "peak_protected_V": 13.7122093,
+      "input_I2t_A2s": 0.010750508538604795,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 1,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 10.6953237,
+      "peak_protected_V": 11.9999867,
+      "input_I2t_A2s": 0.004343716357439499,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 1,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 10.5540696,
+      "peak_protected_V": 11.9999859,
+      "input_I2t_A2s": 0.003608149174147772,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 1,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 10.2989496,
+      "peak_protected_V": 11.9999867,
+      "input_I2t_A2s": 0.00434405130282913,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 1,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 9.52865106,
+      "peak_protected_V": 11.999986,
+      "input_I2t_A2s": 0.0036034204870542064,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 1,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 8.78940435,
+      "peak_protected_V": 11.9999868,
+      "input_I2t_A2s": 0.004343975841775914,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 12,
+      "source_R_ohm": 1,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 7.68125982,
+      "peak_protected_V": 11.9999866,
+      "input_I2t_A2s": 0.003588745360079454,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 112.7489,
+      "peak_protected_V": 17.9999978,
+      "input_I2t_A2s": 0.0796652841807196,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 91.0196173,
+      "peak_protected_V": 17.9999978,
+      "input_I2t_A2s": 0.03458185935697029,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 76.2262075,
+      "peak_protected_V": 20.1321884,
+      "input_I2t_A2s": 0.07962551077920087,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 50.806741,
+      "peak_protected_V": 17.9999978,
+      "input_I2t_A2s": 0.03126127627532394,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 36.3322128,
+      "peak_protected_V": 25.3224957,
+      "input_I2t_A2s": 0.06113233793569769,
+      "TVS_energy_J": 0.009897047105168335
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 26.6442689,
+      "peak_protected_V": 21.750639,
+      "input_I2t_A2s": 0.0295587640521539,
+      "TVS_energy_J": 0.0010008354200631855
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 76.377884,
+      "peak_protected_V": 17.9999963,
+      "input_I2t_A2s": 0.05030183711110446,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 66.6206289,
+      "peak_protected_V": 17.9999963,
+      "input_I2t_A2s": 0.026483635312529324,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 58.6204293,
+      "peak_protected_V": 18.0364744,
+      "input_I2t_A2s": 0.050287993788576305,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 42.4374202,
+      "peak_protected_V": 17.9999963,
+      "input_I2t_A2s": 0.02521614807042563,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 32.0394072,
+      "peak_protected_V": 23.6077129,
+      "input_I2t_A2s": 0.04551397469539024,
+      "TVS_energy_J": 0.004811034400755911
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 0.1,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 24.1684278,
+      "peak_protected_V": 20.5683139,
+      "input_I2t_A2s": 0.024188644204166287,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 1,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 16.0429855,
+      "peak_protected_V": 17.9999801,
+      "input_I2t_A2s": 0.009773361806632809,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 1,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 15.8311044,
+      "peak_protected_V": 17.9999788,
+      "input_I2t_A2s": 0.00811833565161559,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 1,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 15.4484245,
+      "peak_protected_V": 17.9999801,
+      "input_I2t_A2s": 0.009774115430456441,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 1,
+      "wire_L_uH": 1.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 14.2929766,
+      "peak_protected_V": 17.999979,
+      "input_I2t_A2s": 0.008107696109241525,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 1,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 13.1841065,
+      "peak_protected_V": 17.9999801,
+      "input_I2t_A2s": 0.009773945651430823,
+      "TVS_energy_J": 0.0
+    },
+    {
+      "vin_V": 18,
+      "source_R_ohm": 1,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.36,
+      "peak_input_A": 11.5218895,
+      "peak_protected_V": 17.9999798,
+      "input_I2t_A2s": 0.00807467707617586,
+      "TVS_energy_J": 0.0
+    }
+  ]
+}

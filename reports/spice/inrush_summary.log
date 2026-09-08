@@ -1,0 +1,43 @@
+{
+  "scope": "Passive network simulation with PMOS represented by20mohm already on; representative piecewise-linear TVS. Does not verify gate dynamics, reverse-recovery, SOA, actual component tolerances or standardized transient immunity.",
+  "sweep_cases": 54,
+  "capacitance_upper_values_uF": [
+    56.4,
+    11
+  ],
+  "fuse_nominal_melting_I2t_A2s": 0.853,
+  "pulse_design_screen_fraction_of_nominal": 0.25,
+  "pulse_screen_is_not_guarantee": "25% is an engineering screening allowance, not a manufacturer-qualified repetitive-pulse limit.",
+  "worst": {
+    "input_I2t_A2s": {
+      "vin_V": 18,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 112.7489,
+      "peak_protected_V": 17.9999978,
+      "input_I2t_A2s": 0.0796652841807196,
+      "TVS_energy_J": 0.0
+    },
+    "peak_protected_V": {
+      "vin_V": 18,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 10.0,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 36.3322128,
+      "peak_protected_V": 25.3224957,
+      "input_I2t_A2s": 0.06113233793569769,
+      "TVS_energy_J": 0.009897047105168335
+    },
+    "peak_input_A": {
+      "vin_V": 18,
+      "source_R_ohm": 0.02,
+      "wire_L_uH": 0.09999999999999999,
+      "bulk_ESR_ohm": 0.02,
+      "peak_input_A": 112.7489,
+      "peak_protected_V": 17.9999978,
+      "input_I2t_A2s": 0.0796652841807196,
+      "TVS_energy_J": 0.0
+    }
+  }
+}

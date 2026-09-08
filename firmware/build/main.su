@@ -1,0 +1,5 @@
+src/main.c:113:13:parse_numbers	20	static
+src/main.c:76:13:uart_uint	40	static
+src/main.c:86:13:print_status	8	static
+src/main.c:9:13:send_frame	8	static
+src/main.c:195:5:main	120	static

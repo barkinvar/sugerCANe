@@ -1,0 +1,23 @@
+{
+  "part": "CL31A226KAHNNNE",
+  "source_url": "https://product.samsungsem.com/cn/mlcc/CL31A226KAHNNN.do",
+  "source_description": "Manufacturer embedded datasheetData, DCBias graph,25C,120Hz,0.5Vrms test amplitude; typical characterization, not a guaranteed minimum.",
+  "raw_curve_file": "sources/datasheets/samsung_CL31A226_characteristics.json",
+  "dc_voltage_V": 5.176227111992911,
+  "typical_capacitance_change_percent": -39.5435518156805,
+  "typical_one_cap_uF": 13.300418600550291,
+  "capacitor_count": 3,
+  "nominal_bank_uF": 66,
+  "additional_budgets": {
+    "initial_tolerance_factor": 0.9,
+    "temperature_factor": 0.85,
+    "aging_allowance_factor": 0.95,
+    "extra_curve_uncertainty_factor": 0.9
+  },
+  "budgeted_bank_uF": 26.0984138884648,
+  "previous_two_cap_bank_uF": 17.398942592309865,
+  "design_target_uF": 25,
+  "estimated_capacitive_ripple_V_at_1A_450kHz": 0.010643473544595458,
+  "estimated_300mA_load_step_excursion_V_TI_eight_cycle_model": 0.10217734602811639,
+  "limitations": "DC-bias and temperature behavior need not combine multiplicatively; aging and extra curve factor are engineering allowances, not manufacturer guarantees. Confirm actual effective capacitance, loop stability, PFM ripple and load transients on prototype."
+}

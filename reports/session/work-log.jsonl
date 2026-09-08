@@ -1,0 +1,380 @@
+{"at": "2026-09-07T19:40:44.451462+00:00", "phase": "Rejecting out-of-stock candidates; selecting a stocked leaded MCU and protected dual sensor-power architecture"}
+{"at": "2026-09-07T19:40:59.969986+00:00", "phase": "Reviewing exact MCU, comparator, buck regulator, CAN transceiver and sensor-power protection datasheets"}
+{"at": "2026-09-07T19:41:23.011919+00:00", "phase": "Architecture selection: STM32F042K6 LQFP32, protected 5 V/VBAT rails, four configurable comparator inputs"}
+{"at": "2026-09-07T19:42:22.322635+00:00", "phase": "Documented architecture and input modes; preparing reproducible circuit calculations and KiCad generation"}
+{"at": "2026-09-07T19:45:45.151274+00:00", "phase": "Completed DC threshold and power-limit corner checks; building schematic connectivity model and sourcing passive/protection parts"}
+{"at": "2026-09-07T19:46:12.973802+00:00", "phase": "Adding power-rail current limits, reverse-blocked input bias options, and corner-analysis margins to the circuit design"}
+{"at": "2026-09-07T19:48:26.227319+00:00", "phase": "Generating the exact circuit model and sourcing remaining power, clock, protection, and passive components"}
+{"at": "2026-09-07T19:49:58.822686+00:00", "phase": "Circuit connectivity model created with four protected sensor inputs, two sensor power rails, MCU, and CAN interface"}
+{"at": "2026-09-07T19:51:53.059661+00:00", "phase": "First native schematic passes electrical ERC; completing custom footprints and readable connected circuit drawings"}
+{"at": "2026-09-07T20:00:15.527115+00:00", "phase": "Placement has no copper clearance or short errors; fixed buck and crystal routes are complete and first full routing pass is running"}
+{"at": "2026-09-07T20:06:31.761881+00:00", "phase": "Resuming routing checks, current-limited sensor rail verification, and firmware implementation."}
+{"at": "2026-09-07T20:08:41.677982+00:00", "phase": "PCB now has zero DRC violations and zero unconnected items after ground planes and silkscreen cleanup; beginning CMSIS firmware implementation."}
+{"at": "2026-09-07T20:16:11.741418+00:00", "phase": "Bias jumper fault tolerance improved; firmware core tests pass; resolving exact passive and protection-device purchasing codes against package dimensions."}
+{"at": "2026-09-07T20:20:26.661013+00:00", "phase": "Resuming the new 167-part PCB verification, then completing procurement and firmware integration reviews."}
+{"at": "2026-09-07T20:21:38.195253+00:00", "phase": "167-part revised PCB passes zero-violation DRC and full 431-pin schematic/model/PCB parity; improving schematic readability."}
+{"at": "2026-09-07T20:25:03.488790+00:00", "phase": "All nine schematic pages now use readable circuit groupings and pass ERC plus exact board/model parity; completing DigiKey stock and price observations."}
+{"at": "2026-09-07T20:26:27.258355+00:00", "phase": "Supply-chain revision: TPS1H200A replaces unavailable TPS1H100A; measured manufacturer DC-bias curve motivates third buck output capacitor."}
+{"at": "2026-09-07T20:31:35.385714+00:00", "phase": "Stock-driven 169-part revision passes zero ERC/DRC and full pin/net parity; complete 49-line DigiKey BOM exported. Starting WPILib driver and host configuration tools."}
+{"at": "2026-09-07T20:34:44.051740+00:00", "phase": "Implemented WPILib Java 17 transport/codec with stale-data handling and Python UART/CAN tools; preparing cross-language protocol and integration checks."}
+{"at": "2026-09-07T20:37:19.568847+00:00", "phase": "Completed Java/Python driver tests and firmware errata fixes; reviewing physical package fit, power dissipation, input transient response, and manufacturable exports."}
+{"at": "2026-09-07T20:41:49.444615+00:00", "phase": "Power-layout revision passes zero DRC violations and zero unconnected items; added complete portable component models; beginning transient and inrush simulations."}
+{"at": "2026-09-07T20:49:26.336900+00:00", "phase": "Replaced series diode with AO4485 reverse-polarity MOSFET; updated low-battery voltage and heat calculations; reviewing local DRC."}
+{"at": "2026-09-07T20:52:18.141677+00:00", "phase": "Seven SPICE input cases and 100 sampling phases each passed production debounce checks; 54 passive hot-plug cases analyzed. Added FRC Broadcast Disable handling and low-logic-voltage shutdown; firmware tests pass."}
+{"at": "2026-09-07T21:04:56.007691+00:00", "phase": "Completing wiring, assembly, protocol, and bring-up documentation; final export and independent manufacturing verification next."}
+{"at": "2026-09-07T21:06:53.201682+00:00", "phase": "Wiring, CAN protocol, firmware provisioning, Java/C++ integration, and hand-assembly guides written; continuing independent release checks."}
+{"at": "2026-09-07T21:09:54.806878+00:00", "phase": "Independent Gerber check passed: 443 top/80 bottom pad records, 265 drills, 161 placements and models; completed draft engineering and bring-up documentation."}
+{"at": "2026-09-07T21:14:34.299738+00:00", "phase": "Corrected TPS1H200A low-load FAULT interaction: switched-output ADC routed, 1kHz delivery monitoring added, 18 application scenarios and 2190989 core assertions pass; PCB DRC remains zero."}
+{"at": "2026-09-07T21:21:09.294079+00:00", "phase": "Reconstructed copper connectivity from exported Gerber polygons independently of KiCad: no shorts or opens across 99 nets; all plated barrels and pad records connected as expected."}
+{"at": "2026-09-07T21:23:43.659379+00:00", "phase": "Building reproducible validation, procurement accessories, and final documentation package after independent Gerber connectivity pass."}
+{"at": "2026-09-07T21:26:08.064374+00:00", "phase": "Release validation: circuit_model"}
+{"at": "2026-09-07T21:26:08.090658+00:00", "phase": "Release validation: bom"}
+{"at": "2026-09-07T21:26:08.116120+00:00", "phase": "Release validation: electrical"}
+{"at": "2026-09-07T21:26:08.142482+00:00", "phase": "Release validation: capacitor_derating"}
+{"at": "2026-09-07T21:26:08.541344+00:00", "phase": "Release validation: routed_power"}
+{"at": "2026-09-07T21:26:08.779585+00:00", "phase": "Release validation: dependencies"}
+{"at": "2026-09-07T21:26:08.816340+00:00", "phase": "Release validation: firmware"}
+{"at": "2026-09-07T21:26:09.315639+00:00", "phase": "Release validation: drivers"}
+{"at": "2026-09-07T21:26:12.380052+00:00", "phase": "Release validation: input_spice"}
+{"at": "2026-09-07T21:26:15.345788+00:00", "phase": "Release validation: inrush_spice"}
+{"at": "2026-09-07T21:26:18.168486+00:00", "phase": "Release validation: manufacturing_export"}
+{"at": "2026-09-07T21:26:26.908574+00:00", "phase": "Release validation: board_manifest"}
+{"at": "2026-09-07T21:26:27.117768+00:00", "phase": "Release validation: manufacturing_parser"}
+{"at": "2026-09-07T21:26:28.301787+00:00", "phase": "Release validation: gerber_connectivity"}
+{"at": "2026-09-07T21:26:29.280491+00:00", "phase": "All release validation stages passed; physical qualification remains pending."}
+{"at": "2026-09-07T21:29:20.567097+00:00", "phase": "Completed full validation pass and reviewed corrected sensor-power/controller schematics; continuing peripheral and fabrication audit."}
+{"at": "2026-09-07T21:40:34.029318+00:00", "phase": "Ground return model completed with analytic calibration, two meshes and reciprocity checks; examining exported mask/drill geometry."}
+{"at": "2026-09-07T21:42:45.610540+00:00", "phase": "Independent Gerber DFM passed after mounting-clearance correction; integrating geometry and ground-return checks."}
+{"at": "2026-09-07T21:44:38.238268+00:00", "phase": "Firmware static stack review passes: 432 bytes conservative estimate versus 1024-byte reservation; binary unchanged."}
+{"at": "2026-09-07T21:44:57.314367+00:00", "phase": "Release validation: circuit_model"}
+{"at": "2026-09-07T21:44:57.342613+00:00", "phase": "Release validation: bom"}
+{"at": "2026-09-07T21:44:57.368099+00:00", "phase": "Release validation: electrical"}
+{"at": "2026-09-07T21:44:57.396752+00:00", "phase": "Release validation: capacitor_derating"}
+{"at": "2026-09-07T21:44:57.801585+00:00", "phase": "Release validation: routed_power"}
+{"at": "2026-09-07T21:44:58.050457+00:00", "phase": "Release validation: dependencies"}
+{"at": "2026-09-07T21:44:58.087849+00:00", "phase": "Release validation: firmware"}
+{"at": "2026-09-07T21:44:58.593268+00:00", "phase": "Release validation: firmware_stack"}
+{"at": "2026-09-07T21:44:58.630213+00:00", "phase": "Release validation: drivers"}
+{"at": "2026-09-07T21:45:01.695591+00:00", "phase": "Release validation: input_spice"}
+{"at": "2026-09-07T21:45:04.691939+00:00", "phase": "Release validation: inrush_spice"}
+{"at": "2026-09-07T21:45:07.545517+00:00", "phase": "Release validation: manufacturing_export"}
+{"at": "2026-09-07T21:45:15.158967+00:00", "phase": "Release validation: board_manifest"}
+{"at": "2026-09-07T21:45:15.373202+00:00", "phase": "Release validation: manufacturing_parser"}
+{"at": "2026-09-07T21:45:16.567695+00:00", "phase": "Release validation: gerber_connectivity"}
+{"at": "2026-09-07T21:45:17.552143+00:00", "phase": "Release validation: gerber_geometry"}
+{"at": "2026-09-07T21:45:19.394397+00:00", "phase": "Release validation: ground_return"}
+{"at": "2026-09-07T21:45:43.226630+00:00", "phase": "All release validation stages passed; physical qualification remains pending."}
+{"at": "2026-09-07T21:46:14.556909+00:00", "phase": "Release validation: circuit_model"}
+{"at": "2026-09-07T21:46:14.585972+00:00", "phase": "Release validation: bom"}
+{"at": "2026-09-07T21:46:14.612523+00:00", "phase": "Release validation: electrical"}
+{"at": "2026-09-07T21:46:14.641421+00:00", "phase": "Release validation: capacitor_derating"}
+{"at": "2026-09-07T21:46:15.047289+00:00", "phase": "Release validation: routed_power"}
+{"at": "2026-09-07T21:46:15.287522+00:00", "phase": "Release validation: dependencies"}
+{"at": "2026-09-07T21:46:15.324509+00:00", "phase": "Release validation: firmware"}
+{"at": "2026-09-07T21:46:15.832127+00:00", "phase": "Release validation: firmware_stack"}
+{"at": "2026-09-07T21:46:15.869833+00:00", "phase": "Release validation: drivers"}
+{"at": "2026-09-07T21:46:18.952763+00:00", "phase": "Release validation: input_spice"}
+{"at": "2026-09-07T21:46:21.936819+00:00", "phase": "Release validation: inrush_spice"}
+{"at": "2026-09-07T21:46:24.825490+00:00", "phase": "Release validation: manufacturing_export"}
+{"at": "2026-09-07T21:46:32.492233+00:00", "phase": "Release validation: board_manifest"}
+{"at": "2026-09-07T21:46:32.707339+00:00", "phase": "Release validation: manufacturing_parser"}
+{"at": "2026-09-07T21:46:33.887942+00:00", "phase": "Release validation: gerber_connectivity"}
+{"at": "2026-09-07T21:46:34.875814+00:00", "phase": "Release validation: gerber_geometry"}
+{"at": "2026-09-07T21:46:36.715449+00:00", "phase": "Release validation: ground_return"}
+{"at": "2026-09-07T21:47:00.855500+00:00", "phase": "All release validation stages passed; physical qualification remains pending."}
+{"at": "2026-09-07T21:47:23.935260+00:00", "phase": "Capacitor body clearance corrected and DRC clean; architecture diagram and handbook updated."}
+{"at": "2026-09-07T21:47:45.017313+00:00", "phase": "Release validation: circuit_model"}
+{"at": "2026-09-07T21:47:45.044158+00:00", "phase": "Release validation: bom"}
+{"at": "2026-09-07T21:47:45.070723+00:00", "phase": "Release validation: electrical"}
+{"at": "2026-09-07T21:47:45.099292+00:00", "phase": "Release validation: capacitor_derating"}
+{"at": "2026-09-07T21:47:45.492467+00:00", "phase": "Release validation: routed_power"}
+{"at": "2026-09-07T21:47:45.730888+00:00", "phase": "Release validation: dependencies"}
+{"at": "2026-09-07T21:47:45.772718+00:00", "phase": "Release validation: firmware"}
+{"at": "2026-09-07T21:47:46.277536+00:00", "phase": "Release validation: firmware_stack"}
+{"at": "2026-09-07T21:47:46.316464+00:00", "phase": "Release validation: drivers"}
+{"at": "2026-09-07T21:47:49.387943+00:00", "phase": "Release validation: input_spice"}
+{"at": "2026-09-07T21:47:52.346022+00:00", "phase": "Release validation: inrush_spice"}
+{"at": "2026-09-07T21:47:55.200701+00:00", "phase": "Release validation: manufacturing_export"}
+{"at": "2026-09-07T21:48:02.899030+00:00", "phase": "Release validation: board_manifest"}
+{"at": "2026-09-07T21:48:03.117593+00:00", "phase": "Release validation: manufacturing_parser"}
+{"at": "2026-09-07T21:48:04.302967+00:00", "phase": "Release validation: gerber_connectivity"}
+{"at": "2026-09-07T21:48:05.292750+00:00", "phase": "Release validation: gerber_geometry"}
+{"at": "2026-09-07T21:48:07.272248+00:00", "phase": "Release validation: ground_return"}
+{"at": "2026-09-07T21:48:29.934749+00:00", "phase": "All release validation stages passed; physical qualification remains pending."}
+{"at": "2026-09-07T21:51:04.281029+00:00", "phase": "Compiled ARM register tests pass, including CAN mailbox/filter handling and 34 flash-interruption cases."}
+{"at": "2026-09-07T21:53:30.082928+00:00", "phase": "Checking real sensor examples and regional sourcing; reviewed register-level firmware and capacitor-body clearance."}
+{"at": "2026-09-07T21:57:20.727113+00:00", "phase": "Release validation: circuit_model"}
+{"at": "2026-09-07T21:57:20.755330+00:00", "phase": "Release validation: bom"}
+{"at": "2026-09-07T21:57:20.781666+00:00", "phase": "Release validation: electrical"}
+{"at": "2026-09-07T21:57:20.808053+00:00", "phase": "Release validation: capacitor_derating"}
+{"at": "2026-09-07T21:57:21.211281+00:00", "phase": "Release validation: routed_power"}
+{"at": "2026-09-07T21:57:21.456011+00:00", "phase": "Release validation: dependencies"}
+{"at": "2026-09-07T21:57:21.495229+00:00", "phase": "Release validation: firmware"}
+{"at": "2026-09-07T21:57:22.000768+00:00", "phase": "Release validation: firmware_stack"}
+{"at": "2026-09-07T21:57:22.037410+00:00", "phase": "Release validation: firmware_arm_registers"}
+{"at": "2026-09-07T21:57:22.684514+00:00", "phase": "Release validation: drivers"}
+{"at": "2026-09-07T21:57:25.736777+00:00", "phase": "Release validation: input_spice"}
+{"at": "2026-09-07T21:57:28.670682+00:00", "phase": "Release validation: inrush_spice"}
+{"at": "2026-09-07T21:57:31.503837+00:00", "phase": "Release validation: manufacturing_export"}
+{"at": "2026-09-07T21:57:39.110854+00:00", "phase": "Release validation: board_manifest"}
+{"at": "2026-09-07T21:57:39.326663+00:00", "phase": "Release validation: manufacturing_parser"}
+{"at": "2026-09-07T21:57:40.518892+00:00", "phase": "Release validation: gerber_connectivity"}
+{"at": "2026-09-07T21:57:41.507439+00:00", "phase": "Release validation: gerber_geometry"}
+{"at": "2026-09-07T21:57:43.472348+00:00", "phase": "Release validation: gerber_previews"}
+{"at": "2026-09-07T21:57:46.031329+00:00", "phase": "Release validation: ground_return"}
+{"at": "2026-09-07T21:58:08.660529+00:00", "phase": "All release validation stages passed; physical qualification remains pending."}
+{"at": "2026-09-07T21:59:03.782031+00:00", "phase": "Reviewing MCU errata and preparing a pin-accurate bench wiring card from the final PCB manifest."}
+{"at": "2026-09-07T22:01:42.548770+00:00", "phase": "Archive rebuild: create fresh Python environment"}
+{"at": "2026-09-07T22:01:42.565766+00:00", "phase": "Archive rebuild: install exact locked Python packages"}
+{"at": "2026-09-07T22:01:42.867842+00:00", "phase": "Archive rebuild: complete design and firmware validation"}
+{"at": "2026-09-07T22:01:42.894131+00:00", "phase": "Archive rebuild: Release validation: circuit_model"}
+{"at": "2026-09-07T22:01:42.911660+00:00", "phase": "Archive rebuild: PASS circuit_model"}
+{"at": "2026-09-07T22:01:42.923280+00:00", "phase": "Archive rebuild: Release validation: bom"}
+{"at": "2026-09-07T22:01:42.939183+00:00", "phase": "Archive rebuild: PASS bom"}
+{"at": "2026-09-07T22:01:42.950845+00:00", "phase": "Archive rebuild: Release validation: electrical"}
+{"at": "2026-09-07T22:01:42.967251+00:00", "phase": "Archive rebuild: PASS electrical"}
+{"at": "2026-09-07T22:01:42.980077+00:00", "phase": "Archive rebuild: Release validation: capacitor_derating"}
+{"at": "2026-09-07T22:01:43.986066+00:00", "phase": "Archive rebuild: PASS capacitor_derating"}
+{"at": "2026-09-07T22:01:43.999066+00:00", "phase": "Archive rebuild: Release validation: routed_power"}
+{"at": "2026-09-07T22:01:44.240094+00:00", "phase": "Archive rebuild: PASS routed_power"}
+{"at": "2026-09-07T22:01:44.252328+00:00", "phase": "Archive rebuild: Release validation: dependencies"}
+{"at": "2026-09-07T22:01:46.787935+00:00", "phase": "Archive rebuild: PASS dependencies"}
+{"at": "2026-09-07T22:01:46.800069+00:00", "phase": "Archive rebuild: Release validation: firmware"}
+{"at": "2026-09-07T22:01:47.507678+00:00", "phase": "Archive rebuild: PASS firmware"}
+{"at": "2026-09-07T22:01:47.519884+00:00", "phase": "Archive rebuild: Release validation: firmware_stack"}
+{"at": "2026-09-07T22:01:47.545852+00:00", "phase": "Archive rebuild: PASS firmware_stack"}
+{"at": "2026-09-07T22:01:47.557229+00:00", "phase": "Archive rebuild: Release validation: firmware_arm_registers"}
+{"at": "2026-09-07T22:01:48.248522+00:00", "phase": "Archive rebuild: PASS firmware_arm_registers"}
+{"at": "2026-09-07T22:01:48.260214+00:00", "phase": "Archive rebuild: Release validation: drivers"}
+{"at": "2026-09-07T22:01:51.325419+00:00", "phase": "Archive rebuild: PASS drivers"}
+{"at": "2026-09-07T22:01:51.336655+00:00", "phase": "Archive rebuild: Release validation: input_spice"}
+{"at": "2026-09-07T22:01:54.265702+00:00", "phase": "Archive rebuild: PASS input_spice"}
+{"at": "2026-09-07T22:01:54.277629+00:00", "phase": "Archive rebuild: Release validation: inrush_spice"}
+{"at": "2026-09-07T22:01:57.087579+00:00", "phase": "Archive rebuild: PASS inrush_spice"}
+{"at": "2026-09-07T22:01:57.099391+00:00", "phase": "Archive rebuild: Release validation: manufacturing_export"}
+{"at": "2026-09-07T22:02:04.722068+00:00", "phase": "Archive rebuild: PASS manufacturing_export"}
+{"at": "2026-09-07T22:02:04.735211+00:00", "phase": "Archive rebuild: Release validation: board_manifest"}
+{"at": "2026-09-07T22:02:04.934475+00:00", "phase": "Archive rebuild: PASS board_manifest"}
+{"at": "2026-09-07T22:02:04.946811+00:00", "phase": "Archive rebuild: Release validation: manufacturing_parser"}
+{"at": "2026-09-07T22:02:06.200198+00:00", "phase": "Archive rebuild: PASS manufacturing_parser"}
+{"at": "2026-09-07T22:02:06.211527+00:00", "phase": "Archive rebuild: Release validation: gerber_connectivity"}
+{"at": "2026-09-07T22:02:07.195084+00:00", "phase": "Archive rebuild: PASS gerber_connectivity"}
+{"at": "2026-09-07T22:02:07.206442+00:00", "phase": "Archive rebuild: Release validation: gerber_geometry"}
+{"at": "2026-09-07T22:02:09.162823+00:00", "phase": "Archive rebuild: PASS gerber_geometry"}
+{"at": "2026-09-07T22:02:09.174139+00:00", "phase": "Archive rebuild: Release validation: gerber_previews"}
+{"at": "2026-09-07T22:02:11.667642+00:00", "phase": "Archive rebuild: PASS gerber_previews"}
+{"at": "2026-09-07T22:02:11.679730+00:00", "phase": "Archive rebuild: Release validation: ground_return"}
+{"at": "2026-09-07T22:02:34.515261+00:00", "phase": "Archive rebuild: PASS ground_return"}
+{"at": "2026-09-07T22:02:34.528023+00:00", "phase": "Archive rebuild: All release validation stages passed; physical qualification remains pending."}
+{"at": "2026-09-07T22:03:25.219005+00:00", "phase": "Characterizing short sensor pulses across sampling phase and debounce settings using the comparator model and production input code."}
+{"at": "2026-09-07T22:07:03.808189+00:00", "phase": "Pulse characterization completed: 470400 decisions; documented local capture versus 10ms status and robot-loop timing."}
+{"at": "2026-09-07T22:09:09.572100+00:00", "phase": "Refining buck VOUT feedback pickup to stay outside the inductor body and connect at output capacitor C13."}
+{"at": "2026-09-07T22:09:45.498128+00:00", "phase": "Release validation: circuit_model"}
+{"at": "2026-09-07T22:09:45.525565+00:00", "phase": "Release validation: bom"}
+{"at": "2026-09-07T22:09:45.551905+00:00", "phase": "Release validation: electrical"}
+{"at": "2026-09-07T22:09:45.579793+00:00", "phase": "Release validation: capacitor_derating"}
+{"at": "2026-09-07T22:09:45.989784+00:00", "phase": "Release validation: routed_power"}
+{"at": "2026-09-07T22:09:46.236578+00:00", "phase": "Release validation: dependencies"}
+{"at": "2026-09-07T22:09:46.273538+00:00", "phase": "Release validation: firmware"}
+{"at": "2026-09-07T22:09:46.775452+00:00", "phase": "Release validation: firmware_stack"}
+{"at": "2026-09-07T22:09:46.812334+00:00", "phase": "Release validation: firmware_arm_registers"}
+{"at": "2026-09-07T22:09:47.450479+00:00", "phase": "Release validation: drivers"}
+{"at": "2026-09-07T22:10:53.254083+00:00", "phase": "Release validation: circuit_model"}
+{"at": "2026-09-07T22:10:53.281024+00:00", "phase": "Release validation: bom"}
+{"at": "2026-09-07T22:10:53.307131+00:00", "phase": "Release validation: electrical"}
+{"at": "2026-09-07T22:10:53.335075+00:00", "phase": "Release validation: capacitor_derating"}
+{"at": "2026-09-07T22:10:53.727335+00:00", "phase": "Release validation: routed_power"}
+{"at": "2026-09-07T22:10:53.972380+00:00", "phase": "Release validation: dependencies"}
+{"at": "2026-09-07T22:10:54.009605+00:00", "phase": "Release validation: firmware"}
+{"at": "2026-09-07T22:10:54.508034+00:00", "phase": "Release validation: firmware_stack"}
+{"at": "2026-09-07T22:10:54.546443+00:00", "phase": "Release validation: firmware_arm_registers"}
+{"at": "2026-09-07T22:10:55.192963+00:00", "phase": "Release validation: drivers"}
+{"at": "2026-09-07T22:10:58.255966+00:00", "phase": "Release validation: input_spice"}
+{"at": "2026-09-07T22:11:01.216078+00:00", "phase": "Release validation: pulse_response"}
+{"at": "2026-09-07T22:12:55.057304+00:00", "phase": "Release validation: inrush_spice"}
+{"at": "2026-09-07T22:12:57.912975+00:00", "phase": "Release validation: manufacturing_export"}
+{"at": "2026-09-07T22:13:05.539171+00:00", "phase": "Release validation: board_manifest"}
+{"at": "2026-09-07T22:13:05.754787+00:00", "phase": "Release validation: board_render"}
+{"at": "2026-09-07T22:13:09.464585+00:00", "phase": "Release validation: manufacturing_parser"}
+{"at": "2026-09-07T22:13:10.668311+00:00", "phase": "Release validation: gerber_connectivity"}
+{"at": "2026-09-07T22:13:11.672482+00:00", "phase": "Release validation: gerber_geometry"}
+{"at": "2026-09-07T22:13:13.669439+00:00", "phase": "Release validation: gerber_previews"}
+{"at": "2026-09-07T22:13:16.189792+00:00", "phase": "Release validation: power_layout_review"}
+{"at": "2026-09-07T22:13:18.683557+00:00", "phase": "Release validation: ground_return"}
+{"at": "2026-09-07T22:13:41.889316+00:00", "phase": "Release validation: documentation"}
+{"at": "2026-09-07T22:13:45.685890+00:00", "phase": "All release validation stages passed; physical qualification remains pending."}
+{"at": "2026-09-07T22:16:10.318590+00:00", "phase": "Final assembly notes and printable documentation rebuilt; preparing archive reproduction."}
+{"at": "2026-09-07T22:16:19.977467+00:00", "phase": "Archive rebuild: create fresh Python environment"}
+{"at": "2026-09-07T22:16:19.994948+00:00", "phase": "Archive rebuild: install exact locked Python packages"}
+{"at": "2026-09-07T22:16:20.281248+00:00", "phase": "Archive rebuild: complete design and firmware validation"}
+{"at": "2026-09-07T22:16:20.306764+00:00", "phase": "Archive rebuild: Release validation: circuit_model"}
+{"at": "2026-09-07T22:16:20.323776+00:00", "phase": "Archive rebuild: PASS circuit_model"}
+{"at": "2026-09-07T22:16:20.336641+00:00", "phase": "Archive rebuild: Release validation: bom"}
+{"at": "2026-09-07T22:16:20.350765+00:00", "phase": "Archive rebuild: PASS bom"}
+{"at": "2026-09-07T22:16:20.361995+00:00", "phase": "Archive rebuild: Release validation: electrical"}
+{"at": "2026-09-07T22:16:20.376606+00:00", "phase": "Archive rebuild: PASS electrical"}
+{"at": "2026-09-07T22:16:20.388076+00:00", "phase": "Archive rebuild: Release validation: capacitor_derating"}
+{"at": "2026-09-07T22:16:21.395460+00:00", "phase": "Archive rebuild: PASS capacitor_derating"}
+{"at": "2026-09-07T22:16:21.407598+00:00", "phase": "Archive rebuild: Release validation: routed_power"}
+{"at": "2026-09-07T22:16:21.643127+00:00", "phase": "Archive rebuild: PASS routed_power"}
+{"at": "2026-09-07T22:16:21.655111+00:00", "phase": "Archive rebuild: Release validation: dependencies"}
+{"at": "2026-09-07T22:16:24.133194+00:00", "phase": "Archive rebuild: PASS dependencies"}
+{"at": "2026-09-07T22:16:24.149035+00:00", "phase": "Archive rebuild: Release validation: firmware"}
+{"at": "2026-09-07T22:16:24.856039+00:00", "phase": "Archive rebuild: PASS firmware"}
+{"at": "2026-09-07T22:16:24.867925+00:00", "phase": "Archive rebuild: Release validation: firmware_stack"}
+{"at": "2026-09-07T22:16:24.890882+00:00", "phase": "Archive rebuild: PASS firmware_stack"}
+{"at": "2026-09-07T22:16:24.902499+00:00", "phase": "Archive rebuild: Release validation: firmware_arm_registers"}
+{"at": "2026-09-07T22:16:25.582420+00:00", "phase": "Archive rebuild: PASS firmware_arm_registers"}
+{"at": "2026-09-07T22:16:25.594104+00:00", "phase": "Archive rebuild: Release validation: drivers"}
+{"at": "2026-09-07T22:16:28.635713+00:00", "phase": "Archive rebuild: PASS drivers"}
+{"at": "2026-09-07T22:16:28.647790+00:00", "phase": "Archive rebuild: Release validation: input_spice"}
+{"at": "2026-09-07T22:16:31.611557+00:00", "phase": "Archive rebuild: PASS input_spice"}
+{"at": "2026-09-07T22:16:31.622845+00:00", "phase": "Archive rebuild: Release validation: pulse_response"}
+{"at": "2026-09-07T22:18:27.326159+00:00", "phase": "Archive rebuild: PASS pulse_response"}
+{"at": "2026-09-07T22:18:27.338782+00:00", "phase": "Archive rebuild: Release validation: inrush_spice"}
+{"at": "2026-09-07T22:18:30.188428+00:00", "phase": "Archive rebuild: PASS inrush_spice"}
+{"at": "2026-09-07T22:18:30.200211+00:00", "phase": "Archive rebuild: Release validation: manufacturing_export"}
+{"at": "2026-09-07T22:18:37.901209+00:00", "phase": "Archive rebuild: PASS manufacturing_export"}
+{"at": "2026-09-07T22:18:37.913254+00:00", "phase": "Archive rebuild: Release validation: board_manifest"}
+{"at": "2026-09-07T22:18:38.114001+00:00", "phase": "Archive rebuild: PASS board_manifest"}
+{"at": "2026-09-07T22:18:38.126757+00:00", "phase": "Archive rebuild: Release validation: board_render"}
+{"at": "2026-09-07T22:18:41.813433+00:00", "phase": "Archive rebuild: PASS board_render"}
+{"at": "2026-09-07T22:18:41.826305+00:00", "phase": "Archive rebuild: Release validation: manufacturing_parser"}
+{"at": "2026-09-07T22:18:43.097023+00:00", "phase": "Archive rebuild: PASS manufacturing_parser"}
+{"at": "2026-09-07T22:18:43.109787+00:00", "phase": "Archive rebuild: Release validation: gerber_connectivity"}
+{"at": "2026-09-07T22:18:44.113802+00:00", "phase": "Archive rebuild: PASS gerber_connectivity"}
+{"at": "2026-09-07T22:18:44.125995+00:00", "phase": "Archive rebuild: Release validation: gerber_geometry"}
+{"at": "2026-09-07T22:18:46.118148+00:00", "phase": "Archive rebuild: PASS gerber_geometry"}
+{"at": "2026-09-07T22:18:46.130269+00:00", "phase": "Archive rebuild: Release validation: gerber_previews"}
+{"at": "2026-09-07T22:18:48.620041+00:00", "phase": "Archive rebuild: PASS gerber_previews"}
+{"at": "2026-09-07T22:18:48.632409+00:00", "phase": "Archive rebuild: Release validation: power_layout_review"}
+{"at": "2026-09-07T22:18:51.133356+00:00", "phase": "Archive rebuild: PASS power_layout_review"}
+{"at": "2026-09-07T22:18:51.144882+00:00", "phase": "Archive rebuild: Release validation: ground_return"}
+{"at": "2026-09-07T22:19:37.871499+00:00", "phase": "Archive reproduction interrupted by process termination; final source-pin review and restart of complete reproduction are underway."}
+{"at": "2026-09-07T22:19:42.884172+00:00", "phase": "Archive rebuild: create fresh Python environment"}
+{"at": "2026-09-07T22:19:42.900272+00:00", "phase": "Archive rebuild: install exact locked Python packages"}
+{"at": "2026-09-07T22:19:42.979685+00:00", "phase": "Archive rebuild: complete design and firmware validation"}
+{"at": "2026-09-07T22:19:43.005578+00:00", "phase": "Archive rebuild: Release validation: circuit_model"}
+{"at": "2026-09-07T22:19:43.022626+00:00", "phase": "Archive rebuild: PASS circuit_model"}
+{"at": "2026-09-07T22:19:43.035210+00:00", "phase": "Archive rebuild: Release validation: bom"}
+{"at": "2026-09-07T22:19:43.048342+00:00", "phase": "Archive rebuild: PASS bom"}
+{"at": "2026-09-07T22:19:43.059625+00:00", "phase": "Archive rebuild: Release validation: electrical"}
+{"at": "2026-09-07T22:19:43.075623+00:00", "phase": "Archive rebuild: PASS electrical"}
+{"at": "2026-09-07T22:19:43.086894+00:00", "phase": "Archive rebuild: Release validation: capacitor_derating"}
+{"at": "2026-09-07T22:19:44.089968+00:00", "phase": "Archive rebuild: PASS capacitor_derating"}
+{"at": "2026-09-07T22:19:44.101310+00:00", "phase": "Archive rebuild: Release validation: routed_power"}
+{"at": "2026-09-07T22:19:44.334262+00:00", "phase": "Archive rebuild: PASS routed_power"}
+{"at": "2026-09-07T22:19:44.345496+00:00", "phase": "Archive rebuild: Release validation: dependencies"}
+{"at": "2026-09-07T22:19:46.657347+00:00", "phase": "Archive rebuild: PASS dependencies"}
+{"at": "2026-09-07T22:19:46.669217+00:00", "phase": "Archive rebuild: Release validation: firmware"}
+{"at": "2026-09-07T22:19:47.377652+00:00", "phase": "Archive rebuild: PASS firmware"}
+{"at": "2026-09-07T22:19:47.389610+00:00", "phase": "Archive rebuild: Release validation: firmware_stack"}
+{"at": "2026-09-07T22:19:47.414274+00:00", "phase": "Archive rebuild: PASS firmware_stack"}
+{"at": "2026-09-07T22:19:47.426841+00:00", "phase": "Archive rebuild: Release validation: firmware_arm_registers"}
+{"at": "2026-09-07T22:19:48.093892+00:00", "phase": "Archive rebuild: PASS firmware_arm_registers"}
+{"at": "2026-09-07T22:19:48.106514+00:00", "phase": "Archive rebuild: Release validation: drivers"}
+{"at": "2026-09-07T22:19:51.152987+00:00", "phase": "Archive rebuild: PASS drivers"}
+{"at": "2026-09-07T22:19:51.164540+00:00", "phase": "Archive rebuild: Release validation: input_spice"}
+{"at": "2026-09-07T22:19:54.131650+00:00", "phase": "Archive rebuild: PASS input_spice"}
+{"at": "2026-09-07T22:19:54.143048+00:00", "phase": "Archive rebuild: Release validation: pulse_response"}
+{"at": "2026-09-07T22:21:48.305587+00:00", "phase": "Archive rebuild: PASS pulse_response"}
+{"at": "2026-09-07T22:21:48.317835+00:00", "phase": "Archive rebuild: Release validation: inrush_spice"}
+{"at": "2026-09-07T22:21:51.169993+00:00", "phase": "Archive rebuild: PASS inrush_spice"}
+{"at": "2026-09-07T22:21:51.182512+00:00", "phase": "Archive rebuild: Release validation: manufacturing_export"}
+{"at": "2026-09-07T22:21:58.807075+00:00", "phase": "Archive rebuild: PASS manufacturing_export"}
+{"at": "2026-09-07T22:21:58.819710+00:00", "phase": "Archive rebuild: Release validation: board_manifest"}
+{"at": "2026-09-07T22:21:59.019589+00:00", "phase": "Archive rebuild: PASS board_manifest"}
+{"at": "2026-09-07T22:21:59.031612+00:00", "phase": "Archive rebuild: Release validation: board_render"}
+{"at": "2026-09-07T22:22:02.737586+00:00", "phase": "Archive rebuild: PASS board_render"}
+{"at": "2026-09-07T22:22:02.750538+00:00", "phase": "Archive rebuild: Release validation: manufacturing_parser"}
+{"at": "2026-09-07T22:22:04.020591+00:00", "phase": "Archive rebuild: PASS manufacturing_parser"}
+{"at": "2026-09-07T22:22:04.033285+00:00", "phase": "Archive rebuild: Release validation: gerber_connectivity"}
+{"at": "2026-09-07T22:22:05.037287+00:00", "phase": "Archive rebuild: PASS gerber_connectivity"}
+{"at": "2026-09-07T22:22:05.049365+00:00", "phase": "Archive rebuild: Release validation: gerber_geometry"}
+{"at": "2026-09-07T22:22:07.060502+00:00", "phase": "Archive rebuild: PASS gerber_geometry"}
+{"at": "2026-09-07T22:22:07.073521+00:00", "phase": "Archive rebuild: Release validation: gerber_previews"}
+{"at": "2026-09-07T22:22:09.596992+00:00", "phase": "Archive rebuild: PASS gerber_previews"}
+{"at": "2026-09-07T22:22:09.608779+00:00", "phase": "Archive rebuild: Release validation: power_layout_review"}
+{"at": "2026-09-07T22:22:12.100413+00:00", "phase": "Archive rebuild: PASS power_layout_review"}
+{"at": "2026-09-07T22:22:12.112231+00:00", "phase": "Archive rebuild: Release validation: ground_return"}
+{"at": "2026-09-07T22:22:35.541228+00:00", "phase": "Archive rebuild: PASS ground_return"}
+{"at": "2026-09-07T22:22:35.554288+00:00", "phase": "Archive rebuild: Release validation: documentation"}
+{"at": "2026-09-07T22:22:39.603173+00:00", "phase": "Archive rebuild: PASS documentation"}
+{"at": "2026-09-07T22:22:39.615596+00:00", "phase": "Archive rebuild: All release validation stages passed; physical qualification remains pending."}
+{"at": "2026-09-07T22:22:57.181371+00:00", "phase": "Abracon crystal land pattern and adjacent clearances corrected; all pins connected and final DRC is zero. Revalidating changed manufacturing files."}
+{"at": "2026-09-07T22:22:57.196144+00:00", "phase": "Release validation: circuit_model"}
+{"at": "2026-09-07T22:22:57.224346+00:00", "phase": "Release validation: bom"}
+{"at": "2026-09-07T22:22:57.249670+00:00", "phase": "Release validation: electrical"}
+{"at": "2026-09-07T22:22:57.276223+00:00", "phase": "Release validation: capacitor_derating"}
+{"at": "2026-09-07T22:22:57.674789+00:00", "phase": "Release validation: routed_power"}
+{"at": "2026-09-07T22:22:57.925497+00:00", "phase": "Release validation: dependencies"}
+{"at": "2026-09-07T22:22:57.961283+00:00", "phase": "Release validation: firmware"}
+{"at": "2026-09-07T22:22:58.464159+00:00", "phase": "Release validation: firmware_stack"}
+{"at": "2026-09-07T22:22:58.502775+00:00", "phase": "Release validation: firmware_arm_registers"}
+{"at": "2026-09-07T22:22:59.147438+00:00", "phase": "Release validation: drivers"}
+{"at": "2026-09-07T22:23:02.202483+00:00", "phase": "Release validation: input_spice"}
+{"at": "2026-09-07T22:23:05.201889+00:00", "phase": "Release validation: pulse_response"}
+{"at": "2026-09-07T22:24:58.899668+00:00", "phase": "Crystal land drawing confirms manufacturer pad geometry; final firmware/input checks passed and the updated manufacturing export is next."}
+{"at": "2026-09-07T22:25:01.089382+00:00", "phase": "Release validation: inrush_spice"}
+{"at": "2026-09-07T22:25:03.971262+00:00", "phase": "Release validation: manufacturing_export"}
+{"at": "2026-09-07T22:25:11.599278+00:00", "phase": "Release validation: board_manifest"}
+{"at": "2026-09-07T22:25:11.815709+00:00", "phase": "Release validation: board_render"}
+{"at": "2026-09-07T22:25:15.513136+00:00", "phase": "Release validation: manufacturing_parser"}
+{"at": "2026-09-07T22:25:16.694270+00:00", "phase": "Release validation: gerber_connectivity"}
+{"at": "2026-09-07T22:25:17.694129+00:00", "phase": "Release validation: gerber_geometry"}
+{"at": "2026-09-07T22:25:19.706748+00:00", "phase": "Release validation: gerber_previews"}
+{"at": "2026-09-07T22:25:22.210160+00:00", "phase": "Release validation: power_layout_review"}
+{"at": "2026-09-07T22:25:24.728795+00:00", "phase": "Release validation: ground_return"}
+{"at": "2026-09-07T22:25:46.042260+00:00", "phase": "Release validation: documentation"}
+{"at": "2026-09-07T22:25:50.659888+00:00", "phase": "All release validation stages passed; physical qualification remains pending."}
+{"at": "2026-09-07T22:26:31.478419+00:00", "phase": "Archive rebuild: create fresh Python environment"}
+{"at": "2026-09-07T22:26:31.495349+00:00", "phase": "Archive rebuild: install exact locked Python packages"}
+{"at": "2026-09-07T22:26:31.768349+00:00", "phase": "Archive rebuild: complete design and firmware validation"}
+{"at": "2026-09-07T22:26:31.793869+00:00", "phase": "Archive rebuild: Release validation: circuit_model"}
+{"at": "2026-09-07T22:26:31.810103+00:00", "phase": "Archive rebuild: PASS circuit_model"}
+{"at": "2026-09-07T22:26:31.821935+00:00", "phase": "Archive rebuild: Release validation: bom"}
+{"at": "2026-09-07T22:26:31.837407+00:00", "phase": "Archive rebuild: PASS bom"}
+{"at": "2026-09-07T22:26:31.849305+00:00", "phase": "Archive rebuild: Release validation: electrical"}
+{"at": "2026-09-07T22:26:31.863382+00:00", "phase": "Archive rebuild: PASS electrical"}
+{"at": "2026-09-07T22:26:31.875504+00:00", "phase": "Archive rebuild: Release validation: capacitor_derating"}
+{"at": "2026-09-07T22:26:32.875712+00:00", "phase": "Archive rebuild: PASS capacitor_derating"}
+{"at": "2026-09-07T22:26:32.888135+00:00", "phase": "Archive rebuild: Release validation: routed_power"}
+{"at": "2026-09-07T22:26:33.116508+00:00", "phase": "Archive rebuild: PASS routed_power"}
+{"at": "2026-09-07T22:26:33.129052+00:00", "phase": "Archive rebuild: Release validation: dependencies"}
+{"at": "2026-09-07T22:26:35.691519+00:00", "phase": "Archive rebuild: PASS dependencies"}
+{"at": "2026-09-07T22:26:35.703878+00:00", "phase": "Archive rebuild: Release validation: firmware"}
+{"at": "2026-09-07T22:26:36.434005+00:00", "phase": "Archive rebuild: PASS firmware"}
+{"at": "2026-09-07T22:26:36.445804+00:00", "phase": "Archive rebuild: Release validation: firmware_stack"}
+{"at": "2026-09-07T22:26:36.470856+00:00", "phase": "Archive rebuild: PASS firmware_stack"}
+{"at": "2026-09-07T22:26:36.482571+00:00", "phase": "Archive rebuild: Release validation: firmware_arm_registers"}
+{"at": "2026-09-07T22:26:37.165061+00:00", "phase": "Archive rebuild: PASS firmware_arm_registers"}
+{"at": "2026-09-07T22:26:37.176525+00:00", "phase": "Archive rebuild: Release validation: drivers"}
+{"at": "2026-09-07T22:26:40.247814+00:00", "phase": "Archive rebuild: PASS drivers"}
+{"at": "2026-09-07T22:26:40.260175+00:00", "phase": "Archive rebuild: Release validation: input_spice"}
+{"at": "2026-09-07T22:26:43.203061+00:00", "phase": "Archive rebuild: PASS input_spice"}
+{"at": "2026-09-07T22:26:43.214897+00:00", "phase": "Archive rebuild: Release validation: pulse_response"}
+{"at": "2026-09-07T22:28:37.077329+00:00", "phase": "Archive rebuild: PASS pulse_response"}
+{"at": "2026-09-07T22:28:37.089575+00:00", "phase": "Archive rebuild: Release validation: inrush_spice"}
+{"at": "2026-09-07T22:28:39.903371+00:00", "phase": "Archive rebuild: PASS inrush_spice"}
+{"at": "2026-09-07T22:28:39.915703+00:00", "phase": "Archive rebuild: Release validation: manufacturing_export"}
+{"at": "2026-09-07T22:28:47.440043+00:00", "phase": "Archive rebuild: PASS manufacturing_export"}
+{"at": "2026-09-07T22:28:47.451538+00:00", "phase": "Archive rebuild: Release validation: board_manifest"}
+{"at": "2026-09-07T22:28:47.659468+00:00", "phase": "Archive rebuild: PASS board_manifest"}
+{"at": "2026-09-07T22:28:47.670938+00:00", "phase": "Archive rebuild: Release validation: board_render"}
+{"at": "2026-09-07T22:28:51.309464+00:00", "phase": "Archive rebuild: PASS board_render"}
+{"at": "2026-09-07T22:28:51.321482+00:00", "phase": "Archive rebuild: Release validation: manufacturing_parser"}
+{"at": "2026-09-07T22:28:52.570862+00:00", "phase": "Archive rebuild: PASS manufacturing_parser"}
+{"at": "2026-09-07T22:28:52.582313+00:00", "phase": "Archive rebuild: Release validation: gerber_connectivity"}
+{"at": "2026-09-07T22:28:53.594249+00:00", "phase": "Archive rebuild: PASS gerber_connectivity"}
+{"at": "2026-09-07T22:28:53.608329+00:00", "phase": "Archive rebuild: Release validation: gerber_geometry"}
+{"at": "2026-09-07T22:28:55.616508+00:00", "phase": "Archive rebuild: PASS gerber_geometry"}
+{"at": "2026-09-07T22:28:55.628491+00:00", "phase": "Archive rebuild: Release validation: gerber_previews"}
+{"at": "2026-09-07T22:28:58.122482+00:00", "phase": "Archive rebuild: PASS gerber_previews"}
+{"at": "2026-09-07T22:28:58.134744+00:00", "phase": "Archive rebuild: Release validation: power_layout_review"}
+{"at": "2026-09-07T22:29:00.635203+00:00", "phase": "Archive rebuild: PASS power_layout_review"}
+{"at": "2026-09-07T22:29:00.646880+00:00", "phase": "Archive rebuild: Release validation: ground_return"}
+{"at": "2026-09-07T22:29:22.054176+00:00", "phase": "Archive rebuild: PASS ground_return"}
+{"at": "2026-09-07T22:29:22.065668+00:00", "phase": "Archive rebuild: Release validation: documentation"}
+{"at": "2026-09-07T22:29:26.834195+00:00", "phase": "Archive rebuild: PASS documentation"}
+{"at": "2026-09-07T22:29:26.846331+00:00", "phase": "Archive rebuild: All release validation stages passed; physical qualification remains pending."}
+{"at": "2026-09-07T22:29:31.557999+00:00", "phase": "Final 34.92 MB archive reproduced successfully: all 534 manifest files verified and all 102 validated hashes identical. Completing final handoff review until session deadline."}

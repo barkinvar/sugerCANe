@@ -1,0 +1,94 @@
+{
+  "installed_date": "2026-09-07",
+  "root": "/home/neuro/.local/share/candi-tools",
+  "kicad": {
+    "version": "10.0.6",
+    "source": "https://kicad-downloads.s3.cern.ch/appimage/stable/kicad-10.0.6-x86_64.AppImage.tar",
+    "sha256": "c05fa6760be64aaf55ff476911ce81272b4efb6241f4d7e2b9fdcdc7efbf5808",
+    "extracted_appdir": "/home/neuro/.local/share/candi-tools/kicad/AppDir"
+  },
+  "ubuntu_packages": [
+    {
+      "file": "binutils-arm-none-eabi_2.42-1ubuntu1+23_amd64.deb",
+      "metadata": "Package: binutils-arm-none-eabi\nVersion: 2.42-1ubuntu1+23\nArchitecture: amd64",
+      "sha256": "2aab2d6a7e4c21ce33462f8b52b972e2a8e4597e79b5add5502e2d1f3e543472"
+    },
+    {
+      "file": "gcc-arm-none-eabi_15%3a13.2.rel1-2_amd64.deb",
+      "metadata": "Package: gcc-arm-none-eabi\nVersion: 15:13.2.rel1-2\nArchitecture: amd64",
+      "sha256": "519a5d0e5292a4b4861f69ae96e8918149bfd1646072ca53451ccfb8c5a91948"
+    },
+    {
+      "file": "libcapstone4_4.0.2-5.1build1_amd64.deb",
+      "metadata": "Package: libcapstone4\nVersion: 4.0.2-5.1build1\nArchitecture: amd64",
+      "sha256": "c2b92fa793412f00fe14f3a8e30bb73b1138d237bafda520f291db33ed475e0c"
+    },
+    {
+      "file": "libftdi1-2_1.5-6build5_amd64.deb",
+      "metadata": "Package: libftdi1-2\nVersion: 1.5-6build5\nArchitecture: amd64",
+      "sha256": "e29ff4596879ee6e9a35151bde97e51d1da673a1323ac58358242836d42e1044"
+    },
+    {
+      "file": "libgpiod2t64_1.6.3-1.1build1_amd64.deb",
+      "metadata": "Package: libgpiod2t64\nVersion: 1.6.3-1.1build1\nArchitecture: amd64",
+      "sha256": "2f983a0e18b595ea191ea8f295c7f925df17b010b8538a2a66653cfb2c0b4282"
+    },
+    {
+      "file": "libhidapi-hidraw0_0.14.0-1build1_amd64.deb",
+      "metadata": "Package: libhidapi-hidraw0\nVersion: 0.14.0-1build1\nArchitecture: amd64",
+      "sha256": "940d2f097676c795fb94d61070a7e63547c76d9ba6ea81b87b5cf43f7458032c"
+    },
+    {
+      "file": "libjaylink0_0.3.1-1_amd64.deb",
+      "metadata": "Package: libjaylink0\nVersion: 0.3.1-1\nArchitecture: amd64",
+      "sha256": "dff01cb0bb6b12eb0ca6fe678f4bd7c513b2cc15a24bcc73fda3cc79b2dd0ba4"
+    },
+    {
+      "file": "libjim0.82t64_0.82-4.1build2_amd64.deb",
+      "metadata": "Package: libjim0.82t64\nVersion: 0.82-4.1build2\nArchitecture: amd64",
+      "sha256": "427b5eccde654063e5961eb6ffd4716cc8410f5662a4764e23ec4c6082a65589"
+    },
+    {
+      "file": "libnewlib-arm-none-eabi_4.4.0.20231231-2_all.deb",
+      "metadata": "Package: libnewlib-arm-none-eabi\nVersion: 4.4.0.20231231-2\nArchitecture: all",
+      "sha256": "9af508599193d07c9460897d01a36af46a2707765bd6941e27c6d0747859b0eb"
+    },
+    {
+      "file": "libnewlib-dev_4.4.0.20231231-2_all.deb",
+      "metadata": "Package: libnewlib-dev\nVersion: 4.4.0.20231231-2\nArchitecture: all",
+      "sha256": "f945b12c3abc844e76eebc28cf7d99e9aefd7caec39583116ef29556b3c52414"
+    },
+    {
+      "file": "libstdc++-arm-none-eabi-dev_15%3a13.2.rel1-2+26_all.deb",
+      "metadata": "Package: libstdc++-arm-none-eabi-dev\nVersion: 15:13.2.rel1-2+26\nArchitecture: all",
+      "sha256": "3d6c169c2aad240df24da73c052b0c9546d76c5824b6692f2fb52c95c6afcc2b"
+    },
+    {
+      "file": "libstdc++-arm-none-eabi-newlib_15%3a13.2.rel1-2+26_all.deb",
+      "metadata": "Package: libstdc++-arm-none-eabi-newlib\nVersion: 15:13.2.rel1-2+26\nArchitecture: all",
+      "sha256": "b51e45c35cb8a9666e9eef9958e69e3798186b83a845c6c0d181c5da75568460"
+    },
+    {
+      "file": "ngspice_42+ds-3build1_amd64.deb",
+      "metadata": "Package: ngspice\nVersion: 42+ds-3build1\nArchitecture: amd64",
+      "sha256": "466c4c06418107ceaa9c9457065b3bb71a9d9dc5ec6fef186d7de9d5208ce8db"
+    },
+    {
+      "file": "openocd_0.12.0-1build2_amd64.deb",
+      "metadata": "Package: openocd\nVersion: 0.12.0-1build2\nArchitecture: amd64",
+      "sha256": "a4af4cfc6f280c508d3053141f2cb5fdf05e0f06e3158fade4e1612bf260c317"
+    }
+  ],
+  "ibom": {
+    "repository": "https://github.com/openscopeproject/InteractiveHtmlBom",
+    "tag": "v2.11.2",
+    "commit": "de7fad7ead9b73cea7eb17afa02c6ce9ce17a6ab"
+  },
+  "skill": {
+    "name": "pdf",
+    "repository": "https://github.com/openai/skills",
+    "path": "skills/.curated/pdf",
+    "installed_path": "/home/neuro/.codex/skills/pdf"
+  },
+  "python_lock": "tools-requirements.lock"
+}

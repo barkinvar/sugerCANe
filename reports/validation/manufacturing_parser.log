@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "parser": "Gerbonara 1.6.3",
+  "graphic_layers": 9,
+  "board_outline_mm": [
+    96,
+    96
+  ],
+  "plated_drills": 268,
+  "nonplated_drills": 4,
+  "copper_pad_flashes_verified": {
+    "top": 443,
+    "bottom": 80
+  },
+  "maximum_drill_coordinate_quantization_mm": 0.0005000000000023874,
+  "assembly_rows_verified": 161,
+  "purchased_references_verified": 161,
+  "portable_models_verified": 161,
+  "limitations": "X2 pad/net/coordinate and drill/placement parity; not a copper connectivity solver or fabrication-house CAM review."
+}

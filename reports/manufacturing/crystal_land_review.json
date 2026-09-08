@@ -1,0 +1,23 @@
+{
+  "result": "PASS",
+  "scope": "Actual native Y1 pad sizes/centers compared with Abracon ABM3B recommended lands, datasheet page 3; nominal drawing, not measured assembly yield.",
+  "source_url": "https://abracon.com/Resonators/abm3b.pdf",
+  "pcb_sha256": "2dbc71bdb229f70d292c08c5b2d711cc5d7ac28d577c5c7ba273a37f80972b1b",
+  "footprint": "FRC_Sensor_CAN:Abracon_ABM3B_5.0x3.2mm",
+  "pad_size_mm": [
+    1.8,
+    1.2
+  ],
+  "center_spacing_mm": [
+    4.0,
+    2.4
+  ],
+  "nominal_body_mm": [
+    5.0,
+    3.2
+  ],
+  "nominal_copper_extension_beyond_body_mm": {
+    "x": 0.4,
+    "y": 0.2
+  }
+}

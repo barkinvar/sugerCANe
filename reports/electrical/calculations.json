@@ -1,0 +1,197 @@
+{
+  "assumptions": {
+    "resistor_tolerance_initial": 0.01,
+    "resistor_total_budget": 0.0175,
+    "logic_rail_tolerance_budget": 0.03,
+    "comparator_offset_V": 0.0055,
+    "comparator_input_bias_A": 5e-08,
+    "comparator_output_low_V": [
+      0,
+      0.55
+    ],
+    "comparator_high_leakage_A": 1e-07,
+    "comparator_supply": "Protected battery rail, at least 5 V for full offset specification",
+    "scope": "DC corner analysis and conservative first-order power estimates; parasitic/transient/thermal behavior requires prototype tests."
+  },
+  "input_logic": {
+    "rising_V": [
+      1.5707955121533757,
+      2.2399715046944926
+    ],
+    "falling_V": [
+      0.9379262362399521,
+      1.425428890245041
+    ],
+    "corners_evaluated": 8192
+  },
+  "input_industrial": {
+    "rising_V": [
+      5.351803751926933,
+      6.778755170395062
+    ],
+    "falling_V": [
+      4.718096960908891,
+      5.960177175465031
+    ],
+    "corners_evaluated": 8192
+  },
+  "input_guarantee_targets": {
+    "logic_low_max_V": 0.8,
+    "logic_high_min_V": 2.4,
+    "industrial_low_max_V": 4,
+    "industrial_high_min_V": 7,
+    "continuous_signal_max_V": 30
+  },
+  "bias_resistor": {
+    "value_ohm": 4700,
+    "package": "2010",
+    "rated_power_W": 0.75,
+    "worst_power_at_30V_W": 0.194900113691733,
+    "PNP_off_voltage_at_0.5mA_V": 2.391125,
+    "bias_diode_forward_allowance_V": 0.6,
+    "NPN_release_at_10V_0.5mA_V": 6.869553863595507
+  },
+  "sensor_5v_current_limit": {
+    "resistor_kohm": 59.0,
+    "usable_target_mA": 300,
+    "minimum_mA": 393.61952969666305,
+    "maximum_mA": 505.7740323988739
+  },
+  "sensor_vbat_current_limit": {
+    "resistor_ohm": 3900,
+    "usable_target_mA": 300,
+    "nominal_mA": 512.8205128205128,
+    "minimum_mA": 428.4004284004283,
+    "maximum_mA": 600.2479284922033,
+    "accuracy_condition": "VS-OUT>=2.5V; current-limit accuracy is not specified in the low-dropout region.",
+    "latch_delay_nominal_ms": 11.033333333333331,
+    "latch_delay_note": "33nF delay capacitor, no automatic retry. Timing-current/reference are typical values; bench-check actual delay."
+  },
+  "buck": {
+    "output_nominal_V": 5.023357664233576,
+    "feedback_resistor_initial_tolerance": 0.001,
+    "feedback_resistor_total_budget": 0.003,
+    "operating_mode": "PFM, system regulation -1.5/+2.5%",
+    "dc_reference_and_divider_only_V": [
+      4.92194344703117,
+      5.176227111992911
+    ],
+    "inductor_uH": 10,
+    "minimum_inductance_uH": 8,
+    "minimum_switch_frequency_kHz": 450,
+    "peak_to_peak_ripple_at_18V_A": 1.0059616625523176,
+    "required_saturation_current_A": 4.2,
+    "output_capacitors": "3 x 22 uF, 25 V X5R, Samsung CL31A226KAHNNNE; measured manufacturer typical DC-bias curve stored with sources",
+    "minimum_effective_output_capacitance_target_uF": 25,
+    "max_duty_cycle_check": "Datasheet typical off-time150ns, maximum duty98%, foldback as low as133kHz. PMOS input entry removes the previous series-diode loss. At6V battery input the conservative resistive-drop calculation gives about5.84V at the regulator. Low-input regulation still requires bench characterization."
+  },
+  "power_budget": {
+    "sensor_vbat_A": 0.3,
+    "sensor_5V_A": 0.3,
+    "logic_5V_budget_A": 0.15,
+    "battery_total_with_bias_bleed_allowance_A": 0.32,
+    "sensor5_total_with_bias_bleed_allowance_A": 0.31,
+    "estimated_max_input_A_at_6V_80pct_efficiency": 0.829877538159592,
+    "input_fuse_nominal_A": 1.5,
+    "AP2112_dissipation_W_at_150mA": 0.2814340667989366,
+    "entry_total_resistance_budget_ohm": 0.196,
+    "fuse_hot_budget_ohm": 0.126,
+    "Q1_hot_resistance_budget_ohm": 0.04,
+    "trace_connector_resistance_budget_ohm": 0.03,
+    "protected_voltage_at_6V_budget_V": 5.83734400252072,
+    "Q1_dissipation_budget_W": 0.027547869133673002,
+    "fuse_dissipation_budget_W": 0.08677578777106995,
+    "regulator_duty_at_max_output_without_switch_losses": 0.8867435446253773,
+    "caveat": "AO4485 max20mohm at25C,VGS=-4.5V;40mohm hot is an engineering allowance. Fuse hot resistance, buck efficiency and dropout require bench verification."
+  },
+  "reverse_protection": {
+    "part": "AO4485",
+    "VDS_rating_V": 40,
+    "VGS_absolute_rating_V": 20,
+    "gate_clamp": "MMSZ12T1G 12V Zener, cathode to source",
+    "gate_pulldown_ohm": 10000,
+    "gate_resistor_power_at_29p2V_clamp_W": 0.029584,
+    "limitation": "Reverse battery polarity protection only; an on-state PMOS does not block reverse current from external sensor power."
+  },
+  "battery_rail_startup": {
+    "minimum_current_limit_A": 0.4284004284004283,
+    "nominal_fault_latch_delay_ms": 11.033333333333331,
+    "example_external_capacitance_uF": 40,
+    "onboard_capacitance_upper_allowance_uF": 1.1,
+    "example_steady_load_with_bias_A": 0.32,
+    "example_charge_time_at_18V_ms": 6.824696275804359,
+    "limitation": "Fault timing is typical and sensor startup current can exceed steady current. Verify all connected sensors together; large capacitive loads may latch the rail off."
+  },
+  "logic_open_drain": {
+    "pullup_source_min_V": 3.2009999999999996,
+    "bias_diode_drop_budget_V": 0.6,
+    "maximum_off_leakage_target_uA": 50,
+    "released_signal_min_V": 2.314938331901044,
+    "allowance_note": "0.60V is an engineering temperature allowance above the25C datasheet0.45V at10mA. Actual bias currents are lower; characterize over temperature."
+  },
+  "adc": {
+    "battery_measurement_net": "SENSOR_VBAT after U3, not VIN_PROT",
+    "vbat_divider": [
+      100000,
+      10000
+    ],
+    "vbat_ADC_at_30V_with_total_resistor_budget_V": 2.8153101222042887,
+    "sensor5V_divider": [
+      10000,
+      10000
+    ],
+    "sensor5V_ADC_at_5.25V_with_total_resistor_budget_V": 2.6709375,
+    "sample_interval_ms": 1,
+    "software_output_undervoltage_threshold_mV": 4500,
+    "startup_blanking_ms": 5,
+    "TPS1H200A_open_load_fault": "FAULT can assert below10-20mA while output remains healthy. Battery fault latching uses measured output undervoltage; autonomous hardware protection remains active.",
+    "diagnostic_error_engineering_budget_fraction": 0.06,
+    "diagnostic_accuracy_note": "6% is a system design allowance, not a qualified accuracy rating. Divider drift, VREFINT and ADC errors require bench verification."
+  },
+  "unpowered_leakage": {
+    "bias_diode_leakage_allowance_A_per_channel": 1.5e-05,
+    "temperature_scope": "BAT46W maximum at60C/50V used for positive signals up to30V; not a125C bound.",
+    "logic_bleed_ohm": 1000,
+    "battery_bleed_ohm": 10000,
+    "logic_rail_upper_estimate_V": 0.07470657243519839,
+    "battery_output_upper_estimate_V": 0.559625,
+    "logic_bleed_normal_power_W": 0.01175898320610687,
+    "battery_bleed_power_at18V_W": 0.03297709923664122,
+    "scope": "Resistive leakage-path bound only; comparator unpowered behavior, contamination and external wiring require physical power-sequencing tests."
+  },
+  "can": {
+    "clock_Hz": 48000000,
+    "prescaler": 3,
+    "segment1_TQ": 13,
+    "segment2_TQ": 2,
+    "bitrate": 1000000.0,
+    "sample_point": 0.875,
+    "planned_periodic_frames_per_second": 131,
+    "pessimistic_bits_per_extended_8byte_frame": 160,
+    "planned_bus_load_fraction": 0.02096
+  },
+  "bias_misconfiguration": {
+    "separate_resistors_per_branch": true,
+    "port_pullup_resistor_W_at_18V_plus_0p7V_negative_clamp": 0.07572735639651346,
+    "port_pullup_rated_W": 0.125,
+    "pulldown_rated_W": 0.75,
+    "all_bias_shunts_fitted": "Incorrect input threshold behavior, but each source is current-limited by4.7k. No direct short through a diode."
+  },
+  "crystal": {
+    "frequency_Hz": 8000000.0,
+    "ESR_max_ohm": 200,
+    "C0_max_pF": 7,
+    "load_pF": 18,
+    "gm_critical_mS": 1.2633093633394379,
+    "MCU_gm_min_mS": 10,
+    "startup_margin": 7.915717472057638,
+    "load_capacitors_pF": [
+      30,
+      30
+    ],
+    "assumed_stray_pF": 3,
+    "maximum_drive_uW": 100,
+    "verification": "Measure startup over voltage and temperature, actual frequency, and crystal drive on first hardware."
+  },
+  "result": "All implemented DC/corner assertions passed; unmodeled limits remain pending."
+}

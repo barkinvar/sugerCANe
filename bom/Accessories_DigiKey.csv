@@ -1,0 +1,5 @@
+manufacturer,mpn,digikey_sku,quantity,unit_price_usd,observed_stock,notes,url,observed_date
+STMicroelectronics,ST-LINK/V2,497-10484-ND,1,25.65,7207,SWD programmer; CN3 non-isolated 20-pin map in docs/ACCESSORIES.md,https://www.digikey.com/en/products/detail/stmicroelectronics/ST-LINK-V2/2214535,2026-09-07
+Adafruit,1950,1528-1961-ND,1,1.95,10997,Pack of twenty female/female service jumper wires; not robot power wiring,https://www.digikey.com/en/products/detail/adafruit-industries-llc/1950/6827084,2026-09-07
+Adafruit,954,1528-2128-ND,1,9.95,5225,3.3V UART logic; leave 5V power lead disconnected,https://www.digikey.com/en/products/detail/adafruit-industries-llc/954/7064488,2026-09-07
+Adafruit,4685,1528-4685-ND,1,16.95,78,Optional reusable M3 nylon mounting kit; indexed stock observation,https://www.digikey.com/en/products/detail/adafruit-industries-llc/4685/13180686,2026-09-07

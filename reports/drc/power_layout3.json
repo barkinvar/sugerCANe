@@ -1,0 +1,83 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-07T13:40:08",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "FRC_Sensor_CAN.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.0893 mm)",
+            "items": [
+                {
+                    "description": "Via [VIN_PROT] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 23.0,
+                        "y": 17.7
+                    },
+                    "uuid": "b2bd8a8b-9211-4205-acb7-d0292552e5c3"
+                },
+                {
+                    "description": "Track [V5_INTERNAL] on B.Cu, length 9.1127 mm",
+                    "pos": {
+                        "x": 16.6982,
+                        "y": 18.3893
+                    },
+                    "uuid": "d31c6d1d-3b4e-4baf-ac56-7da030000fb0"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.0276 mm)",
+            "items": [
+                {
+                    "description": "Via [VIN_FUSED] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 14.0,
+                        "y": 20.2
+                    },
+                    "uuid": "0cf82588-ba23-4018-b19a-1c8d33748264"
+                },
+                {
+                    "description": "Track [V5_INTERNAL] on B.Cu, length 4.6441 mm",
+                    "pos": {
+                        "x": 13.4143,
+                        "y": 21.6732
+                    },
+                    "uuid": "fc4a398f-bd64-4a6d-98ac-8e0dad04d958"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+### Result
+{"result":"PASS","fittedReferences":161,"groupedRows":60,"checks":["Final Abracon crystal footprint and 1.8x1.2mm pad geometry","All 161 references and exact MPNs match the purchasing CSV","MPN filtering and U3 lookup","U3 board highlight and pin1 configuration","Sourced checkbox persists after reload and test state cleared","Precision R1 part shown","161 ungrouped rows","Switched-battery netlist lookup"],"consoleNote":"Only observed initial console error was the local server favicon 404."}
+### Ran Playwright code
+```js
+await (async (page) => {
+  const check=(v,m)=>{if(!v)throw new Error(m);};
+  const expected={"C1": "EEE-FK1V470P", "C10": "CC0805KKX7R9BB105", "C101": "CC0805JRNPO9BN102", "C11": "CC0805KRX7R9BB104", "C12": "CL31A226KAHNNNE", "C13": "CL31A226KAHNNNE", "C14": "CC0805KRX7R9BB333", "C2": "CL32B106KBJNNWE", "C20": "CC0805KRX7R9BB104", "C201": "CC0805JRNPO9BN102", "C21": "CC0805KRX7R9BB104", "C22": "CC0805KRX7R9BB104", "C23": "CC0805KKX7R9BB105", "C24": "TMK212AB7475KG-T", "C25": "C0805C300J5GACTU", "C26": "C0805C300J5GACTU", "C27": "CC0805KRX7R9BB104", "C28": "CC0805KRX7R9BB103", "C29": "CC0805KRX7R9BB103", "C3": "CC0805KRX7R9BB104", "C301": "CC0805JRNPO9BN102", "C4": "CL31A226KAHNNNE", "C40": "CC0805KRX7R9BB104", "C401": "CC0805JRNPO9BN102", "C41": "CC0805KRX7R9BB104", "C42": "CC0805KKX7R9BB105", "C5": "CL31A226KAHNNNE", "C50": "CC0805KRX7R9BB104", "C6": "CC0805KRX7R9BB104", "C7": "CC0805KKX7R9BB105", "C8": "TMK212AB7475KG-T", "C9": "CC0805KRX7R9BB104", "D10": "LTST-C170KGKT", "D101": "SMAJ30A", "D102": "BAT46W-E3-18", "D103": "BAT46W-E3-18", "D11": "LTST-C170KRKT", "D12": "LTST-C170KGKT", "D13": "LTST-C170KGKT", "D14": "LTST-C170KGKT", "D15": "LTST-C170KGKT", "D2": "SMBJ18A-E3/52", "D20": "ESD2CAN24DBZRQ1", "D201": "SMAJ30A", "D202": "BAT46W-E3-18", "D203": "BAT46W-E3-18", "D3": "MMSZ12T1G", "D301": "SMAJ30A", "D302": "BAT46W-E3-18", "D303": "BAT46W-E3-18", "D401": "SMAJ30A", "D402": "BAT46W-E3-18", "D403": "BAT46W-E3-18", "F1": "045101.5MRL", "J1": "691137710002", "J2": "691137710002", "J3": "691137710002", "J4": "691137710003", "J5": "691137710003", "J6": "691137710003", "J7": "691137710003", "J8": "M20-9980545", "JP1": "M20-9990245", "JP101": "M20-9990345", "JP102": "M20-9990245", "JP103": "M20-9980345", "JP2": "M20-9990245", "JP201": "M20-9990345", "JP202": "M20-9990245", "JP203": "M20-9980345", "JP301": "M20-9990345", "JP302": "M20-9990245", "JP303": "M20-9980345", "JP401": "M20-9990345", "JP402": "M20-9990245", "JP403": "M20-9980345", "L1": "SRP7028A-100M", "Q1": "AO4485", "R1": "RT0805BRD07101KL", "R10": "RC0805FR-0759KL", "R101": "RC0805FR-07110KL", "R102": "RC0805FR-07110KL", "R103": "RC0805FR-0720KL", "R104": "RC0805FR-07910KL", "R105": "RC0805FR-0710KL", "R106": "RC0805FR-07100KL", "R107": "ERJ-6ENF1782V", "R108": "RC0805FR-077K15L", "R109": "RC2010FK-074K7L", "R11": "RC0805FR-0710KL", "R110": "RC0805FR-074K7L", "R111": "RC0805FR-074K7L", "R12": "RC0805FR-07100KL", "R13": "RC0805FR-071KL", "R14": "RC0805FR-0710KL", "R15": "RC0805FR-0710KL", "R2": "RT0805BRD0713K7L", "R20": "RC0805JR-070RL", "R201": "RC0805FR-07110KL", "R202": "RC0805FR-07110KL", "R203": "RC0805FR-0720KL", "R204": "RC0805FR-07910KL", "R205": "RC0805FR-0710KL", "R206": "RC0805FR-07100KL", "R207": "ERJ-6ENF1782V", "R208": "RC0805FR-077K15L", "R209": "RC2010FK-074K7L", "R21": "RC0805FR-0710KL", "R210": "RC0805FR-074K7L", "R211": "RC0805FR-074K7L", "R22": "RC0805FR-0710KL", "R23": "RC0805FR-07100KL", "R24": "RC0805FR-0710KL", "R25": "RC0805FR-0710KL", "R26": "RC0805FR-0710KL", "R3": "RC0805FR-0710KL", "R30": "RC0805FR-071KL", "R301": "RC0805FR-07110KL", "R302": "RC0805FR-07110KL", "R303": "RC0805FR-0720KL", "R304": "RC0805FR-07910KL", "R305": "RC0805FR-0710KL", "R306": "RC0805FR-07100KL", "R307": "ERJ-6ENF1782V", "R308": "RC0805FR-077K15L", "R309": "RC2010FK-074K7L", "R31": "RC0805FR-071KL", "R310": "RC0805FR-074K7L", "R311": "RC0805FR-074K7L", "R32": "RC0805FR-071KL", "R33": "RC0805FR-071KL", "R34": "RC0805FR-071KL", "R35": "RC0805FR-071KL", "R4": "RC0805FR-071KL", "R40": "RC0805FR-0710KL", "R401": "RC0805FR-07110KL", "R402": "RC0805FR-07110KL", "R403": "RC0805FR-0720KL", "R404": "RC0805FR-07910KL", "R405": "RC0805FR-0710KL", "R406": "RC0805FR-07100KL", "R407": "ERJ-6ENF1782V", "R408": "RC0805FR-077K15L", "R409": "RC2010FK-074K7L", "R41": "RC0805FR-0710KL", "R410": "RC0805FR-074K7L", "R411": "RC0805FR-074K7L", "R42": "RC1206FR-07120RL", "R5": "RC0805FR-073K9L", "R6": "RC0805FR-0710KL", "R7": "RC0805FR-07100KL", "R8": "RC0805FR-074K7L", "R9": "RC0805FR-0710KL", "U1": "LMR51420XDDCR", "U2": "AP2112K-3.3TRG1", "U3": "TPS1H200AQDGNRQ1", "U4": "TPS2553DBVR-1", "U5": "STM32F042K6T6", "U6": "TCAN3413DR", "U7": "LM2901BIDR", "Y1": "ABM3B-8.000MHZ-B2-T"};
+  await page.reload();
+  await page.setViewportSize({width:1500,height:1050});
+  await page.locator('#filter').fill('');
+  await page.locator('#reflookup').fill('');
+  const rows=await page.locator('#bombody tr').evaluateAll(rs=>rs.map(r=>Array.from(r.cells).map(c=>c.textContent.trim())));
+  const actual={};let total=0;
+  for(const cells of rows){
+    const refs=cells[3].split(',').map(v=>v.trim());
+    check(Number(cells.at(-1))===refs.length,'Row quantity differs from references');
+    total+=refs.length;
+    for(const ref of refs){check(!(ref in actual),'Duplicate reference');actual[ref]=cells[6];}
+  }
+  check(total===161,'Fitted count');
+  check(JSON.stringify(Object.entries(actual).sort())===JSON.stringify(Object.entries(expected).sort()),'Per-reference MPN parity');
+  await page.locator('#filter').fill('ABM3B');
+  check((await page.locator('#bombody').textContent()).includes('Abracon_ABM3B_5.0x3.2mm'),'Final crystal footprint shown');
+  check(await page.evaluate(()=>pcbdata.footprints.find(f=>f.ref==='Y1').pads.every(p=>p.size[0]===1.8 && p.size[1]===1.2)),'Final crystal pad geometry');
+  await page.locator('#filter').fill('TPS1H200');
+  check(await page.locator('#bombody tr').count()===1,'MPN filter');
+  await page.locator('#reflookup').fill('U3');
+  check(await page.evaluate(()=>highlightedFootprints.length===1 && pcbdata.footprints[highlightedFootprints[0]].ref==='U3'),'U3 board highlight');
+  check(await page.evaluate(()=>config.highlight_pin1==='all' && pcbdata.footprints.find(f=>f.ref==='U3').pads.some(p=>p.pin1)),'Pin1 highlight configuration');
+  await page.locator('#bombody tr input[type=checkbox]').first().check();
+  await page.reload();
+  await page.locator('#reflookup').fill('');
+  await page.locator('#filter').fill('TPS1H200');
+  check(await page.locator('#bombody tr input[type=checkbox]').first().isChecked(),'Sourced checkbox persistence');
+  await page.locator('#bombody tr input[type=checkbox]').first().uncheck();
+  await page.locator('#reflookup').fill('U3');
+  await page.screenshot({path:'output/playwright/assembly_u3_highlight.png',fullPage:true});
+  await page.locator('#reflookup').fill('');
+  await page.locator('#filter').fill('101k');
+  check((await page.locator('#bombody').textContent()).includes('RT0805BRD07101KL'),'Precision feedback resistor');
+  await page.locator('#filter').fill('');
+  await page.locator('#bom-ungrouped-btn').click();
+  check(await page.locator('#bombody tr').count()===161,'Ungrouped count');
+  await page.locator('#bom-netlist-btn').click();
+  await page.locator('#filter').fill('SENSOR_VBAT');
+  check(await page.locator('#bombody tr').count()===1,'Netlist lookup');
+  await page.locator('#filter').fill('');
+  await page.locator('#bom-grouped-btn').click();
+  await page.reload();
+  await page.screenshot({path:'output/playwright/assembly_bom_overview.png',fullPage:true});
+  return {result:'PASS',fittedReferences:total,groupedRows:rows.length,checks:['Final Abracon crystal footprint and 1.8x1.2mm pad geometry','All 161 references and exact MPNs match the purchasing CSV','MPN filtering and U3 lookup','U3 board highlight and pin1 configuration','Sourced checkbox persists after reload and test state cleared','Precision R1 part shown','161 ungrouped rows','Switched-battery netlist lookup'],consoleNote:'Only observed initial console error was the local server favicon 404.'};
+})(page);
+```

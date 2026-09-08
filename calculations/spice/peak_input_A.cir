@@ -1,0 +1,22 @@
+* inrush_18V_0.02R_0.1uH_0.02ESR; fully-on PMOS resistive-path approximation
+Vstep source 0 PWL(0 0 10u 0 10.1u 18 5m 18)
+Rsource source wire 0.02
+Lwire wire fused_in 1e-07
+Rfuse fused_in fused .063
+Rmos fused mos_out .020
+Rtrace mos_out protected .020
+Rbulk protected bulk 0.02
+Cbulk bulk 0 56.4u
+Rceramic protected ceramic .005
+Cceramic ceramic 0 11u
+Vsense protected tvsnode 0
+BTVS tvsnode 0 I=max(v(protected)-21.05,0)/.39756+min(v(protected)+.8,0)/.01
+Rbleed protected 0 1Meg
+.control
+set wr_singlescale
+set wr_vecnames
+tran .1u 1.5m
+wrdata ../../reports/spice/peak_input_A.txt v(protected) i(Vstep) i(Vsense)
+quit
+.endc
+.end

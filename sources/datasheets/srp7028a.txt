@@ -1,0 +1,602 @@
+                                                                  Features
+
+
+             PL & ,
+                                 AUTOMOTIVE
+
+
+
+            M EE NT
+                                      GRADE                       ■ Shielded construction
+
+
+         CO FR LIA
+
+                  NT
+               IA
+       00 EN P
+     Q2 OG OM                                                     ■ Carbonyl powder core
+   C- AL C
+ AE **H oHS
+
+
+                                                                  ■ High saturation current
+      *R
+
+
+
+
+                         1R0250                                   ■ Inductance range: 0.10 to 33 µH
+                           1                                      ■ AEC-Q200 compliant
+                                                                  ■ RoHS compliant* and halogen free**
+
+
+
+                                                                  SRP7028A Series - Shielded Power Inductors
+
+  Electrical Specifications @ 25 °C                                                                                              Additional Information
+
+                           Inductance                                                                                         Click these links for more information:
+                           @ 100 KHz
+                               /1V          Q (Min.)        SRF       DCR       DCR
+ Bourns                      L    Tol.       @100          (MHz)      (mΩ)      (mΩ)      Irms      Isat      Terminal
+ Part Number               (μH)   (%)       KHz / 1 V       Typ.       Typ.     Max.       (A)       (A)        Type
+                                                                                                                               PRODUCT TECHNICAL INVENTORY SAMPLES                 CONTACT
+ SRP7028A-R10M             0.10    ± 20          5           300       1.2       1.7      32.5       60                        SELECTOR LIBRARY
+ SRP7028A-R15Y             0.15    ± 30          5           220       1.5       1.9       27        45
+ SRP7028A-R22Y             0.22    ± 30          5           150       2.1       2.8       23        40                          General Specifications
+ SRP7028A-R33M             0.33    ± 20         10           140       3.5       3.9       20        32
+                                                                                                                              Test Voltage .................................... 1.0 V
+ SRP7028A-R47M             0.47    ± 20         10           80         4        4.2      17.5       26                       Test Frequency .......................... 100 KHz
+ SRP7028A-R56M             0.56    ± 20         15           70        4.7       5.0      16.5      25.5                      Operating Temperature
+ SRP7028A-R68M             0.68    ± 20         15           67        4.8       5.5      15.5       25                         ................................ -55 °C to +150 °C
+ SRP7028A-R75M             0.75    ± 20         15           65        5.5       6.6      14.5      24.5                                         (Temperature rise included)
+                                                                                                                              Storage Temperature ... -55 °C to +150 °C
+ SRP7028A-R82M             0.82    ± 20         15           61        6.7       8.0       13        24
+                                                                                                                              Rated Current
+ SRP7028A-1R0M             1.0     ± 20         20           58        8.3      10.0       11        22                         ............. Inductance drops 20 % at Isat
+ SRP7028A-1R5M             1.5     ± 20         20           38         13      15.0        9        18                       Temperature Rise ......40 °C at rated Irms
+                                                                                                                Lead
+ SRP7028A-1R8M             1.8     ± 20         20           36         14      17.0       8.5       16                       Moisture Sensitivity Level ......................1
+                                                                                                               Frame
+ SRP7028A-2R2M             2.2     ± 20         20           32         18      20.0        8        14                       ESD Classification (HBM)..................N/A
+ SRP7028A-2R5M             2.5     ± 20         20           30         20      22.0        7        13                       1 Circuit design, component, PCB trace size and
+                                                                                                                              thickness, airflow and other cooling provisions
+ SRP7028A-3R3M             3.3     ± 20         20           25         28      30.0        6        12                       all affect the part temperature. Part temperature
+ SRP7028A-4R7M             4.7     ± 20         20           21        37       40.0       5.5       10                       should be verified in the end application.
+ SRP7028A-5R6M             5.6     ± 20         20           19        43       48.0        5         9
+ SRP7028A-6R8M             6.8     ± 20         20           18        54       60.0       4.5        8                          Materials
+ SRP7028A-8R2M             8.2     ± 20         20           17        64       68.0        4        7.5                      Core ..............................Carbonyl powder
+ SRP7028A-100M              10     ± 20         20           14        75       85.0       3.5        6                       Wire .............................Enameled copper
+ SRP7028A-150M              15     ± 20         20           12        107     123.0       3.0        4                       Terminal Finish ................................... Sn
+ SRP7028A-220M              22     ± 20         20           10        165     190.0       2.0       3.5
+                                                                                                                              Packaging ...... 1000 pcs. per 13-inch reel
+ SRP7028A-330M              33     ± 20         20            8        200     240.0       2.0       2.5
+                                                                                                                              Please consult Bourns® Model SRP-A
+                                                                                                                              Series Visual Inspection Guide for detailed
+  How to Order                                                      Recommended Layout                                        construction, processing and testing
+                                                                                                                              information.
+                           SRP7028A - 100M                                                  8.4
+                                                                                          (.331)
+Model                                                                                                                            Product Dimensions
+Value Code (see table)                                                                                                        Lead Frame Terminal
+                                                                                                                  3.5
+                                                                                                                (.138)                                7.3 ± 0.3
+                                                                                                                                                   (.287 ± .012)
+                                                                                                      2.5                                             6.7 ± 0.3
+                                                                                                    (.098)                                         (.264 ± .012)
+
+
+                                                                                                      MM
+                                                                                   DIMENSIONS:
+                                                                                                   (INCHES)
+                                                                                                                                 6.6 ± 0.3         2R2
+                                                                                                                              (.260 ± .012)
+                                                                                                                                                   1150
+
+             WARNING                                                                                                            1.8 ± 0.3                            2.8 ± 0.2
+             Cancer and Reproductive Harm                                                                                                                          (.110 + .008)
+                                                                                                                              (.071 ± .012)
+             www.P65Warnings.ca.gov
+* RoHS Directive 2015/863, Mar 31, 2015 and Annex.
+** Bourns considers a product to be “halogen free” if (a) the Bromine (Br) content is 900 ppm or less; (b) the Chlorine
+    (Cl) content is 900 ppm or less; and (c) the total Bromine (Br) and Chlorine (Cl) content is 1500 ppm or less.
+Specifications are subject to change without notice. Users should verify actual device performance in their specific                                                         DIMENSIONS:
+applications. The products described herein and this document are subject to specific legal disclaimers as set forth on the      3.0 ± 0.3
+                                                                                                                                                                                  MM
+last page of this document, and at www.bourns.com/docs/legal/disclaimer.pdf.                                                  (.118 ± .012)                                    (INCHES)
+                            SRP7028A Series - Shielded Power Inductors
+
+  L vs. I Charts
+
+                                              SRP7028A-R10M                                                                                               SRP7028A-R15Y                                                                                          SRP7028A-R22Y
+                          0.15                                                     120                                                0.20                                                 120                                                0.30                                                    120
+
+
+
+
+                                                                                                                                                                                                 Temperature Rise (°C)
+
+
+
+
+                                                                                                                                                                                                                                                                                                             Temperature Rise (°C)
+                          0.12                                                                                                                                                                                                                0.24                                                    96
+                                                                                         Temperature Rise (°C)
+
+
+
+                                                                                   96                                                 0.16                                                 96
+                                                                                                                    Inductance (μH)
+
+
+
+
+                                                                                                                                                                                                                           Inductance (μH)
+    Inductance (μH)
+
+
+
+
+                          0.09                                                     72                                                 0.12                                                 72                                                 0.18                                                    72
+
+                          0.06                                                     48                                                 0.08                                                 48                                                 0.12                                                    48
+
+                          0.03                                                     24                                                 0.04                                                 24                                                 0.06                                                    24
+
+                            0                                                      0                                                    0                                                  0                                                    0                                                     0
+                                 0    12            24        36        48        60                                                         0       10         20        30        40    50                                                         0       9         18        27        36        45
+                                                DC Current (A)                                                                                                  DC Current (A)                                                                                         DC Current (A)
+
+
+                                              SRP7028A-R33M                                                                                               SRP7028A-R47M                                                                                          SRP7028A-R56M
+                           0.5                                                     120                                                0.65                                                 100                                                0.80                                                    120
+
+
+
+
+                                                                                                                                                                                                 Temperature Rise (°C)
+                                                                                         Temperature Rise (°C)
+
+
+
+
+                                                                                                                                                                                                                                                                                                              Temperature Rise (°C)
+                           0.4                                                     96                                                 0.52                                                 80                                                 0.64                                                    96
+                                                                                                                    Inductance (μH)
+     Inductance (μH)
+
+
+
+
+                                                                                                                                                                                                                           Inductance (μH)
+                           0.3                                                     72                                                 0.39                                                 60                                                 0.48                                                    72
+
+                           0.2                                                     48                                                 0.26                                                 40                                                 0.32                                                    48
+
+                           0.1                                                     24                                                 0.13                                                 20                                                 0.16                                                    24
+
+                             0                                                     0                                                    0                                                  0                                                    0                                                     0
+                                 0        8         16        24        32        40                                                         0   5         10        15        20    25   30                                                         0   5        10        15        20        25   30
+                                                    DC Current (A)                                                                                              DC Current (A)                                                                                         DC Current (A)
+
+                                              SRP7028A-R68M                                                                                               SRP7028A-R75M                                                                                          SRP7028A-R82M
+                           1.0                                                     120                                                1.10                                                 120                                                1.10                                                    150
+                                                                                                                                                                                                 Temperature Rise (°C)
+                                                                                            Temperature Rise (°C)
+
+
+
+
+                                                                                                                                                                                                                                                                                                              Temperature Rise (°C)
+                           0.8                                                     96                                                 0.88                                                 96                                                 0.88                                                    120
+                                                                                                                    Inductance (μH)
+        Inductance (μH)
+
+
+
+
+                                                                                                                                                                                                                           Inductance (μH)
+
+
+
+
+                           0.6                                                     72                                                 0.66                                                 72                                                 0.66                                                    90
+
+                           0.4                                                     48                                                 0.44                                                 48                                                 0.44                                                    60
+
+                           0.2                                                     24                                                 0.22                                                 24                                                 0.22                                                    30
+
+                             0                                                     0                                                    0                                                  0                                                    0                                                     0
+                                  0   5        10        15        20        25   30                                                         0   5        10         15        20    25   30                                                         0   5        10        15        20    25       30
+                                                    DC Current (A)                                                                                              DC Current (A)                                                                                         DC Current (A)
+
+
+                                              SRP7028A-1R0M                                                                                               SRP7028A-1R5M                                                                                          SRP7028A-1R8M
+                            1.5                                                    150                                                2.20                                                 150                                                 2.5                                                    150
+
+                                                                                                                                                                                                                                                                                                               Temperature Rise (°C)
+                                                                                                                                                                                                 Temperature Rise (°C)
+                                                                                            Temperature Rise (°C)
+
+
+
+
+                            1.2                                                    120                                                1.76                                                 120                                                 2.0                                                    120
+                                                                                                                                                                                                                            Inductance (μH)
+                                                                                                                    Inductance (μH)
+        Inductance (μH)
+
+
+
+
+                            0.9                                                    90                                                 1.32                                                 90                                                  1.5                                                    90
+
+
+                            0.6                                                    60                                                 0.88                                                 60                                                  1.0                                                    60
+
+
+                            0.3                                                    30                                                 0.44                                                 30                                                  0.5                                                    30
+
+                             0                                                     0                                                    0                                                  0                                                     0                                                    0
+                                  0       5         10        15        20        25                                                         0       4          8         12        16    20                                                         0       4          8        12        16        20
+                                                    DC Current (A)                                                                                              DC Current (A)                                                                                         DC Current (A)
+
+
+                                              SRP7028A-2R2M                                                                                               SRP7028A-2R5M                                                                                          SRP7028A-3R3M
+                           3.0                                                     100                                                 3.5                                                 120                                                4.5                                                     150
+                                                                                                                                                                                                                                                                                                            Temperature Rise (°C)
+                                                                                                                                                                                                  Temperature Rise (°C)
+                                                                                          Temperature Rise (°C)
+
+
+
+
+                           2.4                                                     80                                                  2.8                                                 96                                                 3.6                                                     120
+                                                                                                                                                                                                                          Inductance (μH)
+                                                                                                                    Inductance (μH)
+      Inductance (μH)
+
+
+
+
+                           1.8                                                     60                                                  2.1                                                 72                                                 2.7                                                     90
+
+
+                           1.2                                                     40                                                  1.4                                                 48                                                 1.8                                                     60
+
+
+                           0.6                                                     20                                                  0.7                                                 24                                                 0.9                                                     30
+
+                             0                                                     0                                                    0                                                  0                                                    0                                                     0
+                                  0       3         6         9         12        15                                                         0       3          6         9         12    15                                                         0       3         6         9         12        15
+                                                    DC Current (A)                                                                                              DC Current (A)                                                                                         DC Current (A)
+
+
+
+
+Specifications are subject to change without notice.
+Users should verify actual device performance in their specific applications.
+The products described herein and this document are subject to specific legal disclaimers as set forth on the last page of this document, and at www.bourns.com/docs/legal/disclaimer.pdf.
+                        SRP7028A Series - Shielded Power Inductors
+
+  L vs. I Charts (Continued)
+
+                                                            SRP7028A-4R7M                                                                                                SRP7028A-5R6M                                                                              SRP7028A-6R8M
+                        7.0                                                                   100                                                       8.0                                         100                                                10                                   150
+
+
+
+
+                                                                                                                                                                                                                                                                                                  Temperature Rise (°C)
+                                                                                                                                                                                                          Temperature Rise (°C)
+                                                                                                                                                                                                    80                                                                                      120
+                                                                                                    Temperature Rise (°C)
+
+
+
+                        5.6                                                                   80                                                        6.4                                                                                             8
+
+
+
+
+                                                                                                                                                                                                                                   Inductance (μH)
+                                                                                                                                     Inductance (μH)
+     Inductance (μH)
+
+
+
+
+                        4.2                                                                   60                                                        4.8                                         60                                                  6                                   90
+
+
+                        2.8                                                                   40                                                        3.2                                         40                                                  4                                   60
+
+
+                        1.4                                                                   20                                                        1.6                                         20                                                  2                                   30
+
+                         0                                                                    0                                                           0                                         0                                                   0                                   0
+                              0                       2          4         6        8        10                                                                0   2        4        6       8     10                                                       0   2     4        6       8   10
+                                                                DC Current (A)                                                                                              DC Current (A)                                                                            DC Current (A)
+
+
+
+                                                            SRP7028A-8R2M                                                                                                SRP7028A-100M                                                                              SRP7028A-150M
+                       12.0                                                                   150                                                        15                                         100                                                30                                   100
+
+
+
+
+                                                                                                                                                                                                                                                                                                    Temperature Rise (°C)
+                                                                                                                                                                                                           Temperature Rise (°C)
+                                                                                                    Temperature Rise (°C)
+
+
+
+
+                        9.6                                                                   120                                                        12                                         80                                                 16                                   80
+
+
+
+
+                                                                                                                                                                                                                                    Inductance (μH)
+                                                                                                                                      Inductance (μH)
+     Inductance (μH)
+
+
+
+
+                        7.2                                                                   90                                                          9                                         60                                                 12                                   60
+
+                        4.8                                                                   60                                                          6                                         40                                                  8                                   40
+
+                        2.4                                                                   30                                                          3                                         20                                                  4                                   20
+
+                         0                                                                    0                                                           0                                          0                                                  0                                   0
+                              0                       2          4         6        8        10                                                                0   1.2      2.4      3.6     4.8   6.0                                                      0   1      2        3      4   5
+                                                                DC Current (A)                                                                                              DC Current (A)                                                                            DC Current (A)
+
+
+                                                            SRP7028A-220M                                                                                                SRP7028A-330M
+                        30                                                                    120                                                       48.0                                        100
+                                                                                                    Temperature Rise (°C)
+
+
+
+
+                                                                                                                                                                                                           Temperature Rise (°C)
+
+
+
+
+                        24                                                                    96                                                        36.4                                        80
+     Inductance (μH)
+
+
+
+
+                                                                                                                                      Inductance (μH)
+
+
+
+
+                        18                                                                    72                                                        28.8                                        60
+
+                        12                                                                    48                                                        19.2                                        40
+
+                         6                                                                    24                                                         9.6                                        20
+
+                         0                                                                     0                                                          0                                          0
+                              0                   0.8           1.6       2.4       3.2      4.0                                                               0   0.6      1.2      1.8     2.4   3.0
+                                                                DC Current (A)                                                                                              DC Current (A)
+
+
+
+  Soldering Profile                                                                                                                                                                                                                                   Electrical Schematic
+                                                                                                                                                                         NATURAL
+                                                                         PRE-HEATING                                           SOLDERING                                 COOLING
+                                                                                                                    TP (260 °C / 10 seconds max.)
+
+                                                          tp (245 °C / 20~40 seconds)
+                              Temperature (°C)
+
+
+
+
+                                                          217
+
+                                                          200
+                                                          150                                                               60 ~ 150 seconds
+
+                                                                       60 ~ 180 seconds
+
+
+                                                                          480 seconds max.
+                                                 25
+                                                                                                   Time (Seconds)
+
+                                                                                          REFLOW TIMES: 3 MAX.
+
+
+
+
+Specifications are subject to change without notice.
+Users should verify actual device performance in their specific applications.
+The products described herein and this document are subject to specific legal disclaimers as set forth on the last page of this document, and at www.bourns.com/docs/legal/disclaimer.pdf.
+         SRP7028A Series - Shielded Power Inductors
+
+  Packaging Specifications
+
+                         330                       2.0 ± 0.5
+                               DIA.
+                       (12.99)                  (.079 ± .020)
+
+
+                                                                                        13.5 ± 0.5
+                                                                                      (.531 ± .020)
+                                                                                           DIA.
+
+                                                                                                                             100.0 ± 2.0
+                                                                                                                           (3.937 ± .079)
+
+
+                                 13.5 ± 0.5
+                                             DIA.
+                               (.531 ± .020)
+
+
+                                                                                       16.0 ± 0.5
+                                                                                     (.630 ± .020)                                                                                                                                        16
+                                                                                                                                                                                                                                        (.630)
+                             1.75
+                            (.069)               4.0                                                                     2.0                                1.5 ± 0.1                                                    0.35 ± 0.05
+                                               (.157)                                                                  (.079)                                          DIA.                                             (.014 ± .002)
+                                                                                                                                                         (.059 ± .004)
+                                                                                                                                                                                                                                               7.8 ± 0.1
+                                                                                                                                                                                                                                             (.307 ± .004)
+                 7.5 ± 0.1
+               (.295 ± .004)
+                                                           Date Code
+
+
+
+
+                                                                                                 Date Code
+
+
+
+
+                                                                                                                                   Date Code
+
+
+
+
+                                                                                                                                                                    Date Code
+
+
+
+
+                                                                                                                                                                                                  Date Code
+                                                                       Marking
+
+
+
+
+                                                                                                             Marking
+
+
+
+
+                                                                                                                                               Marking
+
+
+
+
+                                                                                                                                                                                Marking
+
+
+
+
+                                                                                                                                                                                                              Marking
+         16.0 ± 0.3
+       (.630 ± .012)
+
+
+
+                                                                                                                                                                                            3°                            3.3 ± 0.1
+                                                                                   12.0 ± 0.1
+                                                                                                                                                                                                                        (.130 ± .004)
+                                                                                 (.472 ± .004)
+
+                                                                                                                                                                                            7.1 ± 0.1                                                 MM
+                                                                                                                                                                                                                                   DIMENSIONS:
+                                                                                                                                                                                          (.280 ± .004)                                            (INCHES)
+                                                         USER DIRECTION OF FEED
+                                                         QTY: 1000 PCS. PER REEL
+
+
+
+
+Americas: Tel: +1 951-781-5500 • Email: americus@bourns.com
+Mexico: Tel: +52-614-478-0400 • Email: mexicus@bourns.com
+Asia: Tel: +886-2-2562-4117 • Email: asiacus@bourns.com
+EMEA: Tel: +36 88 885 877 • Email: eurocus@bourns.com
+www.bourns.com
+
+
+REV. 06/24
+Specifications are subject to change without notice.
+Users should verify actual device performance in their specific applications.
+The products described herein and this document are subject to specific legal disclaimers as set forth on the last page of this document, and at www.bourns.com/docs/legal/disclaimer.pdf.
+     Legal Disclaimer Notice
+This legal disclaimer applies to purchasers and users of Bourns® products manufactured by or on behalf of Bourns, Inc. and its
+affiliates (collectively, “Bourns”).
+
+Unless otherwise expressly indicated in writing, Bourns® products and data sheets relating thereto are subject to change
+without notice. Users should check for and obtain the latest relevant information and verify that such information is current and
+complete before placing orders for Bourns® products.
+
+The characteristics and parameters of a Bourns® product set forth in its data sheet are based on laboratory conditions, and
+statements regarding the suitability of products for certain types of applications are based on Bourns’ knowledge of typical
+requirements in generic applications. The characteristics and parameters of a Bourns® product in a user application may vary
+from the data sheet characteristics and parameters due to (i) the combination of the Bourns® product with other components
+in the user’s application, or (ii) the environment of the user application itself. The characteristics and parameters of a Bourns®
+product also can and do vary in different applications and actual performance may vary over time. Users should always verify
+the actual performance of the Bourns® product in their specific devices and applications, and make their own independent
+judgments regarding the amount of additional test margin to design into their device or application to compensate for
+differences between laboratory and real world conditions.
+
+Unless Bourns has explicitly designated an individual Bourns® product as meeting the requirements of a particular industry
+standard (e.g., IATF 16949) or a particular qualification (e.g., UL listed or recognized), Bourns is not responsible for any failure
+of an individual Bourns® product to meet the requirements of such industry standard or particular qualification. Users of
+Bourns® products are responsible for ensuring compliance with safety-related requirements and standards applicable to their
+devices or applications.
+
+Bourns® products are not recommended, authorized or intended for use in nuclear, lifesaving, life-critical or life-sustaining ap-
+plications, nor in any other applications where failure or malfunction may result in personal injury, death, or severe property or
+environmental damage. Unless expressly and specifically approved in writing by two authorized Bourns representatives on a
+case-by-case basis, use of any Bourns® products in such unauthorized applications might not be safe and thus is at the user’s
+sole risk. Life-critical applications include devices identified by the U.S. Food and Drug Administration as Class III devices and
+generally equivalent classifications outside of the United States.
+
+Bourns expressly identifies those Bourns® standard products that are suitable for use in automotive applications on such
+products’ data sheets in the section entitled “Applications.” Unless expressly and specifically approved in writing by two
+authorized Bourns representatives on a case-by-case basis, use of any other Bourns® standard products in an automotive
+application might not be safe and thus is not recommended, authorized or intended and is at the user’s sole risk. If Bourns
+expressly identifies a sub-category of automotive application in the data sheet for its standard products (such as infotainment
+or lighting), such identification means that Bourns has reviewed its standard product and has determined that if such Bourns®
+standard product is considered for potential use in automotive applications, it should only be used in such sub-category of
+automotive applications. Any reference to Bourns® standard product in the data sheet as compliant with the AEC-Q standard
+or “automotive grade” does not by itself mean that Bourns has approved such product for use in an automotive application.
+
+Bourns® standard products are not tested to comply with United States Federal Aviation Administration standards generally
+or any other generally equivalent governmental organization standard applicable to products designed or manufactured for
+use in aircraft or space applications. Bourns expressly identifies Bourns® standard products that are suitable for use in aircraft
+or space applications on such products’ data sheets in the section entitled “Applications.” Unless expressly and specifically
+approved in writing by two authorized Bourns representatives on a case-by-case basis, use of any other Bourns® standard
+product in an aircraft or space application might not be safe and thus is not recommended, authorized or intended and is at the
+user’s sole risk.
+
+The use and level of testing applicable to Bourns® custom products shall be negotiated on a case-by-case basis by Bourns and
+the user for which such Bourns® custom products are specially designed. Absent a written agreement between Bourns and the
+user regarding the use and level of such testing, the above provisions applicable to Bourns® standard products shall also apply
+to such Bourns® custom products.
+
+Users shall not sell, transfer, export or re-export any Bourns® products or technology for use in activities which involve the
+design, development, production, use or stockpiling of nuclear, chemical or biological weapons or missiles, nor shall they use
+Bourns® products or technology in any facility which engages in activities relating to such devices. The foregoing restrictions
+apply to all uses and applications that violate national or international prohibitions, including embargos or international
+regulations. Further, Bourns® products and Bourns technology and technical data may not under any circumstance be
+exported or re-exported to countries subject to international sanctions or embargoes. Bourns® products may not, without prior
+authorization from Bourns and/or the U.S. Government, be resold, transferred, or re-exported to any party not eligible
+to receive U.S. commodities, software, and technical data.
+
+To the maximum extent permitted by applicable law, Bourns disclaims (i) any and all liability for special, punitive, consequential,
+incidental or indirect damages or lost revenues or lost profits, and (ii) any and all implied warranties, including implied warranties
+of fitness for particular purpose, non-infringement and merchantability.
+For your convenience, copies of this Legal Disclaimer Notice with German, Spanish, Japanese, Traditional Chinese and Simplified Chinese
+bilingual versions are available at:
+                     Web Page: http://www.bourns.com/legal/disclaimers-terms-and-policies
+                           PDF: http://www.bourns.com/docs/Legal/disclaimer.pdf
+                                                                                                                           C1753 12/14/23R
+

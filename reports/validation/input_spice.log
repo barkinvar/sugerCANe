@@ -1,0 +1,149 @@
+{
+  "logic_3v3": {
+    "supply_V": 12,
+    "signal_high_nominal_V": 3.3,
+    "kind": "push",
+    "off_leakage_A": 0,
+    "sampling_phases": 100,
+    "glitch_width_us": 49,
+    "glitch_accepted": false,
+    "rising_count": 1,
+    "valid_rise_latency_ms": [
+      2.019,
+      3.0089999999999995
+    ],
+    "valid_fall_latency_ms": [
+      2.0290000000000012,
+      3.0189999999999992
+    ],
+    "debounce_ms": 2,
+    "sample_period_ms": 1,
+    "scope": "Typical comparator SPICE model plus compiled production debounce C. Does not establish guaranteed timing or EMC immunity."
+  },
+  "logic_5v": {
+    "supply_V": 12,
+    "signal_high_nominal_V": 5,
+    "kind": "push",
+    "off_leakage_A": 0,
+    "sampling_phases": 100,
+    "glitch_width_us": 49,
+    "glitch_accepted": false,
+    "rising_count": 1,
+    "valid_rise_latency_ms": [
+      2.019,
+      3.0089999999999995
+    ],
+    "valid_fall_latency_ms": [
+      2.0290000000000012,
+      3.0189999999999992
+    ],
+    "debounce_ms": 2,
+    "sample_period_ms": 1,
+    "scope": "Typical comparator SPICE model plus compiled production debounce C. Does not establish guaranteed timing or EMC immunity."
+  },
+  "industrial_12v": {
+    "supply_V": 12,
+    "signal_high_nominal_V": 12,
+    "kind": "push",
+    "off_leakage_A": 0,
+    "sampling_phases": 100,
+    "glitch_width_us": 49,
+    "glitch_accepted": false,
+    "rising_count": 1,
+    "valid_rise_latency_ms": [
+      2.019,
+      3.0089999999999995
+    ],
+    "valid_fall_latency_ms": [
+      2.019,
+      3.0089999999999995
+    ],
+    "debounce_ms": 2,
+    "sample_period_ms": 1,
+    "scope": "Typical comparator SPICE model plus compiled production debounce C. Does not establish guaranteed timing or EMC immunity."
+  },
+  "industrial_30v_at_6v_battery": {
+    "supply_V": 6,
+    "signal_high_nominal_V": 30,
+    "kind": "push",
+    "off_leakage_A": 0,
+    "sampling_phases": 100,
+    "glitch_width_us": 49,
+    "glitch_accepted": false,
+    "rising_count": 1,
+    "valid_rise_latency_ms": [
+      2.0089999999999995,
+      2.999
+    ],
+    "valid_fall_latency_ms": [
+      2.039000000000001,
+      3.0290000000000004
+    ],
+    "debounce_ms": 2,
+    "sample_period_ms": 1,
+    "scope": "Typical comparator SPICE model plus compiled production debounce C. Does not establish guaranteed timing or EMC immunity."
+  },
+  "npn_10v_500uA_leak": {
+    "supply_V": 12,
+    "signal_high_nominal_V": 10,
+    "kind": "npn",
+    "off_leakage_A": 0.0005,
+    "sampling_phases": 100,
+    "glitch_width_us": 49,
+    "glitch_accepted": false,
+    "rising_count": 1,
+    "valid_rise_latency_ms": [
+      2.039,
+      3.0289999999999995
+    ],
+    "valid_fall_latency_ms": [
+      2.0090000000000003,
+      2.999
+    ],
+    "debounce_ms": 2,
+    "sample_period_ms": 1,
+    "scope": "Typical comparator SPICE model plus compiled production debounce C. Does not establish guaranteed timing or EMC immunity."
+  },
+  "pnp_12v_500uA_leak": {
+    "supply_V": 12,
+    "signal_high_nominal_V": 12,
+    "kind": "pnp",
+    "off_leakage_A": 0.0005,
+    "sampling_phases": 100,
+    "glitch_width_us": 49,
+    "glitch_accepted": false,
+    "rising_count": 1,
+    "valid_rise_latency_ms": [
+      2.019,
+      3.0089999999999995
+    ],
+    "valid_fall_latency_ms": [
+      2.0290000000000012,
+      3.0189999999999992
+    ],
+    "debounce_ms": 2,
+    "sample_period_ms": 1,
+    "scope": "Typical comparator SPICE model plus compiled production debounce C. Does not establish guaranteed timing or EMC immunity."
+  },
+  "open_drain_3v3_50uA_leak": {
+    "supply_V": 12,
+    "signal_high_nominal_V": 3.3,
+    "kind": "npn",
+    "off_leakage_A": 5e-05,
+    "sampling_phases": 100,
+    "glitch_width_us": 49,
+    "glitch_accepted": false,
+    "rising_count": 1,
+    "valid_rise_latency_ms": [
+      2.0289999999999995,
+      3.019
+    ],
+    "valid_fall_latency_ms": [
+      2.019,
+      3.0089999999999995
+    ],
+    "debounce_ms": 2,
+    "sample_period_ms": 1,
+    "scope": "Typical comparator SPICE model plus compiled production debounce C. Does not establish guaranteed timing or EMC immunity."
+  }
+}

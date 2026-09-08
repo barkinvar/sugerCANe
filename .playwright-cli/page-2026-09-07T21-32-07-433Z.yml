@@ -1,0 +1,198 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - text: REVISION A · OFFLINE BUILD WORKSHEET
+    - heading "FRC Sensor CAN setup" [level=1] [ref=e3]
+    - paragraph [ref=e4]: Choose your sensor outputs, check the shared power budget, and record the jumpers and service command for this board.
+  - main [ref=e5]:
+    - region "Sensor channels" [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - heading "Channel 1 J4" [level=2] [ref=e9]:
+            - text: Channel 1
+            - generic [ref=e10]: J4
+          - generic [ref=e11]:
+            - generic [ref=e12]: Sensor output
+            - combobox "Sensor output" [ref=e13]:
+              - option "Unused port"
+              - option "Industrial NPN · battery power" [selected]
+              - option "Industrial PNP · battery power"
+              - option "5 V push-pull · 5 V power"
+              - option "5 V open-collector · 5 V power"
+              - option "5 V sensor · 3.3 V open-drain signal"
+              - option "External 3.3 V push-pull"
+              - option "Dry contact to ground"
+          - paragraph [ref=e14]: Three-wire sensor. Port pull-up; sensor must work over the actual battery range.
+          - generic [ref=e15]:
+            - generic [ref=e16]: Sensor maximum supply current, mA
+            - spinbutton "Sensor maximum supply current, mA" [ref=e17]: "25"
+          - generic [ref=e18]:
+            - checkbox "Logical TRUE when the output is LOW" [checked] [ref=e19]
+            - generic [ref=e20]: Logical TRUE when the output is LOW
+        - generic [ref=e21]:
+          - heading "Channel 2 J5" [level=2] [ref=e22]:
+            - text: Channel 2
+            - generic [ref=e23]: J5
+          - generic [ref=e24]:
+            - generic [ref=e25]: Sensor output
+            - combobox "Sensor output" [ref=e26]:
+              - option "Unused port"
+              - option "Industrial NPN · battery power"
+              - option "Industrial PNP · battery power" [selected]
+              - option "5 V push-pull · 5 V power"
+              - option "5 V open-collector · 5 V power"
+              - option "5 V sensor · 3.3 V open-drain signal"
+              - option "External 3.3 V push-pull"
+              - option "Dry contact to ground"
+          - paragraph [ref=e27]: Three-wire sensor. Pulldown; sensor must work over the actual battery range.
+          - generic [ref=e28]:
+            - generic [ref=e29]: Sensor maximum supply current, mA
+            - spinbutton "Sensor maximum supply current, mA" [ref=e30]: "35"
+          - generic [ref=e31]:
+            - checkbox "Logical TRUE when the output is LOW" [ref=e32]
+            - generic [ref=e33]: Logical TRUE when the output is LOW
+        - generic [ref=e34]:
+          - heading "Channel 3 J6" [level=2] [ref=e35]:
+            - text: Channel 3
+            - generic [ref=e36]: J6
+          - generic [ref=e37]:
+            - generic [ref=e38]: Sensor output
+            - combobox "Sensor output" [ref=e39]:
+              - option "Unused port"
+              - option "Industrial NPN · battery power"
+              - option "Industrial PNP · battery power"
+              - option "5 V push-pull · 5 V power" [selected]
+              - option "5 V open-collector · 5 V power"
+              - option "5 V sensor · 3.3 V open-drain signal"
+              - option "External 3.3 V push-pull"
+              - option "Dry contact to ground"
+          - paragraph [ref=e40]: A driven logic output. No bias shunt. Sensor must accept regulated 5 V power.
+          - generic [ref=e41]:
+            - generic [ref=e42]: Sensor maximum supply current, mA
+            - spinbutton "Sensor maximum supply current, mA" [active] [ref=e43]: "50"
+          - generic [ref=e44]:
+            - checkbox "Logical TRUE when the output is LOW" [ref=e45]
+            - generic [ref=e46]: Logical TRUE when the output is LOW
+        - generic [ref=e47]:
+          - heading "Channel 4 J7" [level=2] [ref=e48]:
+            - text: Channel 4
+            - generic [ref=e49]: J7
+          - generic [ref=e50]:
+            - generic [ref=e51]: Sensor output
+            - combobox "Sensor output" [ref=e52]:
+              - option "Unused port"
+              - option "Industrial NPN · battery power"
+              - option "Industrial PNP · battery power"
+              - option "5 V push-pull · 5 V power"
+              - option "5 V open-collector · 5 V power"
+              - option "5 V sensor · 3.3 V open-drain signal"
+              - option "External 3.3 V push-pull"
+              - option "Dry contact to ground" [selected]
+          - paragraph [ref=e53]: Contact connects SIGNAL to GND. No sensor power; use the onboard 3.3 V pull-up.
+          - generic [ref=e54]:
+            - generic [ref=e55]: Sensor maximum supply current, mA
+            - spinbutton "Sensor maximum supply current, mA" [disabled] [ref=e56]: "0"
+          - generic [ref=e57]:
+            - checkbox "Logical TRUE when the output is LOW" [checked] [ref=e58]
+            - generic [ref=e59]: Logical TRUE when the output is LOW
+      - generic [ref=e60]:
+        - heading "Jumper worksheet" [level=2] [ref=e61]
+        - paragraph [ref=e62]: Identify pin 1 from the square pad and assembly drawing. These settings refer to numbered pins, regardless of header orientation.
+        - table [ref=e64]:
+          - rowgroup [ref=e65]:
+            - row [ref=e66]:
+              - columnheader "Port" [ref=e67]
+              - columnheader "Power" [ref=e68]
+              - columnheader "Threshold" [ref=e69]
+              - columnheader "Bias" [ref=e70]
+          - rowgroup [ref=e71]:
+            - row [ref=e221]:
+              - cell "J4" [ref=e222]
+              - cell "JP101 2–3 / battery" [ref=e223]
+              - cell "JP102 open / industrial" [ref=e224]
+              - cell "JP103 1–2" [ref=e225]
+            - row [ref=e226]:
+              - cell "J5" [ref=e227]
+              - cell "JP201 2–3 / battery" [ref=e228]
+              - cell "JP202 open / industrial" [ref=e229]
+              - cell "JP203 5–6" [ref=e230]
+            - row [ref=e231]:
+              - cell "J6" [ref=e232]
+              - cell "JP301 1–2 / 5 V" [ref=e233]
+              - cell "JP302 fitted / logic" [ref=e234]
+              - cell "JP303 open" [ref=e235]
+            - row [ref=e236]:
+              - cell "J7" [ref=e237]
+              - cell "JP401 open" [ref=e238]
+              - cell "JP402 fitted / logic" [ref=e239]
+              - cell "JP403 3–4" [ref=e240]
+        - generic "Bias header numbered pairs" [ref=e92]:
+          - generic [ref=e93]:
+            - generic [ref=e94]: "1"
+            - generic [ref=e95]: "2"
+            - generic [ref=e96]: Port pull-up
+          - generic [ref=e97]:
+            - generic [ref=e98]: "3"
+            - generic [ref=e99]: "4"
+            - generic [ref=e100]: 3.3 V pull-up
+          - generic [ref=e101]:
+            - generic [ref=e102]: "5"
+            - generic [ref=e103]: "6"
+            - generic [ref=e104]: Pulldown
+        - paragraph [ref=e105]: Install one shunt at most on each power or bias selector. Disconnect board power before changing jumpers. JP1 is momentary reset; leave it open. JP2 is CAN termination; fit it only at a physical end of the trunk.
+      - generic [ref=e106]:
+        - heading "Connection limits" [level=2] [ref=e107]
+        - list [ref=e108]:
+          - listitem [ref=e109]: Each sensor connector is pin 1 POWER, pin 2 GND, pin 3 SIGNAL. The board targets 0–30 V positive signals and a 6–18 V protected board supply.
+          - listitem [ref=e110]: Battery power follows the robot battery. A sensor requiring 10 V can fail during a battery sag while this interface continues running.
+          - listitem [ref=e111]: Logic mode targets LOW ≤0.8 V and HIGH ≥2.4 V. Industrial mode targets LOW ≤4 V and HIGH ≥7 V.
+          - listitem [ref=e112]: Industrial NPN/PNP examples assume ≤0.5 mA off leakage. The 3.3 V open-drain pull-up example assumes ≤50 µA. Check the actual sensor datasheet.
+          - listitem [ref=e113]: External supply voltage must never enter a POWER pin. Externally powered 24 V sensors need the wiring arrangements in the full guide.
+        - paragraph [ref=e114]: This worksheet performs arithmetic and selects documented modes. It does not establish sensor compatibility, measured electrical ratings, or robot inspection approval.
+        - paragraph [ref=e115]:
+          - link "Full wiring instructions" [ref=e116] [cursor=pointer]:
+            - /url: ../../docs/WIRING.md
+          - text: ·
+          - link "Printable handbook" [ref=e117] [cursor=pointer]:
+            - /url: FRC_Sensor_CAN_RevA_Handbook.pdf
+          - text: ·
+          - link "Interactive assembly BOM" [ref=e118] [cursor=pointer]:
+            - /url: ../assembly/interactive_bom.html
+    - complementary [ref=e119]:
+      - generic [ref=e120]:
+        - heading "Shared rail budget" [level=2] [ref=e121]
+        - generic [ref=e122]:
+          - generic [ref=e123]: Regulated 5 V
+          - strong [ref=e124]: 50.0 / 300 mA
+        - generic [ref=e126]:
+          - generic [ref=e127]: Battery
+          - strong [ref=e128]: 67.7 / 300 mA
+        - paragraph [ref=e130]: Sum of entered sensor currents and conservative bias-load allowances. The 300 mA budget applies to each complete rail, shared by all four ports. Startup current requires a separate bench check.
+        - status [ref=e131]: Entered steady currents fit both rail budgets. Verify the real sensors and startup current on the bench.
+      - generic [ref=e132]:
+        - heading "Board configuration" [level=2] [ref=e133]
+        - generic [ref=e134]:
+          - generic [ref=e135]:
+            - generic [ref=e136]: Device ID
+            - spinbutton "Device ID" [ref=e137]: "17"
+          - generic [ref=e138]:
+            - generic [ref=e139]: Debounce, ms
+            - spinbutton "Debounce, ms" [ref=e140]: "2"
+        - generic [ref=e141]:
+          - generic [ref=e142]: Service serial port
+          - textbox "Service serial port" [ref=e143]: /dev/ttyUSB0
+        - generic [ref=e144]:
+          - checkbox "Save selected sensor rails as ON at startup, after wiring and rail tests pass." [ref=e145]
+          - generic [ref=e146]: Save selected sensor rails as ON at startup, after wiring and rail tests pass.
+        - paragraph [ref=e147]: Inversion mask 9. Selected rails 3 (1=5 V, 2=battery). Saved startup rails 0.
+        - heading "Provisioning command" [level=3] [ref=e148]
+        - generic [ref=e149]: python host/sensor_can.py configure --port /dev/ttyUSB0 --device 17 --invert 9 --debounce 2 --rails 0
+        - paragraph [ref=e150]: Run from the project folder using the 3.3 V UART service connection. This page never connects to or programs the board.
+        - generic [ref=e151]:
+          - button "Copy command" [ref=e152] [cursor=pointer]
+          - button "Save worksheet" [ref=e153] [cursor=pointer]
+          - button "Print" [ref=e154] [cursor=pointer]
+        - status [ref=e155]
+      - generic [ref=e156]:
+        - heading "Before enabling power" [level=2] [ref=e157]
+        - paragraph [ref=e158]: Verify polarity, shunts and both rail voltages with a current-limited supply. Assign a unique ID before connecting to the robot CAN bus. Use the supplied robot driver’s stale-data checks and explicit fault recovery.
+        - paragraph [ref=e159]: "Original sensor interface · Hardware A · Firmware 0.1.0 · Protocol 1Dated design worksheet: 2026-09-07"

@@ -1,0 +1,54 @@
+{
+  "result": "PASS",
+  "elf_sha256": "d58ada4002975da6d8e41c80af224715ea29de41e732ed74fd06a7cd40b4d5ea",
+  "firmware_binary_sha256": "f5cd4308fa73eef40a8ac2783e90ea543ca056f57f967ec074adc38461027011",
+  "foreground_stack_bytes": 212,
+  "deepest_foreground_chain": [
+    "main",
+    "board_config_store",
+    "board_config_load",
+    "sc_config_newest",
+    "sc_config_valid",
+    "sc_crc32"
+  ],
+  "interrupts": {
+    "SysTick_Handler": {
+      "software_stack_bytes": 0,
+      "deepest_chain": [
+        "SysTick_Handler"
+      ]
+    },
+    "USART1_IRQHandler": {
+      "software_stack_bytes": 16,
+      "deepest_chain": [
+        "USART1_IRQHandler"
+      ]
+    },
+    "PVD_VDDIO2_IRQHandler": {
+      "software_stack_bytes": 8,
+      "deepest_chain": [
+        "PVD_VDDIO2_IRQHandler",
+        "board_safe_off"
+      ]
+    },
+    "HardFault_Handler": {
+      "software_stack_bytes": 8,
+      "deepest_chain": [
+        "HardFault_Handler",
+        "board_safe_off"
+      ]
+    },
+    "NMI_Handler": {
+      "software_stack_bytes": 8,
+      "deepest_chain": [
+        "NMI_Handler",
+        "board_safe_off"
+      ]
+    }
+  },
+  "conservative_exception_allowance_bytes": 220,
+  "combined_estimate_bytes": 432,
+  "linker_minimum_stack_bytes": 1024,
+  "actual_space_above_bss_bytes": 5336,
+  "limitations": "Static screen of this linked build. Direct call/tail paths plus GCC frames; simple inspected library pushes. Counts all listed exceptions simultaneously with alignment allowance, conservatively. No dynamic allocation, variable frames, reachable indirect runtime calls or recursive graph accepted. Does not detect memory corruption, validate execution timing, or replace hardware stack watermarking. Startup constructor arrays are empty."
+}

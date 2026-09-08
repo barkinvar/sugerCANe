@@ -1,0 +1,19 @@
+PASS: 2190989 core assertions (including power-loss, debounce fuzz, rollover, fault latch, CAN filters)
+PASS application normal                   935 assertions
+PASS application unconfigured             1257 assertions
+PASS application clock_failure            1232 assertions
+PASS application can_init_failure         832 assertions
+PASS application adc_failure              935 assertions
+PASS application watchdog_reset           1035 assertions
+PASS application fault_disable_recovery   938 assertions
+PASS application bad_commands             984 assertions
+PASS application uart_set                 145 assertions
+PASS application uart_overflow            962 assertions
+PASS application scheduler_stall          136 assertions
+PASS application can_busy                 936 assertions
+PASS application battery_open_load        935 assertions
+PASS application battery_short            936 assertions
+PASS application battery_voltage_loss     936 assertions
+PASS application adc_runtime_failure      935 assertions
+PASS application startup_ramp             935 assertions
+PASS application startup_timeout          934 assertions

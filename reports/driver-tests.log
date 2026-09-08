@@ -1,0 +1,13 @@
+PASS: 232928 Java protocol/driver assertions; WPILib transport compiled against 2026.2.1.
+test_golden_vectors (test_sensor_can.ProtocolTests.test_golden_vectors) ... ok
+test_ids (test_sensor_can.ProtocolTests.test_ids) ... ok
+test_invalid (test_sensor_can.ProtocolTests.test_invalid) ... ok
+test_random_unsigned (test_sensor_can.ProtocolTests.test_random_unsigned) ... ok
+test_uart_cli_real_pty (test_sensor_can.ProtocolTests.test_uart_cli_real_pty)
+Run the actual CLI against a simulated ASCII board over Linux PTY. ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.151s
+
+OK
+PASS C++ codec and driver: 75828 assertions; WPILib2026.2.1 headers, simulated transport
