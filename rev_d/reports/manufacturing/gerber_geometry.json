@@ -1,0 +1,111 @@
+{
+  "units": "mm",
+  "arc_approximation_tolerance_mm": 0.001,
+  "copper": {
+    "top": {
+      "minimum_other_net_clearance": 0.17728147125608673,
+      "closest_nets": [
+        [
+          "BB_AGND",
+          "GND"
+        ],
+        [
+          "BB_EN"
+        ]
+      ],
+      "minimum_board_edge_clearance": 0.30049999999999955,
+      "minimum_mount_center_clearance": 3.302912301872909,
+      "minimum_plated_hole_annular_copper": 0.14912932321697112
+    },
+    "bottom": {
+      "minimum_other_net_clearance": 0.20049803214042378,
+      "closest_nets": [
+        [
+          "BB_ISN",
+          "SENSOR_12V"
+        ],
+        [
+          "BB_AGND",
+          "GND"
+        ]
+      ],
+      "minimum_board_edge_clearance": 0.30049999999999955,
+      "minimum_mount_center_clearance": 3.3029121698369286,
+      "minimum_plated_hole_annular_copper": 0.14912932321697112
+    },
+    "inner_2": {
+      "minimum_other_net_clearance": 0.2004993882866741,
+      "closest_nets": [
+        [
+          "BB_ISN",
+          "SENSOR_12V"
+        ],
+        [
+          "BB_AGND",
+          "GND"
+        ]
+      ],
+      "minimum_board_edge_clearance": 0.30049999999999955,
+      "minimum_mount_center_clearance": 3.3029121220562416,
+      "minimum_plated_hole_annular_copper": 0.14912932321697112
+    },
+    "inner_1": {
+      "minimum_other_net_clearance": 0.2004993882866741,
+      "closest_nets": [
+        [
+          "BB_ISN",
+          "SENSOR_12V"
+        ],
+        [
+          "BB_AGND",
+          "GND"
+        ]
+      ],
+      "minimum_board_edge_clearance": 0.30049999999999955,
+      "minimum_mount_center_clearance": 3.3029121220562416,
+      "minimum_plated_hole_annular_copper": 0.14912932321697112
+    }
+  },
+  "mask": {
+    "top": {
+      "openings": 347,
+      "minimum_gap_between_separate_openings": 0.10981052503966242,
+      "total_open_area_mm2": 601.8057837952364
+    },
+    "bottom": {
+      "openings": 33,
+      "minimum_gap_between_separate_openings": null,
+      "total_open_area_mm2": 117.32119515991184
+    }
+  },
+  "paste": {
+    "top": {
+      "openings": 293,
+      "minimum_gap_between_separate_openings": 0.17728147125608673,
+      "total_open_area_mm2": 431.05151297731817,
+      "minimum_area_ratio_at_0_10mm_stencil": 0.9159748321685534
+    },
+    "bottom": {
+      "openings": 0
+    }
+  },
+  "minimum_hole_to_hole_web": 0.5035079339994109,
+  "minimum_hole_edge_distance": 0.8779999999999987,
+  "sha256": {
+    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "ce79072986293c26e20cded54248936b1ce7d1fcd425b2dfc8677e4b692a5e61",
+    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "4ee550060d5c97e5acc5bb00b9db2cb4da847f3155f291511a7968b34a71d3be",
+    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "12c6275d909a0d933031af50dd2cc37b45f2ab9fc99ca0829fb89f0ea57630ca",
+    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "c339a7d4172e2129766e9e9a6a8413eaf98f07ba27ae411307262df6b0981550",
+    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "35c82c2ebba098ed5a525fe4c4761b5d0866ffeaac55eb42e17cde6a3f3eadcc",
+    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "f89e5ae1631d4ec63cedde08fd855ef37e7705251ea46de5559f4468e8ab2ab3",
+    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "fe23aac817c9842b7d306a2f0a193522ded4a349533b2922e0a2aa06d2d6689c",
+    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "dbe648f97fbf289640818a94339956806a2bbee157a02e452d389c3c6fb9a095",
+    "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": "9a6518e2290015bda2508a5a266fcc0d7eddfd6016fef5605755cd99f24997f2",
+    "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": "3335f0b20ee969b51fb21d58225649f3af0014c34a0db3eb93e715a003d4f230",
+    "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": "19079ba864723b29421965a1f41dba5f37d6227dfa47832d18e05a47b003079d",
+    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "939bb75042a3beea6caa922f51457efb7fdc7874ae5fde401c00d8cae2ec3bc6",
+    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "c020b11297c3e269bca4f42ec7c768796dad9c6aea05e19643049c2def2f1577"
+  },
+  "result": "PASS",
+  "limits": "Etch geometry only, with1um arc approximation. Annular rings use filled pad copper and drill center/diameter, not drill wander or plated thickness tolerance. Mask and paste figures do not establish stencil release, registration or assembly yield. Nominal holes and copper are not fabricated measurements."
+}

@@ -9,6 +9,7 @@
 | B, current | [rev_b](rev_b/README.md) | 60 × 68 mm, 5–22 V target, horizontal Weidmüller /90 terminals, compact pogo pattern | Full-feature hand-assembly prototype |
 | C Lite | [rev_c](rev_c/README.md) | 52 × 56 mm, 89 fitted parts, 6–22 V, solder selectors, standalone protected power, fixed thresholds, protocol v2 | Simplified successor; unbuilt prototype |
 | B-2 | [rev_b2](rev_b2/README.md) | Same B circuit/geometry; 49 equivalent passive placements changed and eight unchanged MPNs resourced; factory BOM/CPL packet | Full-feature factory-assembly prototype |
+| D SC12 | [rev_d](rev_d/README.md) | 52 × 64 mm, four layers, regulated 12 V + 5 V, 104 fitted parts, rail-health handling, protocol v3 | Regulated industrial-sensor successor; unbuilt prototype |
 
 ## A to B
 
@@ -28,7 +29,7 @@ B-2 keeps 128 SMT and 16 through-hole placements, plus ten loose configuration s
 
 ## Documentation and 3D model refresh
 
-The repository overview now covers all four revisions and links their matching CAD, BOM, firmware instructions and releases. All maintained guides identify their revision. Final renders are embedded in the overviews.
+The repository overview now covers all five revisions and links their matching CAD, BOM, firmware instructions and releases. All maintained guides identify their revision. Final renders are embedded in the overviews.
 
 The B/B-2 horizontal connector models now use official Weidmüller STEP geometry, with a documented rigid translation to the existing pin origins and project display colors. Earlier simplified boxes are superseded. The PCB routing, holes, BOM connector codes and electrical targets are unchanged by this visual correction. [Connector details](rev_b/docs/CONNECTORS.md).
 
@@ -45,3 +46,13 @@ One direct 5 V buck replaces buck-plus-boost, changing the minimum supply target
 Protocol v2 uses different API IDs and new Lite Java/C++ drivers. Old rail-health fields are absent; a CAN input state cannot establish sensor power health. Broadcast disable stops telemetry and aborts pending transmissions, while independent sensor power continues. Old firmware/host drivers must not be paired with Rev C.
 
 [Rev C simplification details](rev_c/docs/SIMPLIFICATION.md), [wiring](rev_c/docs/WIRING.md), [qualification](rev_c/docs/VALIDATION.md), [factory packet](rev_c/order/RevC_Lite_Factory_Upload.zip). The $43.90 dated component estimate is not a China assembly quote. Previous revision native files and release packages remain unchanged.
+
+## C Lite to D SC12
+
+Rev D replaces the battery sensor output with a synchronous 12 V buck-boost supply while retaining the 5 V rail, three fixed-threshold inputs, horizontal connectors, compact programming pattern and seven solder bridges. It targets 6–22 V input and 300 mA per shared rail. Board area grows from 2,912 to 3,328 mm²; the four-layer construction reserves both inner layers for ground.
+
+Fitted parts increase from 89 to 104, including the integrated converter, shielded 3.3 µH inductor, Kelvin-connected 0.1 ohm resistor and local capacitors. The separate battery high-side switch and its support parts are removed. Most passives remain 0805 or larger; four 0402 capacitors and the converter HotRod QFN require more careful reflow than C. Dated DigiKey quantity-one parts increase by $10.99 to $54.89; no factory PCBA quote is claimed.
+
+Firmware 0.4.0/protocol v3/hardware 4 reports qualified 12 V PG and 5 V no-fault indications, freezes counters during faults and re-baselines after 100 ms stable recovery. Drivers reject stale/faulted inputs and wrong protocol versions. Neither indication is a calibrated voltage measurement. The 12 V current limit recovers automatically; the 5 V output switch retains latch-off behavior.
+
+[Rev D design review](rev_d/docs/SIMPLIFICATION.md), [wiring/model exceptions](rev_d/docs/WIRING.md), [prototype qualification](rev_d/docs/VALIDATION.md), [factory packet](rev_d/order/RevD_SC12_Factory_Upload.zip). A/B/B-2/C native designs and their released artifacts remain unchanged. Enclosure design follows later user review of the D mechanical handoff.

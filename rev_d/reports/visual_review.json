@@ -1,0 +1,58 @@
+{
+  "result": "Visual review completed",
+  "reviewed_utc": "2026-09-08T09:33:06.303010+00:00",
+  "reviewer": "Codex visual inspection",
+  "artifacts": [
+    {
+      "file": "output/review/board_3d_final.png",
+      "sha256": "5f852b959101dd3e27d1925acf9f81c24c6d36d646f5a2905246f71edb59a017",
+      "scope": "CAD oblique view; component placement and terminal geometry"
+    },
+    {
+      "file": "output/review/board_connectors.png",
+      "sha256": "a9f3847535a5310a855c054f9c37b810485c82700a99f20d1e637bf5708f9e1b",
+      "scope": "CAD connector view; horizontal wire entry and official vendor geometry"
+    },
+    {
+      "file": "output/review/board_top.png",
+      "sha256": "6048d8cc853528040b6102126269ee5c2c34a29dc92b8bc48cdd80da02512d36",
+      "scope": "CAD top view; placements and labels"
+    },
+    {
+      "file": "output/review/board_bottom.png",
+      "sha256": "bad64a0ebcb2ec570a15380187ba9fc3c2fd4612ce186fcee60cded84aa2ce05",
+      "scope": "CAD bottom view; labels and through-hole projections"
+    },
+    {
+      "file": "output/documentation/SC12_RevD_Handbook.pdf",
+      "sha256": "655d0ee49b16a5a5a034e43362cfa36d8fc23ac0462812dfae4698397bdaaf2a",
+      "scope": "All 21 pages reviewed as raster contact sheets; layout, tables, images and page bounds"
+    },
+    {
+      "file": "output/documentation/BOM_RevD_SC12.pdf",
+      "sha256": "c0a9521604515dc7c1db2aa51e2883df3d0bfccd96f00e16f4a91d2cd3b59af7",
+      "scope": "Page 1 visually reviewed; all 3 pages also pass automated text-page bounds"
+    },
+    {
+      "file": "output/mechanical/mechanical_drawing.pdf",
+      "sha256": "328a3df3d7c66677cce06c424cbfada530ecde18cd3b795f0d6d8afa4f6a99ed",
+      "scope": "Both pages reviewed; dimensions, service pin numbering and solder-selector labels"
+    },
+    {
+      "file": "output/assembly/schematic.pdf",
+      "sha256": "8f04899fbe516276daf48ef54473cb2b3df61225676177263cab577d693b64ad",
+      "scope": "All 9 pages reviewed as raster sheets; power and regulated 12 V sheets also inspected enlarged"
+    },
+    {
+      "file": "output/assembly/top_assembly.pdf",
+      "sha256": "e3701e7c6af5d5d2cfebf5add57b2e29fab87d8c17825fbefd11b278fb37e238",
+      "scope": "Component-side assembly drawing reviewed"
+    }
+  ],
+  "observations": [
+    "Horizontal Weidmuller manufacturer models align with the connector footprints.",
+    "No clipped PDF text detected; service selector labels and TC2050 numbering are legible.",
+    "Handbook tables split across pages with repeated column headings; no observed text overlap."
+  ],
+  "limitations": "Review of generated CAD images and documents only. Not physical assembly, solder-joint, fit, electrical or manufacturing-process qualification."
+}

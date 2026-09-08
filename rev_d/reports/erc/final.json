@@ -1,0 +1,77 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-08T02:28:42",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1",
+            "violations": []
+        },
+        {
+            "path": "/Battery entry and internal supplies/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/fb3c0a9e-b322-5632-9eb0-a957beaadad4",
+            "violations": []
+        },
+        {
+            "path": "/Regulated 12 V synchronous buck-boost/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/a8b6029a-2c88-53a0-ae51-a49b2408ffb7",
+            "violations": []
+        },
+        {
+            "path": "/Protected sensor power rails/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/0aacf9c7-060e-58ed-b759-3ac31ac433d8",
+            "violations": []
+        },
+        {
+            "path": "/Controller, clock, debug and status/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/019a6503-7c65-5b55-a3b1-c6260b8ca8f2",
+            "violations": []
+        },
+        {
+            "path": "/CAN physical interface and termination/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/665b1307-6e60-5756-a0db-e1fad53bf5c9",
+            "violations": []
+        },
+        {
+            "path": "/Input 1: fixed-threshold digital input/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/842f42b4-db0c-5b9a-83f5-42125535f27c",
+            "violations": []
+        },
+        {
+            "path": "/Input 2: fixed-threshold digital input/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/b233f995-482f-5588-a202-3091dc68d400",
+            "violations": []
+        },
+        {
+            "path": "/Input 3: fixed-threshold digital input/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/30a87cbd-88bf-524f-bf72-b44683ce5cbe",
+            "violations": []
+        }
+    ],
+    "source": "FRC_Sensor_CAN.kicad_sch"
+}

@@ -1,0 +1,12 @@
+PASS: 1824 12 V Java assertions; WPILib 2026.2.1 compiled.
+test_commands_and_identity (test_sensor_can.RegulatedProtocolTest.test_commands_and_identity) ... ok
+test_power_faults (test_sensor_can.RegulatedProtocolTest.test_power_faults) ... ok
+test_three_channels_and_unsigned_counters (test_sensor_can.RegulatedProtocolTest.test_three_channels_and_unsigned_counters) ... ok
+test_uart_readback (test_sensor_can.RegulatedProtocolTest.test_uart_readback) ... ok
+test_version_and_reserved_fields (test_sensor_can.RegulatedProtocolTest.test_version_and_reserved_fields) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+PASS: 12 V C++ protocol validation, unsigned counters and reserved fields

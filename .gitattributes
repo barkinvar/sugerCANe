@@ -13,3 +13,9 @@ rev_c/output/assembly/interactive_bom.html -whitespace
 # Compiler-generated programming images/maps retain toolchain formatting.
 *.hex whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 rev_c/firmware/build/*.map -whitespace
+
+# Rev D retains vendor and generated artifact formatting without rewriting bytes.
+rev_d/firmware/third_party/** -whitespace
+rev_d/output/**/*.svg -whitespace
+rev_d/output/assembly/interactive_bom.html -whitespace
+rev_d/firmware/build/*.map -whitespace

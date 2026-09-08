@@ -84,3 +84,16 @@ rev_b/history/before_horizontal_connectors/*
 **/output/review/routed.*
 **/output/review/grounded.*
 **/output/review/layout.*
+
+# Rev D construction trials; retain the reviewed native board and final reports.
+rev_d/reports/autorouter.log
+rev_d/reports/*_route.log
+rev_d/reports/critical_routing.log
+rev_d/reports/drc/*.json
+!rev_d/reports/drc/final.json
+rev_d/reports/erc/initial.json
+rev_d/hardware/design/placement_geometry.json
+rev_d/hardware/design/placement_initial.json
+rev_d/hardware/design/placement_preferred.json
+rev_d/hardware/design/critical_routes.json
+rev_d/hardware/design/critical_unresolved.json

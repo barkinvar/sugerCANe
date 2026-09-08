@@ -10,6 +10,7 @@ The project uses KiCad 10.0.6, Arm GNU GCC 13.2.1, Python 3.12, GNU make, ngspic
 | B | `rev_b/` | [Rev B tools](rev_b/TOOLS.md) |
 | B-2 | `rev_b2/` | [Rev B-2 tools](rev_b2/TOOLS.md) |
 | C Lite | `rev_c/` | [Rev C tools](rev_c/TOOLS.md) |
+| D SC12 | `rev_d/` | [Rev D tools](rev_d/TOOLS.md) |
 
 First select a revision directory, then activate its environment:
 
@@ -28,3 +29,5 @@ For a B/B-2 visual refresh, run `python scripts/import_connector_models.py`, the
 Driver downloads are restored using `python tools/fetch_driver_dependencies.py`. Raw SPICE traces and build intermediates are ignored; final delivered images, firmware and engineering reports remain tracked. See the [generated-file policy](CONTRIBUTING.md).
 
 Rev C uses its own `validate_release.sh`, protocol-v2 driver tests, `build_documents.py` and `build_handbook.py`. Its electrical budget is in `scripts/check_electrical.py`; older boost/ground simulations are not claimed as validation of the changed Rev C circuit. Follow the Rev C guide for its factory packet and release checks.
+
+Rev D adds the four-layer/intentional-net-tie manufacturing checks and `check_converter_loop.py` analytical screening. Its source, protocol-v3 drivers, factory packet and handbook are revision-specific. The native board is the final reviewed routing; construction scripts are not a one-command reimplementation of its later manual refinements.

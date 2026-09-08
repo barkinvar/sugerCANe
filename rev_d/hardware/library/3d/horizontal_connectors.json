@@ -1,0 +1,30 @@
+[
+  {
+    "mpn": "1824420000",
+    "footprint": "Weidmuller_LSF_90_2P",
+    "pole_pitch_mm": 3.5,
+    "row_spacing_mm": 7,
+    "hole_mm": 1.1,
+    "pin_length_mm": 3.5,
+    "width_mm": 7.7,
+    "reserved_depth_mm": 14.75,
+    "seated_height_mm": 8.5,
+    "wire_entry": "parallel to PCB, local +Y",
+    "source": "https://datasheet.weidmueller.com/pdf/en/1824420000/scope/1/",
+    "note": "Drawing body 11.7 mm, rear pin offset 1.7 mm, front pin to front body 3 mm. Larger tabulated 14.75 mm total depth reserved. The model uses vendor STEP; see vendor_connectors.json for source and alignment."
+  },
+  {
+    "mpn": "1824430000",
+    "footprint": "Weidmuller_LSF_90_3P",
+    "pole_pitch_mm": 3.5,
+    "row_spacing_mm": 7,
+    "hole_mm": 1.1,
+    "pin_length_mm": 3.5,
+    "width_mm": 11.2,
+    "reserved_depth_mm": 14.75,
+    "seated_height_mm": 8.5,
+    "wire_entry": "parallel to PCB, local +Y",
+    "source": "https://datasheet.weidmueller.com/pdf/en/1824430000/scope/1/",
+    "note": "Drawing body 11.7 mm, rear pin offset 1.7 mm, front pin to front body 3 mm. Larger tabulated 14.75 mm total depth reserved. The model uses vendor STEP; see vendor_connectors.json for source and alignment."
+  }
+]
