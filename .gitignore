@@ -48,6 +48,20 @@ reports/toolchain/work/
 **/hardware/design/routing_geometry.json
 **/hardware/design/routed.routes.json
 **/hardware/design/*_route[0-9]*.json
+**/hardware/prerouted.kicad_dru
+
+# Rev C construction trials; final native design and verification stay tracked.
+rev_c/reports/autorouter.log
+rev_c/reports/*_route.log
+rev_c/reports/critical_routing.log
+rev_c/reports/drc/*.json
+!rev_c/reports/drc/final.json
+rev_c/reports/erc/initial.json
+rev_c/hardware/design/placement_geometry.json
+rev_c/hardware/design/placement_initial.json
+rev_c/hardware/design/placement_preferred.json
+rev_c/hardware/design/critical_routes.json
+rev_c/hardware/design/critical_unresolved.json
 
 # Keep the complete superseded connector revision as its release package.
 rev_b/history/before_horizontal_connectors/*

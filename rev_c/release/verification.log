@@ -1,0 +1,22 @@
+Found 0 violations
+Found 0 unconnected items
+Saved DRC Report to /tmp/sc_lite_release_cu5qc1az/drc.json
+Found 0 violations
+Saved ERC Report to /tmp/sc_lite_release_cu5qc1az/erc.json
+{
+  "physical_components": 98,
+  "model_pin_count": 287,
+  "unique_named_nets": 54,
+  "schematic_nodes": 287,
+  "board_numbered_pads": 306,
+  "errors": [],
+  "pass": true
+}
+{
+  "result": "PASS",
+  "archive": "FRC_Sensor_CAN_RevC_Lite_Prototype.zip",
+  "sha256": "6be4a7570cce055c4c812dc22158a5318b709ed9298e38c322051f9fd0e4d711",
+  "files_verified": 346,
+  "extracted_erc_drc_and_parity": "PASS",
+  "physical_qualification": false
+}

@@ -6,8 +6,9 @@
 |---|---|---|---|
 | A | [Rev A](REV_A.md), root design directories | Four inputs, 96 × 96 mm, 6–18 V target, Würth terminals, 2.54 mm service header | Archived design baseline; unbuilt |
 | B, earlier connector iteration | [Historical package](rev_b/history/before_horizontal_connectors/README.md) | Compact three-input design with angled /135 terminals | Superseded; retained for traceability |
-| B, current | [rev_b](rev_b/README.md) | 60 × 68 mm, 5–22 V target, horizontal Weidmüller /90 terminals, compact pogo pattern | Current hand-assembly prototype |
-| B-2 | [rev_b2](rev_b2/README.md) | Same B circuit/geometry; 49 equivalent passive placements changed and eight unchanged MPNs resourced; factory BOM/CPL packet | Current factory-assembly prototype |
+| B, current | [rev_b](rev_b/README.md) | 60 × 68 mm, 5–22 V target, horizontal Weidmüller /90 terminals, compact pogo pattern | Full-feature hand-assembly prototype |
+| C Lite | [rev_c](rev_c/README.md) | 52 × 56 mm, 89 fitted parts, 6–22 V, solder selectors, standalone protected power, fixed thresholds, protocol v2 | Simplified successor; unbuilt prototype |
+| B-2 | [rev_b2](rev_b2/README.md) | Same B circuit/geometry; 49 equivalent passive placements changed and eight unchanged MPNs resourced; factory BOM/CPL packet | Full-feature factory-assembly prototype |
 
 ## A to B
 
@@ -27,10 +28,20 @@ B-2 keeps 128 SMT and 16 through-hole placements, plus ten loose configuration s
 
 ## Documentation and 3D model refresh
 
-The repository overview now covers all three revisions and links their matching CAD, BOM, firmware instructions and releases. All maintained guides identify their revision. Final renders are embedded in the overviews.
+The repository overview now covers all four revisions and links their matching CAD, BOM, firmware instructions and releases. All maintained guides identify their revision. Final renders are embedded in the overviews.
 
 The B/B-2 horizontal connector models now use official Weidmüller STEP geometry, with a documented rigid translation to the existing pin origins and project display colors. Earlier simplified boxes are superseded. The PCB routing, holes, BOM connector codes and electrical targets are unchanged by this visual correction. [Connector details](rev_b/docs/CONNECTORS.md).
 
 Git excludes local browser captures, compiler intermediates, downloaded test dependencies, router scratch boards and raw simulation traces. Release ZIPs, native designs, final firmware images, reports and published review images remain tracked. Previously tracked ignored files are removed from the current Git index while retained locally; past commits are not rewritten.
 
 All revisions remain unbuilt and require their documented physical qualification. Historical packages retain their original reports and checksum identities; current packages include the refreshed guides and visuals.
+
+## B/B-2 to C Lite
+
+Rev C is the simplified three-input interface: 89 fitted components versus 144, 33 resistors versus 63, and 29 capacitors versus 34. PCB area is 2,912 mm² versus 4,080 mm², a 28.6% reduction. All parts are placed from the top: 83 SMT plus six horizontal Weidmüller terminals. Two mounting holes replace four. The programming pattern remains compact TC2050 with the documented custom pin map.
+
+One direct 5 V buck replaces buck-plus-boost, changing the minimum supply target from 5 V to 6 V. Both rail current-limiters remain, but software enable, rail ADC monitoring and fault-report networks are removed. Sensor power is hardware-only, with power-cycle reset after a latched overload. Three inputs use one fixed threshold reference, six solder selectors choose power/bias, and a seventh selects CAN termination. There are no purchased pin headers or shunts.
+
+Protocol v2 uses different API IDs and new Lite Java/C++ drivers. Old rail-health fields are absent; a CAN input state cannot establish sensor power health. Broadcast disable stops telemetry and aborts pending transmissions, while independent sensor power continues. Old firmware/host drivers must not be paired with Rev C.
+
+[Rev C simplification details](rev_c/docs/SIMPLIFICATION.md), [wiring](rev_c/docs/WIRING.md), [qualification](rev_c/docs/VALIDATION.md), [factory packet](rev_c/order/RevC_Lite_Factory_Upload.zip). The $43.90 dated component estimate is not a China assembly quote. Previous revision native files and release packages remain unchanged.

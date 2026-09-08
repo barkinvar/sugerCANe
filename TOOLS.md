@@ -9,6 +9,7 @@ The project uses KiCad 10.0.6, Arm GNU GCC 13.2.1, Python 3.12, GNU make, ngspic
 | A | Repository root | [Rev A tools](TOOLS_RevA.md) |
 | B | `rev_b/` | [Rev B tools](rev_b/TOOLS.md) |
 | B-2 | `rev_b2/` | [Rev B-2 tools](rev_b2/TOOLS.md) |
+| C Lite | `rev_c/` | [Rev C tools](rev_c/TOOLS.md) |
 
 First select a revision directory, then activate its environment:
 
@@ -25,3 +26,5 @@ The saved native PCB and schematics are authoritative. `bash scripts/validate_re
 For a B/B-2 visual refresh, run `python scripts/import_connector_models.py`, then `bash scripts/render_board.sh` and export the mechanical STEP. For documentation, run `python scripts/build_handbook.py`; B-2's `python scripts/build_factory_packet.py` also refreshes the factory PDF/upload ZIP. Finally run `python scripts/build_release.py` for the selected revision and verify its manifest/checksum.
 
 Driver downloads are restored using `python tools/fetch_driver_dependencies.py`. Raw SPICE traces and build intermediates are ignored; final delivered images, firmware and engineering reports remain tracked. See the [generated-file policy](CONTRIBUTING.md).
+
+Rev C uses its own `validate_release.sh`, protocol-v2 driver tests, `build_documents.py` and `build_handbook.py`. Its electrical budget is in `scripts/check_electrical.py`; older boost/ground simulations are not claimed as validation of the changed Rev C circuit. Follow the Rev C guide for its factory packet and release checks.
