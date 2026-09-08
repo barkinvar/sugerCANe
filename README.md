@@ -2,17 +2,19 @@
 
 A compact interface for industrial photoelectric sensors and digital logic, with sensor power and a documented CAN protocol for FRC team projects.
 
-**Rev D SC12 adds regulated 12 V sensor power:** three inputs, selectable 5 V / 12 V output, a 52 × 64 mm four-layer PCB, horizontal Weidmüller push terminals and compact programming contacts. A, B, B-2 and C remain available with their matching files.
+**Rev D-2 SC12 is the lower-cost factory/hand-assembly variant:** 98 top-side SMT placements, six terminals and three removable voltage headers for hand soldering. Parts budget at ten boards: **$34.69 each**, before PCB, assembly, shipping and tax. [Cost basis](rev_d2/docs/COST_REDUCTION.md).
+
+Rev D and D-2 provide regulated 12 V sensor power: three inputs, selectable 5 V / 12 V output, a 52 × 64 mm four-layer PCB, horizontal Weidmüller push terminals and compact programming contacts. A, B, B-2, C and D remain available with their matching files.
 
 **All revisions are unbuilt engineering prototypes.** The repository provides CAD, manufacturing files and computational checks. Physical power, thermal, sensor, CAN, EMC and assembly qualification remain pending; this is not a production-certified or FIRST-approved commercial product.
 
-![Rev D regulated 12 V board](rev_d/output/review/board_3d_final.png)
+![Rev D-2 regulated 12 V board](rev_d2/output/review/board_3d_final.png)
 
-[Rev D guide](rev_d/README.md) · [DigiKey BOM](rev_d/bom/BOM_grouped.csv) · [Wiring](rev_d/docs/WIRING.md) · [Handbook](rev_d/output/documentation/SC12_RevD_Handbook.pdf) · [Prototype release](rev_d/release/FRC_Sensor_CAN_RevD_SC12_Prototype.zip) · [Factory packet](rev_d/order/RevD_SC12_Factory_Upload.zip)
+[Rev D-2 guide](rev_d2/README.md) · [SMT BOM](rev_d2/bom/Factory_BOM.csv) · [Hand-solder parts](rev_d2/bom/Hand_solder_BOM.csv) · [Wiring](rev_d2/docs/WIRING.md) · [Handbook](rev_d2/output/documentation/SC12_RevD2_Handbook.pdf) · [Prototype release](rev_d2/release/FRC_Sensor_CAN_RevD2_SC12_Prototype.zip) · [Factory packet](rev_d2/order/RevD2_SC12_Factory_Upload.zip)
 
-Rev D targets **6–22 V input and 300 mA shared per output rail**. Its buck-boost converter maintains nominal 12 V above and below the battery's 12 V crossing. Firmware reports qualified rail-health indications and pauses counts during power faults; Java/C++ input helpers reject stale or faulted data. Verify the exact Omron/Banner sensor model—some NPN residual-voltage limits require special attention. See the [compatibility notes](rev_d/docs/WIRING.md).
+Rev D and D-2 target **6–22 V input and 300 mA shared per output rail**. Its buck-boost converter maintains nominal 12 V above and below the battery's 12 V crossing. Firmware reports qualified rail-health indications and pauses counts during power faults; Java/C++ input helpers reject stale or faulted data. Verify the exact Omron/Banner sensor model—some NPN residual-voltage limits require special attention. See the [compatibility notes](rev_d/docs/WIRING.md).
 
-The design has **104 fitted parts**, mostly 0805 or larger passives, with four local 0402 capacitors and a fine-pitch power QFN that requires stencil/reflow work. The dated DigiKey quantity-one component estimate is **$54.89**, $10.99 above Rev C. Board area is 14.3% above C and 18.4% below B/B-2. [Design choices and capacitor review](rev_d/docs/SIMPLIFICATION.md).
+D-2 has **107 fitted parts**; the preserved D design has 104. Both use mostly 0805 or larger passives, with four local 0402 capacitors and a fine-pitch power QFN that requires stencil/reflow work. D’s dated DigiKey quantity-one consumed-parts estimate is **$54.89**; D-2’s split purchasing basis is explained below. Board area is 14.3% above C and 18.4% below B/B-2. [Design choices and capacitor review](rev_d/docs/SIMPLIFICATION.md).
 
 ## Revision comparison
 
@@ -25,6 +27,7 @@ The design has **104 fitted parts**, mostly 0805 or larger passives, with four l
 | [B-2](rev_b2/README.md) | A version of B prepared for China factory assembly with lower parts cost. | Same B circuit, copper geometry, pinouts and equivalent firmware. Changes 49 passive placements to equivalent parts, sources eight unchanged MPNs at lower prices and adds factory BOM/CPL and quotation files. | No parts or functions removed; factory sourcing and assembly fees still need review. |
 | [C Lite](rev_c/README.md) | A smaller, simpler three-input interface with fewer parts and no loose jumpers. | Compared with B/B-2: 144 → 89 fitted parts, 52 × 56 mm PCB, solder selectors, fixed input thresholds and hardware-only sensor power. Uses Lite protocol v2. | Minimum input rises to 6 V; loses software rail control and power-health reporting. Battery output still follows the supply. |
 | [D SC12](rev_d/README.md) | A compact interface for compatible industrial sensors that need regulated 12 V through battery sag. | Compared with C: replaces the battery output with regulated 12 V, retains regulated 5 V, and adds rail-health reporting and fault-aware counting/drivers with protocol v3. Uses 104 fitted parts and a 52 × 64 mm four-layer PCB. | Larger and more expensive than C; the power QFN and four 0402 capacitors make assembly more demanding. |
+| [D-2 SC12](rev_d2/README.md) | Lower-cost China SMT assembly with user-fitted connectors and removable voltage selection. | Same D circuit and hardware-4/protocol-v3 firmware; 27 equivalent passive substitutions, lower-cost sourcing, three 2 mm power headers, split SMT/hand-solder BOM and CPL. 107 fitted parts plus three caps, all on top. | Four layers and the same power-stage complexity; caps require retention qualification. Batch parts savings do not establish a delivered PCBA price. |
 
 The [earlier Rev B connector iteration](rev_b/history/before_horizontal_connectors/README.md) used angled /135 terminals. It is retained for traceability; the current B and B-2 designs use horizontal /90 terminals.
 
@@ -37,8 +40,9 @@ The [earlier Rev B connector iteration](rev_b/history/before_horizontal_connecto
 | [B-2](rev_b2/README.md) | 60 × 68 mm | 3 | 5–22 V | 5 V + protected battery | $46.35 |
 | [C Lite](rev_c/README.md) | 52 × 56 mm | 3 | 6–22 V | 5 V + protected battery | $43.90 |
 | [D SC12](rev_d/README.md) | 52 × 64 mm | 3 | 6–22 V | Regulated 5 V + regulated 12 V | $54.89 |
+| [D-2 SC12](rev_d2/README.md) | 52 × 64 mm | 3 | 6–22 V | Regulated 5 V + regulated 12 V | $44.16 consumed at first tiers; $34.69 purchased at 10 boards |
 
-Prices are dated component estimates, not delivered PCBA quotations. PCB, stencil, assembly, attrition, shipping and taxes are extra. B-2 has a separate [China assembly cost model](rev_b2/docs/COST.md). No factory order has been placed.
+D-2’s one-board procurement cash is $55.27 after supplier minimums; its ten-board figure includes purchase rounding. These bases differ from the earlier consumed-parts estimates. Prices are dated component estimates, not delivered PCBA quotations. PCB, stencil, assembly, attrition, shipping and taxes are extra. B-2 has a separate [China assembly cost model](rev_b2/docs/COST.md). No factory order has been placed.
 
 | Rev A | Rev B | Rev B-2 | Rev C Lite |
 |---|---|---|---|
@@ -46,11 +50,11 @@ Prices are dated component estimates, not delivered PCBA quotations. PCB, stenci
 | [BOM](bom/README.md) | [BOM](rev_b/bom/BOM_grouped.csv) | [Factory BOM](rev_b2/bom/BOM_turnkey.csv) | [BOM](rev_c/bom/BOM_grouped.csv) |
 | [Release](release/FRC_Sensor_CAN_RevA_Prototype.zip) | [Release](rev_b/release/FRC_Sensor_CAN_RevB_Prototype.zip) | [Release](rev_b2/release/FRC_Sensor_CAN_RevB2_Prototype.zip) | [Release](rev_c/release/FRC_Sensor_CAN_RevC_Lite_Prototype.zip) |
 
-Use each revision's PCB, BOM, firmware and wiring guide together. Root design directories belong to **Rev A**; the other revisions are self-contained in `rev_b/`, `rev_b2/`, `rev_c/` and `rev_d/`. Rev C protocol v2 and Rev D protocol v3 share API numbers but have different payload validation and hardware identities. They are not interchangeable.
+Use each revision's PCB, BOM, firmware and wiring guide together. Root design directories belong to **Rev A**; the other revisions are self-contained in `rev_b/`, `rev_b2/`, `rev_c/`, `rev_d/` and `rev_d2/`. Rev C protocol v2 and Rev D protocol v3 share API numbers but have different payload validation and hardware identities. They are not interchangeable.
 
 ## Horizontal push connectors and mechanical files
 
-B/B-2/C/D use **Weidmüller 1824420000**, LSF-SMT 3.50/02/90 3.5SN BK TU, and **1824430000**, LSF-SMT 3.50/03/90 3.5SN BK TU. `/90` gives horizontal wire entry parallel to the PCB. These exact parts are THT/THR despite “SMT” in the family name; each pole has two solder legs.
+B/B-2/C/D/D-2 use **Weidmüller 1824420000**, LSF-SMT 3.50/02/90 3.5SN BK TU, and **1824430000**, LSF-SMT 3.50/03/90 3.5SN BK TU. `/90` gives horizontal wire entry parallel to the PCB. These exact parts are THT/THR despite “SMT” in the family name; each pole has two solder legs.
 
 The renders use official manufacturer STEP geometry, aligned with the footprint pins, with project display colors. [Connector provenance](rev_d/docs/CONNECTORS.md). Rev D's conservative connector envelope is **52 × 72.1 mm**, plus wire bends, strain relief and button access. [STEP](rev_d/output/mechanical/FRC_Sensor_CAN.step) and [dimensioned drawing](rev_d/output/mechanical/mechanical_drawing.pdf) provide the nominal handoff for a later enclosure design; physical fit is untested.
 
@@ -58,7 +62,7 @@ The renders use official manufacturer STEP geometry, aligned with the footprint 
 
 ## Operation and verification
 
-Inputs target positive 0–30 V signals with a common ground. A/B/B-2 have selectable logic and industrial thresholds; C/D use fixed LOW ≤1.2 V / HIGH ≥2.4 V targets under documented tolerance/leakage budgets. Suitable 12 V PNP/NPN sensors and 3.3/5 V logic are supported; 1.8 V, analog, IO-Link and safety/OSSD compatibility are not promised.
+Inputs target positive 0–30 V signals with a common ground. A/B/B-2 have selectable logic and industrial thresholds; C/D/D-2 use fixed LOW ≤1.2 V / HIGH ≥2.4 V targets under documented tolerance/leakage budgets. Suitable 12 V PNP/NPN sensors and 3.3/5 V logic are supported; 1.8 V, analog, IO-Link and safety/OSSD compatibility are not promised.
 
 A/B/B-2/C battery outputs follow the input and can brown out industrial sensors during battery sag. **D replaces that battery output with regulated 12 V.** The board uses STM32F042 plus an external TCAN3413 transceiver and an original Team Use protocol; it is not a CTRE Phoenix/Tuner device.
 

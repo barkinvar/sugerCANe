@@ -1,0 +1,5 @@
+boards,parts_consumed_per_board_usd,SMT_procurement_cash_per_board_usd,hand_parts_cash_per_board_usd,all_parts_cash_per_board_usd,all_parts_batch_cash_usd
+1,44.16,42.79,12.48,55.27,55.27
+5,39.91,31.44,9.05,40.5,202.49
+10,34.41,26.1,8.59,34.69,346.87
+25,32.17,25.08,7.15,32.23,805.83

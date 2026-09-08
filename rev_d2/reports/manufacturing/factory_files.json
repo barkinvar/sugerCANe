@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "factory_smt_placements": 98,
+  "factory_smt_types": 46,
+  "hand_solder_parts": 9,
+  "hand_solder_joints": 39,
+  "loose_shunts": 3,
+  "estimated_smt_joints_per_board": 283,
+  "position_origin": "PCB lower-left, X right / Y up, mm; native footprint rotation counterclockwise. Factory must reconcile part-library pin 1.",
+  "matched_to": "Native manifest and model/BOM exact reference sets",
+  "sha256": "841c94ec17a7039901f2e6d7287a5d8a1bfbb51c02bcf73fe16c44d75eb29b20",
+  "factory_part_allocation_confirmed": false
+}

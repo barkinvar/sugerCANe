@@ -1,0 +1,64 @@
+{
+  "result": "Visual review completed",
+  "reviewed_utc": "2026-09-08T21:55:29.928612+00:00",
+  "reviewer": "Codex visual inspection",
+  "artifacts": [
+    {
+      "file": "output/review/board_3d_final.png",
+      "sha256": "7663a4f477b6c607485574f31152832427bd51d124eb98945df79566391b91ac",
+      "scope": "Oblique CAD view: top-side components, added header pins, terminal geometry."
+    },
+    {
+      "file": "output/review/board_top.png",
+      "sha256": "a55b6a31d175686ac563be40d02ad811df60bdc79f7ccdb38859908d4f02db20",
+      "scope": "Top CAD view: three power headers beside bias pads; component and terminal clearances."
+    },
+    {
+      "file": "output/review/board_bottom.png",
+      "sha256": "ca4ea578066b679eeb9dc74a355cd50a5953263138af8395e285ee8a887dc7fc",
+      "scope": "Bottom CAD view: D-2 identification, rail/cap instructions, header/terminal pin projections."
+    },
+    {
+      "file": "output/review/board_connectors.png",
+      "sha256": "e5f7f5e8507bc7a649c6bd89a374958d0d9b4077af3d9137d7779c882e9e0b33",
+      "scope": "Horizontal terminal entries and header positions."
+    },
+    {
+      "file": "output/documentation/SC12_RevD2_Handbook.pdf",
+      "sha256": "b48e7688541206ce9ee2c56e9ed26044657c369cdf73a4ff49cf9095e41c467a",
+      "scope": "23 pages reviewed as raster sheets; final ordering, sourcing and cost pages rechecked after edits."
+    },
+    {
+      "file": "output/documentation/BOM_RevD2_SC12.pdf",
+      "sha256": "13e6e20d08038a754708aad59bdf2d50089366bf76177c78580e98b81a23d4fb",
+      "scope": "All three pages reviewed; quantities, supplier codes, first-tier price column and page breaks."
+    },
+    {
+      "file": "output/mechanical/mechanical_drawing.pdf",
+      "sha256": "b409955dd460446329dd619c70c109dccb82adbf28af13bac3579a317fa65112",
+      "scope": "Both pages reviewed: dimensions, custom TC2050 numbering and cap versus solder settings."
+    },
+    {
+      "file": "output/assembly/top_assembly.pdf",
+      "sha256": "3dbf3061a20945151f908e000b4029658f1cabff8e47e8a1c7fc8743a6dcdd56",
+      "scope": "Finished-board drawing reviewed; power header labels moved clear of pin marks."
+    },
+    {
+      "file": "output/assembly/schematic.pdf",
+      "sha256": "0e88c51a6db885034b984b3d24286bee452b261a09cd82b1c65ef092636de642",
+      "scope": "Sheet layout overview and final input-1 sheet enlarged; selector labels separated and cap instructions corrected. All sheets also pass ERC/parity."
+    },
+    {
+      "file": "output/assembly/gerber_copper_review.pdf",
+      "sha256": "524cc4d72d3afe8e5fc8c2470ee522edf4a91f519f4924b6690dfb6037fc9040",
+      "scope": "Both outer copper/drill views reviewed; independent connectivity/clearance checks provide quantitative evidence."
+    }
+  ],
+  "observations": [
+    "No observed PDF text clipping/overlap after selector-label correction.",
+    "Three removable power headers are entirely on top; bottom carries no components.",
+    "Closed-top cap geometry checked against Sullins drawing 11502; 2 mm pitch and 0.50 mm square mating pins match the selected header nominal geometry.",
+    "No cap STEP is included; shipped caps are loose and physical mating/retention remains untested."
+  ],
+  "limitations": "Generated CAD/documents only; not physical fit, vibration, electrical qualification, solder yield or factory DFM acceptance."
+}

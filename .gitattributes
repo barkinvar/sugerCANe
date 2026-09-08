@@ -19,3 +19,9 @@ rev_d/firmware/third_party/** -whitespace
 rev_d/output/**/*.svg -whitespace
 rev_d/output/assembly/interactive_bom.html -whitespace
 rev_d/firmware/build/*.map -whitespace
+
+# Rev D-2 keeps the same upstream/generated formatting policy.
+rev_d2/firmware/third_party/** -whitespace
+rev_d2/output/**/*.svg -whitespace
+rev_d2/output/assembly/interactive_bom.html -whitespace
+rev_d2/firmware/build/*.map -whitespace

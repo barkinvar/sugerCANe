@@ -1,0 +1,137 @@
+[
+  {
+    "reference": "R3",
+    "original_mpn": "RC0805FR-0710KL",
+    "selected_mpn": "0805W8F1002T5E"
+  },
+  {
+    "reference": "C3",
+    "original_mpn": "CC0805KRX7R9BB104",
+    "selected_mpn": "CL21B104KCFNNNE"
+  },
+  {
+    "reference": "C6",
+    "original_mpn": "CC0805KRX7R9BB104",
+    "selected_mpn": "CL21B104KCFNNNE"
+  },
+  {
+    "reference": "R4",
+    "original_mpn": "RC0805FR-071KL",
+    "selected_mpn": "0805W8F1001T5E"
+  },
+  {
+    "reference": "C11",
+    "original_mpn": "CC0805KRX7R9BB104",
+    "selected_mpn": "CL21B104KCFNNNE"
+  },
+  {
+    "reference": "C20",
+    "original_mpn": "CC0805KRX7R9BB104",
+    "selected_mpn": "CL21B104KCFNNNE"
+  },
+  {
+    "reference": "C21",
+    "original_mpn": "CC0805KRX7R9BB104",
+    "selected_mpn": "CL21B104KCFNNNE"
+  },
+  {
+    "reference": "C22",
+    "original_mpn": "CC0805KRX7R9BB104",
+    "selected_mpn": "CL21B104KCFNNNE"
+  },
+  {
+    "reference": "R21",
+    "original_mpn": "RC0805FR-0710KL",
+    "selected_mpn": "0805W8F1002T5E"
+  },
+  {
+    "reference": "C27",
+    "original_mpn": "CC0805KRX7R9BB104",
+    "selected_mpn": "CL21B104KCFNNNE"
+  },
+  {
+    "reference": "R22",
+    "original_mpn": "RC0805FR-0710KL",
+    "selected_mpn": "0805W8F1002T5E"
+  },
+  {
+    "reference": "R30",
+    "original_mpn": "RC0805FR-071KL",
+    "selected_mpn": "0805W8F1001T5E"
+  },
+  {
+    "reference": "R40",
+    "original_mpn": "RC0805FR-0710KL",
+    "selected_mpn": "0805W8F1002T5E"
+  },
+  {
+    "reference": "R41",
+    "original_mpn": "RC0805FR-0710KL",
+    "selected_mpn": "0805W8F1002T5E"
+  },
+  {
+    "reference": "C40",
+    "original_mpn": "CC0805KRX7R9BB104",
+    "selected_mpn": "CL21B104KCFNNNE"
+  },
+  {
+    "reference": "C41",
+    "original_mpn": "CC0805KRX7R9BB104",
+    "selected_mpn": "CL21B104KCFNNNE"
+  },
+  {
+    "reference": "R105",
+    "original_mpn": "RC0805FR-0710KL",
+    "selected_mpn": "0805W8F1002T5E"
+  },
+  {
+    "reference": "R110",
+    "original_mpn": "RC0805FR-0710KL",
+    "selected_mpn": "0805W8F1002T5E"
+  },
+  {
+    "reference": "R205",
+    "original_mpn": "RC0805FR-0710KL",
+    "selected_mpn": "0805W8F1002T5E"
+  },
+  {
+    "reference": "R210",
+    "original_mpn": "RC0805FR-0710KL",
+    "selected_mpn": "0805W8F1002T5E"
+  },
+  {
+    "reference": "R305",
+    "original_mpn": "RC0805FR-0710KL",
+    "selected_mpn": "0805W8F1002T5E"
+  },
+  {
+    "reference": "R310",
+    "original_mpn": "RC0805FR-0710KL",
+    "selected_mpn": "0805W8F1002T5E"
+  },
+  {
+    "reference": "C50",
+    "original_mpn": "CC0805KRX7R9BB104",
+    "selected_mpn": "CL21B104KCFNNNE"
+  },
+  {
+    "reference": "R50",
+    "original_mpn": "RC0805FR-07100KL",
+    "selected_mpn": "0805W8F1003T5E"
+  },
+  {
+    "reference": "C51",
+    "original_mpn": "CC0805KRX7R9BB104",
+    "selected_mpn": "CL21B104KCFNNNE"
+  },
+  {
+    "reference": "R63",
+    "original_mpn": "RC0805FR-0710KL",
+    "selected_mpn": "0805W8F1002T5E"
+  },
+  {
+    "reference": "R65",
+    "original_mpn": "RC0805FR-07100KL",
+    "selected_mpn": "0805W8F1003T5E"
+  }
+]

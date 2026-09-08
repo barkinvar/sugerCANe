@@ -1,0 +1,154 @@
+{
+  "assumptions": {
+    "resistors_total_fraction": 0.0175,
+    "logic_rail_fraction": 0.03,
+    "comparator_offset_V": 0.0055,
+    "input_bias_A_per_pin": 5e-08,
+    "shared_reference_inputs": 3,
+    "output_leakage_A": 1e-07,
+    "output_low_range_V": [
+      0,
+      0.55
+    ],
+    "scope": "Offset includes common-mode/supply margin. TI lists typical bias/leakage, not guaranteed maxima; these allowances require prototype qualification."
+  },
+  "thresholds": {
+    "rising_V": [
+      1.664874859813305,
+      2.2715951254513653
+    ],
+    "falling_V": [
+      1.4011564667299934,
+      1.9326081474578904
+    ],
+    "corners": 4096,
+    "logic_low_target_V": 1.2,
+    "logic_high_target_V": 2.4,
+    "ground_offset_allowance_V": 0.1
+  },
+  "nominal_input": {
+    "rising_V": 1.9695471823624444,
+    "falling_V": 1.655966181383335,
+    "sense_filter_tau_us": 18.181818181818183
+  },
+  "buck": {
+    "nominal_V": 5.067153284671533,
+    "feedback_resistor_budget_fraction": 0.00375,
+    "DC_reference_divider_and_FB_leakage_budget_V": [
+      4.9531490572726815,
+      5.182413916599886
+    ],
+    "with_40mV_regulation_budget_V": [
+      4.9131490572726815,
+      5.222413916599886
+    ]
+  },
+  "power": {
+    "input_range_V": [
+      6,
+      22
+    ],
+    "sensor_load_A_per_rail_shared": 0.3,
+    "logic_allowance_A": 0.1,
+    "converter_5V_bias_allowance_A": 0.1,
+    "converter_efficiency_assumptions": [
+      0.8,
+      0.8
+    ],
+    "entry_resistance_assumption_ohm": 0.276,
+    "input_current_at_6V_A": 1.4396303019097239,
+    "protected_input_at_6V_V": 5.602662036672916,
+    "max_duty_budget": 0.932130812534458,
+    "input_fuse_A": 3,
+    "input_fuse_normal_current_fraction": 0.4798767673032413,
+    "LDO_loss_budget_W": 0.19224139165998866,
+    "buck_peak_ripple_at22V_A": 1.1063068061729966,
+    "sensor5_min_before_distribution_loss_V": 4.871299057272681,
+    "sensor5_max_DC_budget_V": 5.222413916599886,
+    "sensor12_DC_budget_V": [
+      11.800694821362459,
+      12.223156561344904
+    ],
+    "note": "Efficiency and entry resistance are planning assumptions, not measured results. Gate-bias allocation is a supply-sizing requirement, not measured idle consumption. Startup/brownout sequencing below the 6 V operating limit requires qualification."
+  },
+  "current_limiters": {
+    "12V_limit_A": [
+      0.4717444717444717,
+      0.5292620865139949
+    ],
+    "5V_limit_A": [
+      0.3936195296966631,
+      0.5057740323988739
+    ],
+    "note": "12 V automatic current limiting/recovery, not a latch. Hiccup depends on reaching the inductor limit at low output; verify shorts physically. 5 V latched fault requires power cycling."
+  },
+  "capacitors": {
+    "part": "CL31A226KAHNNNE",
+    "count": 3,
+    "nominal_uF": 66,
+    "bias_voltage_V": 5.222413916599886,
+    "typical_bias_change_percent": -39.95653344382932,
+    "additional_factors": [
+      0.9,
+      0.85,
+      0.95,
+      0.9
+    ],
+    "budgeted_bank_uF": 25.920134055900043,
+    "two_part_bank_uF": 17.280089370600027,
+    "target_uF": 25,
+    "note": "Manufacturer typical curve and independent engineering budgets, not a guaranteed minimum. Keep all three output capacitors pending measured loop/transient qualification."
+  },
+  "stress": {
+    "input_signal_range_V": [
+      0,
+      30
+    ],
+    "sense_node_at30V_worst_V": 2.58837053262624,
+    "series_resistor_at30V_W": 0.004163775156141568,
+    "pulldown_at30V_W": 0.0916030534351145,
+    "pulldown_rating_W": 0.25,
+    "pullup_at12V_W": 0.015206672399302694,
+    "pullup_rating_W": 0.125,
+    "input_TVS_standoff_V": 30,
+    "entry_TVS_standoff_V": 22,
+    "entry_TVS_specified_pulse_clamp_V": 35.5,
+    "buck_abs_max_V": 40,
+    "bulk_rating_V": 50,
+    "input_series_fault_tolerance": "One series resistor; no longer survives that resistor shorting as a guaranteed fault case.",
+    "scope": "Unidirectional TVS provides negative surge clamping; not continuous negative signal operation, sustained overvoltage regulation or load-dump qualification."
+  },
+  "status": "Numerical assertions passed; physical qualification not performed.",
+  "regulated12": {
+    "nominal_V": 12.010810810810812,
+    "DC_budget_V": [
+      11.800694821362459,
+      12.223156561344904
+    ],
+    "frequency_nominal_Hz": 781250.0,
+    "inductor_uH": 3.3,
+    "inductor_min_uH": 2.64,
+    "inner_loop_min_uH": 1.7066666666666666,
+    "input_cap_bank": {
+      "count": 2,
+      "voltage_V": 22,
+      "typical_bias_percent": -45.70341032510388,
+      "budgeted_each_uF": 3.551404189160768
+    },
+    "output_cap_bank": {
+      "count": 3,
+      "voltage_V": 12.223156561344904,
+      "typical_bias_percent": -21.924934752616096,
+      "budgeted_each_uF": 5.106694830168262
+    },
+    "gate_bias_cap": {
+      "count": 1,
+      "voltage_V": 5.222413916599886,
+      "typical_bias_percent": -5.16638294742663,
+      "budgeted_each_uF": 6.202829807366193
+    },
+    "compensation_resistor_ohm": 10000,
+    "compensation_cap_F": 3.3e-08,
+    "scope": "Typical bias curves plus engineering allowances are not guaranteed minimum capacitances. Validate substitutes and transient behavior on hardware."
+  }
+}

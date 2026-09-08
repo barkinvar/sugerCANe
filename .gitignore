@@ -97,3 +97,6 @@ rev_d/hardware/design/placement_initial.json
 rev_d/hardware/design/placement_preferred.json
 rev_d/hardware/design/critical_routes.json
 rev_d/hardware/design/critical_unresolved.json
+
+# Rev D-2 local construction scratch.
+rev_d2/hardware/design/jumper_route_jobs.json

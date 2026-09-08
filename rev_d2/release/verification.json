@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "archive": "FRC_Sensor_CAN_RevD2_SC12_Prototype.zip",
+  "sha256": "edf31b5be7b53c23aaa6921d56c87af8797d8ba780f0bb9568f13337bc47e5ee",
+  "files_verified": 389,
+  "extracted_erc_drc_and_parity": "PASS",
+  "physical_qualification": false
+}
