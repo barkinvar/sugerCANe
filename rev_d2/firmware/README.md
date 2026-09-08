@@ -4,6 +4,8 @@ Bare-metal STM32F042K6T6 firmware for three digital inputs. Build allocation is 
 
 Rev D-2 uses the same firmware sources, **hardware identity 4** and **protocol v3** as Rev D; D-2 is an assembly/procurement variant, not a new CAN firmware identity. Use the matching [SensorCan12 drivers](../examples/README.md). The new voltage headers select 5 V / 12 V in hardware; firmware does not control their settings.
 
+**CAN servicing is planned, not implemented:** this release has no CAN bootloader, discovery or persistent CAN-ID command. The [optimization plan](../docs/OPTIMIZATION_PLAN.md) defines the proposed memory/protocol work, recovery tests and one-time SWD migration. Its candidate flash layout does not apply to these binaries.
+
 From `rev_d2/`:
 
 ```sh

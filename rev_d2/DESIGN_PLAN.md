@@ -9,3 +9,7 @@ Substitute 16 ordinary 0805 resistors and eleven 100 nF 0805 bypass capacitors w
 Factory assembles 98 top-side SMT parts. User fits six terminals and three headers and supplies three caps. All prices separate parts, order minimums and assembly assumptions. Deliver regenerated CAD/BOM/CPL/Gerber/STEP/PDF files, test evidence, source and factory packages. Physical fit, vibration and electrical qualification remain pending.
 
 See [cost basis](docs/COST_REDUCTION.md), [assembly](docs/ASSEMBLY.md), [wiring](docs/WIRING.md) and [validation](docs/VALIDATION.md).
+
+## Next development
+
+The scope above describes the delivered D-2 baseline. The separate [LaserCAN-informed optimization plan](docs/OPTIMIZATION_PLAN.md) orders the next work: service protocol and memory proof, CAN commissioning, recoverable CAN updates, robot-connected tooling, physical qualification and quoted cost reductions. It does not change the current circuit, firmware or factory programming instructions.

@@ -4,6 +4,8 @@ Java 17 and C++ examples target WPILib 2026.2.1. D and D-2 share protocol **3**,
 
 Choose each sensor's 5 V / 12 V supply using the physical jumper before operation; the drivers do not select port voltage. See the [D-2 setup guide](../README.md) and [wiring](../docs/WIRING.md).
 
+CAN discovery, persistent ID changes, firmware uploading and a roboRIO maintenance bridge are future work in the [optimization plan](../docs/OPTIMIZATION_PLAN.md). The current host utility and drivers do not provide those operations. A separately tested 2027 adapter is also planned; these examples remain pinned to 2026.2.1.
+
 ```java
 private final SensorCan12 sensorBoard = new SensorCan12(17);
 // In periodic(): absent means unavailable or a reported fault.

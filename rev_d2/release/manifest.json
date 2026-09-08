@@ -1,18 +1,18 @@
 {
   "project": "SC12 Rev D-2",
   "status": "Unbuilt prototype",
-  "created_utc": "2026-09-08T22:00:14.077257+00:00",
-  "file_count": 389,
+  "created_utc": "2026-09-08T22:10:07.165988+00:00",
+  "file_count": 390,
   "files": [
     {
       "path": "DESIGN_PLAN.md",
-      "bytes": 1375,
-      "sha256": "19790c4acee596e3ad277afc6805bf60a6546b33a6c7ec504a08ff28e2cb2e04"
+      "bytes": 1792,
+      "sha256": "9981a3375a4bc01e5d956d85584fa701cd030f5a376345d920cc3d9e3b6234f3"
     },
     {
       "path": "README.md",
-      "bytes": 7540,
-      "sha256": "7f2381af967441baeed2940c034fe45911968bc3f2aae8ff065f434d784c4c03"
+      "bytes": 7908,
+      "sha256": "23b9145dd145b790a410444257b7d749ebefe598754780ea3632f7127ac99603"
     },
     {
       "path": "TOOLS.md",
@@ -125,6 +125,11 @@
       "sha256": "9ab23ff2463dd13f650cc20b893be35e10b7a03948bf4b0a3c54e1c229caf5ea"
     },
     {
+      "path": "docs/OPTIMIZATION_PLAN.md",
+      "bytes": 15249,
+      "sha256": "6ea76c5ebe71b1ec46d37a3f0b9d072e456c1820c6f1f2aec42c658e8af15719"
+    },
+    {
       "path": "docs/SIMPLIFICATION.md",
       "bytes": 5055,
       "sha256": "400b5fed2ab58bd73ddb2cf9810eb99a942e5eb036b90ee8bf7606c3c336198f"
@@ -146,8 +151,8 @@
     },
     {
       "path": "examples/README.md",
-      "bytes": 2850,
-      "sha256": "df1db16f3b21ddde27bea338f12aa1dd26ebc8a3c474ab87312242916b03cdef"
+      "bytes": 3177,
+      "sha256": "ac0e5e5cb8e19696bc26a4274ae6aa6ccbb68a3287631b351ca3df7385f775b8"
     },
     {
       "path": "examples/cpp/ReadSensorExample.cpp",
@@ -196,8 +201,8 @@
     },
     {
       "path": "firmware/README.md",
-      "bytes": 3587,
-      "sha256": "4ecb27a06c4a61e20c3362a8aea8104a72e7e265e6a62a9d77301271a1b3b6ab"
+      "bytes": 3912,
+      "sha256": "37fd27202ae45c5f98cfbc88c55752bda9318f224cae671693455eb08a05ec4c"
     },
     {
       "path": "firmware/build/sensor_can.bin",
@@ -1436,8 +1441,8 @@
     },
     {
       "path": "output/documentation/SC12_RevD2_Handbook.pdf",
-      "bytes": 1981400,
-      "sha256": "e3aa8e8c1ee45a83c168bdfd8be8fd015ce2335dbf4e18f2c39e89636d7dd48f"
+      "bytes": 1999075,
+      "sha256": "32b8d436b0db37c6a7e5739ccedeb6bc4d2c15cd25c53d3372e2611cc68d35ce"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl",
@@ -1587,7 +1592,7 @@
     {
       "path": "reports/document_review.json",
       "bytes": 951,
-      "sha256": "412b1f949a74a18a1d9b001992ab41e53296ecbfb04d111e7e675fa1d7c31e9a"
+      "sha256": "01560e8a5b8fca2e4284ab546f3bf0447a8621f526af3ed5c728ea696ff6f084"
     },
     {
       "path": "reports/drc/final.json",
@@ -1676,8 +1681,8 @@
     },
     {
       "path": "reports/visual_review.json",
-      "bytes": 3532,
-      "sha256": "890c1febd672f7e9270a405b10929a06f3812978609d21bd71b593af357183c6"
+      "bytes": 3594,
+      "sha256": "064aba5411e0e3f2c5e239f3f85e83e21f81a78cdb58044fb0c109ed93b4ab95"
     },
     {
       "path": "scripts/add_ground_planes.py",
@@ -1721,8 +1726,8 @@
     },
     {
       "path": "scripts/build_handbook.py",
-      "bytes": 9489,
-      "sha256": "9d030b4e60be8e3e8c1970f68b2436e880de18a31a4ae4f0093b8a4ccab4544f"
+      "bytes": 9678,
+      "sha256": "1998bbfb81edfac35bb25aead9e78b1d4f9fd1054284557780082907328e8016"
     },
     {
       "path": "scripts/build_release.py",

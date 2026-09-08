@@ -58,6 +58,8 @@ Pins run 1–2–3 left to right when viewed from the component side; pin 1 has 
 
 ## Files and verification
 
+The [SC12 optimization plan](docs/OPTIMIZATION_PLAN.md) applies lessons from LaserCAN to CAN commissioning, firmware updates, manufacturing cost and qualification. CAN discovery, persistent ID changes and firmware updates are **planned, not available in firmware 0.4.0**. Current setup uses UART and firmware flashing uses SWD; the plan starts with the existing PCB.
+
 | Deliverable | Link |
 |---|---|
 | Native KiCad PCB / schematic | [PCB](hardware/FRC_Sensor_CAN.kicad_pcb), [schematic](hardware/FRC_Sensor_CAN.kicad_sch) |

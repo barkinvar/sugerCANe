@@ -25,9 +25,9 @@
     },
     {
       "file": "output/documentation/SC12_RevD2_Handbook.pdf",
-      "sha256": "e3aa8e8c1ee45a83c168bdfd8be8fd015ce2335dbf4e18f2c39e89636d7dd48f",
-      "scope": "24 pages reviewed as raster sheets after README refresh; ordering/cost tables, voltage jumper summary, firmware/driver identity and page transitions checked.",
-      "reviewed_utc": "2026-09-08T22:00:14.010943+00:00"
+      "sha256": "32b8d436b0db37c6a7e5739ccedeb6bc4d2c15cd25c53d3372e2611cc68d35ce",
+      "scope": "28-page handbook reviewed as raster sheets; final optimization-plan pages 25-28 inspected enlarged after table-width and page-flow adjustments. README planned/current distinctions, contents and page transitions checked.",
+      "reviewed_utc": "2026-09-08T22:10:07.103310+00:00"
     },
     {
       "file": "output/documentation/BOM_RevD2_SC12.pdf",
@@ -62,5 +62,5 @@
     "No cap STEP is included; shipped caps are loose and physical mating/retention remains untested."
   ],
   "limitations": "Generated CAD/documents only; not physical fit, vibration, electrical qualification, solder yield or factory DFM acceptance.",
-  "documentation_refresh_utc": "2026-09-08T22:00:14.010943+00:00"
+  "documentation_refresh_utc": "2026-09-08T22:10:07.103310+00:00"
 }

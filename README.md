@@ -79,6 +79,8 @@ The renders use official manufacturer STEP geometry, aligned with the footprint 
 
 ## Operation and verification
 
+**Next development plan:** [LaserCAN-informed SC12 optimization](rev_d2/docs/OPTIMIZATION_PLAN.md) prioritizes CAN discovery, persistent CAN-ID/settings changes, recoverable firmware updates and a robot-connected maintenance tool, alongside factory/harness cost studies. These features are planned; current firmware 0.4.0 still needs SWD flashing and UART persistent setup.
+
 Inputs target positive 0–30 V signals with a common ground. A/B/B-2 have selectable logic and industrial thresholds; C/D/D-2 use fixed LOW ≤1.2 V / HIGH ≥2.4 V targets under documented tolerance/leakage budgets. Suitable 12 V PNP/NPN sensors and 3.3/5 V logic are supported; 1.8 V, analog, IO-Link and safety/OSSD compatibility are not promised.
 
 A/B/B-2/C battery outputs follow the input and can brown out industrial sensors during battery sag. **D replaces that battery output with regulated 12 V.** The board uses STM32F042 plus an external TCAN3413 transceiver and an original Team Use protocol; it is not a CTRE Phoenix/Tuner device.

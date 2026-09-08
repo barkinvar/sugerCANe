@@ -92,6 +92,8 @@ def convert(path):
             count = len(rows[0])
             if count == 3:
                 widths = [106, 166, 239] if 'BRING_UP' not in path.name else [92, 209, 210]
+                if path.name == 'OPTIMIZATION_PLAN.md':
+                    widths = [52, 211, 248]
             elif count == 2:
                 widths = [145, 366]
             elif count == 4:
@@ -155,6 +157,8 @@ toc = TableOfContents()
 toc.levelStyles = [ParagraphStyle('TOC', fontName='Guide', fontSize=10, leading=19, textColor=INK)]
 story.extend([toc, PageBreak()])
 chapters = [('1  Product overview', 'README.md'), ('2  Simplification', 'docs/SIMPLIFICATION.md'), ('3  Wiring and programming contacts', 'docs/WIRING.md'), ('4  Hand assembly', 'docs/ASSEMBLY.md'), ('5  Firmware', 'firmware/README.md'), ('6  CAN protocol', 'docs/CAN_PROTOCOL.md'), ('7  Robot integration', 'examples/README.md'), ('8  Purchasing and factory quote', 'docs/FACTORY_ORDER.md'), ('9  Validation and qualification', 'docs/VALIDATION.md'), ('10  Connector evidence', 'docs/CONNECTORS.md'), ('11  Tools and reproduction', 'TOOLS.md'), ('12  Sources and notices', 'docs/SOURCES_AND_LICENSES.md'), ('13  Cost reduction', 'docs/COST_REDUCTION.md')]
+
+chapters.append(('14  Optimization plan - proposed work', 'docs/OPTIMIZATION_PLAN.md'))
 
 for i, (title, path) in enumerate(chapters):
     if i:
