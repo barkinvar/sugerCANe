@@ -109,3 +109,15 @@ rev_d2/hardware/design/jumper_route_jobs.json
 !rev_d2/firmware/build/application.sc12
 rev_d2/reports/driver/deps2027/
 rev_d2/reports/driver/classes2027/
+
+# Rev E construction and host-test scratch.
+rev_e/reports/bias-routing.log
+rev_e/reports/drc/construction.json
+rev_e/hardware/design/bias_routing.routes.json
+rev_e/reports/driver/deps2027/
+rev_e/reports/driver/classes2027/
+!rev_e/firmware/build/bootloader.bin
+!rev_e/firmware/build/bootloader.elf
+!rev_e/firmware/build/bootloader.map
+!rev_e/firmware/build/factory.hex
+!rev_e/firmware/build/application.sc12

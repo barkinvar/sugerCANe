@@ -25,3 +25,9 @@ rev_d2/firmware/third_party/** -whitespace
 rev_d2/output/**/*.svg -whitespace
 rev_d2/output/assembly/interactive_bom.html -whitespace
 rev_d2/firmware/build/*.map -whitespace
+
+# Rev E keeps upstream source and generated deliverables byte-for-byte.
+rev_e/firmware/third_party/** -whitespace
+rev_e/output/**/*.svg -whitespace
+rev_e/output/assembly/interactive_bom.html -whitespace
+rev_e/firmware/build/*.map -whitespace

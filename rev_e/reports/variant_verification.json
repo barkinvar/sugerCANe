@@ -1,0 +1,51 @@
+{
+  "result": "PASS",
+  "baseline": "Preserved Rev D2",
+  "removed_bias_selectors": [
+    "JP103",
+    "JP203",
+    "JP303"
+  ],
+  "added_parts": [
+    "Q101",
+    "Q102",
+    "Q201",
+    "Q202",
+    "Q301",
+    "Q302",
+    "R111",
+    "R112",
+    "R211",
+    "R212",
+    "R311",
+    "R312",
+    "R52"
+  ],
+  "changed_circuit_parts": [
+    "D102",
+    "D202",
+    "D302",
+    "R109",
+    "R110",
+    "R209",
+    "R210",
+    "R309",
+    "R310",
+    "U5"
+  ],
+  "critical_track_geometry_unchanged": [
+    "BB_BOOT1",
+    "BB_BOOT2",
+    "BB_COMP",
+    "BB_COMP_RC",
+    "BB_SW1",
+    "BB_SW2",
+    "BUCK_CB",
+    "BUCK_FB",
+    "BUCK_SW",
+    "HSE_IN",
+    "HSE_OUT"
+  ],
+  "firmware_change": "Rev E protocol 4, hardware 5, application 0.6.0; D2 preserved",
+  "scope": "Circuit delta and named critical tracks. Native DRC/export checks separately required. Not physical qualification."
+}

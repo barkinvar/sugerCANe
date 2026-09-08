@@ -1,0 +1,53 @@
+{
+  "result": "Visual review completed",
+  "reviewed_utc": "2026-09-08T23:53:41.120704+00:00",
+  "reviewer": "Codex visual inspection",
+  "artifacts": [
+    {
+      "file": "output/review/board_3d_final.png",
+      "sha256": "ce2e46d7b93646cfe347e8e4f47c5d3b00322ca15c443b73b4a32511d7ef567f",
+      "scope": "Oblique CAD: all components on top, added bias MOSFET row and retained power headers."
+    },
+    {
+      "file": "output/review/board_top.png",
+      "sha256": "2b512cd3acedccb414dd72ca7014f7c024c2c1f6d3475c5b2d372e02178cf7b3",
+      "scope": "Top CAD: six bias MOSFETs, no JP103/203/303 bias selectors, connector and component placement."
+    },
+    {
+      "file": "output/review/board_bottom.png",
+      "sha256": "ee441eb873d2960934c9baa00d80da825ec5827f0b2fd7688a356804680232b3",
+      "scope": "Bottom CAD: E identification, software-mode legends, power header and terminal pins; no bottom components."
+    },
+    {
+      "file": "output/review/board_connectors.png",
+      "sha256": "7507eadd5fe56a2a91d96758b833259d51d2aafe3649a0fbbd02b41f867920cd",
+      "scope": "Connector-entry geometry and power header access."
+    },
+    {
+      "file": "output/review/service_gui.png",
+      "sha256": "ac2eea0a32a9db3718b5fb1cbc1d87e4740c43c6fee298b04cc9b1edf1617b5b",
+      "scope": "Simulated GUI: three independent mode/active controls and save argument checks; no physical device."
+    },
+    {
+      "file": "output/documentation/SC12_RevE_Handbook.pdf",
+      "sha256": "0253af73507fb018c7e907acb7a3e0fb559135fe1281888e8cfc2e6512929167",
+      "scope": "All 29 pages reviewed as contact sheet; pages 28/29 enlarged for input-mode table, electrical limits and configuration command."
+    },
+    {
+      "file": "output/documentation/BOM_RevE_SC12.pdf",
+      "sha256": "59c11277f6ed2926580d2bfddd46065c7405b14ccf7983a804df853594da0e2e",
+      "scope": "All three pages: quantities, exact MPNs, grouping and price columns."
+    },
+    {
+      "file": "output/mechanical/mechanical_drawing.pdf",
+      "sha256": "afbf740e377798be121ef2895a6333a03f9add31c955c89bc05c12a314b03929",
+      "scope": "Both pages: 52x70 outline, mounts, custom SWD map and power-cap-only selection diagram."
+    },
+    {
+      "file": "output/assembly/schematic.pdf",
+      "sha256": "1be0e28780b62be561d0532e7afe913263ba52aab73a2ee9271185c1bb222fb9",
+      "scope": "All nine sheets reviewed; input sheet 1 enlarged for G/S/D mappings, resistor/diode connections and software-bias notes."
+    }
+  ],
+  "limitations": "CAD/PDF/GUI inspection only. No fabricated-board, physical sensor, EMI, thermal or vibration qualification."
+}

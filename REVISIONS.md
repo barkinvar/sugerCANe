@@ -11,6 +11,7 @@
 | B-2 | [rev_b2](rev_b2/README.md) | Same B circuit/geometry; 49 equivalent passive placements changed and eight unchanged MPNs resourced; factory BOM/CPL packet | Full-feature factory-assembly prototype |
 | D SC12 | [rev_d](rev_d/README.md) | 52 × 64 mm, four layers, regulated 12 V + 5 V, 104 fitted parts, rail-health handling, protocol v3 | Regulated industrial-sensor successor; unbuilt prototype |
 | D-2 SC12 | [rev_d2](rev_d2/README.md) | Same D circuit and telemetry; 0.5.0 CAN service/bootloader; 27 passive substitutions, sourcing changes, removable 2 mm voltage headers; 98 SMT + 9 hand-fitted parts; factory BOM/CPL | Cost-reduced assembly variant; unbuilt prototype |
+| E SC12 | [rev_e](rev_e/README.md) | Software NPN/PNP/push-pull/float/keeper bias; 52 × 70 mm; 111 SMT + 9 hand-fitted parts; hardware 5/protocol 4 | Independent per-input setup; unbuilt prototype |
 
 ## A to B
 
@@ -30,7 +31,7 @@ B-2 keeps 128 SMT and 16 through-hole placements, plus ten loose configuration s
 
 ## Documentation and 3D model refresh
 
-The repository overview now covers all five revisions and links their matching CAD, BOM, firmware instructions and releases. All maintained guides identify their revision. Final renders are embedded in the overviews.
+The repository overview now covers all revisions and links their matching CAD, BOM, firmware instructions and releases. All maintained guides identify their revision. Final renders are embedded in the overviews.
 
 The B/B-2 horizontal connector models now use official Weidmüller STEP geometry, with a documented rigid translation to the existing pin origins and project display colors. Earlier simplified boxes are superseded. The PCB routing, holes, BOM connector codes and electrical targets are unchanged by this visual correction. [Connector details](rev_b/docs/CONNECTORS.md).
 
@@ -65,3 +66,11 @@ D-2 keeps the electrical features, outline, four copper layers and hardware-4/pr
 Factory files contain 98 SMT placements. The user fits six terminal blocks and three headers and supplies three caps. D-2’s first-tier consumed-parts estimate is $44.16 versus D’s $54.89; minimum-order purchasing is $40.40 / $34.69 / $32.23 per board at 5 / 10 / 25 boards. These exclude PCB, assembly and freight. [Price assumptions](rev_d2/docs/COST_REDUCTION.md), [factory scope](rev_d2/docs/FACTORY_ORDER.md), [wiring and retention](rev_d2/docs/WIRING.md). Earlier releases remain intact.
 
 D-2 now includes [CAN setup/update firmware and tools](rev_d2/docs/CAN_SERVICE.md), with protected bootloader and one-time SWD migration. Normal hardware-4/protocol-v3 telemetry remains compatible; 0.4.0 is retained in Rev D and history. Software verification passes; physical qualification remains open.
+
+## D2 to E
+
+Rev E removes the three input-bias solder selectors and replaces them with six MOSFETs and seven added resistors. Each channel independently supports pull-up, pull-down, bias off, floating detection or keeper, with software active-state interpretation. The pull-up is referenced to 3.3 V, independent of the removable 5 V/12 V sensor-power caps. The comparator and field protection remain.
+
+The board grows 6 mm in height to 52 × 70 mm while preserving top-side assembly and critical converter/crystal routes. There are 120 fitted parts plus three loose caps. Ten-board parts purchasing is approximately $35.14 per board, about $0.45 above D2, excluding fabrication/assembly/shipping. Firmware 0.6.0 uses hardware identity 5 and protocol 4, with persistent CAN service and Java/C++ runtime mode APIs. Prior firmware images are rejected; use the complete matching revision.
+
+[Input behavior and limitations](rev_e/docs/INPUT_MODES.md), [wiring](rev_e/docs/WIRING.md), [cost basis](rev_e/docs/COST_REDUCTION.md), [qualification](rev_e/docs/VALIDATION.md). This is an independent implementation with similar input-mode choices to CANdi; it does not speak Phoenix or GrappleHook.

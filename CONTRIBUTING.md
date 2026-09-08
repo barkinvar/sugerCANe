@@ -4,7 +4,7 @@
 
 ## Choose a revision before editing
 
-Root design directories belong to Rev A. Work in `rev_b/` for the compact DigiKey/hand-assembly design or `rev_b2/` for the China factory variant. Use `rev_c/` for the simplified 6–22 V Lite successor with protocol v2. Use `rev_d/` for the regulated 12 V / 5 V SC12 board and protocol v3. Use `rev_d2/` for the China SMT / user hand-solder variant of D, with removable voltage jumpers and the same protocol v3. The native schematic and routed PCB are authoritative; scripts and structured circuit data must agree with them. Do not regenerate a routed board from an old placement/router experiment.
+Root design directories belong to Rev A. Work in `rev_b/` for the compact DigiKey/hand-assembly design or `rev_b2/` for the China factory variant. Use `rev_c/` for the simplified 6–22 V Lite successor with protocol v2. Use `rev_d/` for the regulated 12 V / 5 V SC12 board and protocol v3. Use `rev_d2/` for the China SMT / user hand-solder variant of D, with removable voltage jumpers and the same protocol v3. Use `rev_e/` for software-selectable input bias, hardware 5 and protocol v4. The native schematic and routed PCB are authoritative; scripts and structured circuit data must agree with them. Do not regenerate a routed board from an old placement/router experiment.
 
 Use the matching BOM, firmware and wiring documentation. Preserve prior revision packages. A change that affects circuit behavior, pads, pinout or procurement must update the corresponding model, native CAD, BOM and manufacturing evidence before a new package is released.
 
