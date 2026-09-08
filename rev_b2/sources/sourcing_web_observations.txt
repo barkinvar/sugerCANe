@@ -1,0 +1,443 @@
+TPS613222ADBVR Texas Instruments | Voltage Regulators - DC DC Switching Regulators | DigiKey (https://www.digikey.com/en/products/detail/texas-instruments/TPS613222ADBVR/8638376)
+citeturn141view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.digikey.com/en/products/detail/texas-instruments/TPS613222ADBVR/8638376","lineno":1050}); Total lines: 1136
+L1001: ---
+L1002: DigiKey Part Number  | 296-50503-2-ND - Tape & Reel (TR)296-50503-1-ND - Cut Tape (CT)296-50503-6-ND - Digi-Reel®
+L1003: Manufacturer  | cite684†Texas Instruments L1004: Manufacturer Product Number  | TPS613222ADBVR
+L1005: Description  | IC REG BOOST 5V 2.5A SOT23-5
+L1006: Manufacturer Standard Lead Time  | 9 Weeks
+L1007: Customer Reference  | [Input]
+L1008: Detailed Description  | Boost Switching Regulator IC Positive Fixed 5V 1 Output 2.5A (Switch) SC-74A, SOT-753
+L1009: Datasheet  | cite750† Datasheet†www.ti.com L1010: EDA/CAD Models  | cite751†TPS613222ADBVR Models L1011: Product Attributes
+L1012: 
+L1013: [Input]
+L1014: 
+L1015: Filter Similar Products
+L1016: 
+L1017: [Input]
+L1018: 
+L1019: Show Empty Attributes
+L1020: Categorycite301†Integrated Circuits (ICs) cite311†Power Management (PMIC) cite752†Voltage Regulators - DC DC Switching Regulators | Voltage - Input (Max)5.5V
+L1021: Mfrcite753†Texas Instruments | Voltage - Output (Min/Fixed)cite754†5V L1022: Packaging Tape & Reel (TR)Cut Tape (CT)Digi-Reel®  | Current - Outputcite755†2.5A (Switch) L1023: Part Status Active  | Frequency - Switching 500kHz ~ 2MHz
+L1024: Function Step-Up  | Synchronous Rectifier Yes
+L1025: Output Configuration Positive  | Operating Temperature-40°C ~ 125°C (TJ)
+L1026: Topologycite756†Boost | Mounting Type Surface Mount
+L1027: Output Typecite757†Fixed | Package / Casecite758†SC-74A, SOT-753 L1028: Number of Outputs 1  | Supplier Device Package SOT-23-5
+L1029: Voltage - Input (Min)0.9V  | Base Product Numbercite759†TPS613222 L1030: Report Product Information Error
+L1031: 
+L1032: Documents & Media
+L1033: 
+L1034: Environmental & Export Classifications
+L1035: 
+L1036: Product Questions and Answers
+L1037: 
+L1038: Additional Resources
+L1039: 
+L1040: In-Stock: 15,432
+L1041: 
+L1042: Check for Additional Incoming Stock
+L1043: 
+L1044: Quantity
+L1045: 
+L1046: [Input]
+L1047: 
+L1048: [Button: Add to Cart]
+L1049: 
+L1050: [Button: Add to List]
+L1051: 
+L1052: All prices are in USD
+L1053: 
+L1054: Cut Tape (CT) & Digi-Reel®
+L1055: Quantity  | Unit Price  | Ext Price
+L1056: --- | --- | ---
+L1057: 1  | $0.55000  | $0.55
+L1058: 10  | $0.38800  | $3.88
+L1059: 25  | $0.34720  | $8.68
+L1060: 100  | $0.30210  | $30.21
+L1061: 250  | $0.28060  | $70.15
+L1062: 500  | $0.26766  | $133.83
+L1063: 1,000  | $0.25697  | $256.97
+L1064: 
+L1065: * All Digi-Reel orders will add a $7.00 reeling fee.
+L1066: 
+L1067: Tape & Reel (TR)
+L1068: Quantity  | Unit Price  | Ext Price
+L1069: --- | --- | ---
+L1070: 3,000  | $0.24379  | $731.37
+L1071: 6,000  | $0.23733  | $1,423.98
+L1072: 9,000  | $0.23410  | $2,106.90
+L1073: 15,000  | $0.23052  | $3,457.80
+L1074: 21,000  | $0.22843  | $4,797.03
+L1075: 30,000  | $0.22641  | $6,792.30
+L1076: 
+L1077: Manufacturers Standard Package
+L1078: 
+L1079: Tariff Status: Tariff may apply if shipping to the United States. Tariff costs are calculated and will be displayed in the shopping cart.
+L1080: 
+L1081: You May Also Be Interested Incite760†See All L1082: 
+L1083: 10 Items
+L1084: cite761†TPS613221ADBVR IC REG BOOST 3.3V 1.6A SOT23-5 Texas Instruments$0.55000〖761‡Details〗 L1085: 
+L1086: cite762†MCP73831T-2ACI/OT IC BATT CNTL LI-ION 1CEL SOT23-5 Microchip Technology$0.76000〖762‡Details〗 L1087: 
+L1088: cite763†TP4057 SOT23-6 BATTERY MANAGEMENT ICS R EVVO$0.40000〖763‡Details〗 L1089: 
+L1090: cite764†TPS613221AEVM-019 EVAL BOARD FOR TPS613221A Texas Instruments$67.38000〖764‡Details〗 L1091: 
+L1092: cite765†MAX17048G+T10 IC BATT MON LI-ION 1CELL 8TDFN Analog Devices Inc./Maxim Integrated$4.61000〖765‡Details〗 L1093: cite766†B2B-PH-SM4-TB CONN HEADER SMD 2POS 2MM JST Sales America Inc.$0.47000〖766‡Details〗 L1094: 
+L1095: cite767†B2B-PH-K-S CONN HEADER VERT 2POS 2MM JST Sales America Inc.$0.12000〖767‡Details〗 L1096: 
+L1097: cite768†2171750001 CONN RCP USB2.0 C 6POS SMD RA Molex$0.82000〖768‡Details〗 L1098: 
+L1099: cite769†TLV61070ADBVR IC REG BOOST ADJ 2.5A SOT23-6 Texas Instruments$0.62000〖769‡Details〗 L1100: 
+L1101: cite770†TLV61048DBVR IC REG BOOST ADJ 3.7A SOT23-6 Texas Instruments$0.90000〖770‡Details〗 L1102: 
+L1103: cite771†Image: need help icon L1104: 
+L1105: Need Help?
+L1106: cite772†Order status and tracking cite773†Request Account Documents†feedback.digikey.com cite717†Technical product support†forum.digikey.com cite736†Create a quote cite774†Return an item or report an order issue cite748†View all support topics L1107: 
+L1108: 1-800-344-4539 orders@digikey.com Chat
+L1109: 
+L1110: Need Help?
+L1111: 
+L1112: Feedback
+L1113: 
+L1114: Thank you!
+L1115: 
+L1116: Keep an eye on your inbox for news and updates from DigiKey!
+L1117: 
+L1118: [Input: Enter your email] [Input]
+L1119: 
+L1120: Please enter an email address
+L1121: [Input] I agree to receive marketing emails from DigiKey. I understand that I can withdraw consent at any time. Please review our cite775†Privacy Notice .
+L1122: 
+L1123: Please accept the checkbox
+--------------------------------------------------------------------------------
+M22-2020305 Harwin Inc. | Headers, Male Pins | DigiKey (https://www.digikey.com/en/products/detail/harwin-inc/M22-2020305/3728097)
+citeturn141view1 [wordlim: 200] Crawled: last month; Content type: text/html; Source: open({"ref_id":"https://www.digikey.com/en/products/detail/harwin-inc/M22-2020305/3728097","lineno":1040}); Total lines: 1141
+L1003: # M22-2020305
+L1004: 
+L1005: ---
+L1006: DigiKey Part Number  | 952-2133-ND
+L1007: Manufacturer  | cite751†Harwin Inc. L1008: Manufacturer Product Number  | M22-2020305
+L1009: Description  | CONN HEADER VERT 6POS 2MM
+L1010: Manufacturer Standard Lead Time  | 17 Weeks
+L1011: Customer Reference  | [Input]
+L1012: Detailed Description  | Connector Header Through Hole 6 position 0.079" (2.00mm)
+L1013: Datasheet  | cite752† Datasheet†content.harwin.com L1014: EDA/CAD Models  | cite753†M22-2020305 Models L1015: 
+L1016: Product Attributes
+L1017: 
+L1018: [Input]
+L1019: 
+L1020: Filter Similar Products
+L1021: 
+L1022: [Input]
+L1023: 
+L1024: Show Empty Attributes
+L1025: Categorycite83†Connectors, Interconnects cite140†Rectangular Connectors cite148†Headers, Male Pins | Fastening Type Push-Pull
+L1026: Mfrcite754†Harwin Inc. | Contact Length - Mating 0.138" (3.50mm)
+L1027: Seriescite755†M22 | Contact Length - Post 0.134" (3.40mm)
+L1028: Packaging Bulk  | Overall Contact Length 0.331" (8.40mm)
+L1029: Part Status Active  | Insulation Height 0.059" (1.50mm)
+L1030: Connector Typecite756†Header, Cuttable | Contact Shape Square
+L1031: Contact Type Male Pin  | Contact Finish - Mating Gold
+L1032: Pitch - Matingcite757†0.079" (2.00mm) | Contact Material Phosphor Bronze
+L1033: Number of Positionscite758†6 | Insulation Material Polyamide (PA6T), Nylon 6T
+L1034: Number of Rows 2  | Operating Temperature-40°C ~ 105°C
+L1035: Row Spacing - Matingcite759†0.079" (2.00mm) | Material Flammability Rating UL94 V-0
+L1036: Number of Positions Loaded All  | Insulation Color Black
+L1037: Stylecite760†Board to Board | Current Rating (Amps)1A per Contact
+L1038: Shrouding Unshrouded  | Mated Stacking Heights 3.8mm, 5.9mm, 8.6mm
+L1039: Mounting Typecite761†Through Hole | Base Product Numbercite762†M22-202 L1040: Termination Solder  |
+L1041: Report Product Information Error
+L1042: 
+L1043: Documents & Media
+L1044: 
+L1045: Associated Products
+L1046: 
+L1047: Environmental & Export Classifications
+L1048: 
+L1049: Product Questions and Answers
+L1050: 
+L1051: Additional Resources
+L1052: 
+L1053: Substitutes (11)
+L1054: Part Number  | Manufacturer  | Quantity Available  | DigiKey Part Number  | Unit Price  | Substitute Type
+L1055: --- | --- | --- | --- | --- | ---
+L1056: cite763†MTMM-103-03-G-D-150 | Samtec Inc.  | 317  | MTMM-103-03-G-D-150-ND  | $1.02000  | Similar
+L1057: cite764†MTMM-103-04-T-D-130 | Samtec Inc.  | 0  | MTMM-103-04-T-D-130-ND  | $0.50000  | Similar
+L1058: cite765†MTMM-103-08-T-D-130 | Samtec Inc.  | 0  | MTMM-103-08-T-D-130-ND  | $0.55000  | Similar
+L1059: cite766†TMM-103-01-F-D | Samtec Inc.  | 1,835  | TMM-103-01-F-D-ND  | $0.85000  | Similar
+L1060: cite767†TMM-103-01-L-D | JRH Electronics  | 74  | 3937-TMM-103-01-L-D-ND  | $0.74000  | Similar
+L1061: Show More
+L1062: 
+L1063: cite768†View and Compare All Substitutes L1064: 
+L1065: In-Stock: 838
+L1066: 
+L1067: Check for Additional Incoming Stock
+L1068: 
+L1069: Quantity
+L1070: 
+L1071: [Input]
+L1072: 
+L1073: [Button: Add to Cart]
+L1074: 
+L1075: [Button: Add to List]
+L1076: 
+L1077: All prices are in USD
+L1078: 
+L1079: Bulk
+L1080: 
+L1081: Quantity  | Unit Price  | Ext Price
+L1082: --- | --- | ---
+L1083: 1  | $0.41000  | $0.41
+L1084: 10  | $0.35000  | $3.50
+L1085: 100  | $0.29710  | $29.71
+L1086: 500  | $0.26516  | $132.58
+L1087: 1,000  | $0.25250  | $252.50
+L1088: 5,000  | $0.22538  | $1,126.90
+L1089: 10,000  | $0.21463  | $2,146.30
+L1090: 
+L1091: Manufacturers Standard Package
+L1092: You May Also Be Interested Incite769†See All L1093: 
+L1094: 2 Items
+L1095: 
+L1096: cite770†M22-7140342 CONN RCPT 6POS 0.079 GOLD PCB Harwin Inc.$2.04000〖770‡Details〗 L1097: 
+L1098: cite771†M22-2010305 CONN HEADER VERT 3POS 2MM Harwin Inc.$0.22000〖771‡Details〗 L1099: 
+L1100: Co-Browse
+L1101: 
+L1102: By using the Co-Browse feature, you are agreeing to allow a support representative from DigiKey to view your browser remotely. When the Co-Browse window opens, give the session ID that is located in the toolbar to the representative.
+L1103: DigiKey respects your right to privacy. For more information please see our cite772†Privacy Notice and cite773†Cookie Notice .
+L1104: 
+L1105: Yes, Continue to Co-Browse
+L1106: 
+L1107: cite774†Image: need help icon L1108: 
+L1109: Need Help?
+L1110: 
+L1111: cite775†Order status and tracking cite776†Request Account Documents†feedback.digikey.com cite717†Technical product support†forum.digikey.com cite736†Create a quote cite777†Return an item or report an order issue cite748†View all support topics L1112: 
+L1113: 1-800-344-4539 orders@digikey.com Chat
+L1114: 
+L1115: Need Help?
+L1116: 
+L1117: Feedback
+L1118: 
+L1119: Thank you!
+L1120: Keep an eye on your inbox for news and updates from DigiKey!
+L1121: 
+L1122: [Input: Enter your email] [Input]
+L1123: 
+L1124: Please enter an email address
+L1125: 
+L1126: [Input] I agree to receive marketing emails from DigiKey. I understand that I can withdraw consent at any time. Please review our cite778†Privacy Notice .
+L1127: 
+L1128: Please accept the checkbox
+--------------------------------------------------------------------------------
+M22-2010305 Harwin Inc. | Headers, Male Pins | DigiKey (https://www.digikey.com/en/products/detail/harwin-inc/M22-2010305/3728238)
+citeturn141view2 [wordlim: 200] Crawled: 3 days ago; Content type: text/html; Source: open({"ref_id":"https://www.digikey.com/en/products/detail/harwin-inc/M22-2010305/3728238","lineno":1040}); Total lines: 1142
+L1003: # M22-2010305
+L1004: 
+L1005: ---
+L1006: DigiKey Part Number  | 952-2274-ND
+L1007: Manufacturer  | cite751†Harwin Inc. L1008: Manufacturer Product Number  | M22-2010305
+L1009: Description  | CONN HEADER VERT 3POS 2MM
+L1010: Manufacturer Standard Lead Time  | 22 Weeks
+L1011: Customer Reference  | [Input]
+L1012: Detailed Description  | Connector Header Through Hole 3 position 0.079" (2.00mm)
+L1013: Datasheet  | cite752† Datasheet†content.harwin.com L1014: EDA/CAD Models  | cite753†M22-2010305 Models L1015: 
+L1016: Product Attributes
+L1017: 
+L1018: [Input]
+L1019: 
+L1020: Filter Similar Products
+L1021: 
+L1022: [Input]
+L1023: 
+L1024: Show Empty Attributes
+L1025: Categorycite83†Connectors, Interconnects cite140†Rectangular Connectors cite148†Headers, Male Pins | Fastening Type Push-Pull
+L1026: Mfrcite754†Harwin Inc. | Contact Length - Mating 0.138" (3.50mm)
+L1027: Seriescite755†M22 | Contact Length - Post 0.134" (3.40mm)
+L1028: Packaging Bulk  | Overall Contact Length 0.331" (8.40mm)
+L1029: Part Status Active  | Insulation Height 0.059" (1.50mm)
+L1030: Connector Typecite756†Header, Cuttable | Contact Shape Square
+L1031: Contact Type Male Pin  | Contact Finish - Mating Gold
+L1032: Pitch - Matingcite757†0.079" (2.00mm) | Contact Material Phosphor Bronze
+L1033: Number of Positionscite758†3 | Insulation Material Polyamide (PA6T), Nylon 6T
+L1034: Number of Rows 1  | Operating Temperature-55°C ~ 105°C
+L1035: Number of Positions Loaded All  | Material Flammability Rating UL94 V-0
+L1036: Stylecite759†Board to Board | Insulation Color Black
+L1037: Shrouding Unshrouded  | Current Rating (Amps)1A per Contact
+L1038: Mounting Typecite760†Through Hole | Mated Stacking Heights 5.9mm, 8.6mm
+L1039: Termination Solder  | Base Product Numbercite761†M22-201 L1040: Report Product Information Error
+L1041: 
+L1042: Documents & Media
+L1043: 
+L1044: Associated Products
+L1045: 
+L1046: Environmental & Export Classifications
+L1047: 
+L1048: Product Questions and Answers
+L1049: 
+L1050: Additional Resources
+L1051: 
+L1052: Substitutes (2)
+L1053: Part Number  | Manufacturer  | Quantity Available  | DigiKey Part Number  | Unit Price  | Substitute Type
+L1054: --- | --- | --- | --- | --- | ---
+L1055: cite762†MTMM-103-02-T-S-130 | Samtec Inc.  | 0  | MTMM-103-02-T-S-130-ND  | $0.45000  | Similar
+L1056: cite763†MTMM-103-03-G-S-125 | Samtec Inc.  | 0  | MTMM-103-03-G-S-125-ND  | $0.60000  | Similar
+L1057: 
+L1058: In-Stock: 35,632
+L1059: 
+L1060: Check for Additional Incoming Stock
+L1061: 
+L1062: Quantity
+L1063: 
+L1064: [Input]
+L1065: 
+L1066: [Button: Add to Cart]
+L1067: 
+L1068: [Button: Add to List]
+L1069: 
+L1070: All prices are in USD
+L1071: 
+L1072: Bulk
+L1073: Quantity  | Unit Price  | Ext Price
+L1074: --- | --- | ---
+L1075: 1  | $0.22000  | $0.22
+L1076: 10  | $0.18800  | $1.88
+L1077: 100  | $0.15970  | $15.97
+L1078: 500  | $0.14254  | $71.27
+L1079: 1,000  | $0.13573  | $135.73
+L1080: 5,000  | $0.12115  | $605.75
+L1081: 10,000  | $0.11536  | $1,153.60
+L1082: 
+L1083: Manufacturers Standard Package
+L1084: 
+L1085: Tariff Status: Tariff may apply if shipping to the United States. Tariff costs are calculated and will be displayed in the shopping cart.
+L1086: 
+L1087: You May Also Be Interested Incite764†See All L1088: 
+L1089: 10 Items
+L1090: cite765†M22-2010205 CONN HEADER VERT 2POS 2MM Harwin Inc.$0.16000〖765‡Details〗 L1091: 
+L1092: cite766†M22-1900005 CONN JUMPER SHORTING GOLD BLACK Harwin Inc.$0.35000〖766‡Details〗 L1093: 
+L1094: cite767†M22-2010505 CONN HEADER VERT 5POS 2MM Harwin Inc.$0.37000〖767‡Details〗 L1095: 
+L1096: cite768†BLM18SG330SN1D FERRITE BEAD 33 OHM 0603 1LN Murata Electronics$0.19000〖768‡Details〗 L1097: 
+L1098: cite769†86730-001LF MINITEK JUMPER 2MM 2POD AU BLK Amphenol ICC (FCI)$0.64000〖769‡Details〗 L1099: 
+L1100: cite770†1N4148 DIODE STANDARD 100V 200MA DO35 onsemi$0.10000〖770‡Details〗 L1101: cite771†TEN 10-2411 DC DC CONVERTER 5V 10W Traco Power$52.19000〖771‡Details〗 L1102: 
+L1103: cite772†09.03201.02 SWITCH SLIDE SPDT 0.5A 24V EAO$1.72000〖772‡Details〗 L1104: 
+L1105: cite773†VB335-75 CONN BNC JACK STR 75 OHM PCB Cinch Connectivity Solutions$8.41000〖773‡Details〗 L1106: 
+L1107: cite774†M22-7130342 CONN RCPT 3POS 0.079 GOLD PCB Harwin Inc.$1.19000〖774‡Details〗 L1108: 
+L1109: cite775†Image: need help icon L1110: 
+L1111: Need Help?
+L1112: cite776†Order status and tracking cite777†Request Account Documents†feedback.digikey.com cite717†Technical product support†forum.digikey.com cite736†Create a quote cite778†Return an item or report an order issue cite748†View all support topics L1113: 
+L1114: 1-800-344-4539 orders@digikey.com Chat
+L1115: 
+L1116: Need Help?
+L1117: 
+L1118: Feedback
+L1119: 
+L1120: Thank you!
+L1121: 
+L1122: Keep an eye on your inbox for news and updates from DigiKey!
+L1123: 
+L1124: [Input: Enter your email] [Input]
+L1125: 
+L1126: Please enter an email address
+L1127: [Input] I agree to receive marketing emails from DigiKey. I understand that I can withdraw consent at any time. Please review our cite779†Privacy Notice .
+L1128: 
+L1129: Please accept the checkbox
+--------------------------------------------------------------------------------
+SS14-E3/61T Vishay General Semiconductor - Diodes Division | Single Diodes | DigiKey (https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/SS14-E3-61T/1091538)
+citeturn141view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/SS14-E3-61T/1091538","lineno":1040}); Total lines: 1135
+L1001: ---
+L1002: DigiKey Part Number  | SS14-E3/61TGITR-ND - Tape & Reel (TR)SS14-E3/61TGICT-ND - Cut Tape (CT)SS14-E3/61TGIDKR-ND - Digi-Reel®
+L1003: Manufacturer  | cite694†Vishay General Semiconductor - Diodes Division L1004: Manufacturer Product Number  | SS14-E3/61T
+L1005: Description  | DIODE SCHOTTKY 40V 1A DO214AC
+L1006: Manufacturer Standard Lead Time  | 18 Weeks
+L1007: Customer Reference  | [Input]
+L1010: EDA/CAD Models  | cite751†SS14-E3/61T Models L1011: Product Attributes
+L1012: 
+L1013: [Input]
+L1014: 
+L1015: Filter Similar Products
+L1016: 
+L1017: [Input]
+L1018: 
+L1019: Show Empty Attributes
+L1020: Categorycite436†Discrete Semiconductor Products cite752†Diodes cite753†Rectifiers cite439†Single Diodes | Speed Fast Recovery =< 500ns, > 200mA (Io)
+L1021: Mfrcite754†Vishay General Semiconductor - Diodes Division | Current - Reverse Leakage @ Vr 200 µA @ 40 V
+L1022: Packaging Tape & Reel (TR)Cut Tape (CT)Digi-Reel®  | Mounting Typecite755†Surface Mount L1023: Part Status Active  | Package / Casecite756†DO-214AC, SMA L1024: Technologycite757†Schottky | Supplier Device Package DO-214AC (SMA)
+L1025: Voltage - DC Reverse (Vr) (Max)40 V  | Operating Temperature - Junction-65°C ~ 125°C
+L1026: Current - Average Rectified (Io)1A  | Base Product Numbercite758†SS14 L1027: Voltage - Forward (Vf) (Max) @ If 500 mV @ 1 A  |
+L1028: Report Product Information Error
+L1029: 
+L1030: Documents & Media
+L1031: 
+L1032: Environmental & Export Classifications
+L1033: 
+L1034: Product Questions and Answers
+L1035: 
+L1036: Additional Resources
+L1037: 
+L1038: Substitutes (2)
+L1039: 
+L1040: Part Number  | Manufacturer  | Quantity Available  | DigiKey Part Number  | Unit Price  | Substitute Type
+L1041: --- | --- | --- | --- | --- | ---
+L1042: cite759†CDBA140-G | Comchip Technology  | 256,231  | 641-1015-1-ND  | $0.36000  | Direct
+L1043: cite760†CDBA140SL-HF | Comchip Technology  | 269,111  | 641-1762-1-ND  | $1.14000  | Similar
+L1044: 
+L1045: In-Stock: 99,297
+L1046: Check for Additional Incoming Stock
+L1047: 
+L1048: Quantity
+L1049: 
+L1050: [Input]
+L1051: 
+L1052: [Button: Add to Cart]
+L1053: 
+L1054: [Button: Add to List]
+L1055: 
+L1056: All prices are in USD
+L1057: 
+L1058: Cut Tape (CT) & Digi-Reel®
+L1059: 
+L1060: Quantity  | Unit Price  | Ext Price
+L1061: --- | --- | ---
+L1062: 1  | $0.47000  | $0.47
+L1063: 10  | $0.28600  | $2.86
+L1064: 50  | $0.20660  | $10.33
+L1065: 100  | $0.18060  | $18.06
+L1066: 500  | $0.13484  | $67.42
+L1067: 
+L1068: * All Digi-Reel orders will add a $7.00 reeling fee.
+L1069: 
+L1070: Tape & Reel (TR)
+L1071: Quantity  | Unit Price  | Ext Price
+L1072: --- | --- | ---
+L1073: 1,800  | $0.10932  | $196.78
+L1074: 5,400  | $0.09302  | $502.31
+L1075: 
+L1076: Manufacturers Standard Package
+L1077: 
+L1078: Tariff Status: Tariff may apply if shipping to the United States. Tariff costs are calculated and will be displayed in the shopping cart.
+L1079: 
+L1080: You May Also Be Interested Incite761†See All L1081: 
+L1082: 10 Items
+L1083: 
+L1084: cite762†MF-MSMF050-2 PTC RESET FUSE 15V 500MA 1812 Bourns Inc.$0.38000〖762‡Details〗 L1085: cite763†TLV1117LV33DCYR IC REG LINEAR 3.3V 1A SOT-223-4 Texas Instruments$0.33000〖763‡Details〗 L1086: 
+L1087: cite764†B140-13-F DIODE SCHOTTKY 40V 1A SMA Diodes Incorporated$0.34000〖764‡Details〗 L1088: 
+L1089: cite765†AP3031KTR-G1 IC LED DRVR RGLTR PWM TSOT23-6 Diodes Incorporated$0.37000〖765‡Details〗 L1090: 
+L1091: cite766†APT1608EC LED RED CLEAR CHIP SMD Kingbright$0.19000〖766‡Details〗 L1092: 
+L1093: cite767†SKRKAEE020 SWITCH TACTILE SPST-NO 0.05A 12V Alps Alpine$0.41000〖767‡Details〗 L1094: 
+L1095: cite768†ESD9B3.3ST5G TVS DIODE 3.3VWM 11.5VC SOD923 onsemi$0.21000〖768‡Details〗 L1096: cite769†SP03-6BTG TVS DIODE 6VWM 20VC 8-SOIC Littelfuse Inc.$3.33000〖769‡Details〗 L1097: 
+L1098: cite770†NCP1117ST33T3G IC REG LINEAR 3.3V 1A SOT-223 onsemi$0.62000〖770‡Details〗 L1099: 
+L1100: cite771†SMBJ24A TVS DIODE 24VWM 38.9VC DO214AA Littelfuse Inc.$0.50000〖771‡Details〗 L1101: 
+L1102: cite772†Image: need help icon L1103: 
+L1104: Need Help?
+L1105: cite773†Order status and tracking cite774†Request Account Documents†feedback.digikey.com cite717†Technical product support†forum.digikey.com cite736†Create a quote cite775†Return an item or report an order issue cite748†View all support topics L1106: 
+L1107: 1-800-344-4539 orders@digikey.com Chat
+L1108: 
+L1109: Need Help?
+L1110: 
+L1111: Feedback
+L1112: 
+L1113: Thank you!
+L1114: 
+L1115: Keep an eye on your inbox for news and updates from DigiKey!
+L1116: 
+L1117: [Input: Enter your email] [Input]
+L1118: 
+L1119: Please enter an email address
+L1120: [Input] I agree to receive marketing emails from DigiKey. I understand that I can withdraw consent at any time. Please review our cite776†Privacy Notice .
+L1121: 
+L1122: Please accept the checkbox
+

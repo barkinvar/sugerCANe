@@ -1,0 +1,278 @@
+{
+  "capacitor_count": 34,
+  "decision": "Retain all fitted capacitors for this unbuilt prototype. C13/C24/C42 are optimization candidates, not approved deletions.",
+  "rows": [
+    {
+      "reference": "C1",
+      "value": "47uF",
+      "role": "Battery/input filtering",
+      "decision": "Keep",
+      "reason": "Bulk input energy and local high-frequency input bypass; the remote bulk capacitor does not replace the bypass at U1.",
+      "source": "LMR51420 datasheet sections 9.2.2.6, 10 and 11"
+    },
+    {
+      "reference": "C2",
+      "value": "10uF",
+      "role": "Battery/input filtering",
+      "decision": "Keep",
+      "reason": "Bulk input energy and local high-frequency input bypass; the remote bulk capacitor does not replace the bypass at U1.",
+      "source": "LMR51420 datasheet sections 9.2.2.6, 10 and 11"
+    },
+    {
+      "reference": "C3",
+      "value": "100nF",
+      "role": "Battery/input filtering",
+      "decision": "Keep",
+      "reason": "Bulk input energy and local high-frequency input bypass; the remote bulk capacitor does not replace the bypass at U1.",
+      "source": "LMR51420 datasheet sections 9.2.2.6, 10 and 11"
+    },
+    {
+      "reference": "C4",
+      "value": "22uF",
+      "role": "Buck output reservoir",
+      "decision": "Keep; C13 is a bench optimization candidate",
+      "reason": "Three 22uF capacitors compensate for effective capacitance loss. The nominal 66uF is not a claim of 66uF effective capacitance. Removing C13 requires DC-bias, load-transient and cascaded-regulator stability verification.",
+      "source": "LMR51420 datasheet Table 9-1 and section 9.2.2.5"
+    },
+    {
+      "reference": "C5",
+      "value": "22uF",
+      "role": "Buck output reservoir",
+      "decision": "Keep; C13 is a bench optimization candidate",
+      "reason": "Three 22uF capacitors compensate for effective capacitance loss. The nominal 66uF is not a claim of 66uF effective capacitance. Removing C13 requires DC-bias, load-transient and cascaded-regulator stability verification.",
+      "source": "LMR51420 datasheet Table 9-1 and section 9.2.2.5"
+    },
+    {
+      "reference": "C13",
+      "value": "22uF",
+      "role": "Buck output reservoir",
+      "decision": "Keep; C13 is a bench optimization candidate",
+      "reason": "Three 22uF capacitors compensate for effective capacitance loss. The nominal 66uF is not a claim of 66uF effective capacitance. Removing C13 requires DC-bias, load-transient and cascaded-regulator stability verification.",
+      "source": "LMR51420 datasheet Table 9-1 and section 9.2.2.5"
+    },
+    {
+      "reference": "C6",
+      "value": "100nF",
+      "role": "Buck bootstrap",
+      "decision": "Keep",
+      "reason": "Provides the high-side MOSFET gate-drive supply; it is not an extra rail decoupler.",
+      "source": "LMR51420 sections 8.3 and 9.2.2.7"
+    },
+    {
+      "reference": "C7",
+      "value": "1uF",
+      "role": "3.3V regulator input/output",
+      "decision": "Keep",
+      "reason": "Local input bypass and output capacitance support the LDO and its transient response.",
+      "source": "AP2112 recommended input/output application capacitors"
+    },
+    {
+      "reference": "C8",
+      "value": "4.7uF",
+      "role": "3.3V regulator input/output",
+      "decision": "Keep",
+      "reason": "Local input bypass and output capacitance support the LDO and its transient response.",
+      "source": "AP2112 recommended input/output application capacitors"
+    },
+    {
+      "reference": "C9",
+      "value": "100nF",
+      "role": "Battery sensor switch bypass/output",
+      "decision": "Keep",
+      "reason": "Local switch input bypass and controlled sensor-rail output capacitance; included in the inrush budget.",
+      "source": "TPS1H200A-Q1 application guidance and Rev B startup budget"
+    },
+    {
+      "reference": "C10",
+      "value": "1uF",
+      "role": "Battery sensor switch bypass/output",
+      "decision": "Keep",
+      "reason": "Local switch input bypass and controlled sensor-rail output capacitance; included in the inrush budget.",
+      "source": "TPS1H200A-Q1 application guidance and Rev B startup budget"
+    },
+    {
+      "reference": "C11",
+      "value": "100nF",
+      "role": "5V sensor switch bypass/output",
+      "decision": "Keep",
+      "reason": "Input bypass and output charge reservoir reduce disturbances as sensor loads change.",
+      "source": "TPS2553 sections on input/output capacitance and layout"
+    },
+    {
+      "reference": "C12",
+      "value": "22uF",
+      "role": "5V sensor switch bypass/output",
+      "decision": "Keep",
+      "reason": "Input bypass and output charge reservoir reduce disturbances as sensor loads change.",
+      "source": "TPS2553 sections on input/output capacitance and layout"
+    },
+    {
+      "reference": "C14",
+      "value": "33nF",
+      "role": "Hardware fault timing",
+      "decision": "Keep",
+      "reason": "Sets the battery-switch current-limit latch delay; deleting it changes fault behavior.",
+      "source": "TPS1H200A-Q1 latch-off mode"
+    },
+    {
+      "reference": "C15",
+      "value": "22uF",
+      "role": "Boost output reservoir/bypass",
+      "decision": "Keep",
+      "reason": "The two 22uF capacitors supply the modeled boost output capacitance; 100nF provides local high-frequency bypass.",
+      "source": "TPS61322 output-capacitor selection and supplied startup decks"
+    },
+    {
+      "reference": "C16",
+      "value": "22uF",
+      "role": "Boost output reservoir/bypass",
+      "decision": "Keep",
+      "reason": "The two 22uF capacitors supply the modeled boost output capacitance; 100nF provides local high-frequency bypass.",
+      "source": "TPS61322 output-capacitor selection and supplied startup decks"
+    },
+    {
+      "reference": "C17",
+      "value": "100nF",
+      "role": "Boost output reservoir/bypass",
+      "decision": "Keep",
+      "reason": "The two 22uF capacitors supply the modeled boost output capacitance; 100nF provides local high-frequency bypass.",
+      "source": "TPS61322 output-capacitor selection and supplied startup decks"
+    },
+    {
+      "reference": "C20",
+      "value": "100nF",
+      "role": "Microcontroller supply bypass",
+      "decision": "Keep",
+      "reason": "Separate local bypass at digital, I/O and analog supply connections. Shared net names do not make physically separated decouplers redundant.",
+      "source": "STM32F042 power-supply scheme"
+    },
+    {
+      "reference": "C21",
+      "value": "100nF",
+      "role": "Microcontroller supply bypass",
+      "decision": "Keep",
+      "reason": "Separate local bypass at digital, I/O and analog supply connections. Shared net names do not make physically separated decouplers redundant.",
+      "source": "STM32F042 power-supply scheme"
+    },
+    {
+      "reference": "C22",
+      "value": "100nF",
+      "role": "Microcontroller supply bypass",
+      "decision": "Keep",
+      "reason": "Separate local bypass at digital, I/O and analog supply connections. Shared net names do not make physically separated decouplers redundant.",
+      "source": "STM32F042 power-supply scheme"
+    },
+    {
+      "reference": "C23",
+      "value": "1uF",
+      "role": "Microcontroller supply bypass",
+      "decision": "Keep",
+      "reason": "Separate local bypass at digital, I/O and analog supply connections. Shared net names do not make physically separated decouplers redundant.",
+      "source": "STM32F042 power-supply scheme"
+    },
+    {
+      "reference": "C24",
+      "value": "4.7uF",
+      "role": "Microcontroller local bulk",
+      "decision": "Keep; bench optimization candidate",
+      "reason": "Provides a local charge reservoir beyond the three small supply bypass capacitors. Possible reduction depends on measured rail transients and layout impedance.",
+      "source": "STM32F042 power-supply scheme and board layout"
+    },
+    {
+      "reference": "C25",
+      "value": "30pF",
+      "role": "Crystal load",
+      "decision": "Keep",
+      "reason": "Set the external crystal load capacitance and affect oscillator startup/frequency.",
+      "source": "Abracon ABM3B 18pF load and STM32 oscillator design"
+    },
+    {
+      "reference": "C26",
+      "value": "30pF",
+      "role": "Crystal load",
+      "decision": "Keep",
+      "reason": "Set the external crystal load capacitance and affect oscillator startup/frequency.",
+      "source": "Abracon ABM3B 18pF load and STM32 oscillator design"
+    },
+    {
+      "reference": "C27",
+      "value": "100nF",
+      "role": "Reset filtering",
+      "decision": "Keep",
+      "reason": "Suppresses short reset-pin disturbances; removal needs reset/noise qualification.",
+      "source": "STM32F042 reset application circuit"
+    },
+    {
+      "reference": "C28",
+      "value": "10nF",
+      "role": "Supply measurement filtering",
+      "decision": "Keep",
+      "reason": "Together with ADC resistor dividers, filter switched-rail measurements used for fault decisions.",
+      "source": "Rev B rail diagnostics and ADC sampling implementation"
+    },
+    {
+      "reference": "C29",
+      "value": "10nF",
+      "role": "Supply measurement filtering",
+      "decision": "Keep",
+      "reason": "Together with ADC resistor dividers, filter switched-rail measurements used for fault decisions.",
+      "source": "Rev B rail diagnostics and ADC sampling implementation"
+    },
+    {
+      "reference": "C40",
+      "value": "100nF",
+      "role": "CAN supply bypass",
+      "decision": "Keep",
+      "reason": "U6 has separate VCC and VIO supply pins. TI calls for local bypass at both even when both use 3.3V.",
+      "source": "TCAN3413 datasheet section 8.4"
+    },
+    {
+      "reference": "C41",
+      "value": "100nF",
+      "role": "CAN supply bypass",
+      "decision": "Keep",
+      "reason": "U6 has separate VCC and VIO supply pins. TI calls for local bypass at both even when both use 3.3V.",
+      "source": "TCAN3413 datasheet section 8.4"
+    },
+    {
+      "reference": "C42",
+      "value": "1uF",
+      "role": "CAN local bulk",
+      "decision": "Keep; bench optimization candidate",
+      "reason": "Extra local energy reservoir. It is not a substitute for C40/C41 and is not independently proven necessary by DC checks.",
+      "source": "TCAN3413 power supply/layout guidance"
+    },
+    {
+      "reference": "C50",
+      "value": "100nF",
+      "role": "Comparator supply bypass",
+      "decision": "Keep",
+      "reason": "Prevents supply disturbances causing false sensor transitions.",
+      "source": "LM339LV power-supply recommendations"
+    },
+    {
+      "reference": "C101",
+      "value": "1nF",
+      "role": "Sensor input filtering",
+      "decision": "Keep",
+      "reason": "Each capacitor filters its own divided input; reducing it changes noise rejection and pulse response.",
+      "source": "Rev B front-end timing and hysteresis model"
+    },
+    {
+      "reference": "C201",
+      "value": "1nF",
+      "role": "Sensor input filtering",
+      "decision": "Keep",
+      "reason": "Each capacitor filters its own divided input; reducing it changes noise rejection and pulse response.",
+      "source": "Rev B front-end timing and hysteresis model"
+    },
+    {
+      "reference": "C301",
+      "value": "1nF",
+      "role": "Sensor input filtering",
+      "decision": "Keep",
+      "reason": "Each capacitor filters its own divided input; reducing it changes noise rejection and pulse response.",
+      "source": "Rev B front-end timing and hysteresis model"
+    }
+  ]
+}

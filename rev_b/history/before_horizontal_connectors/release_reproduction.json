@@ -1,0 +1,38 @@
+{
+  "result": "PASS",
+  "completed_utc": "2026-09-08T01:20:24.703718+00:00",
+  "test_directory": "/tmp/candi-revb-release-yezqclyd/FRC_Sensor_CAN_RevB",
+  "command": "bash scripts/validate_release.sh",
+  "exit_code": 0,
+  "archive_manifest_files_verified_before_run": 401,
+  "tested_archive_sha256": "5fdd8eaf1237676f91c5e958c63d104e1cddd399281f8d07529cfed253c97d08",
+  "firmware_binary_matches": true,
+  "firmware_binary_sha256": "7c9ebc5ed086e69f6a1477c4f10c84fd50fccd19b9c8f0219abbe84bc9c2449e",
+  "native_pcb_matches": true,
+  "native_pcb_sha256": "b7762ffd9a5580b17e0c0e34b5fd99ec0344c7b58f8e64d7b59ce31a4a3204fb",
+  "erc_drc": "PASS; zero reported violations and zero unconnected items",
+  "design_parity": "PASS",
+  "checks": {
+    "reports/manufacturing/verification.json": "PASS",
+    "reports/manufacturing/gerber_connectivity.json": "PASS",
+    "reports/manufacturing/gerber_geometry.json": "PASS",
+    "reports/programming_geometry.json": "PASS",
+    "reports/electrical/loaded_input_thresholds.json": "PASS"
+  },
+  "firmware_tests": "2,190,989 core assertions and 19 application scenarios passed with ASan/UBSan",
+  "drivers": "232,928 Java assertions; 75,828 C++ assertions; five Python tests; compile checks passed",
+  "environment": "Fresh extracted project; reused installed native toolchain and development Python virtual environment. Not a fresh operating-system installation.",
+  "presentation_changes_after_replay": [
+    "TOOLS.md",
+    "output/documentation/FRC_Sensor_CAN_RevB_Handbook.pdf",
+    "output/review/board_3d_final.png",
+    "scripts/build_release.py"
+  ],
+  "added_after_replay": [
+    "scripts/render_board.sh",
+    "reports/release_reproduction.json",
+    "reports/release_reproduction.log"
+  ],
+  "limitations": "No physical PCB tests. SPICE runs were verified earlier and are not rerun by validate_release.sh. Presentation changes do not alter electrical source files or tested firmware.",
+  "status_after_horizontal_update": "Historical evidence for the prior angled-connector release; superseded by horizontal validation."
+}

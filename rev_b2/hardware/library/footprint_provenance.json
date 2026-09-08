@@ -1,0 +1,154 @@
+[
+  {
+    "library_id": "Capacitor_SMD:CP_Elec_6.3x5.8",
+    "source_sha256": "3e486860d8806d23331d3e53b4ec01c8a40087729f1f037167db2a17598ad444",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Capacitor_SMD:C_0805_2012Metric",
+    "source_sha256": "62775a51fe74ba7f1b572de327bdbd3fc92582721b2abcaa47787865590d89cb",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Capacitor_SMD:C_1206_3216Metric",
+    "source_sha256": "b2e4a08e3aaf40bc587090190c0e3969e962d7ae962c172cce0581ae8327651c",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Capacitor_SMD:C_1210_3225Metric",
+    "source_sha256": "e1dae516e079b70c4736d001fb81bfb4ef5f9c2a37c8175223a44f83a04ff75f",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+    "source_sha256": "5301303268f72ba9cc94b7fdbac355951933e6854272ce8d300b679b86b5d45d",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+    "source_sha256": "e5f24b6fea852f86171042806da48490229c9c8025b6d266b8cad6485b26e79f",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical",
+    "source_sha256": "8bb8f0a71c1009c3d1e966e2c66c65cf301d26696ac9603fc7cbbfe58a27153e",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical",
+    "source_sha256": "e92fcd01a2df9c567dbd6e2c8c05c4e021cb1b96ca035b85d568d1710f9d48b1",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Crystal:Crystal_SMD_5032-4Pin_5.0x3.2mm",
+    "source_sha256": "9d5ad3af2f41d151572a9e1478034ceab98b04d0137708e83d71597aad5a1da8",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Diode_SMD:D_SMA",
+    "source_sha256": "f7cba3b52ed8b34dce89170722de58324eac04e9e61a095e0eab37b9ca93cb7f",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Diode_SMD:D_SMB",
+    "source_sha256": "e25e9f4acef5b55585afebc48c685e151fd0d2f33a5c3c61f9fdf0389e19ae67",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Diode_SMD:D_SOD-123",
+    "source_sha256": "fd16785935b01254e1076f490e12f0f096da73cf087adefce51225585c62557a",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Fuse:Fuse_Littelfuse-NANO2-451_453",
+    "source_sha256": "4d7971c5346420f32946d8f6f19189db0074a717fa4ad9566c72a60c7c21cb84",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm",
+    "source_sha256": "401dbc09ec9fa0a4c6f7495f290cdd0d9d53da1e7f1354c2887fd03f8ec0073a",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "LED_SMD:LED_0805_2012Metric",
+    "source_sha256": "8806125556e590701b13b47a1725dff28fc47fca41a7905c7d78c8312d08cbbd",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Package_QFP:LQFP-32_7x7mm_P0.8mm",
+    "source_sha256": "d3a8db080529cbea610fd0d7edae6f7eaa790861e547ad583bf037edbe0f5214",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+    "source_sha256": "a885b619b22880c9559522d2bf865b059d80453b95a98defc9e6ceef284da1fc",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+    "source_sha256": "074ecb2092b24fa4b4b9cdd7c926fc587b0d7d6d21e7341e57935fd42d36894f",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Package_TO_SOT_SMD:SOT-23",
+    "source_sha256": "0d88c86c1b6d8c1aae4aa8c09386264c089d4451a128b6ccd63ed253f4300b15",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Package_TO_SOT_SMD:SOT-23-5",
+    "source_sha256": "455a3f7c3e5eb5b8847eaa5df23e18651e78ab9f75afd09a0883758a0d901761",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Package_TO_SOT_SMD:SOT-23-6",
+    "source_sha256": "f341c73aac9dcb553456f68bf3fee3d26eb14acf6d8a1cae82b50418fe1d71ca",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Package_TO_SOT_SMD:TSOT-23-6",
+    "source_sha256": "2b3e097508a6979b828ca1125470c9edb557dced151630c94ad579b9b0e83442",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Resistor_SMD:R_0805_2012Metric",
+    "source_sha256": "f050b6a50cc7e6f86291fb7aa8f87b0d02255e21cfbddf291cdccc87e5889794",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Resistor_SMD:R_1206_3216Metric",
+    "source_sha256": "c7320668dc81bbb954cb4f15e4e7a766c120059343d43551468c8f7ccc8fde37",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "Resistor_SMD:R_2010_5025Metric",
+    "source_sha256": "5bcbaf3a7798d3d1b8dd2bf0293dad98ef606efa5787149a542c5661c3a59725",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "TestPoint:TestPoint_Pad_D2.0mm",
+    "source_sha256": "0a1ce94753a7b270c8ff6c20698b4de7ce95606b643549926acc04bb698d0120",
+    "modification": "3D model path made project-relative only."
+  },
+  {
+    "library_id": "FRC_Sensor_CAN:Wuerth_691137710002",
+    "source": "https://www.we-online.com/components/products/datasheet/691137710003.pdf",
+    "basis": "1.30mm drill, 5.00mm pitch, body7.50mm deep, pad2.80mm added for hand soldering."
+  },
+  {
+    "library_id": "FRC_Sensor_CAN:Wuerth_691137710003",
+    "source": "https://www.we-online.com/components/products/datasheet/691137710003.pdf",
+    "basis": "1.30mm drill, 5.00mm pitch, body7.50mm deep, pad2.80mm added for hand soldering."
+  },
+  {
+    "library_id": "FRC_Sensor_CAN:TI_DGN0008K_HVSSOP8_EP",
+    "source": "https://www.ti.com/lit/ds/symlink/tps1h200a-q1.pdf",
+    "basis": "DGN0008K-C01 recommended lead land1.4x0.45 at4.4 row spacing; copper2x3, mask1.57x1.89. Hand-reflow adaptation: ~70% segmented paste and four0.3mm drills outside paste; verify wetting on prototype."
+  },
+  {
+    "library_id": "FRC_Sensor_CAN:Abracon_ABM3B_5.0x3.2mm",
+    "derived_from": "Crystal:Crystal_SMD_5032-4Pin_5.0x3.2mm",
+    "source_url": "https://abracon.com/Resonators/abm3b.pdf",
+    "source_page": 3,
+    "modification": "Manufacturer recommended 1.8x1.2mm rectangular lands on 4.0x2.4mm centers, enlarged courtyard and adjusted silkscreen. KiCad body/model retained under original library license."
+  }
+]

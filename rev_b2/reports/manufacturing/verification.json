@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "parser": "Gerbonara 1.6.3",
+  "graphic_layers": 9,
+  "board_outline_mm": [
+    60,
+    68
+  ],
+  "plated_drills": 307,
+  "nonplated_drills": 7,
+  "copper_pad_flashes_verified": {
+    "top": 422,
+    "bottom": 69
+  },
+  "maximum_drill_coordinate_quantization_mm": 0.0005000000000023874,
+  "maximum_drill_diameter_quantization_mm": 0.00039999999999995595,
+  "assembly_rows_verified": 144,
+  "purchased_references_verified": 144,
+  "portable_models_verified": 144,
+  "parser_warnings": [
+    "/home/neuro/candi-clone/rev_b2/output/fabrication/FRC_Sensor_CAN-NPTH.drl:14 \"G90\": G90 header statement found after end of header",
+    "/home/neuro/candi-clone/rev_b2/output/fabrication/FRC_Sensor_CAN-PTH.drl:20 \"G90\": G90 header statement found after end of header"
+  ],
+  "limitations": "X2 pad/net/coordinate and drill/placement parity; not a copper connectivity solver or fabrication-house CAM review."
+}

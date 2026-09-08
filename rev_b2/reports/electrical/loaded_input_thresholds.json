@@ -1,0 +1,86 @@
+{
+  "result": "PASS",
+  "load_cases": 108,
+  "ground_potential_inflation_factor": 1.15,
+  "results": [
+    {
+      "mode": "logic",
+      "channel": 1,
+      "rising_V": [
+        1.5694751278613417,
+        2.260830277211603
+      ],
+      "falling_V": [
+        0.9365270109568545,
+        1.446661335326914
+      ],
+      "pass": true
+    },
+    {
+      "mode": "logic",
+      "channel": 2,
+      "rising_V": [
+        1.4956463123335093,
+        2.2395825491828774
+      ],
+      "falling_V": [
+        0.863097844060958,
+        1.4249757109973318
+      ],
+      "pass": true
+    },
+    {
+      "mode": "logic",
+      "channel": 3,
+      "rising_V": [
+        1.528609668487037,
+        2.239661648026477
+      ],
+      "falling_V": [
+        0.8960534064868553,
+        1.425054738785407
+      ],
+      "pass": true
+    },
+    {
+      "mode": "industrial",
+      "channel": 1,
+      "rising_V": [
+        5.349141779688429,
+        6.783703869727782
+      ],
+      "falling_V": [
+        4.715356444848782,
+        5.965513692826034
+      ],
+      "pass": true
+    },
+    {
+      "mode": "industrial",
+      "channel": 2,
+      "rising_V": [
+        5.335839060779804,
+        6.779208798186456
+      ],
+      "falling_V": [
+        4.70248812357433,
+        5.960550744315521
+      ],
+      "pass": true
+    },
+    {
+      "mode": "industrial",
+      "channel": 3,
+      "rising_V": [
+        5.214651950633815,
+        6.777755226619781
+      ],
+      "falling_V": [
+        4.581279209035656,
+        5.95911355044666
+      ],
+      "pass": true
+    }
+  ],
+  "assumptions": "DC ground transfer from final Gerbers at 85 C, worst 150 mA logic load at U2 ground; 80% per-stage efficiency, 4 V intermediate and 5.15 V output for current balance. Both sensor rail load extremes at each port, 5/12/22 V input. Exact transfer correlation retained and inflated 15%. Same electrical component allowances as calculations.json. Input thresholds referenced to the corresponding board sensor ground terminal; external cable drop and AC ground bounce excluded."
+}

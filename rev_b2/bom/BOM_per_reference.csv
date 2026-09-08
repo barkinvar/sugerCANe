@@ -1,0 +1,145 @@
+reference,MPN,value,footprint,voltage,tolerance,note
+J1,1824420000,2P PUSH 3.5mm,FRC_Sensor_CAN:Weidmuller_LSF_90_2P,,,"Horizontal /90 push-in; 8 mm strip, 7 mm pin-row spacing, two solder pins per pole."
+F1,045101.5MRL,1.5A FAST,FRC_Sensor_CAN:Fuse_Littelfuse-NANO2-451_453,,,Secondary protection; feed only from fused robot distribution.
+Q1,AO4485,AO4485,FRC_Sensor_CAN:SOIC-8_3.9x4.9mm_P1.27mm,,,"Reverse-polarity PMOS: drain toward input, source toward load. Not a reverse-current blocker when on."
+D3,MMSZ12T1G,12V ZENER,FRC_Sensor_CAN:D_SOD-123,,,"Cathode to Q1 source, anode to gate; protects +/-20V gate rating."
+R3,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,Gate pull-down; maximum 1 mA nominal zener current at 22 V input. Rev B-2: same-value factory sourcing equivalent.
+D2,SMBJ22A-E3/52,SMBJ22A,FRC_Sensor_CAN:D_SMB,,,22 V continuous standoff; 35.5 V specified pulse clamp. Bench-check overshoot. Not sustained overvoltage regulation.
+C1,EEE-FK1H470P,47uF,FRC_Sensor_CAN:CP_Elec_8x6.5,50V,20%,
+C2,CL32B106KBJNNWE,10uF,FRC_Sensor_CAN:C_1210_3225Metric,50V,10%,
+C3,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%, Rev B-2: same-value factory sourcing equivalent.
+U1,LMR51420XDDCR,LMR51420XDDCR,FRC_Sensor_CAN:TSOT-23-6,,,
+L1,SRP7028A-100M,10uH,FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm,,,"3.5A RMS, 6A saturation; use specified family, not NRND SRP7030."
+C4,CL31A226KAHNNNE,22uF,FRC_Sensor_CAN:C_1206_3216Metric,25V,10%,
+C5,CL31A226KAHNNNE,22uF,FRC_Sensor_CAN:C_1206_3216Metric,25V,10%,
+C13,CL31A226KAHNNNE,22uF,FRC_Sensor_CAN:C_1206_3216Metric,25V,10%,Third output capacitor budgets for the manufacturer typical DC-bias loss.
+C6,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%, Rev B-2: same-value factory sourcing equivalent.
+R1,0805W8F1003T5E,100k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R2,ERJ-6ENF1782V,17.8k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+U2,AP2112K-3.3TRG1,AP2112K-3.3,FRC_Sensor_CAN:SOT-23-5,,,
+C7,CC0805KKX7R9BB105,1uF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,
+C8,TMK212AB7475KG-T,4.7uF,FRC_Sensor_CAN:C_0805_2012Metric,25V,10%,
+R4,0805W8F1001T5E,1k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,Defined bleed for hot bias-diode leakage and input feedback with board supply off; 3.3mA normal load. Rev B-2: same-value factory sourcing equivalent.
+U3,TPS1H200AQDGNRQ1,TPS1H200A-Q1,FRC_Sensor_CAN:TI_DGN0008K_HVSSOP8_EP,,,
+R5,RC0805FR-073K9L,3.9k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+C14,CC0805KRX7R9BB333,33nF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,Hardware latch-off after ~11ms in current limit; allows sensor inrush; no automatic retry.
+R6,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R7,0805W8F1003T5E,100k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R8,0805W8F4701T5E,4.7k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R9,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+C9,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%, Rev B-2: same-value factory sourcing equivalent.
+C10,CC0805KKX7R9BB105,1uF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,
+U4,TPS2553DBVR-1,TPS2553DBVR-1,FRC_Sensor_CAN:SOT-23-6,,,
+R10,RC0805FR-0759KL,59k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R11,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R12,0805W8F1003T5E,100k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R13,0805W8F1001T5E,1k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+C11,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%, Rev B-2: same-value factory sourcing equivalent.
+C12,CL31A226KAHNNNE,22uF,FRC_Sensor_CAN:C_1206_3216Metric,25V,10%,
+R14,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,Switched battery output bleed; 2.2 mA at 22 V. Rev B-2: same-value factory sourcing equivalent.
+R15,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+U5,STM32F042K6T6,STM32F042K6T6,FRC_Sensor_CAN:LQFP-32_7x7mm_P0.8mm,,,
+C20,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%, Rev B-2: same-value factory sourcing equivalent.
+C21,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%, Rev B-2: same-value factory sourcing equivalent.
+C22,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%, Rev B-2: same-value factory sourcing equivalent.
+C23,CC0805KKX7R9BB105,1uF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,VDDA local capacitor.
+C24,TMK212AB7475KG-T,4.7uF,FRC_Sensor_CAN:C_0805_2012Metric,25V,10%,
+Y1,ABM3B-8.000MHZ-B2-T,8MHz 18pF,FRC_Sensor_CAN:Abracon_ABM3B_5.0x3.2mm,,,Abracon recommended land pattern: 1.8x1.2mm pads on 4.0x2.4mm centers; pads 2/4 ground.
+R20,RC0805JR-070RL,0,FRC_Sensor_CAN:R_0805_2012Metric,,jumper,Drive-level/startup measurement position. Tune only after oscillator characterization.
+C25,C0805C300J5GACTU,30pF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,
+C26,C0805C300J5GACTU,30pF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,
+R21,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+C27,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%, Rev B-2: same-value factory sourcing equivalent.
+R22,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R23,0805W8F1003T5E,100k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,Measures switched battery output; firmware distinguishes healthy light-load output from U3 open-load FAULT. Rev B-2: same-value factory sourcing equivalent.
+R24,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+C28,CC0805KRX7R9BB103,10nF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,
+R25,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R26,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+C29,CC0805KRX7R9BB103,10nF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,
+R30,0805W8F1001T5E,1k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+D10,LTST-C170KGKT,GREEN,FRC_Sensor_CAN:LED_0805_2012Metric,,,
+R31,0805W8F1001T5E,1k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+D11,LTST-C170KRKT,RED,FRC_Sensor_CAN:LED_0805_2012Metric,,,
+R32,0805W8F1001T5E,1k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+D12,LTST-C170KGKT,GREEN,FRC_Sensor_CAN:LED_0805_2012Metric,,,
+R33,0805W8F1001T5E,1k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+D13,LTST-C170KGKT,GREEN,FRC_Sensor_CAN:LED_0805_2012Metric,,,
+R34,0805W8F1001T5E,1k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+D14,LTST-C170KGKT,GREEN,FRC_Sensor_CAN:LED_0805_2012Metric,,,
+U6,TCAN3413DR,TCAN3413DR,FRC_Sensor_CAN:SOIC-8_3.9x4.9mm_P1.27mm,,,
+R40,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R41,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+C40,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%, Rev B-2: same-value factory sourcing equivalent.
+C41,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%, Rev B-2: same-value factory sourcing equivalent.
+C42,CC0805KKX7R9BB105,1uF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,
+D20,ESD2CAN24DBZRQ1,ESD2CAN24-Q1,FRC_Sensor_CAN:SOT-23,,,
+J2,1824420000,2P PUSH 3.5mm,FRC_Sensor_CAN:Weidmuller_LSF_90_2P,,,"Horizontal /90 push-in; 8 mm strip, 7 mm pin-row spacing, two solder pins per pole."
+J3,1824420000,2P PUSH 3.5mm,FRC_Sensor_CAN:Weidmuller_LSF_90_2P,,,"Horizontal /90 push-in; 8 mm strip, 7 mm pin-row spacing, two solder pins per pole."
+R42,RC1206FR-07120RL,120,FRC_Sensor_CAN:R_1206_3216Metric,,1%,Use termination only if board is the physical end of the CAN trunk.
+JP2,M22-2010205,SELECT,FRC_Sensor_CAN:PinHeader_1x02_P2.00mm_Vertical,,,Optional 120-ohm termination: shipped OPEN.
+J4,1824430000,3P PUSH 3.5mm,FRC_Sensor_CAN:Weidmuller_LSF_90_3P,,,"Horizontal /90 push-in; 8 mm strip, 7 mm pin-row spacing, two solder pins per pole."
+JP101,M22-2010305,SELECT,FRC_Sensor_CAN:PinHeader_1x03_P2.00mm_Vertical,,,"Fit ONE shunt: 1-2=5V, 2-3=VBAT. Never bridge all pins."
+JP102,M22-2010205,SELECT,FRC_Sensor_CAN:PinHeader_1x02_P2.00mm_Vertical,,,Open=industrial thresholds; fitted=3.3/5V logic thresholds.
+JP103,M22-2020305,SELECT,FRC_Sensor_CAN:PinHeader_2x03_P2.00mm_Vertical,,,"ONE horizontal shunt only:1-2=port pullup,3-4=3V3 pullup,5-6=pulldown. Open=driven input."
+R101,RC0805FR-07110KL,110k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R102,RC0805FR-07110KL,110k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R103,RC0805FR-0720KL,20k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R104,RC0805FR-07910KL,910k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R105,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R106,0805W8F1003T5E,100k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R107,ERJ-6ENF1782V,17.8k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R108,RC0805FR-077K15L,7.15k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R109,RC2010FK-074K7L,4.7k,FRC_Sensor_CAN:R_2010_5025Metric,,1%,Pulldown: >=0.75W; about0.193W at30V. Each bias branch has its own limiting resistor.
+R110,0805W8F4701T5E,4.7k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,Port pullup. Limits current even with multiple bias shunts fitted. Rev B-2: same-value factory sourcing equivalent.
+R111,0805W8F4701T5E,4.7k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,Logic pullup. Prevents a bias jumper error from shorting the 3.3V rail. Rev B-2: same-value factory sourcing equivalent.
+C101,CC0805JRNPO9BN102,1nF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,
+D101,SMAJ30A,SMAJ30A,FRC_Sensor_CAN:D_SMA,,,30V working standoff; unidirectional transient clamp.
+D102,BAT46W-E3-18,BAT46W,FRC_Sensor_CAN:D_SOD-123,,,
+D103,BAT46W-E3-18,BAT46W,FRC_Sensor_CAN:D_SOD-123,,,
+J5,1824430000,3P PUSH 3.5mm,FRC_Sensor_CAN:Weidmuller_LSF_90_3P,,,"Horizontal /90 push-in; 8 mm strip, 7 mm pin-row spacing, two solder pins per pole."
+JP201,M22-2010305,SELECT,FRC_Sensor_CAN:PinHeader_1x03_P2.00mm_Vertical,,,"Fit ONE shunt: 1-2=5V, 2-3=VBAT. Never bridge all pins."
+JP202,M22-2010205,SELECT,FRC_Sensor_CAN:PinHeader_1x02_P2.00mm_Vertical,,,Open=industrial thresholds; fitted=3.3/5V logic thresholds.
+JP203,M22-2020305,SELECT,FRC_Sensor_CAN:PinHeader_2x03_P2.00mm_Vertical,,,"ONE horizontal shunt only:1-2=port pullup,3-4=3V3 pullup,5-6=pulldown. Open=driven input."
+R201,RC0805FR-07110KL,110k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R202,RC0805FR-07110KL,110k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R203,RC0805FR-0720KL,20k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R204,RC0805FR-07910KL,910k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R205,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R206,0805W8F1003T5E,100k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R207,ERJ-6ENF1782V,17.8k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R208,RC0805FR-077K15L,7.15k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R209,RC2010FK-074K7L,4.7k,FRC_Sensor_CAN:R_2010_5025Metric,,1%,Pulldown: >=0.75W; about0.193W at30V. Each bias branch has its own limiting resistor.
+R210,0805W8F4701T5E,4.7k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,Port pullup. Limits current even with multiple bias shunts fitted. Rev B-2: same-value factory sourcing equivalent.
+R211,0805W8F4701T5E,4.7k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,Logic pullup. Prevents a bias jumper error from shorting the 3.3V rail. Rev B-2: same-value factory sourcing equivalent.
+C201,CC0805JRNPO9BN102,1nF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,
+D201,SMAJ30A,SMAJ30A,FRC_Sensor_CAN:D_SMA,,,30V working standoff; unidirectional transient clamp.
+D202,BAT46W-E3-18,BAT46W,FRC_Sensor_CAN:D_SOD-123,,,
+D203,BAT46W-E3-18,BAT46W,FRC_Sensor_CAN:D_SOD-123,,,
+J6,1824430000,3P PUSH 3.5mm,FRC_Sensor_CAN:Weidmuller_LSF_90_3P,,,"Horizontal /90 push-in; 8 mm strip, 7 mm pin-row spacing, two solder pins per pole."
+JP301,M22-2010305,SELECT,FRC_Sensor_CAN:PinHeader_1x03_P2.00mm_Vertical,,,"Fit ONE shunt: 1-2=5V, 2-3=VBAT. Never bridge all pins."
+JP302,M22-2010205,SELECT,FRC_Sensor_CAN:PinHeader_1x02_P2.00mm_Vertical,,,Open=industrial thresholds; fitted=3.3/5V logic thresholds.
+JP303,M22-2020305,SELECT,FRC_Sensor_CAN:PinHeader_2x03_P2.00mm_Vertical,,,"ONE horizontal shunt only:1-2=port pullup,3-4=3V3 pullup,5-6=pulldown. Open=driven input."
+R301,RC0805FR-07110KL,110k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R302,RC0805FR-07110KL,110k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R303,RC0805FR-0720KL,20k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R304,RC0805FR-07910KL,910k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R305,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R306,0805W8F1003T5E,100k,FRC_Sensor_CAN:R_0805_2012Metric,,1%, Rev B-2: same-value factory sourcing equivalent.
+R307,ERJ-6ENF1782V,17.8k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R308,RC0805FR-077K15L,7.15k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,
+R309,RC2010FK-074K7L,4.7k,FRC_Sensor_CAN:R_2010_5025Metric,,1%,Pulldown: >=0.75W; about0.193W at30V. Each bias branch has its own limiting resistor.
+R310,0805W8F4701T5E,4.7k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,Port pullup. Limits current even with multiple bias shunts fitted. Rev B-2: same-value factory sourcing equivalent.
+R311,0805W8F4701T5E,4.7k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,Logic pullup. Prevents a bias jumper error from shorting the 3.3V rail. Rev B-2: same-value factory sourcing equivalent.
+C301,CC0805JRNPO9BN102,1nF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,
+D301,SMAJ30A,SMAJ30A,FRC_Sensor_CAN:D_SMA,,,30V working standoff; unidirectional transient clamp.
+D302,BAT46W-E3-18,BAT46W,FRC_Sensor_CAN:D_SOD-123,,,
+D303,BAT46W-E3-18,BAT46W,FRC_Sensor_CAN:D_SOD-123,,,
+U7,LM339LVDR,LM339LV,FRC_Sensor_CAN:SOIC-14_3.9x8.7mm_P1.27mm,,,Rail-to-rail failsafe comparator on regulated 3V3. 0-30V signal is divided before this pin; NOT a 30V supply IC. Same SO14 pin assignment as LM2901B.
+C50,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%, Rev B-2: same-value factory sourcing equivalent.
+U8,TPS613222ADBVR,TPS613222A,FRC_Sensor_CAN:SOT-23-5,,,Fixed 5 V boost; powered through L2 from 4.0 V buck. DBV pins checked against TI table.
+L2,SRP4020TA-4R7M,4.7uH,FRC_Sensor_CAN:Bourns_SRP4020TA,,,"2.6 A RMS / 3.5 A saturation, 105 milliohm max; supports converter current-limit excursions."
+D4,SS14-E3/61T,SS14,FRC_Sensor_CAN:D_SMA,,,External Schottky rectifier shares boost current as recommended by TI for 500 mA designs.
+C15,CL31A226KAHNNNE,22uF,FRC_Sensor_CAN:C_1206_3216Metric,25V,10%,Boost output reservoir; check effective capacitance and converter loop on bench.
+C16,CL31A226KAHNNNE,22uF,FRC_Sensor_CAN:C_1206_3216Metric,25V,10%,Boost output reservoir; check effective capacitance and converter loop on bench.
+C17,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%, Rev B-2: same-value factory sourcing equivalent.

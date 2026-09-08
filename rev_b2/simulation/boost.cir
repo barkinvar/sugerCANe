@@ -1,0 +1,20 @@
+TPS613222A vendor model feasibility; buck represented by finite-resistance source
+.param SS=0
+.include tps613222a_ngspice.lib
+Vin source 0 PWL(0 0 1m 3.97 6m 3.97)
+Rsource source vin .15
+Cin vin 0 40u
+L2 vin lx 4.7u
+RL lx sw .105
+XU8 sw out 0 TPS613222A_TRANS
+D4 sw out Dsch
+.model Dsch D(Is=20u N=1.15 Rs=.05 Cjo=50p Bv=40 Ibv=100u)
+Cout out 0 30u
+Rload out 0 11.9
+.options method=gear reltol=.005 abstol=1n
+.tran 50n 5m 0 100n uic
+.meas tran VAVG AVG v(out) FROM=4m TO=5m
+.meas tran VMIN MIN v(out) FROM=4m TO=5m
+.meas tran VMAX MAX v(out) FROM=4m TO=5m
+.meas tran ILMAX MAX i(L2) FROM=4m TO=5m
+.end

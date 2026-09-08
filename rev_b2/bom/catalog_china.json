@@ -1,0 +1,1342 @@
+{
+  "1824420000": {
+    "mpn": "1824420000",
+    "manufacturer": "Weidmuller",
+    "supplier": "DigiKey",
+    "supplier_part": "281-2020-ND",
+    "url": "https://www.digikey.com/en/products/detail/weidm%C3%BCller/1824420000/1094358",
+    "stock_observed": 12805,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        1.54
+      ],
+      [
+        10,
+        1.113
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "281-2020-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/weidm%C3%BCller/1824420000/1094358"
+  },
+  "045101.5MRL": {
+    "mpn": "045101.5MRL",
+    "manufacturer": "Littelfuse",
+    "supplier": "DigiKey",
+    "supplier_part": "F2579CT-ND",
+    "url": "https://www.digikey.com/en/products/detail/littelfuse-inc/045101-5MRL/700820",
+    "stock_observed": 7870,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        2.47
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "F2579CT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/littelfuse-inc/045101-5MRL/700820"
+  },
+  "AO4485": {
+    "mpn": "AO4485",
+    "manufacturer": "Alpha & Omega Semiconductor",
+    "supplier": "LCSC",
+    "supplier_part": "C51499",
+    "url": "https://www.lcsc.com/product-detail/C51499.html",
+    "stock_observed": 88125,
+    "observed_date": "2026-09-08",
+    "moq": 5,
+    "multiple": 5,
+    "tiers": [
+      [
+        5,
+        0.3171
+      ],
+      [
+        50,
+        0.2505
+      ],
+      [
+        150,
+        0.222
+      ]
+    ],
+    "lcsc": "C51499",
+    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
+    "digikey_sku": "785-1551-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/alpha-omega-semiconductor-inc/AO4485/3152385"
+  },
+  "MMSZ12T1G": {
+    "mpn": "MMSZ12T1G",
+    "manufacturer": "onsemi",
+    "supplier": "DigiKey",
+    "supplier_part": "MMSZ12T1GOSCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/onsemi/MMSZ12T1G/1139870",
+    "stock_observed": 34429,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.17
+      ],
+      [
+        10,
+        0.102
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "MMSZ12T1GOSCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/onsemi/MMSZ12T1G/1139870"
+  },
+  "SMBJ22A-E3/52": {
+    "mpn": "SMBJ22A-E3/52",
+    "manufacturer": "Vishay",
+    "supplier": "DigiKey",
+    "supplier_part": "SMBJ22A-E3/52GICT-ND",
+    "url": "https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/SMBJ22A-E3-52/1119260",
+    "stock_observed": 705,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.56
+      ],
+      [
+        10,
+        0.348
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "SMBJ22A-E3/52GICT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/SMBJ22A-E3-52/1119260"
+  },
+  "EEE-FK1H470P": {
+    "mpn": "EEE-FK1H470P",
+    "manufacturer": "Panasonic",
+    "supplier": "DigiKey",
+    "supplier_part": "PCE3815CT-ND",
+    "url": "https://www.digikey.com/en/products/detail/panasonic-industry/EEE-FK1H470P/765984",
+    "stock_observed": 10108,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.93
+      ],
+      [
+        10,
+        0.589
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "PCE3815CT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/panasonic-industry/EEE-FK1H470P/765984"
+  },
+  "CL32B106KBJNNWE": {
+    "mpn": "CL32B106KBJNNWE",
+    "manufacturer": "Samsung Electro-Mechanics",
+    "supplier": "DigiKey",
+    "supplier_part": "1276-3388-1-ND",
+    "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL32B106KBJNNWE/3891474",
+    "stock_observed": 149003,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.62
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "1276-3388-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL32B106KBJNNWE/3891474"
+  },
+  "LMR51420XDDCR": {
+    "mpn": "LMR51420XDDCR",
+    "manufacturer": "Texas Instruments",
+    "supplier": "LCSC",
+    "supplier_part": "C5246146",
+    "url": "https://www.lcsc.com/product-detail/C5246146.html",
+    "stock_observed": 109,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        1.0292
+      ],
+      [
+        10,
+        0.8604
+      ],
+      [
+        30,
+        0.7752
+      ],
+      [
+        100,
+        0.6916
+      ]
+    ],
+    "lcsc": "C5246146",
+    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
+    "digikey_sku": "296-LMR51420XDDCRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/LMR51420XDDCR/16705125"
+  },
+  "SRP7028A-100M": {
+    "mpn": "SRP7028A-100M",
+    "manufacturer": "Bourns",
+    "supplier": "DigiKey",
+    "supplier_part": "SRP7028A-100MCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP7028A-100M/4876733",
+    "stock_observed": 9366,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        1.1
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "SRP7028A-100MCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP7028A-100M/4876733"
+  },
+  "CL31A226KAHNNNE": {
+    "mpn": "CL31A226KAHNNNE",
+    "manufacturer": "Samsung Electro-Mechanics",
+    "supplier": "LCSC",
+    "supplier_part": "C12891",
+    "url": "https://www.lcsc.com/product-detail/C12891.html",
+    "stock_observed": 211520,
+    "observed_date": "2026-09-08",
+    "moq": 20,
+    "multiple": 20,
+    "tiers": [
+      [
+        20,
+        0.1709
+      ],
+      [
+        200,
+        0.1297
+      ],
+      [
+        600,
+        0.1096
+      ]
+    ],
+    "lcsc": "C12891",
+    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
+    "digikey_sku": "1276-3047-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL31A226KAHNNNE/3888705"
+  },
+  "ERJ-6ENF1782V": {
+    "mpn": "ERJ-6ENF1782V",
+    "manufacturer": "Panasonic Industry",
+    "supplier": "DigiKey",
+    "supplier_part": "P17.8KCCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/panasonic-industry/ERJ-6ENF1782V/6403",
+    "stock_observed": 33381,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.12
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "P17.8KCCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/panasonic-industry/ERJ-6ENF1782V/6403"
+  },
+  "AP2112K-3.3TRG1": {
+    "mpn": "AP2112K-3.3TRG1",
+    "manufacturer": "Diodes Incorporated",
+    "supplier": "DigiKey",
+    "supplier_part": "AP2112K-3.3TRG1DICT-ND",
+    "url": "https://www.digikey.com/en/products/detail/diodes-incorporated/AP2112K-3-3TRG1/4470746",
+    "stock_observed": 159040,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.28
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "AP2112K-3.3TRG1DICT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/diodes-incorporated/AP2112K-3-3TRG1/4470746"
+  },
+  "CC0805KKX7R9BB105": {
+    "mpn": "CC0805KKX7R9BB105",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "311-1886-1-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/CC0805KKX7R9BB105/5195292",
+    "stock_observed": 112870,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.32
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "311-1886-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/CC0805KKX7R9BB105/5195292"
+  },
+  "TMK212AB7475KG-T": {
+    "mpn": "TMK212AB7475KG-T",
+    "manufacturer": "Taiyo Yuden",
+    "supplier": "DigiKey",
+    "supplier_part": "587-2990-1-ND",
+    "url": "https://www.digikey.com/en/products/detail/taiyo-yuden/TMK212AB7475KG-T/2714168",
+    "stock_observed": 718393,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.26
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "587-2990-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/taiyo-yuden/TMK212AB7475KG-T/2714168"
+  },
+  "TPS1H200AQDGNRQ1": {
+    "mpn": "TPS1H200AQDGNRQ1",
+    "manufacturer": "Texas Instruments",
+    "supplier": "DigiKey",
+    "supplier_part": "296-50416-1-ND",
+    "url": "https://www.digikey.com/en/products/detail/texas-instruments/TPS1H200AQDGNRQ1/9593381",
+    "stock_observed": 25656,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        1.78
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "C2653785",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "296-50416-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/TPS1H200AQDGNRQ1/9593381"
+  },
+  "RC0805FR-073K9L": {
+    "mpn": "RC0805FR-073K9L",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "311-3.90KCRCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-073K9L/727838",
+    "stock_observed": 131203,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.1
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "311-3.90KCRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-073K9L/727838"
+  },
+  "CC0805KRX7R9BB333": {
+    "mpn": "CC0805KRX7R9BB333",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "311-1374-1-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB333/2103112",
+    "stock_observed": 24641,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.14
+      ],
+      [
+        10,
+        0.078
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "311-1374-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB333/2103112"
+  },
+  "TPS2553DBVR-1": {
+    "mpn": "TPS2553DBVR-1",
+    "manufacturer": "Texas Instruments",
+    "supplier": "LCSC",
+    "supplier_part": "C111738",
+    "url": "https://www.lcsc.com/product-detail/C111738.html",
+    "stock_observed": 12065,
+    "observed_date": "2026-09-08",
+    "moq": 5,
+    "multiple": 5,
+    "tiers": [
+      [
+        5,
+        0.2978
+      ],
+      [
+        50,
+        0.2361
+      ],
+      [
+        150,
+        0.2096
+      ]
+    ],
+    "lcsc": "C111738",
+    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
+    "digikey_sku": "296-39380-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/TPS2553DBVR-1/2047901"
+  },
+  "RC0805FR-0759KL": {
+    "mpn": "RC0805FR-0759KL",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "311-59.0KCRCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0759KL/728045",
+    "stock_observed": 29786,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.1
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "311-59.0KCRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0759KL/728045"
+  },
+  "STM32F042K6T6": {
+    "mpn": "STM32F042K6T6",
+    "manufacturer": "STMicroelectronics",
+    "supplier": "DigiKey",
+    "supplier_part": "497-14647-ND",
+    "url": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294",
+    "stock_observed": 3072,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        4.34
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "C69216",
+    "factory_stock_status": "LCSC C69216 OUT OF STOCK at observation; procure exact MCU from DigiKey/authorized source",
+    "digikey_sku": "497-14647-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294"
+  },
+  "ABM3B-8.000MHZ-B2-T": {
+    "mpn": "ABM3B-8.000MHZ-B2-T",
+    "manufacturer": "Abracon",
+    "supplier": "DigiKey",
+    "supplier_part": "535-9720-1-ND",
+    "url": "https://www.digikey.com/en/products/detail/abracon-llc/ABM3B-8-000MHZ-B2-T/1873166",
+    "stock_observed": 70541,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.76
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "535-9720-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/abracon-llc/ABM3B-8-000MHZ-B2-T/1873166"
+  },
+  "RC0805JR-070RL": {
+    "mpn": "RC0805JR-070RL",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "311-0.0ARCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805JR-070RL/728216",
+    "stock_observed": 1733368,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.1
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "311-0.0ARCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805JR-070RL/728216"
+  },
+  "C0805C300J5GACTU": {
+    "mpn": "C0805C300J5GACTU",
+    "manufacturer": "KEMET",
+    "supplier": "DigiKey",
+    "supplier_part": "399-C0805C300J5GACTUCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/kemet/C0805C300J5GACTU/2209733",
+    "stock_observed": 9211,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.33
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "399-C0805C300J5GACTUCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/kemet/C0805C300J5GACTU/2209733"
+  },
+  "CC0805KRX7R9BB103": {
+    "mpn": "CC0805KRX7R9BB103",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "311-1136-1-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB103/302870",
+    "stock_observed": 360198,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.11
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "311-1136-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB103/302870"
+  },
+  "LTST-C170KGKT": {
+    "mpn": "LTST-C170KGKT",
+    "manufacturer": "Lite-On",
+    "supplier": "DigiKey",
+    "supplier_part": "160-1414-1-ND",
+    "url": "https://www.digikey.com/en/products/detail/lite-on-inc/LTST-C170KGKT/386777",
+    "stock_observed": 498450,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.19
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "160-1414-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/lite-on-inc/LTST-C170KGKT/386777"
+  },
+  "LTST-C170KRKT": {
+    "mpn": "LTST-C170KRKT",
+    "manufacturer": "Lite-On",
+    "supplier": "DigiKey",
+    "supplier_part": "160-1415-1-ND",
+    "url": "https://www.digikey.com/en/products/detail/lite-on-inc/LTST-C170KRKT/386779",
+    "stock_observed": 489805,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.18
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "160-1415-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/lite-on-inc/LTST-C170KRKT/386779"
+  },
+  "TCAN3413DR": {
+    "mpn": "TCAN3413DR",
+    "manufacturer": "Texas Instruments",
+    "supplier": "LCSC",
+    "supplier_part": "C22433320",
+    "url": "https://www.lcsc.com/product-detail/C22433320.html",
+    "stock_observed": 233,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        1.0227
+      ],
+      [
+        10,
+        0.8391
+      ],
+      [
+        30,
+        0.7473
+      ],
+      [
+        100,
+        0.6572
+      ]
+    ],
+    "lcsc": "C22433320",
+    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
+    "digikey_sku": "296-TCAN3413DRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/TCAN3413DR/22147484"
+  },
+  "ESD2CAN24DBZRQ1": {
+    "mpn": "ESD2CAN24DBZRQ1",
+    "manufacturer": "Texas Instruments",
+    "supplier": "DigiKey",
+    "supplier_part": "296-ESD2CAN24DBZRQ1CT-ND",
+    "url": "https://www.digikey.com/en/products/detail/texas-instruments/ESD2CAN24DBZRQ1/16982262",
+    "stock_observed": 255809,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.87
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "296-ESD2CAN24DBZRQ1CT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/ESD2CAN24DBZRQ1/16982262"
+  },
+  "RC1206FR-07120RL": {
+    "mpn": "RC1206FR-07120RL",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "311-120FRCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC1206FR-07120RL/728523",
+    "stock_observed": 126570,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.1
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "311-120FRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC1206FR-07120RL/728523"
+  },
+  "M22-2010205": {
+    "mpn": "M22-2010205",
+    "manufacturer": "Harwin",
+    "supplier": "DigiKey",
+    "supplier_part": "952-2273-ND",
+    "url": "https://www.digikey.com/en/products/detail/harwin-inc/M22-2010205/3728237",
+    "stock_observed": 7644,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.16
+      ],
+      [
+        10,
+        0.134
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "952-2273-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/harwin-inc/M22-2010205/3728237"
+  },
+  "1824430000": {
+    "mpn": "1824430000",
+    "manufacturer": "Weidmuller",
+    "supplier": "DigiKey",
+    "supplier_part": "281-2021-ND",
+    "url": "https://www.digikey.com/en/products/detail/weidm%C3%BCller/1824430000/1094359",
+    "stock_observed": 1698,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        2.21
+      ],
+      [
+        10,
+        1.591
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "281-2021-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/weidm%C3%BCller/1824430000/1094359"
+  },
+  "M22-2010305": {
+    "mpn": "M22-2010305",
+    "manufacturer": "Harwin",
+    "supplier": "DigiKey",
+    "supplier_part": "952-2274-ND",
+    "url": "https://www.digikey.com/en/products/detail/harwin-inc/M22-2010305/3728238",
+    "stock_observed": 35632,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.22
+      ],
+      [
+        10,
+        0.188
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "952-2274-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/harwin-inc/M22-2010305/3728238"
+  },
+  "M22-2020305": {
+    "mpn": "M22-2020305",
+    "manufacturer": "Harwin",
+    "supplier": "DigiKey",
+    "supplier_part": "952-2133-ND",
+    "url": "https://www.digikey.com/en/products/detail/harwin-inc/M22-2020305/3728097",
+    "stock_observed": 838,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.41
+      ],
+      [
+        10,
+        0.35
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "952-2133-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/harwin-inc/M22-2020305/3728097"
+  },
+  "RC0805FR-07110KL": {
+    "mpn": "RC0805FR-07110KL",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "311-110KCRCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-07110KL/727560",
+    "stock_observed": 5943,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.1
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "311-110KCRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-07110KL/727560"
+  },
+  "RC0805FR-0720KL": {
+    "mpn": "RC0805FR-0720KL",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "311-20.0KCRCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0720KL/730667",
+    "stock_observed": 27443,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.1
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "311-20.0KCRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0720KL/730667"
+  },
+  "RC0805FR-07910KL": {
+    "mpn": "RC0805FR-07910KL",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "YAG3336CT-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-07910KL/5281196",
+    "stock_observed": 58915,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.1
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "YAG3336CT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-07910KL/5281196"
+  },
+  "RC0805FR-077K15L": {
+    "mpn": "RC0805FR-077K15L",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "311-7.15KCRCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-077K15L/728110",
+    "stock_observed": 48097,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.1
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "311-7.15KCRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-077K15L/728110"
+  },
+  "RC2010FK-074K7L": {
+    "mpn": "RC2010FK-074K7L",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "13-RC2010FK-074K7LCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC2010FK-074K7L/5921412",
+    "stock_observed": 7566,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.23
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "13-RC2010FK-074K7LCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC2010FK-074K7L/5921412"
+  },
+  "CC0805JRNPO9BN102": {
+    "mpn": "CC0805JRNPO9BN102",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "311-1122-1-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/CC0805JRNPO9BN102/302856",
+    "stock_observed": 105431,
+    "observed_date": "2026-09-07",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.15
+      ],
+      [
+        10,
+        null
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "311-1122-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/CC0805JRNPO9BN102/302856"
+  },
+  "SMAJ30A": {
+    "mpn": "SMAJ30A",
+    "manufacturer": "Littelfuse",
+    "supplier": "LCSC",
+    "supplier_part": "C148230",
+    "url": "https://www.lcsc.com/product-detail/C148230.html",
+    "stock_observed": 30185,
+    "observed_date": "2026-09-08",
+    "moq": 5,
+    "multiple": 5,
+    "tiers": [
+      [
+        5,
+        0.1459
+      ],
+      [
+        50,
+        0.1169
+      ],
+      [
+        150,
+        0.1023
+      ]
+    ],
+    "lcsc": "C148230",
+    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
+    "digikey_sku": "SMAJ30ALFCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/littelfuse-inc/SMAJ30A/762294"
+  },
+  "BAT46W-E3-18": {
+    "mpn": "BAT46W-E3-18",
+    "manufacturer": "Vishay",
+    "supplier": "LCSC",
+    "supplier_part": "C5557780",
+    "url": "https://www.lcsc.com/product-detail/C5557780.html",
+    "stock_observed": 4735,
+    "observed_date": "2026-09-08",
+    "moq": 5,
+    "multiple": 5,
+    "tiers": [
+      [
+        5,
+        0.1307
+      ],
+      [
+        50,
+        0.1084
+      ],
+      [
+        150,
+        0.0973
+      ]
+    ],
+    "lcsc": "C5557780",
+    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
+    "digikey_sku": "BAT46W-E3-18GICT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/BAT46W-E3-18/4826890"
+  },
+  "LM339LVDR": {
+    "mpn": "LM339LVDR",
+    "manufacturer": "Texas Instruments",
+    "supplier": "DigiKey",
+    "supplier_part": "296-LM339LVDRCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/texas-instruments/LM339LVDR/21598795",
+    "stock_observed": 1085,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.42
+      ],
+      [
+        10,
+        0.293
+      ]
+    ],
+    "lcsc": "C22427665",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "296-LM339LVDRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/LM339LVDR/21598795"
+  },
+  "TPS613222ADBVR": {
+    "mpn": "TPS613222ADBVR",
+    "manufacturer": "Texas Instruments",
+    "supplier": "LCSC",
+    "supplier_part": "C2071163",
+    "url": "https://www.lcsc.com/product-detail/C2071163.html",
+    "stock_observed": 3545,
+    "observed_date": "2026-09-08",
+    "moq": 5,
+    "multiple": 5,
+    "tiers": [
+      [
+        5,
+        0.3697
+      ],
+      [
+        50,
+        0.2958
+      ],
+      [
+        150,
+        0.2642
+      ]
+    ],
+    "lcsc": "C2071163",
+    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
+    "digikey_sku": "296-50503-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/TPS613222ADBVR/8638376"
+  },
+  "SRP4020TA-4R7M": {
+    "mpn": "SRP4020TA-4R7M",
+    "manufacturer": "Bourns",
+    "supplier": "DigiKey",
+    "supplier_part": "SRP4020TA-4R7MCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP4020TA-4R7M/4901006",
+    "stock_observed": 9132,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        1.07
+      ],
+      [
+        10,
+        0.88
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "SRP4020TA-4R7MCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP4020TA-4R7M/4901006"
+  },
+  "SS14-E3/61T": {
+    "mpn": "SS14-E3/61T",
+    "manufacturer": "Vishay",
+    "supplier": "DigiKey",
+    "supplier_part": "SS14-E3/61TGICT-ND",
+    "url": "https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/SS14-E3-61T/1091538",
+    "stock_observed": 99297,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.47
+      ],
+      [
+        10,
+        0.286
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "SS14-E3/61TGICT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/SS14-E3-61T/1091538"
+  },
+  "M22-1900005": {
+    "mpn": "M22-1900005",
+    "manufacturer": "Harwin",
+    "supplier": "DigiKey",
+    "supplier_part": "952-1305-ND",
+    "url": "https://www.digikey.com/en/products/detail/harwin-inc/M22-1900005/2264286",
+    "stock_observed": 31908,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.35
+      ],
+      [
+        10,
+        0.293
+      ]
+    ],
+    "lcsc": "",
+    "factory_stock_status": "Not checked; turnkey procurement required",
+    "digikey_sku": "952-1305-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/harwin-inc/M22-1900005/2264286"
+  },
+  "0805W8F1001T5E": {
+    "mpn": "0805W8F1001T5E",
+    "manufacturer": "UNI-ROYAL",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "previous_mpn": "RC0805FR-071KL",
+    "supplier": "LCSC",
+    "supplier_part": "C17513",
+    "url": "https://www.lcsc.com/product-detail/C17513.html",
+    "lcsc": "C17513",
+    "stock_observed": 26345600,
+    "observed_date": "2026-09-08",
+    "moq": 100,
+    "multiple": 100,
+    "tiers": [
+      [
+        100,
+        0.0042
+      ],
+      [
+        1000,
+        0.0033
+      ],
+      [
+        5000,
+        0.0027
+      ]
+    ],
+    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified"
+  },
+  "0805W8F1002T5E": {
+    "mpn": "0805W8F1002T5E",
+    "manufacturer": "UNI-ROYAL",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "previous_mpn": "RC0805FR-0710KL",
+    "supplier": "LCSC",
+    "supplier_part": "C17414",
+    "url": "https://www.lcsc.com/product-detail/C17414.html",
+    "lcsc": "C17414",
+    "stock_observed": 47196100,
+    "observed_date": "2026-09-08",
+    "moq": 100,
+    "multiple": 100,
+    "tiers": [
+      [
+        100,
+        0.0039
+      ],
+      [
+        1000,
+        0.0031
+      ],
+      [
+        5000,
+        0.0023
+      ]
+    ],
+    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified"
+  },
+  "0805W8F4701T5E": {
+    "mpn": "0805W8F4701T5E",
+    "manufacturer": "UNI-ROYAL",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "previous_mpn": "RC0805FR-074K7L",
+    "supplier": "LCSC",
+    "supplier_part": "C17673",
+    "url": "https://www.lcsc.com/product-detail/C17673.html",
+    "lcsc": "C17673",
+    "stock_observed": 3907600,
+    "observed_date": "2026-09-08",
+    "moq": 100,
+    "multiple": 100,
+    "tiers": [
+      [
+        100,
+        0.0051
+      ],
+      [
+        1000,
+        0.004
+      ],
+      [
+        5000,
+        0.0035
+      ]
+    ],
+    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified"
+  },
+  "0805W8F1003T5E": {
+    "mpn": "0805W8F1003T5E",
+    "manufacturer": "UNI-ROYAL",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "previous_mpn": "RC0805FR-07100KL",
+    "supplier": "LCSC",
+    "supplier_part": "C149504",
+    "url": "https://www.lcsc.com/product-detail/C149504.html",
+    "lcsc": "C149504",
+    "stock_observed": 3765700,
+    "observed_date": "2026-09-08",
+    "moq": 100,
+    "multiple": 100,
+    "tiers": [
+      [
+        100,
+        0.006
+      ],
+      [
+        1000,
+        0.0047
+      ],
+      [
+        5000,
+        0.0041
+      ]
+    ],
+    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified"
+  },
+  "CL21B104KCFNNNE": {
+    "mpn": "CL21B104KCFNNNE",
+    "manufacturer": "Samsung Electro-Mechanics",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "previous_mpn": "CC0805KRX7R9BB104",
+    "supplier": "LCSC",
+    "supplier_part": "C28233",
+    "url": "https://www.lcsc.com/product-detail/C28233.html",
+    "lcsc": "C28233",
+    "stock_observed": 605350,
+    "observed_date": "2026-09-08",
+    "moq": 50,
+    "multiple": 50,
+    "tiers": [
+      [
+        50,
+        0.0411
+      ],
+      [
+        500,
+        0.0325
+      ],
+      [
+        2000,
+        0.0287
+      ]
+    ],
+    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified"
+  }
+}

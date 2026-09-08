@@ -1,0 +1,142 @@
+top 5109 primitives, 225 copper islands
+bottom 1144 primitives, 127 copper islands
+{
+  "result": "FAIL",
+  "method": "Gerbonara1.6.3 plus Shapely2.1.2 copper polygon union and plated-barrel graph",
+  "maximum_arc_approximation_error_mm": 0.001,
+  "copper_area_mm2": {
+    "top": 2704.7365694802065,
+    "bottom": 2544.1373437895663
+  },
+  "layer_island_counts": {
+    "top": 225,
+    "bottom": 127
+  },
+  "plated_barrels_joined": 283,
+  "pad_layer_records": 491,
+  "identified_nets": 93,
+  "shorts": {},
+  "opens": {
+    "GND": [
+      1,
+      34,
+      79,
+      217
+    ]
+  },
+  "unassigned_copper_islands": 0,
+  "unassigned_copper_area_mm2": 0.0,
+  "elapsed_seconds": 0.7719163550063968,
+  "limitations": "Plated holes represented as connected filled pad centers; no barrel manufacturing defect, annular-ring fracture, impedance, thermal or EMC model. Positive Gerber primitives only."
+}
+GND_PAD top ('R203', '2') 38.9125 52.0 1
+GND_PAD top ('C12', '2') 26.5 42.525 1
+GND_PAD top ('U1', '1') 11.1375 25.95 1
+GND_PAD top ('D14', '1') 58.0 59.9375 1
+GND_PAD top ('C8', '2') 31.0 33.55 1
+GND_PAD top ('U2', '2') 27.0 36.1375 1
+GND_PAD top ('R4', '2') 29.0 38.0875 1
+GND_PAD top ('TP1', '1') 3.0 28.0 1
+GND_PAD top ('R15', '2') 23.0 49.0875 1
+GND_PAD top ('D10', '1') 31.0625 15.5 1
+GND_PAD top ('R303', '2') 51.0 40.0875 1
+GND_PAD top ('C21', '2') 34.05 32.0 1
+GND_PAD top ('D101', '2') 5.0 55.5 1
+GND_PAD top ('J1', '2') 9.5 9.0 1
+GND_PAD top ('J1', '2') 9.5 4.0 1
+GND_PAD top ('C14', '2') 7.95 45.0 1
+GND_PAD top ('D201', '2') 22.0 53.5 1
+GND_PAD top ('R3', '2') 22.5 11.0875 1
+GND_PAD top ('D12', '1') 1.5 57.9375 1
+GND_PAD top ('C3', '2') 14.45 22.0 1
+GND_PAD top ('R14', '2') 17.0 50.5875 1
+GND_PAD top ('Y1', '2') 31.0 24.8 1
+GND_PAD top ('Y1', '4') 35.0 27.2 1
+GND_PAD top ('R26', '2') 54.0875 32.0 1
+GND_PAD top ('R7', '2') 11.5 40.0875 1
+GND_PAD top ('C7', '2') 24.0 33.55 1
+GND_PAD top ('C15', '2') 21.5 32.525 1
+GND_PAD top ('D20', '3') 55.9375 12.0 1
+GND_PAD top ('JP302', '2') 50.0 44.5 1
+GND_PAD top ('U8', '2') 13.3625 34.0 1
+GND_PAD top ('C40', '2') 38.05 17.0 1
+GND_PAD top ('C20', '2') 39.95 21.0 1
+GND_PAD top ('R10', '2') 20.9125 41.0 1
+GND_PAD top ('R107', '2') 38.4125 35.0 1
+GND_PAD top ('U3', '6') 9.2 42.325 1
+GND_PAD top ('U3', '9') 6.45 40.75 1
+GND_PAD top ('U3', '9') 6.45 43.25 1
+GND_PAD top ('U3', '9') 7.0 42.0 1
+GND_PAD top ('U3', '9') 7.55 40.75 1
+GND_PAD top ('U3', '9') 7.55 43.25 1
+GND_PAD top ('J4', '2') 13.0 59.0 1
+GND_PAD top ('J4', '2') 13.0 64.0 1
+GND_PAD top ('C28', '2') 47.5 34.05 1
+GND_PAD top ('C25', '2') 34.0 21.05 1
+GND_PAD top ('C16', '2') 21.475 38.0 1
+GND_PAD top ('C23', '2') 34.95 35.0 1
+GND_PAD top ('C42', '2') 55.0 16.05 1
+GND_PAD top ('JP202', '2') 32.0 44.5 1
+GND_PAD top ('R24', '2') 52.0 27.0875 1
+GND_PAD top ('C10', '2') 17.0 47.05 1
+GND_PAD top ('C301', '2') 57.0 37.55 217
+GND_PAD top ('C50', '2') 39.95 37.5 1
+GND_PAD top ('J6', '2') 47.0 59.0 1
+GND_PAD top ('J6', '2') 47.0 64.0 1
+GND_PAD top ('C9', '2') 11.45 38.0 1
+GND_PAD top ('C101', '2') 36.45 49.0 1
+GND_PAD top ('C11', '2') 17.45 41.0 1
+GND_PAD top ('R109', '2') 4.5 47.1875 1
+GND_PAD top ('R307', '2') 51.4125 38.0 1
+GND_PAD top ('C29', '2') 56.0 34.05 1
+GND_PAD top ('JP102', '2') 14.0 44.5 1
+GND_PAD top ('C13', '2') 27.475 30.0 1
+GND_PAD top ('C201', '2') 47.0 40.05 1
+GND_PAD top ('R22', '2') 34.0 17.5875 1
+GND_PAD top ('J8', '7') 30.5 4.48 1
+GND_PAD top ('J8', '8') 30.5 5.75 1
+GND_PAD top ('J8', '10') 30.5 8.29 1
+GND_PAD top ('R209', '2') 38.0 62.1875 1
+GND_PAD top ('C22', '2') 48.5 30.05 1
+GND_PAD top ('U4', '2') 18.8625 44.0 1
+GND_PAD top ('D11', '1') 29.0 19.4375 1
+GND_PAD top ('U6', '2') 42.525 16.365 1
+GND_PAD top ('R5', '2') 2.5875 45.0 1
+GND_PAD top ('C17', '2') 15.45 38.0 1
+GND_PAD top ('R12', '2') 23.5 43.0875 79
+GND_PAD top ('R309', '2') 57.0 48.1875 1
+GND_PAD top ('R2', '2') 4.0875 25.0 1
+GND_PAD top ('D2', '2') 21.85 18.0 1
+GND_PAD top ('C26', '2') 29.5 30.95 1
+GND_PAD top ('R103', '2') 26.5 38.0875 1
+GND_PAD top ('C2', '2') 9.0 18.525 1
+GND_PAD top ('C1', '2') 25.05 5.5 1
+GND_PAD top ('U5', '16') 44.8 32.175 1
+GND_PAD top ('U5', '32') 39.2 23.825 1
+GND_PAD top ('C27', '2') 43.45 21.5 1
+GND_PAD top ('C24', '2') 44.95 35.0 1
+GND_PAD top ('D13', '1') 7.9375 30.5 34
+GND_PAD top ('D301', '2') 53.5 48.5 1
+GND_PAD top ('C41', '2') 50.05 17.0 1
+GND_PAD top ('R207', '2') 38.9125 58.0 1
+GND_PAD top ('C4', '2') 26.0 21.525 1
+GND_PAD top ('U7', '11') 41.0 40.025 1
+GND_PAD top ('U7', '12') 39.73 40.025 1
+GND_PAD top ('C5', '2') 28.475 27.0 1
+GND_PAD top ('J5', '2') 30.0 59.0 1
+GND_PAD top ('J5', '2') 30.0 64.0 1
+GND_PAD bottom ('J1', '2') 9.5 9.0 1
+GND_PAD bottom ('J1', '2') 9.5 4.0 1
+GND_PAD bottom ('JP302', '2') 50.0 44.5 1
+GND_PAD bottom ('U3', '9') 6.45 40.75 1
+GND_PAD bottom ('U3', '9') 6.45 43.25 1
+GND_PAD bottom ('U3', '9') 7.55 40.75 1
+GND_PAD bottom ('U3', '9') 7.55 43.25 1
+GND_PAD bottom ('J4', '2') 13.0 59.0 1
+GND_PAD bottom ('J4', '2') 13.0 64.0 1
+GND_PAD bottom ('JP202', '2') 32.0 44.5 1
+GND_PAD bottom ('J6', '2') 47.0 59.0 1
+GND_PAD bottom ('J6', '2') 47.0 64.0 1
+GND_PAD bottom ('JP102', '2') 14.0 44.5 1
+GND_PAD bottom ('J5', '2') 30.0 59.0 1
+GND_PAD bottom ('J5', '2') 30.0 64.0 1

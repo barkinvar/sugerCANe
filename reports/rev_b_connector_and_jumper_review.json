@@ -1,0 +1,89 @@
+{
+  "checked_utc": "2026-09-08T02:10:36.911821+00:00",
+  "user_selection": "Weidmüller OMNIMATE LSF-SMT 3.50, superseding Phoenix PTSM preference",
+  "result": "Requested connector family already implemented in saved Rev B and packaged electrical model",
+  "manifest_checks": {
+    "hardware/design/circuit.json": true,
+    "hardware/FRC_Sensor_CAN.kicad_pcb": true,
+    "bom/BOM_grouped.csv": true,
+    "docs/WIRING.md": true
+  },
+  "connector_bom_rows": [
+    {
+      "MPN": "1885650000",
+      "Manufacturer": "Weidmuller",
+      "DigiKey_SKU": "281-2809-ND",
+      "Quantity": "3",
+      "References": "J1, J2, J3",
+      "Value": "2P PUSH 3.5mm",
+      "Footprint": "FRC_Sensor_CAN:Weidmuller_LSF_135_2P",
+      "Voltage": "",
+      "Tolerance": "",
+      "Power_W": "",
+      "Dielectric": "",
+      "Component_notes": "Weidmuller push-in actuator, 8 mm strip; two solder pins per electrical pole.",
+      "Unit_USD_qty1": "1.5",
+      "Extended_USD_qty1": "4.5",
+      "Observed_stock": "698",
+      "Checked_date": "2026-09-08",
+      "DigiKey_URL": "https://www.digikey.com/en/products/detail/weidm%C3%BCller/1885650000/2410726",
+      "Notes": "US listing/filter price; regional stock observations vary. See sourcing notes."
+    },
+    {
+      "MPN": "1885660000",
+      "Manufacturer": "Weidmuller",
+      "DigiKey_SKU": "281-2810-ND",
+      "Quantity": "3",
+      "References": "J4, J5, J6",
+      "Value": "3P PUSH 3.5mm",
+      "Footprint": "FRC_Sensor_CAN:Weidmuller_LSF_135_3P",
+      "Voltage": "",
+      "Tolerance": "",
+      "Power_W": "",
+      "Dielectric": "",
+      "Component_notes": "Weidmuller push-in actuator, 8 mm strip; two solder pins per electrical pole.",
+      "Unit_USD_qty1": "2.1",
+      "Extended_USD_qty1": "6.3",
+      "Observed_stock": "410",
+      "Checked_date": "2026-09-08",
+      "DigiKey_URL": "https://www.digikey.com/en/products/detail/weidm%C3%BCller/1885660000/2410727",
+      "Notes": "3.50 mm pitch, 3.5 mm pins, 135-degree push-in. Manufacturer current drawing controls dimensions."
+    }
+  ],
+  "jumper_blocks": 10,
+  "exposed_selector_pins": 35,
+  "per_channel": {
+    "power": {
+      "pins": 3,
+      "choices": [
+        "5 V",
+        "VBAT",
+        "disconnected by removing shunt"
+      ]
+    },
+    "threshold": {
+      "pins": 2,
+      "choices": [
+        "industrial",
+        "3.3/5 V logic"
+      ]
+    },
+    "bias": {
+      "pins": 6,
+      "choices": [
+        "port-supply pull-up",
+        "3.3 V pull-up",
+        "pull-down",
+        "none"
+      ]
+    }
+  },
+  "additional_jumper": "JP2 optional 120 ohm CAN termination",
+  "programming": "J8 separate TC2050-IDC-NL pogo footprint, custom electrical mapping",
+  "simplification_review": {
+    "finding": "Headers were chosen for inexpensive, visible, independently configurable prototype settings. They are not all needed for CAN or programming.",
+    "recommended_direction": "Retain a deliberate physical per-port power choice; evaluate compact input-mode switches to replace exposed bias and threshold headers.",
+    "limits": "A switch replacement must preserve all input modes, have appropriate voltage/current ratings, and be checked for size, cost, footprint and interlock behavior. Firmware selection requires additional analog switching and control signals; it cannot replace these jumpers through firmware changes alone. No switch redesign is claimed in this review."
+  },
+  "hardware_changes_this_review": false
+}

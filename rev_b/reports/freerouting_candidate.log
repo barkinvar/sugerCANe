@@ -1,0 +1,67 @@
+2026-09-07 17:43:16.554 INFO   Freerouting v2.4.1 (build-date: 2026-09-03)
+2026-09-07 17:43:16.575 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-09-07 17:43:17.946 INFO   [755752\FD5A66] Loading board file 'candidate.dsn'...
+2026-09-07 17:43:18.134 INFO   [755752\FD5A66] Job '755752\FD5A66' started at 2026-09-08T00:43:18.134636363Z.
+2026-09-07 17:43:18.744 INFO   [755752\FD5A66] Fanout stage started on board 'b6397d25d3566108add0b90091442e13' with 104 of 353 SMD pins needing fanout (249 already connected, 0 netless).
+2026-09-07 17:43:20.800 INFO   [755752\FD5A66] Fanout pass #1 on board '98dbfeb83bd15431c8175705aa8ea303' completed in 1.68 seconds with 4 SMD pins fanouted, 3 not routed, 0 insert errors, +1 extra via (0 SMD pins still to check in pass, ripup costs=100).
+2026-09-07 17:43:22.393 INFO   [755752\FD5A66] Fanout pass #2 on board '98dbfeb83bd15431c8175705aa8ea303' completed in 1.56 seconds with 1 SMD pin fanouted, 3 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=200).
+2026-09-07 17:43:22.771 INFO   [755752\FD5A66] Fanout stage completed: started with 353 total SMD pins, completed in 3.70 seconds, escaped pins: 343/353 (97.2%), using 4.40 total CPU seconds, 37.59 GB total allocated, and 843.4 MB peak heap usage.
+2026-09-07 17:43:22.828 INFO   [755752\FD5A66] Auto-routing stage started on board '98dbfeb83bd15431c8175705aa8ea303' for 20 unrouted items.
+2026-09-07 17:43:30.414 INFO   [755752\FD5A66] Auto-routing pass #1 on board '98dbfeb83bd15431c8175705aa8ea303' was completed in 6.74 seconds with score 899.09 (17 unrouted and 82 violations), using 11.83 CPU seconds and the job allocated 115.09 GB of memory so far.
+2026-09-07 17:43:37.184 INFO   [755752\FD5A66] Auto-routing pass #2 on board '2bc91030697661c72e7055b38647ec77' was completed in 5.90 seconds with score 899.09 (17 unrouted and 82 violations), using 18.76 CPU seconds and the job allocated 189.28 GB of memory so far.
+2026-09-07 17:43:43.514 INFO   [755752\FD5A66] Auto-routing pass #3 on board '2bc91030697661c72e7055b38647ec77' was completed in 5.87 seconds with score 899.09 (17 unrouted and 82 violations), using 24.71 CPU seconds and the job allocated 254.51 GB of memory so far.
+2026-09-07 17:43:49.864 INFO   [755752\FD5A66] Auto-routing pass #4 on board '2bc91030697661c72e7055b38647ec77' was completed in 5.88 seconds with score 899.09 (17 unrouted and 82 violations), using 30.65 CPU seconds and the job allocated 319.35 GB of memory so far.
+2026-09-07 17:43:56.187 INFO   [755752\FD5A66] Auto-routing pass #5 on board '2bc91030697661c72e7055b38647ec77' was completed in 5.86 seconds with score 899.09 (17 unrouted and 82 violations), using 37.58 CPU seconds and the job allocated 394.20 GB of memory so far.
+2026-09-07 17:44:02.580 INFO   [755752\FD5A66] Auto-routing pass #6 on board '2bc91030697661c72e7055b38647ec77' was completed in 5.94 seconds with score 899.09 (17 unrouted and 82 violations), using 43.52 CPU seconds and the job allocated 459.01 GB of memory so far.
+2026-09-07 17:44:08.942 INFO   [755752\FD5A66] Auto-routing pass #7 on board '2bc91030697661c72e7055b38647ec77' was completed in 5.90 seconds with score 899.09 (17 unrouted and 82 violations), using 49.46 CPU seconds and the job allocated 523.56 GB of memory so far.
+2026-09-07 17:44:15.232 INFO   [755752\FD5A66] Auto-routing pass #8 on board '2bc91030697661c72e7055b38647ec77' was completed in 5.83 seconds with score 899.09 (17 unrouted and 82 violations), using 56.39 CPU seconds and the job allocated 598.72 GB of memory so far.
+2026-09-07 17:44:21.533 INFO   [755752\FD5A66] Auto-routing pass #9 on board '2bc91030697661c72e7055b38647ec77' was completed in 5.84 seconds with score 899.09 (17 unrouted and 82 violations), using 62.33 CPU seconds and the job allocated 664.21 GB of memory so far.
+2026-09-07 17:44:27.887 INFO   [755752\FD5A66] Auto-routing pass #10 on board '2bc91030697661c72e7055b38647ec77' was completed in 5.89 seconds with score 899.09 (17 unrouted and 82 violations), using 68.28 CPU seconds and the job allocated 729.10 GB of memory so far.
+2026-09-07 17:44:34.161 INFO   [755752\FD5A66] Auto-routing pass #11 on board '2bc91030697661c72e7055b38647ec77' was completed in 5.80 seconds with score 899.09 (17 unrouted and 82 violations), using 75.21 CPU seconds and the job allocated 804.32 GB of memory so far.
+2026-09-07 17:44:41.178 INFO   [755752\FD5A66] Auto-routing pass #12 on board '018aa37c3fd501d3818763004906df78' was completed in 5.75 seconds with score 899.09 (17 unrouted and 82 violations), using 82.14 CPU seconds and the job allocated 880.33 GB of memory so far.
+2026-09-07 17:44:47.394 INFO   [755752\FD5A66] Auto-routing pass #13 on board '018aa37c3fd501d3818763004906df78' was completed in 5.76 seconds with score 899.09 (17 unrouted and 82 violations), using 88.09 CPU seconds and the job allocated 946.61 GB of memory so far.
+2026-09-07 17:44:53.596 INFO   [755752\FD5A66] Auto-routing pass #14 on board '018aa37c3fd501d3818763004906df78' was completed in 5.75 seconds with score 899.09 (17 unrouted and 82 violations), using 94.03 CPU seconds and the job allocated 1012.82 GB of memory so far.
+2026-09-07 17:44:59.794 INFO   [755752\FD5A66] Auto-routing pass #15 on board '018aa37c3fd501d3818763004906df78' was completed in 5.75 seconds with score 899.09 (17 unrouted and 82 violations), using 99.97 CPU seconds and the job allocated 1079.00 GB of memory so far.
+2026-09-07 17:45:06.037 INFO   [755752\FD5A66] Auto-routing pass #16 on board '018aa37c3fd501d3818763004906df78' was completed in 5.79 seconds with score 899.09 (17 unrouted and 82 violations), using 105.92 CPU seconds and the job allocated 1145.14 GB of memory so far.
+2026-09-07 17:45:12.371 INFO   [755752\FD5A66] Auto-routing pass #17 on board '018aa37c3fd501d3818763004906df78' was completed in 5.85 seconds with score 899.09 (17 unrouted and 82 violations), using 112.84 CPU seconds and the job allocated 1219.91 GB of memory so far.
+2026-09-07 17:45:18.545 INFO   [755752\FD5A66] Auto-routing pass #18 on board '018aa37c3fd501d3818763004906df78' was completed in 5.73 seconds with score 899.09 (17 unrouted and 82 violations), using 118.78 CPU seconds and the job allocated 1286.41 GB of memory so far.
+2026-09-07 17:45:18.646 INFO   [755752\FD5A66] The router's best score (899.09) has not improved by more than 0.5 points since pass #8. Stopping the auto-router after 18 passes (17 items still unconnected).
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net 'SENSE3' (1 unrouted connection):
+    - C301-1  ->  via
+  Net '+3V3' (3 unrouted connections):
+    - U5-1  ->  via
+    - D203-2  ->  C50-1
+    - via  ->  via
+  Net 'VIN_PROT' (2 unrouted connections):
+    - U1-3  ->  U1-5
+    - via  ->  D3-1
+  Net 'SENSOR_5V' (1 unrouted connection):
+    - JP301-1  ->  via
+  Net 'SENSOR_VBAT' (2 unrouted connections):
+    - via  ->  via
+    - JP201-3  ->  R14-1
+  Net 'VPORT1' (1 unrouted connection):
+    - JP101-2  ->  J4-1
+  Net 'LOW_SEL3' (1 unrouted connection):
+    - R308-2  ->  JP302-1
+  Net 'V5_INTERNAL' (1 unrouted connection):
+    - C11-1  ->  C17-1
+  Net 'SIG1' (1 unrouted connection):
+    - JP103-4  ->  JP103-6
+  Net 'PULL_PORT2' (1 unrouted connection):
+    - via  ->  via
+  Net 'BIAS_3V3_3' (1 unrouted connection):
+    - D303-1  ->  R311-1
+  Net 'VBAT_FAULT_N' (1 unrouted connection):
+    - U5-27  ->  U3-3
+  Net 'VPORT2' (1 unrouted connection):
+    - J5-1  ->  D202-2
+2026-09-07 17:45:19.449 INFO   [755752\FD5A66] Auto-routing stage completed: started with 22 unrouted nets, completed in 120.88 seconds, final score: 899.09 (17 unrouted and 82 violations), using 119.78 total CPU seconds, 1296.63 GB total allocated, and 933.6 MB peak heap usage.
+2026-09-07 17:45:19.865 INFO   [755752\FD5A66] Optimization stage started on board '018aa37c3fd501d3818763004906df78' with score 899.09 (17 unrouted and 82 violations).
+2026-09-07 17:45:25.434 INFO   [755752\FD5A66] Optimizer pass #1 on board 'c2a95345dee8e4a4c68a069600b6adb3' was completed in 4.32 seconds with the score of 899.09 (17 unrouted and 82 violations).
+2026-09-07 17:45:25.827 INFO   [755752\FD5A66] Stopping optimizer because the improvement in this pass (0.0000%) is below the threshold (1.00%).
+2026-09-07 17:45:26.221 INFO   [755752\FD5A66] Optimization stage completed: started with score 899.09 (17 unrouted and 82 violations), completed in 5.97 seconds, final score: 899.09 (17 unrouted and 82 violations), using 5.92 total CPU seconds, 60.56 GB total allocated, and 658.7 MB peak heap usage.
+2026-09-07 17:45:26.250 INFO   [755752\FD5A66] Job '755752\FD5A66' finished with state: COMPLETED (elapsed: 2 minutes 8.11 seconds, finished at UTC: 2026-09-08T00:45:26.249577810Z).
+2026-09-07 17:45:26.725 INFO   Saving output file '/home/neuro/candi-clone/rev_b/hardware/design/candidate.ses' (SES)...
+2026-09-07 17:45:26.727 INFO   Successfully saved output file '/home/neuro/candi-clone/rev_b/hardware/design/candidate.ses' (280183 bytes).

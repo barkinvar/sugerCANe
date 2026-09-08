@@ -1,0 +1,66 @@
+{
+  "result": "PASS",
+  "scope": "Automated PDF text bounds and link checks only; selected output pages also visually inspected by the designer.",
+  "files": [
+    {
+      "path": "output/assembly/bottom_markings.pdf",
+      "pages": 1,
+      "outside_page_words": [],
+      "sha256": "c508f730df85b40cfdd2898905466a10879d861e5e9f2fd9529701e33d305962"
+    },
+    {
+      "path": "output/assembly/gerber_copper_review.pdf",
+      "pages": 2,
+      "outside_page_words": [],
+      "sha256": "275c3f1cbe0e28b1b1671c21e16eff8039a491e1f306fe5997010d246f6b08e4"
+    },
+    {
+      "path": "output/assembly/schematic.pdf",
+      "pages": 9,
+      "outside_page_words": [],
+      "sha256": "d47810ba03c3927d0b15a549a07c1da24a75f427c660bd25b5aa4cadc78ed7c2"
+    },
+    {
+      "path": "output/assembly/top_assembly.pdf",
+      "pages": 1,
+      "outside_page_words": [],
+      "sha256": "0290f2827e84b15edf00876a4b195bf295be2b91f2202b46aeca30e6e65192d9"
+    },
+    {
+      "path": "output/boost_simulation.pdf",
+      "pages": 1,
+      "outside_page_words": [],
+      "sha256": "6b65d826b15b63c21065bd2f0bae7b8a0e5c4828734c01fb62f510902fe8cfab"
+    },
+    {
+      "path": "output/documentation/BOM_RevB.pdf",
+      "pages": 4,
+      "outside_page_words": [],
+      "sha256": "0e5bd5986553988bea3874dc822bd4b8750b690d208d082f4df33d5eec5112fa"
+    },
+    {
+      "path": "output/documentation/FRC_Sensor_CAN_RevB_Handbook.pdf",
+      "pages": 26,
+      "outside_page_words": [],
+      "sha256": "335208e20f9bc9d582a0446e8a17307fefb2e01d3f88dd774e201790cdb92c80"
+    },
+    {
+      "path": "output/documentation/Mechanical_RevB_1to1.pdf",
+      "pages": 1,
+      "outside_page_words": [],
+      "sha256": "cf05b4e1a32450432f9d7991edfeab11dbcd266eac63de55ad901eb75f18d715"
+    },
+    {
+      "path": "output/fabrication/FRC_Sensor_CAN-NPTH-drl_map.pdf",
+      "pages": 1,
+      "outside_page_words": [],
+      "sha256": "5e8da1aa453675dc784409e8b98bd2b2db857a3084e647fba961021abfc5cb02"
+    },
+    {
+      "path": "output/fabrication/FRC_Sensor_CAN-PTH-drl_map.pdf",
+      "pages": 1,
+      "outside_page_words": [],
+      "sha256": "6179c389cb724662a8dcc42dee425efd7f402d168fe340b6102f6d35300f16c7"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "revision": "B-2",
+  "modeled_parts": 154,
+  "fitted_parts": 144,
+  "purchase_lines": 51,
+  "smt_placements": 128,
+  "tht_placements": 16,
+  "shunts": 10,
+  "changed_mpn_placements": 49,
+  "component_consumed_first_tier_usd": 46.35,
+  "base_rev_b_qty1_usd": 59.3,
+  "note": "Consumed component comparison only: supplier MOQ, attrition, sourcing, PCB, assembly, shipping and taxes are extra. Use cost_estimate.csv for order budgets. JLC parts import requires procurement/matching review."
+}

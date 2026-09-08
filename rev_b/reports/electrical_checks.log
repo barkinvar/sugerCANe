@@ -1,0 +1,143 @@
+{
+  "assumptions": {
+    "resistor_tolerance_initial": 0.01,
+    "resistor_total_budget": 0.0175,
+    "logic_rail_tolerance_budget": 0.03,
+    "comparator_offset_V": 0.0055,
+    "comparator_input_bias_A": 5e-08,
+    "comparator_output_low_V": [
+      0,
+      0.55
+    ],
+    "comparator_high_leakage_A": 1e-07,
+    "comparator_supply": "LM339LV on regulated 3V3; 5.5mV offset includes CMRR/PSRR allowance. Bias and leakage bounds are engineering allowances, not published maxima.",
+    "scope": "DC corner analysis and conservative first-order power estimates; parasitic/transient/thermal behavior requires prototype tests."
+  },
+  "input_logic": {
+    "rising_V": [
+      1.5707955121533757,
+      2.2399715046944926
+    ],
+    "falling_V": [
+      0.9379262362399521,
+      1.425428890245041
+    ],
+    "corners_evaluated": 8192
+  },
+  "input_industrial": {
+    "rising_V": [
+      5.351803751926933,
+      6.778755170395062
+    ],
+    "falling_V": [
+      4.718096960908891,
+      5.960177175465031
+    ],
+    "corners_evaluated": 8192
+  },
+  "input_targets": {
+    "logic_low_max_V": 0.8,
+    "logic_high_min_V": 2.4,
+    "industrial_low_max_V": 4,
+    "industrial_high_min_V": 7,
+    "positive_signal_max_V": 30,
+    "qualification": "Targets supported by stated corner allowances; physical leakage, temperature and transient tests outstanding."
+  },
+  "comparator": {
+    "part": "LM339LVDR",
+    "supply_V": 3.3,
+    "maximum_sense_node_at_30V_V": 2.5980569297015825,
+    "minimum_logic_supply_V": 3.2009999999999996,
+    "input_failsafe": "Inputs tolerate up to 5.5V independently of supply, per TI. External 30V always passes through two series 110k resistors and the divider.",
+    "offset_allowance_V": 0.0055,
+    "input_bias_allowance_A": 5e-08,
+    "output_leakage_allowance_A": 1e-07,
+    "note": "Published LV bias/output leakage values are typical; allowances require bench qualification. 0.55V VOL allowance exceeds the 0.30V LV maximum at 4mA."
+  },
+  "buck": {
+    "part": "LMR51420XDDCR",
+    "nominal_output_V": 3.970786516853932,
+    "regulation_and_resistor_budget_V": [
+      3.7970155150042784,
+      4.193137061497555
+    ],
+    "minimum_operating_input_V": 4.5,
+    "UVLO_rising_max_V": 4.5,
+    "inductor_uH": 10,
+    "inductor_min_uH": 8,
+    "frequency_min_kHz": 450,
+    "ripple_at_22V_A": 0.942760314854064,
+    "note": "Historical net name V4P2 denotes this approximately 4V intermediate rail."
+  },
+  "power_budget": {
+    "sensor_5V_target_A_shared": 0.3,
+    "sensor_VBAT_target_A_shared": 0.3,
+    "logic_5V_allowance_A": 0.15,
+    "total_boost_load_with_bias_A": 0.45999999999999996,
+    "buck_efficiency_assumption": 0.8,
+    "boost_efficiency_assumption": 0.8,
+    "entry_resistance_allowance_ohm": 0.276,
+    "fuse_hot_resistance_allowance_ohm": 0.126,
+    "pmos_hot_resistance_allowance_ohm": 0.04,
+    "trace_connector_allowance_ohm": 0.11,
+    "input_current_at_5V_estimate_A": 1.108567223743407,
+    "protected_input_at_5V_estimate_V": 4.6940354462468195,
+    "buck_max_output_to_input_ratio": 0.8932904554119282,
+    "LDO_loss_at_logic_allowance_W": 0.2775000000000001,
+    "note": "Efficiencies, hot resistances and current allocations are engineering assumptions, not measured guarantees. Input specification applies at J1 under load."
+  },
+  "boost": {
+    "part": "TPS613222ADBVR",
+    "fixed_output_range_V": [
+      4.85,
+      5.15
+    ],
+    "minimum_peak_current_limit_A": 1.1,
+    "maximum_peak_current_limit_A": 2.5,
+    "ripple_allowance_A": 0.4,
+    "input_voltage_after_DCR_allowance_V": 3.7170155150042783,
+    "estimated_output_capability_A": 0.5196604215151612,
+    "required_output_A": 0.45999999999999996,
+    "inductor_min_saturation_A": 3.5,
+    "inductor_rms_A": 2.6,
+    "inductor_max_DCR_ohm": 0.105,
+    "output_capacitance_nominal_uF": 44,
+    "output_capacitance_simulation_uF": 30,
+    "note": "TI equation 1, conservative 80% efficiency and 400mA ripple allowance. Not a guaranteed output current rating. Verify capacitor DC bias and cascaded converter interaction."
+  },
+  "sensor_switches": {
+    "5V_limit_min_mA": 393.61952969666305,
+    "5V_limit_max_mA": 505.7740323988739,
+    "VBAT_limit_min_mA": 428.4004284004283,
+    "VBAT_limit_max_mA": 600.2479284922033,
+    "VBAT_latch_delay_typ_ms": 11.033333333333331,
+    "5V_switch_Ron_max_ohm": 0.135,
+    "5V_voltage_after_switch_at_310mA_min_V": 4.8081499999999995,
+    "note": "Subtract actual copper, connector and shunt losses from port voltage. VBAT current-limit accuracy requires VS-OUT >=2.5V. Fault timing is typical."
+  },
+  "protection": {
+    "continuous_input_V": [
+      5,
+      22
+    ],
+    "TVS_standoff_V": 22,
+    "TVS_specified_pulse_clamp_V": 35.5,
+    "buck_absolute_max_V": 40,
+    "pmos_VDS_absolute_max_V": 40,
+    "bulk_capacitor_rating_V": 50,
+    "gate_resistor_power_at_clamp_W": 0.055225,
+    "port_pullup_fault_power_at_22p7V_W": 0.11158897731579231,
+    "port_pullup_resistor_rating_W": 0.125,
+    "pulldown_power_at_30V_W": 0.194900113691733,
+    "pulldown_rating_W": 0.75,
+    "limitation": "Not sustained overvoltage protection, automotive load-dump qualification or reverse-current isolation. TVS overshoot and energy require physical tests."
+  },
+  "startup": {
+    "VBAT_example_sensor_capacitance_uF": 40,
+    "VBAT_board_capacitance_allowance_uF": 1.1,
+    "VBAT_full_load_A": 0.32,
+    "VBAT_charge_time_at22V_ms": 8.341295448205328,
+    "note": "Compare to typical 11.0ms latch delay; startup inrush can exceed steady load and needs measurement. Firmware ADC undervoltage blanking is 5ms."
+  },
+  "result": "DC and corner assertions passed for the explicit engineering assumptions. No physical qualification performed."
+}

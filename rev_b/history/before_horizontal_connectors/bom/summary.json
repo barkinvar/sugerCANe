@@ -1,0 +1,9 @@
+{
+  "revision": "B",
+  "modeled_parts": 154,
+  "fitted_parts": 144,
+  "purchase_lines": 51,
+  "shunts": 10,
+  "component_estimate_usd_qty1": 58.85,
+  "note": "Conservative quantity-one basis, excludes PCB, shipping, tax, programming cable and tools. Some inherited observations dated 2026-09-07. Recheck exact stock before ordering."
+}

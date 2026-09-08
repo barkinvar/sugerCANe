@@ -1,0 +1,544 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-07T17:38:47",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "finishing.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [+3V3] of R11 on F.Cu",
+                    "pos": {
+                        "x": 20.9125,
+                        "y": 47.0
+                    },
+                    "uuid": "fe145378-e084-49e6-b30c-cf9bbc11d58f"
+                },
+                {
+                    "description": "Track [+3V3] on F.Cu, length 3.6625 mm",
+                    "pos": {
+                        "x": 27.75,
+                        "y": 39.0
+                    },
+                    "uuid": "9bc413ac-3c64-4568-a77d-0e0f81c45d13"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone [GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "uuid": "b6e01f53-4a74-4fae-95da-7a9844bff08f"
+                },
+                {
+                    "description": "Zone [GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "uuid": "b6e01f53-4a74-4fae-95da-7a9844bff08f"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 7 [GND] of J8 on F.Cu",
+                    "pos": {
+                        "x": 30.5,
+                        "y": 4.48
+                    },
+                    "uuid": "9c308fea-1c3a-4143-9a33-6e6b5e593df6"
+                },
+                {
+                    "description": "Zone [GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "uuid": "b6e01f53-4a74-4fae-95da-7a9844bff08f"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [SENSOR_VBAT] on F.Cu, length 2.6570 mm",
+                    "pos": {
+                        "x": 11.143,
+                        "y": 46.865
+                    },
+                    "uuid": "520e7f05-8b30-4b31-ac14-57c3cb21082e"
+                },
+                {
+                    "description": "Pad 7 [SENSOR_VBAT] of U3 on F.Cu",
+                    "pos": {
+                        "x": 9.2,
+                        "y": 41.675
+                    },
+                    "uuid": "3fae1bb9-56de-4202-8047-f8bf5d1d0363"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 1 [LOW_SEL3] of JP302",
+                    "pos": {
+                        "x": 48.0,
+                        "y": 44.5
+                    },
+                    "uuid": "16af7b4c-6413-4c6c-87c6-38c24aa61b96"
+                },
+                {
+                    "description": "Pad 2 [LOW_SEL3] of R308 on F.Cu",
+                    "pos": {
+                        "x": 56.5,
+                        "y": 44.5875
+                    },
+                    "uuid": "a66cd239-d72b-47de-9bf0-e714026e6ec5"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [BIAS_3V3_3] of D303 on F.Cu",
+                    "pos": {
+                        "x": 53.5,
+                        "y": 37.15
+                    },
+                    "uuid": "15d0886d-8bc9-4900-b1b0-e0985879b8fc"
+                },
+                {
+                    "description": "Pad 1 [BIAS_3V3_3] of R311 on F.Cu",
+                    "pos": {
+                        "x": 58.5,
+                        "y": 46.4125
+                    },
+                    "uuid": "080883a2-1cff-4d08-8baa-ad63d0e5c560"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [VBAT_FAULT_N] on F.Cu, length 1.0500 mm",
+                    "pos": {
+                        "x": 4.8,
+                        "y": 42.325
+                    },
+                    "uuid": "8bc99114-6ecb-4f9b-afa4-80c5ee192ec1"
+                },
+                {
+                    "description": "Pad 27 [VBAT_FAULT_N] of U5 on F.Cu",
+                    "pos": {
+                        "x": 43.2,
+                        "y": 23.825
+                    },
+                    "uuid": "de1cdfd3-b072-49a1-85cc-b4273785b2d9"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.3850 mm)",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 68.0
+                    },
+                    "uuid": "fe1ea7b8-5d8a-4b83-b035-9ecedd7a7860"
+                },
+                {
+                    "description": "Track [+3V3] on F.Cu, length 1.2750 mm",
+                    "pos": {
+                        "x": 0.475,
+                        "y": 41.725
+                    },
+                    "uuid": "1bcb6ffc-9dd2-4fec-9e75-5d04d120129b"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.4100 mm)",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 68.0
+                    },
+                    "uuid": "fe1ea7b8-5d8a-4b83-b035-9ecedd7a7860"
+                },
+                {
+                    "description": "Track [+3V3] on F.Cu, length 16.5500 mm",
+                    "pos": {
+                        "x": 0.5,
+                        "y": 40.425
+                    },
+                    "uuid": "40ad3def-44c8-4dc6-9897-8024737abe34"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.4100 mm)",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 68.0
+                    },
+                    "uuid": "fe1ea7b8-5d8a-4b83-b035-9ecedd7a7860"
+                },
+                {
+                    "description": "Track [+3V3] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 0.55,
+                        "y": 41.825
+                    },
+                    "uuid": "5a2e7621-b241-4497-9a8b-50bbd9972f10"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.3850 mm)",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 68.0
+                    },
+                    "uuid": "fe1ea7b8-5d8a-4b83-b035-9ecedd7a7860"
+                },
+                {
+                    "description": "Track [+3V3] on F.Cu, length 0.0354 mm",
+                    "pos": {
+                        "x": 0.475,
+                        "y": 40.45
+                    },
+                    "uuid": "7ceb57f0-52b3-4b73-a231-25b2932550f5"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.4850 mm)",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 68.0
+                    },
+                    "uuid": "fe1ea7b8-5d8a-4b83-b035-9ecedd7a7860"
+                },
+                {
+                    "description": "Track [+3V3] on F.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 0.625,
+                        "y": 41.9
+                    },
+                    "uuid": "a2a5e41a-b1f7-4265-8f83-97de0906591c"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.4100 mm)",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 68.0
+                    },
+                    "uuid": "fe1ea7b8-5d8a-4b83-b035-9ecedd7a7860"
+                },
+                {
+                    "description": "Track [+3V3] on F.Cu, length 0.0250 mm",
+                    "pos": {
+                        "x": 0.5,
+                        "y": 41.775
+                    },
+                    "uuid": "b16ce657-1811-42d0-ac00-89e44ae0ed48"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.4100 mm)",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 68.0
+                    },
+                    "uuid": "fe1ea7b8-5d8a-4b83-b035-9ecedd7a7860"
+                },
+                {
+                    "description": "Track [+3V3] on F.Cu, length 3.9952 mm",
+                    "pos": {
+                        "x": 0.5,
+                        "y": 23.875
+                    },
+                    "uuid": "b2ef3e13-523e-4590-bfbf-69a9cdfc1088"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.3850 mm)",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 68.0
+                    },
+                    "uuid": "fe1ea7b8-5d8a-4b83-b035-9ecedd7a7860"
+                },
+                {
+                    "description": "Track [+3V3] on F.Cu, length 0.0354 mm",
+                    "pos": {
+                        "x": 0.5,
+                        "y": 41.75
+                    },
+                    "uuid": "d27706f3-65ac-4ccd-996a-52e9a64ce6e8"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.4600 mm)",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 68.0
+                    },
+                    "uuid": "fe1ea7b8-5d8a-4b83-b035-9ecedd7a7860"
+                },
+                {
+                    "description": "Track [+3V3] on F.Cu, length 0.0250 mm",
+                    "pos": {
+                        "x": 0.575,
+                        "y": 41.85
+                    },
+                    "uuid": "da30ba25-fce9-47d3-b6ea-da6629631cc0"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.4600 mm)",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 68.0
+                    },
+                    "uuid": "fe1ea7b8-5d8a-4b83-b035-9ecedd7a7860"
+                },
+                {
+                    "description": "Track [+3V3] on F.Cu, length 0.0250 mm",
+                    "pos": {
+                        "x": 0.55,
+                        "y": 41.85
+                    },
+                    "uuid": "f402c91c-848c-432c-bde3-720fc42027a9"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer B.Cu; 1 spokes connected to isolated island)",
+            "items": [
+                {
+                    "description": "Zone [GND] on B.Cu, priority 0",
+                    "pos": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "uuid": "18ddaf7b-8e94-4354-9ac2-faea8280727f"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of JP102",
+                    "pos": {
+                        "x": 14.0,
+                        "y": 44.5
+                    },
+                    "uuid": "6a33d9c9-be25-45c5-adc6-4320649fbbdd"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer F.Cu; 1 spokes connected to isolated island)",
+            "items": [
+                {
+                    "description": "Zone [GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "uuid": "b6e01f53-4a74-4fae-95da-7a9844bff08f"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of JP202",
+                    "pos": {
+                        "x": 32.0,
+                        "y": 44.5
+                    },
+                    "uuid": "0a08de79-66e1-4ba3-aa57-30c4438bb73f"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "uuid": "b6e01f53-4a74-4fae-95da-7a9844bff08f"
+                },
+                {
+                    "description": "Pad 2 [GND] of R307 on F.Cu",
+                    "pos": {
+                        "x": 51.4125,
+                        "y": 38.0
+                    },
+                    "uuid": "b76e5727-e42b-4a4d-8f4c-f5f58e881d5b"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "uuid": "b6e01f53-4a74-4fae-95da-7a9844bff08f"
+                },
+                {
+                    "description": "Pad 8 [GND] of J8 on F.Cu",
+                    "pos": {
+                        "x": 30.5,
+                        "y": 5.75
+                    },
+                    "uuid": "d9a30c89-8d99-43c7-b7b5-414bd63e6d3e"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "uuid": "b6e01f53-4a74-4fae-95da-7a9844bff08f"
+                },
+                {
+                    "description": "Pad 10 [GND] of J8 on F.Cu",
+                    "pos": {
+                        "x": 30.5,
+                        "y": 8.29
+                    },
+                    "uuid": "304daa7f-64b8-4d9f-a669-15c506f22554"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        }
+    ]
+}

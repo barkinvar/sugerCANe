@@ -1,0 +1,398 @@
+ Data sheet
+ LSF-SMT 3.50/11/90 3.5SN BK TU                                             Weidmüller Interface GmbH & Co. KG
+                                                                            Klingenbergstraße 26
+                                                                            D-32758 Detmold
+                                                                            Germany
+
+                                                                            www.weidmueller.com
+
+
+
+
+                        Product image
+
+
+
+
+PCB terminal for fully automatic assembly in reflow sol-
+dering (SMT), with PUSH IN conductor connection sys-
+tem. Conductor inserted and slider operated in same
+direction (TOP). Packed in box or as tape on reel. Pin
+lengths optimised at 1.5 mm or 3.5 mm.
+
+
+
+
+General ordering data
+
+
+Version                 Printed circuit board terminals, 3.50 mm, Number
+                        of poles: 11, 90°, Solder pin length (l): 3.5 mm,
+                        black, PUSH IN with push button, Clamping range,
+                        max. : 1.5 mm², Tube
+Order No.               1824510000
+Type                    LSF-SMT 3.50/11/90 3.5SN BK TU
+GTIN (EAN)              4032248326815
+Qty.                    14 items
+Product data            IEC: 320 V / 17.5 A / 0.2 - 1.5 mm²
+                        UL: 300 V / 12 A / AWG 28 - AWG 14
+Packaging               Tube
+
+
+
+Creation date 28.02.2026 12:18:25 MEZ
+
+Catalogue status / Drawings                                                                                  1
+ Data sheet
+ LSF-SMT 3.50/11/90 3.5SN BK TU                                                                Weidmüller Interface GmbH & Co. KG
+                                                                                               Klingenbergstraße 26
+                                                                                               D-32758 Detmold
+                                                                                               Germany
+
+                                                                                               www.weidmueller.com
+ Technical data
+Approvals
+
+Approvals
+
+
+
+
+ROHS                                    Conform
+UL File Number Search                   UL Website
+Certificate No. (cURus)                 E60693
+
+Dimensions and weights
+
+Depth                                   14.75 mm                      Depth (inches)                          0.5807 inch
+Height                                  12 mm                         Height (inches)                         0.4724 inch
+Height of lowest version                8.5 mm                        Width                                   39.2 mm
+Width (inches)                          1.5433 inch                   Net weight                              8g
+
+Temperatures
+
+Continuous operating temp., max.        120 °C
+
+Environmental Product Compliance
+
+RoHS Compliance Status                  Compliant without exemption
+REACH SVHC                              No SVHC above 0.1 wt%
+
+System parameters
+
+Product family                          OMNIMATE Signal - series      Wire connection method                  PUSH IN with push button
+                                        LSF
+Mounting onto the PCB                   THT/THR solder                Conductor outlet direction              90°
+                                        connection
+Pitch in mm (P)                         3.50 mm                       Pitch in inches (P)                      0.138 "
+Number of poles                         11                            Pin series quantity                      1
+Fitted by customer                      No                            Number of rows                           1
+Solder pin length (l)                   3.5 mm                        Solder pin length tolerance              0 / -0.3 mm
+Solder pin dimensions                   0.35 x 0.8 mm                 Solder pin dimensions = d tolerance      0 / -0.1 mm
+Solder eyelet hole diameter (D)         1.1 mm                        Solder eyelet hole diameter tolerance (D)+ 0,1 mm
+Number of solder pins per pole          2                             Stripping length                         8 mm
+L1 in mm                                35.00 mm                      L1 in inches                             1.378 "
+Touch-safe protection acc. to DIN VDE   IP 20                         Touch-safe protection acc. to DIN VDE Safe from finger touch
+0470                                                                  57 106
+Protection degree                       IP20                          Volume resistance                        1.60 mΩ
+
+Material data
+
+Insulating material                     LCP GF                        Colour                                  black
+Colour of operational elements          white                         Colour chart (similar)                  RAL 9011
+Insulating material group               IIIa                          Comparative Tracking Index (CTI)        ≥ 175
+Moisture Level (MSL)                    1                             UL 94 flammability rating               V-0
+Contact material                        Copper alloy                  Layer structure of solder connection    4...6 µm Sn matt
+Storage temperature, min.               -40 °C                        Storage temperature, max.               70 °C
+Operating temperature, min.             -50 °C                        Operating temperature, max.             120 °C
+Temperature range, installation, min.   -30 °C                        Temperature range, installation, max.   120 °C
+
+
+
+
+Creation date 28.02.2026 12:18:25 MEZ
+
+Catalogue status / Drawings                                                                                                          2
+ Data sheet
+ LSF-SMT 3.50/11/90 3.5SN BK TU                                                                   Weidmüller Interface GmbH & Co. KG
+                                                                                                  Klingenbergstraße 26
+                                                                                                  D-32758 Detmold
+                                                                                                  Germany
+
+                                                                                                  www.weidmueller.com
+ Technical data
+Conductors suitable for connection
+
+Clamping range, min.                       0.13 mm²
+Clamping range, max.                       1.5 mm²
+Wire connection cross section AWG,         AWG 28
+min.
+Wire connection cross section AWG,         AWG 14
+max.
+Solid, min. H05(07) V-U                    0.2 mm²
+Solid, max. H05(07) V-U                    1.5 mm²
+Flexible, min. H05(07) V-K                 0.2 mm²
+Flexible, max. H05(07) V-K                 1.5 mm²
+w. plastic collar ferrule, DIN 46228 pt 4, 0.25 mm²
+min.
+w. plastic collar ferrule, DIN 46228 pt 4, 0.75 mm²
+max.
+w. wire end ferrule, DIN 46228 pt 1,       0.25 mm²
+min.
+w. wire end ferrule, DIN 46228 pt 1,       1.5 mm²
+max.
+Clampable conductor                         Cross-section for conductor connection             Type                fine-wired
+                                                                                               nominal             0.25 mm²
+                                           wire end ferrule                                    Stripping length      nominal 10 mm
+                                                                                               Recommended wire- H0,25/12 HBL
+                                                                                               end ferrule
+                                           Cross-section for conductor connection              Type                fine-wired
+                                                                                               nominal             0.34 mm²
+                                           wire end ferrule                                    Stripping length      nominal 10 mm
+                                                                                               Recommended wire- H0,34/12 TK
+                                                                                               end ferrule
+                                           Cross-section for conductor connection              Type                fine-wired
+                                                                                               nominal             0.5 mm²
+                                           wire end ferrule                                    Stripping length      nominal 10 mm
+                                                                                               Recommended wire- H0,5/14 OR
+                                                                                               end ferrule
+                                           Cross-section for conductor connection              Type                fine-wired
+                                                                                               nominal             0.75 mm²
+                                           wire end ferrule                                    Stripping length      nominal 10 mm
+                                                                                               Recommended wire- H0,75/14T HBL
+                                                                                               end ferrule
+Reference text                            Length of ferrules is to be chosen depending on the product and the rated voltage., The outside
+                                          diameter of the plastic collar should not be larger than the pitch (P)
+
+Rated data acc. to IEC
+
+tested acc. to standard                   IEC 60664-1, IEC              Rated current, min. number of poles     17.5 A
+                                          60947-7-4                     (Tu=20°C)
+Rated current, max. number of poles       16 A                          Rated current, min. number of poles     17.5 A
+(Tu=20°C)                                                               (Tu=40°C)
+Rated current, max. number of poles       14 A                          Rated voltage for surge voltage class / 320 V
+(Tu=40°C)                                                               pollution degree II/2
+Rated voltage for surge voltage class /   160 V                         Rated voltage for surge voltage class / 160 V
+pollution degree III/2                                                  pollution degree III/3
+Rated impulse voltage for surge voltage   2.5 kV                        Rated impulse voltage for surge voltage 2.5 kV
+class/ pollution degree II/2                                            class/ pollution degree III/2
+Rated impulse voltage for surge voltage   2.5 kV                        Short-time withstand current resistance 3 x 1s with 80 A
+class/ contamination degree III/3
+
+
+
+
+Creation date 28.02.2026 12:18:25 MEZ
+
+Catalogue status / Drawings                                                                                                                 3
+ Data sheet
+ LSF-SMT 3.50/11/90 3.5SN BK TU                                                             Weidmüller Interface GmbH & Co. KG
+                                                                                            Klingenbergstraße 26
+                                                                                            D-32758 Detmold
+                                                                                            Germany
+
+                                                                                            www.weidmueller.com
+ Technical data
+Rated data acc. to CSA
+
+Institute (CSA)                         CSA                         Certificate No. (CSA)                200039-1664286
+Rated voltage (Use group B / CSA)       300 V                       Rated voltage (Use group D / CSA)    300 V
+Rated current (Use group B / CSA)       10 A                        Rated current (Use group D / CSA)    10 A
+Wire cross-section, AWG, min.           AWG 28                      Wire cross-section, AWG, max.        AWG 14
+Reference to approval values            Specifications are
+                                        maximum values, details -
+                                        see approval certificate.
+
+Rated data acc. to UL 1059
+
+Institute (cURus)                       CURUS                       Certificate No. (cURus)               E60693
+Rated voltage (Use group B / UL 1059)   300 V                       Rated voltage (Use group D / UL 1059) 300 V
+Rated current (Use group B / UL 1059)   12 A                        Rated current (Use group D / UL 1059) 10 A
+Wire cross-section, AWG, min.           AWG 28                      Wire cross-section, AWG, max.         AWG 14
+Reference to approval values            Specifications are
+                                        maximum values, details -
+                                        see approval certificate.
+
+Packing
+
+Packaging                               Tube                        VPE length                           556.00 mm
+VPE width                               25.00 mm                    VPE height                           15.00 mm
+Surface resistance                      Rs = 109 - 1012 Ω
+
+Type tests
+
+Test: Durability of markings             Standard                                    DIN EN 60512-1-1 / 01.03
+                                         Test                                        mark of origin, type identification, pitch,
+                                                                                     durability
+                                         Evaluation                                  available
+                                         Test                                        approval marking UL
+                                         Evaluation                                  on packaging label
+Test: Clampable cross section            Standard                                    DIN EN 60999-1 section 7 and 9.1 / 12.00, DIN
+                                                                                     EN 60947-1 section 8.2.4.5.1 / 12.02
+                                         Conductor type                               Type of conductor       solid 0.14 mm²
+                                                                                      and conductor cross-
+                                                                                      section
+                                                                                      Type of conductor       stranded 0.14 mm²
+                                                                                      and conductor cross-
+                                                                                      section
+                                                                                      Type of conductor       solid 1.5 mm²
+                                                                                      and conductor cross-
+                                                                                      section
+                                                                                      Type of conductor       stranded 1.5 mm²
+                                                                                      and conductor cross-
+                                                                                      section
+                                                                                      Type of conductor       AWG 24/1
+                                                                                      and conductor cross-
+                                                                                      section
+                                                                                      Type of conductor       AWG 24/19
+                                                                                      and conductor cross-
+                                                                                      section
+                                                                                      Type of conductor       AWG 16/1
+                                                                                      and conductor cross-
+                                                                                      section
+                                                                                      Type of conductor       AWG 16/19
+                                                                                      and conductor cross-
+                                                                                      section
+                                         Evaluation                                  passed
+
+
+Creation date 28.02.2026 12:18:25 MEZ
+
+Catalogue status / Drawings                                                                                                      4
+ Data sheet
+ LSF-SMT 3.50/11/90 3.5SN BK TU                               Weidmüller Interface GmbH & Co. KG
+                                                              Klingenbergstraße 26
+                                                              D-32758 Detmold
+                                                              Germany
+
+                                                              www.weidmueller.com
+ Technical data
+Test for damage to and accidental       Standard         DIN EN 60999-1 section 9.4 / 12.00
+loosening of conductors                 Requirement      0.2 kg
+                                        Conductor type    Type of conductor    AWG 24/1
+                                                          and conductor cross-
+                                                          section
+                                                          Type of conductor    AWG 24/19
+                                                          and conductor cross-
+                                                          section
+                                        Evaluation       passed
+                                        Requirement      0.3 kg
+                                        Conductor type    Type of conductor    stranded 0.25 mm²
+                                                          and conductor cross-
+                                                          section
+                                                          Type of conductor    solid 0.5 mm²
+                                                          and conductor cross-
+                                                          section
+                                        Evaluation       passed
+                                        Requirement      0.4 kg
+                                        Conductor type    Type of conductor    solid 1.5 mm²
+                                                          and conductor cross-
+                                                          section
+                                                          Type of conductor    stranded 1.5 mm²
+                                                          and conductor cross-
+                                                          section
+                                                          Type of conductor    AWG 16/1
+                                                          and conductor cross-
+                                                          section
+                                                          Type of conductor    AWG 16/19
+                                                          and conductor cross-
+                                                          section
+                                        Evaluation       passed
+Pull-out test                           Standard         DIN EN 60999-1 section 9.5 / 12.00
+                                        Requirement      ≥10 N
+                                        Conductor type    Type of conductor    AWG 24/1
+                                                          and conductor cross-
+                                                          section
+                                                          Type of conductor    AWG 24/19
+                                                          and conductor cross-
+                                                          section
+                                        Evaluation       passed
+                                        Requirement      ≥20 N
+                                        Conductor type    Type of conductor    stranded 0.25 mm²
+                                                          and conductor cross-
+                                                          section
+                                                          Type of conductor    H05V-U0.5
+                                                          and conductor cross-
+                                                          section
+                                        Evaluation       passed
+                                        Requirement      ≥40 N
+                                        Conductor type    Type of conductor    H07V-U1.5
+                                                          and conductor cross-
+                                                          section
+                                                          Type of conductor    H07V-K1.5
+                                                          and conductor cross-
+                                                          section
+                                                          Type of conductor    AWG 16/1
+                                                          and conductor cross-
+                                                          section
+                                                          Type of conductor    AWG 16/19
+                                                          and conductor cross-
+                                                          section
+                                        Evaluation       passed
+
+
+
+Creation date 28.02.2026 12:18:25 MEZ
+
+Catalogue status / Drawings                                                                        5
+ Data sheet
+ LSF-SMT 3.50/11/90 3.5SN BK TU                                                                  Weidmüller Interface GmbH & Co. KG
+                                                                                                 Klingenbergstraße 26
+                                                                                                 D-32758 Detmold
+                                                                                                 Germany
+
+                                                                                                 www.weidmueller.com
+ Technical data
+Important note
+
+IPC conformity                          Conformity: The products are developed, manufactured and delivered according international
+                                        recognized standards and norms and comply with the assured properties in the data sheet resp.
+                                        fulfill decorative properties in accordance with IPC-A-610 "Class 2". Further claims on the products
+                                        can be evaluated on request.
+Notes                                   • Additional push button colours on request
+                                        • Operating force of slider max. 40 N
+                                        • Rated current related to rated cross-section & min. No. of poles.
+                                        • Wire end ferrule with plastic collar to DIN 46228/4
+                                        • Wire end ferrule without plastic collar to DIN 46228/1
+                                        • P on drawing = pitch
+                                        • Rated data refer only to the component itself. Clearance and creepage distances to other
+                                           components are to be designed in accordance with the relevant application standards.
+                                        • Crimping shape "A" for wire end ferrules with PZ 6/5 crimping tool recommended.
+                                        • Long term storage of the product with average temperature of 50 °C and maximum humidity
+                                           70%, 36 months
+
+Classifications
+
+ETIM 8.0                                EC002643                       ETIM 9.0                                 EC002643
+ETIM 10.0                               EC002643                       ECLASS 14.0                              27-46-01-01
+ECLASS 15.0                             27-46-01-01
+
+
+
+
+Creation date 28.02.2026 12:18:25 MEZ
+
+Catalogue status / Drawings                                                                                                               6
+ Data sheet
+ LSF-SMT 3.50/11/90 3.5SN BK TU                          Weidmüller Interface GmbH & Co. KG
+                                                         Klingenbergstraße 26
+                                                         D-32758 Detmold
+                                                         Germany
+
+                                                         www.weidmueller.com
+ Drawings
+
+Product image                           Dimensional drawing
+
+
+
+
+Graph                                   Graph
+
+
+
+
+Creation date 28.02.2026 12:18:25 MEZ
+
+Catalogue status / Drawings                                                               7
+

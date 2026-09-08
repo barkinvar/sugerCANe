@@ -1,0 +1,386 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-07T17:18:40",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1",
+            "violations": [
+                {
+                    "description": "Footprint 'Weidmuller_LSF_135_2P' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol J1 [CONN2]",
+                            "pos": {
+                                "x": 0.3556,
+                                "y": 0.6096
+                            },
+                            "uuid": "8a2a0472-3af4-5104-bbe1-6e3a29d3c3ba"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'CP_Elec_8x6.5' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol C1 [CP]",
+                            "pos": {
+                                "x": 2.1844,
+                                "y": 0.8128
+                            },
+                            "uuid": "6fa74a24-ef5a-5dd2-a2c1-c659c72e5bae"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'Weidmuller_LSF_135_3P' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol J4 [CONN3]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.5842
+                            },
+                            "uuid": "48621627-c440-56f4-a4f1-be2031ee86ae"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x03_P2.00mm_Vertical' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol JP101 [CONN3]",
+                            "pos": {
+                                "x": 1.143,
+                                "y": 0.5842
+                            },
+                            "uuid": "4bedc6fe-f6e1-5280-9f7a-8b4de1f92258"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x02_P2.00mm_Vertical' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol JP102 [CONN2]",
+                            "pos": {
+                                "x": 3.2258,
+                                "y": 2.413
+                            },
+                            "uuid": "687b5283-7114-51dc-a37b-216eeb7d1718"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_2x03_P2.00mm_Vertical' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol JP103 [CONN6]",
+                            "pos": {
+                                "x": 3.683,
+                                "y": 0.7112
+                            },
+                            "uuid": "63af725c-9f4f-5884-9027-d97b8f02ea80"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'Weidmuller_LSF_135_3P' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol J5 [CONN3]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.5842
+                            },
+                            "uuid": "420b661e-c0b2-5fb9-a48f-cf831eced26c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x03_P2.00mm_Vertical' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol JP201 [CONN3]",
+                            "pos": {
+                                "x": 1.143,
+                                "y": 0.5842
+                            },
+                            "uuid": "b44d9fcd-3093-549d-832b-fbe9cacdde00"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x02_P2.00mm_Vertical' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol JP202 [CONN2]",
+                            "pos": {
+                                "x": 3.2258,
+                                "y": 2.413
+                            },
+                            "uuid": "50a2db37-668b-565f-a04a-31205b21e597"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_2x03_P2.00mm_Vertical' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol JP203 [CONN6]",
+                            "pos": {
+                                "x": 3.683,
+                                "y": 0.7112
+                            },
+                            "uuid": "50a65072-3306-50e2-8c86-ee8d718c1e1a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'Pogo_2x5_1.27mm' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol J8 [CONN10]",
+                            "pos": {
+                                "x": 3.6322,
+                                "y": 1.7018
+                            },
+                            "uuid": "0d21a0cd-2225-5250-9cea-71d21474865b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'Weidmuller_LSF_135_3P' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol J6 [CONN3]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.5842
+                            },
+                            "uuid": "87f33c11-8b96-5511-95c4-da52e0cbedfc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x03_P2.00mm_Vertical' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol JP301 [CONN3]",
+                            "pos": {
+                                "x": 1.143,
+                                "y": 0.5842
+                            },
+                            "uuid": "2a496b6b-07f8-5199-84fe-5572f38dd7d1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x02_P2.00mm_Vertical' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol JP302 [CONN2]",
+                            "pos": {
+                                "x": 3.2258,
+                                "y": 2.413
+                            },
+                            "uuid": "09d9d607-af52-54bd-b883-f2cdda01c839"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_2x03_P2.00mm_Vertical' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol JP303 [CONN6]",
+                            "pos": {
+                                "x": 3.683,
+                                "y": 0.7112
+                            },
+                            "uuid": "2df9e74d-bff0-50cf-b701-21bc9d0d983f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'Weidmuller_LSF_135_2P' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol J2 [CONN2]",
+                            "pos": {
+                                "x": 1.905,
+                                "y": 0.6223
+                            },
+                            "uuid": "ae84de98-f1c0-5e5b-92e9-a6003c70a880"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x02_P2.00mm_Vertical' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol JP2 [CONN2]",
+                            "pos": {
+                                "x": 1.905,
+                                "y": 0.9398
+                            },
+                            "uuid": "6ce21540-d4ea-5ded-8d85-72cc78fb19d4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'Weidmuller_LSF_135_2P' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol J3 [CONN2]",
+                            "pos": {
+                                "x": 3.0734,
+                                "y": 0.6223
+                            },
+                            "uuid": "77bbb7d7-f560-5802-ae2c-6b91159c41da"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'Bourns_SRP4020TA' not found in library 'FRC_Sensor_CAN'",
+                    "items": [
+                        {
+                            "description": "Symbol L2 [L]",
+                            "pos": {
+                                "x": 0.6985,
+                                "y": 0.6477
+                            },
+                            "uuid": "881f402b-fbce-5770-80d6-df011d0d33ff"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                }
+            ]
+        },
+        {
+            "path": "/Battery entry and internal supplies/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/fb3c0a9e-b322-5632-9eb0-a957beaadad4",
+            "violations": [
+                {
+                    "description": "Pins of type Power output and Power output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol #FLG03 Pin 1 [pwr, Power output, Line]",
+                            "pos": {
+                                "x": 3.7592,
+                                "y": 2.3622
+                            },
+                            "uuid": "cde4a6e2-303a-59e6-ba2d-b5c42a4baa1a"
+                        },
+                        {
+                            "description": "Symbol U8 Pin 4 [VOUT, Power output, Line]",
+                            "pos": {
+                                "x": 1.6002,
+                                "y": 0.6223
+                            },
+                            "uuid": "fb1ae80b-dbef-51cc-aedb-dbc83b52e94b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_to_pin"
+                }
+            ]
+        },
+        {
+            "path": "/Protected sensor power rails/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/0aacf9c7-060e-58ed-b759-3ac31ac433d8",
+            "violations": []
+        },
+        {
+            "path": "/Controller, clock, debug and status/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/019a6503-7c65-5b55-a3b1-c6260b8ca8f2",
+            "violations": []
+        },
+        {
+            "path": "/CAN physical interface and termination/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/665b1307-6e60-5756-a0db-e1fad53bf5c9",
+            "violations": []
+        },
+        {
+            "path": "/Input 1: industrial / logic selection/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/842f42b4-db0c-5b9a-83f5-42125535f27c",
+            "violations": []
+        },
+        {
+            "path": "/Input 2: industrial / logic selection/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/b233f995-482f-5588-a202-3091dc68d400",
+            "violations": []
+        },
+        {
+            "path": "/Input 3: industrial / logic selection/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/30a87cbd-88bf-524f-bf72-b44683ce5cbe",
+            "violations": []
+        },
+        {
+            "path": "/Fixed 5 V boost and reservoir/",
+            "uuid_path": "/32fd904d-6274-5c4e-88d3-bb1b48cbb6d1/07bf97e3-88d3-59fd-9b69-05079c6a789d",
+            "violations": []
+        }
+    ],
+    "source": "FRC_Sensor_CAN.kicad_sch"
+}

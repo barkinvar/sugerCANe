@@ -1,5 +1,7 @@
 **FRC Sensor CAN — revision A prototype**
 
+Current variants: [Rev B with horizontal Weidmüller connectors](rev_b/README.md) · [Rev B-2 for China factory assembly](rev_b2/README.md). Each revision has its own matching PCB, BOM and release package.
+
 An original four-channel interface for industrial photoelectric sensors and 3.3 V / 5 V logic, with a native roboRIO CAN connection. The same nominal 12 V robot supply powers the board and its sensors. Each sensor port selects protected battery voltage or regulated 5 V; both rails can operate together.
 
 This repository contains a routed, editable KiCad design, complete DigiKey BOM, firmware, Java/C++ robot interfaces, manufacturing files, and engineering checks. **The design has not been physically built or bench qualified.** Treat the electrical numbers below as prototype design targets, then perform the supplied bring-up tests before robot use.
