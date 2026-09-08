@@ -14,10 +14,12 @@ Pair the factory BOM with [CPL_JLCPCB.csv](../output/assembly/CPL_JLCPCB.csv) an
 | Boards | All parts purchase cost per board | Parts purchase cost for the lot |
 |---|---:|---:|
 | 1 | $55.27 | $55.27 |
-| 5 | $40.50 | $202.49 |
+| 5 | $40.40 | $202.01 |
 | 10 | $34.69 | $346.87 |
 | 25 | $32.23 | $805.83 |
 
 Source: [cost_estimate.csv](cost_estimate.csv), from September 7–8, 2026 observations. Includes the connectors, headers, caps and supplier minimums; rounded per-board figures may not multiply exactly to the lot totals. PCB, assembly, attrition, freight and tax are excluded.
 
 The first-tier $44.16 consumed-parts figure does not include buying minimum quantities. The one-board parts purchase model is $55.27. Factory sourcing can differ from distributor purchasing and may add attrition or procurement fees. LCSC stock and part numbers do not establish JLCPCB allocation, Basic/Extended classification or order eligibility. See [cost details](../docs/COST_REDUCTION.md) and [factory scope](../docs/FACTORY_ORDER.md).
+
+[assembly_scenarios.csv](assembly_scenarios.csv) compares partial Economic/Standard fees. Quantity selection now minimizes purchasing cash across price breaks; quantities can exceed the minimum when doing so is cheaper. No delivered quote or stock allocation is implied.

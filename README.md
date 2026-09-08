@@ -23,7 +23,7 @@ D-2 has **107 fitted parts**; the preserved D design has 104. Both use mostly 08
 | Boards ordered | Parts purchase cost per board |
 |---|---:|
 | 1 | $55.27 |
-| 5 | $40.50 |
+| 5 | $40.40 |
 | 10 | $34.69 |
 | 25 | $32.23 |
 
@@ -44,7 +44,7 @@ Each power header uses one removable 2 mm cap: **pins 1–2 select 5 V; pins 2�
 | [B-2](rev_b2/README.md) | A version of B prepared for China factory assembly with lower parts cost. | Same B circuit, copper geometry, pinouts and equivalent firmware. Changes 49 passive placements to equivalent parts, sources eight unchanged MPNs at lower prices and adds factory BOM/CPL and quotation files. | No parts or functions removed; factory sourcing and assembly fees still need review. |
 | [C Lite](rev_c/README.md) | A smaller, simpler three-input interface with fewer parts and no loose jumpers. | Compared with B/B-2: 144 → 89 fitted parts, 52 × 56 mm PCB, solder selectors, fixed input thresholds and hardware-only sensor power. Uses Lite protocol v2. | Minimum input rises to 6 V; loses software rail control and power-health reporting. Battery output still follows the supply. |
 | [D SC12](rev_d/README.md) | A compact interface for compatible industrial sensors that need regulated 12 V through battery sag. | Compared with C: replaces the battery output with regulated 12 V, retains regulated 5 V, and adds rail-health reporting and fault-aware counting/drivers with protocol v3. Uses 104 fitted parts and a 52 × 64 mm four-layer PCB. | Larger and more expensive than C; the power QFN and four 0402 capacitors make assembly more demanding. |
-| [D-2 SC12](rev_d2/README.md) | Lower-cost China SMT assembly with user-fitted connectors and removable voltage selection. | Same D circuit and hardware-4/protocol-v3 firmware; 27 equivalent passive substitutions, lower-cost sourcing, three 2 mm power headers, split SMT/hand-solder BOM and CPL. 107 fitted parts plus three caps, all on top. | Four layers and the same power-stage complexity; caps require retention qualification. Batch parts savings do not establish a delivered PCBA price. |
+| [D-2 SC12](rev_d2/README.md) | Lower-cost China SMT assembly with user-fitted connectors and removable voltage selection. | Same D circuit and hardware-4/protocol-v3 telemetry; new 0.5.0 CAN setup/update firmware; 27 equivalent passive substitutions, lower-cost sourcing, three 2 mm power headers, split SMT/hand-solder BOM and CPL. 107 fitted parts plus three caps, all on top. | Four layers and the same power-stage complexity; caps require retention qualification. Batch parts savings do not establish a delivered PCBA price. |
 
 The [earlier Rev B connector iteration](rev_b/history/before_horizontal_connectors/README.md) used angled /135 terminals. It is retained for traceability; the current B and B-2 designs use horizontal /90 terminals.
 
@@ -67,7 +67,7 @@ D-2’s one-board procurement cash is $55.27 after supplier minimums; its ten-bo
 | [BOM](bom/README.md) | [BOM](rev_b/bom/BOM_grouped.csv) | [Factory BOM](rev_b2/bom/BOM_turnkey.csv) | [BOM](rev_c/bom/BOM_grouped.csv) |
 | [Release](release/FRC_Sensor_CAN_RevA_Prototype.zip) | [Release](rev_b/release/FRC_Sensor_CAN_RevB_Prototype.zip) | [Release](rev_b2/release/FRC_Sensor_CAN_RevB2_Prototype.zip) | [Release](rev_c/release/FRC_Sensor_CAN_RevC_Lite_Prototype.zip) |
 
-Use each revision's PCB, BOM, firmware and wiring guide together. Root design directories belong to **Rev A**; the other revisions are self-contained in `rev_b/`, `rev_b2/`, `rev_c/`, `rev_d/` and `rev_d2/`. D and D-2 share firmware 0.4.0, hardware identity 4 and protocol v3. Rev C protocol v2 and D/D-2 protocol v3 share API numbers but have different payload validation and hardware identities; C firmware/drivers are not interchangeable with D/D-2.
+Use each revision's PCB, BOM, firmware and wiring guide together. Root design directories belong to **Rev A**; the other revisions are self-contained in `rev_b/`, `rev_b2/`, `rev_c/`, `rev_d/` and `rev_d2/`. D retains firmware 0.4.0; D-2 now uses 0.5.0 with a CAN bootloader and setup tool. Both retain hardware identity 4 and protocol-v3 telemetry. Rev C protocol v2 and D/D-2 protocol v3 share API numbers but have different payload validation and hardware identities; C firmware/drivers are not interchangeable with D/D-2.
 
 ## Horizontal push connectors and mechanical files
 
@@ -79,7 +79,7 @@ The renders use official manufacturer STEP geometry, aligned with the footprint 
 
 ## Operation and verification
 
-**Next development plan:** [LaserCAN-informed SC12 optimization](rev_d2/docs/OPTIMIZATION_PLAN.md) prioritizes CAN discovery, persistent CAN-ID/settings changes, recoverable firmware updates and a robot-connected maintenance tool, alongside factory/harness cost studies. These features are planned; current firmware 0.4.0 still needs SWD flashing and UART persistent setup.
+**CAN setup and updates implemented in D-2:** [instructions](rev_d2/docs/CAN_SERVICE.md) cover full-UID discovery, blink, persistent CAN-ID/settings and recoverable firmware uploads through laptop CLI/GUI and robot bridges. Initial installation uses SWD. Software simulations and 2026/2027 bridge compilation pass; real-board/controller qualification remains pending. [Completed work and next qualification loop](rev_d2/docs/OPTIMIZATION_PLAN.md).
 
 Inputs target positive 0–30 V signals with a common ground. A/B/B-2 have selectable logic and industrial thresholds; C/D/D-2 use fixed LOW ≤1.2 V / HIGH ≥2.4 V targets under documented tolerance/leakage budgets. Suitable 12 V PNP/NPN sensors and 3.3/5 V logic are supported; 1.8 V, analog, IO-Link and safety/OSSD compatibility are not promised.
 

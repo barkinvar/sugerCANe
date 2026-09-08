@@ -1,10 +1,10 @@
 # Rev D-2 robot drivers and host utility
 
-Java 17 and C++ examples target WPILib 2026.2.1. D and D-2 share protocol **3**, firmware **0.4.0**, hardware **4** and the same driver interface. D-2's passive substitutions and removable voltage jumpers do not change the CAN messages. Rev C Lite frames and the earlier four-input protocols are rejected. Copy the relevant `SensorCan12` and `SensorCan12Codec` files into a robot project, then set the same unique device ID provisioned over UART.
+Java 17 and C++ examples target WPILib 2026.2.1. D and D-2 share protocol **3**, hardware **4** and the same sensor driver interface. D-2 adds service firmware **0.5.0**; D retains **0.4.0**. D-2's passive substitutions and removable voltage jumpers do not change the CAN messages. Rev C Lite frames and the earlier four-input protocols are rejected. Copy the relevant `SensorCan12` and `SensorCan12Codec` files into a robot project, then set the same unique device ID provisioned through CAN service or UART.
 
 Choose each sensor's 5 V / 12 V supply using the physical jumper before operation; the drivers do not select port voltage. See the [D-2 setup guide](../README.md) and [wiring](../docs/WIRING.md).
 
-CAN discovery, persistent ID changes, firmware uploading and a roboRIO maintenance bridge are future work in the [optimization plan](../docs/OPTIMIZATION_PLAN.md). The current host utility and drivers do not provide those operations. A separately tested 2027 adapter is also planned; these examples remain pinned to 2026.2.1.
+CAN discovery, persistent settings and firmware updates are provided by the new [service tools](../docs/CAN_SERVICE.md). The [robot bridge](bridge/README.md) has separately compiled 2026 and 2027 alpha-7 adapters. Sensor driver classes below remain pinned to 2026.2.1; the 2027 bridge does not port the normal drivers. Physical end-to-end CAN testing is pending.
 
 ```java
 private final SensorCan12 sensorBoard = new SensorCan12(17);

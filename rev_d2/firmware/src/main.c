@@ -1,4 +1,6 @@
 #include "board.h"
+#include "board_service.h"
+static sc_service service;
 #include <string.h>
 static sc_inputs inputs;
 static uint8_t device_id, status_sequence, reset_flags;
@@ -17,7 +19,7 @@ static void power_status(uint32_t now) {
     }
 }
 static void send_frame(uint16_t api, const uint8_t data[8]) {
-    if (configured && can_ok && telemetry_enabled && !board_can_send(sc_can_id(device_id, api), data))
+    if (configured && can_ok && telemetry_enabled && !sc_service_active(&service) && !board_can_send(sc_can_id(device_id, api), data))
         tx_dropped++;
 }
 static void status_frame(void) {
@@ -46,7 +48,7 @@ static void diagnostic_frame(void) {
     send_frame(SC_API_DIAGNOSTIC,d);
 }
 static void identity_frame(void) {
-    uint8_t d[8] = {SC_PROTOCOL_VERSION, 0, 4, 0, 4, device_id, (uint8_t)inputs.debounce_ms,
+    uint8_t d[8] = {SC_PROTOCOL_VERSION, 0, 5, 0, 4, device_id, (uint8_t)inputs.debounce_ms,
                     inputs.invert};
     send_frame(SC_API_IDENTITY, d);
 }
@@ -67,9 +69,12 @@ static void receive_commands(uint32_t now) {
             /* Immediately stop telemetry and abort pending transmit mailboxes.
                No actuator outputs exist. Sensor power is independent hardware. */
             telemetry_enabled=false;
+            sc_service_disable(&service);
             board_can_abort();
             return;
         }
+        if (id==SC_SERVICE_RX && len==8) {sc_service_receive(&service,d,now);continue;}
+        if (sc_service_active(&service) || !configured)continue;
         if (len != 8 || !sc_can_is_ours(id, device_id) || d[0] != 0x53 || d[1] != 0x43 ||
             d[2] != SC_PROTOCOL_VERSION)
             continue;
@@ -94,7 +99,7 @@ static void uart_uint(uint32_t n) {
     board_uart_write(b + i);
 }
 static void print_status(void) {
-    board_uart_write("SC12 v0.4.0 proto=3 configured=");
+    board_uart_write("SC12 v0.5.0 proto=3 configured=");
     uart_uint(configured);
     board_uart_write(" id=");
     uart_uint(device_id);
@@ -206,10 +211,11 @@ int main(void) {
     device_id = cfg ? cfg->device_id : 0;
     sc_inputs_init(&inputs, (uint8_t)(GPIOA->IDR & 7u), cfg ? (cfg->invert_mask & 7u) : 0,
                    cfg ? cfg->debounce_ms : 2, 0);
-    can_ok = clock_ok && configured && board_can_init(device_id);
+    board_service_init(&service,false);
+    can_ok = clock_ok && board_can_init(device_id);
     if (can_ok)
         board_can_standby(false);
-    board_uart_write("FRC Sensor CAN SC12 prototype v0.4.0\r\n");
+    board_uart_write("FRC Sensor CAN SC12 prototype v0.5.0\r\n");
     print_status();
     uint32_t last_tick = board_millis, next_status = last_tick + 10,
              next_counts12 = last_tick + 100, next_counts34 = last_tick + 125,
@@ -227,17 +233,19 @@ int main(void) {
             }
             bool previously_powered=rail_good==3;
             power_status(now);
-            if (rail_good!=3 || !previously_powered)
+            if (rail_good!=3 || !previously_powered || sc_service_active(&service))
                 apply_runtime(inputs.invert, inputs.debounce_ms, now);
             else
                 sc_inputs_update(&inputs, (uint8_t)(GPIOA->IDR & 7u), now);
             bool error=!clock_ok || !configured || !can_ok || rail_good!=3 || (CAN->ESR & CAN_ESR_BOFF);
-            board_status_led(error ? ((now%200)<100) : ((now%1000)<100));
+            sc_service_tick(&service,now);
+            if(now>=2000)board_boot_healthy();
+            board_status_led(service.blink_until && (uint32_t)(service.blink_until-now)<0x80000000u ? now%100<50 : error ? ((now%200)<100) : ((now%1000)<100));
             if (can_ok)
                 receive_commands(now);
             uart_poll();
             if ((uint32_t)(now - next_status) < 0x80000000u) {
-                next_status = now + 10;
+                next_status = now + service.period;
                 status_frame();
             }
             if ((uint32_t)(now - next_counts12) < 0x80000000u) {

@@ -1,6 +1,6 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-08T21:55:29.928612+00:00",
+  "reviewed_utc": "2026-09-08T22:29:54.834306+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
@@ -25,19 +25,21 @@
     },
     {
       "file": "output/documentation/SC12_RevD2_Handbook.pdf",
-      "sha256": "32b8d436b0db37c6a7e5739ccedeb6bc4d2c15cd25c53d3372e2611cc68d35ce",
-      "scope": "28-page handbook reviewed as raster sheets; final optimization-plan pages 25-28 inspected enlarged after table-width and page-flow adjustments. README planned/current distinctions, contents and page transitions checked.",
-      "reviewed_utc": "2026-09-08T22:10:07.103310+00:00"
+      "sha256": "a881b036032017c2dbb5abaf04a9ff247fcd5ec21a9d5a5d85c849a4eac61f2b",
+      "scope": "30-page handbook reviewed as contact sheets; new protocol/status tables and pages 25, 28, 29 inspected enlarged. Updated SWD/CAN workflow, costs, page flow and prototype limits checked.",
+      "reviewed_utc": "2026-09-08T22:29:54.834306+00:00"
     },
     {
       "file": "output/documentation/BOM_RevD2_SC12.pdf",
-      "sha256": "13e6e20d08038a754708aad59bdf2d50089366bf76177c78580e98b81a23d4fb",
-      "scope": "All three pages reviewed; quantities, supplier codes, first-tier price column and page breaks."
+      "sha256": "6e6e6e16a3cbb6367f694a0acac541c756bac1a2b60784e539b2a8c3fce32a7f",
+      "scope": "All three pages reviewed; quantities, supplier codes, first-tier price column and page breaks. Final regenerated raster verified pixel-identical to visually reviewed pages.",
+      "reviewed_utc": "2026-09-08T22:29:54.834306+00:00"
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
-      "sha256": "b409955dd460446329dd619c70c109dccb82adbf28af13bac3579a317fa65112",
-      "scope": "Both pages reviewed: dimensions, custom TC2050 numbering and cap versus solder settings."
+      "sha256": "1c0e1f96853d8111e8de10d2772b34c661305234d0ca1555940c3145562339c2",
+      "scope": "Both pages reviewed: dimensions, custom TC2050 numbering and cap versus solder settings. Final regenerated raster verified pixel-identical to visually reviewed pages.",
+      "reviewed_utc": "2026-09-08T22:29:54.834306+00:00"
     },
     {
       "file": "output/assembly/top_assembly.pdf",
@@ -53,6 +55,12 @@
       "file": "output/assembly/gerber_copper_review.pdf",
       "sha256": "524cc4d72d3afe8e5fc8c2470ee522edf4a91f519f4924b6690dfb6037fc9040",
       "scope": "Both outer copper/drill views reviewed; independent connectivity/clearance checks provide quantitative evidence."
+    },
+    {
+      "file": "output/review/service_gui.png",
+      "sha256": "075d27eade89b616868df24e6dcb26683dc45c5b903b746b10574b34553d06a4",
+      "reviewed_utc": "2026-09-08T22:29:54.834306+00:00",
+      "scope": "Tk desktop rendered with simulated device data; selection, settings fields and controls visible. No real CAN device used."
     }
   ],
   "observations": [

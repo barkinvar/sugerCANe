@@ -75,7 +75,7 @@ c.save()
 
 dest=R/'order/RevD2_SC12_Factory_Upload.zip'
 files=[]
-for pat in ['output/fabrication/*','output/assembly/*','output/mechanical/*','output/documentation/BOM_RevD2_SC12.pdf','bom/Factory_BOM.csv','bom/BOM_JLCPCB.csv','bom/BOM_per_reference.csv','bom/Hand_solder_BOM.csv','bom/ACCESSORIES.csv','bom/cost_estimate.csv','docs/COST_REDUCTION.md','docs/FACTORY_ORDER.md','docs/ASSEMBLY.md','docs/WIRING.md','docs/VALIDATION.md','firmware/build/sensor_can.hex']:
+for pat in ['output/fabrication/*','output/assembly/*','output/mechanical/*','output/documentation/BOM_RevD2_SC12.pdf','bom/Factory_BOM.csv','bom/BOM_JLCPCB.csv','bom/BOM_per_reference.csv','bom/Hand_solder_BOM.csv','bom/ACCESSORIES.csv','bom/cost_estimate.csv','docs/COST_REDUCTION.md','docs/FACTORY_ORDER.md','docs/ASSEMBLY.md','docs/WIRING.md','docs/VALIDATION.md','firmware/build/factory.hex','firmware/build/application.sc12','host/can_service.py','host/firmware_image.py','host/fixture_record.py','tools/program_factory.tcl','tools/fixture_measurements.template.json','docs/CAN_SERVICE.md','docs/FIXTURE.md']:
  files.extend(p for p in R.glob(pat) if p.is_file())
 with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED) as z:
  for p in sorted(set(files)):z.write(p,p.relative_to(R))

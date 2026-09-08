@@ -10,7 +10,7 @@ detail=[];summary=[]
 for n in (1,5,10,25):
  cash={'Factory SMT':0.,'Hand solder':0.};consumed=0
  for g in groups:
-  c=catalog[g['MPN']];need=n*int(g['Quantity']);buy=math.ceil(max(need,c['moq'])/c['multiple'])*c['multiple'];p=price(c,buy)
+  c=catalog[g['MPN']];need=n*int(g['Quantity']);minimum=math.ceil(max(need,c['moq'])/c['multiple'])*c['multiple'];candidates=[minimum]+[math.ceil(t[0]/c['multiple'])*c['multiple'] for t in c['tiers'] if t[0]>=minimum];buy=min(candidates,key=lambda q:q*price(c,q));p=price(c,buy)
   cash[g['Assembly']]+=buy*p;consumed+=need*p
   detail.append(dict(boards=n,MPN=g['MPN'],assembly=g['Assembly'],needed=need,purchase_quantity=buy,unit_usd=p,purchase_usd=round(buy*p,4),leftover=buy-need,supplier=c['supplier'],source=c['url']))
  summary.append(dict(boards=n,parts_consumed_per_board_usd=round(consumed/n,2),SMT_procurement_cash_per_board_usd=round(cash['Factory SMT']/n,2),hand_parts_cash_per_board_usd=round(cash['Hand solder']/n,2),all_parts_cash_per_board_usd=round(sum(cash.values())/n,2),all_parts_batch_cash_usd=round(sum(cash.values()),2)))

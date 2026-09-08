@@ -1,10 +1,10 @@
-# Firmware 0.4.0 — Rev D / D-2 SC12, protocol v3
+# Firmware 0.5.0 — Rev D-2 SC12, protocol v3
 
 Bare-metal STM32F042K6T6 firmware for three digital inputs. Build allocation is recorded by the current linker map/build report; stack depth has not been measured. The final two 1 KiB flash pages hold redundant 32-byte versioned configuration with CRC and commit-last writes.
 
-Rev D-2 uses the same firmware sources, **hardware identity 4** and **protocol v3** as Rev D; D-2 is an assembly/procurement variant, not a new CAN firmware identity. Use the matching [SensorCan12 drivers](../examples/README.md). The new voltage headers select 5 V / 12 V in hardware; firmware does not control their settings.
+D-2 retains **hardware identity 4** and normal **protocol v3**, with a new service protocol and bootloader. Rev D's 0.4.0 files remain preserved. Use the matching [SensorCan12 drivers](../examples/README.md); voltage selection remains hardware-only.
 
-**CAN servicing is planned, not implemented:** this release has no CAN bootloader, discovery or persistent CAN-ID command. The [optimization plan](../docs/OPTIMIZATION_PLAN.md) defines the proposed memory/protocol work, recovery tests and one-time SWD migration. Its candidate flash layout does not apply to these binaries.
+**CAN service is implemented, physically unqualified:** full-UID discovery, identify LED, persistent ID/inversion/debounce and verified uploads. See [CAN setup/update](../docs/CAN_SERVICE.md), [robot bridge](../examples/bridge/README.md) and [qualification plan](../docs/OPTIMIZATION_PLAN.md).
 
 From `rev_d2/`:
 
@@ -14,14 +14,14 @@ make -C firmware
 bash scripts/test_firmware.sh
 ```
 
-Outputs: `build/sensor_can.elf`, `.hex`, `.bin`, `.map`. No ADC, sensor rail GPIO control or per-input LED logic remains. The 8 MHz external crystal and PLL generate 48 MHz; bxCAN uses 16 time quanta with an 87.5% sample point at 1 Mbit/s. Auto bus-off recovery is enabled; automatic transmit retry is disabled.
+Outputs: `build/factory.hex` for initial SWD installation; `build/application.sc12` for CAN updates; separate bootloader/application ELF, BIN and MAP files. `sensor_can.hex`/ELF are application-only at 0x08002000. Flash: 8 KiB bootloader, 21 KiB app, 1 KiB manifest, 2 KiB configuration. Both linkers reserve the first 256 SRAM bytes and a 1 KiB minimum stack. No ADC, sensor rail GPIO control or per-input LED logic remains. The 8 MHz external crystal and PLL generate 48 MHz; bxCAN uses 16 time quanta with an 87.5% sample point at 1 Mbit/s. Auto bus-off recovery is enabled; automatic transmit retry is disabled.
 
 Power through J1 from a bench supply. Use the [custom TC2050 wiring](../docs/WIRING.md): VTref sense→6, SWDIO→5, SWCLK→4, ground→7, optional reset→1. Leave probe power disconnected.
 
 ```sh
 openocd -f interface/stlink.cfg -f target/stm32f0x.cfg \
   -c 'adapter speed 1000' \
-  -c 'program firmware/build/sensor_can.elf verify reset exit'
+  -f tools/program_factory.tcl
 ```
 
 This command has not been exercised on physical D or D-2 hardware. Verify MCU identity, supply and flash readback. Normal application programming should preserve the two configuration pages; full-chip erase removes them. Version-1/2 configuration is rejected.
@@ -34,7 +34,7 @@ python host/sensor_can.py configure --port /dev/ttyUSB0 \
   --device 17 --invert 1 --debounce 2
 ```
 
-Device IDs 0–63 must be unique in this Team Use address space. Invert is a 3-bit mask; debounce is 1–100 ms. UART `SET id invert debounce_ms` persists and resets; CAN configuration is volatile. Unconfigured boards stay CAN-silent. **Hardware sensor power is enabled independently of firmware**, including during reset or programming. On D-2, leave the caps off JP101/JP201/JP301 to disconnect port power during initial bring-up; configure them only with input power disconnected. Bias and CAN termination remain solder settings. See [assembly](../docs/ASSEMBLY.md).
+Device IDs 0–63 must be unique in this Team Use address space. Invert is a 3-bit mask; debounce is 1–100 ms. UART `SET id invert debounce_ms` and UID-targeted CAN service save persist and reset. Legacy CAN runtime configuration remains volatile. Unconfigured boards accept discovery/service but suppress normal telemetry. Power-cycle after initial SWD programming and verify boot protection before CAN updates. **Hardware sensor power is enabled independently of firmware**, including during reset or programming. On D-2, leave the caps off JP101/JP201/JP301 to disconnect port power during initial bring-up; configure them only with input power disconnected. Bias and CAN termination remain solder settings. See [assembly](../docs/ASSEMBLY.md).
 
 The independent watchdog is serviced only after the full 1 ms foreground cycle. A >20 ms foreground delay, clock failure, hard fault or PVD low-voltage detection puts CAN into standby; the watchdog provides reset recovery. The single LED pulses approximately 100 ms per second when configured and healthy, or 100 ms per 200 ms for configuration/clock/CAN errors. Rail faults also trigger the fast fault indication. PA3 reads 12 V PG and PA4 reads 5 V FAULT_N, both with internal pullups. A fault clears qualification immediately; recovery needs 100 ms continuously good indications. Counts freeze and debounce is re-baselined during this interval.
 

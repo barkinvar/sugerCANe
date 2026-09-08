@@ -3,7 +3,7 @@ from pathlib import Path
 import re,json
 import pdfplumber
 R=Path(__file__).resolve().parents[1];broken=[];links=0
-docs=[R/'README.md',R/'TOOLS.md',R/'DESIGN_PLAN.md',R/'firmware/README.md',R/'examples/README.md',R/'bom/README.md',*R.glob('docs/*.md')]
+docs=[R/'README.md',R/'TOOLS.md',R/'DESIGN_PLAN.md',R/'firmware/README.md',R/'examples/README.md',R/'bom/README.md',*R.glob('docs/*.md'),*R.glob('examples/**/README.md')]
 for p in docs:
  for link in re.findall(r'!?\[[^\]]*\]\(([^)]+)\)',p.read_text()):
   if re.match(r'^[a-z]+:|^#',link):continue

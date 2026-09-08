@@ -10,7 +10,7 @@
 | C Lite | [rev_c](rev_c/README.md) | 52 × 56 mm, 89 fitted parts, 6–22 V, solder selectors, standalone protected power, fixed thresholds, protocol v2 | Simplified successor; unbuilt prototype |
 | B-2 | [rev_b2](rev_b2/README.md) | Same B circuit/geometry; 49 equivalent passive placements changed and eight unchanged MPNs resourced; factory BOM/CPL packet | Full-feature factory-assembly prototype |
 | D SC12 | [rev_d](rev_d/README.md) | 52 × 64 mm, four layers, regulated 12 V + 5 V, 104 fitted parts, rail-health handling, protocol v3 | Regulated industrial-sensor successor; unbuilt prototype |
-| D-2 SC12 | [rev_d2](rev_d2/README.md) | Same D circuit/firmware; 27 passive substitutions, sourcing changes, removable 2 mm voltage headers; 98 SMT + 9 hand-fitted parts; factory BOM/CPL | Cost-reduced assembly variant; unbuilt prototype |
+| D-2 SC12 | [rev_d2](rev_d2/README.md) | Same D circuit and telemetry; 0.5.0 CAN service/bootloader; 27 passive substitutions, sourcing changes, removable 2 mm voltage headers; 98 SMT + 9 hand-fitted parts; factory BOM/CPL | Cost-reduced assembly variant; unbuilt prototype |
 
 ## A to B
 
@@ -62,4 +62,6 @@ Firmware 0.4.0/protocol v3/hardware 4 reports qualified 12 V PG and 5 V no-fault
 
 D-2 keeps the electrical features, outline, four copper layers and hardware-4/protocol-v3 identity. It changes 16 ordinary 0805 resistors and eleven 100 nF bypass capacitors to documented equivalents, selects lower supplier prices for unchanged MPNs, and replaces three solder power selectors with removable 2 mm headers/caps. Sensor-area routing changes to accommodate plated holes; bias and CAN termination remain solder settings. All components stay on the top side.
 
-Factory files contain 98 SMT placements. The user fits six terminal blocks and three headers and supplies three caps. D-2’s first-tier consumed-parts estimate is $44.16 versus D’s $54.89; minimum-order purchasing is $40.50 / $34.69 / $32.23 per board at 5 / 10 / 25 boards. These exclude PCB, assembly and freight. [Price assumptions](rev_d2/docs/COST_REDUCTION.md), [factory scope](rev_d2/docs/FACTORY_ORDER.md), [wiring and retention](rev_d2/docs/WIRING.md). Earlier releases remain intact.
+Factory files contain 98 SMT placements. The user fits six terminal blocks and three headers and supplies three caps. D-2’s first-tier consumed-parts estimate is $44.16 versus D’s $54.89; minimum-order purchasing is $40.40 / $34.69 / $32.23 per board at 5 / 10 / 25 boards. These exclude PCB, assembly and freight. [Price assumptions](rev_d2/docs/COST_REDUCTION.md), [factory scope](rev_d2/docs/FACTORY_ORDER.md), [wiring and retention](rev_d2/docs/WIRING.md). Earlier releases remain intact.
+
+D-2 now includes [CAN setup/update firmware and tools](rev_d2/docs/CAN_SERVICE.md), with protected bootloader and one-time SWD migration. Normal hardware-4/protocol-v3 telemetry remains compatible; 0.4.0 is retained in Rev D and history. Software verification passes; physical qualification remains open.

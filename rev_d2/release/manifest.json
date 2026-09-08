@@ -1,23 +1,23 @@
 {
   "project": "SC12 Rev D-2",
   "status": "Unbuilt prototype",
-  "created_utc": "2026-09-08T22:10:07.165988+00:00",
-  "file_count": 390,
+  "created_utc": "2026-09-08T22:30:12.152967+00:00",
+  "file_count": 427,
   "files": [
     {
       "path": "DESIGN_PLAN.md",
-      "bytes": 1792,
-      "sha256": "9981a3375a4bc01e5d956d85584fa701cd030f5a376345d920cc3d9e3b6234f3"
+      "bytes": 1755,
+      "sha256": "998f1f590df65647ce71ef8bbbf87ba1ba9d15212ea29ce0433df02fa52dbb67"
     },
     {
       "path": "README.md",
-      "bytes": 7908,
-      "sha256": "23b9145dd145b790a410444257b7d749ebefe598754780ea3632f7127ac99603"
+      "bytes": 8042,
+      "sha256": "1b47b1b2c068300bbaafaf4c18a6eacc4f273d97bcbc89b1284624b497f53f6f"
     },
     {
       "path": "TOOLS.md",
-      "bytes": 3365,
-      "sha256": "a7367a71fd04c0edb6d5e57c1c8af9d5122bb84d8b5bd68d5a4f419ee4d7b60e"
+      "bytes": 3755,
+      "sha256": "72d8d4f71d7ed2ebc4d601d2b14df7326d996f1a26f1552c0ac1c564113d47e3"
     },
     {
       "path": "bom/ACCESSORIES.csv",
@@ -56,8 +56,13 @@
     },
     {
       "path": "bom/README.md",
-      "bytes": 2185,
-      "sha256": "584a6fd914dab946820fc5b306a8854a618811a62ccb374fb585e79173aa7392"
+      "bytes": 2457,
+      "sha256": "e4ea24fdd3c0701f9a36f280b01cf6713ced5f78a78cc43cd19aa4ac891de193"
+    },
+    {
+      "path": "bom/assembly_scenarios.csv",
+      "bytes": 618,
+      "sha256": "3d859471c3a0b6e329e10c75485dbbe9605fc93d3a39e14a27771e5a66f6c589"
     },
     {
       "path": "bom/catalog_china.json",
@@ -81,13 +86,13 @@
     },
     {
       "path": "bom/cost_detail.csv",
-      "bytes": 25299,
-      "sha256": "d56a027b56d8f0846dc72dce3422fb6bd1704713cda77e6b3f26725f60c869fb"
+      "bytes": 25311,
+      "sha256": "c4c96ccc862a0b868e161359a8b3d3a0ea8b655cc6550b8de0313d972364af77"
     },
     {
       "path": "bom/cost_estimate.csv",
       "bytes": 288,
-      "sha256": "cc4568ef770023dcc0803f6851158d7ecc9632703951fc04938cb995d84b247e"
+      "sha256": "0d1c850a52857b93ff8404b53a078c8322e9d3c8ab2d08aaffba49296fd1f41d"
     },
     {
       "path": "bom/substitutions.json",
@@ -101,13 +106,18 @@
     },
     {
       "path": "docs/ASSEMBLY.md",
-      "bytes": 3752,
-      "sha256": "4c5e3efa93324c9964fc0844f2252222c7e2a29a5989737ed29decc092d536dc"
+      "bytes": 3876,
+      "sha256": "b8bb67573aade72d67c7109cff1a24bc32fec8c195b593cede114f2fcb2d38b9"
     },
     {
       "path": "docs/CAN_PROTOCOL.md",
-      "bytes": 4437,
-      "sha256": "172f4f419c32e0c6ace7320d32cedc0127f49b36041f8ac8effd06d8083776be"
+      "bytes": 4798,
+      "sha256": "ab19b0a4095c644b4c973fabcb6652b7a1592707d2e2890b8af3b0184c128e90"
+    },
+    {
+      "path": "docs/CAN_SERVICE.md",
+      "bytes": 10204,
+      "sha256": "4b2a059464b158684dda305ba7e1506c2d56576d8f92fa039b7d55ce42835209"
     },
     {
       "path": "docs/CONNECTORS.md",
@@ -116,18 +126,23 @@
     },
     {
       "path": "docs/COST_REDUCTION.md",
-      "bytes": 6950,
-      "sha256": "66a869d031943a9931872e28339d58c9189909c1dd278e2cff2b3e9c80a51375"
+      "bytes": 8292,
+      "sha256": "4d4e62697cea03ea0199f16724b9da33df041af179d43f16edc5ba281dafe604"
     },
     {
       "path": "docs/FACTORY_ORDER.md",
-      "bytes": 5835,
-      "sha256": "9ab23ff2463dd13f650cc20b893be35e10b7a03948bf4b0a3c54e1c229caf5ea"
+      "bytes": 6221,
+      "sha256": "3bc7506500d8490c690ff7ad077710bdb492f008617cff7d1979ca3eb27c6570"
+    },
+    {
+      "path": "docs/FIXTURE.md",
+      "bytes": 2674,
+      "sha256": "dfdbdbd58538282e920142f4696e9e0e0a8056c5800d709c3a1bab69af7a0f84"
     },
     {
       "path": "docs/OPTIMIZATION_PLAN.md",
-      "bytes": 15249,
-      "sha256": "6ea76c5ebe71b1ec46d37a3f0b9d072e456c1820c6f1f2aec42c658e8af15719"
+      "bytes": 7429,
+      "sha256": "a28452f58c089709d1049c851a1ff8cf7ca34bec8d1bcf611862eee3fd7cfc9d"
     },
     {
       "path": "docs/SIMPLIFICATION.md",
@@ -141,8 +156,8 @@
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 5656,
-      "sha256": "952d43f2b5315bed578c3967aa6956512a2dda07e2600576debde41b446f8706"
+      "bytes": 6346,
+      "sha256": "a0b8006093190a25c5673a4d6c2c2ef89e3e80e36cd11aebe8419190a1f449cf"
     },
     {
       "path": "docs/WIRING.md",
@@ -151,8 +166,33 @@
     },
     {
       "path": "examples/README.md",
-      "bytes": 3177,
-      "sha256": "ac0e5e5cb8e19696bc26a4274ae6aa6ccbb68a3287631b351ca3df7385f775b8"
+      "bytes": 3277,
+      "sha256": "7a9517e586a112964d759c80d00515e07c10b9b47202206e38e7404deb4217fd"
+    },
+    {
+      "path": "examples/bridge/README.md",
+      "bytes": 2243,
+      "sha256": "a20f648ffb1280b8c9c687aca456c05e51a2989fad21a4facff2fb661d204344"
+    },
+    {
+      "path": "examples/bridge/src/frc/robot/maintenance/ServiceBridge.java",
+      "bytes": 4163,
+      "sha256": "2457c57eebb911c5af3f187ee41813e461ce6a26f39d2f5a3bd183f799931841"
+    },
+    {
+      "path": "examples/bridge/src/frc/robot/maintenance/Wpilib2026.java",
+      "bytes": 1124,
+      "sha256": "ae3fa6b2d4eadf1ead1686f133e3beaf632c96aae54d79c5351698db39e65769"
+    },
+    {
+      "path": "examples/bridge/tests/frc/robot/maintenance/ServiceBridgeTest.java",
+      "bytes": 1853,
+      "sha256": "896cb7e5c98b23bc064a726ea3cbd8879ff83544ccc4029b0d41f7167428e1aa"
+    },
+    {
+      "path": "examples/bridge/wpilib2027/frc/robot/maintenance/Wpilib2027.java",
+      "bytes": 1242,
+      "sha256": "fc2c37023215dabd6e0de8695df44de157daf705246c32faaec84f9be8ac280a"
     },
     {
       "path": "examples/cpp/ReadSensorExample.cpp",
@@ -196,33 +236,63 @@
     },
     {
       "path": "firmware/Makefile",
-      "bytes": 1263,
-      "sha256": "f6e63ab834f8c01bf0ae14d78e4f382029fd3dbc78610aa43ad2e2dc8e2f2262"
+      "bytes": 2119,
+      "sha256": "3f2b32c8d7394af46332e75d162b6dda20a6be822749fa7ff6f22922a5471ead"
     },
     {
       "path": "firmware/README.md",
-      "bytes": 3912,
-      "sha256": "37fd27202ae45c5f98cfbc88c55752bda9318f224cae671693455eb08a05ec4c"
+      "bytes": 4253,
+      "sha256": "8d7fbd30fcaba672476897f4b93af422bf9336611206dc27a5d76ecbf3024f00"
+    },
+    {
+      "path": "firmware/bootloader.ld",
+      "bytes": 1463,
+      "sha256": "b2b1b0d3fa290d6ddb28a18bd3fe01abb3b38e52411e477a8fac6978b21c1746"
+    },
+    {
+      "path": "firmware/build/application.sc12",
+      "bytes": 9216,
+      "sha256": "4dd46dadb0e463296a840fee557123ea1b855d544baee8d8a80de8ca3fbb494b"
+    },
+    {
+      "path": "firmware/build/bootloader.bin",
+      "bytes": 6388,
+      "sha256": "6689dd3ff573f96f9c3af7b362926c38289ce411f93a527c9760a9434b0d036f"
+    },
+    {
+      "path": "firmware/build/bootloader.elf",
+      "bytes": 512968,
+      "sha256": "863b8d17bbe17198714f705589f0499841996bf9e2c492fb95682241941c686e"
+    },
+    {
+      "path": "firmware/build/bootloader.map",
+      "bytes": 54384,
+      "sha256": "80ed2f56edd3c6075cadf5f5bf655072e0d1f8aa6968849777a27badf36542a3"
+    },
+    {
+      "path": "firmware/build/factory.hex",
+      "bytes": 42964,
+      "sha256": "f7ecffe85b7b7cef9cd3fae1fc1a232e27ddea647a7f8753bcad4269aa41d354"
     },
     {
       "path": "firmware/build/sensor_can.bin",
-      "bytes": 6148,
-      "sha256": "e2838eee9ad8a98d332a13f9a3dbbe8bb3a837b71a1b342be2e84fdfc106c5c1"
+      "bytes": 9184,
+      "sha256": "1c30e3d5c1153b9b23ffde11e655a9a8219ccaac37dca0dc424a94a302313751"
     },
     {
       "path": "firmware/build/sensor_can.elf",
-      "bytes": 496376,
-      "sha256": "8a54015fc0d5ec2ffab6b9282753ba23b5f6e15661484ded71675d7833aad65e"
+      "bytes": 530084,
+      "sha256": "60d2eb0400c397296a2ed3807f9e66863a4817ac2c47f4f93077ccb8d7a7764d"
     },
     {
       "path": "firmware/build/sensor_can.hex",
-      "bytes": 17352,
-      "sha256": "17e7c3f619227ac0a2e15373babef508f6a1564e0f16d9b942812d9d24d586fb"
+      "bytes": 25894,
+      "sha256": "826b92bbe97846402e06b271ecb0a982a3580adab6476148af44c9d6a3585041"
     },
     {
       "path": "firmware/build/sensor_can.map",
-      "bytes": 45823,
-      "sha256": "2109cddf888c4a0f4aaa634117105cb794bf79bf81a51b3309e43035be70bb89"
+      "bytes": 63060,
+      "sha256": "5f07fe8a153e3b04fc1640fbdff4aaf4440f3330a66e2fe5a7f9f5a25e71e79e"
     },
     {
       "path": "firmware/include/board.h",
@@ -230,19 +300,39 @@
       "sha256": "f514f5ef955410206f9474f05001fcc8153c0b06e75ac98210d267bbca18a107"
     },
     {
+      "path": "firmware/include/board_service.h",
+      "bytes": 280,
+      "sha256": "5c4538d5f1385df8d95b51b1ad2d6467ed0a1a560f0378a2367317e71c3f6d74"
+    },
+    {
       "path": "firmware/include/sensor_core.h",
       "bytes": 1455,
       "sha256": "9f33ca1492dc8eb881abe56aac61bf1336e2e646e04d2dc18cecf64e9504e9db"
     },
     {
+      "path": "firmware/include/service.h",
+      "bytes": 1923,
+      "sha256": "1e3402abc14fa7fef767dffc382810c3b3fd3fe103d2c04145c897ed515e5020"
+    },
+    {
       "path": "firmware/src/board.c",
-      "bytes": 10483,
-      "sha256": "4917fabd9cda6d1c85bd8ca23bd24ea9f4720d59fb31f389451b0904d0f39cf8"
+      "bytes": 10965,
+      "sha256": "a8a93706c9894d1618b1cb702dc96b0e6075715338422058aa9f03fa83c327fd"
+    },
+    {
+      "path": "firmware/src/board_service.c",
+      "bytes": 3943,
+      "sha256": "5f45f0bf1ad278284ce4b1790574534241de2d046354c9695a476ce8034dff34"
+    },
+    {
+      "path": "firmware/src/boot_main.c",
+      "bytes": 1575,
+      "sha256": "d20b03669c4209e1de25afafe3ba57f6e3dbcd026540cf2f17a4894edefc153c"
     },
     {
       "path": "firmware/src/main.c",
-      "bytes": 10021,
-      "sha256": "86c91c6f0ff6e5e09b028292c0146ada1695b6716ecb3884bd324719d384ea24"
+      "bytes": 10547,
+      "sha256": "43a9fffaf43ff1a65d8724729c60d61235a735c799f66e73e6f0260f30a237b2"
     },
     {
       "path": "firmware/src/sensor_core.c",
@@ -250,9 +340,14 @@
       "sha256": "18d6ee5fc2d1b672aad0b36eb6dee6e918ac9496b66b9c3711b8a5a5b01db80f"
     },
     {
+      "path": "firmware/src/service.c",
+      "bytes": 8153,
+      "sha256": "74f48052b5f46526c29f5e2b694493ecaa3d6367e791f1da3d052f4c7b91f8e3"
+    },
+    {
       "path": "firmware/stm32f042k6.ld",
-      "bytes": 1460,
-      "sha256": "bef55823fc332a061dc2c681e923bb755f56090b8e1190434b8a581a3ebf203a"
+      "bytes": 1464,
+      "sha256": "11390cf6394bbe591324aac2805e74a3fecdc07147690a333eb37d69b2ff1563"
     },
     {
       "path": "firmware/tests/fake_board/board.h",
@@ -260,19 +355,29 @@
       "sha256": "83701a262fd60fbdb8e28b564bcf549bf227a35f6c116d4561ae8709ec51d1fd"
     },
     {
+      "path": "firmware/tests/service_sim.c",
+      "bytes": 4550,
+      "sha256": "d6ca130214bdb11e07dfd1fefe94698b1916bf327465d54f279ff2255469b49c"
+    },
+    {
       "path": "firmware/tests/test_application.c",
-      "bytes": 5074,
-      "sha256": "bb16049b97b52a6cdac86d1c2b4e41680d872778b3a2df2ec01a4d7b87c01a5a"
+      "bytes": 5713,
+      "sha256": "9f1af2b513976f8e71a0dd10d29e9eaea8b4e3d909b0fdbbf146ebe274aeb47c"
     },
     {
       "path": "firmware/tests/test_arm_registers.py",
-      "bytes": 16864,
-      "sha256": "4196d44ce858fa964b82f91aace54718fed0f27c665adaf2e662c8ceff0ef9a7"
+      "bytes": 15986,
+      "sha256": "54cbbe8c6be54d5f85599c7ca47714112287a67ef5dc2fd14aa93b74a89fd531"
     },
     {
       "path": "firmware/tests/test_core.c",
       "bytes": 2168,
       "sha256": "6626b38520fe42e55510779075b2dba29cbe7f8e68f3b10610aca45f8351e298"
+    },
+    {
+      "path": "firmware/tests/test_factory_script.tcl",
+      "bytes": 1860,
+      "sha256": "e264315c4d153c0f4eb0fbb74c9999dd161b561bad892f3d4747361a1a43d3f3"
     },
     {
       "path": "firmware/third_party/CMSIS_5/CMSIS/Core/Include/cachel1_armv7.h",
@@ -1320,14 +1425,39 @@
       "sha256": "9dbfdcde88da2014358daba55cfa8b052ea22adcb3162bc912658690673b224f"
     },
     {
+      "path": "host/can_service.py",
+      "bytes": 11268,
+      "sha256": "5a7368353d7f96e17f255f570ad8e6397005cfa3970f76ef63e8d65670b8d86e"
+    },
+    {
+      "path": "host/firmware_image.py",
+      "bytes": 2562,
+      "sha256": "e72577886d15af1e390c6494d05f34fc46f1bc4771d1afbff3df239ab41c031c"
+    },
+    {
+      "path": "host/fixture_record.py",
+      "bytes": 2478,
+      "sha256": "590429ad44c4be9e87dbc6fcbb4027af3c57111705c145c5f81c922ec4e8f39f"
+    },
+    {
       "path": "host/sensor_can.py",
       "bytes": 8298,
       "sha256": "b40c702d587016ca45f79b027a18ec121971dc7802ffeba1283a301a8e050681"
     },
     {
+      "path": "host/service_gui.py",
+      "bytes": 6285,
+      "sha256": "9d41bcb2338cb3c5f60e7e58f9a051c654408016e1ce2e5ad45484f6b161ded7"
+    },
+    {
       "path": "host/test_sensor_can.py",
       "bytes": 3001,
       "sha256": "6dbf498637c9f7b51a60aa5ea7f847041756dc30b9b0bc4f4476af565082c626"
+    },
+    {
+      "path": "host/test_service.py",
+      "bytes": 6457,
+      "sha256": "58fbb747c2091277c43a28a8c557c278500bc2653fb62111a7e9ae4e652e5695"
     },
     {
       "path": "licenses/Arm_CMSIS_license.txt",
@@ -1366,13 +1496,13 @@
     },
     {
       "path": "order/RevD2_SC12_Factory_Upload.zip",
-      "bytes": 2983844,
-      "sha256": "1d350a81ba75e65445d2336f7f2d78d6218caebaa0a17467069f2efe344ef758"
+      "bytes": 3014827,
+      "sha256": "ed8af4c2ce086ebd38a12708bbe8d296b225f63f6640ac6a34d44aaa94ebc8ea"
     },
     {
       "path": "order/RevD2_SC12_Factory_Upload.zip.sha256",
       "bytes": 96,
-      "sha256": "abee10060dfde78ee9757d1b5df8c82df7debac61bd10d13d8fd39944c7f5296"
+      "sha256": "eb37d211b29eb3b16de90c61fa5cdd2034b2a619412a271f7b67aa26c3482d29"
     },
     {
       "path": "order/RevD2_SC12_Gerbers.zip",
@@ -1437,12 +1567,12 @@
     {
       "path": "output/documentation/BOM_RevD2_SC12.pdf",
       "bytes": 7175,
-      "sha256": "13e6e20d08038a754708aad59bdf2d50089366bf76177c78580e98b81a23d4fb"
+      "sha256": "6e6e6e16a3cbb6367f694a0acac541c756bac1a2b60784e539b2a8c3fce32a7f"
     },
     {
       "path": "output/documentation/SC12_RevD2_Handbook.pdf",
-      "bytes": 1999075,
-      "sha256": "32b8d436b0db37c6a7e5739ccedeb6bc4d2c15cd25c53d3372e2611cc68d35ce"
+      "bytes": 2008452,
+      "sha256": "a881b036032017c2dbb5abaf04a9ff247fcd5ec21a9d5a5d85c849a4eac61f2b"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl",
@@ -1537,7 +1667,7 @@
     {
       "path": "output/mechanical/mechanical_drawing.pdf",
       "bytes": 7170,
-      "sha256": "b409955dd460446329dd619c70c109dccb82adbf28af13bac3579a317fa65112"
+      "sha256": "1c0e1f96853d8111e8de10d2772b34c661305234d0ca1555940c3145562339c2"
     },
     {
       "path": "output/review/board_3d_final.png",
@@ -1580,9 +1710,19 @@
       "sha256": "829d2d41bdae2c31fbefb0a79b2ba2d872438d9369c6c738a7815477f38964b9"
     },
     {
+      "path": "output/review/service_gui.png",
+      "bytes": 38583,
+      "sha256": "075d27eade89b616868df24e6dcb26683dc45c5b903b746b10574b34553d06a4"
+    },
+    {
       "path": "reports/board_constraints.json",
       "bytes": 3838,
       "sha256": "6386dd4af5db6fe4c8d47ac88fdaa357f2f01644c6481f1ba4a76dffd81bb6c0"
+    },
+    {
+      "path": "reports/bridge2027-tests.log",
+      "bytes": 237,
+      "sha256": "597f3f03c8942ad4a0ee6376e12bca287010fc9c1858b3fbae1ef559c1335e86"
     },
     {
       "path": "reports/design_parity.json",
@@ -1592,7 +1732,7 @@
     {
       "path": "reports/document_review.json",
       "bytes": 951,
-      "sha256": "01560e8a5b8fca2e4284ab546f3bf0447a8621f526af3ed5c728ea696ff6f084"
+      "sha256": "fadbb511f6b2a5bfe8646f4887b88dac0de2c1d5d46a3815fe99ba9d1d6f6a83"
     },
     {
       "path": "reports/drc/final.json",
@@ -1601,8 +1741,8 @@
     },
     {
       "path": "reports/driver/tests.log",
-      "bytes": 744,
-      "sha256": "ff74f40cf9698d150f8766e8c7191bdc123018f0d9333b1f097a99827328a141"
+      "bytes": 1483,
+      "sha256": "8e611f8cf59b76a1cc09c3e052493efcb168da21e5b2b28fe132835196277a8b"
     },
     {
       "path": "reports/electrical/converter_loop.json",
@@ -1625,19 +1765,34 @@
       "sha256": "d0c63564eea9374a759f12a575de201b1d9831065f671d482b6a4af3d2b515d5"
     },
     {
+      "path": "reports/firmware-arm-registers.json",
+      "bytes": 1845,
+      "sha256": "8cf7b5d0bbdfba84c21d14a3c11450993631aa0f743abfbd85f4b0204aca4d49"
+    },
+    {
       "path": "reports/firmware-build.log",
-      "bytes": 1956,
-      "sha256": "ce396a44a25ef05be3ff0abf90079317c2390aabdc639d6ce456d38465365af6"
+      "bytes": 2347,
+      "sha256": "e6a5afa71807b591526735d7e366c62d01794c87c30028b6173112d28c218456"
+    },
+    {
+      "path": "reports/firmware-images.json",
+      "bytes": 1316,
+      "sha256": "42ff87eb60ae82acd88359dbc34857b9280395a8c97149bee76410f750919fb6"
     },
     {
       "path": "reports/firmware-tests.log",
-      "bytes": 1071,
-      "sha256": "7844de11ec242e9fe0e86b718d51ecc8a12b1fdbdf8da6b91446b80ac93a5dea"
+      "bytes": 5223,
+      "sha256": "47ae9fdc9cbd23bd30c413f3c5da61bd9b12bbbb5e2bba3254797b80630ba6fd"
     },
     {
       "path": "reports/manufacturing/board_manifest.json",
       "bytes": 127335,
       "sha256": "531341f30f488d19eae1752806f5c5c9c48290a129c4a3608e08c8502102c288"
+    },
+    {
+      "path": "reports/manufacturing/cost_scenarios.json",
+      "bytes": 3713,
+      "sha256": "5bf9b1b144b3e64c107c4bcb1f137edf49bcb6e599cfe51c2ec88bcde96db320"
     },
     {
       "path": "reports/manufacturing/factory_files.json",
@@ -1671,18 +1826,18 @@
     },
     {
       "path": "reports/release_checks.json",
-      "bytes": 2954,
-      "sha256": "2868c74a564a2bb6edce70c652af907e0add71fc3cbaa92fa1e60d9aec93b941"
+      "bytes": 3474,
+      "sha256": "b857bf03f48c14434503c3d938a0630658d6b40b1cbe7b0509cb5b9d9a59da5b"
     },
     {
       "path": "reports/variant_verification.json",
-      "bytes": 1372,
-      "sha256": "cf73867961f72ad349cd729c574ca5af037e8c0f621bd749812ba8ad74c6b8c0"
+      "bytes": 1280,
+      "sha256": "d0631b879365145c6ce24534faf0adc13cef6087eb7f5b8d810308905563ab91"
     },
     {
       "path": "reports/visual_review.json",
-      "bytes": 3594,
-      "sha256": "064aba5411e0e3f2c5e239f3f85e83e21f81a78cdb58044fb0c109ed93b4ab95"
+      "bytes": 4173,
+      "sha256": "5a3b0ee4694f9da4318bd4515b291d57b44ed7d077a5a6bb941e9bc9f4a25873"
     },
     {
       "path": "scripts/add_ground_planes.py",
@@ -1716,8 +1871,8 @@
     },
     {
       "path": "scripts/build_documents.py",
-      "bytes": 6940,
-      "sha256": "cc2359120b08482b00798ed3bdc49591c35689fce704ec031d3d0386da42c5da"
+      "bytes": 7154,
+      "sha256": "f1527b5eda39517b690c5c1a893e1bd2f0bb233f08bd6637874e9283ae368db0"
     },
     {
       "path": "scripts/build_factory_files.py",
@@ -1726,13 +1881,13 @@
     },
     {
       "path": "scripts/build_handbook.py",
-      "bytes": 9678,
-      "sha256": "1998bbfb81edfac35bb25aead9e78b1d4f9fd1054284557780082907328e8016"
+      "bytes": 9798,
+      "sha256": "1117b2a9c1919272813a16642b19172f37cfba408764570891cbd74212e6ca64"
     },
     {
       "path": "scripts/build_release.py",
-      "bytes": 2665,
-      "sha256": "a62c0dee77e5b79f6bfbdc2f1ac8ecc0d131de83148cbc1da7edc85cb767ebc0"
+      "bytes": 2890,
+      "sha256": "e0f78223fd15d718cc02ce1ac03457ad18fd89d082986886f76454b77f783201"
     },
     {
       "path": "scripts/check_board_constraints.py",
@@ -1755,9 +1910,19 @@
       "sha256": "0f4aa2ae480b99cb17793b3c366259a006868c3510bbf08b7c451470405a9412"
     },
     {
+      "path": "scripts/check_firmware_images.py",
+      "bytes": 2375,
+      "sha256": "220fc9f828ba8b79d767303c121d65c6b0f6ea3be2d3cc93e64a66a0100ebc58"
+    },
+    {
       "path": "scripts/check_variant.py",
-      "bytes": 2551,
-      "sha256": "f3a79a3dcb063d2b341dcb8ad6c20704f3f1f0e83c974179ef3ebc31827315db"
+      "bytes": 2387,
+      "sha256": "ef5e96bb3570408cac37668401c6c636c405b53aca0913b8d76ea48005fca5a0"
+    },
+    {
+      "path": "scripts/compare_assembly_cost.py",
+      "bytes": 1529,
+      "sha256": "5aef002edd8615704d37858b673274c27698610643464f8ef47bc595f81061af"
     },
     {
       "path": "scripts/convert_power_selectors.py",
@@ -1776,8 +1941,8 @@
     },
     {
       "path": "scripts/estimate_cost.py",
-      "bytes": 1493,
-      "sha256": "9c315eaa21a7aa786f408becaee27e9549b6cc74331f41e2c99a30ab97874972"
+      "bytes": 1647,
+      "sha256": "23e8461b294f7c329813d5b9820d6ff2643b0e6423b13b2b4a533bc0cfdfeb72"
     },
     {
       "path": "scripts/export_assembly_drawing.py",
@@ -1851,8 +2016,8 @@
     },
     {
       "path": "scripts/review_documents.py",
-      "bytes": 1625,
-      "sha256": "b6e504ba299566ec86d0e719578ff5412a930f9ae9a246d5f7dc99d76f406fdb"
+      "bytes": 1658,
+      "sha256": "92e5e1f993f3f5acdb5ca0cce0e8c8c4c5056a638fdd3d82e227d160e33fef1a"
     },
     {
       "path": "scripts/route_critical.py",
@@ -1880,14 +2045,19 @@
       "sha256": "22817e77c86e32cb63a760de586a994fb417d3b07228315881cadc77c57b12f6"
     },
     {
+      "path": "scripts/test_bridge2027.sh",
+      "bytes": 584,
+      "sha256": "5a4682a6b01580c6a1a1abea5eaaae8785f2c7698c0eb2575896994faea1e67d"
+    },
+    {
       "path": "scripts/test_drivers.sh",
-      "bytes": 1048,
-      "sha256": "122d1f20d7bfa0979a96d70a4a725865bd1acb4d655947ca5b3748891ed14b3b"
+      "bytes": 1357,
+      "sha256": "dad16570dba12afa8bc4edbabbd2614666bf1f350faab540f1bfb152c367636d"
     },
     {
       "path": "scripts/test_firmware.sh",
-      "bytes": 1222,
-      "sha256": "1c922387e4a69bdfd1372d6321cc6e96d2385980227be4a7a7042e8d515d873a"
+      "bytes": 2058,
+      "sha256": "84a336115b0f760f60dc2e84022a868d215d63dca453a2133fd74adb9109b00e"
     },
     {
       "path": "scripts/validate_release.sh",
@@ -1916,8 +2086,8 @@
     },
     {
       "path": "scripts/write_validation_summary.py",
-      "bytes": 2911,
-      "sha256": "3adafc631294fb3a86cc1f03e75c1ba9f7b514d2e8716d557fc5f756bd646583"
+      "bytes": 3428,
+      "sha256": "8eeebe5f0f90b769fe81987348eba01090baa0f098a11fe82b9508d211a4e849"
     },
     {
       "path": "sources/datasheets/samsung_CL31A226_characteristics.json",
@@ -1935,6 +2105,11 @@
       "sha256": "aac91b4350d0bdf976f62255090273a96c642117bb301b9204180619bd87a5ef"
     },
     {
+      "path": "tools/bridge2027_dependencies.json",
+      "bytes": 982,
+      "sha256": "344fcf138be57b89538e3583afa34b1c30068deaae599d87bcfc05ff18abee77"
+    },
+    {
       "path": "tools/driver_dependencies.json",
       "bytes": 2060,
       "sha256": "3be0c1981d076fabdb751024cbbdcd347fb0101488606480a687949154aa2b1b"
@@ -1946,8 +2121,18 @@
     },
     {
       "path": "tools/fetch_driver_dependencies.py",
-      "bytes": 1153,
-      "sha256": "57c69b69ac2e58c785bc388974f217c94131bf5ad52fb1841b28c715778ad99e"
+      "bytes": 1202,
+      "sha256": "9887baf61593b88c694e8991e05279e859588ba39dd47a7041dacdd750a0af4b"
+    },
+    {
+      "path": "tools/fixture_measurements.template.json",
+      "bytes": 288,
+      "sha256": "bcbe4d2ebe01d3aa16de5c4f8d6e30f82dd408918a0fb28a8656048908569ced"
+    },
+    {
+      "path": "tools/program_factory.tcl",
+      "bytes": 1325,
+      "sha256": "1a89d4207b6316b2f3d2942d6989801d385c8338cafde7e9625f96ae48777ad9"
     },
     {
       "path": "tools-requirements.lock",

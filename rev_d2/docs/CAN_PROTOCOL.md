@@ -2,7 +2,7 @@
 
 1 Mbit/s classic CAN, extended 29-bit identifiers, 8-byte telemetry. This is an original Team Use protocol, not CTRE Phoenix. Device type=10 (Miscellaneous), manufacturer=8 (Team Use), unique device ID=0–63. Address = `(10 << 24) | (8 << 16) | (API << 6) | device`.
 
-The APIs differ from A/B/B-2; Rev C shares these API numbers but uses protocol v2, which Rev D-2 drivers reject. The version and capability checks prevent drivers from interpreting the wrong revision’s payload. Provision each board over 3.3 V UART before connecting multiple boards. An unconfigured board remains CAN-silent; its sensor power hardware is still enabled.
+The APIs differ from A/B/B-2; Rev C shares these API numbers but uses protocol v2, which Rev D-2 drivers reject. The version and capability checks prevent drivers from interpreting the wrong revision’s payload. Provision each board by full-UID CAN service or 3.3 V UART. An unconfigured board suppresses telemetry but answers service requests; its sensor power hardware is still enabled.
 
 All multibyte fields are little endian. Masks use bits 0–2 for inputs 1–3. Unsupported versions, reserved bits, wrong lengths or stale frames must be reported as unavailable.
 
@@ -30,3 +30,7 @@ Extended arbitration ID **0** is the FRC broadcast disable. Firmware stops telem
 Read timeouts: status 100 ms, counters/diagnostics 350 ms, identity 1500 ms. Counters 1/2 and 3 are separate snapshots. Sampling is 1 kHz; debounce requires a continuously stable logical state for the selected interval. This is not a high-speed pulse counter or encoder.
 
 UART: 115200 baud, 8N1, 3.3 V logic. Commands `INFO`, `HELP`, `SET id invert debounce_ms`, `RESUME`. `SET` saves a version-3 redundant CRC-protected record and resets. The old four-argument command and v1/v2 flash records are rejected; provision Rev D-2 explicitly. No power-control command exists.
+
+## Service extension in firmware 0.5.0
+
+Normal protocol-v3 payloads remain unchanged. APIs 0x300/0x301 at address 0 are reserved for [CAN service](CAN_SERVICE.md). Opening maintenance pauses telemetry/counting on participating SC12 nodes; treat samples as unavailable immediately in robot code. Status period can be 10/20/50 ms until reset.

@@ -77,11 +77,11 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 5,PT1206FR-070R1L,Factory SMT,5,5,0.35,1.75,0,DigiKey,https://www.digikey.com/en/products/detail/yageo/PT1206FR-070R1L/2178370
 5,RC0805FR-0720KL,Factory SMT,15,15,0.1,1.5,0,DigiKey,https://www.digikey.com/en/products/detail/yageo/RC0805FR-0720KL/730667
 5,RC0805FR-07220KL,Factory SMT,15,15,0.036,0.54,0,DigiKey,https://www.digikey.com/en/products/detail/yageo/RC0805FR-07220KL/727742
-5,RC0805FR-0724K9L,Factory SMT,5,5,0.1,0.5,0,DigiKey,https://www.digikey.com/en/products/detail/yageo/RC0805FR-0724K9L/730707
+5,RC0805FR-0724K9L,Factory SMT,5,10,0.034,0.34,5,DigiKey,https://www.digikey.com/en/products/detail/yageo/RC0805FR-0724K9L/730707
 5,RC0805FR-072M2L,Factory SMT,15,15,0.034,0.51,0,DigiKey,https://www.digikey.com/en/products/detail/yageo/RC0805FR-072M2L/727677
-5,RC0805FR-0730K1L,Factory SMT,5,5,0.1,0.5,0,DigiKey,https://www.digikey.com/en/products/detail/yageo/RC0805FR-0730K1L/727845
+5,RC0805FR-0730K1L,Factory SMT,5,10,0.034,0.34,5,DigiKey,https://www.digikey.com/en/products/detail/yageo/RC0805FR-0730K1L/727845
 5,RC0805FR-0759KL,Factory SMT,5,5,0.1,0.5,0,DigiKey,https://www.digikey.com/en/products/detail/yageo/RC0805FR-0759KL/728045
-5,RC0805FR-075K23L,Factory SMT,5,5,0.1,0.5,0,DigiKey,https://www.digikey.com/en/products/detail/yageo/RC0805FR-075K23L/727993
+5,RC0805FR-075K23L,Factory SMT,5,10,0.034,0.34,5,DigiKey,https://www.digikey.com/en/products/detail/yageo/RC0805FR-075K23L/727993
 5,RC0805JR-070RL,Factory SMT,5,5,0.1,0.5,0,DigiKey,https://www.digikey.com/en/products/detail/yageo/RC0805JR-070RL/728216
 5,RC1206FR-0710KL,Factory SMT,15,15,0.05,0.75,0,DigiKey,https://www.digikey.com/en/products/detail/yageo/RC1206FR-0710KL/728483
 5,RC1206FR-07120RL,Factory SMT,5,5,0.1,0.5,0,DigiKey,https://www.digikey.com/en/products/detail/yageo/RC1206FR-07120RL/728523

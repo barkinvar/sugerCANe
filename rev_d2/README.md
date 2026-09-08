@@ -1,6 +1,6 @@
 # SC12 — Revision D-2: China SMT assembly and removable voltage jumpers
 
-Rev D-2 preserves Rev D’s circuit and firmware identity (hardware 4, protocol 3). It changes 27 passive placements to specified equivalents, adds three removable power-selection headers, and separates factory SMT assembly from your through-hole work. [Cost basis and remaining costs](docs/COST_REDUCTION.md).
+Rev D-2 preserves Rev D’s circuit and normal telemetry identity (hardware 4, protocol 3). It changes 27 passive placements to specified equivalents, adds three removable power-selection headers, and separates factory SMT assembly from your through-hole work. [Cost basis and remaining costs](docs/COST_REDUCTION.md).
 
 Three industrial digital inputs, selectable **regulated 12 V or 5 V sensor power**, and classic CAN for FRC team projects. The **52 × 64 mm** PCB keeps horizontal Weidmüller push terminals and the compact TC2050 programming contacts. **Every component mounts on the top side.** It uses four copper layers, with both inner layers reserved for ground.
 
@@ -18,8 +18,8 @@ Three industrial digital inputs, selectable **regulated 12 V or 5 V sensor power
 | MCU / CAN | STM32F042K6T6 LQFP32 + TCAN3413 SO8; 1 Mbit/s |
 | Power stage | TPS552872-Q1, synchronous buck-boost; 3.3 µH shielded inductor |
 | Assembly | 107 fitted parts: 98 top-side factory SMT; six terminals and three headers hand soldered; three loose caps |
-| Parts estimate | $40.50 / $34.69 / $32.23 per board in lots of 5 / 10 / 25, including purchase minimums; PCB/assembly/freight/tax extra |
-| Firmware | 0.4.0, hardware 4, original protocol v3; Java, C++ and Python interfaces |
+| Parts estimate | $40.40 / $34.69 / $32.23 per board in lots of 5 / 10 / 25, including purchase minimums; PCB/assembly/freight/tax extra |
+| Firmware | 0.5.0 + bootloader 1.0.0; hardware 4/protocol-v3 telemetry; CAN setup/update CLI and GUI |
 
 12 V remains regulated when the battery is above or below 12 V within the qualified input/load envelope. It is intended for compatible three-wire Omron/Banner sensors; verify the exact model, current, output type and residual/leakage voltage. A brand name alone is not a compatibility guarantee. Sensor power is hardware-enabled; removable 2 mm jumper caps choose each port's supply. No raw battery output is exposed on Rev D-2.
 
@@ -36,7 +36,7 @@ The integrated switches, current limiting, shared 5 V driver bias and PCB Kelvin
 | Board quantity | Parts purchase cost per board |
 |---|---:|
 | 1 | $55.27 |
-| 5 | $40.50 |
+| 5 | $40.40 |
 | 10 | $34.69 |
 | 25 | $32.23 |
 
@@ -58,7 +58,7 @@ Pins run 1–2–3 left to right when viewed from the component side; pin 1 has 
 
 ## Files and verification
 
-The [SC12 optimization plan](docs/OPTIMIZATION_PLAN.md) applies lessons from LaserCAN to CAN commissioning, firmware updates, manufacturing cost and qualification. CAN discovery, persistent ID changes and firmware updates are **planned, not available in firmware 0.4.0**. Current setup uses UART and firmware flashing uses SWD; the plan starts with the existing PCB.
+The [SC12 optimization plan](docs/OPTIMIZATION_PLAN.md) records implementation and open qualification gates. [CAN servicing](docs/CAN_SERVICE.md) now provides full-UID discovery, blink, persistent ID/settings and recoverable firmware uploads. Use the CLI or desktop window through SocketCAN or the [robot bridge](examples/bridge/README.md). Initial SWD installation is required. Software tests pass; real-board/controller, power-cut and vibration qualification remain pending.
 
 | Deliverable | Link |
 |---|---|

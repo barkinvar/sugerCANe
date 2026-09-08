@@ -51,14 +51,7 @@
     "HSE_IN",
     "HSE_OUT"
   ],
-  "firmware_sources_equal": [
-    "firmware/src/board.c",
-    "firmware/src/main.c",
-    "firmware/src/sensor_core.c",
-    "firmware/include/sensor_core.h",
-    "firmware/include/board.h",
-    "firmware/Makefile",
-    "firmware/stm32f042k6.ld"
-  ],
-  "scope": "Passive values/footprints and component pin nets; named critical tracks; firmware sources. Sensor-area copper is rerouted and separately checked by native DRC and Gerber connectivity. Not physical qualification."
+  "firmware_sources_equal": false,
+  "firmware_change": "D-2 0.5.0 adds CAN service and protected bootloader; Rev D 0.4.0 preserved",
+  "scope": "Passive values/footprints and component pin nets; named critical tracks; firmware divergence explicitly recorded. Sensor-area copper is rerouted and separately checked by native DRC and Gerber connectivity. Not physical qualification."
 }

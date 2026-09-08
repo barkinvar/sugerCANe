@@ -6,10 +6,11 @@ are reused; an unexpected upstream response is never accepted as a dependency.
 from pathlib import Path
 import hashlib
 import json
+import sys
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
-manifest = json.loads((ROOT / 'tools/driver_dependencies.json').read_text())
+manifest = json.loads((ROOT / (sys.argv[1] if len(sys.argv)>1 else 'tools/driver_dependencies.json')).read_text())
 for entry in manifest['files']:
     path = ROOT / entry['path']
     digest = lambda data: hashlib.sha256(data).hexdigest()

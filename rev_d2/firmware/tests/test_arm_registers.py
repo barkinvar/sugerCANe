@@ -1,7 +1,7 @@
 """Execute the actual linked Cortex-M0 functions against explicit register models.
 
 Unicorn emulates CPU instructions, not STM32 peripherals. The small behavioral
-models below supply ready bits, ADC samples, FIFO contents, flash erase and GPIO
+models below supply ready bits, FIFO contents, flash erase and GPIO
 BSRR effects. These tests check compiled register/pin intent and data handling;
 no electrical behavior, interrupt timing, CAN arbitration or silicon erratum is
 validated by this harness. Host application/core tests remain separate.
@@ -120,26 +120,23 @@ def af(b,port,pin):return (b.read(port+0x20+(pin//8)*4)>>((pin%8)*4))&15
 checks=[]
 def passed(name):checks.append(name);print('PASS',name)
 start=time.monotonic()
+protection=Board()
+for wrp,expected in [(0xffffffff,0),(0xfffffffc,1),(0xffffff00,0)]:
+    protection.write(FCTL+0x20,wrp);assert protection.call('protected_boot',0)==expected
+passed('Only first two 4 KiB protection blocks locked; application/config must remain writable')
 b=Board();b.call('board_gpio_init')
-assert b.read(GPIOA+0x14)&(1<<8) and b.read(GPIOB+0x14)&3==0
-for pin in [0,1,2,3]:assert mode(b,GPIOA,pin)==0
-for pin in [4,5]:assert mode(b,GPIOA,pin)==3
-for pin in [6,7,8,15]:assert mode(b,GPIOA,pin)==1
-for pin in [0,1,3,6,7]:assert mode(b,GPIOB,pin)==1
-for pin in [4,5]:assert mode(b,GPIOB,pin)==0
+assert b.read(GPIOA+0x14)&(1<<8)
+for pin in range(5):assert mode(b,GPIOA,pin)==0
+for pin in [5,6,7,15]:assert mode(b,GPIOA,pin)==3
+assert mode(b,GPIOA,8)==1 and mode(b,GPIOB,3)==1
 for pin in [13,14]:assert mode(b,GPIOA,pin)==2
-for mask in range(4):
-    b.call('board_set_rails',mask);assert b.read(GPIOB+0x14)&3==((mask&1)<<1)|((mask&2)>>1)
-for mask in range(4):
-    b.write(GPIOB+0x10,(0x30&~(((mask&1)<<5)|((mask&2)<<3))))
-    assert b.call('board_faults')==mask
-for bits in range(16):
-    b.call('board_leds',bits,1,1)
-    assert (b.read(GPIOA+0x14)>>6)&3==bits&3
-    assert (b.read(GPIOB+0x14)>>6)&3==(bits>>2)&3
-    assert b.read(GPIOA+0x14)&(1<<15) and b.read(GPIOB+0x14)&8
-b.call('board_safe_off');assert b.read(GPIOB+0x14)&3==0 and b.read(GPIOA+0x14)&256
-passed('GPIO directions, SWD preservation, all rail/fault masks, LEDs and safe-off')
+b.call('board_status_led',1);assert b.read(GPIOB+0x14)&8
+b.call('board_status_led',0);assert not b.read(GPIOB+0x14)&8
+b.call('board_safe_off');assert b.read(GPIOA+0x14)&256
+b.call('SystemInit')
+assert bytes(b.u.mem_read(RAM,192))==bytes(b.u.mem_read(FLASH+0x2000,192))
+assert b.read(0x40010000)&3==3
+passed('SC12 GPIO directions, SWD, LED, CAN standby and compiled SRAM vector remap')
 assert b.call('board_clock_init')==1 and b.read(symbols['SystemCoreClock'])==48000000
 assert b.read(RCC+4)&3==2 and b.read(RCC+4)&0x003c0000==0x00100000
 assert b.read(FCTL)&1 and b.read(RCC)&(1<<19)
@@ -149,8 +146,8 @@ passed('Bounded HSE startup failure')
 b.call('board_voltage_guard_init')
 assert b.read(PWR)&0xf0==0xf0 and b.read(EXTI)&(1<<16) and b.read(EXTI+8)&(1<<16)
 b.call('board_watchdog_start');assert b.read(IWDG+4)==4 and b.read(IWDG+8)==624 and b.read(IWDG)==0xaaaa
-b.call('board_set_rails',3);b.write(PWR+4,4);b.call('PVD_VDDIO2_IRQHandler',limit=1000,returns=False)
-assert b.read(GPIOB+0x14)&3==0 and b.read(GPIOA+0x14)&256
+b.write(PWR+4,4);b.call('PVD_VDDIO2_IRQHandler',limit=1000,returns=False)
+assert b.read(GPIOA+0x14)&256
 passed('PVD and watchdog register setup; undervoltage handler forces safe-off')
 # A fresh model avoids the deliberately non-returning exception state.
 b=Board();b.call('board_gpio_init');b.call('board_clock_init')
@@ -160,7 +157,7 @@ for node in [0,1,17,63]:
     timing=b.read(CAN+0x1c);prescaler=(timing&1023)+1;t1=((timing>>16)&15)+1;t2=((timing>>20)&7)+1
     assert 48000000//(prescaler*(1+t1+t2))==1000000 and (1+t1)/(1+t1+t2)==.875
     assert b.read(CAN+0x20c)&3==3 and b.read(CAN+0x214)&3==2 and b.read(CAN+0x21c)&3==3
-    fr=[(b.read(CAN+0x240+i*8),b.read(CAN+0x244+i*8)) for i in range(2)]
+    fr=[(b.read(CAN+0x240+i*8),b.read(CAN+0x244+i*8)) for i in range(3)]
     def accepts(bank,id,ide=True,rtr=False):
         encoded=(id<<3 if ide else id<<21)|(4 if ide else 0)|(2 if rtr else 0)
         return (encoded&fr[bank][1])==(fr[bank][0]&fr[bank][1])
@@ -172,6 +169,7 @@ for node in [0,1,17,63]:
             assert not accepts(0,identifier^(1<<16))
             assert not accepts(1,identifier)
     assert accepts(1,0) and not accepts(1,0,ide=False) and not accepts(1,0,rtr=True)
+assert accepts(2,0x0a08c000) and not accepts(2,0x0a08c040)
 passed('Compiled CAN timing, pin mux, Team Use filters and dedicated Broadcast Disable FIFO')
 data=RAM+0x1000;b.u.mem_write(data,b'\x01\x23\x45\x67\x89\xab\xcd\xef')
 for mailbox in range(3):
@@ -193,13 +191,6 @@ for kw in [dict(ide=False),dict(rtr=True),dict(dlc=9)]:
     assert b.read(ptr_id)==0xffffffff and b.read(ptr_len,1)==0
 assert b.call('board_can_receive',ptr_id,ptr_data,ptr_len)==0
 passed('Receive FIFO priority, payload extraction and invalid frame rejection')
-assert b.call('board_adc_init')==1 and b.read(ADC+0x14)&7==7 and b.read(0x40012708)&(1<<22)
-a,c=RAM+0x1140,RAM+0x1142
-assert b.call('board_adc_millivolts',a,c)==1 and b.adc_channels[-3:]==[17,4,5]
-assert b.read(a,2)==1354*3300*11//4095 and b.read(c,2)==3102*3300*2//4095
-b.adc_samples[17]=0;assert b.call('board_adc_millivolts',a,c)==0
-b.adc_samples[17]=1500;b.write(0x1ffff7ba,0xffff,2);assert b.call('board_adc_millivolts',a,c)==0
-passed('ADC calibration/setup, channel order, factory-reference scaling and invalid calibration')
 b.call('board_uart_init');assert af(b,GPIOA,9)==af(b,GPIOA,10)==1 and b.read(UART+0xc)==417
 for byte in b'INFO\r\n':
     b.write(UART+0x24,byte);b.uart_status|=0x20;b.call('USART1_IRQHandler')
@@ -215,7 +206,7 @@ f=Board();assert f.call('board_config_load')==0
 record=RAM+0x1000
 # Record fields are specified in sensor_core.h; magic/sequence/CRC/commit are
 # intentionally left blank for the actual production flash routine to generate.
-r=bytearray(32);r[10]=17;r[11]=5;struct.pack_into('<H',r,12,2);r[14]=3
+r=bytearray(32);r[10]=17;r[11]=5;struct.pack_into('<H',r,12,2);r[14]=0
 f.u.mem_write(record,bytes(r))
 assert f.call('board_config_store',record)==1
 assert f.erases==[FLASH+0x7800] and len(f.flash_writes)==16
@@ -263,11 +254,6 @@ u.u.mem_write(data,b'x'*600+b'\0');u.call('board_uart_write',data)
 for _ in range(520):u.call('USART1_IRQHandler')
 assert bytes(u.tx)==b'x'*511
 passed('UART RX overflow ordering and bounded TX buffer under flooding')
-slow=Board();slow.adc_ready=False
-assert slow.call('board_adc_init')==0
-bad=Board();bad.call('board_adc_init');bad.adc_samples[17]=100
-assert bad.call('board_adc_millivolts',a,c)==0
-passed('ADC-ready timeout and implausible supply-reference rejection')
 report=dict(result='PASS',completed_checks=checks,elapsed_seconds=time.monotonic()-start,
             emulator='Unicorn2.1.4 Cortex-M0',elf_sha256=hashlib.sha256(ELF.read_bytes()).hexdigest(),
             binary_sha256=hashlib.sha256((ELF.parent/'sensor_can.bin').read_bytes()).hexdigest(),

@@ -1,4 +1,5 @@
 #include "board.h"
+#include "board_service.h"
 #include <assert.h>
 #include <setjmp.h>
 #include <stdio.h>
@@ -24,7 +25,7 @@ const sc_config_record *board_config_load(void){return is("unconfigured")?0:&con
 bool board_config_store(sc_config_record *r){saved=*r;stores++;return true;}
 _Noreturn void NVIC_SystemReset(void){longjmp(done,2);}
 void board_can_standby(bool x){standby=x;} void board_can_abort(void){aborts++;}
-bool board_can_init(uint8_t id){assert(id==17);return !is("can_failure");}
+bool board_can_init(uint8_t id){assert(id==(is("unconfigured")?0:17));return !is("can_failure");}
 bool board_can_send(uint32_t id,const uint8_t d[8]) {
  assert(!standby && sends<512);tx[sends]=(frame){.at=board_millis,.id=id,.len=8};memcpy(tx[sends++].d,d,8);return !is("busy");
 }
@@ -37,6 +38,7 @@ void host_wait(void){if(board_millis>=1200)longjmp(done,1);board_millis+=(is("st
  if((is("rail12_fault")||is("rail5_fault")||is("rail_chatter")) && board_millis>=310 && board_millis<330)host_gpioa.IDR |= 7u;}
 int main(int argc,char **argv) {
  assert(argc==2);scenario=argv[1];
+ if(is("maintenance")){rx[nrx++]=(frame){.at=50,.id=SC_SERVICE_RX,.len=8,.d={SC_OPEN,1,1,0,0x53,0x43,0x4d,0x31}};rx[nrx++]=(frame){.at=200,.id=SC_SERVICE_RX,.len=8,.d={SC_CLOSE,2,1,0,0,0,0,0}};}
  if(is("disable")){rx[nrx++]=(frame){.at=20,.id=0,.len=0};cmd(100,SC_API_RESUME,0,0,3,0);}
  if(is("config")){cmd(40,SC_API_CONFIG,4,4,3,0);}
  if(is("bad_commands")){cmd(40,SC_API_CONFIG,4,4,1,0);cmd(50,SC_API_CONFIG,4,4,3,1);cmd(60,SC_API_CONFIG,8,4,3,0);cmd(70,0x200,4,4,3,0);}
@@ -48,18 +50,19 @@ int main(int argc,char **argv) {
  else if(is("stall")){assert(result==3&&stops==1&&standby&&feeds==49);}
  else {
   assert(feeds==1200);
-  if(is("unconfigured")||is("clock_failure")||is("can_failure")){assert(sends==0&&standby);}
+  if(is("unconfigured")||is("clock_failure")||is("can_failure")){assert(sends==0);assert(standby!=is("unconfigured"));}
   else {
    assert(sends>100);unsigned statuses=0,identities=0,counts=0,diagnostics=0;
    for(unsigned i=0;i<sends;i++) {
     frame *f=&tx[i];unsigned api=(f->id>>6)&1023;
     if(is("disable"))assert(f->at<20||f->at>=100);
+    if(is("maintenance") && api!=0x301)assert(f->at<50||f->at>=200);
     if(api==SC_API_STATUS){statuses++;assert(f->d[0]==3&&f->d[4]==3&&f->d[5]==0x3f);assert(f->d[2]<8&&f->d[3]<8);if(f->at>=600)assert(f->d[2]==(is("config")?4:0));
      unsigned rail=(f->d[6]>>4)&3; if(f->at<100)assert(rail==0);if(f->at>=600)assert(rail==3);
      if(f->at>=300&&f->at<=440){if(is("rail12_fault"))assert(!(rail&1));if(is("rail5_fault"))assert(!(rail&2));}
      if(is("rail_chatter") && f->at>=300&&f->at<=580)assert(!(rail&1));}
-    if(api==SC_API_IDENTITY){identities++;assert(f->d[0]==3&&f->d[1]==0&&f->d[2]==4&&f->d[4]==4&&f->d[5]==17);assert(f->d[7]==(is("config")?4:0));}
-    if(api==SC_API_COUNTS34){counts++;assert(f->d[0]==(f->at>=200?1:0)&&f->d[4]==0&&f->d[5]==0&&f->d[6]==0&&f->d[7]==0);}
+    if(api==SC_API_IDENTITY){identities++;assert(f->d[0]==3&&f->d[1]==0&&f->d[2]==5&&f->d[4]==4&&f->d[5]==17);assert(f->d[7]==(is("config")?4:0));}
+    if(api==SC_API_COUNTS34){counts++;assert(f->d[0]==(f->at>=200&&!is("maintenance")?1:0)&&f->d[4]==0&&f->d[5]==0&&f->d[6]==0&&f->d[7]==0);}
     if(api==SC_API_DIAGNOSTIC){diagnostics++;if(is("busy"))assert(f->d[0]>0);}
    }
    assert(statuses>100&&identities==1&&counts>5&&diagnostics>5);
@@ -69,3 +72,7 @@ int main(int argc,char **argv) {
  }
  printf("application: %s passed (%u frames, %u scheduler feeds)\n",scenario,sends,feeds);
 }
+
+void board_boot_healthy(void){}
+static bool service_send(void *ctx,const uint8_t *d){(void)ctx;return board_can_send(SC_SERVICE_TX,d);}
+void board_service_init(sc_service *s,bool boot){sc_service_io io={.send=service_send};uint8_t uid[12]={0};sc_service_init(s,&io,uid,boot);}

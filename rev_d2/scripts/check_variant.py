@@ -30,11 +30,6 @@ def routes(root):
   out.append((t.GetNetname(),tuple(p.ToMM(t.GetStart())),tuple(p.ToMM(t.GetEnd())),p.ToMM(t.GetWidth()),t.GetLayer()))
  return sorted(out)
 assert routes(D)==routes(R)
-firmware=[]
-for path in [*(D/'firmware/src').glob('*'),*(D/'firmware/include').glob('*'),D/'firmware/Makefile',*(D/'firmware').glob('*.ld')]:
- if not path.is_file():continue
- rel=path.relative_to(D);assert path.read_bytes()==(R/rel).read_bytes(),rel
- firmware.append(str(rel))
-report=dict(result='PASS',baseline='Preserved Rev D',baseline_model_sha256=hashlib.sha256((D/'hardware/design/circuit.json').read_bytes()).hexdigest(),variant_model_sha256=hashlib.sha256((R/'hardware/design/circuit.json').read_bytes()).hexdigest(),all_114_component_pin_nets_equal=True,passive_substitutions=sorted(changed),power_headers=['JP101','JP201','JP301'],critical_track_geometry_unchanged=sorted(critical),firmware_sources_equal=firmware,scope='Passive values/footprints and component pin nets; named critical tracks; firmware sources. Sensor-area copper is rerouted and separately checked by native DRC and Gerber connectivity. Not physical qualification.')
+report=dict(result='PASS',baseline='Preserved Rev D',baseline_model_sha256=hashlib.sha256((D/'hardware/design/circuit.json').read_bytes()).hexdigest(),variant_model_sha256=hashlib.sha256((R/'hardware/design/circuit.json').read_bytes()).hexdigest(),all_114_component_pin_nets_equal=True,passive_substitutions=sorted(changed),power_headers=['JP101','JP201','JP301'],critical_track_geometry_unchanged=sorted(critical),firmware_sources_equal=False,firmware_change="D-2 0.5.0 adds CAN service and protected bootloader; Rev D 0.4.0 preserved",scope='Passive values/footprints and component pin nets; named critical tracks; firmware divergence explicitly recorded. Sensor-area copper is rerouted and separately checked by native DRC and Gerber connectivity. Not physical qualification.')
 (R/'reports/variant_verification.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))

@@ -22,7 +22,7 @@ Electrical checks sweep input-threshold tolerances, divider accuracy, resistor s
 | Electrical protection | Reverse input, realistic protected-branch fault energy, fuse clearing/I²t, inductive transients and TVS stress using suitable test equipment. Not automotive load-dump qualified |
 | Temperature | Both rails fully loaded at 6/12/22 V, intended ambient and later enclosure; measure U8/U1/L1/L2/Q1/fuse/terminal and MCU temperatures, hot-start/restart and surface safety |
 | Inputs | 0–30 V PNP/NPN/push-pull thresholds, off-state leakage/residual voltage, ground offset, sensor disconnection, wiring transients and all intended sensor models |
-| CAN/firmware | Real roboRIO bus at 1 Mbit/s with correct end termination; startup silence before provisioning, unique IDs, bus-off, clock faults, watchdog, broadcast disable, explicit resume, stale data and power-fault handling |
+| CAN/firmware | Real roboRIO bus at 1 Mbit/s with correct end termination; no normal telemetry before provisioning, unique IDs, bus-off, clock faults, watchdog, broadcast disable, explicit resume, stale data and power-fault handling |
 | EMC/mechanical | Motor-noise environment, ESD at terminals, cable retention, vibration, mounting insulation and programming-adapter fit; repeat after enclosure design |
 | Production process | Approved stackup/CAM, stencil/profile, supplier alternates, test fixture, serial/lot records, programming/provisioning and final functional limits |
 
@@ -37,3 +37,7 @@ Primary references: [2026 FIRST manual](https://firstfrc.blob.core.windows.net/f
 ## D-2-specific prototype checks
 
 Verify the exact 2 mm header and cap fit, both 5 V / 12 V positions and unpowered open state on every channel. Verify no connection between the two rails in either position. Check solder fill on all 39 user-fitted through-hole joints. Fit/retention, vibration and impact testing must include the actual caps, chosen removable retention compound, enclosure and robot harness; these headers have no positive latch. Compare the substituted passive values/ratings against the supplied BOM. Factory BOM and CPL must contain exactly 98 SMT references, with all nine through-hole components omitted. Firmware identity intentionally remains hardware 4 / protocol 3.
+
+## CAN servicing qualification
+
+The service engine and host uploader pass simulated flash cuts/retries; ARM register checks and both bridge adapters compile. Before robot use, measure actual boot/vector/interrupt behavior, option-byte protection, stack use, upload time, CAN load, bus-off recovery and duplicate-ID discovery. Interrupt power during invalidation, every erase/program phase and final commit on physical units. Verify persistent configuration, bootloader recovery, controller disconnect/enable rejection and healthy telemetry after exit. [Protocol and evidence](CAN_SERVICE.md); [per-unit fixture records](FIXTURE.md). No software simulation closes these physical gates.

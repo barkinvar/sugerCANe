@@ -1,0 +1,12 @@
+{
+  "internal_5v": null,
+  "logic_3v3": null,
+  "regulated_12v": null,
+  "smt_inspected": false,
+  "terminal_polarity": false,
+  "input1_low_high": false,
+  "input2_low_high": false,
+  "input3_low_high": false,
+  "telemetry_after_service": false,
+  "power_cycle_config_retained": false
+}

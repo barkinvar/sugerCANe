@@ -100,3 +100,12 @@ rev_d/hardware/design/critical_unresolved.json
 
 # Rev D-2 local construction scratch.
 rev_d2/hardware/design/jumper_route_jobs.json
+
+# CAN service deliverables and compiler/dependency scratch.
+!rev_d2/firmware/build/bootloader.bin
+!rev_d2/firmware/build/bootloader.elf
+!rev_d2/firmware/build/bootloader.map
+!rev_d2/firmware/build/factory.hex
+!rev_d2/firmware/build/application.sc12
+rev_d2/reports/driver/deps2027/
+rev_d2/reports/driver/classes2027/

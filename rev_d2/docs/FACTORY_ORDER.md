@@ -46,3 +46,7 @@ Include inspection of fine-pitch joints and the five long QFN power pads with su
 Request Economic PCBA first if the exact parts and four-layer board qualify; compare Standard PCBA with the same SMT-only scope. Avoid paying for bottom-side assembly or through-hole work. Standard assembly still charges feeder loading for all 46 SMT types. No programming or functional-test service is included by this package unless separately quoted; the user performs bring-up and programming.
 
 A delivery within one month is plausible with allocated parts and tracked air express. Budget 2–4 weeks as a planning allowance, not a carrier promise; procurement, review holds and customs can exceed it. Country/postcode and order quantity are needed for an actual delivered quote. Have the manual parts arrive in parallel. Do not select a long supplier lead time to obtain a lower component price when the one-month target matters.
+
+## Programming deliverables
+
+The packet includes combined `firmware/build/factory.hex` and `tools/program_factory.tcl` for initial SWD programming/protection. Power cycle and verify protection, then use CAN for setup and later `application.sc12` updates. User programming is the default quoted scope; see [fixture procedure](FIXTURE.md). Do not substitute an application-only ELF/HEX.

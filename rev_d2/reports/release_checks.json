@@ -15,6 +15,7 @@
   "net_tie_isolation": {},
   "firmware_core_tests": "PASS under ASan/UBSan",
   "firmware_application_scenarios": [
+    "maintenance",
     "normal",
     "unconfigured",
     "clock_failure",
@@ -32,7 +33,10 @@
     "rail_chatter"
   ],
   "java_assertions": 1824,
-  "python_test_methods": 5,
+  "python_test_methods": 11,
+  "can_service_tests": "6 host methods plus 2148 simulated flash boundaries",
+  "arm_register_tests": "PASS",
+  "bridge_tests": "Real TCP with mock CAN; 2026 and 2027 adapters compile",
   "cpp_tests": "PASS under ASan/UBSan; WPILib example compiled",
   "analytical_CCM_loop_corners": 192,
   "input_hashes": {
@@ -40,7 +44,10 @@
     "hardware/FRC_Sensor_CAN.kicad_sch": "aa501dab462a714f3f974e9b764cfbd3dc327f48b16bd83eeff4118db670fb34",
     "hardware/design/circuit.json": "9d4beed1848b3ae957e690fe31a257a27fc01294de1dc828635de47be89cf259",
     "bom/BOM_grouped.csv": "e76ce3b540551c3c47d48ac939d7b1f3e8921405343f5c6c7d9dfb6121cca15c",
-    "firmware/build/sensor_can.bin": "e2838eee9ad8a98d332a13f9a3dbbe8bb3a837b71a1b342be2e84fdfc106c5c1",
+    "firmware/build/sensor_can.bin": "1c30e3d5c1153b9b23ffde11e655a9a8219ccaac37dca0dc424a94a302313751",
+    "firmware/build/bootloader.bin": "6689dd3ff573f96f9c3af7b362926c38289ce411f93a527c9760a9434b0d036f",
+    "firmware/build/factory.hex": "f7ecffe85b7b7cef9cd3fae1fc1a232e27ddea647a7f8753bcad4269aa41d354",
+    "firmware/build/application.sc12": "4dd46dadb0e463296a840fee557123ea1b855d544baee8d8a80de8ca3fbb494b",
     "output/assembly/schematic.pdf": "0e88c51a6db885034b984b3d24286bee452b261a09cd82b1c65ef092636de642",
     "bom/Factory_BOM.csv": "29ae3ce90292b8eeab97e81706d634e9f48cec1e0e7510f764becc6e9e480ea5",
     "bom/Hand_solder_BOM.csv": "2f77876b6374b8132199b4b9fc3827757063fd53ad486fd706d861235e9ae398",

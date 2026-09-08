@@ -4,12 +4,12 @@ import hashlib,json,zipfile
 from datetime import datetime,timezone
 R=Path(__file__).resolve().parents[1];D=R/'release';D.mkdir(exist_ok=True)
 patterns=['*.md','tools-requirements.lock','bom/*','docs/*.md','tools/*','licenses/*','scripts/*','host/*.py','examples/**/*',
- 'firmware/Makefile','firmware/README.md','firmware/.clang-format','firmware/*.ld','firmware/src/*','firmware/include/*','firmware/tests/**/*','firmware/third_party/**/*','firmware/build/sensor_can.*',
+ 'firmware/Makefile','firmware/README.md','firmware/.clang-format','firmware/*.ld','firmware/src/*','firmware/include/*','firmware/tests/**/*','firmware/third_party/**/*','firmware/build/sensor_can.*','firmware/build/bootloader.*','firmware/build/factory.hex','firmware/build/application.sc12',
  'hardware/FRC_Sensor_CAN.kicad_pcb','hardware/FRC_Sensor_CAN.kicad_pro','hardware/FRC_Sensor_CAN.kicad_dru','hardware/*.kicad_sch','hardware/*-lib-table','hardware/library/**/*',
  'hardware/design/circuit.py','hardware/design/circuit.json','hardware/design/symbol_pinmap.json','hardware/design/schematic.net.xml','hardware/design/compact_placement.json',
- 'sources/**/*','output/fabrication/*','output/assembly/*','output/mechanical/*','output/documentation/*','output/review/board*.png','output/review/gerber_*',
+ 'sources/**/*','output/fabrication/*','output/assembly/*','output/mechanical/*','output/documentation/*','output/review/board*.png','output/review/service_gui.png','output/review/gerber_*',
  'order/*','reports/erc/final.json','reports/drc/final.json','reports/design_parity.json','reports/board_constraints.json','reports/document_review.json','reports/release_checks.json','reports/visual_review.json','reports/variant_verification.json','reports/electrical/*.json','reports/electrical/*.png','reports/manufacturing/*.json',
- 'reports/firmware-build.log','reports/firmware-tests.log','reports/driver/tests.log','reports/manufacturing-export.log']
+ 'reports/firmware-images.json','reports/firmware-arm-registers.json','reports/bridge2027-tests.log','reports/firmware-build.log','reports/firmware-tests.log','reports/driver/tests.log','reports/manufacturing-export.log']
 selected=sorted({p for pat in patterns for p in R.glob(pat) if p.is_file() and '__pycache__' not in p.parts and p.suffix not in ('.pyc','.o','.d')})
 assert any(p.name=='board_3d_final.png' for p in selected)
 entries=[dict(path=p.relative_to(R).as_posix(),bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in selected]

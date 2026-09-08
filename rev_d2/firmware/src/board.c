@@ -6,7 +6,17 @@ volatile uint32_t board_millis;
 #define FLASH_B ((const sc_config_record *)0x08007c00u)
 void _init(void) {}
 void _fini(void) {}
-void SystemInit(void) { /* Reset starts on the 8MHz HSI. Sensor supplies are independent of the MCU. */ }
+void SystemInit(void) {
+#ifdef SC_APPLICATION
+    /* Cortex-M0 has no VTOR. Reserve vectors at SRAM base in both linkers. */
+    volatile uint32_t *ram=(volatile uint32_t *)0x20000000u;
+    const uint32_t *flash=(const uint32_t *)0x08002000u;
+    for(unsigned i=0;i<48;i++)ram[i]=flash[i];
+    RCC->APB2ENR|=RCC_APB2ENR_SYSCFGEN;(void)RCC->APB2ENR;
+    SYSCFG->CFGR1=(SYSCFG->CFGR1&~SYSCFG_CFGR1_MEM_MODE)|3u;
+    __DSB();__ISB();__enable_irq();
+#endif
+}
 void SysTick_Handler(void) {
     board_millis++;
 }
@@ -197,13 +207,15 @@ bool board_can_init(uint8_t id) {
     CAN->FMR |= CAN_FMR_FINIT;
     CAN->FA1R = 0;
     CAN->FM1R = 0;
-    CAN->FS1R = 3;
+    CAN->FS1R = 7;
     CAN->FFA1R = 2; /* Broadcast Disable has its own FIFO, ahead of normal commands. */
     CAN->sFilterRegister[0].FR1 = (sc_can_id(id, 0) << 3) | CAN_RI0R_IDE;
     CAN->sFilterRegister[0].FR2 = (0x1fff003fu << 3) | CAN_RI0R_IDE | CAN_RI0R_RTR;
     CAN->sFilterRegister[1].FR1 = CAN_RI0R_IDE; /* Extended data frame ID0. */
     CAN->sFilterRegister[1].FR2 = 0xfffffffeu;  /* Exact ID, IDE and RTR. */
-    CAN->FA1R = 3;
+    CAN->sFilterRegister[2].FR1 = (((10u<<24)|(8u<<16)|(0x300u<<6))<<3)|CAN_RI0R_IDE;
+    CAN->sFilterRegister[2].FR2 = 0xfffffffeu;
+    CAN->FA1R = 7;
     CAN->FMR &= ~CAN_FMR_FINIT;
     CAN->MCR &= ~CAN_MCR_INRQ;
     /* RXD is recessive in initial transceiver standby. Bound initialization. */

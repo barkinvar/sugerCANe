@@ -16,11 +16,11 @@ There are still **46 SMT MPN types**. Substituting cheaper resistors lowers comp
 | Boards | Parts purchase cash per board | Parts purchase cash for lot |
 |---|---|---|
 | 1 | $55.27 | $55.27 |
-| 5 | $40.5 | $202.49 |
+| 5 | $40.40 | $202.01 |
 | 10 | $34.69 | $346.87 |
 | 25 | $32.23 | $805.83 |
 
-Includes all SMT parts, six terminal blocks, three headers, three caps, and distributor minimum-order/multiple rounding. At ten boards, SMT purchasing is $26.10 per board and manual parts/caps are $8.59. The calculation uses the price break earned by the actual purchase quantity; [details](../bom/cost_detail.csv) show every line and leftover quantity. No attrition allowance is included because the factory’s requirements are unknown.
+Includes all SMT parts, six terminal blocks, three headers, three caps, and distributor minimum-order/multiple rounding. At ten boards, SMT purchasing is $26.10 per board and manual parts/caps are $8.59. The calculation minimizes purchase cash across MOQ/multiple rounding and all published price breaks; [details](../bom/cost_detail.csv) show every line and leftover quantity. No attrition allowance is included because the factory’s requirements are unknown.
 
 D’s $54.89 figure was a quantity-one consumed-parts estimate. D-2’s consumed-parts figure at each supplier’s first saleable tier is $44.16, about 19.5% lower, including the new headers/caps. Buying distributor minimums for just ONE D-2 board instead costs $55.27 in this model. **A single board is not a good cost target with this BOM.** Batch pricing is the larger saving; comparing D’s one-board figure to D-2’s ten-board figure would exaggerate the substitution savings.
 
@@ -47,3 +47,11 @@ Start with an exact-MPN SMT quote and the [factory package](../order/RevD2_SC12_
 [JLCPCB’s lead-time explanation](https://jlcpcb.com/help/article/smt-service-lead-time-overview) describes assembly time after bare boards are ready and explicitly calls out review and component-preparation dependencies. Fast SMT alone is not the complete delivery time.
 
 **Planning judgment:** delivery within a month is plausible with all parts allocated, prompt review and tracked air express. Allow 2–4 weeks for planning, subject to a destination-specific quote; procurement delays, customs or production holds can push it beyond a month. Order quantity and destination/postcode are still unspecified, so no shipping price or arrival date is claimed. Buy the manual components in parallel. No order, payment or supplier message has been sent.
+
+## Further optimization delivered with CAN service
+
+The purchasing script checks whether buying to the next price break costs less in total. At five boards, three precision resistor lines are cheaper as ten-packs, saving $0.48 per order ($0.096/board). Ten-board purchasing remains $34.69/board. No components were removed or changed for firmware 0.5.0; the bootloader fits the existing MCU.
+
+[Assembly scenarios](../bom/assembly_scenarios.csv) compare parts with published setup/stencil/feeder/fixture fees. These are partial subtotals, not quotes. For 5/10/25 boards, Standard subtotals are $64.51/$46.75/$37.05 per board before PCB, placement, inspection, attrition, handling, programming/test, freight and tax. Economic is lower on this restricted basis when no more than 36 types incur its extended feeder charge. With all 46 charged, Economic is higher; confirm Basic/promotional status and service eligibility.
+
+The [exact 1824420000 LCSC listing](https://www.lcsc.com/product-detail/image/1824420000_C5482136.html) reviewed shows zero stock; its reference price is not counted as available savings. A latched connector redesign must include housings/contacts/crimp labor and vibration qualification. Keep the circuit/terminals until a reviewed replacement and complete quote justify a new hardware revision.
