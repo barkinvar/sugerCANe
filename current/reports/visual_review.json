@@ -1,6 +1,6 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-09T23:25:18.376501+00:00",
+  "reviewed_utc": "2026-09-09T23:27:03.026864+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
@@ -36,9 +36,9 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "e6333b0c6cc3fb70f1ec0f3bdeaa000caa7438302a614c5656900cfa4b408209",
-      "scope": "All 38 pages compared to d23b27d at 1x. Changed pages 3, 35 and 37 visually reviewed at 1.4x: convex hill, soft-serif wordmark, Fraunces source and reproduction details. All other pages pixel-identical.",
-      "reviewed_utc": "2026-09-09T23:25:18.376501+00:00"
+      "sha256": "a5271ef9bf633f230052808348ae6d19634b39b2acdb2b8c533918412e5faa1f",
+      "scope": "All 38 pages compared to a906bf5 at 1x. Page 3 visually reviewed at 1.4x: canonical barkinvar/sugerCANe repository link and folder-map reference fit within the overview. All other pages pixel-identical.",
+      "reviewed_utc": "2026-09-09T23:27:03.026864+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
@@ -106,15 +106,13 @@
     }
   ],
   "limitations": "Nominal CAD/PDF inspection only. Fresh route DC and firmware waveform replay pass; full combined startup remains incomplete. No physical board, optical, vibration, assembly-yield or EMC qualification.",
-  "page_comparison_baseline_commit": "d23b27d1fb6bbfd0ae97307651bc09f7c9a87282",
+  "page_comparison_baseline_commit": "a906bf54152b1bcafabd5bf30532981a417ae8fd",
   "rendered_page_comparison": {
     "handbook": {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
       "pages": 38,
       "changed_pages": [
-        3,
-        35,
-        37
+        3
       ],
       "all_other_pages_pixel_identical": true
     }

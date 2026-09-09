@@ -1,5 +1,7 @@
 # sugarCANe / SC12 Rev H — current design
 
+[Repository: barkinvar/sugerCANe](https://github.com/barkinvar/sugerCANe) · [Folder map](../README.md#folder-map)
+
 Three digital sensor inputs over CAN, with regulated **5 V / 12 V sensor power** and software-selectable **NPN, PNP, push-pull, floating detection and keeper**. Removable 2 mm jumpers select each port's power voltage. All components mount on the top.
 
 The soft-serif **sugarCANe** wordmark and original cane illustration on a convex hill fill the underside; it carries no other text. Connector and voltage labels remain on top, with the full programming map in the wiring guide. [Bottom render](output/review/board_bottom.png) · [Vector artwork and font provenance](hardware/artwork/README.md).
