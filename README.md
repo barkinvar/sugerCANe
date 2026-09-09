@@ -4,6 +4,8 @@ A compact interface for **three NPN, PNP or logic sensors** on an FRC robot. Eac
 
 **Start with [Rev F in `current/`](current/README.md).** It is an unbuilt engineering prototype, with [physical qualification still pending](current/docs/VALIDATION.md). It uses its own protocol and drivers; it is not compatible with CTRE Phoenix or GrappleHook.
 
+**Power validation needs review.** Normal-load simulations pass, but capacitive startup, rapid fault reset and short-pulse stress have unresolved findings. Read the [simulation results](current/docs/VALIDATION.md#manufacturer-model-transient-screen) before treating this design as ready for production.
+
 ![SC12 Rev F](current/output/review/board_3d_final.png)
 
 | Current design | Detail |
@@ -26,7 +28,7 @@ Rev F saves about **$8 in parts per board at ten boards** compared with E and re
 | Understand the power circuit | [Circuit explanation](current/DESIGN_PLAN.md) · [schematic PDF](current/output/assembly/schematic.pdf) |
 | Assemble or request a quote | [Factory instructions](current/docs/FACTORY_ORDER.md) · [factory packet](current/order/RevF_SC12_Factory_Upload.zip) |
 | Program or update over CAN | [CAN service](current/docs/CAN_SERVICE.md) · [robot drivers](current/examples/README.md) |
-| Review CAD and tests | [Current design](current/README.md) · [validation summary](current/reports/release_checks.json) |
+| Review CAD and tests | [Current design](current/README.md) · [power simulations](current/docs/VALIDATION.md#manufacturer-model-transient-screen) · [validation summary](current/reports/release_checks.json) |
 | Download the full design | [Rev F source/review ZIP](current/release/FRC_Sensor_CAN_RevF_SC12_Prototype.zip) |
 
 ## Why the revisions differ

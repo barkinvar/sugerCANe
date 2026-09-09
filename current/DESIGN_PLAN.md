@@ -20,7 +20,7 @@ At the modeled worst normal load, the boost needs about 1.02 A from the internal
 
 The unused fourth LM339LV comparator now monitors a divided 12 V rail. Its open-drain output and U9 fault share PG_12V. Nominal rising threshold is about 9.3 V, with a wide 8.0–10.6 V modeled range. It detects a missing/collapsed rail, **not** compliance with a sensor's minimum voltage. Firmware keeps the existing 100 ms health qualification. V12 startup, sensor readiness and thresholds need measurement.
 
-U8 compensation is 13 kΩ / 33 nF. A 512-corner averaged CCM sensitivity screen passes its chosen margins, but its modulator-gain and amplifier bounds are engineering assumptions. It is not a vendor-validated switching model; DCM, cascaded-regulator interaction, startup, shorts and load steps remain bench tests.
+U8 compensation is 13 kΩ / 33 nF. A 512-corner averaged CCM sensitivity screen passes its chosen margins, but its modulator-gain and amplifier bounds are engineering assumptions. A separate [manufacturer-model transient screen](docs/VALIDATION.md#manufacturer-model-transient-screen) checks the protected boost's startup, load steps and short response. It uses an idealized upstream source; DCM, cascaded-regulator interaction, startup, shorts and load steps still require bench measurements.
 
 ## Inputs, jumpers and layout
 

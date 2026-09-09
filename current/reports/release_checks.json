@@ -1,6 +1,6 @@
 {
   "revision": "F SC12",
-  "status": "PASS engineering checks; physical qualification pending",
+  "status": "REVIEW required: circuit consistency checks pass; transient screening has unresolved findings",
   "physical_tests_performed": false,
   "erc_violations": 0,
   "drc_violations": 0,
@@ -64,5 +64,17 @@
     "hardware/regulated_12v.kicad_sch": "1fbcd4329f6ed09fe4d2e18d1afcb63ff88a28a6eb4018a466fdfc6a73a04fef",
     "hardware/sensor_power.kicad_sch": "9de7159a429f2d07e53b4ee291b066c4741ce2b769ebe79166c55cfbb7eb7168"
   },
-  "limitations": "No measured efficiency, thermal, surge, EMC, sensor startup, actual MCU/CAN, solder yield or enclosure fit qualification. See docs/VALIDATION.md."
+  "limitations": "No measured efficiency, thermal, surge, EMC, sensor startup, actual MCU/CAN, solder yield or enclosure fit qualification. See docs/VALIDATION.md.",
+  "vendor_model_transient_cases": [
+    "switch_sanity",
+    "startup_full_load",
+    "startup_half_timestep",
+    "load_steps",
+    "low_input_capacitive_start",
+    "hot_short_reset",
+    "cold_short",
+    "startup_nominal_caps"
+  ],
+  "spice_scope": "Protected boost only; idealized upstream supply, typical silicon, no thermal or physical qualification",
+  "spice_result": "FAIL"
 }

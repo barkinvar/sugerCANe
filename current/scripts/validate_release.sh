@@ -7,6 +7,7 @@ python scripts/build_bom.py
 python scripts/estimate_cost.py
 python scripts/check_electrical.py > reports/electrical/check.log
 python scripts/check_converter_loop.py > reports/electrical/loop.log
+python scripts/check_boost_spice.py --verify-report --require-pass
 kicad-python scripts/check_board_constraints.py > reports/board-constraints.log
 bash scripts/test_firmware.sh
 bash scripts/test_drivers.sh > reports/driver/tests.log 2>&1

@@ -1,6 +1,6 @@
 """Collect current engineering evidence without substituting it for bench tests."""
 from pathlib import Path
-import json,re,hashlib
+import json,re,hashlib,subprocess,sys
 R=Path(__file__).resolve().parents[1]
 def read(path):return json.loads((R/path).read_text())
 erc=read('reports/erc/final.json');drc=read('reports/drc/final.json')
@@ -15,9 +15,16 @@ java=int(re.search(r'PASS: (\d+) 12 V Java assertions',drivers)[1]);assert 'Ran 
 assert 'PASS: WPILib 2027.0.0-alpha-7' in (R/'reports/bridge2027-tests.log').read_text()
 assert read('reports/firmware-images.json')['result']=='PASS'
 loop=read('reports/electrical/converter_loop.json');assert loop['result']=='PASS analytical screening only'
+subprocess.run([sys.executable,str(R/'scripts/check_boost_spice.py'),'--verify-report'],check=True)
+spice=read('reports/electrical/boost_spice.json')
 tracked=['hardware/FRC_Sensor_CAN.kicad_pcb','hardware/FRC_Sensor_CAN.kicad_sch','hardware/design/circuit.json','bom/BOM_grouped.csv','firmware/build/sensor_can.bin','firmware/build/bootloader.bin','firmware/build/factory.hex','firmware/build/application.sc12','output/assembly/schematic.pdf']
 tracked += ['bom/Factory_BOM.csv','bom/Hand_solder_BOM.csv','bom/ACCESSORIES.csv','output/assembly/CPL_JLCPCB.csv']
 factory=read('reports/manufacturing/factory_files.json');assert factory['result']=='PASS' and factory['factory_smt_placements']==110 and factory['hand_solder_parts']==9
 tracked += [p.relative_to(R).as_posix() for p in sorted((R/'hardware').glob('*.kicad_sch')) if p.name!='FRC_Sensor_CAN.kicad_sch']
 out=dict(revision='F SC12',status='PASS engineering checks; physical qualification pending',physical_tests_performed=False,erc_violations=0,drc_violations=0,unconnected_items=0,model_schematic_pcb_parity=True,fitted_parts=119,portable_models=assembly['portable_models_verified'],manufacturing_layers=assembly['graphic_layers'],copper_layers=4,gerber_shorts=copper['shorts'],gerber_opens=copper['opens'],net_tie_isolation=copper['intentional_net_tie_isolation']['extra_shorts'],firmware_core_tests='PASS under ASan/UBSan',firmware_application_scenarios=scenarios,java_assertions=java,python_test_methods=12,can_service_tests="7 host methods plus 2148 simulated flash boundaries",arm_register_tests=read("reports/firmware-arm-registers.json")["result"],bridge_tests="Real TCP with mock CAN; 2026 and 2027 adapters compile",cpp_tests='PASS under ASan/UBSan; WPILib example compiled',analytical_CCM_loop_corners=loop['corners'],input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in tracked},limitations='No measured efficiency, thermal, surge, EMC, sensor startup, actual MCU/CAN, solder yield or enclosure fit qualification. See docs/VALIDATION.md.')
+out['vendor_model_transient_cases']=[r['case']['name'] for r in spice['cases']]
+out['spice_scope']='Protected boost only; idealized upstream supply, typical silicon, no thermal or physical qualification'
+out['spice_result']=spice['result']
+if spice['result']=='FAIL':
+ out['status']='REVIEW required: circuit consistency checks pass; transient screening has unresolved findings'
 (R/'reports/release_checks.json').write_text(json.dumps(out,indent=2)+'\n');print(out['status'])

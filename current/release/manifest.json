@@ -1,23 +1,23 @@
 {
   "project": "SC12 Rev F",
   "status": "Unbuilt prototype",
-  "created_utc": "2026-09-09T00:43:49.042543+00:00",
-  "file_count": 293,
+  "created_utc": "2026-09-09T03:58:30.316130+00:00",
+  "file_count": 302,
   "files": [
     {
       "path": "DESIGN_PLAN.md",
-      "bytes": 4316,
-      "sha256": "f852a57bc491612eb6208b384941577067f239e8cf2a2b9cdca98789f2c289fd"
+      "bytes": 4496,
+      "sha256": "757cc59a5b2ad300f2d8a33cbbafe7539379a97a29447751b9cc90a1ed555b5a"
     },
     {
       "path": "README.md",
-      "bytes": 3444,
-      "sha256": "27226ce869cb0615ac1ecb2aaf40fc0edfa7b83c1b70de70b1f5fdcdf98e1e9e"
+      "bytes": 3567,
+      "sha256": "1e0effbd64811ee92150887e049384699515e96fc6a31b4e58e2244522a4d06d"
     },
     {
       "path": "TOOLS.md",
-      "bytes": 3101,
-      "sha256": "b6676562f92958ac6decf499226fa100fcb59c0195e14d56edddfcbc0dbe2e2b"
+      "bytes": 5114,
+      "sha256": "478985d851ca17302a706c8b233c9602c34d9320c728c5c50bbe1bb32fc71a96"
     },
     {
       "path": "bom/ACCESSORIES.csv",
@@ -111,8 +111,8 @@
     },
     {
       "path": "docs/FACTORY_ORDER.md",
-      "bytes": 5740,
-      "sha256": "56f6014525dba5b09565b53549bcc3319fe8188543b786093f158dcb017cadd1"
+      "bytes": 5995,
+      "sha256": "3721d03e1bf5f18ff28f6e2a7f611dc1de1f998d48f98ea8fbf7a399b7282ffe"
     },
     {
       "path": "docs/FIXTURE.md",
@@ -126,13 +126,13 @@
     },
     {
       "path": "docs/SOURCES_AND_LICENSES.md",
-      "bytes": 4010,
-      "sha256": "59c8d375797ca7dc4b1fde1e7e3c1c450024a57b95ceb47a653a56d005daad11"
+      "bytes": 5223,
+      "sha256": "a712a5ad90639401279b5d588838475bb8d30c1c4f88de28ec1869c471276c26"
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 8275,
-      "sha256": "353615a14d6bc4193db31102d1207c80e28b8c8a64af791b180a4680854f4309"
+      "bytes": 14363,
+      "sha256": "68266cdd9d1b96de94b724b7c5507292fd8c6645986917d8023a106f533665c8"
     },
     {
       "path": "docs/WIRING.md",
@@ -886,13 +886,13 @@
     },
     {
       "path": "order/RevF_SC12_Factory_Upload.zip",
-      "bytes": 2925226,
-      "sha256": "c89e0f86357af9282a0a3001e15de98a00003ad033d22639a97214b251432eab"
+      "bytes": 3368318,
+      "sha256": "afae1d670f5316eea94ea26c52cf630a11222d183d10c5adfdfa94dd69ba2661"
     },
     {
       "path": "order/RevF_SC12_Factory_Upload.zip.sha256",
       "bytes": 95,
-      "sha256": "92f631c04ad09ff86c97c935ac1abf883de104e81a35fa3335226f7f68fc9ea7"
+      "sha256": "b141c9aec30ca65ef7e48715dae38ffbf92e329db050bbd250c7e214e37badee"
     },
     {
       "path": "order/RevF_SC12_Gerbers.zip",
@@ -957,12 +957,12 @@
     {
       "path": "output/documentation/BOM_RevF_SC12.pdf",
       "bytes": 7281,
-      "sha256": "9d6f9674839e1192e458b9656bde161366080eaea7fbdfc5ddc1ef574e18772e"
+      "sha256": "fa98385de715fee4c451c730487f62eb5f6bb4bdfbec75245e06a42752f56a14"
     },
     {
       "path": "output/documentation/SC12_RevF_Handbook.pdf",
-      "bytes": 1629742,
-      "sha256": "c1615da0886db9b2bb4dc9384fcd8e87b4ccf3d5f75a20d95e9f368fab43bacb"
+      "bytes": 1639938,
+      "sha256": "eb632aa40f60b9141a497d7e10e0603c2055ad3e605b6b79a47ecb0f06ebe427"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl",
@@ -1057,7 +1057,7 @@
     {
       "path": "output/mechanical/mechanical_drawing.pdf",
       "bytes": 7062,
-      "sha256": "733c827d5109a3eecef9be96a7b051653223c63fbecbf8c56892fa06677b2647"
+      "sha256": "025c06e6a23da94b916499b1f8121ca243b849729e8e7d285e3018870b22ef56"
     },
     {
       "path": "output/review/board_3d_final.png",
@@ -1122,7 +1122,7 @@
     {
       "path": "reports/document_review.json",
       "bytes": 949,
-      "sha256": "6c298f2354133719f182ff770eaef2fb6efb37e81f1199ebecce677403bf0053"
+      "sha256": "979e684f04311d2e6ab38b9c2d9c7fcce9c0d04d02f2f965e61d57202d75e015"
     },
     {
       "path": "reports/drc/final.json",
@@ -1133,6 +1133,26 @@
       "path": "reports/driver/tests.log",
       "bytes": 1609,
       "sha256": "b93ebe0990be062215a78bafc9e2d5375ae7c7ba2bd9c3721afd483f349d4215"
+    },
+    {
+      "path": "reports/electrical/boost_spice.json",
+      "bytes": 8800,
+      "sha256": "f1a46ee615ac12b4197bb45a13ef58f442340f5a895228825303da731a19bb0b"
+    },
+    {
+      "path": "reports/electrical/boost_spice.png",
+      "bytes": 300182,
+      "sha256": "167d44067061cff4ba05b4a9b9b4674bea46db61ccdf3f2f5cda2fe80603da97"
+    },
+    {
+      "path": "reports/electrical/boost_spice_experiments.json",
+      "bytes": 11564,
+      "sha256": "cadc06a430ffa43c833c122c30546768a32e0900e75f7f0d76935ce12fa7c08f"
+    },
+    {
+      "path": "reports/electrical/boost_spice_experiments.png",
+      "bytes": 178112,
+      "sha256": "ff6a9aca1204b89132083722e2475efaebaec90c1c61f82c72f2ba4cf270b98e"
     },
     {
       "path": "reports/electrical/converter_loop.json",
@@ -1216,8 +1236,8 @@
     },
     {
       "path": "reports/release_checks.json",
-      "bytes": 3506,
-      "sha256": "9d0fe627360d6168b745d73eea3e1c07d2567897fa2a47054d01884c0286bc34"
+      "bytes": 3929,
+      "sha256": "789b079863cbfdca7ef8523d302adf9acfbb79851c6e0707e4a7b6e69a1634fc"
     },
     {
       "path": "reports/variant_verification.json",
@@ -1226,8 +1246,8 @@
     },
     {
       "path": "reports/visual_review.json",
-      "bytes": 3207,
-      "sha256": "078eeb6abc122dd91dd3741b47afad8987c11b00802b0e950ff19be1646ea38b"
+      "bytes": 4016,
+      "sha256": "34ffea43502625ce91fe3bd0aa2c400eb59feaca2a62d5276c74621ad570c971"
     },
     {
       "path": "scripts/add_ground_planes.py",
@@ -1246,8 +1266,8 @@
     },
     {
       "path": "scripts/build_documents.py",
-      "bytes": 7224,
-      "sha256": "c46e11c34c4eac8570cd0471dacafba3ee140111a03770d36cf221e1689bd770"
+      "bytes": 7431,
+      "sha256": "6a91b96d914810bc0e8d6957c72d6545ae670ca641dccc9834166bd97101d4ea"
     },
     {
       "path": "scripts/build_factory_files.py",
@@ -1268,6 +1288,11 @@
       "path": "scripts/check_board_constraints.py",
       "bytes": 4835,
       "sha256": "354925dbdee6b54d37d2e17cf7e54f835ec58f920a2c8ba7e2a8c79dbc8d41e8"
+    },
+    {
+      "path": "scripts/check_boost_spice.py",
+      "bytes": 21909,
+      "sha256": "2ec35f90a05cb0804e2689962bec8426d1e8e65238824289ca379555557f1df5"
     },
     {
       "path": "scripts/check_converter_loop.py",
@@ -1386,13 +1411,13 @@
     },
     {
       "path": "scripts/validate_release.sh",
-      "bytes": 1203,
-      "sha256": "7f2c097b1efa461d90af61bb97a99455a77d362dd93f0f398b21bcf873044a75"
+      "bytes": 1270,
+      "sha256": "2275a12b1c06271cd122dae447963bafa0a084cc87743fa8090e566a0b0e9bda"
     },
     {
       "path": "scripts/verify_archive.py",
-      "bytes": 1547,
-      "sha256": "6e76bfc4f4259ec06fe9d431d79d6241a8bbf988c96a6ba099a3f122acdb26ea"
+      "bytes": 1800,
+      "sha256": "e3fd19d9ada11966e000f3ec228d750b9d31b077c41895a5f6cc857ec9d58a9a"
     },
     {
       "path": "scripts/verify_gerber_connectivity.py",
@@ -1411,8 +1436,8 @@
     },
     {
       "path": "scripts/write_validation_summary.py",
-      "bytes": 3427,
-      "sha256": "740b7a78a45f35d1ff586b20a438bbafab3ba219ea55dc17911f165fd1232721"
+      "bytes": 3971,
+      "sha256": "6bb33c3fc54c1b0c4c269d04a37acbcda6c33f4903295c862f08e7e723c23acd"
     },
     {
       "path": "sources/datasheets/samsung_CL31A226_characteristics.json",
@@ -1433,6 +1458,26 @@
       "path": "sources/datasheets/tps61085.pdf",
       "bytes": 1076239,
       "sha256": "1bb954788393db7f1c4622d5ea790a942943c1ee17eae2df73425509404f33c3"
+    },
+    {
+      "path": "sources/spice/B240A.lib",
+      "bytes": 1384,
+      "sha256": "be511c04e88f3ee164258712e0d936b7943f02256243ec4a0718985e002ac2ab"
+    },
+    {
+      "path": "sources/spice/manifest.json",
+      "bytes": 975,
+      "sha256": "bed3dd66311f512eb848e382e42484f0bffe674a6491cbf69784fdb10bcdb508"
+    },
+    {
+      "path": "sources/spice/tps2553-1.lib",
+      "bytes": 14724,
+      "sha256": "2c4436b54cf8efc9dd522e110708fcb942e741a9620d6f442c577f787f451622"
+    },
+    {
+      "path": "sources/spice/tps61085.lib",
+      "bytes": 13562,
+      "sha256": "123cb9408dc926fcff98e5a2e83be7d95e950e86d49bb76dc63892b8a8fa3111"
     },
     {
       "path": "tools/bridge2027_dependencies.json",

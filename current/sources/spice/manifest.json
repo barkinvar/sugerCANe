@@ -1,0 +1,23 @@
+[
+  {
+    "file": "tps61085.lib",
+    "url": "https://www.ti.com/lit/zip/slim133b",
+    "retrieved": "2026-09-08",
+    "sha256": "123cb9408dc926fcff98e5a2e83be7d95e950e86d49bb76dc63892b8a8fa3111",
+    "note": "Final 1.10, PSpice 16.0, original bytes from SLIM133A/TPS61085_PSPICE_TRANS/tps61085.lib"
+  },
+  {
+    "file": "tps2553-1.lib",
+    "url": "https://www.ti.com/lit/zip/slvm426a",
+    "retrieved": "2026-09-08",
+    "sha256": "2c4436b54cf8efc9dd522e110708fcb942e741a9620d6f442c577f787f451622",
+    "note": "Final 1.00, PSpice 16.2, original bytes from SLVM426/TPS2553-1_PSPICE_TRANS/tps2553-1_trans.lib"
+  },
+  {
+    "file": "B240A.lib",
+    "url": "https://www.diodes.com/spice/download/94/B240A.spice.txt",
+    "retrieved": "2026-09-08",
+    "sha256": "be511c04e88f3ee164258712e0d936b7943f02256243ec4a0718985e002ac2ab",
+    "note": "Plaintext transcribed from manufacturer web response, preserving model parameters and notice; server rejected direct download"
+  }
+]

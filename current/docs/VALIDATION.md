@@ -6,7 +6,36 @@
 
 The release contains native KiCad electrical/design-rule reports, explicit pin-model/schematic/PCB parity, placement/selector/programming-contact checks, manufacturing-file parsing and copper checks, host firmware tests, and Java/C++/Python protocol tests. These check design consistency and modeled behavior. Mocked peripheral tests do not prove STM32 timing or CAN electrical operation.
 
-Electrical checks sweep input-threshold tolerances, divider accuracy, resistor stress, fuse/load budgets and manufacturer-curve capacitor derating. The separate converter model screens boost CCM loop corners only. Neither substitutes for hardware measurement. Reports state their assumptions rather than treating typical values as guaranteed bounds.
+Electrical checks sweep input-threshold tolerances, divider accuracy, resistor stress, fuse/load budgets and manufacturer-curve capacitor derating. The averaged converter model screens boost CCM loop corners; the additional manufacturer-model transient screen below checks startup and faults. Neither substitutes for hardware measurement. Reports state their assumptions rather than treating typical values as guaranteed bounds.
+
+## Manufacturer-model transient screen
+
+**Outcome: review required.** The nominal-load cases pass, but this is not an all-pass power qualification. Failed cases remain in the published data, and `validate_release.sh` now stops at the simulation gate. An archive-integrity pass only verifies that the delivered files match their manifest.
+
+| Check | Observed result |
+|---|---|
+| Full-load startup, fixed derated capacitors | PASS: first 11.4 V at 3.632 ms; 11.919–12.009 V during 5–6 ms, about 12.00 V average into 40 Ω |
+| Numerical repeat | Halving maximum timestep changes startup crossing by 0.127 µs and final extrema by less than 0.6 mV |
+| Typical Samsung C(V), unchanged 100 nF C66 | PASS diagnostic: first 11.4 V at 3.850 ms, 11.937–12.009 V during 6–7 ms, no boost UVLO retry. Typical behavior does not establish production corners |
+| 30→300→0 mA, 10 µs transitions | PASS: 11.252–12.422 V over the tested steps; no false U9 latch |
+| Standalone protection switch | PASS: approximately 1.199 A limiting, 7.494 ms fault delay, stays latched after removing the short; later power cycle recovers |
+| Startup into a short | PASS for modeled latch behavior; remains disconnected after removing the short |
+| Constant nameplate 22 µF input / 66 µF output, lower input | FAIL: four boost UVLO drops; peak 11.393 V and no regulated startup within 10 ms. This deliberately neglects ceramic DC-bias reduction |
+| 66 µF fixed output bank plus 100 µF external, lower input, 40 Ω load | FAIL: repeated boost UVLO/soft-start retries; output never reaches 11.4 V in the 12 ms run (peak 9.752 V) |
+| Rapid reset after a running short | FAIL in the model: a roughly 2 ms off interval does not recover. The same behavior occurs with the switch alone; its deglitch state remains high while IN is zero. Actual reset timing needs bench confirmation |
+| Hot-short peak-current model validity | REVIEW: linear-L model predicts 8.613 A, above 8 A for about 4.7 µs. The Bourns 8 A specification represents 20% inductance drop, not a destruction limit; this model cannot establish the actual peak or component survival |
+
+The [reproducible ngspice harness](../scripts/check_boost_spice.py) combines TI's TPS61085 and TPS2553-1 transient models with the Diodes B240A rectifier model. Device pin order is mapped explicitly from the maintained circuit, including the switch model's extra ground/pad port. Original model files, notices and hashes are retained. [Results and assumptions](../reports/electrical/boost_spice.json); [waveform overview](../reports/electrical/boost_spice.png); [run instructions](../TOOLS.md#power-transient-simulation).
+
+The eight scenarios also include startup using constant nameplate capacitances (22 µF input / 66 µF output). Constant 66 µF overstates this ceramic bank's capacitance at 12 V; it is a conservative screen, not an exact prediction of the bare board. The additional 100 µF case is an engineering stress case, not a guaranteed maximum sensor capacitance. Resistive startup loads reach 300 mA at 12 V; actual sensor startup and constant-power behavior can differ.
+
+[Four diagnostic experiments](../reports/electrical/boost_spice_experiments.json) and their [plots](../reports/electrical/boost_spice_experiments.png) separate these effects. Substituting hypothetical 220 nF or 330 nF C66 values still fails the 66+100 µF stress case within 14 ms (peaks 10.497 V and 11.004 V respectively); neither is an accepted fix. The unchanged circuit passes the additional typical C(V) run. Its differential-capacitance interpolation differs from the retained Samsung data by less than 1% over 0–13 V, and a standalone ramp check agrees with the expected charging current within 0.085%. This validates the model implementation, not actual capacitor production spread. The fourth experiment reproduces the rapid-reset issue using U9 alone. Diagnostic records retain exact netlists and raw-trace hashes; reproduce each with its recorded `--case` command.
+
+The upstream LMR51420 model is encrypted, so this simulation uses an ideal ramped 5 V source with 50 mΩ series resistance, a 25.92 µF reservoir and a 400 mA parallel load representing the other rail and logic. It does **not** simulate the buck control loop, its current limit, battery wiring or robot brownouts. The boost's 10.8238 µF normal output bank and 8.64 µF input capacitor use fixed derated values; actual capacitance changes with voltage. Capacitor ESR is assumed, inductor DCR uses the Bourns 32 mΩ typical value, and silicon models run at 25°C. Thermal effects, component production corners, extracted PCB/cable parasitics, input comparators and firmware are outside this SPICE model. The plotted fault signal is U9's output alone; the physical U7D comparator also pulls that net low below its threshold.
+
+PSpice syntax needed minor compatibility changes, including Boolean XOR. Gear integration was required because trapezoidal integration produced an artificial latch reset. This port has not been correlated against the original simulator or measured hardware. No semiconductor model parameters were tuned to obtain a pass. A short can produce an initial current spike and discharge stored capacitor energy before the switch limits/latches; the result does not certify peak fault energy or fuse coordination. Acceptance bands in the harness are screening criteria, not revised product specifications.
+
+Before the next hardware iteration, define and qualify the allowed sensor capacitance/inrush at full load, revisit the soft-start margin, and measure a running short with the actual input/output capacitors and inductor. Increasing U9's current limit is not an automatic fix: the shared 2 A buck budget must still hold. A larger C66 using the existing 1 µF BOM value is a candidate for further evaluation, not a validated change. Measure reset recovery across short and long power interruptions. The PCB/BOM still specify 100 nF C66; simulation experiments do not change fitted hardware.
 
 ## Prototype gates before production release
 

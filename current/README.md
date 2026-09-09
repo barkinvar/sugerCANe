@@ -2,7 +2,7 @@
 
 Three digital sensor inputs over CAN, with regulated **5 V / 12 V sensor power** and software-selectable **NPN, PNP, push-pull, floating detection and keeper**. Removable 2 mm jumpers select each port's power voltage. All components mount on the top.
 
-**Unbuilt prototype.** Engineering checks pass; startup, shorts, temperature, actual sensors, robot CAN and vibration still require [physical qualification](docs/VALIDATION.md). This independent design uses its own protocol and drivers; it is not CTRE Phoenix or GrappleHook compatible.
+**Unbuilt prototype; power validation needs review.** Circuit consistency checks pass. Transient simulation has unresolved capacitive-startup, rapid-reset and short-pulse findings; see [results and physical qualification](docs/VALIDATION.md). This independent design uses its own protocol and drivers; it is not CTRE Phoenix or GrappleHook compatible.
 
 ![Rev F board](output/review/board_3d_final.png)
 
@@ -30,7 +30,7 @@ Rev F replaces E's battery-fed buck-boost stage with a protected boost from the 
 | Write robot code | [Examples/drivers](examples/README.md), [CAN protocol](docs/CAN_PROTOCOL.md) |
 | Edit the board | [KiCad project](hardware/FRC_Sensor_CAN.kicad_pro), [PCB](hardware/FRC_Sensor_CAN.kicad_pcb), [interactive BOM](output/assembly/interactive_bom.html) |
 | Design an enclosure | [STEP](output/mechanical/FRC_Sensor_CAN.step), [mechanical drawing](output/mechanical/mechanical_drawing.pdf) |
-| Review or reproduce checks | [Validation](docs/VALIDATION.md), [check summary](reports/release_checks.json), [tool setup](TOOLS.md) |
+| Review or reproduce checks | [Validation](docs/VALIDATION.md), [power simulations](reports/electrical/boost_spice.json), [check summary](reports/release_checks.json), [tool setup](TOOLS.md) |
 | Download everything | [Source/review ZIP](release/FRC_Sensor_CAN_RevF_SC12_Prototype.zip), [handbook](output/documentation/SC12_RevF_Handbook.pdf) |
 
 Change voltage jumpers only with power disconnected. A missing cap disconnects port power, not its signal wire. Input mode changes use CAN software. Rail health is a coarse status indication, not calibrated voltage/current measurement. Analog readings and encoder decoding are not implemented.

@@ -1,6 +1,6 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-09T00:43:48.985793+00:00",
+  "reviewed_utc": "2026-09-09T03:58:30.262002+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
@@ -30,17 +30,17 @@
     },
     {
       "file": "output/documentation/SC12_RevF_Handbook.pdf",
-      "sha256": "c1615da0886db9b2bb4dc9384fcd8e87b4ccf3d5f75a20d95e9f368fab43bacb",
-      "scope": "All chapter layouts reviewed as contact sheets; revised overview, protocol and connector pages inspected enlarged after final pagination."
+      "sha256": "eb632aa40f60b9141a497d7e10e0603c2055ad3e605b6b79a47ecb0f06ebe427",
+      "scope": "30-page layout contact sheet; simulation findings/limitations pages 19-20 enlarged, reviewed after final pagination."
     },
     {
       "file": "output/documentation/BOM_RevF_SC12.pdf",
-      "sha256": "9d6f9674839e1192e458b9656bde161366080eaea7fbdfc5ddc1ef574e18772e",
+      "sha256": "fa98385de715fee4c451c730487f62eb5f6bb4bdfbec75245e06a42752f56a14",
       "scope": "Three pages: current references/MPNs/quantities and extended first-tier cost; revised header enlarged."
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
-      "sha256": "733c827d5109a3eecef9be96a7b051653223c63fbecbf8c56892fa06677b2647",
+      "sha256": "025c06e6a23da94b916499b1f8121ca243b849729e8e7d285e3018870b22ef56",
       "scope": "Both pages: 52x64 outline, H2 at y36.5, custom service mapping and power jumper positions."
     },
     {
@@ -57,7 +57,19 @@
       "file": "output/assembly/gerber_copper_review.pdf",
       "sha256": "4108a3fe79a2e6b7655d902e361a0faaa29e2700f2bc1ba0314c73ce0e28e4b8",
       "scope": "Top/bottom exported copper geometry with drills and correct 64 mm board height; individual copper images inspected."
+    },
+    {
+      "file": "reports/electrical/boost_spice.png",
+      "sha256": "167d44067061cff4ba05b4a9b9b4674bea46db61ccdf3f2f5cda2fe80603da97",
+      "scope": "Legible axes, legends and explicit pass/fail cases; overview decimation is not peak-current evidence."
+    },
+    {
+      "file": "reports/electrical/boost_spice_experiments.png",
+      "sha256": "ff6a9aca1204b89132083722e2475efaebaec90c1c61f82c72f2ba4cf270b98e",
+      "scope": "Legible axes, legends and explicit pass/fail cases; overview decimation is not peak-current evidence."
     }
   ],
-  "limitations": "Nominal CAD/PDF/GUI inspection, not manufactured measurements, bench testing or assembly-yield qualification."
+  "limitations": "Nominal CAD/PDF/GUI inspection, not manufactured measurements, bench testing or assembly-yield qualification.",
+  "prior_reviewed_utc": "2026-09-09T00:43:48.985793+00:00",
+  "incremental_review": "Retained unchanged CAD/GUI reviews. Inspected 30-page handbook contact sheet and enlarged simulation findings pages 19-20, three-page BOM, both mechanical pages, and both new simulation figures."
 }

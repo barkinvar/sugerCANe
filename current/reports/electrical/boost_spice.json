@@ -1,0 +1,221 @@
+{
+  "result": "FAIL",
+  "timestep_repeat": {
+    "startup_time_difference_ms": 0.00012682607924840994,
+    "steady_extrema_difference_V": 0.0005744254422097583,
+    "pass_condition": "Startup crossing within 0.1 ms and steady extrema within 30 mV; not a full simulator-port validation",
+    "pass": true
+  },
+  "scope": "U9 + U8 + D4 vendor models, 25 C typical silicon. Behavioral models ported to ngspice, not correlated against PSpice or a board. Not whole-board qualification.",
+  "source_assumptions": "Ideal ramped 5 V source with 50 milliohm series resistance, 25.92 uF reservoir and 0.4 A simultaneous logic/5 V load except switch sanity. No LMR51420 control loop/current limit, no regulator ripple, no thermal/PCB/cable parasitic extraction.",
+  "passive_assumptions": "Defaults: C60 fixed 8.64 uF, output bank fixed 10.8238 uF. Case cin/cout/extra_cap fields override these. Diagnostic bias_curve=true uses Samsung typical differential C(V), interpolated at 1 V intervals; css overrides C66 only in a hypothetical experiment. ESR 10 milliohm assumed; inductor DCR 32 milliohm from Bourns typical value. No magnetic saturation, dielectric hysteresis or thermal model. 50 milliohm idealized short. PG trace represents U9 /FAULT only.",
+  "numerical_notes": "PSpice Boolean XOR translated to !=; duplicate PARAMS removed; helper subcircuits/models namespaced. Gear integration avoids observed trapezoidal artificial latch reset. No semiconductor parameter tuning. Adaptive raw points used for extrema; overview plot decimated and cannot show switching ripple or short-current peaks.",
+  "simulator": "******\n** ngspice-42 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2023, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Sun Mar 31 20:15:14 UTC 2024\n******",
+  "circuit_sha256": "3a55f30820d391818373b4208695c0ed10e71aa46baea795fb453f5822c7b203",
+  "script_sha256": "2ec35f90a05cb0804e2689962bec8426d1e8e65238824289ca379555557f1df5",
+  "electrical_sha256": "62c70161c49d5fa95f60f4f2c3b4106cb2319d09a23bcb7e54355ae9f091969a",
+  "capacitor_curve_sha256": "dd34434fb3afc042fc5e0e8735a8b7324f1a482f45c191c1dfade328dadda973",
+  "sources": [
+    {
+      "file": "tps61085.lib",
+      "url": "https://www.ti.com/lit/zip/slim133b",
+      "retrieved": "2026-09-08",
+      "sha256": "123cb9408dc926fcff98e5a2e83be7d95e950e86d49bb76dc63892b8a8fa3111",
+      "note": "Final 1.10, PSpice 16.0, original bytes from SLIM133A/TPS61085_PSPICE_TRANS/tps61085.lib"
+    },
+    {
+      "file": "tps2553-1.lib",
+      "url": "https://www.ti.com/lit/zip/slvm426a",
+      "retrieved": "2026-09-08",
+      "sha256": "2c4436b54cf8efc9dd522e110708fcb942e741a9620d6f442c577f787f451622",
+      "note": "Final 1.00, PSpice 16.2, original bytes from SLVM426/TPS2553-1_PSPICE_TRANS/tps2553-1_trans.lib"
+    },
+    {
+      "file": "B240A.lib",
+      "url": "https://www.diodes.com/spice/download/94/B240A.spice.txt",
+      "retrieved": "2026-09-08",
+      "sha256": "be511c04e88f3ee164258712e0d936b7943f02256243ec4a0718985e002ac2ab",
+      "note": "Plaintext transcribed from manufacturer web response, preserving model parameters and notice; server rejected direct download"
+    }
+  ],
+  "cases": [
+    {
+      "case": {
+        "name": "switch_sanity",
+        "switch_only": true,
+        "other": 0,
+        "end": 50,
+        "step": "1u",
+        "source": "0 0 100u 0 200u 5.067 35m 5.067 35.1m 0 40m 0 40.1m 5.067",
+        "short": "0 0 10m 0 10.001m 1 25m 1 25.001m 0"
+      },
+      "checks": {
+        "normal_output": true,
+        "current_limit": true,
+        "latched_after_short_removed": true,
+        "power_cycle_recovers": true
+      },
+      "output_peak_V": 4.991934883597658,
+      "limited_input_A": [
+        1.1985869129317308,
+        1.1985869129317308
+      ],
+      "fault_delay_ms": 7.494250841263945,
+      "pass": true,
+      "deck_and_model_hash": "97505187e0134fbcce8c3945f888df8205e7379dfa3e9b66e06fb096268dc02f"
+    },
+    {
+      "case": {
+        "name": "startup_full_load",
+        "end": 6
+      },
+      "checks": {
+        "no_false_latch": true,
+        "final_regulation": true
+      },
+      "output_peak_V": 12.009164823705822,
+      "boost_input_uvlo_drops": 0,
+      "final_output_range_V": [
+        11.919489820395254,
+        12.009164823705822
+      ],
+      "first_11_4V_ms": 3.631991922031853,
+      "steady_total_5V_input_A": 1.176150460091199,
+      "peak_inductor_A": 1.246914162832525,
+      "pass": true,
+      "deck_and_model_hash": "c3baa4aae2b494f135056040f128875e50cbb8e0056cc8a1ef5481d6989142d4"
+    },
+    {
+      "case": {
+        "name": "startup_half_timestep",
+        "end": 6,
+        "step": "12.5n"
+      },
+      "checks": {
+        "no_false_latch": true,
+        "final_regulation": true
+      },
+      "output_peak_V": 12.009123697459538,
+      "boost_input_uvlo_drops": 0,
+      "final_output_range_V": [
+        11.920064245837464,
+        12.009123697459538
+      ],
+      "first_11_4V_ms": 3.6321187481111012,
+      "steady_total_5V_input_A": 1.1761266713426575,
+      "peak_inductor_A": 1.246714617217303,
+      "pass": true,
+      "deck_and_model_hash": "8c6d6b50bda97741ef5cba87b120326dd76ef61f236b60e67e8f71ccfa4c011e"
+    },
+    {
+      "case": {
+        "name": "load_steps",
+        "steps": true,
+        "end": 10
+      },
+      "checks": {
+        "no_false_latch": true,
+        "final_regulation": true,
+        "step_excursion_within_10_8_to_13_2V": true,
+        "full_load_regulation": true
+      },
+      "output_peak_V": 12.421601139113953,
+      "boost_input_uvlo_drops": 0,
+      "final_output_range_V": [
+        12.35456020147178,
+        12.37658949599782
+      ],
+      "first_11_4V_ms": 3.1424419229286165,
+      "load_step_range_V": [
+        11.25173890484285,
+        12.421601139113953
+      ],
+      "peak_inductor_A": 1.1464063131232118,
+      "pass": true,
+      "deck_and_model_hash": "18007c96dc396ddff8ea168c0a0da7a616ed1e5d51c7b6a18dac09fb261e944a"
+    },
+    {
+      "case": {
+        "name": "low_input_capacitive_start",
+        "vin": 4.913149,
+        "cout": 66,
+        "extra_cap": 100,
+        "end": 12
+      },
+      "checks": {
+        "no_false_latch": true,
+        "final_regulation": false
+      },
+      "output_peak_V": 9.751903022301875,
+      "boost_input_uvlo_drops": 4,
+      "final_output_range_V": [
+        8.76002450530679,
+        9.751903022301875
+      ],
+      "first_11_4V_ms": null,
+      "steady_total_5V_input_A": 1.0413578986512835,
+      "peak_inductor_A": 1.7207960486015246,
+      "pass": false,
+      "deck_and_model_hash": "f20bd1b1173a8d385907e9c2773a731f40ee767b637d31dc74ed218903e3ee9a"
+    },
+    {
+      "case": {
+        "name": "hot_short_reset",
+        "end": 25,
+        "short": "0 0 5m 0 5.001m 1 14m 1 14.001m 0",
+        "source": "0 0 100u 0 200u 5.067 17m 5.067 17.1m 0 19m 0 19.1m 5.067"
+      },
+      "checks": {
+        "remains_latched_after_removing_short": true,
+        "regulated_before_short": true,
+        "recovers_after_power_cycle": false,
+        "linear_inductor_model_within_8A_domain": false
+      },
+      "output_peak_V": 11.993458776967223,
+      "peak_inductor_A": 8.613179754175759,
+      "time_above_8A_us": 4.694718618170578,
+      "pass": false,
+      "deck_and_model_hash": "242d53964af146f1ae6ddc1928971f1a23f676d520dd60bc57a76142cfb5d8c3"
+    },
+    {
+      "case": {
+        "name": "cold_short",
+        "end": 16,
+        "short": "0 1 12m 1 12.001m 0"
+      },
+      "checks": {
+        "remains_latched_after_removing_short": true,
+        "linear_inductor_model_within_8A_domain": true
+      },
+      "output_peak_V": 0.06159710310675256,
+      "peak_inductor_A": 1.2337048974382478,
+      "time_above_8A_us": 0.0,
+      "pass": true,
+      "deck_and_model_hash": "104db65ab7fa7afa64c1de8e27790bc70a6b0a33efd4bb8c3a05e4296de42611"
+    },
+    {
+      "case": {
+        "name": "startup_nominal_caps",
+        "vin": 4.913149,
+        "cin": 22,
+        "cout": 66,
+        "end": 10
+      },
+      "checks": {
+        "no_false_latch": true,
+        "final_regulation": false
+      },
+      "output_peak_V": 11.393475245621875,
+      "boost_input_uvlo_drops": 4,
+      "final_output_range_V": [
+        9.592754850063294,
+        11.393475245621875
+      ],
+      "first_11_4V_ms": null,
+      "steady_total_5V_input_A": 1.115304636269477,
+      "peak_inductor_A": 1.841314545278298,
+      "pass": false,
+      "deck_and_model_hash": "a137493fee8370f0773e556f2bb3c288c0c539054041526a256a6f1dc67eb6ae"
+    }
+  ]
+}
