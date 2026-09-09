@@ -6,7 +6,7 @@
   "full_power_transient_pass": false,
   "input_hashes": {
     "hardware/design/circuit.json": "cf9e272fb1d32b9ad6e04e69c37d37f8c2610410835bd46e6231c3692547903e",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "0a51fe162020d7afeac9e9b25c710be55a6b68ae74a24a9c6f63ab6032dd5071",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "759735d35308076c2ff4d502efa98e1178877d61d407828d8fc0842d14529117",
     "reports/electrical/electrical_checks.json": "ad27f7e16f6cbff19cc68ec084b22389250dfca7802d8e8bf8d0f183b9c52f6f",
     "reports/electrical/boost_spice.json": "1569440df8c69b3db8e19c4b869508e76733b0c662a87ab44dec585ce2ef9abb",
     "reports/design_parity.json": "d79cbd2f9a9dd988ede7c9394aad08e31f1f18c110d687679477102b4768bee5",

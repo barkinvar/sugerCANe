@@ -4,7 +4,7 @@ Run the [pre-fabrication review](docs/ORDER_READINESS.md) after refreshing the n
 
 The saved native KiCad schematic/PCB are authoritative. Circuit data, schematic, BOM and PCB must agree. Historical placement/router experiments have been removed; validation never reroutes the board.
 
-The sugarCANe bottom artwork is an outlined SVG under `hardware/artwork/`. `python scripts/build_brand_artwork.py` rebuilds it using the retained Pixelify Sans font; `kicad-python scripts/apply_bottom_artwork.py` applies it only to B.Silkscreen. `finish_markings.py` preserves the artwork-only underside when regenerating labels. See the [artwork source and provenance](hardware/artwork/README.md).
+The sugarCANe bottom artwork is an outlined SVG under `hardware/artwork/`. `python scripts/build_brand_artwork.py` rebuilds it using the retained Outfit variable font; `kicad-python scripts/apply_bottom_artwork.py` applies it only to B.Silkscreen. `finish_markings.py` preserves the artwork-only underside when regenerating labels. See the [artwork source and provenance](hardware/artwork/README.md).
 
 Tested toolchain: KiCad 10.0.6 and its matching pcbnew interpreter, Python 3.12, Arm GNU GCC 13.2.1, GNU make, host GCC/G++, Java 17, Java 25 for the WPILib 2027 adapter, Poppler, InteractiveHtmlBom 2.11.2 and [pinned Python packages](tools-requirements.lock). Native tool binaries and dependency caches are outside Git. PDF generation uses DejaVu Sans/Mono.
 

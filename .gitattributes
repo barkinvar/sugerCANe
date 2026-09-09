@@ -9,5 +9,5 @@ current/firmware/build/*.map -whitespace
 current/output/**/*.svg -whitespace
 current/output/assembly/interactive_bom.html -whitespace
 current/sources/spice/*.lib -text -whitespace
-# Retain the font author's original CRLF license notice byte for byte.
-current/licenses/PixelifySans-OFL.txt -text -whitespace
+# Retain the font authors' original license notice byte for byte.
+current/licenses/Outfit-OFL.txt -text -whitespace
