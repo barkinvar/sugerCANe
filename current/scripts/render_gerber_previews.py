@@ -19,22 +19,25 @@ def patch(poly):
         codes.extend([PlotPath.MOVETO]+[PlotPath.LINETO]*(len(coords)-2)+[PlotPath.CLOSEPOLY])
     return PathPatch(PlotPath(vertices,codes),facecolor='#995c22',edgecolor='none')
 with PdfPages(ROOT/'output/assembly/gerber_copper_review.pdf') as pdf:
-    for side in ['top','bottom']:
+    for side in ['top','inner_1','inner_2','bottom']:
         fig,ax=plt.subplots(figsize=(8,8.7));fig.patch.set_facecolor('white')
         ax.set_facecolor('white');ax.set_aspect('equal')
         contour=patch(outline);contour.set_facecolor('#f6f3e8');contour.set_edgecolor('#594b3d');contour.set_linewidth(.5);ax.add_patch(contour)
         for poly in g.islands[side]:ax.add_patch(patch(poly))
         for d in g.drills+list(g.stack.drill_npth.instance.objects):
             ax.add_patch(Circle((d.x,d.y),d.aperture.diameter/2,facecolor='white',edgecolor='#594b3d',linewidth=.12))
-        ax.set(xlim=(0,52) if side=='top' else (52,0),ylim=(-74,0),xlabel='Board X (mm)',ylabel='Gerber Y (mm)')
+        ax.set(xlim=(52,0) if side=='bottom' else (0,52),ylim=(-74,0),xlabel='Board X (mm)',ylabel='Gerber Y (mm)')
         ax.tick_params(labelsize=8)
-        fig.suptitle('FRC Sensor CAN · Rev H SC12 · '+side.upper()+' copper',fontsize=15,fontweight='bold',y=.98)
-        ax.set_title('Viewed from '+side+'; exported copper and drills, without solder mask',fontsize=9,pad=10)
+        label={'top':'TOP','inner_1':'INNER 1','inner_2':'INNER 2','bottom':'BOTTOM'}[side]
+        fig.suptitle('FRC Sensor CAN · Rev H SC12 · '+label+' copper',fontsize=15,fontweight='bold',y=.98)
+        view='bottom' if side=='bottom' else 'top'
+        ax.set_title('Viewed from '+view+'; exported copper and drills, without solder mask',fontsize=9,pad=10)
         fig.text(.06,.025,'Nominal manufacturing geometry only. Compare to native KiCad, assembly and fabrication files.',fontsize=8)
         fig.tight_layout(rect=(0,.045,1,.955))
-        for ext in ['png','svg']:fig.savefig(ROOT/f'output/review/gerber_{side}_copper.{ext}',dpi=200)
+        if side in ('top','bottom'):
+            for ext in ['png','svg']:fig.savefig(ROOT/f'output/review/gerber_{side}_copper.{ext}',dpi=200)
         pdf.savefig(fig);plt.close(fig)
-report={'method':'Independent Gerbonara/Shapely geometry with actual drill overlays; bottom mirrored for underside view',
-        'sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'output/fabrication').iterdir()) if p.suffix in ('.gtl','.gbl','.drl')}}
+report={'method':'Independent Gerbonara/Shapely geometry with actual drill overlays; all four copper layers in PDF; bottom mirrored for underside view',
+        'sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'output/fabrication').iterdir()) if p.suffix in ('.gtl','.g1','.g2','.gbl','.drl')}}
 (ROOT/'reports/manufacturing/preview_source.json').write_text(json.dumps(report,indent=2)+'\n')
 print('Copper/drill review PNG, SVG and PDF refreshed from final Gerbers.')

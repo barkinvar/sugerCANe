@@ -1,16 +1,16 @@
 {
   "result": "PASS",
-  "local_links_checked": 147,
+  "local_links_checked": 184,
   "broken_links": [],
   "pdfs": [
     {
-      "file": "output/documentation/SC12_RevG_Handbook.pdf",
-      "pages": 34,
+      "file": "output/documentation/BOM_RevH_SC12.pdf",
+      "pages": 3,
       "text_within_page": true
     },
     {
-      "file": "output/documentation/BOM_RevG_SC12.pdf",
-      "pages": 3,
+      "file": "output/documentation/SC12_RevH_Handbook.pdf",
+      "pages": 38,
       "text_within_page": true
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "pages": 2,
+      "pages": 4,
       "text_within_page": true
     }
   ],

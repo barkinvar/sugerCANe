@@ -155,4 +155,16 @@ for ref,ic,pin,limit in [('C74','U10','5',3),('C75','D10','2',4)]:
  assert length<limit,(ref,length)
  led_bypass[ref]=dict(supply_top_path_mm=length)
 report['rgb_local_bypass']=led_bypass
+route_layers={}
+for layer in (p.F_Cu,p.In1_Cu,p.In2_Cu,p.B_Cu):
+ tt=[t for group in tracks.values() for t in group if t.GetLayer()==layer]
+ exceptions=[]
+ for t in tt:
+  dx=abs(t.GetEnd().x-t.GetStart().x);dy=abs(t.GetEnd().y-t.GetStart().y)
+  # Ignore sub-10-um grid/serialization differences; this is a readability
+  # inventory, not a rule that every electrically sound route must be 45 degrees.
+  if min(dx,dy,abs(dx-dy))>p.FromMM(.01):
+   exceptions.append(dict(net=t.GetNetname(),start_mm=list(p.ToMM(t.GetStart())),end_mm=list(p.ToMM(t.GetEnd())),length_mm=p.ToMM(t.GetLength())))
+ route_layers[b.GetLayerName(layer)]=dict(segments=len(tt),length_mm=sum(p.ToMM(t.GetLength()) for t in tt),non_45_degree_segments=exceptions)
+report['routing_inventory']=dict(layers=route_layers,vias=sum(vias.values()),scope='Native segment directions and lengths. Rounded track end caps are normal copper geometry; angle style alone does not establish clearance, connectivity, impedance or EMC performance.')
 (R/'reports/board_constraints.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

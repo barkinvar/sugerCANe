@@ -38,4 +38,4 @@ Parts purchasing is about **$28.99 per board at ten boards**, including supplier
 
 Change voltage jumpers only with power disconnected. A missing cap disconnects port power, not its signal wire. Input mode changes use CAN software. Rail voltage readback uses the MCU ADC and factory voltage-reference calibration. External signal inputs remain digital; rail measurement does not add user analog-input or encoder support.
 
-The current layout has rounded corners, aligned input-bias transistors, a recessed female debug socket, improved edge clearances and visible voltage-selector/input labels. It remains 52 × 74 mm with top-side assembly. See [connector and layout details](docs/CONNECTORS.md).
+The current layout has rounded corners, aligned input-bias transistors, a recessed female debug socket, improved edge clearances and visible voltage-selector/input labels. Routing cleanup removes unnecessary zigzags and standardizes long runs to 45° bends, with unchanged component positions, vias and trace widths. It remains 52 × 74 mm with top-side assembly. See [all four copper layers](output/assembly/gerber_copper_review.pdf) and [connector details](docs/CONNECTORS.md).

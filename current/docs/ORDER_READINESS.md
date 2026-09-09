@@ -4,7 +4,9 @@ Rev H retains Rev G's power-path repairs and adds RGB diagnostics plus a recesse
 
 The latest rerun completed all eight standalone power cases and both input half-timestep repeats. The two full coupled-startup traces remain incomplete, so the order decision is **HOLD for full power evidence**. Sixteen one-way waveform replays also pass through the actual firmware power monitor, including ADC-error corners.
 
-The native routed-copper calculation is now fresh for the current layout. At the stated 85°C/nominal-copper assumptions, the buck-to-boost drop is 45.55 mV against a 120 mV allowance. The worst sensor branch drops 43.72 mV at 300 mA against a 60 mV allowance. The clearance, rounded-outline, female socket and jumper-label changes remain in the checked CAD.
+The native routed-copper calculation is now fresh for the cleaned routing. At the stated 85°C/nominal-copper assumptions, the buck-to-boost drop is 33.62 mV against a 120 mV allowance. The worst sensor branch drops 43.18 mV at 300 mA against a 60 mV allowance. The clearance, rounded-outline, female socket and jumper-label changes remain in the checked CAD.
+
+Routing cleanup reduces 8,725 segments to 4,113 by removing tiny steps, unnecessary bends and backtracking hooks. Long runs use consistent 45° bends. Component/pad locations, all 245 vias, net assignments, widths, keepouts and the continuous inner ground layer are preserved. Existing short ground/pad entries and the local converter/crystal routing remain where needed. Fresh native DRC and reconstruction of all four exported copper layers find no shorts or opens; see the [routing inventory](../reports/board_constraints.json) and [four-layer copper review](../output/assembly/gerber_copper_review.pdf). These checks do not replace physical qualification.
 
 ## Changes that address the earlier failures
 

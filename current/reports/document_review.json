@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "local_links_checked": 181,
+  "local_links_checked": 184,
   "broken_links": [],
   "pdfs": [
     {
@@ -30,7 +30,7 @@
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "pages": 2,
+      "pages": 4,
       "text_within_page": true
     }
   ],
