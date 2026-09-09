@@ -1,0 +1,10 @@
+pnp True
+hysteresis True
+supply_reset True
+logic_limits True
+pushpull True
+float_driven True
+npn True
+float_open True
+logic_limits_half_step True
+pushpull_half_step True

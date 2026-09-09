@@ -1,6 +1,6 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-09T22:05:35.554121+00:00",
+  "reviewed_utc": "2026-09-09T22:31:58.665214+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
@@ -20,7 +20,7 @@
       "sha256": "c661d5e50731d4b20fa0c33c2dc354a5b72a0e58eaccaad4a2598e6847ec6f99",
       "scope": "Bottom CAD reviewed: both CAN pairs show H(Y)/L(G) with correct underside mirroring and aligned text; remaining legends unchanged.",
       "reviewed_utc": "2026-09-09T21:59:37.589781+00:00",
-      "evidence": "Unchanged artifact; previous visual review retained for this silkscreen-only update."
+      "evidence": "Unchanged artifact; preceding documented visual review retained."
     },
     {
       "file": "output/review/board_connectors.png",
@@ -33,34 +33,34 @@
       "sha256": "e4cf0a7e3011c206410cccc592cd689df534eb19928cbc9ddcd41c88576e381d",
       "scope": "Simulated app0.9.0: three independent input modes and active levels, identify and Reset power fault controls; no physical CAN connection.",
       "reviewed_utc": "2026-09-09T19:59:05.532967+00:00",
-      "evidence": "Unchanged artifact; previous visual review retained for this silkscreen-only update."
+      "evidence": "Unchanged artifact; preceding documented visual review retained."
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "7298cd55113d5811263bdb37f32ee6e64012e2106a5635f7746402235ca6e75c",
-      "scope": "All 38 pages compared as rendered images with the preceding reviewed handbook. Changed pages 1, 8 and 32 reviewed: new cover render, voltage-label position and JP2/TP1 explanations. All other pages pixel-identical.",
-      "reviewed_utc": "2026-09-09T22:05:35.554121+00:00"
+      "sha256": "059a085edb4f2d89496ae61a8b4cab064d15ebe5a1648a1dc7f16a9296edd5b3",
+      "scope": "All 38 pages compared against e8e079a. Changed pages 3, 4, 5, 8, 9, 10, 24, 26, 27, 35, 36, 38 reviewed: current status, DC results, input SPICE, firmware waveform replay, explicit ground-short versus cross-rail protection limits, tool instructions and source provenance. All other pages pixel-identical.",
+      "reviewed_utc": "2026-09-09T22:31:58.665214+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
       "sha256": "6dcda8e3c2ffe9f7426b0e7fcce7c344e274e119a566bb8e8fa8e3f5e249774d",
       "scope": "All three rendered pages are pixel-identical to the preceding reviewed BOM; its visual review is retained. BOM and parts price unchanged.",
       "reviewed_utc": "2026-09-09T21:28:24.716091+00:00",
-      "evidence": "Unchanged artifact; previous visual review retained for this silkscreen-only update."
+      "evidence": "Unchanged artifact; preceding documented visual review retained."
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
       "sha256": "9f01a25690cc4a0142cf40b85e46614eba36c72b35dd191f4bcb29e1943716d9",
       "scope": "Both pages reviewed: R1.5 contour and callout, same 52x74 outline bounds, mounting holes, connectors, LED duct, service socket and pin map.",
       "reviewed_utc": "2026-09-09T21:28:24.716091+00:00",
-      "evidence": "Unchanged artifact; previous visual review retained for this silkscreen-only update."
+      "evidence": "Unchanged artifact; preceding documented visual review retained."
     },
     {
       "file": "output/assembly/schematic.pdf",
       "sha256": "5deedab49075e784ef1b626358562ef316261e28a01a64da52e326b82728e90f",
       "scope": "All ten rendered pages are pixel-identical to the preceding reviewed schematic; prior visual review retained.",
       "reviewed_utc": "2026-09-09T21:59:37.589781+00:00",
-      "evidence": "Unchanged artifact; previous visual review retained for this silkscreen-only update."
+      "evidence": "Unchanged artifact; preceding documented visual review retained."
     },
     {
       "file": "output/assembly/top_assembly.pdf",
@@ -79,84 +79,49 @@
       "sha256": "7795275a91cd9821e5ece2957a948549299dc94b29e0a7abc14d64fa0f897a28",
       "scope": "Rev H caption, nominal averaged-loop gain/phase curves and explicit analytical-model limitation inspected; 768-corner results retained in JSON.",
       "reviewed_utc": "2026-09-09T19:59:05.532967+00:00",
-      "evidence": "Unchanged artifact; previous visual review retained for this silkscreen-only update."
+      "evidence": "Unchanged artifact; preceding documented visual review retained."
     },
     {
       "file": "output/assembly/bottom_markings.pdf",
       "sha256": "8696c61972d7d04ecdc52b1a59d37f7bafdb50a3ae9b850f4854c8f33289d0d7",
       "scope": "Bottom markings PDF reviewed: L(G)/H(Y), CAN A/B labels and correct underside orientation.",
       "reviewed_utc": "2026-09-09T21:59:37.589781+00:00",
-      "evidence": "Unchanged artifact; previous visual review retained for this silkscreen-only update."
+      "evidence": "Unchanged artifact; preceding documented visual review retained."
+    },
+    {
+      "file": "reports/electrical/input_spice.png",
+      "sha256": "032ceebee50896b347a7755a5c43a10e2cd94ff87ca77de90ceabaca3ab39d69",
+      "scope": "Eight input scenario panels reviewed: nominal/limit logic, NPN/PNP, floating probes, hysteresis and supply cycle; two repeat cases are reported separately in JSON.",
+      "reviewed_utc": "2026-09-09T22:23:19.364952+00:00"
+    },
+    {
+      "file": "reports/electrical/boost_spice_partial.png",
+      "sha256": "ba4326c66dd8925658695a8fabb7ab4e89f1eec06b35eeed62d27d219b19fa20",
+      "scope": "All eight standalone case panels reviewed with an explicit incomplete-full-startup caption: load steps, shorts, reset, thermal latch and capacitive startup. This is partial evidence only.",
+      "reviewed_utc": "2026-09-09T22:31:58.665214+00:00"
     }
   ],
-  "limitations": "Nominal CAD/PDF inspection only. Simulations deferred by user until the final design; current sensor-distribution routing has no fresh DC/transient result. No physical board, optical, vibration or assembly-yield testing.",
-  "page_comparison_baseline_commit": "1824ca6b416b7c54a04fbf0ee52ef42520a14090",
+  "limitations": "Nominal CAD/PDF and plotted-waveform inspection only. Fresh native-route DC, standalone power and input screens are separately reported; full combined startup remains incomplete. No physical board, optical, vibration or assembly-yield testing.",
+  "page_comparison_baseline_commit": "e8e079a89c230574596802b8784d0d56dff91f5d",
   "rendered_page_comparison": {
     "handbook": {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
       "changed_pages": [
-        1,
-        8,
-        32
-      ],
-      "unchanged_pages": [
-        2,
         3,
         4,
         5,
-        6,
-        7,
+        8,
         9,
         10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
         24,
-        25,
         26,
         27,
-        28,
-        29,
-        30,
-        31,
-        33,
-        34,
         35,
         36,
-        37,
         38
       ],
-      "page_count": 38,
-      "previous_page_count": 38
-    },
-    "assembly": {
-      "file": "output/assembly/top_assembly.pdf",
-      "changed_pages": [
-        1
-      ],
-      "unchanged_pages": [],
-      "page_count": 1,
-      "previous_page_count": 1
-    },
-    "copper": {
-      "file": "output/assembly/gerber_copper_review.pdf",
-      "changed_pages": [],
-      "unchanged_pages": [
-        1,
-        2
-      ],
-      "page_count": 2,
-      "previous_page_count": 2
+      "pages": 38,
+      "all_other_pages_pixel_identical": true
     }
   }
 }

@@ -38,9 +38,20 @@ Optional desktop setup preview: `python scripts/check_gui.py` with a working dis
 
 Compiler objects, downloaded Java dependencies, test runners, caches and scratch renderings are ignored. The retained firmware third-party subset supports STM32F042 and GCC; see its [provenance](firmware/third_party/README.md). All checks are engineering evidence; [physical qualification](docs/VALIDATION.md) remains required.
 
+## Sensor-input transient simulation
+
+The separate sensor-input screen is fast and runs as part of release validation:
+
+```sh
+python scripts/check_input_spice.py --jobs 4
+python scripts/check_input_spice.py --verify-report
+```
+
+It uses the original TI comparator model linked for LM339LV, the three native input/reference networks and explicitly simplified bias/sensor circuits. Ten cases include nominal signals, voltage/leakage limits, floating probes, supply cycling and two half-timestep repeats. [Model scope and limitations](docs/VALIDATION.md#sensor-input-transient-screen) remain part of the result.
+
 ## Power transient simulation
 
-The additional H power rerun was canceled; its report explicitly says INCOMPLETE. The LED/header checks are complete, but the full-release scripts below intentionally continue to require a complete power report. They will fail at that gate until a full run is requested and completed.
+The latest H rerun has eight freshly completed standalone/load-step cases. The two full coupled-startup traces remain incomplete, so the factory/release gate remains on HOLD. The [standalone results](reports/electrical/boost_spice_partial.json) and [waveforms](reports/electrical/boost_spice_partial.png) are separate from the full-suite report.
 
 The optional native simulator is **ngspice 42 with KLU, XSPICE and PSpice compatibility**. Original manufacturer model files and hashes are retained in `sources/spice/`. The harness reads the maintained circuit's pin connections and component values; it generates simulator-specific copies, decks and raw traces under ignored `tmp/spice/`. The full run includes nine cases plus a complete combined-startup solver repeat; the coupled switching models can take several hours.
 
@@ -55,4 +66,10 @@ python scripts/check_boost_spice.py --verify-report
 python scripts/check_boost_spice.py --verify-report --require-pass
 ```
 
-The published [summary](reports/electrical/boost_spice.json) cover the protected boost stage, not the upstream buck or the whole board. A circuit, budget, source-model or harness change invalidates saved evidence. Each case has an eight-hour wall-time limit; a timeout or incomplete trace cannot pass. `--case NAME` produces separate partial reports and cannot replace the full release result. A failed screening criterion returns a nonzero exit status and remains visible in the report. See the [simulation scope](docs/VALIDATION.md#manufacturer-model-transient-screen). Individual-case outputs remain under ignored `tmp/spice/`; the full run is required for the release report.
+The published [summary](reports/electrical/boost_spice.json) covers the protected boost stage, not the upstream buck or the whole board. A circuit, budget, source-model or harness change invalidates saved evidence. Each case has an eight-hour wall-time limit; a timeout or incomplete trace cannot pass. `--case NAME` produces separate partial reports and cannot replace the full release result. A failed screening criterion returns a nonzero exit status and remains visible in the report. See the [simulation scope](docs/VALIDATION.md#manufacturer-model-transient-screen). Individual-case outputs remain under ignored `tmp/spice/`; the full run is required for the release report.
+
+## Firmware waveform replay and partial checkpoints
+
+`python scripts/check_power_replay.py` replays four completed SPICE traces through the actual `power.c`, compiled with ASan/UBSan, at four ADC-error corners. It reads full-suite traces from `tmp/spice/` by default. `--traces PATH` selects another completed run directory, and `--verify-report` checks retained evidence hashes. The fresh standalone run used `tmp/spice/final-crosscheck-fresh/`. This is one-way replay: firmware shutdown commands do not change the recorded circuit.
+
+While a full power run is incomplete, `python scripts/check_order_readiness.py --allow-incomplete` refreshes native pin and copper-drop evidence with a **HOLD** decision. After replay, `python scripts/write_validation_summary.py --allow-incomplete` publishes the completed checks with the same HOLD. The default commands and factory/release scripts still require full passing power evidence.

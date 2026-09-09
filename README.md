@@ -6,7 +6,7 @@ A compact interface for **three NPN, PNP or logic sensors** on an FRC robot. Eac
 
 Rev H adds one RGB status LED on the right, with space for a printed light duct, and a recessed female programming socket for small batches. It retains G's protected sensor supplies, CAN fault reset and rail measurements. See [the engineering review](current/docs/ORDER_READINESS.md) for the evidence and remaining physical tests.
 
-RGB/header checks pass. The optional full power rerun was stopped before completion; [current check scope](current/reports/release_checks.json) is explicit.
+Fresh checks pass for the native PCB, firmware, all ten input-transient cases, eight standalone power cases and sixteen firmware waveform replays. Full combined power startup remains incomplete; the release stays on HOLD. See the [check summary](current/reports/release_checks.json).
 
 ![SC12 Rev H](current/output/review/board_3d_final.png)
 
@@ -14,6 +14,7 @@ RGB/header checks pass. The optional full power rerun was stopped before complet
 |---|---|
 | Board input | 6–22 V DC |
 | Sensor power | Regulated 5 V / 12 V; 300 mA shared per rail |
+| Supply protection | Current limiting for shorts to ground; **5 V-to-12 V cross-connections are unsupported** |
 | Signals | Positive 0–30 V targets; NPN / PNP / push-pull / floating detection / keeper |
 | Size and assembly | 52 × 74 mm, four copper layers; **all components on top** |
 | User assembly | Six terminals, three voltage headers, one service socket and three removable caps |

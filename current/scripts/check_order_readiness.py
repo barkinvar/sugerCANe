@@ -3,7 +3,7 @@
 This is a reproducible engineering screen. Physical qualification remains separate.
 """
 from pathlib import Path
-import argparse, hashlib, json, math, subprocess
+import argparse, hashlib, json, math, subprocess, sys
 import numpy as np
 import check_boost_spice as spice
 ROOT = Path(__file__).resolve().parents[1]
@@ -96,11 +96,17 @@ def power_distribution_screen():
     drop = before
     allowance = .12
     assert 0 < drop < allowance, (drop, allowance)
+    sensor_drops = {net: {ch: -value[str((f'JP{ch}01', pin))]
+                          for ch,value in results[net].items()}
+                    for net,pin in [('SENSOR_5V','1'),('SENSOR_12V','3')]}
+    rail_allowance = json.loads((ROOT/'reports/electrical/electrical_checks.json').read_text())['rail_monitor']['ADC_error_budget']['post_switch_copper_allowance_V']
+    assert all(0 < v < rail_allowance for branch in sensor_drops.values() for v in branch.values()), sensor_drops
     return dict(method='Native routed-track resistor network with pad contacts and through vias; nodal DC solve',
                 trace_temperature_C=85, copper_um=35, via_plating_um=20,
                 boost_input_A=1.3, other_5V_sensor_A=.51, logic_A=.13, RGB_buffer_A=.02,
                 buck_to_boost_drop_V=before, boost_to_efuse_drop_V=after,
                 total_boost_path_drop_V=drop, revised_PCB_allowance_V=allowance,
+                sensor_branch_drop_V_at_300mA=sensor_drops, sensor_branch_allowance_V=rail_allowance,
                 results=results, geometry_sha256=hashlib.sha256(geometry.encode()).hexdigest(),
                 scope='Nominal etched dimensions and ideal pads. No temperature solution, ground return, contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json.')
 
@@ -139,13 +145,23 @@ def pin_review(parts):
                            '25':'POWER_5V_EN','26':'STATUS_DATA','27':'BIAS_DOWN3','28':'BIAS_DOWN1','29':'BIAS_DOWN2','30':'POWER_12V_EN'})
     checks = {ref: all(parts[ref]['pins'][pin] == net for pin, net in pins.items())
               for ref, pins in expected.items()}
+    for ref,mpn in [('U4','TPS2553DBVR-1'),('U8','TPS61085DGKR'),
+                    ('U9','TPS259620DDAR'),('U7','LM339LVDR')]:
+        checks[ref+'_model_matches_fitted_part'] = parts[ref]['mpn']==mpn
+    checks['power_values_match_analytical_budgets'] = all(parts[ref]['value']==value for ref,value in {
+        'R10':'59k','R62':'2.61k','R68':'100k','R69':'12.1k','R70':'100k',
+        'C70':'47nF','R60':'100k','R61':'11.5k'}.items())
+    checks['three_input_channels_share_DC_corner_basis'] = all(
+        parts[f'R{ch}{suffix}'].get(field)==parts[f'R1{suffix}'].get(field)
+        for ch in (2,3) for suffix in ('01','03','04','05','09','10')
+        for field in ('value','tolerance','temperature_coefficient_ppm_C'))
     checks['SWD_reset_and_BOOT0_exposed'] = all(net in parts['J8']['pins'].values()
                                               for net in ('SWDIO', 'SWCLK', 'NRST', 'BOOT0', 'GND', '+3V3'))
     checks['BOOT0_pulldown'] = parts['R22']['pins'] == {'1': 'BOOT0', '2': 'GND'} and parts['R22']['value'] == '10k'
     checks['CAN_defaults_to_standby'] = parts['R40']['pins'] == {'1': '+3V3', '2': 'CAN_STB'}
     checks['12V_disable_derived_from_raw_supply'] = parts['R70']['pins']=={'1':'BOOST_12V','2':'EFUSE_INHIBIT'}
-    checks['12V_enable_defaults_low'] = parts['R75']['pins']=={'1':'POWER_12V_EN','2':'GND'}
-    checks['5V_enable_defaults_low'] = parts['R71']['pins']=={'1':'POWER_5V_EN','2':'GND'}
+    checks['12V_enable_defaults_low'] = parts['R75']['pins']=={'1':'POWER_12V_EN','2':'GND'} and parts['R75']['value']=='10k'
+    checks['5V_enable_defaults_low'] = parts['R71']['pins']=={'1':'POWER_5V_EN','2':'GND'} and parts['R71']['value']=='10k'
     checks['raw_reservoir_before_limiter'] = all(parts[r]['pins']=={'1':'BOOST_12V','2':'GND'} for r in ['C62','C63','C64'])
     assert all(checks.values()), checks
     return dict(checks=checks, firmware_can_reset_power_switches=True,
@@ -159,15 +175,29 @@ def inputs():
     return {path:spice.sha(ROOT/path) for path in paths}
 
 def main():
-    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--verify-report',action='store_true');args=ap.parse_args()
+    ap=argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--verify-report',action='store_true')
+    ap.add_argument('--allow-incomplete',action='store_true',help='Record fresh CAD/DC evidence with a HOLD decision while full power evidence is incomplete; never approves fabrication')
+    args=ap.parse_args()
     parts=json.loads((ROOT/'hardware/design/circuit.json').read_text())['parts']
     pins=pin_review(parts);distribution=power_distribution_screen()
     transient=json.loads((ROOT/'reports/electrical/boost_spice.json').read_text())
-    assert transient['result']=='PASS transient screening only'
-    assert all(r['pass'] for r in transient['cases'])
-    result=dict(order_decision='PASS pre-fabrication engineering screens; unbuilt prototype',
-                physical_tests_performed=False,hardware_changed=True,revision='H',
+    complete = transient['result']=='PASS transient screening only'
+    if complete or not args.allow_incomplete:
+        subprocess.run([sys.executable,str(ROOT/'scripts/check_boost_spice.py'),'--verify-report','--require-pass'],check=True)
+        assert complete and all(r['pass'] for r in transient['cases'])
+    result=dict(order_decision=('PASS pre-fabrication engineering screens; unbuilt prototype' if complete else
+                               'HOLD: full power-transient evidence incomplete or failing; CAD/DC screens pass'),
+                physical_tests_performed=False,revision='H',
+                power_distribution_valid_for_current_layout=True, full_power_transient_pass=complete,
                 input_hashes=inputs(),pin_review=pins,power_distribution=distribution,
+                protection_boundary={
+                 'covered_fault_scenarios':'Sensor-supply shorts to ground, overload and explicit recovery under the documented model assumptions.',
+                 'cross_connection_5V_to_12V_supported':False,
+                 'U4_OUT_absolute_maximum_V':7,
+                 'reason':'A 12 V cross-connection exceeds the TPS2553-1 OUT absolute maximum. Current limiting and software voltage monitoring do not guarantee survival of U4 or a 5 V sensor.',
+                 'source':'https://www.ti.com/lit/ds/symlink/tps2553.pdf',
+                 'other_exclusions':'External power applied to sensor outputs, arbitrary reverse powering and externally driven fault transients.'},
                 resolved_rev_f_findings=['Output eFuse isolates reservoir from a sensor short',
                  'Boost input no longer passes through the former 1.2 A switch',
                  'Controlled output slew and staggered firmware startup',

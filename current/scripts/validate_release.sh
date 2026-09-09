@@ -8,6 +8,7 @@ python scripts/estimate_cost.py
 python scripts/compare_assembly_cost.py
 python scripts/check_electrical.py > reports/electrical/check.log
 python scripts/check_converter_loop.py > reports/electrical/loop.log
+python scripts/check_input_spice.py > reports/electrical/input-spice.log
 python scripts/check_boost_spice.py --verify-report --require-pass
 kicad-python scripts/check_board_constraints.py > reports/board-constraints.log
 bash scripts/test_firmware.sh
@@ -21,5 +22,6 @@ python scripts/verify_manufacturing.py > reports/manufacturing/export-parity.log
 python scripts/verify_gerber_geometry.py > reports/manufacturing/geometry.log
 python scripts/verify_gerber_connectivity.py > reports/manufacturing/connectivity.log
 python scripts/check_order_readiness.py
+python scripts/check_power_replay.py > reports/electrical/power-replay.log
 python scripts/write_validation_summary.py
 echo 'PASS: Rev H saved design, BOM, electrical budgets, firmware/drivers and exported fabrication checks'

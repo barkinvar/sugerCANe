@@ -1,0 +1,256 @@
+{
+  "result": "PASS firmware waveform replay only",
+  "input_hashes": {
+    "firmware/src/power.c": "0e26e751b00961e6d86043e7a28429c86fb9178d3e0023c77d5db8a39b1a5b2b",
+    "firmware/include/power.h": "bee9d528589bfb0ad4377715fdbb5ea19bc1337d91a0b230a1c8d15fbc38492c",
+    "scripts/check_power_replay.py": "74e70691150ded834917c00a8c1fe81667455eb6b8c68cb506b5000b9775302c",
+    "reports/electrical/electrical_checks.json": "ad27f7e16f6cbff19cc68ec084b22389250dfca7802d8e8bf8d0f183b9c52f6f",
+    "reports/electrical/boost_spice_partial.json": "098f2cc25f0e3cfc76dba7b792349a2f6fced266d036a4c9dd6437af76fa732b",
+    "reports/electrical/order_readiness.json": "30d465b9fee6ac7c5cc8c30e472baf8f468cccc38829a0970da6d08ebd58ff93"
+  },
+  "cases": [
+    {
+      "name": "efuse_large_capacitance",
+      "gain_error": -0.025,
+      "offset_error_V": -0.09,
+      "PCB_drop_V": 0.04371685694237171,
+      "raw_sha256": "9a4b144c660f8a58f803322a9e13bf40d3a26cb5588325c398b1c95ea01ac719",
+      "first_trip_ms": null,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "no_false_startup_trip": true,
+        "healthy_before_300ms": true,
+        "remains_enabled": true
+      },
+      "pass": true
+    },
+    {
+      "name": "efuse_large_capacitance",
+      "gain_error": -0.025,
+      "offset_error_V": 0.09,
+      "PCB_drop_V": 0.04371685694237171,
+      "raw_sha256": "9a4b144c660f8a58f803322a9e13bf40d3a26cb5588325c398b1c95ea01ac719",
+      "first_trip_ms": null,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "no_false_startup_trip": true,
+        "healthy_before_300ms": true,
+        "remains_enabled": true
+      },
+      "pass": true
+    },
+    {
+      "name": "efuse_large_capacitance",
+      "gain_error": 0.025,
+      "offset_error_V": -0.09,
+      "PCB_drop_V": 0.04371685694237171,
+      "raw_sha256": "9a4b144c660f8a58f803322a9e13bf40d3a26cb5588325c398b1c95ea01ac719",
+      "first_trip_ms": null,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "no_false_startup_trip": true,
+        "healthy_before_300ms": true,
+        "remains_enabled": true
+      },
+      "pass": true
+    },
+    {
+      "name": "efuse_large_capacitance",
+      "gain_error": 0.025,
+      "offset_error_V": 0.09,
+      "PCB_drop_V": 0.04371685694237171,
+      "raw_sha256": "9a4b144c660f8a58f803322a9e13bf40d3a26cb5588325c398b1c95ea01ac719",
+      "first_trip_ms": null,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "no_false_startup_trip": true,
+        "healthy_before_300ms": true,
+        "remains_enabled": true
+      },
+      "pass": true
+    },
+    {
+      "name": "efuse_min_limit_cap_tolerance",
+      "gain_error": -0.025,
+      "offset_error_V": -0.09,
+      "PCB_drop_V": 0.04371685694237171,
+      "raw_sha256": "eda61cc5bdd836aa5917722ff08821ab42749901fa352bf0dac265070a8d759d",
+      "first_trip_ms": null,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "no_false_startup_trip": true,
+        "healthy_before_300ms": true,
+        "remains_enabled": true
+      },
+      "pass": true
+    },
+    {
+      "name": "efuse_min_limit_cap_tolerance",
+      "gain_error": -0.025,
+      "offset_error_V": 0.09,
+      "PCB_drop_V": 0.04371685694237171,
+      "raw_sha256": "eda61cc5bdd836aa5917722ff08821ab42749901fa352bf0dac265070a8d759d",
+      "first_trip_ms": null,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "no_false_startup_trip": true,
+        "healthy_before_300ms": true,
+        "remains_enabled": true
+      },
+      "pass": true
+    },
+    {
+      "name": "efuse_min_limit_cap_tolerance",
+      "gain_error": 0.025,
+      "offset_error_V": -0.09,
+      "PCB_drop_V": 0.04371685694237171,
+      "raw_sha256": "eda61cc5bdd836aa5917722ff08821ab42749901fa352bf0dac265070a8d759d",
+      "first_trip_ms": null,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "no_false_startup_trip": true,
+        "healthy_before_300ms": true,
+        "remains_enabled": true
+      },
+      "pass": true
+    },
+    {
+      "name": "efuse_min_limit_cap_tolerance",
+      "gain_error": 0.025,
+      "offset_error_V": 0.09,
+      "PCB_drop_V": 0.04371685694237171,
+      "raw_sha256": "eda61cc5bdd836aa5917722ff08821ab42749901fa352bf0dac265070a8d759d",
+      "first_trip_ms": null,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "no_false_startup_trip": true,
+        "healthy_before_300ms": true,
+        "remains_enabled": true
+      },
+      "pass": true
+    },
+    {
+      "name": "efuse_hot_short_and_reset",
+      "gain_error": -0.025,
+      "offset_error_V": -0.09,
+      "PCB_drop_V": 0.04371685694237171,
+      "raw_sha256": "07b970c4e8b7bb76618a012afa4d6b182853247d7219b67511825e012686ad03",
+      "first_trip_ms": 375,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "fault_latches": true,
+        "shutdown_deadline": true,
+        "no_automatic_restart": true
+      },
+      "pass": true
+    },
+    {
+      "name": "efuse_hot_short_and_reset",
+      "gain_error": -0.025,
+      "offset_error_V": 0.09,
+      "PCB_drop_V": 0.04371685694237171,
+      "raw_sha256": "07b970c4e8b7bb76618a012afa4d6b182853247d7219b67511825e012686ad03",
+      "first_trip_ms": 375,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "fault_latches": true,
+        "shutdown_deadline": true,
+        "no_automatic_restart": true
+      },
+      "pass": true
+    },
+    {
+      "name": "efuse_hot_short_and_reset",
+      "gain_error": 0.025,
+      "offset_error_V": -0.09,
+      "PCB_drop_V": 0.04371685694237171,
+      "raw_sha256": "07b970c4e8b7bb76618a012afa4d6b182853247d7219b67511825e012686ad03",
+      "first_trip_ms": 375,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "fault_latches": true,
+        "shutdown_deadline": true,
+        "no_automatic_restart": true
+      },
+      "pass": true
+    },
+    {
+      "name": "efuse_hot_short_and_reset",
+      "gain_error": 0.025,
+      "offset_error_V": 0.09,
+      "PCB_drop_V": 0.04371685694237171,
+      "raw_sha256": "07b970c4e8b7bb76618a012afa4d6b182853247d7219b67511825e012686ad03",
+      "first_trip_ms": 375,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "fault_latches": true,
+        "shutdown_deadline": true,
+        "no_automatic_restart": true
+      },
+      "pass": true
+    },
+    {
+      "name": "five_volt_start_short_and_reset",
+      "gain_error": -0.025,
+      "offset_error_V": -0.09,
+      "PCB_drop_V": 0.04371654737876069,
+      "raw_sha256": "07bd15d7bf19cfb5442468b3d87d4376e04cdf7b80c3f636134e2aba85a9abd7",
+      "first_trip_ms": 33,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "fault_latches": true,
+        "shutdown_deadline": true,
+        "no_automatic_restart": true
+      },
+      "pass": true
+    },
+    {
+      "name": "five_volt_start_short_and_reset",
+      "gain_error": -0.025,
+      "offset_error_V": 0.09,
+      "PCB_drop_V": 0.04371654737876069,
+      "raw_sha256": "07bd15d7bf19cfb5442468b3d87d4376e04cdf7b80c3f636134e2aba85a9abd7",
+      "first_trip_ms": 33,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "fault_latches": true,
+        "shutdown_deadline": true,
+        "no_automatic_restart": true
+      },
+      "pass": true
+    },
+    {
+      "name": "five_volt_start_short_and_reset",
+      "gain_error": 0.025,
+      "offset_error_V": -0.09,
+      "PCB_drop_V": 0.04371654737876069,
+      "raw_sha256": "07bd15d7bf19cfb5442468b3d87d4376e04cdf7b80c3f636134e2aba85a9abd7",
+      "first_trip_ms": 33,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "fault_latches": true,
+        "shutdown_deadline": true,
+        "no_automatic_restart": true
+      },
+      "pass": true
+    },
+    {
+      "name": "five_volt_start_short_and_reset",
+      "gain_error": 0.025,
+      "offset_error_V": 0.09,
+      "PCB_drop_V": 0.04371654737876069,
+      "raw_sha256": "07bd15d7bf19cfb5442468b3d87d4376e04cdf7b80c3f636134e2aba85a9abd7",
+      "first_trip_ms": 33,
+      "checks": {
+        "other_rail_stays_enabled": true,
+        "fault_latches": true,
+        "shutdown_deadline": true,
+        "no_automatic_restart": true
+      },
+      "pass": true
+    }
+  ],
+  "sample_interval_ms": 1,
+  "scope": "Actual power.c compiled with ASan/UBSan; four completed SPICE traces each replayed at four ADC-error corners, with worst current-layout branch drop at 300 mA. Twelve-volt enable aligned to firmware 60 ms. Running short delayed by holding the pre-short regulated sample. Last trace sample held after trace end. Other rail idealized.",
+  "limitations": "One-way replay: disable commands do not change the recorded circuit. No MCU execution timing, ADC RC dynamics, CAN scheduling, ground-return/contact resistance or closed-loop hardware/firmware correlation. 470 uF remains a diagnostic beyond the supported 100 uF load. No physical qualification."
+}

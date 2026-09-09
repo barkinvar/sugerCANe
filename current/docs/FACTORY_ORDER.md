@@ -1,6 +1,6 @@
 # Rev H prototype fabrication and assembly order
 
-Rev H native CAD, BOM, firmware and individual manufacturing exports include the RGB/header change. A refreshed full-validation factory ZIP has not been issued; see [package status](../order/README.md). The extra power rerun was canceled before completion, while the focused LED/header checks passed. Previous Rev G ZIPs are historical and do not contain the new LED/header.
+Rev H native CAD, BOM, firmware and individual manufacturing exports include the RGB/header change. A refreshed full-validation factory ZIP has not been issued; see [package status](../order/README.md). The fresh standalone power, input, firmware and current-layout DC checks pass; full coupled startup remains incomplete, keeping the full-release gate on HOLD. Previous Rev G ZIPs are historical and do not contain the new LED/header.
 
 For quotation, use [BOM_JLCPCB.csv](../bom/BOM_JLCPCB.csv), [CPL_JLCPCB.csv](../output/assembly/CPL_JLCPCB.csv), the [fabrication exports](../output/fabrication/) and [Factory_BOM.csv](../bom/Factory_BOM.csv) for exact-MPN matching. Read the [engineering review](ORDER_READINESS.md) and [physical acceptance procedure](VALIDATION.md). No factory quotation or order is included.
 

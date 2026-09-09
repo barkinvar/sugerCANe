@@ -16,6 +16,8 @@ Both CAN connectors are marked **L(G)** for CAN Low / green and **H(Y)** for CAN
 
 Feed J1 from appropriately fused robot distribution. F1 is secondary board protection. Do not backfeed J4–J6 power pins, parallel the two sensor rails, or apply external power to the programming rail. The board is not galvanically isolated.
 
+Protection covers sensor-supply shorts to **ground**. A direct **12 V-to-5 V cross-connection can damage U4 and 5 V sensors**: U4's OUT pin has a 7 V absolute maximum. Software voltage detection does not guarantee it can act before damage. This follows the [TPS2553-1 ratings](https://www.ti.com/lit/ds/symlink/tps2553.pdf); reverse-voltage blocking is not a 12 V tolerance rating.
+
 ## Sensor power and software bias
 
 The factory leaves JP101/JP201/JP301 unpopulated for hand soldering. Fit the specified 2 mm headers, then leave caps off for initial bring-up. With power disconnected, fit ONE cap across 1–2 for 5 V or 2–3 for 12 V. No cap disconnects port power. Connecting all three power pins shorts the rails.

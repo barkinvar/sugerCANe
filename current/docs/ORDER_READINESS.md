@@ -1,16 +1,16 @@
 # Rev H pre-fabrication review
 
-Rev H retains Rev G's power-path repairs and adds RGB diagnostics plus a recessed female service socket. The LED/header checks pass; the additional full power-transient rerun was stopped before completion and is not reported as a Rev H pass. No physical board has been tested; the package is a prototype design with reproducible engineering evidence.
+Rev H retains Rev G's power-path repairs and adds RGB diagnostics plus a recessed female service socket. The current native PCB, pin mapping, manufacturing exports, firmware and input simulations pass their checks. No physical board has been tested.
 
-The latest clearance, socket, rounded-outline and alignment edits receive CAD, pinout and manufacturing cross-checks only. Final simulations are deferred until the design is finalized, as requested. Sensor-rail distribution was rerouted for the moved jumpers and local transistor clearances; the retained DC report is from an earlier layout and is not presented as a fresh pass.
+The latest rerun completed all eight standalone power cases and both input half-timestep repeats. The two full coupled-startup traces remain incomplete, so the order decision is **HOLD for full power evidence**. Sixteen one-way waveform replays also pass through the actual firmware power monitor, including ADC-error corners.
 
-The power-stage simulation findings below refer to the completed Rev G baseline. Current H evidence separately covers the added RGB load allowance, native geometry, pin mapping and firmware.
+The native routed-copper calculation is now fresh for the current layout. At the stated 85°C/nominal-copper assumptions, the buck-to-boost drop is 45.55 mV against a 120 mV allowance. The worst sensor branch drops 43.72 mV at 300 mA against a 60 mV allowance. The clearance, rounded-outline, female socket and jumper-label changes remain in the checked CAD.
 
 ## Changes that address the earlier failures
 
 | Rev F finding | Retained power implementation | Verification |
 |---|---|---|
-| Input-side limiter interrupts loaded boost startup | U8 connects to internal 5 V; TPS259620 output eFuse connects the sensor load after the raw boost reservoir | Combined low-input startup with 66 µF raw reservoir, 100 µF external load and 300 mA load |
+| Input-side limiter interrupts loaded boost startup | U8 connects to internal 5 V; TPS259620 output eFuse connects the sensor load after the raw boost reservoir | Completed Rev G baseline; Rev H combined startup with 66 µF raw reservoir, 100 µF external load and 300 mA remains incomplete |
 | Reservoir discharge passes through the boost short-current path | U9 limits the protected output; C62–C64 remain upstream; D5 clamps negative output excursions | Running short, cold short, sustained fault and restart scenarios |
 | Firmware cannot reset power protection | PA15 controls U4; PB7 controls Q3/Q2 and U9 enable | Register-level pin tests, application sequencing and addressed CAN reset tests |
 | Reset/unpowered MCU needs a safe output state | R71/R75 pull enable signals LOW; R70 derives the 12 V inhibit from raw BOOST_12V | Native pin/net checks and default-off circuit review |
@@ -22,7 +22,7 @@ The 5 V/12 V selection remains a removable 2 mm cap on each three-pin header. Al
 
 ## Evidence to read
 
-[Release check index](../reports/release_checks.json), [electrical budgets](../reports/electrical/electrical_checks.json), [native-route DC calculation and pin review](../reports/electrical/order_readiness.json), [768-corner averaged boost-loop screen](../reports/electrical/converter_loop.json), and [vendor-model transient cases](../reports/electrical/boost_spice.json) with [earlier complete Rev G evidence](../../archive/README.md).
+[Release check index](../reports/release_checks.json), [electrical budgets](../reports/electrical/electrical_checks.json), [native-route DC calculation and pin review](../reports/electrical/order_readiness.json), [768-corner averaged boost-loop screen](../reports/electrical/converter_loop.json), [ten input-transient cases](../reports/electrical/input_spice.json), [eight standalone power cases](../reports/electrical/boost_spice_partial.json), [firmware waveform replay](../reports/electrical/power_replay.json), and [full power-run status](../reports/electrical/boost_spice.json) with [earlier complete Rev G evidence](../../archive/README.md).
 
 The DC calculation uses nominal 35 µm copper at 85°C and 20 µm via plating, with ideal pad contacts. It checks the 120 mV boost-input PCB allowance at a conservative 1.3 A boost branch, 510 mA 5 V branch, 130 mA logic load and 20 mA RGB/buffer load. Ground return, connectors, cables, actual copper tolerances and temperature rise need measurement.
 
@@ -31,6 +31,8 @@ Pin expectations are checked independently against manufacturer functions for th
 ## Limits and first-article acceptance
 
 The vendor transient model uses an idealized upstream 5 V source; it does not simulate the LMR51420 loop, robot wiring, all silicon corners or an assembled board. The eFuse's floating OVCSEL setting is a roughly 13.8 V fault clamp, not a precision 13 V trip. Software rail monitoring supplements the independent hardware current limits. It does not make a fault-proof or reverse-powered output.
+
+The passing short cases are **shorts to ground**. Directly joining the 5 V and 12 V rails is unsupported and can damage the 5 V switch or sensors: U4's OUT absolute maximum is 7 V. Its reverse-voltage blocking and software overvoltage detection do not guarantee survival of a 12 V cross-connection. See the [wiring limits](WIRING.md).
 
 Qualify startup, both rails loaded together, the exact sensor models and cables, brownouts, cold/running shorts, temperature and CAN programming/recovery using the [validation procedure](VALIDATION.md). Record PCB revision H, exact BOM and firmware identity. Simulation and manufacturing checks reduce the risk of a first order; they cannot guarantee first-board success.
 

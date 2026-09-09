@@ -10,7 +10,7 @@ Electrical calculations cover input thresholds, sensor leakage/residual-voltage 
 
 ## Manufacturer-model transient screen
 
-**Current run status:** eight standalone/load-step cases passed or reused matching completed traces. The two coupled startup runs were canceled before 40 ms, so the H full-suite result is incomplete. The following describes the test design and historical G findings, not a completed H startup validation. The complete G evidence remains in the [archive](../../archive/README.md).
+**Current run status:** all eight standalone/load-step cases passed on a fresh Rev H run. The two 40 ms coupled-startup traces remain incomplete; the full-suite and release decision therefore remain on HOLD. The [fresh standalone results](../reports/electrical/boost_spice_partial.json) and [waveforms](../reports/electrical/boost_spice_partial.png) are retained separately. Their hot-short half-timestep repeat differs by at most 0.77 mV and 0.39 mA. Completed historical G evidence remains in the [archive](../../archive/README.md).
 
 The [harness](../scripts/check_boost_spice.py) maps the fitted TPS61085 and TPS259620 pins/components into original TI models, with the Diodes B240A rectifier model. [Results](../reports/electrical/boost_spice.json) retain every scenario, criterion and generated netlist; [archived Rev G waveforms](../../archive/README.md) show the responses. A failed criterion returns nonzero and prevents the release validation command from passing.
 
@@ -28,6 +28,8 @@ The [harness](../scripts/check_boost_spice.py) maps the fitted TPS61085 and TPS2
 
 Capacitance stress cases use constant nameplate values; ceramic DC-bias reduction makes actual capacitance voltage-dependent. This is a conservative capacitive-load screen, not a guaranteed sensor-capacitance rating. Actual sensors can have constant-power or nonlinear startup loads.
 
+The short tests connect a supply output to ground. They do not establish survival when the 12 V and 5 V outputs are joined: that can exceed U4's 7 V OUT absolute maximum and damage 5 V devices. Cross-rail wiring and externally powering output pins remain unsupported; do not interpret current limiting or software rail monitoring as protection against these faults.
+
 The reduced-limit case uses a 2.92 kΩ test resistor in the typical eFuse model, producing approximately 314.4 mA, below the calculated 314.7 mA minimum for the fitted 2.61 kΩ resistor. This deliberately harder charging condition reaches 11.4 V in about 93 ms with no model fault. It supplements the analytical startup budget; it does not represent a full silicon or temperature corner model, and does not change the BOM.
 
 The upstream supply is idealized with 120 mΩ series resistance, 25.92 µF internal capacitance and 450 mA concurrent logic/RGB/5 V load. The encrypted LMR51420 vendor model cannot be used in this ngspice flow. Its control loop/current limit, PCB/cable inductance, robot brownouts, temperature and production corners are not simulated. The default-off transistor stage is represented by an idealized enable switch; its physical startup behavior needs the separate bench check below. The eFuse thermal timing comes from its behavioral model, not a board thermal solution.
@@ -37,6 +39,18 @@ The normal boost case uses fixed derated C60/reservoir values. Silicon models ar
 PSpice adaptations are syntax-only: namespacing, duplicate PARAMS removal and Boolean XOR translation. The combined startup uses KLU/Gear with `xtrtol=2`, a 50 ns maximum step and a 1 fF numerical node shunt. A complete repeat uses `xtrtol=7` and a 25 ns maximum step. Both retain relative tolerance 0.003 and the same circuit/models, and must pass all electrical criteria. Over the full 40 ms, the comparison requires voltage differences below 50 mV and peak-inductor-current difference below 20 mA. These are solver controls, not component changes.
 
 The original `xtrtol=1` combined run stopped numerically at 28.971 ms during the transition into regulation. It and other [incomplete solver diagnostics](../reports/electrical/solver_diagnostics.json) are excluded from passing evidence; an incomplete trace cannot establish circuit operation or hardware failure. Standalone enable conductance ramps over 1 µs; a discontinuous ideal enable switch also produced a numerical timestep failure. The finite transition keeps the same 2 Ω final shunt. Zero-supply operating-point warnings are accepted only after successful transient-OP fallback and full completion. No semiconductor parameter is tuned to obtain a pass. Results have not been correlated with PSpice or a physical board. Rev F's superseded failure reports remain in its immutable archive.
+
+## Firmware monitor waveform replay
+
+The [replay screen](../reports/electrical/power_replay.json) feeds four completed SPICE traces into the actual `power.c`, compiled with ASan/UBSan, at all four combinations of ±2.5% ADC gain and ±90 mV rail offset. It also subtracts the worst current-layout branch drop at 300 mA. All sixteen cases pass: slow capacitive startup does not cause a false trip; running 12 V short causes a software latch after 20 ms; the 5 V hardware-fault signal causes a latch at the 33 ms sample. Neither rail automatically restarts in the replay, and the other rail stays enabled.
+
+The 12 V trace is aligned to the firmware's 60 ms enable; the running-short case holds a pre-short regulated sample until startup grace ends. Samples are 1 ms apart and the last trace sample is held after its end. This is one-way replay, not coupled hardware/firmware simulation: shutdown commands do not alter the recorded waveform. The 470 µF case remains an extra diagnostic beyond the supported 100 µF external capacitance.
+
+## Sensor-input transient screen
+
+[Ten input-model runs](../reports/electrical/input_spice.json), including two half-timestep repeats, exercise the three native divider/filter/feedback circuits together. The [waveforms](../reports/electrical/input_spice.png) cover 3.3/5/24 V push-pull, 1.2/2.4 V logic limits and 30 V input, NPN/PNP with 100 µA OFF leakage, floating and driven probes, hysteresis, and comparator supply cycling. Cable capacitances are 0.1, 1 and 10 nF; probe checks sample before the firmware's 2 ms settling interval expires.
+
+TI links its LM393LV channel model from the LM339LV product page. Three instances represent the used channels; native resistor/capacitor values and shared reference are retained. The model uses typical comparator behavior. The bias FETs, diode and sensors use explicit resistance, voltage-drop and leakage abstractions, not transistor-level models. The independent 4,096 static threshold corners remain necessary; these transients do not establish worst-temperature behavior, arbitrary sensor compatibility, MCU sampling of short pulses, or whole-board backfeed safety. The report records model/source hashes, decks, completed trace lengths and numerical-repeat differences.
 
 ## Prototype gates before production release
 

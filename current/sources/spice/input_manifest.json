@@ -1,0 +1,9 @@
+{
+  "file": "lm393lv.lib",
+  "url": "https://www.ti.com/lit/zip/snom697a",
+  "retrieved": "2026-09-09",
+  "sha256": "4d346c3daacdf3aa19e1435c88a33bbc3d85d660656fc3c0785e7863390dc2dd",
+  "applicability": "TI links the LM393LV single-channel macromodel from the LM339LV product page; three instances represent the used quad channels. Package coupling and guaranteed silicon corners are not modeled.",
+  "product_page": "https://www.ti.com/product/LM339LV",
+  "note": "Original unencrypted model bytes and copyright notice retained; model version 1.0 dated 2021-07-01."
+}

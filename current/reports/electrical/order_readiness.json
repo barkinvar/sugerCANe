@@ -1,7 +1,20 @@
 {
-  "revision": "H",
-  "order_decision": "CAD cross-checks complete; final simulation deferred",
+  "order_decision": "HOLD: full power-transient evidence incomplete or failing; CAD/DC screens pass",
   "physical_tests_performed": false,
+  "revision": "H",
+  "power_distribution_valid_for_current_layout": true,
+  "full_power_transient_pass": false,
+  "input_hashes": {
+    "hardware/design/circuit.json": "cf9e272fb1d32b9ad6e04e69c37d37f8c2610410835bd46e6231c3692547903e",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "e5e376f707757013034f1a8e24e56f2026b26acad0e8a35b5f4af4108ab9abac",
+    "reports/electrical/electrical_checks.json": "ad27f7e16f6cbff19cc68ec084b22389250dfca7802d8e8bf8d0f183b9c52f6f",
+    "reports/electrical/boost_spice.json": "1569440df8c69b3db8e19c4b869508e76733b0c662a87ab44dec585ce2ef9abb",
+    "reports/design_parity.json": "d79cbd2f9a9dd988ede7c9394aad08e31f1f18c110d687679477102b4768bee5",
+    "reports/board_constraints.json": "c4a58231c4a296b972dac2b7dde1574bf8a7bd9195efa2439ca6a81a247fd8d1",
+    "scripts/check_boost_spice.py": "44d4c0f4d6fd7944d2dda0f4b9387391c9e35fdd984e57e5e4b8072c41089209",
+    "scripts/check_electrical.py": "354526a2887a31aa5174141dfb0059f18d7fb59bf551eacd1fdd0249bc4b1561",
+    "scripts/check_order_readiness.py": "17cefdffed01d60823c17f0b2db6259ada24bed24ae43a738c8183eba090ae04"
+  },
   "pin_review": {
     "checks": {
       "U1": true,
@@ -20,6 +33,12 @@
       "U10": true,
       "Q2": true,
       "Q3": true,
+      "U4_model_matches_fitted_part": true,
+      "U8_model_matches_fitted_part": true,
+      "U9_model_matches_fitted_part": true,
+      "U7_model_matches_fitted_part": true,
+      "power_values_match_analytical_budgets": true,
+      "three_input_channels_share_DC_corner_basis": true,
       "SWD_reset_and_BOOT0_exposed": true,
       "BOOT0_pulldown": true,
       "CAN_defaults_to_standby": true,
@@ -44,6 +63,19 @@
     "boost_to_efuse_drop_V": 0.01232276112341765,
     "total_boost_path_drop_V": 0.045545796561533756,
     "revised_PCB_allowance_V": 0.12,
+    "sensor_branch_drop_V_at_300mA": {
+      "SENSOR_5V": {
+        "1": 0.0284453509902108,
+        "2": 0.035229228160256934,
+        "3": 0.04371654737876069
+      },
+      "SENSOR_12V": {
+        "1": 0.028124185524181278,
+        "2": 0.03469735139580387,
+        "3": 0.04371685694237171
+      }
+    },
+    "sensor_branch_allowance_V": 0.06,
     "results": {
       "V5_INTERNAL": {
         "('L1', '2')": 0.063520915483864,
@@ -59,38 +91,51 @@
       },
       "SENSOR_5V": {
         "1": {
-          "('U4', '6')": -1.122713739169246e-17,
-          "('JP101', '1')": -0.028327689996233047
+          "('U4', '6')": -2.876332994407143e-14,
+          "('JP101', '1')": -0.0284453509902108
         },
         "2": {
-          "('U4', '6')": -2.3352655404509586e-17,
-          "('JP201', '1')": -0.03461064239992565
+          "('U4', '6')": -2.9525558187589324e-14,
+          "('JP201', '1')": -0.035229228160256934
         },
         "3": {
-          "('U4', '6')": -1.256816507691458e-17,
-          "('JP301', '1')": -0.04179320679833727
+          "('U4', '6')": -2.4189960482964056e-14,
+          "('JP301', '1')": -0.04371654737876069
         }
       },
       "SENSOR_12V": {
         "1": {
-          "('U9', '5')": -1.3953396599209814e-17,
-          "('JP101', '3')": -0.0416747434814496
+          "('U9', '5')": 1.7878916750058546e-14,
+          "('JP101', '3')": -0.028124185524181278
         },
         "2": {
-          "('U9', '5')": -2.6154498950347645e-16,
-          "('JP201', '3')": -0.0365911902431591
+          "('U9', '5')": 1.91697571875965e-14,
+          "('JP201', '3')": -0.03469735139580387
         },
         "3": {
-          "('U9', '5')": -6.756032017029219e-17,
-          "('JP301', '3')": -0.035812224370692876
+          "('U9', '5')": 1.8998348706325745e-14,
+          "('JP301', '3')": -0.04371685694237171
         }
       }
     },
-    "geometry_sha256": "11e217094d602b9d50b6f384a8032dedaf020fd171260eed68d26169aa582dd5",
+    "geometry_sha256": "ee8ace1ece8888d4ab19fb7bc53c2685a4823b6b834beb0dc031610224e79002",
     "scope": "Nominal etched dimensions and ideal pads. No temperature solution, ground return, contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json."
   },
-  "scope": "CAD, pin mapping, rounded-outline clearance and manufacturing checks cover the current layout refinement. Retained power_distribution precedes the moved selector and local sensor/logic routing; no current-layout DC or transient pass is claimed. Simulations remain deferred by user until design finalization.",
-  "power_distribution_baseline_commit": "f4de467fd256327cd4beca55338915f698db33fc",
-  "power_distribution_valid_for_current_layout": false,
-  "simulation_deferred_by_user": true
+  "protection_boundary": {
+    "covered_fault_scenarios": "Sensor-supply shorts to ground, overload and explicit recovery under the documented model assumptions.",
+    "cross_connection_5V_to_12V_supported": false,
+    "U4_OUT_absolute_maximum_V": 7,
+    "reason": "A 12 V cross-connection exceeds the TPS2553-1 OUT absolute maximum. Current limiting and software voltage monitoring do not guarantee survival of U4 or a 5 V sensor.",
+    "source": "https://www.ti.com/lit/ds/symlink/tps2553.pdf",
+    "other_exclusions": "External power applied to sensor outputs, arbitrary reverse powering and externally driven fault transients."
+  },
+  "resolved_rev_f_findings": [
+    "Output eFuse isolates reservoir from a sensor short",
+    "Boost input no longer passes through the former 1.2 A switch",
+    "Controlled output slew and staggered firmware startup",
+    "Explicit CAN reset and default-off rail enables",
+    "ADC monitoring replaces coarse comparator rail indication",
+    "Buck input capacitors relocated with verified local VIN and ground paths"
+  ],
+  "limitations": "Ideal pad/nominal copper DC model; no ground-return/contact/cable resistance or thermal solution. Vendor transient models use an idealized upstream 5 V supply and typical silicon. No board has been assembled or measured. Follow docs/VALIDATION.md for physical acceptance."
 }
