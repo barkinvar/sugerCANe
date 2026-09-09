@@ -3,14 +3,14 @@
   "source": "https://www.ti.com/lit/ds/symlink/tps61085.pdf",
   "model": "Averaged CCM current-mode plant, ideal Type-II amplifier, full-cycle delay. gm +/-20%, modulator 3..10 A/V and compensator capacitor +/-30% are engineering sensitivity ranges, not guaranteed silicon bounds.",
   "corners": 512,
-  "minimum_phase_margin_deg": 66.57401070559372,
+  "minimum_phase_margin_deg": 66.34659998316124,
   "minimum_gain_margin_dB": 21.75768354019742,
   "crossover_range_Hz": [
-    831.5415923444118,
+    818.9976517289,
     11358.240552116871
   ],
   "worst_phase_corner": {
-    "vin_V": 4.714649057272681,
+    "vin_V": 4.644649057272681,
     "load_A": 0.1,
     "Cout_uF": 25.0,
     "L_uH": 3.9600000000000004,
@@ -19,10 +19,10 @@
     "fsw_Hz": 900000.0,
     "Rcomp_ohm": 12772.5,
     "Ccomp_nF": 23.099999999999998,
-    "crossover_Hz": 963.1562326882334,
-    "phase_margin_deg": 66.57401070559372,
-    "gain_margin_dB": 46.712736044393935,
-    "RHP_zero_Hz": 744275.7710352726
+    "crossover_Hz": 951.0331145203576,
+    "phase_margin_deg": 66.34659998316124,
+    "gain_margin_dB": 46.78526526600805,
+    "RHP_zero_Hz": 722338.8101753109
   },
   "scope": "Does not prove stability of actual TPS61085, DCM, cascaded buck interaction, startup or current limiting. Bench Bode/load-step tests and thermal/short tests are mandatory before production."
 }

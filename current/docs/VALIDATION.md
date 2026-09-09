@@ -2,6 +2,8 @@
 
 **No Rev F prototype has been assembled, powered or tested.** The files support engineering review and prototype fabrication. The production/competition qualification gates below remain open, even when every automated check passes.
 
+**Final hardware order: HOLD.** See the [pre-order review](ORDER_READINESS.md) for the decision, additional component experiments and issues firmware cannot fix. Prototype fabrication and an order intended to need no hardware corrections have different acceptance requirements.
+
 ## Automated evidence
 
 The release contains native KiCad electrical/design-rule reports, explicit pin-model/schematic/PCB parity, placement/selector/programming-contact checks, manufacturing-file parsing and copper checks, host firmware tests, and Java/C++/Python protocol tests. These check design consistency and modeled behavior. Mocked peripheral tests do not prove STM32 timing or CAN electrical operation.

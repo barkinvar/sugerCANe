@@ -75,6 +75,7 @@ c.save()
 
 dest=R/'order/RevF_SC12_Factory_Upload.zip'
 files=[]
+files.extend(R / p for p in ['docs/ORDER_READINESS.md', 'reports/electrical/order_readiness.json'])
 files.extend(p for p in (R/'reports/electrical').glob('boost_spice*.json') if '_partial' not in p.name)
 files.extend(p for p in (R/'reports/electrical').glob('boost_spice*.png') if '_partial' not in p.name)
 for pat in ['output/fabrication/*','output/assembly/*','output/mechanical/*','output/documentation/BOM_RevF_SC12.pdf','bom/Factory_BOM.csv','bom/BOM_JLCPCB.csv','bom/BOM_per_reference.csv','bom/Hand_solder_BOM.csv','bom/ACCESSORIES.csv','bom/cost_estimate.csv','docs/COST_REDUCTION.md','docs/FACTORY_ORDER.md','docs/ASSEMBLY.md','docs/WIRING.md','docs/VALIDATION.md','firmware/build/factory.hex','firmware/build/application.sc12','host/input_settings.py','host/service_gui.py','docs/INPUT_MODES.md','host/can_service.py','host/firmware_image.py','host/fixture_record.py','tools/program_factory.tcl','tools/fixture_measurements.template.json','docs/CAN_SERVICE.md','docs/FIXTURE.md']:

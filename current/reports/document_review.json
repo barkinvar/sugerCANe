@@ -1,11 +1,11 @@
 {
   "result": "PASS",
-  "local_links_checked": 139,
+  "local_links_checked": 150,
   "broken_links": [],
   "pdfs": [
     {
       "file": "output/documentation/SC12_RevF_Handbook.pdf",
-      "pages": 30,
+      "pages": 32,
       "text_within_page": true
     },
     {

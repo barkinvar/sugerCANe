@@ -2,7 +2,7 @@
 
 Three digital sensor inputs over CAN, with regulated **5 V / 12 V sensor power** and software-selectable **NPN, PNP, push-pull, floating detection and keeper**. Removable 2 mm jumpers select each port's power voltage. All components mount on the top.
 
-**Unbuilt prototype; power validation needs review.** Circuit consistency checks pass. Transient simulation has unresolved capacitive-startup, rapid-reset and short-pulse findings; see [results and physical qualification](docs/VALIDATION.md). This independent design uses its own protocol and drivers; it is not CTRE Phoenix or GrappleHook compatible.
+**Hold a final hardware order.** Circuit consistency checks pass, but capacitive startup, fault reset and short-pulse behavior remain unresolved. No board has been built or tested; Rev F does not meet a requirement for one order with no later hardware corrections. See the [pre-order review](docs/ORDER_READINESS.md) and [validation evidence](docs/VALIDATION.md). This independent design uses its own protocol and drivers; it is not CTRE Phoenix or GrappleHook compatible.
 
 ![Rev F board](output/review/board_3d_final.png)
 

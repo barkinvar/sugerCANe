@@ -1,6 +1,6 @@
 {
   "revision": "F SC12",
-  "status": "REVIEW required: circuit consistency checks pass; transient screening has unresolved findings",
+  "status": "HOLD final hardware order: unresolved electrical findings and no physical qualification",
   "physical_tests_performed": false,
   "erc_violations": 0,
   "drc_violations": 0,
@@ -76,5 +76,6 @@
     "startup_nominal_caps"
   ],
   "spice_scope": "Protected boost only; idealized upstream supply, typical silicon, no thermal or physical qualification",
-  "spice_result": "FAIL"
+  "spice_result": "FAIL",
+  "order_decision": "HOLD: not qualified for a single final hardware order"
 }

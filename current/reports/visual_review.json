@@ -1,6 +1,6 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-09T03:58:30.262002+00:00",
+  "reviewed_utc": "2026-09-09T05:38:40.009195+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
@@ -30,18 +30,18 @@
     },
     {
       "file": "output/documentation/SC12_RevF_Handbook.pdf",
-      "sha256": "eb632aa40f60b9141a497d7e10e0603c2055ad3e605b6b79a47ecb0f06ebe427",
-      "scope": "30-page layout contact sheet; simulation findings/limitations pages 19-20 enlarged, reviewed after final pagination."
+      "sha256": "403fc529f8f1cc5f1ddf4b646d30d7e26ed3fb672d572465aaefa6e1cf3f1889",
+      "scope": "Final 32-page contact sheets inspected; pre-order decision and revised power-budget pages 4-6 enlarged. No clipped text or overlapping table rows found."
     },
     {
       "file": "output/documentation/BOM_RevF_SC12.pdf",
-      "sha256": "fa98385de715fee4c451c730487f62eb5f6bb4bdfbec75245e06a42752f56a14",
-      "scope": "Three pages: current references/MPNs/quantities and extended first-tier cost; revised header enlarged."
+      "sha256": "8709791319dffebfd9eaa925006323b83e9af8f5d9f1d3b5fbb1c17f74836233",
+      "scope": "Three pages: current references/MPNs/quantities and extended first-tier cost; revised header enlarged. Regenerated PDF page renders verified byte-identical to the prior reviewed version."
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
-      "sha256": "025c06e6a23da94b916499b1f8121ca243b849729e8e7d285e3018870b22ef56",
-      "scope": "Both pages: 52x64 outline, H2 at y36.5, custom service mapping and power jumper positions."
+      "sha256": "a860cdc799a6ce3ffee9e2e940b7bb1a31d37f011e28870fdb18010e37198087",
+      "scope": "Both pages: 52x64 outline, H2 at y36.5, custom service mapping and power jumper positions. Regenerated PDF page renders verified byte-identical to the prior reviewed version."
     },
     {
       "file": "output/assembly/schematic.pdf",
@@ -67,9 +67,14 @@
       "file": "reports/electrical/boost_spice_experiments.png",
       "sha256": "ff6a9aca1204b89132083722e2475efaebaec90c1c61f82c72f2ba4cf270b98e",
       "scope": "Legible axes, legends and explicit pass/fail cases; overview decimation is not peak-current evidence."
+    },
+    {
+      "file": "reports/electrical/converter_loop.png",
+      "sha256": "6d796be0f6c89946a5e5586221692f639f345a1935c699a55d06f947b9aff5cf",
+      "scope": "Updated 512-corner loop-screen plot inspected: legible axes, curves and margin labels. Analytical screen, not a physical stability measurement."
     }
   ],
   "limitations": "Nominal CAD/PDF/GUI inspection, not manufactured measurements, bench testing or assembly-yield qualification.",
-  "prior_reviewed_utc": "2026-09-09T00:43:48.985793+00:00",
-  "incremental_review": "Retained unchanged CAD/GUI reviews. Inspected 30-page handbook contact sheet and enlarged simulation findings pages 19-20, three-page BOM, both mechanical pages, and both new simulation figures."
+  "prior_reviewed_utc": "2026-09-09T03:58:30.262002+00:00",
+  "incremental_review": "Retained unchanged prior artifacts. Inspected native top and oblique CAD, final 32-page handbook contact sheets, enlarged pre-order and power-budget pages 4-6, and updated converter-loop plot. Regenerated BOM and mechanical page renders match prior reviewed pages exactly."
 }

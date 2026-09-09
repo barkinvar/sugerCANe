@@ -1,5 +1,7 @@
 # Rev F prototype fabrication and assembly order
 
+**Order status: HOLD for final hardware.** The [pre-order review](ORDER_READINESS.md) identifies unresolved electrical risks. This package is for engineering evaluation; it is not an approved one-shot robot build.
+
 Use [RevF_SC12_Factory_Upload.zip](../order/RevF_SC12_Factory_Upload.zip) for a **prototype lot**, after reviewing the validation plan. No board has been physically qualified, no factory quotation is included and no order has been placed. The exact-MPN BOM is intended for a Chinese or other assembler that accepts customer-specified sourcing; it is not a pre-approved JLCPCB/LCSC turnkey basket.
 
 The packet includes [unresolved power-simulation findings](VALIDATION.md#manufacturer-model-transient-screen). A prototype lot would investigate capacitive startup, reset recovery and short-pulse stress; the current package is not a production sign-off.

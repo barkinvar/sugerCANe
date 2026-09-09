@@ -1,23 +1,23 @@
 {
   "project": "SC12 Rev F",
-  "status": "Unbuilt prototype",
-  "created_utc": "2026-09-09T03:58:30.316130+00:00",
-  "file_count": 302,
+  "status": "HOLD final hardware order; unbuilt evaluation prototype",
+  "created_utc": "2026-09-09T05:38:40.067151+00:00",
+  "file_count": 305,
   "files": [
     {
       "path": "DESIGN_PLAN.md",
-      "bytes": 4496,
-      "sha256": "757cc59a5b2ad300f2d8a33cbbafe7539379a97a29447751b9cc90a1ed555b5a"
+      "bytes": 4548,
+      "sha256": "64e31c6192218bdedbd328dcdd42daee3c71b25a0a3b91f3cd712bcac649445f"
     },
     {
       "path": "README.md",
-      "bytes": 3567,
-      "sha256": "1e0effbd64811ee92150887e049384699515e96fc6a31b4e58e2244522a4d06d"
+      "bytes": 3688,
+      "sha256": "e748dbc6c661379ad46b7da35911fa2b588eee4a9b0077a8900168f1602e512f"
     },
     {
       "path": "TOOLS.md",
-      "bytes": 5114,
-      "sha256": "478985d851ca17302a706c8b233c9602c34d9320c728c5c50bbe1bb32fc71a96"
+      "bytes": 5654,
+      "sha256": "74eefd02d8935da137e10b630df6f68a2b488bba9c095a30a4717e8148497a42"
     },
     {
       "path": "bom/ACCESSORIES.csv",
@@ -111,8 +111,8 @@
     },
     {
       "path": "docs/FACTORY_ORDER.md",
-      "bytes": 5995,
-      "sha256": "3721d03e1bf5f18ff28f6e2a7f611dc1de1f998d48f98ea8fbf7a399b7282ffe"
+      "bytes": 6210,
+      "sha256": "e350e47a8f4099945678a98667ecb44a9b55c84eddc0734cb82db78b365c886f"
     },
     {
       "path": "docs/FIXTURE.md",
@@ -125,14 +125,19 @@
       "sha256": "bc99835501d36de45ecca58574f6314a7eacba610773468d29fa282576d186c8"
     },
     {
+      "path": "docs/ORDER_READINESS.md",
+      "bytes": 8980,
+      "sha256": "58eb93ef93abce87df4f779b734c8ce6293efe7ebcde646747d07ed42b0cfdbe"
+    },
+    {
       "path": "docs/SOURCES_AND_LICENSES.md",
       "bytes": 5223,
       "sha256": "a712a5ad90639401279b5d588838475bb8d30c1c4f88de28ec1869c471276c26"
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 14363,
-      "sha256": "68266cdd9d1b96de94b724b7c5507292fd8c6645986917d8023a106f533665c8"
+      "bytes": 14642,
+      "sha256": "9c46bae44d2fb805f1f7ab4f4f3e2f8730fc0989aedcbbf516ff092f19f9cd6f"
     },
     {
       "path": "docs/WIRING.md",
@@ -886,13 +891,13 @@
     },
     {
       "path": "order/RevF_SC12_Factory_Upload.zip",
-      "bytes": 3368318,
-      "sha256": "afae1d670f5316eea94ea26c52cf630a11222d183d10c5adfdfa94dd69ba2661"
+      "bytes": 3375028,
+      "sha256": "687d526baa5ca1040c230e0d2a9a8a4d7136c4a3739c5651837c253077ffeaef"
     },
     {
       "path": "order/RevF_SC12_Factory_Upload.zip.sha256",
       "bytes": 95,
-      "sha256": "b141c9aec30ca65ef7e48715dae38ffbf92e329db050bbd250c7e214e37badee"
+      "sha256": "2c541a879ded879e4691f856b4aeaaf4a1931b5554743c568783e9823bfd5748"
     },
     {
       "path": "order/RevF_SC12_Gerbers.zip",
@@ -957,12 +962,12 @@
     {
       "path": "output/documentation/BOM_RevF_SC12.pdf",
       "bytes": 7281,
-      "sha256": "fa98385de715fee4c451c730487f62eb5f6bb4bdfbec75245e06a42752f56a14"
+      "sha256": "8709791319dffebfd9eaa925006323b83e9af8f5d9f1d3b5fbb1c17f74836233"
     },
     {
       "path": "output/documentation/SC12_RevF_Handbook.pdf",
-      "bytes": 1639938,
-      "sha256": "eb632aa40f60b9141a497d7e10e0603c2055ad3e605b6b79a47ecb0f06ebe427"
+      "bytes": 1651198,
+      "sha256": "403fc529f8f1cc5f1ddf4b646d30d7e26ed3fb672d572465aaefa6e1cf3f1889"
     },
     {
       "path": "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl",
@@ -1057,7 +1062,7 @@
     {
       "path": "output/mechanical/mechanical_drawing.pdf",
       "bytes": 7062,
-      "sha256": "025c06e6a23da94b916499b1f8121ca243b849729e8e7d285e3018870b22ef56"
+      "sha256": "a860cdc799a6ce3ffee9e2e940b7bb1a31d37f011e28870fdb18010e37198087"
     },
     {
       "path": "output/review/board_3d_final.png",
@@ -1122,7 +1127,7 @@
     {
       "path": "reports/document_review.json",
       "bytes": 949,
-      "sha256": "979e684f04311d2e6ab38b9c2d9c7fcce9c0d04d02f2f965e61d57202d75e015"
+      "sha256": "68c5b9c354bb9e481a8a8451d89ea22e63ce7047d2f52a9fd2b52b4e4b2fc0d6"
     },
     {
       "path": "reports/drc/final.json",
@@ -1137,7 +1142,7 @@
     {
       "path": "reports/electrical/boost_spice.json",
       "bytes": 8800,
-      "sha256": "f1a46ee615ac12b4197bb45a13ef58f442340f5a895228825303da731a19bb0b"
+      "sha256": "65aa5cd757ec20fa1606a4236ad6bf54a17b3ab4fc9d9dd76d24066da8f4d0ad"
     },
     {
       "path": "reports/electrical/boost_spice.png",
@@ -1156,18 +1161,23 @@
     },
     {
       "path": "reports/electrical/converter_loop.json",
-      "bytes": 1179,
-      "sha256": "1e87493fa310c766b36acab15fa21a60ec7b80d774ef8c5e73e56e4a3c4f1c58"
+      "bytes": 1175,
+      "sha256": "8095d6c3a414ccea64925af524e549ae99ac48482021bb778e6cfb1730c76dff"
     },
     {
       "path": "reports/electrical/converter_loop.png",
-      "bytes": 103464,
-      "sha256": "066f2b50c0a56eebef528696fcb3593c907657f45d558818d4658792c86fdf02"
+      "bytes": 103365,
+      "sha256": "6d796be0f6c89946a5e5586221692f639f345a1935c699a55d06f947b9aff5cf"
     },
     {
       "path": "reports/electrical/electrical_checks.json",
-      "bytes": 7087,
-      "sha256": "62c70161c49d5fa95f60f4f2c3b4106cb2319d09a23bcb7e54355ae9f091969a"
+      "bytes": 7126,
+      "sha256": "21cbc85da8ebe2e9ff4f2dc6937170361c3df7a89c3dc39b0014846e5ae6d21a"
+    },
+    {
+      "path": "reports/electrical/order_readiness.json",
+      "bytes": 4569,
+      "sha256": "de3fbde2be43345d8d5a48091bc9bb92d4bc833d42aaa768ae1e01985c06d458"
     },
     {
       "path": "reports/erc/final.json",
@@ -1236,8 +1246,8 @@
     },
     {
       "path": "reports/release_checks.json",
-      "bytes": 3929,
-      "sha256": "789b079863cbfdca7ef8523d302adf9acfbb79851c6e0707e4a7b6e69a1634fc"
+      "bytes": 4000,
+      "sha256": "ae38fd02c964be0333dff520751fd845cd65404dd94b07d1e4cc3cd2319a3490"
     },
     {
       "path": "reports/variant_verification.json",
@@ -1246,8 +1256,8 @@
     },
     {
       "path": "reports/visual_review.json",
-      "bytes": 4016,
-      "sha256": "34ffea43502625ce91fe3bd0aa2c400eb59feaca2a62d5276c74621ad570c971"
+      "bytes": 4611,
+      "sha256": "28c7bf574a8d9dea799989141e5b7c664d47f22638ca75f8a89c3bce9d365553"
     },
     {
       "path": "scripts/add_ground_planes.py",
@@ -1266,8 +1276,8 @@
     },
     {
       "path": "scripts/build_documents.py",
-      "bytes": 7431,
-      "sha256": "6a91b96d914810bc0e8d6957c72d6545ae670ca641dccc9834166bd97101d4ea"
+      "bytes": 7531,
+      "sha256": "52777819329e435a4c3b519fa9096b1089a3295a7781d611cdf5e3e639777966"
     },
     {
       "path": "scripts/build_factory_files.py",
@@ -1276,13 +1286,13 @@
     },
     {
       "path": "scripts/build_handbook.py",
-      "bytes": 9755,
-      "sha256": "5d389c3e7410fe671252fd6412bf79b5af389869643073bcbcf69b3c15f55935"
+      "bytes": 9960,
+      "sha256": "51569f4c379e49fe11d3a9e12ce9e8dfcca8457a011c969d1f75ce938148074f"
     },
     {
       "path": "scripts/build_release.py",
-      "bytes": 2882,
-      "sha256": "ddbef03fca496c8bad650f02248a039e9bdb6808501d3bca75b5f7d681a0cf6f"
+      "bytes": 2920,
+      "sha256": "8152a0e8d819925039096e59d9b6a103d49966d5aef3b3c454df6e24ff108760"
     },
     {
       "path": "scripts/check_board_constraints.py",
@@ -1306,8 +1316,8 @@
     },
     {
       "path": "scripts/check_electrical.py",
-      "bytes": 11913,
-      "sha256": "85142e2ac554f07c77f2f2363e9ca7f8429442e0cb7e49c93db4c564179ab391"
+      "bytes": 12099,
+      "sha256": "2ea2cbbc503be2269989bd53051d0bd4089323d8f3eb90203ecfa6b4c3cc6b87"
     },
     {
       "path": "scripts/check_firmware_images.py",
@@ -1318,6 +1328,11 @@
       "path": "scripts/check_gui.py",
       "bytes": 1364,
       "sha256": "4b7637e50af4c75226e13333e1ed40859d39b3a0d344ae45df8924bfd33601b9"
+    },
+    {
+      "path": "scripts/check_order_readiness.py",
+      "bytes": 16785,
+      "sha256": "eb0cb0f8e450abbbd9200ad1dc458780434ec27a47a10000f8e30696f833a642"
     },
     {
       "path": "scripts/check_variant.py",
@@ -1416,8 +1431,8 @@
     },
     {
       "path": "scripts/verify_archive.py",
-      "bytes": 1800,
-      "sha256": "e3fd19d9ada11966e000f3ec228d750b9d31b077c41895a5f6cc857ec9d58a9a"
+      "bytes": 2045,
+      "sha256": "8926fa15d0dbac13925ad60bed6594fd1b0f92d13ac99c7a7157b372ce524cff"
     },
     {
       "path": "scripts/verify_gerber_connectivity.py",
@@ -1436,8 +1451,8 @@
     },
     {
       "path": "scripts/write_validation_summary.py",
-      "bytes": 3971,
-      "sha256": "6bb33c3fc54c1b0c4c269d04a37acbcda6c33f4903295c862f08e7e723c23acd"
+      "bytes": 4293,
+      "sha256": "380bf9ec07fa193cd2679310bb12029393e9d6484b16e141578ca395f64c089c"
     },
     {
       "path": "sources/datasheets/samsung_CL31A226_characteristics.json",

@@ -13,7 +13,7 @@
   "simulator": "******\n** ngspice-42 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2023, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Sun Mar 31 20:15:14 UTC 2024\n******",
   "circuit_sha256": "3a55f30820d391818373b4208695c0ed10e71aa46baea795fb453f5822c7b203",
   "script_sha256": "2ec35f90a05cb0804e2689962bec8426d1e8e65238824289ca379555557f1df5",
-  "electrical_sha256": "62c70161c49d5fa95f60f4f2c3b4106cb2319d09a23bcb7e54355ae9f091969a",
+  "electrical_sha256": "21cbc85da8ebe2e9ff4f2dc6937170361c3df7a89c3dc39b0014846e5ae6d21a",
   "capacitor_curve_sha256": "dd34434fb3afc042fc5e0e8735a8b7324f1a482f45c191c1dfade328dadda973",
   "sources": [
     {

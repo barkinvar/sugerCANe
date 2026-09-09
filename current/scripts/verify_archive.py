@@ -14,6 +14,8 @@ with tempfile.TemporaryDirectory(prefix='sc_lite_release_') as t:
  subprocess.run(['kicad-python',str(base/'scripts/check_design_parity.py')],check=True)
  subprocess.run(['kicad-python',str(base/'scripts/check_board_constraints.py')],check=True,stdout=subprocess.DEVNULL)
  subprocess.run([sys.executable,str(base/'scripts/check_boost_spice.py'),'--verify-report'],check=True)
+ subprocess.run([sys.executable,str(base/'scripts/check_order_readiness.py'),'--verify-report'],check=True)
  spice_result=json.loads((base/'reports/electrical/boost_spice.json').read_text())['result']
-out=dict(result='PASS archive integrity',archive=zpath.name,sha256=hashlib.sha256(zpath.read_bytes()).hexdigest(),files_verified=len(manifest['files']),extracted_erc_drc_and_parity='PASS',simulation_screening=spice_result,physical_qualification=False)
+ order_decision=json.loads((base/'reports/electrical/order_readiness.json').read_text())['order_decision']
+out=dict(result='PASS archive integrity',archive=zpath.name,sha256=hashlib.sha256(zpath.read_bytes()).hexdigest(),files_verified=len(manifest['files']),extracted_erc_drc_and_parity='PASS',simulation_screening=spice_result,order_decision=order_decision,physical_qualification=False)
 (R/'release/verification.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out,indent=2))

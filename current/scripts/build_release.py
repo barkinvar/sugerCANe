@@ -13,7 +13,7 @@ patterns=['*.md','tools-requirements.lock','bom/*','docs/*.md','tools/*','licens
 selected=sorted({p for pat in patterns for p in R.glob(pat) if p.is_file() and '__pycache__' not in p.parts and p.suffix not in ('.pyc','.o','.d')})
 assert any(p.name=='board_3d_final.png' for p in selected)
 entries=[dict(path=p.relative_to(R).as_posix(),bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in selected]
-manifest=dict(project='SC12 Rev F',status='Unbuilt prototype',created_utc=datetime.now(timezone.utc).isoformat(),file_count=len(entries),files=entries,scope='Manifest and enclosing archive excluded from their own hashes; no physical qualification.')
+manifest=dict(project='SC12 Rev F',status='HOLD final hardware order; unbuilt evaluation prototype',created_utc=datetime.now(timezone.utc).isoformat(),file_count=len(entries),files=entries,scope='Manifest and enclosing archive excluded from their own hashes; no physical qualification.')
 raw=(json.dumps(manifest,indent=2)+'\n').encode();(D/'manifest.json').write_bytes(raw)
 dest=D/'FRC_Sensor_CAN_RevF_SC12_Prototype.zip'
 with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:

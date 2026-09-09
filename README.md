@@ -4,7 +4,7 @@ A compact interface for **three NPN, PNP or logic sensors** on an FRC robot. Eac
 
 **Start with [Rev F in `current/`](current/README.md).** It is an unbuilt engineering prototype, with [physical qualification still pending](current/docs/VALIDATION.md). It uses its own protocol and drivers; it is not compatible with CTRE Phoenix or GrappleHook.
 
-**Power validation needs review.** Normal-load simulations pass, but capacitive startup, rapid fault reset and short-pulse stress have unresolved findings. Read the [simulation results](current/docs/VALIDATION.md#manufacturer-model-transient-screen) before treating this design as ready for production.
+**Hold a final hardware order.** Rev F has unresolved capacitive-startup, fault-reset and short-pulse findings. It has never been physically tested and does not meet a requirement for a single order with no later hardware corrections. See the [pre-order review](current/docs/ORDER_READINESS.md) and [simulation results](current/docs/VALIDATION.md#manufacturer-model-transient-screen).
 
 ![SC12 Rev F](current/output/review/board_3d_final.png)
 

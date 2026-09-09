@@ -151,12 +151,16 @@ if render.exists():
         w, h = im.size
     story.append(Image(str(render), width=380, height=380*h/w))
 story.extend([Spacer(1, 12), Paragraph('2026-09-08', styles['heading']),
-              Paragraph('Editable KiCad files, split factory/hand-solder BOMs, firmware, robot examples and verification records accompany this guide. No physical prototype has been tested. Electrical ratings are design targets pending the included qualification plan.', styles['body']),
+              Paragraph('HOLD a final hardware order. No physical prototype has been tested, and power-stage findings remain unresolved. This guide accompanies evaluation files; it does not approve a one-shot robot build. See the pre-order decision and qualification chapters.', styles['body']),
               PageBreak(), Paragraph('Contents', styles['chapter'])])
 toc = TableOfContents()
 toc.levelStyles = [ParagraphStyle('TOC', fontName='Guide', fontSize=10, leading=19, textColor=INK)]
 story.extend([toc, PageBreak()])
 chapters = [('1  Product overview', 'README.md'), ('2  Power and input circuit', 'DESIGN_PLAN.md'), ('3  Wiring and programming contacts', 'docs/WIRING.md'), ('4  Software input modes', 'docs/INPUT_MODES.md'), ('5  Assembly', 'docs/ASSEMBLY.md'), ('6  Firmware', 'firmware/README.md'), ('7  CAN protocol', 'docs/CAN_PROTOCOL.md'), ('8  CAN setup and updates', 'docs/CAN_SERVICE.md'), ('9  Robot integration', 'examples/README.md'), ('10  Purchasing and factory quote', 'docs/FACTORY_ORDER.md'), ('11  Qualification', 'docs/VALIDATION.md'), ('12  Unit fixture', 'docs/FIXTURE.md'), ('13  Connectors', 'docs/CONNECTORS.md'), ('14  Cost reduction', 'docs/COST_REDUCTION.md'), ('15  Tools', 'TOOLS.md'), ('16  Sources and notices', 'docs/SOURCES_AND_LICENSES.md')]
+
+chapters.insert(1, ('Pre-order decision', 'docs/ORDER_READINESS.md'))
+chapters = [(str(i) + '  ' + re.sub(r'^\d+\s+', '', title), path)
+            for i, (title, path) in enumerate(chapters, 1)]
 
 for i, (title, path) in enumerate(chapters):
     if i:

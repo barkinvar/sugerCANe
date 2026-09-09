@@ -17,6 +17,8 @@ assert read('reports/firmware-images.json')['result']=='PASS'
 loop=read('reports/electrical/converter_loop.json');assert loop['result']=='PASS analytical screening only'
 subprocess.run([sys.executable,str(R/'scripts/check_boost_spice.py'),'--verify-report'],check=True)
 spice=read('reports/electrical/boost_spice.json')
+subprocess.run([sys.executable,str(R/'scripts/check_order_readiness.py'),'--verify-report'],check=True)
+order_review=read('reports/electrical/order_readiness.json')
 tracked=['hardware/FRC_Sensor_CAN.kicad_pcb','hardware/FRC_Sensor_CAN.kicad_sch','hardware/design/circuit.json','bom/BOM_grouped.csv','firmware/build/sensor_can.bin','firmware/build/bootloader.bin','firmware/build/factory.hex','firmware/build/application.sc12','output/assembly/schematic.pdf']
 tracked += ['bom/Factory_BOM.csv','bom/Hand_solder_BOM.csv','bom/ACCESSORIES.csv','output/assembly/CPL_JLCPCB.csv']
 factory=read('reports/manufacturing/factory_files.json');assert factory['result']=='PASS' and factory['factory_smt_placements']==110 and factory['hand_solder_parts']==9
@@ -27,4 +29,6 @@ out['spice_scope']='Protected boost only; idealized upstream supply, typical sil
 out['spice_result']=spice['result']
 if spice['result']=='FAIL':
  out['status']='REVIEW required: circuit consistency checks pass; transient screening has unresolved findings'
+out['order_decision']=order_review['order_decision']
+out['status']='HOLD final hardware order: unresolved electrical findings and no physical qualification'
 (R/'reports/release_checks.json').write_text(json.dumps(out,indent=2)+'\n');print(out['status'])

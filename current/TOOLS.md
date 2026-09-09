@@ -1,5 +1,7 @@
 # Tools and reproduction
 
+The [pre-order review](docs/ORDER_READINESS.md) remains HOLD. Run its pin and routed-copper checks with `python scripts/check_order_readiness.py`; `--verify-report` verifies retained evidence. Optional `--simulate --jobs 2` runs hypothetical component cases into ignored `tmp/order-review/` and can take over an hour; `--reuse` accepts only matching completed decks/models. These experiments were stopped during this review and are not counted as pass/fail evidence. None of these commands approves fabrication or changes fitted hardware.
+
 The saved native KiCad schematic/PCB are authoritative. Circuit data, schematic, BOM and PCB must agree. Historical placement/router experiments have been removed; validation never reroutes the board.
 
 Tested toolchain: KiCad 10.0.6 and its matching pcbnew interpreter, Python 3.12, Arm GNU GCC 13.2.1, GNU make, host GCC/G++, Java 17, Java 25 for the WPILib 2027 adapter, Poppler, InteractiveHtmlBom 2.11.2 and [pinned Python packages](tools-requirements.lock). Native tool binaries and dependency caches are outside Git. PDF generation uses DejaVu Sans/Mono.
