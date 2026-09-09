@@ -4,6 +4,7 @@ cd -- "$(dirname -- "$0")/.."
 source tools/env.sh
 board=hardware/FRC_Sensor_CAN.kicad_pcb
 mkdir -p output/fabrication output/assembly output/mechanical
+python scripts/check_routing.py
 kicad-cli pcb drc --exit-code-violations --severity-all --format json -o reports/drc/final.json "$board"
 kicad-cli sch erc --exit-code-violations --severity-all --format json -o reports/erc/final.json hardware/FRC_Sensor_CAN.kicad_sch
 kicad-cli sch export netlist --format kicadxml -o hardware/design/schematic.net.xml hardware/FRC_Sensor_CAN.kicad_sch

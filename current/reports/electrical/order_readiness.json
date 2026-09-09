@@ -6,14 +6,14 @@
   "full_power_transient_pass": false,
   "input_hashes": {
     "hardware/design/circuit.json": "cf9e272fb1d32b9ad6e04e69c37d37f8c2610410835bd46e6231c3692547903e",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "4dbc9208492c918116b7ac64fa8dd2f690e22194182b16fcd156fdfab12a3d91",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "fd0300a03fefe04b3450b189a5eaf8c5ebc6f14a9a142200d0e18a809b69be98",
     "reports/electrical/electrical_checks.json": "ad27f7e16f6cbff19cc68ec084b22389250dfca7802d8e8bf8d0f183b9c52f6f",
     "reports/electrical/boost_spice.json": "1569440df8c69b3db8e19c4b869508e76733b0c662a87ab44dec585ce2ef9abb",
     "reports/design_parity.json": "d79cbd2f9a9dd988ede7c9394aad08e31f1f18c110d687679477102b4768bee5",
-    "reports/board_constraints.json": "0b1763251fbb29ed45a8216e40c32a9dbc5b17d878acc0910fa59ae1e8f5996a",
+    "reports/board_constraints.json": "54d51afbe865286ebf8f1396c307314ffb0ba906fa38792000a6116a38a13f57",
     "scripts/check_boost_spice.py": "44d4c0f4d6fd7944d2dda0f4b9387391c9e35fdd984e57e5e4b8072c41089209",
     "scripts/check_electrical.py": "354526a2887a31aa5174141dfb0059f18d7fb59bf551eacd1fdd0249bc4b1561",
-    "scripts/check_order_readiness.py": "17cefdffed01d60823c17f0b2db6259ada24bed24ae43a738c8183eba090ae04"
+    "scripts/check_order_readiness.py": "a9d881c6c337c032e9489361b0a3f214e2cc09d14215b8c197d2a30228c0a817"
   },
   "pin_review": {
     "checks": {
@@ -51,75 +51,81 @@
     "scope": "Independent manufacturer pin-function expectations and default-off circuit intent, alongside native parity checks."
   },
   "power_distribution": {
-    "method": "Native routed-track resistor network with pad contacts and through vias; nodal DC solve",
+    "method": "Native routed-track resistor network with geometric pad/via/track contacts; nodal DC solve",
     "trace_temperature_C": 85,
     "copper_um": 35,
     "via_plating_um": 20,
+    "copper_center_depths_mm": {
+      "F.Cu": 0.0175,
+      "In1.Cu": 0.2525,
+      "In2.Cu": 1.3275000000000001,
+      "B.Cu": 1.5625
+    },
     "boost_input_A": 1.3,
     "other_5V_sensor_A": 0.51,
     "logic_A": 0.13,
     "RGB_buffer_A": 0.02,
-    "buck_to_boost_drop_V": 0.03361883962766558,
-    "boost_to_efuse_drop_V": 0.01232276112341765,
-    "total_boost_path_drop_V": 0.03361883962766558,
+    "buck_to_boost_drop_V": 0.05157477638311744,
+    "boost_to_efuse_drop_V": 0.011435964671943669,
+    "total_boost_path_drop_V": 0.05157477638311744,
     "revised_PCB_allowance_V": 0.12,
     "sensor_branch_drop_V_at_300mA": {
       "SENSOR_5V": {
-        "1": 0.0283882840325662,
-        "2": 0.03472075251048832,
-        "3": 0.04317624746622162
+        "1": 0.025838254990838423,
+        "2": 0.029929973206933348,
+        "3": 0.03807802863396955
       },
       "SENSOR_12V": {
-        "1": 0.027583250350635972,
-        "2": 0.03415641622227707,
-        "3": 0.043170487806972684
+        "1": 0.021141082616732608,
+        "2": 0.032075537365525764,
+        "3": 0.04097525068249517
       }
     },
     "sensor_branch_allowance_V": 0.06,
     "results": {
       "V5_INTERNAL": {
-        "('L1', '2')": 0.051551489189248866,
-        "('L2', '1')": -0.03361883962766558,
-        "('U4', '1')": 0.05022478266173482,
-        "('U2', '1')": 0.043757517176936406,
-        "('U10', '5')": -0.010980519678426722,
-        "('D10', '2')": 0.042567008182027966
+        "('L1', '2')": 0.03524833262255788,
+        "('L2', '1')": -0.01632644376055956,
+        "('U4', '1')": 0.034228264476995375,
+        "('U2', '1')": 0.02793983466995626,
+        "('U10', '5')": -2.6160985212707494e-05,
+        "('D10', '2')": 0.026941171785791078
       },
       "BOOST_12V": {
-        "('D4', '1')": -3.001557360734495e-17,
-        "('U9', '4')": -0.01232276112341765
+        "('D4', '1')": 1.7334264114324962e-17,
+        "('U9', '4')": -0.011435964671943669
       },
       "SENSOR_5V": {
         "1": {
-          "('U4', '6')": -3.4496173519847943e-17,
-          "('JP101', '1')": -0.0283882840325662
+          "('U4', '6')": 3.7576443675393846e-14,
+          "('JP101', '1')": -0.025838254990838423
         },
         "2": {
-          "('U4', '6')": -1.0019765771883196e-17,
-          "('JP201', '1')": -0.03472075251048832
+          "('U4', '6')": 1.2855794374936882e-13,
+          "('JP201', '1')": -0.029929973206933348
         },
         "3": {
-          "('U4', '6')": -3.9894898979827814e-17,
-          "('JP301', '1')": -0.04317624746622162
+          "('U4', '6')": 2.5976456246621853e-13,
+          "('JP301', '1')": -0.03807802863396955
         }
       },
       "SENSOR_12V": {
         "1": {
-          "('U9', '5')": 2.2515355339719716e-14,
-          "('JP101', '3')": -0.027583250350635972
+          "('U9', '5')": -3.2941211418542655e-18,
+          "('JP101', '3')": -0.021141082616732608
         },
         "2": {
-          "('U9', '5')": -4.053192376124134e-15,
-          "('JP201', '3')": -0.03415641622227707
+          "('U9', '5')": -1.8733794408957446e-19,
+          "('JP201', '3')": -0.032075537365525764
         },
         "3": {
-          "('U9', '5')": -1.3335332484237074e-15,
-          "('JP301', '3')": -0.043170487806972684
+          "('U9', '5')": 1.6772673986648627e-18,
+          "('JP301', '3')": -0.04097525068249517
         }
       }
     },
-    "geometry_sha256": "daee4253fd2139f19a33adc424ccda0a26af072e7663ec98a8c33862d47bf670",
-    "scope": "Nominal etched dimensions and ideal pads. No temperature solution, ground return, contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json."
+    "geometry_sha256": "dec2616e36e1241270c77ba8c5abba759750089262c4770508fc0c429050ac4e",
+    "scope": "Nominal etched dimensions, ideal pads/via annuli and finite transverse links between overlapping track centerlines. No current-crowding or temperature solution, ground return, connector contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json."
   },
   "protection_boundary": {
     "covered_fault_scenarios": "Sensor-supply shorts to ground, overload and explicit recovery under the documented model assumptions.",

@@ -1,31 +1,31 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-09T23:35:29.145933+00:00",
+  "reviewed_utc": "2026-09-09T23:52:16.918628+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
       "file": "output/review/board_3d_final.png",
-      "sha256": "868274507726f7f690def352ee4f7be9fe0dc5c4b6f2d73e04ae742bcf2b9ff8",
-      "scope": "Oblique CAD reviewed after trace cleanup: component arrangement, right-side RGB duct area, connectors, service socket and markings retained.",
-      "reviewed_utc": "2026-09-09T23:02:16.478911+00:00"
+      "sha256": "e75573f510970fe008c4b9adecb4ac391d45c2178c5f2aa82fae1f5cf6b90df0",
+      "scope": "Oblique CAD inspected after final enforced routing cleanup. Component arrangement, right-side RGB duct area, connectors, socket and markings retained.",
+      "reviewed_utc": "2026-09-09T23:52:16.918628+00:00"
     },
     {
       "file": "output/review/board_top.png",
-      "sha256": "bc9231483a86e4dcd03b87a0dc7042e567702d138fb35d36ecd8a28d46223dcc",
-      "scope": "Top CAD reviewed after trace cleanup: shorter consistent routes and input pad escapes; voltage legends, connector access and component placement retained.",
-      "reviewed_utc": "2026-09-09T23:02:16.478911+00:00"
+      "sha256": "7643a78b0b13b17649886499836849ff2f9268ebdf71567db74f734ec9c40972",
+      "scope": "Top CAD and separate centerline view inspected. Straight horizontal/vertical/45-degree routes; local pad escapes remain. Component and jumper-label placement unchanged.",
+      "reviewed_utc": "2026-09-09T23:52:16.918628+00:00"
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "47efc1951447274a27631d8259128968523c4ad323af04057f57a02a30a887ec",
-      "scope": "Underside CAD reviewed: original bold pixel sugarCANe lettering with separated letters, clear lowercase e and g descender; taller CAN capitals. Pixel cane retained. Island has a convex stepped top and a stepped, tapering underside like the original. No borders or other text. Exact native comparison confirms all other PCB geometry unchanged; small via holes remain visible.",
-      "reviewed_utc": "2026-09-09T23:35:29.145933+00:00"
+      "sha256": "c3673b391bd0787ca758101d7958e1402129fc9b73d4b79eeafc8f06a36bf620",
+      "scope": "Underside CAD inspected after routing cleanup. Readable pixel sugarCANe lettering and stepped island/cane artwork unchanged; copper routes simplified. All vias and holes retained.",
+      "reviewed_utc": "2026-09-09T23:52:16.918628+00:00"
     },
     {
       "file": "output/review/board_connectors.png",
-      "sha256": "1f05f8bb8014a4605e1797431fae17344db0fda31bf1db094bd165ef738e0844",
-      "scope": "Connector-angle CAD reviewed after trace cleanup: all terminal entries, jumpers and recessed debug socket retain their previous placement and access.",
-      "reviewed_utc": "2026-09-09T23:02:16.478911+00:00"
+      "sha256": "8b7801934004ebac5870999605a93c833f485d74143a612803672c9fcb4129cb",
+      "scope": "Connector-angle CAD inspected: terminal entries, voltage jumpers and recessed socket retain their previous arrangement and access.",
+      "reviewed_utc": "2026-09-09T23:52:16.918628+00:00"
     },
     {
       "file": "output/review/service_gui.png",
@@ -36,9 +36,9 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "c6179008cffd79143a93b27aee8d8e763e4b4418a7637434db7ad87bad569d6e",
-      "scope": "All 38 pages compared to 0d8cffb at 1x. Changed pages 3, 35 and 37 visually reviewed at 1.4x: original pixel lettering, stepped island underside and font-independent reproduction. All other pages pixel-identical.",
-      "reviewed_utc": "2026-09-09T23:35:29.145933+00:00"
+      "sha256": "22fc3a1e98751f506cb6a15a8b6cf83df85e9add06e1de91e1cad8018fccb705",
+      "scope": "All 38 pages compared to e1e4146 at 1.5x. Changed pages 1, 3, 4, 5, 35 and 36 visually inspected: current render, enforced routing, corrected DC model/results and reproduction instructions. All other pages pixel-identical.",
+      "reviewed_utc": "2026-09-09T23:52:16.918628+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
@@ -69,9 +69,9 @@
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "sha256": "2a7cb22a9424d98d9cc0b2b5a1b47350a3dabd017da01f731c2263147525049a",
-      "scope": "All four pages rendered and reviewed: top, continuous inner ground layer, inner service routing and mirrored bottom. Exported copper, actual drills and nominal board contour shown; cleaned paths and ground continuity visually checked alongside independent geometry/connectivity verification.",
-      "reviewed_utc": "2026-09-09T23:02:16.478911+00:00"
+      "sha256": "5a2b1cbb49a82ee7a48712750b3281631d2c7ebd74c2c051c5d9b47e371bd7df",
+      "scope": "All four copper pages rendered and inspected: top, continuous inner ground, inner service routing and mirrored bottom. Straight cleaned paths, nominal outline and actual drills inspected alongside independent geometry/connectivity checks.",
+      "reviewed_utc": "2026-09-09T23:52:16.918628+00:00"
     },
     {
       "file": "reports/electrical/converter_loop.png",
@@ -106,17 +106,44 @@
     }
   ],
   "limitations": "Nominal CAD/PDF inspection only. Fresh route DC and firmware waveform replay pass; full combined startup remains incomplete. No physical board, optical, vibration, assembly-yield or EMC qualification.",
-  "page_comparison_baseline_commit": "0d8cffba7e4c350c02ca4c9a72b7ae324cc7ee8e",
+  "page_comparison_baseline_commit": "e1e414610c446869f02546a1a50daa3a2530ad9b",
   "rendered_page_comparison": {
-    "handbook": {
-      "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "pages": 38,
+    "current/output/documentation/SC12_RevH_Handbook.pdf": {
+      "before_pages": 38,
+      "after_pages": 38,
       "changed_pages": [
+        1,
         3,
+        4,
+        5,
         35,
-        37
-      ],
-      "all_other_pages_pixel_identical": true
+        36
+      ]
+    },
+    "current/output/assembly/schematic.pdf": {
+      "before_pages": 10,
+      "after_pages": 10,
+      "changed_pages": []
+    },
+    "current/output/assembly/top_assembly.pdf": {
+      "before_pages": 1,
+      "after_pages": 1,
+      "changed_pages": []
+    },
+    "current/output/assembly/bottom_markings.pdf": {
+      "before_pages": 1,
+      "after_pages": 1,
+      "changed_pages": []
+    },
+    "current/output/fabrication/FRC_Sensor_CAN-NPTH-drl_map.pdf": {
+      "before_pages": 1,
+      "after_pages": 1,
+      "changed_pages": []
+    },
+    "current/output/fabrication/FRC_Sensor_CAN-PTH-drl_map.pdf": {
+      "before_pages": 1,
+      "after_pages": 1,
+      "changed_pages": []
     }
   },
   "bottom_branding": {
@@ -126,14 +153,56 @@
     "source_ink_mm2": 416.3550544946659,
     "minimum_mask_opening_clearance_mm": 3.6466220000000003,
     "scope": "Ordered dark/clear Gerber compositing compared against the outlined SVG; 1 um polygon tolerance. No printed sample was measured.",
-    "only_bottom_silkscreen_changed": true,
     "legacy_bottom_labels_remain_absent": true,
     "native_artwork_shapes": 13,
-    "copper_mask_drill_and_front_silk_exports_byte_identical": true,
     "source_hashes": {
       "hardware/artwork/sugarCANe.svg": "48b18c5d6fe39791e7021fb1c20e127e6f972da14bf723b56888ec58194194cb",
       "scripts/build_brand_artwork.py": "b11b3c4e97c96dc513536164d898aba77dabd21346860ae1373e17cc4a63fb4a",
       "scripts/apply_bottom_artwork.py": "aab47c1f93f2ed558e0d94d5b60c74ec531f583fd9cffa7cdd3ff4b60fca3307"
-    }
+    },
+    "native_bottom_artwork_unchanged_since": "e1e414610c446869f02546a1a50daa3a2530ad9b",
+    "silkscreen_mask_paste_outline_and_ground_plane_geometry_unchanged": true
+  },
+  "unchanged_export_geometry": {
+    "files": [
+      "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo",
+      "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto",
+      "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs",
+      "output/fabrication/FRC_Sensor_CAN-F_Mask.gts",
+      "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp",
+      "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp",
+      "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1",
+      "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1"
+    ],
+    "method": "Exact text comparison excluding generator timestamps only."
+  },
+  "routing_cleanup": {
+    "result": "PASS",
+    "baseline_commit": "e1e414610c446869f02546a1a50daa3a2530ad9b",
+    "before": {
+      "segments": 4113,
+      "vias": 245,
+      "total_centerline_length_mm": 3533.2358497275845,
+      "minimum_width_mm": 0.18
+    },
+    "after": {
+      "segments": 1993,
+      "vias": 245,
+      "total_centerline_length_mm": 3418.299491757235,
+      "minimum_width_mm": 0.18
+    },
+    "unchanged_native_objects": [
+      "footprints and pads",
+      "vias",
+      "board outline",
+      "stackup",
+      "net names",
+      "top and bottom artwork/markings",
+      "zone definitions and keepouts"
+    ],
+    "comparison": "Parsed native objects compared exactly, excluding tracks and regenerated zone-fill caches.",
+    "baseline_board_sha256": "4dbc9208492c918116b7ac64fa8dd2f690e22194182b16fcd156fdfab12a3d91",
+    "board_sha256": "fd0300a03fefe04b3450b189a5eaf8c5ebc6f14a9a142200d0e18a809b69be98",
+    "scope": "Routing cleanup only; no component, electrical-function, BOM or firmware changes. Final routing, DRC, parity, local bypass, exported Gerber and DC-drop reports are separate gates."
   }
 }

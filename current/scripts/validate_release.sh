@@ -3,6 +3,8 @@ set -euo pipefail
 cd -- "$(dirname -- "$0")/.."
 source tools/env.sh
 mkdir -p reports/electrical reports/manufacturing reports/driver
+python scripts/test_routing.py > reports/routing-tests.log 2>&1
+python scripts/check_routing.py
 python scripts/build_bom.py
 python scripts/estimate_cost.py
 python scripts/compare_assembly_cost.py

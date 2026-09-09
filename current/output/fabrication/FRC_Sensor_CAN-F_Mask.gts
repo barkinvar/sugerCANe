@@ -1,12 +1,12 @@
 %TF.GenerationSoftware,KiCad,Pcbnew,10.0.6*%
-%TF.CreationDate,2026-09-09T16:00:47-07:00*%
+%TF.CreationDate,2026-09-09T16:48:24-07:00*%
 %TF.ProjectId,FRC_Sensor_CAN,4652435f-5365-46e7-936f-725f43414e2e,H*%
 %TF.SameCoordinates,Original*%
 %TF.FileFunction,Soldermask,Top*%
 %TF.FilePolarity,Negative*%
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW 10.0.6) date 2026-09-09 16:00:47*
+G04 Created by KiCad (PCBNEW 10.0.6) date 2026-09-09 16:48:24*
 %MOMM*%
 %LPD*%
 G01*

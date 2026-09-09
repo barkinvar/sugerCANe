@@ -16,4 +16,6 @@ Ignore environments, downloaded dependencies, compiler objects, executable test 
 
 For electrical/layout changes, run native ERC/DRC, model parity, circuit constraints and independent manufacturing checks. Refresh affected firmware tests, BOM, factory packet and release archive. Review generated documents and board renders visually; a test result does not establish physical qualification. Update the documented prototype gates when behavior changes.
 
+Follow the [routing rules](current/docs/ROUTING_RULES.md): straight horizontal/vertical/45° centerlines, no redundant segments or tiny free jogs, and chamfered free bends. Run the routing gate and its regression fixtures before exporting; do not bypass failures or relax clearance/current limits to improve appearance.
+
 Before committing, run `git diff --check`, check local links and archive hashes, and verify the extracted current release. Push reviewed commits to the configured remote. Preserve the byte identity of every historical release package.

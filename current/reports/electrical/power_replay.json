@@ -6,14 +6,14 @@
     "scripts/check_power_replay.py": "74e70691150ded834917c00a8c1fe81667455eb6b8c68cb506b5000b9775302c",
     "reports/electrical/electrical_checks.json": "ad27f7e16f6cbff19cc68ec084b22389250dfca7802d8e8bf8d0f183b9c52f6f",
     "reports/electrical/boost_spice_partial.json": "098f2cc25f0e3cfc76dba7b792349a2f6fced266d036a4c9dd6437af76fa732b",
-    "reports/electrical/order_readiness.json": "c35839dfa9b973892d4d56c3c4ba66c89ac10c47b5861e8f47a18ce215622aea"
+    "reports/electrical/order_readiness.json": "1db490498a1bb7df092156af8e8a3bf0fdc94ad6ce743a61989cc9cf6e0bd42e"
   },
   "cases": [
     {
       "name": "efuse_large_capacitance",
       "gain_error": -0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.043170487806972684,
+      "PCB_drop_V": 0.04097525068249517,
       "raw_sha256": "9a4b144c660f8a58f803322a9e13bf40d3a26cb5588325c398b1c95ea01ac719",
       "first_trip_ms": null,
       "checks": {
@@ -28,7 +28,7 @@
       "name": "efuse_large_capacitance",
       "gain_error": -0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.043170487806972684,
+      "PCB_drop_V": 0.04097525068249517,
       "raw_sha256": "9a4b144c660f8a58f803322a9e13bf40d3a26cb5588325c398b1c95ea01ac719",
       "first_trip_ms": null,
       "checks": {
@@ -43,7 +43,7 @@
       "name": "efuse_large_capacitance",
       "gain_error": 0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.043170487806972684,
+      "PCB_drop_V": 0.04097525068249517,
       "raw_sha256": "9a4b144c660f8a58f803322a9e13bf40d3a26cb5588325c398b1c95ea01ac719",
       "first_trip_ms": null,
       "checks": {
@@ -58,7 +58,7 @@
       "name": "efuse_large_capacitance",
       "gain_error": 0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.043170487806972684,
+      "PCB_drop_V": 0.04097525068249517,
       "raw_sha256": "9a4b144c660f8a58f803322a9e13bf40d3a26cb5588325c398b1c95ea01ac719",
       "first_trip_ms": null,
       "checks": {
@@ -73,7 +73,7 @@
       "name": "efuse_min_limit_cap_tolerance",
       "gain_error": -0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.043170487806972684,
+      "PCB_drop_V": 0.04097525068249517,
       "raw_sha256": "eda61cc5bdd836aa5917722ff08821ab42749901fa352bf0dac265070a8d759d",
       "first_trip_ms": null,
       "checks": {
@@ -88,7 +88,7 @@
       "name": "efuse_min_limit_cap_tolerance",
       "gain_error": -0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.043170487806972684,
+      "PCB_drop_V": 0.04097525068249517,
       "raw_sha256": "eda61cc5bdd836aa5917722ff08821ab42749901fa352bf0dac265070a8d759d",
       "first_trip_ms": null,
       "checks": {
@@ -103,7 +103,7 @@
       "name": "efuse_min_limit_cap_tolerance",
       "gain_error": 0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.043170487806972684,
+      "PCB_drop_V": 0.04097525068249517,
       "raw_sha256": "eda61cc5bdd836aa5917722ff08821ab42749901fa352bf0dac265070a8d759d",
       "first_trip_ms": null,
       "checks": {
@@ -118,7 +118,7 @@
       "name": "efuse_min_limit_cap_tolerance",
       "gain_error": 0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.043170487806972684,
+      "PCB_drop_V": 0.04097525068249517,
       "raw_sha256": "eda61cc5bdd836aa5917722ff08821ab42749901fa352bf0dac265070a8d759d",
       "first_trip_ms": null,
       "checks": {
@@ -133,7 +133,7 @@
       "name": "efuse_hot_short_and_reset",
       "gain_error": -0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.043170487806972684,
+      "PCB_drop_V": 0.04097525068249517,
       "raw_sha256": "07b970c4e8b7bb76618a012afa4d6b182853247d7219b67511825e012686ad03",
       "first_trip_ms": 375,
       "checks": {
@@ -148,7 +148,7 @@
       "name": "efuse_hot_short_and_reset",
       "gain_error": -0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.043170487806972684,
+      "PCB_drop_V": 0.04097525068249517,
       "raw_sha256": "07b970c4e8b7bb76618a012afa4d6b182853247d7219b67511825e012686ad03",
       "first_trip_ms": 375,
       "checks": {
@@ -163,7 +163,7 @@
       "name": "efuse_hot_short_and_reset",
       "gain_error": 0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.043170487806972684,
+      "PCB_drop_V": 0.04097525068249517,
       "raw_sha256": "07b970c4e8b7bb76618a012afa4d6b182853247d7219b67511825e012686ad03",
       "first_trip_ms": 375,
       "checks": {
@@ -178,7 +178,7 @@
       "name": "efuse_hot_short_and_reset",
       "gain_error": 0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.043170487806972684,
+      "PCB_drop_V": 0.04097525068249517,
       "raw_sha256": "07b970c4e8b7bb76618a012afa4d6b182853247d7219b67511825e012686ad03",
       "first_trip_ms": 375,
       "checks": {
@@ -193,7 +193,7 @@
       "name": "five_volt_start_short_and_reset",
       "gain_error": -0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.04317624746622162,
+      "PCB_drop_V": 0.03807802863396955,
       "raw_sha256": "07bd15d7bf19cfb5442468b3d87d4376e04cdf7b80c3f636134e2aba85a9abd7",
       "first_trip_ms": 33,
       "checks": {
@@ -208,7 +208,7 @@
       "name": "five_volt_start_short_and_reset",
       "gain_error": -0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.04317624746622162,
+      "PCB_drop_V": 0.03807802863396955,
       "raw_sha256": "07bd15d7bf19cfb5442468b3d87d4376e04cdf7b80c3f636134e2aba85a9abd7",
       "first_trip_ms": 33,
       "checks": {
@@ -223,7 +223,7 @@
       "name": "five_volt_start_short_and_reset",
       "gain_error": 0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.04317624746622162,
+      "PCB_drop_V": 0.03807802863396955,
       "raw_sha256": "07bd15d7bf19cfb5442468b3d87d4376e04cdf7b80c3f636134e2aba85a9abd7",
       "first_trip_ms": 33,
       "checks": {
@@ -238,7 +238,7 @@
       "name": "five_volt_start_short_and_reset",
       "gain_error": 0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.04317624746622162,
+      "PCB_drop_V": 0.03807802863396955,
       "raw_sha256": "07bd15d7bf19cfb5442468b3d87d4376e04cdf7b80c3f636134e2aba85a9abd7",
       "first_trip_ms": 33,
       "checks": {

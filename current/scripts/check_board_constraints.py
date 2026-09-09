@@ -131,6 +131,18 @@ def top_path(net,first,last):
   if t.GetLayer()!=p.F_Cu:continue
   a,z=key(t.GetStart()),key(t.GetEnd());length=p.ToMM(t.GetLength())
   graph[a].append((z,length));graph[z].append((a,length))
+ # Pad copper joins endpoints even when a redundant under-pad segment was
+ # removed. Charge the full geometric distance through the pad; do not treat
+ # the connection as a zero-length shortcut or rely on a ground-plane path.
+ ends=list(graph)
+ for fp in fps.values():
+  for pad in fp.Pads():
+   if pad.GetNetname()!=net or not pad.IsOnLayer(p.F_Cu):continue
+   center=key(pad.GetPosition())
+   for end in ends:
+    if end!=center and pad.HitTest(p.VECTOR2I(*end)):
+     delta=p.ToMM(int(round(math.dist(center,end))))
+     graph[center].append((end,delta));graph[end].append((center,delta))
  start,goal=key(first.GetPosition()),key(last.GetPosition());queue=[(0,start)];best={start:0}
  while queue:
   length,node=heapq.heappop(queue)
@@ -161,10 +173,11 @@ for layer in (p.F_Cu,p.In1_Cu,p.In2_Cu,p.B_Cu):
  exceptions=[]
  for t in tt:
   dx=abs(t.GetEnd().x-t.GetStart().x);dy=abs(t.GetEnd().y-t.GetStart().y)
-  # Ignore sub-10-um grid/serialization differences; this is a readability
-  # inventory, not a rule that every electrically sound route must be 45 degrees.
-  if min(dx,dy,abs(dx-dy))>p.FromMM(.01):
+  # Match the strict routing gate: only native coordinate-rounding tolerance.
+  assert not isinstance(t,p.PCB_ARC),'Curved copper centerline'
+  if min(dx,dy,abs(dx-dy))>p.FromMM(.00002):
    exceptions.append(dict(net=t.GetNetname(),start_mm=list(p.ToMM(t.GetStart())),end_mm=list(p.ToMM(t.GetEnd())),length_mm=p.ToMM(t.GetLength())))
+ assert not exceptions,('Non-45-degree routes',exceptions)
  route_layers[b.GetLayerName(layer)]=dict(segments=len(tt),length_mm=sum(p.ToMM(t.GetLength()) for t in tt),non_45_degree_segments=exceptions)
-report['routing_inventory']=dict(layers=route_layers,vias=sum(vias.values()),scope='Native segment directions and lengths. Rounded track end caps are normal copper geometry; angle style alone does not establish clearance, connectivity, impedance or EMC performance.')
+report['routing_inventory']=dict(layers=route_layers,vias=sum(vias.values()),scope='Straight horizontal/vertical/45-degree centerlines enforced. The separate routing_rules.json gate also rejects redundant geometry, tiny free jogs and sharp free bends. Rounded copper end caps are normal. Native DRC and independent Gerber checks establish connectivity/clearance, not EMC qualification.')
 (R/'reports/board_constraints.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

@@ -9,6 +9,10 @@ def read(path):return json.loads((R/path).read_text())
 erc=read('reports/erc/final.json');drc=read('reports/drc/final.json')
 assert not [v for sheet in erc['sheets'] for v in sheet['violations']] and not drc['violations'] and not drc['unconnected_items']
 parity=read('reports/design_parity.json');assert parity['pass']
+routing=read('reports/routing_rules.json');assert routing['result']=='PASS' and not routing['findings']
+assert routing['board_sha256']==hashlib.sha256((R/'hardware/FRC_Sensor_CAN.kicad_pcb').read_bytes()).hexdigest()
+for path,digest in routing['source_hashes'].items():
+ assert digest==hashlib.sha256((R/path).read_bytes()).hexdigest(),('Stale routing evidence',path)
 assembly=read('reports/manufacturing/verification.json');assert assembly['result']=='PASS'
 copper=read('reports/manufacturing/gerber_connectivity.json');geometry=read('reports/manufacturing/gerber_geometry.json');assert copper['result']==geometry['result']=='PASS'
 fw=(R/'reports/firmware-tests.log').read_text();drivers=(R/'reports/driver/tests.log').read_text()
@@ -51,6 +55,9 @@ tracked += ['bom/Factory_BOM.csv','bom/Hand_solder_BOM.csv','bom/ACCESSORIES.csv
 tracked += ['reports/electrical/electrical_checks.json','reports/electrical/converter_loop.json','reports/electrical/input_spice.json','reports/electrical/boost_spice.json','reports/electrical/order_readiness.json','scripts/check_input_spice.py','scripts/check_boost_spice.py','scripts/check_order_readiness.py','scripts/write_validation_summary.py','sources/spice/input_manifest.json','sources/spice/lm393lv.lib']
 tracked += ['scripts/check_power_replay.py','reports/electrical/power_replay.json','firmware/src/power.c','firmware/include/power.h']
 tracked += ['reports/electrical/solver_diagnostics.json']
+tracked += ['hardware/FRC_Sensor_CAN.kicad_pro','hardware/FRC_Sensor_CAN.kicad_dru',
+            'scripts/check_board_constraints.py','scripts/check_routing.py','scripts/export_routing_geometry.py',
+            'scripts/test_routing.py','reports/routing-tests.log','reports/routing_rules.json','reports/routing_cleanup.json']
 tracked += ['reports/erc/final.json','reports/drc/final.json','reports/design_parity.json','reports/board_constraints.json',
             'reports/variant_verification.json','reports/firmware-tests.log','reports/power-tests.log','reports/firmware-images.json',
             'reports/firmware-arm-registers.json','reports/driver/tests.log','reports/bridge2027-tests.log',
@@ -62,6 +69,7 @@ factory=read('reports/manufacturing/factory_files.json');assert factory['result'
 tracked += [p.relative_to(R).as_posix() for p in sorted((R/'hardware').glob('*.kicad_sch')) if p.name!='FRC_Sensor_CAN.kicad_sch']
 out=dict(revision='H SC12',status='PASS engineering checks; physical qualification pending',physical_tests_performed=False,erc_violations=0,drc_violations=0,unconnected_items=0,model_schematic_pcb_parity=True,fitted_parts=140,portable_models=assembly['portable_models_verified'],manufacturing_layers=assembly['graphic_layers'],copper_layers=4,gerber_shorts=copper['shorts'],gerber_opens=copper['opens'],net_tie_isolation=copper['intentional_net_tie_isolation']['extra_shorts'],firmware_core_tests='PASS under ASan/UBSan',firmware_application_scenarios=scenarios,java_assertions=java,python_test_methods=13,can_service_tests="8 host methods plus 2148 simulated flash boundaries",arm_register_tests=read("reports/firmware-arm-registers.json")["result"],bridge_tests="Real TCP with mock CAN; 2026 and 2027 adapters compile",cpp_tests='PASS under ASan/UBSan; WPILib example compiled',analytical_CCM_loop_corners=loop['corners'],input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in tracked},limitations='No measured efficiency, thermal, surge, EMC, sensor startup, actual MCU/CAN, solder yield or enclosure fit qualification. See docs/VALIDATION.md.')
 out['vendor_model_transient_cases']=[r['case']['name'] for r in (spice if complete else partial)['cases']]
+out['routing_rules']={key:routing[key] for key in ('result','segments','vias','rules')}
 out['input_transient_cases']=[r['name'] for r in input_spice['cases']]
 out['input_transient_scope']=input_spice['limitations']
 out['firmware_waveform_replay']={'result':power_replay['result'],'cases':len(power_replay['cases']),'scope':power_replay['limitations']}
