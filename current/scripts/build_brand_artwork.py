@@ -1,104 +1,120 @@
-"""Build the original pixel cane with a clear, non-pixel sugarCANe wordmark."""
+"""Build the original sugarCANe pixel wordmark and cane illustration."""
 from pathlib import Path
-from fontTools.ttLib import TTFont
-from fontTools.varLib.instancer import instantiateVariableFont
-from fontTools.pens.basePen import BasePen
-from shapely.geometry import LineString, box
+from shapely.geometry import box
 from shapely import affinity, union_all
-from shapely.ops import polygonize
 
 R = Path(__file__).resolve().parents[1]
 OUT = R / 'hardware/artwork'
 
-
-class OutlinePen(BasePen):
-    """Flatten Bezier outlines adaptively, retaining closed counter contours."""
-    def __init__(self, glyphs=None, tolerance=.004):
-        super().__init__(glyphs)
-        self.tolerance = tolerance
-        self.rings = []
-        self.points = []
-
-    def _moveTo(self, pt):
-        self.points = [pt]
-
-    def _lineTo(self, pt):
-        self.points.append(pt)
-
-    def curve(self, points):
-        a, b = points[0], points[-1]
-        dx, dy = b[0]-a[0], b[1]-a[1]
-        length = (dx*dx+dy*dy)**.5
-        errors = [abs(dx*(p[1]-a[1])-dy*(p[0]-a[0])) / length
-                  if length else ((p[0]-a[0])**2+(p[1]-a[1])**2)**.5
-                  for p in points[1:-1]]
-        if max(errors, default=0) <= self.tolerance:
-            self.points.append(b)
-            return
-        levels = [points]
-        while len(levels[-1]) > 1:
-            levels.append([((p[0]+q[0])/2, (p[1]+q[1])/2)
-                           for p, q in zip(levels[-1], levels[-1][1:])])
-        self.curve([level[0] for level in levels])
-        self.curve([level[-1] for level in reversed(levels)])
-
-    def _curveToOne(self, p1, p2, p3):
-        self.curve([self.points[-1], p1, p2, p3])
-
-    def _qCurveToOne(self, p1, p2):
-        self.curve([self.points[-1], p1, p2])
-
-    def _closePath(self):
-        self.rings.append(self.points)
-        self.points = []
-
-    def _endPath(self):
-        self._closePath()
-
-    def geometry(self):
-        # Fonts may contain overlapping strokes. Resolve their nonzero winding
-        # before generating the simple polygon/holes used by SVG and KiCad.
-        rings = [ring+[ring[0]] for ring in self.rings if len(ring) > 2]
-        faces = polygonize(union_all([LineString(ring) for ring in rings]))
-        filled = []
-        for face in faces:
-            sample = face.representative_point()
-            x, y = sample.x, sample.y
-            winding = 0
-            for ring in rings:
-                for a,b in zip(ring, ring[1:]):
-                    cross = (b[0]-a[0])*(y-a[1])-(x-a[0])*(b[1]-a[1])
-                    if a[1] <= y < b[1] and cross > 0:
-                        winding += 1
-                    elif b[1] <= y < a[1] and cross < 0:
-                        winding -= 1
-            if winding:
-                filled.append(face)
-        return union_all(filled)
-
-
-# Clear, open letterforms keep the word readable beside the pixel illustration.
-fonts = {w: instantiateVariableFont(TTFont(R/'sources/fonts/IBMPlexSans.ttf'),
-         {'wght': w, 'wdth': 100}) for w in (600, 700)}
+# Original grid-drawn letters: two-cell stems, seven-row lowercase bodies,
+# nine-row capitals and an explicit g descender. The final e has a full crossbar
+# and a five-cell opening on the right. No installed or downloaded font needed.
+GLYPHS = {
+    's': (2, [
+        '0111110',
+        '1111111',
+        '1100000',
+        '0111110',
+        '0000011',
+        '1111111',
+        '0111110',
+    ]),
+    'u': (2, [
+        '1100011',
+        '1100011',
+        '1100011',
+        '1100011',
+        '1100011',
+        '0111111',
+        '0011011',
+    ]),
+    'g': (2, [
+        '0011111',
+        '0111111',
+        '1100011',
+        '1100011',
+        '0111111',
+        '0011111',
+        '0000011',
+        '0111110',
+        '0111100',
+    ]),
+    'a': (2, [
+        '0111100',
+        '0111110',
+        '0000011',
+        '0111111',
+        '1100011',
+        '1100011',
+        '0111111',
+    ]),
+    'r': (2, [
+        '110110',
+        '111111',
+        '111000',
+        '110000',
+        '110000',
+        '110000',
+        '110000',
+    ]),
+    'C': (0, [
+        '0011110',
+        '0111111',
+        '1100011',
+        '1100000',
+        '1100000',
+        '1100000',
+        '1100011',
+        '0111111',
+        '0011110',
+    ]),
+    'A': (0, [
+        '0011100',
+        '0111110',
+        '1100011',
+        '1100011',
+        '1100011',
+        '1111111',
+        '1111111',
+        '1100011',
+        '1100011',
+    ]),
+    'N': (0, [
+        '1100011',
+        '1110011',
+        '1110011',
+        '1111011',
+        '1101111',
+        '1100111',
+        '1100111',
+        '1100011',
+        '1100011',
+    ]),
+    'e': (2, [
+        '0011100',
+        '0111110',
+        '1100011',
+        '1111111',
+        '1100000',
+        '0111110',
+        '0011110',
+    ]),
+}
 word = []
 cursor = 0
 for letter in 'sugarCANe':
-    font = fonts[700 if letter.isupper() else 600]
-    glyphs = font.getGlyphSet()
-    glyph = glyphs[font.getBestCmap()[ord(letter)]]
-    pen = OutlinePen(glyphs, tolerance=.35)
-    glyph.draw(pen)
-    word.append(affinity.translate(pen.geometry(), cursor, 0))
-    cursor += glyph.width + 14
+    top, rows = GLYPHS[letter]
+    assert len(set(map(len, rows))) == 1
+    word.extend(box(cursor+x, top+y, cursor+x+1, top+y+1)
+                for y, row in enumerate(rows) for x, bit in enumerate(row) if bit == '1')
+    cursor += len(rows[0]) + 1.5
 word = union_all(word)
 x0, y0, x1, y1 = word.bounds
-scale = min(45.6/(x1-x0), 8.4/(y1-y0))
-word = affinity.scale(word, scale, -scale, origin=(0, 0))
-x0, y0, x1, _ = word.bounds
-word = affinity.translate(word, (52-(x1-x0))/2-x0, 49.3-y0)
+pixel_mm = 45.6/(x1-x0)
+word = affinity.translate(affinity.scale(word, pixel_mm, pixel_mm, origin=(0, 0)), 3.2, 49.3)
 
-# Restore the original three pixel stalks and stair-step leaves. A stepped
-# convex mound retains the raised-ground silhouette without corner ornaments.
+# Original pixel stalks and stair-step leaves stand on a raised mound with a
+# stepped, tapering underside, matching the original floating-island treatment.
 cane = []
 def rect(x, y, width, height):
     cane.append(box(x, y, x+width, y+height))
@@ -123,8 +139,9 @@ slots = [box(x+1, y, x+2, min(y+4, 35))
          for x, top in [(7, 11), (17, 1), (28, 7)]
          for y in range(top+2, 34, 9)]
 plant = plant.difference(union_all(slots))
-soil = union_all([box(4, 38, 34, 40), box(7, 37, 31, 38),
-                  box(11, 36, 27, 37), box(15, 35, 23, 36)])
+soil = union_all([box(15, 35, 23, 36), box(11, 36, 27, 37),
+                  box(7, 37, 31, 38), box(4, 38, 34, 39),
+                  box(6, 39, 32, 40), box(9, 40, 29, 41)])
 soil = soil.difference(union_all([
     box(x, y, x+1, y+1) for x, y in [(8, 38), (14, 37), (21, 38), (29, 38)]]))
 plant = union_all([plant, soil])
@@ -142,8 +159,8 @@ def pieces(geometry):
 
 
 svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="52mm" height="74mm" viewBox="0 0 52 74">',
-       '<title>sugarCANe — pixel cane with clear lettering</title>',
-       '<desc>Underside reading orientation. Original three-stalk pixel cane on a stepped convex mound; clear IBM Plex Sans outlined lettering, weights 600 and 700. Only the product name is text. No border.</desc>',
+       '<title>sugarCANe — readable pixel lettering and cane</title>',
+       '<desc>Underside reading orientation. Original pixel cane on a raised floating island with a stepped underside; original bold pixel lettering with open counters and a distinct lowercase e. Only the product name is text. No border.</desc>',
        '<g fill="#ffffff" fill-rule="evenodd">']
 for poly in pieces(art):
     contours = []

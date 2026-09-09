@@ -1,6 +1,6 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-09T23:31:30.801975+00:00",
+  "reviewed_utc": "2026-09-09T23:35:29.145933+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
@@ -17,9 +17,9 @@
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "2ffd3809fdb03609dc61c4d308b76f444e342d8acbdc9ae65e242d36983907fc",
-      "scope": "Underside CAD reviewed: restored original pixel stalks and stair-step leaves, stepped convex mound, clear IBM Plex Sans sugarCANe wordmark and heavier CAN. Final lowercase e has a distinct crossbar and opening. No corner decorations, borders or secondary text. Small via holes remain visible. Exact native comparison confirms all other PCB geometry unchanged.",
-      "reviewed_utc": "2026-09-09T23:31:30.801975+00:00"
+      "sha256": "47efc1951447274a27631d8259128968523c4ad323af04057f57a02a30a887ec",
+      "scope": "Underside CAD reviewed: original bold pixel sugarCANe lettering with separated letters, clear lowercase e and g descender; taller CAN capitals. Pixel cane retained. Island has a convex stepped top and a stepped, tapering underside like the original. No borders or other text. Exact native comparison confirms all other PCB geometry unchanged; small via holes remain visible.",
+      "reviewed_utc": "2026-09-09T23:35:29.145933+00:00"
     },
     {
       "file": "output/review/board_connectors.png",
@@ -36,9 +36,9 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "9f012ba0e76b9db4baf6c33557bd3d371b6f64e6b147b6354ddc97b088ca6074",
-      "scope": "All 38 pages compared to bf0b2ee at 1x. Changed pages 3, 32, 35 and 37 visually reviewed at 1.4x: restored pixel artwork, clear lettering, IBM Plex Sans source and reproduction details. All other pages pixel-identical.",
-      "reviewed_utc": "2026-09-09T23:31:30.801975+00:00"
+      "sha256": "c6179008cffd79143a93b27aee8d8e763e4b4418a7637434db7ad87bad569d6e",
+      "scope": "All 38 pages compared to 0d8cffb at 1x. Changed pages 3, 35 and 37 visually reviewed at 1.4x: original pixel lettering, stepped island underside and font-independent reproduction. All other pages pixel-identical.",
+      "reviewed_utc": "2026-09-09T23:35:29.145933+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
@@ -82,9 +82,9 @@
     },
     {
       "file": "output/assembly/bottom_markings.pdf",
-      "sha256": "6518e1b4dd880dd5449fac1eb12ff12ae763e2904402f14af051241ceb22ada6",
-      "scope": "Rendered underside drawing reviewed: pixel cane on a raised stepped mound and clear IBM Plex Sans lettering, including the lowercase e. No corner decorations or secondary text. Terminals and mounting holes remain clear. Drawing outline is Edge.Cuts, not printed silk.",
-      "reviewed_utc": "2026-09-09T23:31:30.801975+00:00"
+      "sha256": "9ade726034a8ca597c9e820ae6733516e913e2d05acbc3ab13facaa8a4e32a65",
+      "scope": "Rendered underside drawing reviewed: readable pixel sugarCANe name, separated letters, explicit g descender and open lowercase e. Original cane stands on a convex island with a stepped underside; no corner ornaments or additional text. Terminals and mounting holes remain clear. Drawing outline is Edge.Cuts, not printed silk.",
+      "reviewed_utc": "2026-09-09T23:35:29.145933+00:00"
     },
     {
       "file": "reports/electrical/input_spice.png",
@@ -100,20 +100,19 @@
     },
     {
       "file": "hardware/artwork/sugarCANe.svg",
-      "sha256": "079abcf4d3ea09cc1fcdda10563f2a1ba4f22deac9e876d4317963948c296cae",
-      "scope": "Final vector master reviewed from SVG render: original pixel stalks and leaves on a stepped convex mound, clear non-pixel IBM Plex Sans lettering with a distinct lowercase e and heavier CAN. No borders, corner marks or extra text. Ordered Gerber dark/clear compositing matches without unexplained missing or extra ink at 1 um tolerance.",
-      "reviewed_utc": "2026-09-09T23:31:30.801975+00:00"
+      "sha256": "48b18c5d6fe39791e7021fb1c20e127e6f972da14bf723b56888ec58194194cb",
+      "scope": "Final SVG render reviewed: bold original letter grids, separated characters, taller CAN, g descender and distinct lowercase e; original pixel cane, convex ground and restored stepped underside. No borders or extra text. Ordered Gerber dark/clear compositing matches without unexplained missing or extra ink at 1 um tolerance.",
+      "reviewed_utc": "2026-09-09T23:35:29.145933+00:00"
     }
   ],
   "limitations": "Nominal CAD/PDF inspection only. Fresh route DC and firmware waveform replay pass; full combined startup remains incomplete. No physical board, optical, vibration, assembly-yield or EMC qualification.",
-  "page_comparison_baseline_commit": "bf0b2eee42561a65c003a9d9a9a1bdc7332a138e",
+  "page_comparison_baseline_commit": "0d8cffba7e4c350c02ca4c9a72b7ae324cc7ee8e",
   "rendered_page_comparison": {
     "handbook": {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
       "pages": 38,
       "changed_pages": [
         3,
-        32,
         35,
         37
       ],
@@ -123,19 +122,17 @@
   "bottom_branding": {
     "extra_ink_mm2": 0.0,
     "unexplained_missing_ink_mm2": 0.0,
-    "ink_mm2": 411.06233963832517,
-    "source_ink_mm2": 411.06231963846295,
-    "minimum_mask_opening_clearance_mm": 2.4106200000000015,
+    "ink_mm2": 416.3550759108807,
+    "source_ink_mm2": 416.3550544946659,
+    "minimum_mask_opening_clearance_mm": 3.6466220000000003,
     "scope": "Ordered dark/clear Gerber compositing compared against the outlined SVG; 1 um polygon tolerance. No printed sample was measured.",
     "only_bottom_silkscreen_changed": true,
     "legacy_bottom_labels_remain_absent": true,
     "native_artwork_shapes": 13,
     "copper_mask_drill_and_front_silk_exports_byte_identical": true,
     "source_hashes": {
-      "hardware/artwork/sugarCANe.svg": "079abcf4d3ea09cc1fcdda10563f2a1ba4f22deac9e876d4317963948c296cae",
-      "sources/fonts/IBMPlexSans.ttf": "3b031aa4216174205bd8471f88a49b91f093169e9e87bd5262242bc5967fe2e3",
-      "licenses/IBMPlexSans-OFL.txt": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
-      "scripts/build_brand_artwork.py": "2a898759ddf20f09a25c1337b2ac561cf70b0ff422538ad1544fb162b2035c08",
+      "hardware/artwork/sugarCANe.svg": "48b18c5d6fe39791e7021fb1c20e127e6f972da14bf723b56888ec58194194cb",
+      "scripts/build_brand_artwork.py": "b11b3c4e97c96dc513536164d898aba77dabd21346860ae1373e17cc4a63fb4a",
       "scripts/apply_bottom_artwork.py": "aab47c1f93f2ed558e0d94d5b60c74ec531f583fd9cffa7cdd3ff4b60fca3307"
     }
   }

@@ -2,7 +2,7 @@
 
 KiCad library/model notices are retained under `licenses/`, together with Arm CMSIS, ST device-header and WPILib notices. Firmware third-party directories and InteractiveHtmlBom output retain their notices. Original project work has no selected blanket license. Manufacturer documents/CAD remain their owners' material; retaining a file is not a redistribution-license grant.
 
-The sugarCANe underside uses an original pixel-cane illustration and outlined **IBM Plex Sans** lettering (weights 600 and 700) by IBM Corp. The original font is licensed under SIL OFL 1.1; [artwork provenance, pinned font and license](../hardware/artwork/README.md) are retained. No Minecraft asset is included. This branding changes the bottom silkscreen only; SC12 Rev H remains the hardware identity.
+The sugarCANe underside uses an original pixel-cane illustration and original grid-drawn **sugarCANe** lettering. The [vector master and lettering source](../hardware/artwork/README.md) are retained; no external font is used. No Minecraft asset is included. This branding changes the bottom silkscreen only; SC12 Rev H remains the hardware identity.
 
 | Subject | Primary reference |
 |---|---|

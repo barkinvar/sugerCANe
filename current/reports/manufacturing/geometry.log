@@ -31,7 +31,7 @@ inner_1 295 primitives, 222 copper islands
   },
   "unassigned_copper_islands": 0,
   "unassigned_copper_area_mm2": 0.0,
-  "elapsed_seconds": 1.2122111310018227,
+  "elapsed_seconds": 1.1936986439977773,
   "limitations": "Plated holes represented as connected filled pad centers; no barrel manufacturing defect, annular-ring fracture, impedance, thermal or EMC model. Positive Gerber primitives only."
 }
 {
@@ -124,7 +124,7 @@ inner_1 295 primitives, 222 copper islands
     "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "0e22bfdcbc5069dc7a3137b2d581b113f79409ea3b79cca059e251948aacd797",
     "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "d1dee0de18576fad1488aec074a76528b999a45a08248058d7ff24a2a30d8b4b",
     "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "b55d276c646e23d4dc70e2cf0526bcaea3538ba3fa8a948f559ed0fe78beef9f",
-    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "123a6d9a30da890d93df6729f38f0ef3e15b792736d26a8ba2a854eafcd6bb8e",
+    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "3da66cf75f6d82af5b16364f111db7cd1d2cea8a682f63c327539856aea65fbb",
     "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "4edfe6d9f44d0a31e3ad10b1c033137f154387c03b6d28ff70f68fb7aceb5aa2",
     "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "a5c330f1d1951d61a9483c6f956450863530fa6e71322a566308ceb93712ff25",
     "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "4bb4aac0b81e447f02aaad3f3dde3637a3a6007ebf978ab5e12cfcbe43057bb2",
