@@ -1,26 +1,26 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-09T19:27:26.579116+00:00",
+  "reviewed_utc": "2026-09-09T19:59:05.532967+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
       "file": "output/review/board_3d_final.png",
-      "sha256": "6d903fecb21808f674e41e27ee9977bac9ecc4d5e643296728a22b9b8c946ee8",
-      "scope": "Oblique CAD: top-only assembly, 52x74 outline, single top-edge RGB LED, ordinary J8 header, terminal and power-header access. Nominal package envelopes only."
+      "sha256": "adf3a5ee71409e709122b8a2ffb86506bdf2dada41b28ca161c96bce0245c88f",
+      "scope": "Oblique CAD: top-only 52x74 board, right-side RGB LED inside marked circle above H2, nearby C75 and retained header/terminal access. Nominal package envelopes only."
     },
     {
       "file": "output/review/board_top.png",
-      "sha256": "b762d88c979be99079c2a5a1e921498dab5f1b4fc777f05a9bd043083e2ba4a2",
-      "scope": "Top CAD: D10 at (26,2), adjacent bypass, buffered data path, ordinary 2x5 J8 and retained power/sensor placement. LED optical path and component clearances inspected."
+      "sha256": "fc2bd7a262b82d1839578f8323c7957606398dc9c6fe45b46757b7f629bf167c",
+      "scope": "Top CAD: D10 at (48,39.5), 6 mm circular courtyard reserved for printed duct, RGB silkscreen circle, C75 above duct space and H2 below. Other component positions retained."
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "81bed1c0b10272149475d95b2c46bb2165b0843a7e48b34a115a73911990ef0f",
+      "sha256": "ad51e433c9385054fbfb17aeaa5054b286dfb15c292288e45a301277e0a59b9c",
       "scope": "Bottom CAD: Rev H identification, service-header pin-one marking, voltage/current and fault-reset legends, solder tails and absence of bottom components."
     },
     {
       "file": "output/review/board_connectors.png",
-      "sha256": "00e106236b5cf4666a042e7b482c13275975a06910a8fe2822d669f69463d2c2",
+      "sha256": "841958a1b6e81455eb21149354e29bc4b0a309aa9ff4cc22a010af32fb30c121",
       "scope": "Wire-entry CAD view: outward-facing terminal entries, removable voltage-cap access and taller ordinary service header; no physical fit or retention claim."
     },
     {
@@ -30,33 +30,33 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "da30caf788d3c095f20205ffae5ab1a88b722ea0d6868ed8c32cec96b0dbceea",
-      "scope": "All 37 pages inspected as rendered contact sheets, with status/programming pages enlarged. Tables, headings, code blocks, revision identity, RGB legend, enclosure geometry and programmer mapping checked; no clipping or overlapping rows observed. Updated pages 3-5, 24-27 and 34-35 reinspected after documenting the canceled extra power run."
+      "sha256": "f4ffaaa31fa48317ac4fbf3e013df21952df88ea131f8f20e52cec4061d591a8",
+      "scope": "All 37 pages inspected as rendered contact sheets; revised enclosure page 13 enlarged. Current board render, LED coordinates, duct diameter and air gap, status legend and programmer map checked; no clipping or overlapping rows observed."
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
-      "sha256": "87105377a69116fbd205e4e3f465f61befcaa3d567c2e7c93f728132632f5b13",
+      "sha256": "34236150c6c7a32e52731a226b01fe8498cc9f7010b3ffa8e26efbf3b98992db",
       "scope": "All three pages inspected: current references, exact MPNs and quantities; 140 fitted parts, 130 SMT and ten hand-fitted parts; $28.94 ten-board parts purchasing estimate."
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
-      "sha256": "33a0ff023e86beb1c8b2cdcaa13c1ed69093ba1cab4fce7c137e43eec866d17e",
-      "scope": "Both pages inspected: 52x74 dimensions, H1/H2, RGB optical-path position, J8 body and height, odd/even header pin mapping with square pin one, VTref sense-only note and 2mm voltage-jumper positions."
+      "sha256": "ee7f51227f4b759d6b9492766e4b75170ae4bd428cd49f6967bf306d9f7fc823",
+      "scope": "Both pages inspected: 52x74 outline, H1/H2, D10 at (48,39.5), 6 mm duct envelope, 4 mm bore and lower-face height; retained ten-pin service map and physical voltage selectors."
     },
     {
       "file": "output/assembly/schematic.pdf",
-      "sha256": "5e01321f3e82f325ca993d3b60fd0ac304c82c9c1d42508599b73f8ac9664ada",
-      "scope": "All ten pages inspected, with revised CAN/RGB sheet enlarged. Rev H titles, full root hierarchy, custom J8 mapping, LED/buffer pinout and bypass, unused DOUT, and retained power/ADC/input circuits checked."
+      "sha256": "6a66f27621231524cb3644f63d2370ceb5ba5fb6e6cbe399db2913b319f1f15d",
+      "scope": "All ten re-exported pages inspected. Native schematic and circuit are unchanged by LED/C75 relocation; retained Rev H pinout, power, CAN and input circuits."
     },
     {
       "file": "output/assembly/top_assembly.pdf",
-      "sha256": "ae6a03fd56bfabd85640b10616495c3926f29f948be5c131d891fd599ba22a78",
-      "scope": "Assembly references, connector rows, service-header pin-one/body marks and board outline inspected."
+      "sha256": "7b9c20d1550d0ca031e71b235a57293e2ea8b7fdd71645d11a24931b342915c2",
+      "scope": "Refreshed assembly map inspected: D10 moved to the right inside RGB circle, C75 above it, existing header/terminal rows and outline retained."
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "sha256": "b98f36bbbad2992960d1ae91cbaf2de077ed31f82cb6540dd22b3a9cfe2db158",
-      "scope": "Both exported outer copper layers with drill overlays and 74mm board height inspected; lower view mirrored for underside. Four-layer connectivity is independently checked by the manufacturing report."
+      "sha256": "ccc71e1f4f50e17e387629cfcb823f52886b8cacd1f5a503191e708827be583d",
+      "scope": "Both re-exported outer copper views inspected with updated drills and LED placement; lower view mirrored for underside. Four-layer connectivity independently passed."
     },
     {
       "file": "reports/electrical/converter_loop.png",

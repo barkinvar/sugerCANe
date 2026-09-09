@@ -4,7 +4,7 @@ A compact interface for **three NPN, PNP or logic sensors** on an FRC robot. Eac
 
 **Start with [Rev H in `current/`](current/README.md).** It is an unbuilt engineering prototype, with [physical qualification still pending](current/docs/VALIDATION.md). It uses its own protocol and drivers; it is not compatible with CTRE Phoenix or GrappleHook.
 
-Rev H adds one RGB status LED near the top edge and an ordinary programming header for small batches. It retains G's protected sensor supplies, CAN fault reset and rail measurements. See [the engineering review](current/docs/ORDER_READINESS.md) for the evidence and remaining physical tests.
+Rev H adds one RGB status LED on the right, with space for a printed light duct, and an ordinary programming header for small batches. It retains G's protected sensor supplies, CAN fault reset and rail measurements. See [the engineering review](current/docs/ORDER_READINESS.md) for the evidence and remaining physical tests.
 
 RGB/header checks pass. The optional full power rerun was stopped before completion; [current check scope](current/reports/release_checks.json) is explicit.
 

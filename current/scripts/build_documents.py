@@ -38,8 +38,12 @@ for ref in ['J1','J2','J3','J4','J5','J6']:
  c.setStrokeColor(colors.grey);c.rect(*xy(left,top+14.75),((n-1)*3.5+4.2)*mm,14.75*mm)
  c.setStrokeColor(colors.black);c.setFont('Helvetica',7);c.drawCentredString(*xy((min(xs)+max(xs))/2,top+5),ref)
  for p in f['pads']:c.circle(*xy(p['x_mm'],-p['y_mm']),.55*mm)
-c.setStrokeColor(colors.HexColor('#116c8a'));c.circle(*xy(26,2),1.5*mm)
-c.setFont('Helvetica',7);c.drawCentredString(*xy(26,-2),'D10 RGB')
+led_x,led_y=fps['D10']['x_mm'],-fps['D10']['y_mm']
+c.setStrokeColor(colors.HexColor('#116c8a'));c.circle(*xy(led_x,led_y),3*mm)
+c.circle(*xy(led_x,led_y),2*mm)
+c.rect(*xy(led_x-.75,led_y+.75),1.5*mm,1.5*mm)
+c.line(*xy(led_x-8,led_y),*xy(led_x-3.2,led_y))
+c.setFont('Helvetica',7);c.drawRightString(*xy(led_x-8.5,led_y-.5),'D10 RGB')
 c.setStrokeColor(colors.black);c.rect(*xy(17.65,8.8),12.7*mm,5*mm)
 c.setFont('Helvetica',7);c.drawCentredString(*xy(24,7),'J8')
 for ref in ('H1','H2'):
@@ -54,7 +58,9 @@ lines=['PCB: 52 x 74 x 1.6 mm. Four layers, nominal 1 oz copper.',
  'Conservative terminal envelope: 52 x 82.1 mm, before wires/button clearance.',
  'Terminal height: 8.5 above mounting face; pin tips 3.5 below that face.',
  'On a 1.6 mm PCB, pin tips project nominally 1.9 mm beyond the bottom.',
- 'D10: center (26, 2), height 0.65; reserve a 3 mm diameter optical path.',
+ f'D10: center ({led_x:g}, {led_y:g}), height 0.65; 6 mm circular area reserved.',
+ 'Printed duct starting size: outside diameter <=6; inside diameter 4.',
+ 'Duct lower face: 0.85-1.15 above PCB; no contact with LED or screw boss.',
  'J8 header: 8.5 above PCB; tails about 1.4 below bottom; allow cable access.',
  'Housing geometry is nominal CAD. Physical and optical fit untested.',
  'Origin: top-left PCB corner. X right; Y down in this drawing.']

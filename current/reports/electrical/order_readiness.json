@@ -40,18 +40,18 @@
     "other_5V_sensor_A": 0.51,
     "logic_A": 0.13,
     "RGB_buffer_A": 0.02,
-    "buck_to_boost_drop_V": 0.04621120907683994,
+    "buck_to_boost_drop_V": 0.045545796561533756,
     "boost_to_efuse_drop_V": 0.01232276112341765,
-    "total_boost_path_drop_V": 0.04621120907683994,
+    "total_boost_path_drop_V": 0.045545796561533756,
     "revised_PCB_allowance_V": 0.12,
     "results": {
       "V5_INTERNAL": {
-        "('L1', '2')": 0.0643717640633362,
-        "('L2', '1')": -0.04621120907683994,
-        "('U4', '1')": 0.06304505753582217,
-        "('U2', '1')": 0.05687916943472996,
-        "('U10', '5')": -0.02324133968279363,
-        "('D10', '2')": -0.046916272226060096
+        "('L1', '2')": 0.063520915483864,
+        "('L2', '1')": -0.045545796561533756,
+        "('U4', '1')": 0.062194208956349924,
+        "('U2', '1')": 0.05572694347183833,
+        "('U10', '5')": -0.022907474793040398,
+        "('D10', '2')": 0.05453643447752332
       },
       "BOOST_12V": {
         "('D4', '1')": -3.001557360734495e-17,
@@ -86,8 +86,8 @@
         }
       }
     },
-    "geometry_sha256": "9b610aa446d6ecb0b4a3b2c3b186a2adbb9ebdb248dd883561e14f81805ecde6",
+    "geometry_sha256": "11e217094d602b9d50b6f384a8032dedaf020fd171260eed68d26169aa582dd5",
     "scope": "Nominal etched dimensions and ideal pads. No temperature solution, ground return, contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json."
   },
-  "scope": "Current native pin and routed-copper DC checks pass with the RGB reserve. This is not a completed full power transient review."
+  "scope": "Current native pin and routed-copper DC checks pass with the RGB reserve and relocated LED. This is not a completed full power transient review."
 }

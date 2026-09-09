@@ -123,9 +123,9 @@
       "via_count": 2
     },
     "V5_INTERNAL": {
-      "total_track_length_mm": 196.43724893717547,
+      "total_track_length_mm": 207.8892565003725,
       "minimum_width_mm": 0.25,
-      "via_count": 10
+      "via_count": 14
     },
     "VIN_RAW": {
       "total_track_length_mm": 19.627201854158205,
@@ -185,19 +185,43 @@
   },
   "status_optical_access": {
     "center_top_left_mm": [
-      26,
-      2
+      48,
+      39.5
     ],
-    "reserved_diameter_mm": 3,
+    "reserved_diameter_mm": 6,
+    "suggested_duct_bore_mm": 4,
     "LED_nominal_height_mm": 0.65,
-    "scope": "Nominal placement; enclosure/light-pipe and physical optical fit require qualification."
+    "duct_lower_face_above_PCB_mm": [
+      0.85,
+      1.15
+    ],
+    "board_edge_clearance_mm": 1,
+    "mount_H2_center_distance_mm": 7.0178344238090995,
+    "scope": "6 mm circular component courtyard reserved for a non-contact printed duct; native DRC checks adjacent courtyards. Nominal dimensions; enclosure tolerances, viewing angle and brightness require physical qualification."
+  },
+  "status_routes": {
+    "STATUS_5V_DATA": {
+      "track_length_mm": 10.396931594811814,
+      "vias": 0,
+      "layers": [
+        "F.Cu"
+      ]
+    },
+    "STATUS_DIN": {
+      "track_length_mm": 54.27441113989373,
+      "vias": 2,
+      "layers": [
+        "F.Cu",
+        "In2.Cu"
+      ]
+    }
   },
   "rgb_local_bypass": {
     "C74": {
       "supply_top_path_mm": 2.2060028842544392
     },
     "C75": {
-      "supply_top_path_mm": 2.9181980515339445
+      "supply_top_path_mm": 3.725
     }
   }
 }

@@ -2859,39 +2859,39 @@
       "reference": "D10",
       "value": "SK6805-EC15",
       "package": "LED_SK6805_EC15",
-      "x_mm": 26.0,
-      "y_mm": -2.0,
-      "rotation_deg": 0.0,
+      "x_mm": 48.0,
+      "y_mm": -39.5,
+      "rotation_deg": 180.0,
       "pads": [
         {
           "number": "1",
           "net": "STATUS_DIN",
-          "x_mm": 25.525,
-          "y_mm": -2.475,
+          "x_mm": 48.475,
+          "y_mm": -39.025,
           "copper_top": true,
           "copper_bottom": false
         },
         {
           "number": "2",
           "net": "V5_INTERNAL",
-          "x_mm": 26.475,
-          "y_mm": -2.475,
+          "x_mm": 47.525,
+          "y_mm": -39.025,
           "copper_top": true,
           "copper_bottom": false
         },
         {
           "number": "3",
           "net": "",
-          "x_mm": 26.475,
-          "y_mm": -1.525,
+          "x_mm": 47.525,
+          "y_mm": -39.975,
           "copper_top": true,
           "copper_bottom": false
         },
         {
           "number": "4",
           "net": "GND",
-          "x_mm": 25.525,
-          "y_mm": -1.525,
+          "x_mm": 48.475,
+          "y_mm": -39.975,
           "copper_top": true,
           "copper_bottom": false
         }
@@ -3240,23 +3240,23 @@
       "reference": "C75",
       "value": "100nF",
       "package": "C_0805_2012Metric",
-      "x_mm": 29.3,
-      "y_mm": -1.75,
-      "rotation_deg": 90.0,
+      "x_mm": 48.475,
+      "y_mm": -35.3,
+      "rotation_deg": 0.0,
       "pads": [
         {
           "number": "1",
           "net": "V5_INTERNAL",
-          "x_mm": 29.3,
-          "y_mm": -2.7,
+          "x_mm": 47.525,
+          "y_mm": -35.3,
           "copper_top": true,
           "copper_bottom": false
         },
         {
           "number": "2",
           "net": "GND",
-          "x_mm": 29.3,
-          "y_mm": -0.8,
+          "x_mm": 49.425,
+          "y_mm": -35.3,
           "copper_top": true,
           "copper_bottom": false
         }
@@ -5562,6 +5562,13 @@
       "source": "via"
     },
     {
+      "x_mm": 50.0,
+      "y_mm": -40.8,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
       "x_mm": 4.55,
       "y_mm": -41.3,
       "diameter_mm": 0.3,
@@ -6255,6 +6262,20 @@
       "source": "via"
     },
     {
+      "x_mm": 34.5,
+      "y_mm": -39.75,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 37.075,
+      "y_mm": -39.725,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
       "x_mm": 12.625,
       "y_mm": -27.0,
       "diameter_mm": 0.3,
@@ -6272,6 +6293,13 @@
       "x_mm": 2.0,
       "y_mm": -41.6188,
       "diameter_mm": 0.4,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 24.55,
+      "y_mm": -45.15,
+      "diameter_mm": 0.3,
       "plated": true,
       "source": "via"
     },
@@ -6314,6 +6342,13 @@
       "x_mm": 22.8404,
       "y_mm": -27.8066,
       "diameter_mm": 0.4,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 46.225,
+      "y_mm": -36.6,
+      "diameter_mm": 0.3,
       "plated": true,
       "source": "via"
     },
@@ -7027,6 +7062,20 @@
     {
       "x_mm": 44.9599,
       "y_mm": -53.1087,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 48.225,
+      "y_mm": -38.4,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 27.8,
+      "y_mm": -6.425,
       "diameter_mm": 0.3,
       "plated": true,
       "source": "via"

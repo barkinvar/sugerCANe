@@ -21,7 +21,7 @@
   "firmware_application_scenarios": 19,
   "simulated_flash_boundaries": 2148,
   "input_hashes": {
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "66717ee3d6988c87f5242d8a1b78d7952dd893b48a7b6fa24a57c62f4e2a16ec",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "487c5167e5a20cc0487e12735212a5d9db807777548286aa328d5896b55fd60f",
     "hardware/design/circuit.json": "936a394edaadeba1fa9be1bbaa8231163c140c426ca1372b95e7c5a4ae846b71",
     "firmware/build/factory.hex": "e5f242ee70dd509caa3ee7d51d91d7942c954f1f8dd5c077d57498f5932626e0",
     "firmware/build/application.sc12": "2f213ad1b656ace778778e00540f48fb830398a738cf21e6803af82b43851b39",
@@ -29,9 +29,71 @@
     "reports/firmware-arm-registers.json": "b70874cacb67588d0e06f5b5bf11a4eea07f440b63f39964beffa89fbb76f7be",
     "reports/firmware-tests.log": "8b02bc299d1e27f24e36d32878016dfc57bf04a52d44db37195b5f9a70f6dc3c",
     "reports/design_parity.json": "d79cbd2f9a9dd988ede7c9394aad08e31f1f18c110d687679477102b4768bee5",
-    "reports/board_constraints.json": "feb9ad1f1720760a796c583d9461d8223df742f47fd5ca5db2acc7b2fc1239f9",
-    "reports/variant_verification.json": "185f6e22a7388b3456e84024cab6abdfb5516b0141d06f20dd1a2a8c9d0da858"
+    "reports/board_constraints.json": "014a2af6b557cd9fec0904744a8b60ca6d21c7f02a29124a56ec887f9734bee9",
+    "reports/variant_verification.json": "185f6e22a7388b3456e84024cab6abdfb5516b0141d06f20dd1a2a8c9d0da858",
+    "hardware/library/FRC_Sensor_CAN.pretty/LED_SK6805_EC15.kicad_mod": "5c3476324c7f3d50583f46e60bdd0fc7a298496ef5a910fb5958ba4290008a0b",
+    "scripts/check_board_constraints.py": "b48ed1d0bad46a8f097aedc43c5b75be42b2e55fd6b5201fa9e377ed01a5408b",
+    "reports/manufacturing/board_manifest.json": "f1a3ffdaf25afa548cdd84c6e529a8f9649744f49c658fa695b7bc0caeadf08b",
+    "reports/manufacturing/factory_files.json": "86a8dd011b67ae49de08a8ca426aee14b5c18915d6676aac1b05d930552c1251",
+    "reports/manufacturing/gerber_connectivity.json": "79d1b94087a5d65ddf1284d051f56173297e8d8e328c0d862efbb938145cbba3",
+    "reports/manufacturing/gerber_geometry.json": "d84a38ad38219bdeb8c15e381965d3e700845f1cb8794782a6960e5d4909e004",
+    "reports/electrical/order_readiness.json": "b3e8010af4767748899e95b1a2cd52bd9ce4d31ae7a9fbfa1e3520f0ae99e4d2"
   },
   "spice_result": "INCOMPLETE: coupled startup runs canceled; eight other cases passed",
-  "scope": "ARGB/header implementation review, not a full power release or physical qualification."
+  "scope": "ARGB/header implementation and right-side LED relocation review, not a full power release or physical qualification.",
+  "layout_change": {
+    "result": "PASS",
+    "baseline_commit": "feb3093331eb88aa146d6b979a4fdc6cb0f48250",
+    "moved_components": {
+      "D10": {
+        "before": {
+          "xy_mm": [
+            26.0,
+            2.0
+          ],
+          "rotation_deg": 0.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            48.0,
+            39.5
+          ],
+          "rotation_deg": 180.0,
+          "side": 0
+        }
+      },
+      "C75": {
+        "before": {
+          "xy_mm": [
+            29.3,
+            1.75
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            48.475,
+            35.3
+          ],
+          "rotation_deg": 0.0,
+          "side": 0
+        }
+      }
+    },
+    "unaffected_non_indicator_tracks_and_vias": 5375,
+    "unchanged_circuit_and_firmware": true,
+    "scope": "D10/C75 relocation, circular duct courtyard/silkscreen, LED data/supply/ground routing and zone refill only. Physical optics untested.",
+    "checks": [
+      "Native ERC/DRC: zero violations and zero unconnected items",
+      "Model/schematic/PCB parity and circuit regression",
+      "Circular duct courtyard and local LED bypass path",
+      "SMT placement/BOM/export parity",
+      "Independent four-layer Gerber connectivity and manufacturing geometry",
+      "Updated native-copper DC power distribution",
+      "Updated drawings, renders and documentation review"
+    ],
+    "firmware_evidence": "Previous passing firmware tests retained; source and programming images unchanged by this placement-only change."
+  }
 }

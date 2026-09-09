@@ -54,13 +54,22 @@ assert nets('U5')['26']=='STATUS_DATA'
 assert nets('R31')=={'1':'STATUS_DATA','2':'GND'} and parts['R31']['value']=='10k'
 assert nets('R30')=={'1':'STATUS_5V_DATA','2':'STATUS_DIN'} and parts['R30']['value']=='330'
 assert all(nets(r)=={'1':'V5_INTERNAL','2':'GND'} for r in ('C74','C75'))
-assert all(abs(a-z)<1e-6 for a,z in zip(p.ToMM(fps['D10'].GetPosition()),(26,2)))
+assert all(abs(a-z)<1e-6 for a,z in zip(p.ToMM(fps['D10'].GetPosition()),(48,39.5)))
+assert fps['D10'].GetOrientationDegrees()==180
+duct_courtyard=[g for g in fps['D10'].GraphicalItems() if g.GetLayer()==p.F_CrtYd]
+assert len(duct_courtyard)==1 and duct_courtyard[0].GetShape()==p.SHAPE_T_CIRCLE
+assert abs(p.ToMM(duct_courtyard[0].GetRadius())-3)<1e-6
+for ref,minimum in [('D10',3),('C75',2)]:
+ for d in pads(ref).values():
+  bb=d.GetBoundingBox()
+  edge=min(p.ToMM(bb.GetX()),p.ToMM(bb.GetY()),52-p.ToMM(bb.GetRight()),74-p.ToMM(bb.GetBottom()))
+  assert edge>=minimum,(ref,'pad-to-board edge',edge)
 tracks=collections.defaultdict(list);vias=collections.Counter()
 for t in b.GetTracks():
  if isinstance(t,p.PCB_VIA):vias[t.GetNetname()]+=1
  else:
   if t.GetLength()==0:continue
-  assert t.GetLayer() in (p.F_Cu,p.B_Cu) or (t.GetLayer()==p.In2_Cu and t.GetNetname() in {'+3V3','UART_RX','UART_TX','BIAS_UP2_N','ADC_5V','POWER_5V_EN','BIAS_DOWN2','POWER_12V_EN','BIAS_DOWN1'}),'Unexpected inner-layer routing'
+  assert t.GetLayer() in (p.F_Cu,p.B_Cu) or (t.GetLayer()==p.In2_Cu and t.GetNetname() in {'+3V3','UART_RX','UART_TX','BIAS_UP2_N','ADC_5V','POWER_5V_EN','BIAS_DOWN2','POWER_12V_EN','BIAS_DOWN1','V5_INTERNAL','STATUS_DIN'}),'Unexpected inner-layer routing'
   tracks[t.GetNetname()].append(t)
 critical={}
 for net in ['HSE_IN','HSE_OUT','HSE_XTAL_OUT','BUCK_SW','BUCK_CB','BUCK_FB','BOOST_SW','BOOST_FB','BOOST_COMP','BOOST_COMP_RC']:
@@ -116,7 +125,8 @@ for ref,vin_limit,gnd_limit in [('C2',5.5,10),('C3',2.2,6)]:
  assert vin<vin_limit and gnd<gnd_limit,(ref,vin,gnd)
  local[ref]=dict(vin_top_path_mm=vin,ground_top_path_mm=gnd)
 report['buck_local_bypass']=local
-report['status_optical_access']=dict(center_top_left_mm=[26,2],reserved_diameter_mm=3,LED_nominal_height_mm=.65,scope='Nominal placement; enclosure/light-pipe and physical optical fit require qualification.')
+report['status_optical_access']=dict(center_top_left_mm=[48,39.5],reserved_diameter_mm=6,suggested_duct_bore_mm=4,LED_nominal_height_mm=.65,duct_lower_face_above_PCB_mm=[.85,1.15],board_edge_clearance_mm=1,mount_H2_center_distance_mm=math.hypot(.5,7),scope='6 mm circular component courtyard reserved for a non-contact printed duct; native DRC checks adjacent courtyards. Nominal dimensions; enclosure tolerances, viewing angle and brightness require physical qualification.')
+report['status_routes']={net:dict(track_length_mm=sum(p.ToMM(t.GetLength()) for t in tracks[net]),vias=vias[net],layers=sorted({b.GetLayerName(t.GetLayer()) for t in tracks[net]})) for net in ('STATUS_5V_DATA','STATUS_DIN')}
 led_bypass={}
 for ref,ic,pin,limit in [('C74','U10','5',3),('C75','D10','2',4)]:
  length=top_path('V5_INTERNAL',pads(ref)['1'],pads(ic)[pin])

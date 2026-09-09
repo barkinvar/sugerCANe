@@ -60,9 +60,9 @@
 		(layer "F.SilkS")
 		(uuid "9fc67a0f-6581-4bb2-bfc2-f876c23086c6")
 	)
-	(fp_rect
-		(start -1.05 -1.05)
-		(end 1.05 1.05)
+	(fp_circle
+		(center 0 0)
+		(end 3 0)
 		(stroke
 			(width 0.05)
 			(type default)

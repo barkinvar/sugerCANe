@@ -1,6 +1,6 @@
 # Status LED, enclosure access and inexpensive programming
 
-Rev H has one RGB LED, D10, at the middle of the top edge. It runs from the internal 5 V supply, so it can indicate a sensor-power fault while the protected outputs are off. Sensor-voltage selection remains on the removable 2 mm jumpers.
+Rev H has one RGB LED, D10, in the open area on the right, above the right-hand mounting hole. A silkscreen circle and RGB label identify it. It runs from the internal 5 V supply, so it can indicate a sensor-power fault while the protected outputs are off. Sensor-voltage selection remains on the removable 2 mm jumpers.
 
 ## Reading the indicator
 
@@ -18,7 +18,11 @@ A CAN acknowledgment proves that another node accepted the frame at the bus leve
 
 ## Enclosure location
 
-Coordinates use the component-side view, top-left PCB corner as (0,0). D10 is centered at **X=26 mm, Y=2 mm**. Its nominal body is 1.5 × 1.5 × 0.65 mm. Reserve a **3 mm diameter vertical optical path** above it for a clear window or light pipe. Start with a 0.2–0.5 mm air gap above the LED; qualify visibility and tolerance on a printed enclosure before tooling. Do not let the light pipe press on the LED.
+Coordinates use the component-side view, top-left PCB corner as (0,0). D10 is centered at **X=48 mm, Y=39.5 mm**: 4 mm from the right edge and 7 mm above mounting hole H2. Its nominal body is 1.5 × 1.5 × 0.65 mm. A **6 mm diameter area** centered on D10 is reserved against other component courtyards for a future circular light duct. C75 sits just above this area and remains connected by a short local supply trace.
+
+For a first printed enclosure, use a duct with **6 mm maximum outside diameter and 4 mm inside diameter**. These are nominal starting dimensions, not a tolerance-qualified enclosure. The duct must hang from the case, without loading the PCB or LED. Start its lower face **0.2–0.5 mm above the LED**, or nominally **0.85–1.15 mm above the top PCB surface**. Maintain the separate mounting-hardware clearance at H2; do not combine the duct with a screw boss.
+
+The LED should be visible from above, but brightness and viewing angle have not been measured on hardware. Keep a hollow duct short and its opening unobstructed; a translucent window or light-pipe insert can make the case indicator easier to see from an angle. Check all RGB patterns through the actual print under workshop and competition lighting before finalizing the case. The CAD render shows the package without illumination.
 
 J8 is centered at (24,6.30) mm, with a 12.70 × 5.00 mm insulator and approximately 8.5 mm total height above the PCB. Its tails extend about 1.4 mm beyond a 1.6 mm PCB. Allow access through a removable lid and space for plugged leads during servicing. The completed [STEP model](../output/mechanical/FRC_Sensor_CAN.step) and [mechanical drawing](../output/mechanical/mechanical_drawing.pdf) include both parts. All assembly remains on top.
 
