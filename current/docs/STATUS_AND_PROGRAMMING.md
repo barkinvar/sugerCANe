@@ -24,15 +24,15 @@ For a first printed enclosure, use a duct with **6 mm maximum outside diameter a
 
 The LED should be visible from above, but brightness and viewing angle have not been measured on hardware. Keep a hollow duct short and its opening unobstructed; a translucent window or light-pipe insert can make the case indicator easier to see from an angle. Check all RGB patterns through the actual print under workshop and competition lighting before finalizing the case. The CAD render shows the package without illumination.
 
-J8 is centered at (24,6.30) mm, with a 12.70 × 5.00 mm insulator and approximately 8.5 mm total height above the PCB. Its tails extend about 1.4 mm beyond a 1.6 mm PCB. Allow access through a removable lid and space for plugged leads during servicing. The completed [STEP model](../output/mechanical/FRC_Sensor_CAN.step) and [mechanical drawing](../output/mechanical/mechanical_drawing.pdf) include both parts. All assembly remains on top.
+J8 is centered at (24,6.30) mm, with a 13.10 × 5.00 mm insulator and approximately 8.5 mm total height above the PCB. Its tails extend about 1.6 mm beyond a 1.6 mm PCB. Allow access through a removable lid and space for plugged leads during servicing. The completed [STEP model](../output/mechanical/FRC_Sensor_CAN.step) and [mechanical drawing](../output/mechanical/mechanical_drawing.pdf) include both parts. All assembly remains on top.
 
 ## One programmer for the ten-board batch
 
-Hand solder the ordinary **2×5, 2.54 mm J8 header** included in the hand-solder BOM. Its estimated purchase price is $0.0718 each at ten. No special pogo cable is required. Keep one short five-wire harness and reuse it across all boards. Disconnect it for robot use.
+Hand solder the **XFCN PM254V-12-10P-H85 recessed female 2×5, 2.54 mm J8 socket** included in the hand-solder BOM. Its contacts sit inside the insulating body instead of projecting above it. The estimated undiscounted price is $0.1158 each at ten, approximately $0.044 more per board than the former male header. No special pogo cable is required. Keep one short five-wire harness and reuse it across all boards. Disconnect it for robot use.
 
 Use an existing ST-Link with external-target SWD, reset and voltage sensing, or a Nucleo's detachable/external ST-Link according to that specific board's manual. If buying a programmer, the genuine [STLINK-V3MINIE](https://estore.st.com/en/stlink-v3minie-cpn.html) was listed at about **$26 on 2026-09-09**, before shipping/tax and USB cable. That is a one-time bench tool, about $2.60 per board spread over ten, plus a small wire/adapter allowance.
 
-The V3MINIE's CN2 edge pads are **2 mm**, and its supplied ribbon is **1.27 mm STDC14**: neither directly plugs into this 2.54 mm header. Make one mapped adapter, or solder strain-relieved flywires to CN2 following the probe manual. Verify every connection unpowered. Ordinary female 2.54 mm leads fit the SC12 end.
+The V3MINIE's CN2 edge pads are **2 mm**, and its supplied ribbon is **1.27 mm STDC14**: neither directly plugs into this 2.54 mm socket. Make one mapped adapter, or solder strain-relieved flywires to CN2 following the probe manual. Verify every connection unpowered. Use ordinary male 2.54 mm leads at the SC12 socket end. A single 2×5 male plug with only the required wires populated is easier to orient consistently; match the pin-one triangle and the custom mapping.
 
 | Signal | SC12 J8 | STLINK-V3MINIE CN2 edge pad | Alternative CN4 STDC14 pin |
 |---|---:|---:|---:|

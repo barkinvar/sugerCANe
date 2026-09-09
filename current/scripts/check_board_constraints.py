@@ -34,6 +34,7 @@ for ch in range(1,4):
  assert all(d.GetAttribute()==p.PAD_ATTRIB_PTH and abs(p.ToMM(d.GetDrillSize().x)-.85)<1e-6 for d in pp.values())
  assert all(min(p.ToMM(d.GetSize()))>=1.35 for d in pp.values())
  assert all(not d.IsOnLayer(p.F_Paste) for d in pp.values())
+ assert all(abs(p.ToMM(d.GetPosition().y)-60.4)<1e-6 for d in pp.values())
  selectors.append(dict(reference=a,pads_left_to_right=list(nets(a).values()),drill_mm=.85,nominal_annulus_mm=.25))
  assert nets(f'Q{ch}01')=={'1':f'BIAS_UP{ch}_N','2':'+3V3','3':f'BIAS_SOURCE{ch}'}
  assert nets(f'Q{ch}02')=={'1':f'BIAS_DOWN{ch}','2':'GND','3':f'BIAS_SINK{ch}'}
@@ -42,6 +43,8 @@ for ch in range(1,4):
 assert all(not d.IsOnLayer(p.F_Paste) for d in pads('JP2').values())
 service=pads('J8');mapping={'1':'NRST','2':'UART_RX','3':'UART_TX','4':'SWCLK','5':'SWDIO','6':'+3V3','7':'GND','8':'GND','9':'BOOT0','10':'GND'}
 assert nets('J8')==mapping
+assert parts['J8']['mpn']=='PM254V-12-10P-H85'
+assert fps['J8'].GetValue()=='2x5 SERVICE SOCKET 2.54mm'
 for n,d in service.items():
  assert d.GetAttribute()==p.PAD_ATTRIB_PTH and not d.IsOnLayer(p.F_Paste)
  assert abs(p.ToMM(d.GetDrillSize().x)-1.1)<1e-6 and abs(p.ToMM(d.GetSize().x)-1.7)<1e-6
@@ -64,12 +67,21 @@ for ref,minimum in [('D10',3),('C75',2)]:
   bb=d.GetBoundingBox()
   edge=min(p.ToMM(bb.GetX()),p.ToMM(bb.GetY()),52-p.ToMM(bb.GetRight()),74-p.ToMM(bb.GetBottom()))
   assert edge>=minimum,(ref,'pad-to-board edge',edge)
+edge_clearances={}
+for ref,minimum in [('R101',2.19),('R103',2.04),('R203',2.04),('F1',2.06),('D102',2.09),('R22',2.07),('R109',2.02),('R104',1.97),('R30',1.69),('R31',1.69)]:
+ distances=[]
+ for d in pads(ref).values():
+  bb=d.GetBoundingBox();distances.append(min(p.ToMM(bb.GetX()),p.ToMM(bb.GetY()),52-p.ToMM(bb.GetRight()),74-p.ToMM(bb.GetBottom())))
+ edge_clearances[ref]=min(distances)
+ assert min(distances)>=minimum,(ref,'pad-to-board edge',min(distances))
 tracks=collections.defaultdict(list);vias=collections.Counter()
 for t in b.GetTracks():
  if isinstance(t,p.PCB_VIA):vias[t.GetNetname()]+=1
  else:
   if t.GetLength()==0:continue
-  assert t.GetLayer() in (p.F_Cu,p.B_Cu) or (t.GetLayer()==p.In2_Cu and t.GetNetname() in {'+3V3','UART_RX','UART_TX','BIAS_UP2_N','ADC_5V','POWER_5V_EN','BIAS_DOWN2','POWER_12V_EN','BIAS_DOWN1','V5_INTERNAL','STATUS_DIN'}),'Unexpected inner-layer routing'
+  assert t.GetLayer() in (p.F_Cu,p.B_Cu) or (t.GetLayer()==p.In2_Cu and t.GetNetname() in {'+3V3','UART_RX','UART_TX','BIAS_UP2_N','ADC_5V','POWER_5V_EN','BIAS_DOWN2','POWER_12V_EN','BIAS_DOWN1','V5_INTERNAL','STATUS_DIN','INPUT1','SENSE1'}),'Unexpected inner-layer routing'
+  if t.GetLayer()==p.In2_Cu and t.GetNetname() in {'INPUT1','SENSE1'}:
+   assert min(t.GetStart().y,t.GetEnd().y)>=p.FromMM(50),'Input route entered power-stage region'
   tracks[t.GetNetname()].append(t)
 critical={}
 for net in ['HSE_IN','HSE_OUT','HSE_XTAL_OUT','BUCK_SW','BUCK_CB','BUCK_FB','BOOST_SW','BOOST_FB','BOOST_COMP','BOOST_COMP_RC']:
@@ -99,6 +111,8 @@ for d in paste:
  area+=w*h-(4-math.pi)*radius*radius
 coverage=area/(2.4*3.1)
 assert .50<coverage<.65
+report['improved_edge_clearances_mm']=edge_clearances
+report['edge_scope']='Pad bounding boxes to finished edges. R1/R2 retain original 1.30 mm edge clearance and local buck feedback routing. Terminals/test pads/termination bridge have intentional exceptions.'
 report['efuse_assembly']=dict(exposed_pad_mm=[2.4,3.1],external_ground_thermal_vias=len(thermal),paste_windows=len(paste),paste_coverage_fraction=coverage)
 # These explicit local paths prevent a future placement change from leaving
 # input bypass capacitors remote from the buck, despite passing ordinary DRC.

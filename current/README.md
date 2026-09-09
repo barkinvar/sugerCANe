@@ -2,7 +2,7 @@
 
 Three digital sensor inputs over CAN, with regulated **5 V / 12 V sensor power** and software-selectable **NPN, PNP, push-pull, floating detection and keeper**. Removable 2 mm jumpers select each port's power voltage. All components mount on the top.
 
-Rev H adds one enclosure-facing RGB status LED and an ordinary hand-soldered programming header for a ten-board batch. The LED is on the right, above the mounting hole, with a 6 mm circular area reserved for a printed light duct; see the [enclosure dimensions](docs/STATUS_AND_PROGRAMMING.md#enclosure-location). It retains Rev G's power protection and physical voltage jumpers. The 12 V reservoir is upstream of a controlled output eFuse; both rails have default-off enables and CAN fault reset. Two ADC channels measure the protected rails. [Engineering review](docs/ORDER_READINESS.md) · [verification and bench procedure](docs/VALIDATION.md). This design uses its own CAN protocol; it is not CTRE Phoenix or GrappleHook compatible.
+Rev H adds one enclosure-facing RGB status LED and a hand-soldered recessed female programming socket for a ten-board batch. The LED is on the right, above the mounting hole, with a 6 mm circular area reserved for a printed light duct; see the [enclosure dimensions](docs/STATUS_AND_PROGRAMMING.md#enclosure-location). It retains Rev G's power protection and physical voltage jumpers. The 12 V reservoir is upstream of a controlled output eFuse; both rails have default-off enables and CAN fault reset. Two ADC channels measure the protected rails. [Engineering review](docs/ORDER_READINESS.md) · [verification and bench procedure](docs/VALIDATION.md). This design uses its own CAN protocol; it is not CTRE Phoenix or GrappleHook compatible.
 
 **Rev H status:** RGB/header hardware, firmware and focused checks are complete. The extra full power-transient rerun was stopped before completion; it is not claimed as passed. See the [check summary](reports/release_checks.json).
 
@@ -18,10 +18,10 @@ Rev H adds one enclosure-facing RGB status LED and an ordinary hand-soldered pro
 | Fault reset | Remove the fault, then use CAN power reset; hardware limits remain independent |
 | Controller | STM32F042K6T6, TCAN3413; 1 Mbit/s classic CAN |
 | Software | App 0.9.0, bootloader 1.1.0, hardware 8, protocol 4 |
-| Servicing | CAN discovery, ID/settings and recoverable firmware upload; initial installation through a 2.54 mm SWD header |
+| Servicing | CAN discovery, ID/settings and recoverable firmware upload; initial installation through a 2.54 mm SWD service socket |
 | PCB / assembly | **52 × 74 mm**, four copper layers, 130 top SMT parts + ten hand-soldered parts + three loose caps |
 
-Parts purchasing is about **$28.94 per board at ten boards**, including supplier minimum packs, hand-fitted parts and three loose caps. RGB/header changes add about $0.13 in parts versus G; the design remains about $6.19 below E. PCB, assembly, freight and tax are extra. [Cost calculation](docs/COST_REDUCTION.md).
+Parts purchasing is about **$28.99 per board at ten boards**, including supplier minimum packs, hand-fitted parts and three loose caps. RGB/header changes add about $0.18 in parts versus G; the design remains about $6.15 below E. PCB, assembly, freight and tax are extra. [Cost calculation](docs/COST_REDUCTION.md).
 
 | What you want to do | Start here |
 |---|---|
@@ -37,3 +37,5 @@ Parts purchasing is about **$28.94 per board at ten boards**, including supplier
 | Download everything | [Source/release status](release/README.md), [handbook](output/documentation/SC12_RevH_Handbook.pdf) |
 
 Change voltage jumpers only with power disconnected. A missing cap disconnects port power, not its signal wire. Input mode changes use CAN software. Rail voltage readback uses the MCU ADC and factory voltage-reference calibration. External signal inputs remain digital; rail measurement does not add user analog-input or encoder support.
+
+The current layout uses a recessed female debug socket, moves the vulnerable bottom/right resistors inward, and adds visible voltage-selector and input/power labels. Board size and top-side assembly are unchanged. See [connector and clearance details](docs/CONNECTORS.md).

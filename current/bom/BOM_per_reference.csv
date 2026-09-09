@@ -59,7 +59,7 @@ J3,1824420000,2P PUSH 3.5mm,FRC_Sensor_CAN:Weidmuller_LSF_90_2P,,,,,"Horizontal 
 J4,1824430000,3P PUSH 3.5mm,FRC_Sensor_CAN:Weidmuller_LSF_90_3P,,,,,"Horizontal /90 push-in; 8 mm strip, 7 mm pin-row spacing, two solder pins per pole."
 J5,1824430000,3P PUSH 3.5mm,FRC_Sensor_CAN:Weidmuller_LSF_90_3P,,,,,"Horizontal /90 push-in; 8 mm strip, 7 mm pin-row spacing, two solder pins per pole."
 J6,1824430000,3P PUSH 3.5mm,FRC_Sensor_CAN:Weidmuller_LSF_90_3P,,,,,"Horizontal /90 push-in; 8 mm strip, 7 mm pin-row spacing, two solder pins per pole."
-J8,PZ254V-12-10P,2x5 SERVICE 2.54mm,FRC_Sensor_CAN:Service_2x05_P2.54mm,,,,,"Hand-solder 2x5 2.54mm header. CUSTOM pinout; see wiring drawing. Pin6 is target VTref sense only, never power from probe. 1.10mm finished holes."
+J8,PM254V-12-10P-H85,2x5 SERVICE SOCKET 2.54mm,FRC_Sensor_CAN:Service_2x05_P2.54mm,,,,,"Hand-solder recessed female 2x5 2.54mm socket. CUSTOM pinout; see wiring drawing. Pin6 is target VTref sense only, never power from probe. 1.10mm finished holes."
 JP101,M22-2010305,5V / 12V,FRC_Sensor_CAN:PinHeader_1x03_P2.00mm_Vertical,,,,,"Hand-fit 2 mm header. One removable SPN02SVEN-RC shunt: 1-2=5 V, 2-3=12 V, absent=off. Change only with power off. Ship shunts loose."
 JP201,M22-2010305,5V / 12V,FRC_Sensor_CAN:PinHeader_1x03_P2.00mm_Vertical,,,,,"Hand-fit 2 mm header. One removable SPN02SVEN-RC shunt: 1-2=5 V, 2-3=12 V, absent=off. Change only with power off. Ship shunts loose."
 JP301,M22-2010305,5V / 12V,FRC_Sensor_CAN:PinHeader_1x03_P2.00mm_Vertical,,,,,"Hand-fit 2 mm header. One removable SPN02SVEN-RC shunt: 1-2=5 V, 2-3=12 V, absent=off. Change only with power off. Ship shunts loose."

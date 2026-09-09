@@ -1,6 +1,6 @@
 {
   "revision": "H",
-  "order_decision": "LED/header review complete; full power rerun not completed",
+  "order_decision": "CAD cross-checks complete; final simulation deferred",
   "physical_tests_performed": false,
   "pin_review": {
     "checks": {
@@ -89,5 +89,8 @@
     "geometry_sha256": "11e217094d602b9d50b6f384a8032dedaf020fd171260eed68d26169aa582dd5",
     "scope": "Nominal etched dimensions and ideal pads. No temperature solution, ground return, contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json."
   },
-  "scope": "Current native pin and routed-copper DC checks pass with the RGB reserve and relocated LED. This is not a completed full power transient review."
+  "scope": "Pin mapping and CAD/export checks cover the clearance/socket/label edit. Retained power_distribution results precede the relocated power headers and their supply routing; no current-layout DC or transient simulation pass is claimed. Final simulation deferred by user.",
+  "power_distribution_baseline_commit": "f4de467fd256327cd4beca55338915f698db33fc",
+  "power_distribution_valid_for_current_layout": false,
+  "simulation_deferred_by_user": true
 }

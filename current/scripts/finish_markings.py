@@ -1,20 +1,33 @@
-"""Add wiring legends and product identification; dimensions are board coordinates in mm."""
+"""Apply the Rev H wiring legends to the final native board, in mm.
+
+Replaces board text only. Footprint markings and the RGB light-duct circle stay
+intact. Front labels occupy the gaps outside the fitted connector housings.
+"""
 from pathlib import Path
 import pcbnew as p
-import subprocess, os
 R=Path(__file__).resolve().parents[1];fn=R/'hardware/FRC_Sensor_CAN.kicad_pcb'
-env=dict(os.environ)
-env.pop('PYTHONHOME',None); env.pop('PYTHONPATH',None)
-subprocess.run(['python',str(R/'scripts/prune_markings.py')],check=True,env=env)
 b=p.LoadBoard(str(fn))
-def text(value,x,y,size=1,back=False):
- t=p.PCB_TEXT(b);t.SetText(value);t.SetPosition(p.VECTOR2I(p.FromMM(x),p.FromMM(y)));t.SetTextSize(p.VECTOR2I(p.FromMM(size),p.FromMM(size)));t.SetTextThickness(p.FromMM(.12 if size<1.5 else .2));t.SetLayer(p.B_SilkS if back else p.F_SilkS);t.SetMirrored(back);b.Add(t)
-text('SC12',24,1.05,1.2)
-for x,label in [(9.5,'G'),(13,'+'),(35.5,'L'),(39,'H'),(45,'L'),(48.5,'H')]:text(label,x,10.85 if label=='+' else 10.65 if x==35.5 else 11.1,.8)
-for value,y,size in [('SC12',17,2.7),('REV G - 3 DIGITAL INPUTS',21,1.2),('6-22V IN | 5V / 12V OUT',24,1.1),('300mA TOTAL PER RAIL',26.5,1.0),('POWER: 1-2=5V / 2-3=12V',30,.95),('INPUT MODE: CAN SOFTWARE',32.5,.95),('NPN / PNP / PUSH-PULL',35,.95),('ONE CAP PER POWER HEADER',37.5,.95),('FAULT RESET: CAN SERVICE',40,.85),('INPUTS ONLY - NO ACTUATORS',42,.85)]:text(value,26,y,size,True)
-for x,l in [(13,'V+'),(9.5,'GND'),(39,'H'),(35.5,'L'),(48.5,'H'),(45,'L')]:text(l,x,5.5,.95,True)
+for t in list(b.GetDrawings()):
+ if isinstance(t,p.PCB_TEXT):b.RemoveNative(t)
+def text(value,x,y,size=1,back=False,angle=0):
+ t=p.PCB_TEXT(b);t.SetText(value);t.SetPosition(p.VECTOR2I(p.FromMM(x),p.FromMM(y)));t.SetTextSize(p.VECTOR2I(p.FromMM(size),p.FromMM(size)));t.SetTextThickness(p.FromMM(.12 if size<1.5 else .2));t.SetLayer(p.B_SilkS if back else p.F_SilkS);t.SetMirrored(back);t.SetTextAngle(p.EDA_ANGLE(angle,p.DEGREES_T));b.Add(t)
+text('VIN',5.2,10.3,.9)
+for x,label in [(9.5,'GND'),(13,'+'),(35.5,'L'),(39,'H'),(45,'L'),(48.5,'H')]:text(label,x,10.65 if x==35.5 else 11.1,.8)
+text('CAN',42,6,.8,angle=90)
+text('TERM',16.3,5.2,.8,angle=90)
+text('DEBUG',25.3,9.55,.8)
+text('RGB',48,41.3,.8)
+for ch,x in enumerate([5,21,37],1):
+ text('5V',x+{1:0,2:-1.5,3:.5}[ch],62.55 if ch==2 else 61.95,.8);text('12V',x+4+(.8 if ch==1 else 0),61.95,.8)
+ for xx,label in [(x+1.5,f'V{ch}'),(x+5,'GND'),(x+8.5,f'IN{ch}')]:text(label,xx+(.5 if ch==3 and label=='GND' else 0),62.95,.8)
+for value,y,size in [('SC12',17,2.7),('REV H - 3 DIGITAL INPUTS',21,1.2),('6-22V IN | 5V / 12V OUT',24,1.1),('300mA TOTAL PER RAIL',26.5,1.0),('POWER: 1-2=5V / 2-3=12V',30,.95),('INPUT MODE: CAN SOFTWARE',32.5,.95),('NPN / PNP / PUSH-PULL',35,.95),('ONE CAP PER POWER HEADER',37.5,.95),('FAULT RESET: CAN SERVICE',40,.85),('INPUTS ONLY - NO ACTUATORS',42,.85),('DEBUG: CUSTOM 2x5 PINOUT',46,.95),('1 RST / 2 RX / 3 TX / 4 CLK / 5 DIO',48.5,.85),('6 3V3 / 7 GND / 8 GND / 9 BOOT / 10 GND',51,.85),('3V3 = TARGET REFERENCE ONLY',53.5,.85),('POWER OFF TO MOVE CAPS',56,.9)]:text(value,26,y,size,True)
+for x,l in [(13,'VIN+'),(9.5,'GND'),(39,'H'),(35.5,'L'),(48.5,'H'),(45,'L')]:text(l,x,5.5,.85,True)
+text('POWER IN',11.25,11.2,.85,True)
+text('CAN A',37.25,11.2,.85,True);text('CAN B',46.75,11.2,.85,True)
 for ch,cx in enumerate([10,26,42],1):
- for dx,l in [(-3.5,'P'),(0,'G'),(3.5,'S')]:text(l,cx+dx,68.5,1.1,True)
+ for dx,l in [(-3.5,f'V{ch}'),(0,'GND'),(3.5,f'IN{ch}')]:text(l,cx+dx,68.5,.85,True)
  text('INPUT '+str(ch),cx,63.25,.8,True)
-text('TERM 120R',17,4,.8,True)
+ for dx,l in [(-5,'5V'),(-1,'12V')]:text(l,cx+dx,58.6,.8,True)
+text('TERM 120R',18,12.5,.8,True)
+text('1',17.3,8,.8,True)
 p.SaveBoard(str(fn),b)

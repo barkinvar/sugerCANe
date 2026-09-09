@@ -16,7 +16,7 @@ for d in ('output/documentation','output/mechanical','order'):(R/d).mkdir(parent
 styles=getSampleStyleSheet();styles['Normal'].fontSize=8;styles['Normal'].leading=11
 P=lambda s:Paragraph(escape(str(s)),styles['Normal'])
 rows=list(csv.DictReader((R/'bom/BOM_grouped.csv').open()))
-story=[Paragraph('SC12 - Revision H purchasing BOM',styles['Title']),P('140 fitted parts: 130 factory SMT + 10 user-fitted through-hole parts. Three loose caps extra. Parts purchasing estimate: $28.94/board at 10 boards; PCB, assembly, attrition, freight and tax extra. See cost_estimate.csv. Unbuilt prototype.'),Spacer(1,12)]
+story=[Paragraph('SC12 - Revision H purchasing BOM',styles['Title']),P('140 fitted parts: 130 factory SMT + 10 user-fitted through-hole parts. Three loose caps extra. Parts purchasing estimate: $28.99/board at 10 boards; PCB, assembly, attrition, freight and tax extra. See cost_estimate.csv. Unbuilt prototype.'),Spacer(1,12)]
 data=[[P(t) for t in ['Qty','MPN / supplier part','References','Value / package','Extended USD first tier']]]
 for row in rows:data.append([P(row['Quantity']),P(row['MPN']+' / '+row['Supplier_part']),P(row['References']),P(row['Value']+' / '+row['Footprint'].split(':')[-1]),P(row['Extended_USD_first_tier'])])
 t=Table(data,colWidths=[28,145,175,165,52],repeatRows=1)
@@ -44,7 +44,7 @@ c.circle(*xy(led_x,led_y),2*mm)
 c.rect(*xy(led_x-.75,led_y+.75),1.5*mm,1.5*mm)
 c.line(*xy(led_x-8,led_y),*xy(led_x-3.2,led_y))
 c.setFont('Helvetica',7);c.drawRightString(*xy(led_x-8.5,led_y-.5),'D10 RGB')
-c.setStrokeColor(colors.black);c.rect(*xy(17.65,8.8),12.7*mm,5*mm)
+c.setStrokeColor(colors.black);c.rect(*xy(17.45,8.8),13.1*mm,5*mm)
 c.setFont('Helvetica',7);c.drawCentredString(*xy(24,7),'J8')
 for ref in ('H1','H2'):
  f=fps[ref];x,y=f['x_mm'],-f['y_mm'];c.circle(*xy(x,y),1.6*mm);c.setFont('Helvetica',7);c.drawString(*xy(1.5,9) if ref=='H1' else xy(x+4,y),ref)
@@ -61,13 +61,13 @@ lines=['PCB: 52 x 74 x 1.6 mm. Four layers, nominal 1 oz copper.',
  f'D10: center ({led_x:g}, {led_y:g}), height 0.65; 6 mm circular area reserved.',
  'Printed duct starting size: outside diameter <=6; inside diameter 4.',
  'Duct lower face: 0.85-1.15 above PCB; no contact with LED or screw boss.',
- 'J8 header: 8.5 above PCB; tails about 1.4 below bottom; allow cable access.',
+ 'J8 female socket: 8.5 above PCB; tails about 1.6 below bottom; allow cable access.',
  'Housing geometry is nominal CAD. Physical and optical fit untested.',
  'Origin: top-left PCB corner. X right; Y down in this drawing.']
 for i,s in enumerate(lines):c.setFont('Helvetica',9);c.drawString(40,400-i*17,s)
 c.showPage();heading('Service header and voltage jumpers','Component-side view / enlarged, not 1:1 / no stencil paste on these contacts')
 ox,oy=95,640;scale=18
-f=fps['J8'];c.setFont('Helvetica-Bold',11);c.drawString(40,730,'J8: 2x5 / 2.54 mm header; custom electrical mapping')
+f=fps['J8'];c.setFont('Helvetica-Bold',11);c.drawString(40,730,'J8: recessed 2x5 / 2.54 mm socket; custom mapping')
 for p in f['pads']:
  if not p['number']:continue
  x=65+(p['x_mm']-18.92)*scale;y=665-(-p['y_mm']-5.03)*scale

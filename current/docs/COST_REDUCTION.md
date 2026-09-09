@@ -1,34 +1,36 @@
 # Rev H cost and assembly basis
 
-Rev H adds the RGB indicator and inexpensive header programming to Rev G. Parts purchasing rises by approximately **$0.13 per board at ten boards**, from $28.81 to **$28.94**. The 12 V output eFuse, controlled startup, rail measurement and removable power jumpers remain unchanged. The resulting parts budget remains about **$6.19 below Rev E**.
+Rev H adds the RGB indicator and inexpensive header programming to Rev G. Parts purchasing rises by approximately **$0.18 per board at ten boards**, from $28.81 to **$28.99**. The 12 V output eFuse, controlled startup, rail measurement and removable power jumpers remain unchanged. The resulting parts budget remains about **$6.15 below Rev E**.
 
 | Ten-board parts purchasing | Per board |
 |---|---:|
 | Rev E | $35.14 |
 | Rev F | $27.17 |
 | Rev G | $28.81 |
-| Rev H | $28.94 |
+| Rev H | $28.99 |
 
-The RGB LED and logic buffer cost about $0.20 together at the ten-board tier. Local bypass capacitors, a reset pulldown, series resistor and the hand-fitted J8 header complete the change. Removing the former green LED and sharing existing passive purchase packs offsets part of the added cost. See the exact circuit and procurement regression below; consumed-part prices and minimum-pack cash costs differ.
+The RGB LED and logic buffer cost about $0.20 together at the ten-board tier. Local bypass capacitors, a reset pulldown, series resistor and the hand-fitted J8 female socket complete the change. Removing the former green LED and sharing existing passive purchase packs offsets part of the added cost. See the exact circuit and procurement regression below; consumed-part prices and minimum-pack cash costs differ.
 
 | Boards | Parts purchasing per board | Lot parts purchasing |
 |---|---:|---:|
-| 1 | $55.28 | $55.28 |
-| 5 | $33.21 | $166.03 |
-| 10 | $28.94 | $289.45 |
-| 25 | $26.54 | $663.42 |
+| 1 | $55.14 | $55.14 |
+| 5 | $33.18 | $165.89 |
+| 10 | $28.99 | $289.89 |
+| 25 | $26.57 | $664.16 |
 
-Supplier observations are dated September 8–9, 2026. Prices include minimum packs, six terminals, three voltage headers, one service header and three loose caps. PCB fabrication, assembly, attrition, programming, functional testing, freight, tax and duty are extra. At quantity one, consumed parts are $36.11; minimum purchase quantities raise the cash outlay to $55.28. These are estimates, not an allocated cart or factory quote.
+Supplier observations are dated September 8–9, 2026. Prices include minimum packs, six terminals, three voltage headers, one service header and three loose caps. PCB fabrication, assembly, attrition, programming, functional testing, freight, tax and duty are extra. At quantity one, consumed parts are $36.15; minimum purchase quantities raise the cash outlay to $55.14. These are estimates, not an allocated cart or factory quote.
 
 [Cost CSV](../bom/cost_estimate.csv) · [per-MPN purchases](../bom/cost_detail.csv) · [supplier observations](../bom/catalog_china.json) · [revision comparison](../reports/variant_verification.json).
+
+The female socket adds $0.044 per board at ten compared with the previous male header. Layout and silkscreen add no fitted parts, board area or second-side assembly.
 
 ## Assembly and programming choices
 
 There are **130 top-side SMT placements across 55 exact MPN types** and **ten hand-soldered through-hole parts (49 joints)**. Hand fit J1–J6, J8 and JP101/JP201/JP301. The output eFuse's exposed-pad paste pattern and thermal vias remain required.
 
-Compared with G, the two additional SMT types add approximately $3.06 per Standard assembly order in feeder fees, or $0.31 per board at ten, before placement/inspection changes. If both are charged extended types under Economic assembly, the increment is approximately $0.61 per board. Exact eligibility and charges require a quote. The per-board $0.13 parts increment is therefore not a complete assembled-price increment. [JLCPCB fee basis, checked 2026-09-09](https://jlcpcb.com/help/article/pcb-assembly-price).
+Compared with G, the two additional SMT types add approximately $3.06 per Standard assembly order in feeder fees, or $0.31 per board at ten, before placement/inspection changes. If both are charged extended types under Economic assembly, the increment is approximately $0.61 per board. Exact eligibility and charges require a quote. The per-board $0.18 parts increment is therefore not a complete assembled-price increment. [JLCPCB fee basis, checked 2026-09-09](https://jlcpcb.com/help/article/pcb-assembly-price).
 
-The ordinary service header avoids buying a dedicated pogo cable. Reuse one programmer and mapped harness for all boards; an existing suitable ST-Link can avoid buying a new probe. [Programming options and one-time tool cost](STATUS_AND_PROGRAMMING.md).
+The recessed service socket avoids buying a dedicated pogo cable. Reuse one programmer and mapped harness for all boards; an existing suitable ST-Link can avoid buying a new probe. [Programming options and one-time tool cost](STATUS_AND_PROGRAMMING.md).
 
 ## What double-sided assembly might change
 

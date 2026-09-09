@@ -1,6 +1,8 @@
 # Rev H pre-fabrication review
 
-Rev H retains Rev G's power-path repairs and adds RGB diagnostics plus an ordinary service header. The LED/header checks pass; the additional full power-transient rerun was stopped before completion and is not reported as a Rev H pass. No physical board has been tested; the package is a prototype design with reproducible engineering evidence.
+Rev H retains Rev G's power-path repairs and adds RGB diagnostics plus a recessed female service socket. The LED/header checks pass; the additional full power-transient rerun was stopped before completion and is not reported as a Rev H pass. No physical board has been tested; the package is a prototype design with reproducible engineering evidence.
+
+The latest clearance, socket and silkscreen edit receives CAD, pinout and manufacturing cross-checks only. Final simulations are deferred until the design is finalized, as requested. Sensor-rail distribution was rerouted for the moved jumpers; the retained DC report is from the preceding layout and is not presented as a fresh pass.
 
 The power-stage simulation findings below refer to the completed Rev G baseline. Current H evidence separately covers the added RGB load allowance, native geometry, pin mapping and firmware.
 
@@ -34,4 +36,4 @@ Qualify startup, both rails loaded together, the exact sensor models and cables,
 
 Primary pin/application references: [STM32F042](https://www.st.com/resource/en/datasheet/stm32f042t6.pdf), [TPS2596](https://www.ti.com/lit/ds/symlink/tps2596.pdf), [TPS61085](https://www.ti.com/lit/ds/symlink/tps61085.pdf), [TPS2553](https://www.ti.com/lit/ds/symlink/tps2553.pdf), [TCAN3413](https://www.ti.com/lit/ds/symlink/tcan3413.pdf), [LM339LV](https://www.ti.com/lit/ds/symlink/lm339lv.pdf).
 
-The RGB load is included in the increased 0.15 A internal logic/indicator reserve. Check D10 colors, timer waveform and reset/handoff behavior on the first physical board. The ordinary J8 header needs five mapped SWD leads; see [status and programming](STATUS_AND_PROGRAMMING.md).
+The RGB load is included in the increased 0.15 A internal logic/indicator reserve. Check D10 colors, timer waveform and reset/handoff behavior on the first physical board. The recessed J8 socket needs five male-ended mapped SWD leads; see [status and programming](STATUS_AND_PROGRAMMING.md).

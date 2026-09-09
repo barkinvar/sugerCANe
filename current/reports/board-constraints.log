@@ -101,7 +101,7 @@
     }
   },
   "inner_service_and_monitor_routes": {
-    "+3V3": 9.252386360737624,
+    "+3V3": 13.910838738653233,
     "ADC_5V": 6.1305086527633215,
     "BIAS_DOWN1": 38.39132602052242,
     "BIAS_DOWN2": 36.8552561210872,
@@ -113,9 +113,9 @@
   },
   "power_net_geometry": {
     "SENSOR_12V": {
-      "total_track_length_mm": 133.46932384580623,
+      "total_track_length_mm": 161.0264701611949,
       "minimum_width_mm": 0.5,
-      "via_count": 5
+      "via_count": 9
     },
     "BOOST_12V": {
       "total_track_length_mm": 58.54876319683286,
@@ -128,12 +128,12 @@
       "via_count": 14
     },
     "VIN_RAW": {
-      "total_track_length_mm": 19.627201854158205,
+      "total_track_length_mm": 19.127201854158205,
       "minimum_width_mm": 0.5,
       "via_count": 1
     },
     "VIN_FUSED": {
-      "total_track_length_mm": 19.96927777466002,
+      "total_track_length_mm": 19.46927777466002,
       "minimum_width_mm": 0.5,
       "via_count": 2
     },
@@ -143,27 +143,40 @@
       "via_count": 7
     },
     "SENSOR_5V": {
-      "total_track_length_mm": 110.64883873223847,
+      "total_track_length_mm": 115.0503299021301,
       "minimum_width_mm": 0.35,
-      "via_count": 8
+      "via_count": 10
     },
     "VPORT1": {
-      "total_track_length_mm": 10.707106781186548,
+      "total_track_length_mm": 11.807106781186548,
       "minimum_width_mm": 0.5,
       "via_count": 0
     },
     "VPORT2": {
-      "total_track_length_mm": 12.208806781186547,
+      "total_track_length_mm": 13.308806781186547,
       "minimum_width_mm": 0.5,
       "via_count": 0
     },
     "VPORT3": {
-      "total_track_length_mm": 10.707106781186546,
+      "total_track_length_mm": 11.807106781186548,
       "minimum_width_mm": 0.5,
       "via_count": 0
     }
   },
   "limitations": "Track geometry inventory is not a thermal, impedance or trace-drop qualification. VIN_PROT includes narrow low-current enable branches; 3D and programming checks are nominal geometry, not physical fit.",
+  "improved_edge_clearances_mm": {
+    "R101": 2.200000000000003,
+    "R103": 2.049999999999997,
+    "R203": 2.049999999999997,
+    "F1": 2.065,
+    "D102": 2.1,
+    "R22": 2.075,
+    "R109": 2.025,
+    "R104": 1.980000000000004,
+    "R30": 1.7,
+    "R31": 1.7
+  },
+  "edge_scope": "Pad bounding boxes to finished edges. R1/R2 retain original 1.30 mm edge clearance and local buck feedback routing. Terminals/test pads/termination bridge have intentional exceptions.",
   "efuse_assembly": {
     "exposed_pad_mm": [
       2.4,
@@ -201,14 +214,14 @@
   },
   "status_routes": {
     "STATUS_5V_DATA": {
-      "track_length_mm": 10.396931594811814,
+      "track_length_mm": 16.097234548888007,
       "vias": 0,
       "layers": [
         "F.Cu"
       ]
     },
     "STATUS_DIN": {
-      "track_length_mm": 54.27441113989373,
+      "track_length_mm": 53.73819260369925,
       "vias": 2,
       "layers": [
         "F.Cu",

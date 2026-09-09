@@ -309,7 +309,7 @@ for i,ref in enumerate(['C20','C21','C22','C23','C24']):
     c=gp(p,ref,14+i*14,68,270);caps.append(c);p.label('GND',c['2'])
 nodes=[(c['1'][0],63*2.54) for c in caps];path(p,*nodes);p.label('+3V3',nodes[0])
 for c,node in zip(caps,nodes):p.wire(node,c['1']);p.junction(node)
-p.text('J8: hand-solder 2x5 2.54 mm header; CUSTOM electrical pinout.\nPin 6 is 3.3 V reference OUTPUT, never a programming power input.\nPB0/PB1 read sensor-rail ADCs; PA15 enables 5 V and PB7 high enables 12 V.\nPA3/PA4 monitor active-low fault flags. PB5/PB6/PB4 are input pull-down controls.',20,220,1.5)
+p.text('J8: hand-solder recessed female 2x5 2.54 mm socket; CUSTOM electrical pinout.\nPin 6 is 3.3 V reference OUTPUT, never a programming power input.\nPB0/PB1 read sensor-rail ADCs; PA15 enables 5 V and PB7 high enables 12 V.\nPA3/PA4 monitor active-low fault flags. PB5/PB6/PB4 are input pull-down controls.',20,220,1.5)
 
 p=pages['can']
 u=gp(p,'U6',30,25)

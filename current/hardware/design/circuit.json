@@ -664,7 +664,7 @@
     "J8": {
       "ref": "J8",
       "kind": "CONN10",
-      "value": "2x5 SERVICE 2.54mm",
+      "value": "2x5 SERVICE SOCKET 2.54mm",
       "pins": {
         "1": "NRST",
         "2": "UART_RX",
@@ -679,9 +679,9 @@
       },
       "sheet": "controller",
       "footprint": "FRC_Sensor_CAN:Service_2x05_P2.54mm",
-      "mpn": "PZ254V-12-10P",
-      "note": "Hand-solder 2x5 2.54mm header. CUSTOM pinout; see wiring drawing. Pin6 is target VTref sense only, never power from probe. 1.10mm finished holes.",
-      "source_footprint": "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical"
+      "mpn": "PM254V-12-10P-H85",
+      "note": "Hand-solder recessed female 2x5 2.54mm socket. CUSTOM pinout; see wiring drawing. Pin6 is target VTref sense only, never power from probe. 1.10mm finished holes.",
+      "source_footprint": "Project socket geometry; original custom pad numbering retained"
     },
     "R30": {
       "ref": "R30",

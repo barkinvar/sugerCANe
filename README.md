@@ -4,7 +4,7 @@ A compact interface for **three NPN, PNP or logic sensors** on an FRC robot. Eac
 
 **Start with [Rev H in `current/`](current/README.md).** It is an unbuilt engineering prototype, with [physical qualification still pending](current/docs/VALIDATION.md). It uses its own protocol and drivers; it is not compatible with CTRE Phoenix or GrappleHook.
 
-Rev H adds one RGB status LED on the right, with space for a printed light duct, and an ordinary programming header for small batches. It retains G's protected sensor supplies, CAN fault reset and rail measurements. See [the engineering review](current/docs/ORDER_READINESS.md) for the evidence and remaining physical tests.
+Rev H adds one RGB status LED on the right, with space for a printed light duct, and a recessed female programming socket for small batches. It retains G's protected sensor supplies, CAN fault reset and rail measurements. See [the engineering review](current/docs/ORDER_READINESS.md) for the evidence and remaining physical tests.
 
 RGB/header checks pass. The optional full power rerun was stopped before completion; [current check scope](current/reports/release_checks.json) is explicit.
 
@@ -16,11 +16,11 @@ RGB/header checks pass. The optional full power rerun was stopped before complet
 | Sensor power | Regulated 5 V / 12 V; 300 mA shared per rail |
 | Signals | Positive 0–30 V targets; NPN / PNP / push-pull / floating detection / keeper |
 | Size and assembly | 52 × 74 mm, four copper layers; **all components on top** |
-| User assembly | Six terminals, three voltage headers, one service header and three removable caps |
-| Parts estimate | **$28.94 per board at 10 boards**; $55.28 for one board, including minimum packs |
+| User assembly | Six terminals, three voltage headers, one service socket and three removable caps |
+| Parts estimate | **$28.99 per board at 10 boards**; $55.14 for one board, including minimum packs |
 | Cost exclusions | PCB, assembly, freight, tax and testing; no factory quotation yet |
 
-RGB diagnostics and ordinary-header programming add approximately **$0.13 per board in parts at ten boards** versus G. Assembly and the reusable programmer are separate. [Cost basis](current/docs/COST_REDUCTION.md).
+RGB diagnostics and socket programming add approximately **$0.18 per board in parts at ten boards** versus G. Assembly and the reusable programmer are separate. [Cost basis](current/docs/COST_REDUCTION.md).
 
 ## Find what you need
 
@@ -67,3 +67,5 @@ archive/                 Original older release/order ZIPs and checksums
 ```
 
 Earlier expanded project copies and unused experiments were removed from the current tree. Historical packages are unchanged, and previous sources remain in Git history. [Contributing and generated-file policy](CONTRIBUTING.md).
+
+The current layout uses a recessed female debug socket, moves the vulnerable bottom/right resistors inward, and adds visible voltage-selector and input/power labels. Board size and top-side assembly are unchanged. See [connector and clearance details](current/docs/CONNECTORS.md).

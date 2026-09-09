@@ -6,8 +6,10 @@ The project LED footprint reserves a 6 mm diameter circular courtyard for a futu
 
 Source: https://datasheet.lcsc.com/datasheet/pdf/0f4b58ac8908ccf8037b2d7ca0ec1e91.pdf?productCode=C2890035
 
-`Service_2x05_P2.54mm.step` is the KiCad 10 PinHeader_2x05_P2.54mm_Vertical model, used as the nominal envelope for XFCN PZ254V-12-10P: 2.54 mm pitch, 12.70 × 5 mm insulator and 8.5 mm overall above-board height. XFCN drawing specifies 3 mm solder tails; verify actual seated projection. Existing KiCad library licensing applies. The PCB uses 1.10 mm finished holes and 1.70 mm pads for the specified 0.64 mm square pins.
+`Service_2x05_P2.54mm.step` is a project-generated nominal XFCN PM254V-12-10P-H85 female socket envelope. The drawing specifies 2.54 mm pitch, a 13.10 ±0.40 × 5.00 ±0.15 mm insulator, height 8.50 ±0.15 mm and 3.20 ±0.25 mm tails. The model's recessed openings and internal contacts are illustrative. Reproduce it with `scripts/build_service_model.py`.
 
-Source: https://datasheet.lcsc.com/datasheet/pdf/50ec9710cee52ae98bff43fbb8887c5b.pdf?productCode=C492422
+The custom PCB pad numbering is retained; it must not be replaced by a standard socket footprint with mirrored pin assignments. The 0.64 × 0.40 mm tails fit the retained 1.10 mm plated holes and 1.70 mm pads. The native courtyard encloses the stated maximum housing envelope; confirm insertion and neighboring-part clearance on the first assembly.
 
-Neither model establishes physical fit. The ordinary header deliberately replaces the old pogo pattern; its electrical mapping remains custom.
+Source: https://datasheet.lcsc.com/datasheet/pdf/c2f8cbae228e3b2f37560392ef75a391.pdf?productCode=C492399
+
+Neither model establishes physical fit. J8 has a custom electrical mapping and requires male-ended mapped programming leads.

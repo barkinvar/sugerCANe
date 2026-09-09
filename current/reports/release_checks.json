@@ -1,6 +1,6 @@
 {
   "revision": "H SC12",
-  "status": "PASS LED/header change checks; full power rerun not completed",
+  "status": "PASS CAD and manufacturing cross-checks; final simulation deferred",
   "physical_tests_performed": false,
   "erc_violations": 0,
   "drc_violations": 0,
@@ -16,39 +16,213 @@
     "firmware-arm-registers": "PASS",
     "verification": "PASS",
     "gerber_connectivity": "PASS",
-    "gerber_geometry": "PASS"
+    "gerber_geometry": "PASS",
+    "document_review": "PASS",
+    "visual_review": "Completed; unchanged GUI and converter plot retain prior review"
   },
   "firmware_application_scenarios": 19,
   "simulated_flash_boundaries": 2148,
   "input_hashes": {
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "487c5167e5a20cc0487e12735212a5d9db807777548286aa328d5896b55fd60f",
-    "hardware/design/circuit.json": "936a394edaadeba1fa9be1bbaa8231163c140c426ca1372b95e7c5a4ae846b71",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "cc465d74e312e2a41ae18ab712d0ed15a9f4efd2199a73d0e791ac7011634359",
+    "hardware/design/circuit.json": "cf9e272fb1d32b9ad6e04e69c37d37f8c2610410835bd46e6231c3692547903e",
     "firmware/build/factory.hex": "e5f242ee70dd509caa3ee7d51d91d7942c954f1f8dd5c077d57498f5932626e0",
     "firmware/build/application.sc12": "2f213ad1b656ace778778e00540f48fb830398a738cf21e6803af82b43851b39",
     "reports/firmware-images.json": "e2049c79b8064e79b5b6e999e1659dfcf8929ba11d3195a3bda3ec7681ef8c11",
     "reports/firmware-arm-registers.json": "b70874cacb67588d0e06f5b5bf11a4eea07f440b63f39964beffa89fbb76f7be",
     "reports/firmware-tests.log": "8b02bc299d1e27f24e36d32878016dfc57bf04a52d44db37195b5f9a70f6dc3c",
     "reports/design_parity.json": "d79cbd2f9a9dd988ede7c9394aad08e31f1f18c110d687679477102b4768bee5",
-    "reports/board_constraints.json": "014a2af6b557cd9fec0904744a8b60ca6d21c7f02a29124a56ec887f9734bee9",
-    "reports/variant_verification.json": "185f6e22a7388b3456e84024cab6abdfb5516b0141d06f20dd1a2a8c9d0da858",
+    "reports/board_constraints.json": "9f348e138a10e96664d3b3b57d9709c947fdd98b943fc7549ce1b66ce7f12a71",
+    "reports/variant_verification.json": "f6cf929e4d028e6b70f9ae5985139a815fd0a8e30f4ca15c92a1bc2080c0412e",
     "hardware/library/FRC_Sensor_CAN.pretty/LED_SK6805_EC15.kicad_mod": "5c3476324c7f3d50583f46e60bdd0fc7a298496ef5a910fb5958ba4290008a0b",
-    "scripts/check_board_constraints.py": "b48ed1d0bad46a8f097aedc43c5b75be42b2e55fd6b5201fa9e377ed01a5408b",
-    "reports/manufacturing/board_manifest.json": "f1a3ffdaf25afa548cdd84c6e529a8f9649744f49c658fa695b7bc0caeadf08b",
-    "reports/manufacturing/factory_files.json": "86a8dd011b67ae49de08a8ca426aee14b5c18915d6676aac1b05d930552c1251",
-    "reports/manufacturing/gerber_connectivity.json": "79d1b94087a5d65ddf1284d051f56173297e8d8e328c0d862efbb938145cbba3",
-    "reports/manufacturing/gerber_geometry.json": "d84a38ad38219bdeb8c15e381965d3e700845f1cb8794782a6960e5d4909e004",
-    "reports/electrical/order_readiness.json": "b3e8010af4767748899e95b1a2cd52bd9ce4d31ae7a9fbfa1e3520f0ae99e4d2"
+    "scripts/check_board_constraints.py": "f10f98f69c268c7e01fe47e2b34325b01926cdd964af31a8189d0e82966c29cd",
+    "reports/manufacturing/board_manifest.json": "187c5ebb9cde61d3857181a32dfa777ed26330195f09ab4af0060c81e840c1e6",
+    "reports/manufacturing/factory_files.json": "ad861aa2de7510f673ad00695abcdc6ceda3f446e0cb095eb2ae6406c69d77af",
+    "reports/manufacturing/gerber_connectivity.json": "065db784193e0bf0135e6786e6761e7752049ea3a4b3a0c976704a385d6479e6",
+    "reports/manufacturing/gerber_geometry.json": "d6a5f9cf58177c7d41de430e39a885d4b16cac8f0e1e49c04001928bc2455793",
+    "reports/electrical/order_readiness.json": "a5cbf545b4018ac84a8fd6e0c4e089691268bce0018ba45f34cc4b77ab6b62be",
+    "hardware/controller.kicad_sch": "5e5b71d876902f94f22bf7c31ed5fa0d2f4bf344f7072afd3f5b089ff3a67f86",
+    "hardware/library/FRC_Sensor_CAN.pretty/Service_2x05_P2.54mm.kicad_mod": "8f9b2a6def02861845a5cfcaaf09170c252789fae2cfcecbcd004680dd53c32c",
+    "hardware/library/3d/Service_2x05_P2.54mm.step": "898d214b48f311c3dddac55abcf3a4928149378ea2bf7310c9e1f10bed48b20c",
+    "scripts/build_service_model.py": "91caa486dc629be867eb7af8a27ba4458ad461b12375f29dbe4d26767e030a3a",
+    "scripts/finish_markings.py": "98ea69e4ba28438d4b0ecb5466dd0c6673f798864d93dee0b7705aa22b761205",
+    "reports/erc/final.json": "68b9c9b5adec6e6875370a90631e6c2fcb181f1d756b39a260ee3a10784dc29a",
+    "reports/drc/final.json": "43d30f8ad55eb16f30e4d4b6b391dbee15adce8c7b2f6afe2a0953d356846547",
+    "reports/manufacturing/verification.json": "f56853717b8349034e22a98538224bd4f5d5276e48e3677d5089fb595b42224a",
+    "reports/document_review.json": "6e3a2fd206d1ab44dc232dc9af7d54b5ec8c98828878c829f5aa0ff9a440ad39",
+    "reports/visual_review.json": "1baba88d2af2b40258f5d9fcd17a6289b4d3c89e8ba111b82804f0c0745732eb"
   },
   "spice_result": "INCOMPLETE: coupled startup runs canceled; eight other cases passed",
-  "scope": "ARGB/header implementation and right-side LED relocation review, not a full power release or physical qualification.",
+  "scope": "Edge-clearance, recessed programming socket and wiring-label CAD/export review. Simulation deferred by user until design finalization; no full power release or physical qualification.",
   "layout_change": {
     "result": "PASS",
-    "baseline_commit": "feb3093331eb88aa146d6b979a4fdc6cb0f48250",
+    "baseline_commit": "f4de467fd256327cd4beca55338915f698db33fc",
     "moved_components": {
-      "D10": {
+      "Q201": {
         "before": {
           "xy_mm": [
-            26.0,
+            20.0,
+            57.45
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            20.0,
+            57.15
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        }
+      },
+      "F1": {
+        "before": {
+          "xy_mm": [
+            5.0,
+            13.5
+          ],
+          "rotation_deg": 0.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            5.5,
+            13.5
+          ],
+          "rotation_deg": 0.0,
+          "side": 0
+        }
+      },
+      "D102": {
+        "before": {
+          "xy_mm": [
+            4.0,
+            54.0
+          ],
+          "rotation_deg": 180.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            4.2,
+            54.0
+          ],
+          "rotation_deg": 180.0,
+          "side": 0
+        }
+      },
+      "R22": {
+        "before": {
+          "xy_mm": [
+            32.0,
+            3.0
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            32.0,
+            3.5
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        }
+      },
+      "R103": {
+        "before": {
+          "xy_mm": [
+            50.5,
+            60.5
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            49.25,
+            69.0
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        }
+      },
+      "Q301": {
+        "before": {
+          "xy_mm": [
+            36.0,
+            57.45
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            36.0,
+            57.15
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        }
+      },
+      "JP301": {
+        "before": {
+          "xy_mm": [
+            37.0,
+            61.5
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            37.0,
+            60.4
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        }
+      },
+      "R109": {
+        "before": {
+          "xy_mm": [
+            2.5,
+            63.5
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            2.9,
+            65.15
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        }
+      },
+      "R30": {
+        "before": {
+          "xy_mm": [
+            16.399999,
+            7.5
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            20.8,
+            2.4
+          ],
+          "rotation_deg": 0.0,
+          "side": 0
+        }
+      },
+      "R31": {
+        "before": {
+          "xy_mm": [
+            22.7,
             2.0
           ],
           "rotation_deg": 0.0,
@@ -56,44 +230,156 @@
         },
         "after": {
           "xy_mm": [
-            48.0,
-            39.5
+            26.0,
+            2.4
           ],
-          "rotation_deg": 180.0,
+          "rotation_deg": 0.0,
           "side": 0
         }
       },
-      "C75": {
+      "JP101": {
         "before": {
           "xy_mm": [
-            29.3,
-            1.75
+            5.0,
+            61.5
           ],
           "rotation_deg": 90.0,
           "side": 0
         },
         "after": {
           "xy_mm": [
-            48.475,
-            35.3
+            5.0,
+            60.4
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        }
+      },
+      "JP201": {
+        "before": {
+          "xy_mm": [
+            21.0,
+            61.5
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            21.0,
+            60.4
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        }
+      },
+      "R203": {
+        "before": {
+          "xy_mm": [
+            50.5,
+            51.5
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            49.25,
+            64.5
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        }
+      },
+      "R101": {
+        "before": {
+          "xy_mm": [
+            19.0,
+            72.0
+          ],
+          "rotation_deg": -90.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            18.0,
+            71.1
+          ],
+          "rotation_deg": 0.0,
+          "side": 0
+        }
+      },
+      "Q101": {
+        "before": {
+          "xy_mm": [
+            4.0,
+            57.45
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            4.0,
+            57.15
+          ],
+          "rotation_deg": 90.0,
+          "side": 0
+        }
+      },
+      "R104": {
+        "before": {
+          "xy_mm": [
+            34.0,
+            71.5
+          ],
+          "rotation_deg": 0.0,
+          "side": 0
+        },
+        "after": {
+          "xy_mm": [
+            34.0,
+            71.32
           ],
           "rotation_deg": 0.0,
           "side": 0
         }
       }
     },
-    "unaffected_non_indicator_tracks_and_vias": 5375,
-    "unchanged_circuit_and_firmware": true,
-    "scope": "D10/C75 relocation, circular duct courtyard/silkscreen, LED data/supply/ground routing and zone refill only. Physical optics untested.",
+    "unchanged_tracks_and_vias": 6539,
+    "unchanged_critical_nets": [
+      "BOOST_12V",
+      "BOOST_COMP",
+      "BOOST_COMP_RC",
+      "BOOST_FB",
+      "BOOST_SW",
+      "BUCK_CB",
+      "BUCK_FB",
+      "BUCK_SW",
+      "CANH",
+      "CANL",
+      "HSE_IN",
+      "HSE_OUT",
+      "HSE_XTAL_OUT",
+      "V5_INTERNAL",
+      "VIN_PROT"
+    ],
+    "retained_copper_net_identity": true,
+    "unchanged_electrical_connections": true,
+    "unchanged_firmware": true,
+    "scope": "Component edge clearances, recessed female service socket and visible wiring legends. Sensor-rail distribution and affected low-speed routes updated; switching/feedback/clock/CAN trunk copper retained. Physical qualification remains pending.",
     "checks": [
       "Native ERC/DRC: zero violations and zero unconnected items",
-      "Model/schematic/PCB parity and circuit regression",
-      "Circular duct courtyard and local LED bypass path",
+      "Model/schematic/PCB parity and electrical-connection regression",
+      "Recessed socket footprint/pinout and component edge clearances",
+      "Retained critical power/clock/CAN copper and retained net identity",
       "SMT placement/BOM/export parity",
       "Independent four-layer Gerber connectivity and manufacturing geometry",
-      "Updated native-copper DC power distribution",
-      "Updated drawings, renders and documentation review"
-    ],
-    "firmware_evidence": "Previous passing firmware tests retained; source and programming images unchanged by this placement-only change."
-  }
+      "Updated drawings, renders and documentation visual review"
+    ]
+  },
+  "reviewed_utc": "2026-09-09T20:21:24.753584+00:00",
+  "simulation_deferred_by_user": true,
+  "power_distribution_valid_for_current_layout": false,
+  "firmware_evidence": "Previous passing firmware tests retained; sources and programming images unchanged. No firmware tests rerun for this CAD change."
 }

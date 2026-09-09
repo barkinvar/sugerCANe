@@ -1,68 +1,82 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-09T19:59:05.532967+00:00",
+  "reviewed_utc": "2026-09-09T20:21:24.753584+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
       "file": "output/review/board_3d_final.png",
-      "sha256": "adf3a5ee71409e709122b8a2ffb86506bdf2dada41b28ca161c96bce0245c88f",
-      "scope": "Oblique CAD: top-only 52x74 board, right-side RGB LED inside marked circle above H2, nearby C75 and retained header/terminal access. Nominal package envelopes only."
+      "sha256": "5c3fdb32fd203f8fdcca3d9419e2b06aee9ce52ddb4c6f94274ec5b1b4d01fbe",
+      "scope": "Oblique CAD: recessed female J8 body, inward component placement, visible selector/input legends and retained right-side RGB circle. Nominal package envelopes only.",
+      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
     },
     {
       "file": "output/review/board_top.png",
-      "sha256": "fc2bd7a262b82d1839578f8323c7957606398dc9c6fe45b46757b7f629bf167c",
-      "scope": "Top CAD: D10 at (48,39.5), 6 mm circular courtyard reserved for printed duct, RGB silkscreen circle, C75 above duct space and H2 below. Other component positions retained."
+      "sha256": "5e5b68e058b362253c47c7642e9bf309aafd5f39ef65c083f38f2cd493f8c929",
+      "scope": "Top CAD and enlarged selector row: socket cavities, pin-one marker, 5V/12V and V1/V2/V3/GND/IN1/IN2/IN3 labels outside connector bodies; right-side D10 duct area retained. Some header shadows darken lettering in the render.",
+      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "ad51e433c9385054fbfb17aeaa5054b286dfb15c292288e45a301277e0a59b9c",
-      "scope": "Bottom CAD: Rev H identification, service-header pin-one marking, voltage/current and fault-reset legends, solder tails and absence of bottom components."
+      "sha256": "7ebfffed1c1bbd77f5ab22a7e0beeb5ccf8764149f47d29a356bfd41b0050d88",
+      "scope": "Bottom CAD: power/CAN/input labels, separated TERM legend, full custom debug pin map, reference-only 3V3 warning, selector orientation and power-off instruction. No bottom components.",
+      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
     },
     {
       "file": "output/review/board_connectors.png",
-      "sha256": "841958a1b6e81455eb21149354e29bc4b0a309aa9ff4cc22a010af32fb30c121",
-      "scope": "Wire-entry CAD view: outward-facing terminal entries, removable voltage-cap access and taller ordinary service header; no physical fit or retention claim."
+      "sha256": "0135a532de595a3d56fd6f815e927412c9c0e21fc7f75c18777a34f1c9cb4bf8",
+      "scope": "Wire-entry CAD view: outward-facing terminals, recessed J8 contacts and unchanged nominal 8.5 mm maximum component height; physical cable fit and retention untested.",
+      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
     },
     {
       "file": "output/review/service_gui.png",
       "sha256": "e4cf0a7e3011c206410cccc592cd689df534eb19928cbc9ddcd41c88576e381d",
-      "scope": "Simulated app0.9.0: three independent input modes and active levels, identify and Reset power fault controls; no physical CAN connection."
+      "scope": "Simulated app0.9.0: three independent input modes and active levels, identify and Reset power fault controls; no physical CAN connection.",
+      "reviewed_utc": "2026-09-09T19:59:05.532967+00:00",
+      "evidence": "Unchanged artifact; previous visual review retained, not repeated for this layout change."
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "f4ffaaa31fa48317ac4fbf3e013df21952df88ea131f8f20e52cec4061d591a8",
-      "scope": "All 37 pages inspected as rendered contact sheets; revised enclosure page 13 enlarged. Current board render, LED coordinates, duct diameter and air gap, status legend and programmer map checked; no clipping or overlapping rows observed."
+      "sha256": "f869bf5a3046dc823fbdaa5a7f468b5a85815cee146f884c762594a24a9141ed",
+      "scope": "All 38 pages inspected as rendered contact sheets; final revised pages 7 and 15 inspected enlarged. Socket mapping, enclosure dimensions, wiring labels, clearance exceptions, cost and deferred-simulation scope checked. No text clipping or overlapping rows observed.",
+      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
-      "sha256": "34236150c6c7a32e52731a226b01fe8498cc9f7010b3ffa8e26efbf3b98992db",
-      "scope": "All three pages inspected: current references, exact MPNs and quantities; 140 fitted parts, 130 SMT and ten hand-fitted parts; $28.94 ten-board parts purchasing estimate."
+      "sha256": "43b2071871db018008e82c7a44e81212f0fbf85f6df44e4a3bac88739fa1fead",
+      "scope": "All three pages inspected: recessed female J8 MPN and cost; 140 fitted parts, 130 SMT and ten hand-fitted parts; $28.99 ten-board parts purchasing estimate.",
+      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
-      "sha256": "ee7f51227f4b759d6b9492766e4b75170ae4bd428cd49f6967bf306d9f7fc823",
-      "scope": "Both pages inspected: 52x74 outline, H1/H2, D10 at (48,39.5), 6 mm duct envelope, 4 mm bore and lower-face height; retained ten-pin service map and physical voltage selectors."
+      "sha256": "953907ac32f2f81ef3acf98b69775d6b51b0096c74f9dfa0b8f036ff98c68797",
+      "scope": "Both pages inspected: 52x74 outline, retained right-side LED/duct geometry, J8 nominal 13.1x5 mm body and 8.5 mm height, approximately 1.6 mm underside tail extension; ten-pin map and moved voltage headers.",
+      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
     },
     {
       "file": "output/assembly/schematic.pdf",
-      "sha256": "6a66f27621231524cb3644f63d2370ceb5ba5fb6e6cbe399db2913b319f1f15d",
-      "scope": "All ten re-exported pages inspected. Native schematic and circuit are unchanged by LED/C75 relocation; retained Rev H pinout, power, CAN and input circuits."
+      "sha256": "b873ba7a90cf6c8bbee90dea781d9c88c30f10d68b8bc5f2d8b423e201bcb072",
+      "scope": "All ten re-exported pages inspected for layout. J8 metadata/note now specifies a recessed female socket; circuit and electrical pin mapping unchanged, independently checked by parity and regression.",
+      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
     },
     {
       "file": "output/assembly/top_assembly.pdf",
-      "sha256": "7b9c20d1550d0ca031e71b235a57293e2ea8b7fdd71645d11a24931b342915c2",
-      "scope": "Refreshed assembly map inspected: D10 moved to the right inside RGB circle, C75 above it, existing header/terminal rows and outline retained."
+      "sha256": "30f84452e4232cd76eeca7fb628981da874e8f45834b3cbcfbf341c6a4121bec",
+      "scope": "Assembly map inspected: inward resistor placement, moved voltage headers, recessed service socket and retained LED circle.",
+      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "sha256": "ccc71e1f4f50e17e387629cfcb823f52886b8cacd1f5a503191e708827be583d",
-      "scope": "Both re-exported outer copper views inspected with updated drills and LED placement; lower view mirrored for underside. Four-layer connectivity independently passed."
+      "sha256": "61c4d07119e4d5622e4834fc353680d63e4abee578023a7181de6c2f4785d0c2",
+      "scope": "Both outer-copper views inspected with updated routing and drills; bottom view mirrored for underside. Four-layer connectivity independently passed.",
+      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
     },
     {
       "file": "reports/electrical/converter_loop.png",
       "sha256": "7795275a91cd9821e5ece2957a948549299dc94b29e0a7abc14d64fa0f897a28",
-      "scope": "Rev H caption, nominal averaged-loop gain/phase curves and explicit analytical-model limitation inspected; 768-corner results retained in JSON."
+      "scope": "Rev H caption, nominal averaged-loop gain/phase curves and explicit analytical-model limitation inspected; 768-corner results retained in JSON.",
+      "reviewed_utc": "2026-09-09T19:59:05.532967+00:00",
+      "evidence": "Unchanged artifact; previous visual review retained, not repeated for this layout change."
     }
   ],
-  "limitations": "Nominal CAD/PDF/GUI inspection only. Full Rev H transient rerun incomplete; no physical board, optical or assembly-yield testing."
+  "limitations": "Nominal CAD/PDF inspection only. Simulations deferred by user until the final design; current sensor-distribution routing has no fresh DC/transient result. No physical board, optical, vibration or assembly-yield testing."
 }

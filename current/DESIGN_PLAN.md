@@ -40,4 +40,4 @@ Rev H design envelope: at most 100 µF total external capacitance on the shared 
 
 ## RGB diagnostics and low-volume programming
 
-H replaces the single green LED with one SK6805-EC15, a 5 V AHCT buffer, data pulldown, series resistor and local bypass capacitors. PB3 remains the status pin and uses timer/DMA serialization. J8 becomes a hand-fitted 2×5 2.54 mm header with the same electrical pin numbers and a new odd/even physical pattern. [Status, case opening and inexpensive programmer](docs/STATUS_AND_PROGRAMMING.md).
+H replaces the single green LED with one SK6805-EC15, a 5 V AHCT buffer, data pulldown, series resistor and local bypass capacitors. PB3 remains the status pin and uses timer/DMA serialization. J8 is a hand-fitted recessed female 2×5 2.54 mm socket with the same electrical pin numbers and odd/even physical pattern as the preceding Rev H header. [Status, case opening and inexpensive programmer](docs/STATUS_AND_PROGRAMMING.md).

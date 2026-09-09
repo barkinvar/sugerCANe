@@ -15,7 +15,7 @@ Top terminals face outward at the power/CAN edge; three sensor terminals face ou
 
 ## Rev H voltage headers
 
-JP101/JP201/JP301 use [Harwin M22-2010305](https://www.harwin.com/products/M22-2010305): 2 mm pitch, 0.50 mm square pins, 6 × 2 mm body, nominal 5 mm height above the PCB and 3.4 mm tails. The project's 2 mm header footprint uses 0.85 mm drills in 1.35 mm pads, retaining a 0.25 mm nominal copper annulus, and a 0.25 mm nominal body courtyard margin. Pads 1–3 run left-to-right at Y=61.5 mm; pin-1 positions are X=5, 21 and 37 mm.
+JP101/JP201/JP301 use [Harwin M22-2010305](https://www.harwin.com/products/M22-2010305): 2 mm pitch, 0.50 mm square pins, 6 × 2 mm body, nominal 5 mm height above the PCB and 3.4 mm tails. The project's 2 mm header footprint uses 0.85 mm drills in 1.35 mm pads, retaining a 0.25 mm nominal copper annulus, and a 0.25 mm nominal body courtyard margin. Pads 1–3 run left-to-right at Y=60.4 mm; pin-1 positions are X=5, 21 and 37 mm.
 
 The [Harwin drawing](https://content.harwin.com/asset/8870086f-d3e9-4bcd-99da-e6fb77550f38/DRG-00483-Technical-Drawing-Datasheet-M22-201-pdf.pdf) recommends 0.80 ±0.05 mm holes. The retained footprint adds 0.05 mm nominal diameter for hand assembly: with [JLCPCB's normal −0.08/+0.13 mm hole tolerance](https://jlcpcb.com/capabilities/pcb-capabilities), the minimum becomes 0.77 mm, above Harwin's 0.75 mm minimum. This trades a slightly larger solder gap for insertion clearance; verify finished holes and solder fill on the first article.
 
@@ -23,4 +23,12 @@ The [Sullins SPN02SVEN-RC drawing](https://www.sullinscorp.com/drawings/273_SVEN
 
 The generic local header STEP represents the nominal pin/body geometry, not manufacturer-qualified tolerances. Vendor connector hashes continue to cover the unchanged six terminal models. See [wiring](WIRING.md) for one-cap-per-header configuration and vibration retention qualification.
 
-J8 is a hand-fitted XFCN PZ254V-12-10P, 2×5 at 2.54 mm pitch, with 1.10 mm plated holes and 1.70 mm pads. The matching nominal model and the full custom pin map are in [status and programming](STATUS_AND_PROGRAMMING.md) and [wiring](WIRING.md).
+J8 is a hand-fitted XFCN PM254V-12-10P-H85 recessed female socket, 2×5 at 2.54 mm pitch, with 1.10 mm plated holes and 1.70 mm pads. The matching nominal model and the full custom pin map are in [status and programming](STATUS_AND_PROGRAMMING.md) and [wiring](WIRING.md).
+
+## Edge clearance and visible markings
+
+The bottom resistor R101 now lies horizontally between the first two sensor terminals: its closest pad is 2.20 mm from the board edge, previously 0.575 mm. R103 and R203 moved into the gap beside the third terminal, with 2.05 mm pad-to-edge clearance, previously 0.80 mm. F1, D102, R22 and R109 also moved inward. R104 has 1.98 mm clearance; the two small parts above J8 have 1.70 mm. The compact buck feedback pair R1/R2 retains its original 1.30 mm pad clearance and quiet local routing. These distances are to copper pads, not component bodies.
+
+The board remains 52 × 74 mm, with all components on top. Keep an insulating enclosure around the board and underside solder tails. The recessed debug contacts reduce accidental bridging from above; the socket is unkeyed and is not sealed against metal debris. Remove the programming cable for robot use.
+
+The power headers moved 1.1 mm toward the center to expose their voltage labels. The specified [Sullins SPN02SVEN-RC cap](https://s3.amazonaws.com/catalogspreads-pdf/PAGE127%202mm%20JUMPER.pdf) has a nominal 4 × 2 mm footprint; both fitted positions leave the labels below it exposed. Front legends identify VIN, CAN H/L, termination, DEBUG, each 5V/12V selection, and V1/V2/V3, GND and IN1/IN2/IN3 at the sensor terminals. The back repeats the full connection and custom debug map. Select voltages with power off; fit one cap per header.
