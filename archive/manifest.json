@@ -186,6 +186,69 @@
       "path": "rev_e/release/FRC_Sensor_CAN_RevE_SC12_Prototype.zip.sha256",
       "sha256": "6f35d28a75ed4167ab8613efa864f7195e0c80f4751ce1a8753eda56a94b4def",
       "bytes": 105
+    },
+    {
+      "original_path": "current/order/RevF_SC12_Factory_Upload.zip",
+      "path": "rev_f/order/RevF_SC12_Factory_Upload.zip",
+      "source_commit": "ebdd1b1681c73dcc166af08f16474a8b3da037c5",
+      "sha256": "687d526baa5ca1040c230e0d2a9a8a4d7136c4a3739c5651837c253077ffeaef",
+      "bytes": 3375028
+    },
+    {
+      "original_path": "current/order/RevF_SC12_Factory_Upload.zip.sha256",
+      "path": "rev_f/order/RevF_SC12_Factory_Upload.zip.sha256",
+      "source_commit": "ebdd1b1681c73dcc166af08f16474a8b3da037c5",
+      "sha256": "2c541a879ded879e4691f856b4aeaaf4a1931b5554743c568783e9823bfd5748",
+      "bytes": 95
+    },
+    {
+      "original_path": "current/order/RevF_SC12_Gerbers.zip",
+      "path": "rev_f/order/RevF_SC12_Gerbers.zip",
+      "source_commit": "ebdd1b1681c73dcc166af08f16474a8b3da037c5",
+      "sha256": "2935f75f82d07901460d9f27a8b39c36586e0fb88d7c92be02ac8c4de6ff8ef7",
+      "bytes": 476525
+    },
+    {
+      "original_path": "current/order/RevF_SC12_Gerbers.zip.sha256",
+      "path": "rev_f/order/RevF_SC12_Gerbers.zip.sha256",
+      "source_commit": "ebdd1b1681c73dcc166af08f16474a8b3da037c5",
+      "sha256": "22acc9407667e2b272fa074520c17eba9791a08e3de6e2cba8cb117dbc00b481",
+      "bytes": 88
+    },
+    {
+      "original_path": "current/release/FRC_Sensor_CAN_RevF_SC12_Prototype.zip",
+      "path": "rev_f/release/FRC_Sensor_CAN_RevF_SC12_Prototype.zip",
+      "source_commit": "ebdd1b1681c73dcc166af08f16474a8b3da037c5",
+      "sha256": "d9776d83e09af1c457283ca3966c12961060b92c96c97dd2142780c1bbfaa7a8",
+      "bytes": 17950253
+    },
+    {
+      "original_path": "current/release/FRC_Sensor_CAN_RevF_SC12_Prototype.zip.sha256",
+      "path": "rev_f/release/FRC_Sensor_CAN_RevF_SC12_Prototype.zip.sha256",
+      "source_commit": "ebdd1b1681c73dcc166af08f16474a8b3da037c5",
+      "sha256": "857268b7ac5fd28a260724401babecbc5eab1d690ecb954d664595c3460e960c",
+      "bytes": 105
+    },
+    {
+      "original_path": "current/release/manifest.json",
+      "path": "rev_f/release/manifest.json",
+      "source_commit": "ebdd1b1681c73dcc166af08f16474a8b3da037c5",
+      "sha256": "3abb484e2f02985ceae3a0cba4e5d085d71301c955088de47ab71c502e670557",
+      "bytes": 52647
+    },
+    {
+      "original_path": "current/release/verification.json",
+      "path": "rev_f/release/verification.json",
+      "source_commit": "ebdd1b1681c73dcc166af08f16474a8b3da037c5",
+      "sha256": "d8aaa493fe467e2e94779f1185bbe43f80b5799fb5ad9a428086911465c0de4f",
+      "bytes": 389
+    },
+    {
+      "original_path": "current/release/verification.log",
+      "path": "rev_f/release/verification.log",
+      "source_commit": "ebdd1b1681c73dcc166af08f16474a8b3da037c5",
+      "sha256": "f169abc001c0504604f95c9fe382075b7729cd20c12a1874254ddabf1bbdd396",
+      "bytes": 616
     }
   ],
   "scope": "Original published archives/checksums copied byte-for-byte; complete historical sources remain in Git history."

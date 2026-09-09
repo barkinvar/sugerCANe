@@ -3,32 +3,32 @@
   "regions": [
     {
       "image": "bootloader",
-      "flash_bytes": 6728,
+      "flash_bytes": 6876,
       "flash_capacity": 8192,
-      "allocated_ram_including_minimum_stack": 1816,
+      "allocated_ram_including_minimum_stack": 1824,
       "ram_capacity": 5888,
       "minimum_stack_reservation": 1024
     },
     {
       "image": "sensor_can",
-      "flash_bytes": 10428,
+      "flash_bytes": 11520,
       "flash_capacity": 21504,
-      "allocated_ram_including_minimum_stack": 1968,
+      "allocated_ram_including_minimum_stack": 2016,
       "ram_capacity": 5888,
       "minimum_stack_reservation": 1024
     }
   ],
-  "update_crc32": "34a1da2c",
-  "version": 1792,
+  "update_crc32": "137a30c1",
+  "version": 2048,
   "factory_hex_excludes_configuration": true,
   "images": {
-    "bootloader.elf": "1bf3111ce7190de8b95fcd8b4bafa8f3a61f0380156599419badeb91ba338071",
-    "sensor_can.bin": "053a0009fd6069dcbd83ad1ed86ee1a885c868b616f9357e799a4a681661ff56",
-    "bootloader.bin": "f5bd4791b5c292988d06d464859e02ff5e9b51b450b18c0ab6a73785371bf383",
-    "sensor_can.hex": "f94ffdcdf60d0b14ce907eb7f3ed2889a0a8981dc57bde44ed409a541e9f22a7",
-    "sensor_can.elf": "51a86c972994ef23a20508a38a567bf6257ad6a092901c556b20f3dd0b285cba",
-    "application.sc12": "56583dc059f0378474d5e1c757d8adf546bd5181c3ce285217001f88fa099684",
-    "factory.hex": "89a87d0178b3f34b34b5de7fff3dfdff7f5725b71e57b105f8de2feb101f172d"
+    "bootloader.elf": "1d782c5ed2f6a85778ec008a96af602b898a22e61183e331d8c158f8d318a22e",
+    "sensor_can.bin": "10768bd4b956db65c5138adb2bddb51843b3a37553546092799b0e28d0c0548d",
+    "bootloader.bin": "58ed405865ab5a2c33d3ad763ee93bb2c912261c0114eae891a1deef9a9ac78f",
+    "sensor_can.hex": "f86643d453e97c87e514b7c676762e1fce179f5c10740ec45ac547d849bad5e1",
+    "sensor_can.elf": "844e82164058919eace32fcb1810a581e282e3305f9f9caabed507e92e6a03ed",
+    "application.sc12": "d137282323614ca38cf93d0fb7c7e7f6db51f222a08f20e47ca90de14d342b10",
+    "factory.hex": "cea9f886766aa01b767c6f17e2cb38294a9ff2576e969cbac08e721c9ea50efd"
   },
   "limitations": "Static link/image checks; runtime stack and silicon handoff unmeasured"
 }

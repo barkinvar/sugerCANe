@@ -25,8 +25,8 @@ setup.insert(1,sx.loads('''(stackup
  (copper_finish "ENIG") (dielectric_constraints no))'''))
 tree[:]=[x for x in tree if tag(x)!='title_block']
 tree.insert(5,sx.loads('''(title_block (title "SC12 regulated sensor-to-CAN")
- (date "2026-09-08") (rev "F") (company "FRC Sensor CAN project")
+ (date "2026-09-09") (rev "G") (company "FRC Sensor CAN project")
  (comment 1 "Engineering prototype - physical qualification pending")
- (comment 2 "52 x 64 mm; 4-layer; nominal 1.6 mm; supplier stackup review required"))'''))
+ (comment 2 "52 x 74 mm; 4-layer; nominal 1.6 mm; supplier stackup review required"))'''))
 p.write_text(sx.dumps(tree)+'\n')
-print('Nominal 4-layer 1.6 mm ENIG stack and Rev F identity saved.')
+print('Nominal 4-layer 1.6 mm ENIG stack and Rev G identity saved.')

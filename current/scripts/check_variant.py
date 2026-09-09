@@ -1,33 +1,32 @@
-"""Audit changes against a frozen Rev E electrical and purchasing baseline."""
+"""Audit Rev G changes against the immutable Rev F electrical contract."""
 from pathlib import Path
-import json,csv
+import json,csv,hashlib
 import pcbnew as p
 R=Path(__file__).resolve().parents[1]
-base=json.loads((R/'hardware/design/rev_e_baseline.json').read_text())
+base=json.loads((R/'hardware/design/rev_f_baseline.json').read_text())
 old=base['parts'];new=json.loads((R/'hardware/design/circuit.json').read_text())['parts']
-removed={'C67','C68','C70','NT1','R64'};added={'D4','R67','U9'}
-assert set(old)-set(new)==removed and set(new)-set(old)==added
-power={'U8','U9','D4','L2','R67'}|{f'R{n}' for n in range(60,67)}|{f'C{n}' for n in range(60,71)}|{'NT1'}
-passives={'C7','C8','C23','C24'}
-changed=[]
-for ref in sorted(set(old)&set(new)):
- differences=[k for k,v in old[ref].items() if new[ref].get(k)!=v]
- if differences:changed.append(dict(reference=ref,fields=differences))
- if ref not in power|passives|{'U7'}:assert not differences,(ref,differences)
- if ref in passives:assert differences==['mpn'],(ref,differences)
-for pin,net in old['U7']['pins'].items():
- if pin not in ('10','11','13'):assert new['U7']['pins'][pin]==net
-assert new['U9']['mpn']=='TPS2553DBVR-1'
-b=p.LoadBoard(str(R/'hardware/FRC_Sensor_CAN.kicad_pcb'));edges=[d for d in b.GetDrawings() if d.GetLayer()==p.Edge_Cuts]
-points={tuple(round(v,5) for v in p.ToMM(x)) for d in edges for x in (d.GetStart(),d.GetEnd())}
-assert points=={(0,0),(52,0),(52,64),(0,64)}
-# Attribute MOQ purchasing savings: outside-stage substitutions/resourcing first;
-# the remainder includes all changed power parts and shared passive price breaks.
-now={r['MPN']:float(r['purchase_usd'])/10 for r in csv.DictReader((R/'bom/cost_detail.csv').open()) if r['boards']=='10'}
-was={r['MPN']:float(r['purchase_usd'])/10 for r in base['cost_10']}
-oldcaps={'CC0805JRNPO9BN102','CC0805KKX7R9BB105','TMK212AB7475KG-T'}
-newcaps={'CC0805JRNPO9BN102','CL21B105KBFNNNE','CL21B475KAFNNNE'}
-passive_saving=sum(was[k] for k in oldcaps)-sum(now[k] for k in newcaps)
-saving=sum(was.values())-sum(now.values())
-report=dict(result='PASS',baseline_commit=base['source_commit'],baseline_source_sha256=base['source_sha256'],removed_parts=sorted(removed),added_parts=sorted(added),changed_parts=changed,unchanged='Connectors, removable voltage selectors, three signal/bias circuits, MCU and CAN; only the unused fourth comparator is repurposed.',board_mm=[52,64],area_reduction_percent=100*(1-64/70),cost_10_board_purchase_USD=dict(rev_e=sum(was.values()),rev_f=sum(now.values()),outside_power_passive_saving=passive_saving,power_stage_and_shared_price_break_saving=saving-passive_saving,total_saving=saving),firmware='Hardware 6 / app 0.7.0 / protocol 4; separate product and configuration tags.',scope='Contract regression and procurement arithmetic. Native ERC/DRC/copper tests are separate; no physical qualification.')
+added={'Q2','Q3','D5','D6','C70','C71','C72','C73',*[f'R{i}' for i in range(68,76)]}
+assert set(new)-set(old)==added and not set(old)-set(new)
+allowed=added|{'C7','C8','C23','C24','U4','U5','U7','U8','U9','L2','D4','C60','C61','C62','C63','C64','C65','C66','R60','R62','R65','R66','R67'}
+changes=[]
+for ref in sorted(old):
+ fields=[k for k in set(old[ref])|set(new[ref]) if old[ref].get(k)!=new[ref].get(k)]
+ if fields:changes.append(dict(reference=ref,fields=sorted(fields)))
+ if ref not in allowed:assert not fields,(ref,fields)
+assert new['U9']['mpn']=='TPS259620DDAR'
+assert all(new['U5']['pins'][pin]==net for pin,net in {'14':'ADC_5V','15':'ADC_12V','25':'POWER_5V_EN','28':'BIAS_DOWN1','29':'BIAS_DOWN2','30':'POWER_12V_EN'}.items())
+for ref in ['U6','J1','J2','J3','J4','J5','J6','J8','JP101','JP201','JP301']:
+ assert new[ref]==old[ref],ref
+b=p.LoadBoard(str(R/'hardware/FRC_Sensor_CAN.kicad_pcb'))
+points={tuple(round(v,5) for v in p.ToMM(q)) for d in b.GetDrawings() if d.GetLayer()==p.Edge_Cuts for q in (d.GetStart(),d.GetEnd())}
+assert points=={(0,0),(52,0),(52,74),(0,74)}
+current=sum(float(r['purchase_usd'])/10 for r in csv.DictReader((R/'bom/cost_detail.csv').open()) if r['boards']=='10')
+e=json.loads((R/'hardware/design/rev_e_baseline.json').read_text());rev_e=sum(float(r['purchase_usd'])/10 for r in e['cost_10'])
+report=dict(result='PASS',baseline_commit=base['source_commit'],baseline_sha256=hashlib.sha256((R/'hardware/design/rev_f_baseline.json').read_bytes()).hexdigest(),
+ added_parts=sorted(added),removed_parts=[],changed_parts=changes,
+ unchanged='Sensor connectors, power jumpers, CAN transceiver, MCU part, clock and three comparator/bias signal circuits. Two MCU bias-control pins moved to free ADC channels.',
+ board_mm=[52,74],area_change_from_rev_f_percent=100*(74/64-1),
+ cost_10_board_purchase_USD=dict(rev_e=rev_e,rev_f=27.1738,rev_g=current,saving_vs_rev_e=rev_e-current,added_vs_rev_f=current-27.1738),
+ firmware='Hardware 7 / app 0.8.0 / protocol 4. New power enables and rail ADC pins; prior update image tags rejected.',
+ scope='Electrical contract and procurement arithmetic; native CAD/copper verification and physical testing are separate.')
 (R/'reports/variant_verification.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

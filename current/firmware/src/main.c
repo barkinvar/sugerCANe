@@ -1,5 +1,6 @@
 #include "board.h"
 #include "board_service.h"
+#include "power.h"
 static sc_service service;
 #include <string.h>
 static sc_inputs inputs;
@@ -8,17 +9,12 @@ static uint8_t input_ready;
 static uint8_t device_id, status_sequence, reset_flags;
 static bool configured, clock_ok, can_ok, telemetry_enabled = true;
 static uint8_t rail_good;
-static uint32_t rail_good_since[2];
 static uint32_t tx_dropped;
-/* Faults invalidate immediately. Recovery needs 100 ms continuously healthy;
-   robot code must add any longer startup delay specified by its sensor. */
 static void power_status(uint32_t now) {
-    uint8_t pins=(uint8_t)((GPIOA->IDR >> 3) & 3u);
-    for (unsigned i=0;i<2;i++) {
-        uint8_t mask=(uint8_t)(1u<<i);
-        if (!(pins & mask)) { rail_good &= (uint8_t)~mask; rail_good_since[i]=now; }
-        else if ((uint32_t)(now-rail_good_since[i])>=100u) rail_good |= mask;
-    }
+    uint16_t mv12=0,mv5=0;
+    bool valid=board_rail_read(&mv12,&mv5);
+    sc_power_update(&sensor_power,now,valid,mv12,mv5,(uint8_t)(~(GPIOA->IDR>>3)&3u));
+    board_power_set(sensor_power.enabled);rail_good=sensor_power.good;
 }
 static void send_frame(uint16_t api, const uint8_t data[8]) {
     if (configured && can_ok && telemetry_enabled && !sc_service_active(&service) && !board_can_send(sc_can_id(device_id, api), data))
@@ -50,7 +46,7 @@ static void diagnostic_frame(void) {
     send_frame(SC_API_DIAGNOSTIC,d);
 }
 static void identity_frame(void) {
-    uint8_t d[8] = {SC_PROTOCOL_VERSION, 0, 7, 0, 6, device_id, (uint8_t)inputs.debounce_ms,
+    uint8_t d[8] = {SC_PROTOCOL_VERSION, 0, 8, 0, 7, device_id, (uint8_t)inputs.debounce_ms,
                     inputs.invert};
     send_frame(SC_API_IDENTITY, d);
 }
@@ -94,7 +90,7 @@ static void receive_commands(uint32_t now) {
             break;
         if (id == 0) {
             /* Immediately stop telemetry and abort pending transmit mailboxes.
-               No actuator outputs exist. Sensor power is independent hardware. */
+               No actuator outputs exist. Sensor rail supervision continues. */
             telemetry_enabled=false;
             sc_service_disable(&service);
             board_can_abort();
@@ -129,7 +125,7 @@ static void uart_uint(uint32_t n) {
     board_uart_write(b + i);
 }
 static void print_status(void) {
-    board_uart_write("SC12 v0.7.0 proto=4 configured=");
+    board_uart_write("SC12 v0.8.0 proto=4 configured=");
     uart_uint(configured);
     board_uart_write(" id=");
     uart_uint(device_id);
@@ -143,9 +139,9 @@ static void print_status(void) {
     uart_uint(clock_ok);
     board_uart_write(" can_ok=");
     uart_uint(can_ok);
-    board_uart_write(" rail12_pg=");
+    board_uart_write(" rail12_good=");
     uart_uint((rail_good & 1u)!=0);
-    board_uart_write(" rail5_no_fault=");
+    board_uart_write(" rail5_good=");
     uart_uint((rail_good & 2u)!=0);
     board_uart_write("\r\n");
 }
@@ -176,7 +172,7 @@ static void uart_command(const char *line) {
     if (!strcmp(line, "HELP")) {
         board_uart_write(
             "INFO | SET id invert debounce_ms | RESUME | HELP\r\n"
-            "SET persists and resets. id0..63 invert0..7 debounce1..100. Power is hardware-only.\r\n");
+            "SET persists and resets. id0..63 invert0..7 debounce1..100. Voltage jumpers are hardware; CAN service resets power faults.\r\n");
         return;
     }
     uint32_t n[3];
@@ -244,11 +240,12 @@ int main(void) {
     board_bias(modes.up,modes.down);
     sc_inputs_init(&inputs, 0, cfg ? (cfg->invert_mask & 7u) : 0,
                    cfg ? cfg->debounce_ms : 2, 0);
+    sc_power_init(&sensor_power,board_millis,clock_ok && board_adc_init());
     board_service_init(&service,false);
     can_ok = clock_ok && board_can_init(device_id);
     if (can_ok)
         board_can_standby(false);
-    board_uart_write("FRC Sensor CAN SC12 prototype v0.7.0\r\n");
+    board_uart_write("FRC Sensor CAN SC12 prototype v0.8.0\r\n");
     print_status();
     uint32_t last_tick = board_millis, next_status = last_tick + 10,
              next_counts12 = last_tick + 100, next_counts34 = last_tick + 125,

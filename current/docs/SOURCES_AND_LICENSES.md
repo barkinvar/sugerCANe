@@ -1,4 +1,4 @@
-# Rev F source evidence and notices
+# Rev G source evidence and notices
 
 KiCad library/model notices are retained under `licenses/`, together with Arm CMSIS, ST device-header and WPILib notices. Firmware third-party directories and InteractiveHtmlBom output retain their notices. Original project work has no selected blanket license. Manufacturer documents/CAD remain their owners' material; retaining a file is not a redistribution-license grant.
 
@@ -10,7 +10,8 @@ KiCad library/model notices are retained under `licenses/`, together with Arm CM
 | Shielded 3.3 µH inductor | [Bourns SRP5030TA](https://www.bourns.com/docs/product-datasheets/srp5030ta.pdf) |
 | Input/output/bias capacitor curve | [Samsung CL32B106KBJNNW](https://product.samsungsem.com/mlcc/CL32B106KBJNNW.do) |
 | Banner supply/residual voltage exceptions | [QS18 product manual](https://info.bannerengineering.com/cs/groups/public/documents/literature/197052.pdf) |
-| Sensor 5 V / boost-input latch-off limiters | [TI TPS2553](https://www.ti.com/lit/ds/symlink/tps2553.pdf), -1 variant |
+| Sensor 5 V latch-off limiter | [TI TPS2553](https://www.ti.com/lit/ds/symlink/tps2553.pdf), -1 variant |
+| Sensor 12 V output eFuse | [TI TPS2596](https://www.ti.com/lit/ds/symlink/tps2596.pdf), TPS259620 latch-off variant |
 | Comparator/leakage caveats | [TI LM339LV](https://www.ti.com/lit/ds/symlink/lm339lv.pdf) |
 | CAN interface / bypass | [TI TCAN3413](https://www.ti.com/lit/ds/symlink/tcan3413.pdf) |
 | STM32 pinout, supplies, clock | [ST STM32F042](https://www.st.com/resource/en/datasheet/stm32f042t6.pdf) |
@@ -24,10 +25,8 @@ Equivalent parts need engineering review; distributor substitution suggestions d
 
 Local source evidence includes the TI TPS61085/TPS2553 datasheets and Samsung CL31A226/CL32B106 characteristic JSON. Typical curves do not establish guaranteed minimum capacitance. U8's footprint and nominal STEP body are from the KiCad 10 Package_SO library. Horizontal connector STEP models are official vendor geometry. The new Samsung CL21B105/CL21B475 substitutions retain nominal ratings; the LDO derating allowance is analytical, not a measured characteristic curve.
 
-Rev F sourcing URLs and tiers are in [catalog_china.json](../bom/catalog_china.json). [Header/cap geometry](CONNECTORS.md) links the Harwin and Sullins manufacturer drawings; [cost assumptions](COST_REDUCTION.md) links the assembly fee and lead-time sources. Stock observations are not factory allocations.
+Rev G sourcing URLs and tiers are in [catalog_china.json](../bom/catalog_china.json). [Header/cap geometry](CONNECTORS.md) links the Harwin and Sullins manufacturer drawings; [cost assumptions](COST_REDUCTION.md) links the assembly fee and lead-time sources. Stock observations are not factory allocations.
 
-Rev F input bias references: [AO3401A](https://www.aosmd.com/pdfs/datasheet/AO3401A.pdf), [BSS138BK](https://assets.nexperia.com/documents/data-sheet/BSS138BK.pdf), [BAT46W](https://www.vishay.com/docs/86406/bat46w.pdf). The local SOT-23 footprint/model comes from installed KiCad libraries under their existing library-license policy. [CTRE input-mode API](https://api.ctr-electronics.com/phoenix6/latest/java/com/ctre/phoenix6/signals/S1FloatStateValue.html) informed feature choices; no CTRE firmware or hardware design is included.
+Rev G input bias references: [AO3401A](https://www.aosmd.com/pdfs/datasheet/AO3401A.pdf), [BSS138BK](https://assets.nexperia.com/documents/data-sheet/BSS138BK.pdf), [BAT46W](https://www.vishay.com/docs/86406/bat46w.pdf). The local SOT-23 footprint/model comes from installed KiCad libraries under their existing library-license policy. [CTRE input-mode API](https://api.ctr-electronics.com/phoenix6/latest/java/com/ctre/phoenix6/signals/S1FloatStateValue.html) informed feature choices; no CTRE firmware or hardware design is included.
 
-Power transient models: [TI TPS61085 SLIM133B](https://www.ti.com/lit/zip/slim133b), [TI TPS2553-1 SLVM426A](https://www.ti.com/lit/zip/slvm426a), and [Diodes B240A](https://www.diodes.com/spice/download/94/B240A.spice.txt). [Local provenance and hashes](../sources/spice/manifest.json) distinguish original archive bytes from the diode model's plaintext transcription. Manufacturer notices remain in each file. They are manufacturer material, not covered by a project license. The harness only creates temporary compatibility adaptations: unique helper names, duplicate `PARAMS:` cleanup, and PSpice Boolean XOR conversion. It uses Gear integration after observing an artificial latch reset with trapezoidal integration. Simulator compatibility is described by the [ngspice manual](https://ngspice.sourceforge.io/docs/ngspice-manual.pdf).
-
-The diagnostic capacitor-bias model uses the retained Samsung curve as differential C(V), following the [ngspice developers' behavioral-capacitor explanation](https://sourceforge.net/p/ngspice/discussion/133842/thread/4015c873/). One-volt interpolation and instantaneous C(V) are modeling approximations; no dielectric hysteresis, aging or production spread is included.
+Power transient models: [TI TPS61085 SLIM133B](https://www.ti.com/lit/zip/slim133b), [TI TPS2553-1 SLVM426A](https://www.ti.com/lit/zip/slvm426a), [TI TPS259620 SLVMD54A](https://www.ti.com/lit/zip/slvmd54a), and [Diodes B240A](https://www.diodes.com/spice/download/94/B240A.spice.txt). [Local provenance and hashes](../sources/spice/manifest.json) distinguish original archive bytes from the diode model's plaintext transcription. Manufacturer notices remain in each file. They are manufacturer material, not covered by a project license. The harness only creates temporary compatibility adaptations: unique helper names, duplicate `PARAMS:` cleanup, and PSpice Boolean XOR conversion. It uses Gear integration after observing an artificial latch reset with trapezoidal integration. Simulator compatibility is described by the [ngspice manual](https://ngspice.sourceforge.io/docs/ngspice-manual.pdf).

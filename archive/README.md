@@ -1,6 +1,6 @@
 # Historical packages
 
-Use **[current Rev F](../current/README.md)** for new work. These ZIPs preserve older releases exactly as published; their internal instructions and test records apply only to that revision.
+Use **[current Rev G](../current/README.md)** for new work. These ZIPs preserve older releases exactly as published; their internal instructions and test records apply only to that revision.
 
 | Revision | Download |
 |---|---|
@@ -12,6 +12,8 @@ Use **[current Rev F](../current/README.md)** for new work. These ZIPs preserve 
 | D SC12 | [Prototype](rev_d/release/FRC_Sensor_CAN_RevD_SC12_Prototype.zip) · [factory packet](rev_d/order/RevD_SC12_Factory_Upload.zip) |
 | D2 SC12 | [Prototype](rev_d2/release/FRC_Sensor_CAN_RevD2_SC12_Prototype.zip) · [factory packet](rev_d2/order/RevD2_SC12_Factory_Upload.zip) |
 | E SC12 | [Prototype](rev_e/release/FRC_Sensor_CAN_RevE_SC12_Prototype.zip) · [factory packet](rev_e/order/RevE_SC12_Factory_Upload.zip) |
+
+| F SC12 | [Prototype](rev_f/release/FRC_Sensor_CAN_RevF_SC12_Prototype.zip) · [factory packet](rev_f/order/RevF_SC12_Factory_Upload.zip) |
 
 [Why the revisions differ](../REVISIONS.md). All are unbuilt engineering prototypes. Do not combine firmware, connectors or wiring instructions across packages.
 

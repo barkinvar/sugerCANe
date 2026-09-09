@@ -1,15 +1,15 @@
 {
   "result": "PASS",
-  "local_links_checked": 150,
+  "local_links_checked": 147,
   "broken_links": [],
   "pdfs": [
     {
-      "file": "output/documentation/SC12_RevF_Handbook.pdf",
-      "pages": 32,
+      "file": "output/documentation/SC12_RevG_Handbook.pdf",
+      "pages": 34,
       "text_within_page": true
     },
     {
-      "file": "output/documentation/BOM_RevF_SC12.pdf",
+      "file": "output/documentation/BOM_RevG_SC12.pdf",
       "pages": 3,
       "text_within_page": true
     },
@@ -25,7 +25,7 @@
     },
     {
       "file": "output/assembly/schematic.pdf",
-      "pages": 9,
+      "pages": 10,
       "text_within_page": true
     },
     {

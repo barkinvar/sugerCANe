@@ -1,8 +1,8 @@
 {
   "result": "PASS",
-  "fitted_top_parts": 119,
-  "resistors": 46,
-  "capacitors": 34,
+  "fitted_top_parts": 135,
+  "resistors": 54,
+  "capacitors": 38,
   "board_thickness_mm": 1.6,
   "selectors": [
     {
@@ -11,7 +11,9 @@
         "SENSOR_5V",
         "VPORT1",
         "SENSOR_12V"
-      ]
+      ],
+      "drill_mm": 0.85,
+      "nominal_annulus_mm": 0.25
     },
     {
       "reference": "JP201",
@@ -19,7 +21,9 @@
         "SENSOR_5V",
         "VPORT2",
         "SENSOR_12V"
-      ]
+      ],
+      "drill_mm": 0.85,
+      "nominal_annulus_mm": 0.25
     },
     {
       "reference": "JP301",
@@ -27,7 +31,9 @@
         "SENSOR_5V",
         "VPORT3",
         "SENSOR_12V"
-      ]
+      ],
+      "drill_mm": 0.85,
+      "nominal_annulus_mm": 0.25
     }
   ],
   "service_mapping": {
@@ -53,8 +59,13 @@
       "vias": 0,
       "all_top": true
     },
+    "HSE_XTAL_OUT": {
+      "total_track_length_mm": 5.721993141924172,
+      "vias": 0,
+      "all_top": true
+    },
     "BUCK_SW": {
-      "total_track_length_mm": 8.973832970144352,
+      "total_track_length_mm": 9.371320343559642,
       "vias": 0,
       "all_top": true
     },
@@ -91,13 +102,30 @@
   },
   "inner_service_and_monitor_routes": {
     "+3V3": 9.283883476483185,
-    "SENSOR_12V": 4.702387239434957
+    "ADC_5V": 6.1305086527633215,
+    "BIAS_DOWN1": 38.39132602052242,
+    "BIAS_DOWN2": 36.8552561210872,
+    "BIAS_UP2_N": 24.85665372593843,
+    "POWER_12V_EN": 31.49696211073403,
+    "POWER_5V_EN": 23.799369256621805,
+    "UART_RX": 25.276942003573303,
+    "UART_TX": 2.8734571731034757
   },
   "power_net_geometry": {
+    "SENSOR_12V": {
+      "total_track_length_mm": 133.46932384580623,
+      "minimum_width_mm": 0.5,
+      "via_count": 5
+    },
+    "BOOST_12V": {
+      "total_track_length_mm": 58.54876319683286,
+      "minimum_width_mm": 0.25,
+      "via_count": 2
+    },
     "V5_INTERNAL": {
-      "total_track_length_mm": 89.98413139958151,
-      "minimum_width_mm": 0.35,
-      "via_count": 4
+      "total_track_length_mm": 156.00412305577487,
+      "minimum_width_mm": 0.25,
+      "via_count": 8
     },
     "VIN_RAW": {
       "total_track_length_mm": 19.627201854158205,
@@ -109,18 +137,13 @@
       "minimum_width_mm": 0.5,
       "via_count": 2
     },
-    "SENSOR_12V": {
-      "total_track_length_mm": 85.77440844970519,
-      "minimum_width_mm": 0.2,
-      "via_count": 3
-    },
     "VIN_PROT": {
-      "total_track_length_mm": 54.84608064525104,
-      "minimum_width_mm": 0.35,
-      "via_count": 2
+      "total_track_length_mm": 96.28021893978287,
+      "minimum_width_mm": 0.25,
+      "via_count": 7
     },
     "SENSOR_5V": {
-      "total_track_length_mm": 89.30924641736482,
+      "total_track_length_mm": 110.64883873223847,
       "minimum_width_mm": 0.35,
       "via_count": 8
     },
@@ -130,7 +153,7 @@
       "via_count": 0
     },
     "VPORT2": {
-      "total_track_length_mm": 10.707106781186546,
+      "total_track_length_mm": 12.208806781186547,
       "minimum_width_mm": 0.5,
       "via_count": 0
     },
@@ -140,5 +163,24 @@
       "via_count": 0
     }
   },
-  "limitations": "Track geometry inventory is not a thermal, impedance or trace-drop qualification. VIN_PROT includes narrow low-current enable branches; 3D and programming checks are nominal geometry, not physical fit."
+  "limitations": "Track geometry inventory is not a thermal, impedance or trace-drop qualification. VIN_PROT includes narrow low-current enable branches; 3D and programming checks are nominal geometry, not physical fit.",
+  "efuse_assembly": {
+    "exposed_pad_mm": [
+      2.4,
+      3.1
+    ],
+    "external_ground_thermal_vias": 6,
+    "paste_windows": 4,
+    "paste_coverage_fraction": 0.574080780309086
+  },
+  "buck_local_bypass": {
+    "C2": {
+      "vin_top_path_mm": 4.938020382004282,
+      "ground_top_path_mm": 8.705571785686862
+    },
+    "C3": {
+      "vin_top_path_mm": 1.9276650429449553,
+      "ground_top_path_mm": 5.28100288425444
+    }
+  }
 }

@@ -1,33 +1,39 @@
-# Rev F power and input design
+# Rev G power and input design
 
-The maintained native PCB and schematic implement the cost reductions below. [The revision regression check](reports/variant_verification.json) compares the result with a frozen Rev E electrical/procurement contract. Historical full sources and packages remain available from the repository archive.
+Rev G addresses the startup, short-current, recovery and rail-monitoring problems identified in F. The [regression report](reports/variant_verification.json) records every change against the frozen F circuit.
 
 ## Supply path
 
 ```text
-J1: 6–22 V → fuse / reverse-polarity MOSFET / TVS → U1: internal 5 V, 2 A
-                                                      ├─ U2: 3.3 V logic
-                                                      ├─ U4: latch limiter → 5 V sensor rail
-                                                      └─ U9: latch limiter → U8 boost → 12 V sensor rail
-5 V / 12 V sensor rails → separate removable jumper on each port → sensor power
+6–22 V → fuse / reverse protection / TVS → internal 5 V, 2 A
+                                          ├─ 3.3 V MCU / CAN / comparators
+                                          ├─ U4 latch limiter → SENSOR_5V
+                                          └─ U8 boost → reservoir → U9 eFuse → SENSOR_12V
+SENSOR_5V / SENSOR_12V → removable jumper per port → sensor power
 ```
 
-U1 remains LMR51420XDDCR. U8 is now TPS61085DGKR at 1.2 MHz, with the retained 3.3 µH shielded inductor and a B240A-13-F Schottky diode. Its nominal output is 12.003 V; the conservative static divider/reference budget is 11.64–12.38 V before transient and cable allowances. Three 22 µF output capacitors provide only about 10.8 µF after the modeled DC-bias/tolerance allowances. They must not be replaced by one nominally equivalent small capacitor.
+U1 remains LMR51420XDDCR. U8 remains TPS61085DGKR, with the 3.3 µH shielded inductor, B240A diode and 13 kΩ / 33 nF compensation. C61 is now a 1 µF local bypass. C60 remains 22 µF, and C62–C64 remain three 22 µF reservoir capacitors. Their effective capacitance at 12 V is much smaller than their nameplate value; the checks include both explicit derated and nameplate cases.
 
-A boost has a direct input-to-output path through its inductor and diode. U9 therefore sits **before the boost** and disconnects that path after an overload deglitch interval. It is the exact TPS2553DBVR-1 latch-off version, with a 21.5 kΩ limit resistor. Its roughly 1.2 A setting is an **input current limit**, not permission to draw 1.2 A at 12 V. The useful output target stays 300 mA. The 5 V sensor branch retains its own U4 limiter. Either latch requires a board power cycle to reset. Output capacitors still release stored energy into a short before it is interrupted; no reverse-powered output or independent output-overvoltage cutoff is supported.
+A boost has a direct path through its inductor and diode. Rev G puts **TPS259620DDAR after the reservoir**, so a sensor short cannot discharge that reservoir directly through the port. R62=2.61 kΩ sets about 357 mA nominal output current limit; the tolerance budget is in [electrical_checks.json](reports/electrical/electrical_checks.json). Useful sensor load remains **300 mA shared per rail**. C70=47 nF controls output slew; C65/C71 provide local input/output bypassing. D5 clamps negative output transients and D6 limits raw-rail transients. These parts do not authorize reverse powering a sensor port.
 
-At the modeled worst normal load, the boost needs about 1.03 A from the internal supply. The two maximum branch-limit budgets plus 100 mA logic total about 1.91 A, below U1's 2 A rating. Those calculations assume 80% boost efficiency and a revised 120 mV PCB-drop allowance from the [pre-order review](docs/ORDER_READINESS.md). They do not establish thermal headroom or safe simultaneous fault transients on a physical PCB.
+U9's UVLO divider requires approximately 11.1 V on the raw boost before connection. OVCSEL is intentionally open for its **13.8 V-class fault clamp**, not a precision 12 V ceiling. R70 pulls Q2's gate from raw 12 V, holding UVLO low by default. PB7 HIGH enables Q3, which removes that inhibit. R75 holds Q3 off without MCU power. U4's PA15 enable has a hardware pulldown. Both branches therefore start disabled; their current limits operate independently of firmware.
 
-The unused fourth LM339LV comparator now monitors a divided 12 V rail. Its open-drain output and U9 fault share PG_12V. Nominal rising threshold is about 9.3 V, with a wide 8.0–10.6 V modeled range. It detects a missing/collapsed rail, **not** compliance with a sensor's minimum voltage. Firmware keeps the existing 100 ms health qualification. V12 startup, sensor readiness and thresholds need measurement.
+Firmware starts 5 V after 10 ms and 12 V after 60 ms. It allows 200 ms for startup, requires 100 ms healthy voltage before counting inputs, and latches a running low-voltage fault after 20 ms. Hardware fault indications or excessive measured voltage disable the affected rail. Removing a short does not automatically restart it: use the explicit CAN power-reset command. The bootloader keeps both rails off.
 
-U8 compensation is 13 kΩ / 33 nF. A 512-corner averaged CCM sensitivity screen passes its chosen margins, but its modulator-gain and amplifier bounds are engineering assumptions. A separate [manufacturer-model transient screen](docs/VALIDATION.md#manufacturer-model-transient-screen) checks the protected boost's startup, load steps and short response. It uses an idealized upstream source; DCM, cascaded-regulator interaction, startup, shorts and load steps still require bench measurements.
+## Rail measurement and signals
 
-## Inputs, jumpers and layout
+PB0/ADC8 and PB1/ADC9 measure the protected 5 V and 12 V rails. Each divider uses two 100 kΩ precision series resistors, a 20 kΩ bottom resistor and a 10 nF filter. Firmware uses 239.5-cycle acquisition and the factory VREFINT calibration value. Readback and rail states are available through CAN service. This measures the board rails, not the voltage at a remote sensor.
 
-Each protected divider/comparator input and its software-controlled pull-up/down are retained. NPN, PNP, push-pull, floating and keeper modes remain independent across all three channels. Signal pull-ups use 3.3 V; selecting 12 V sensor power never changes them to 12 V. See [input modes](docs/INPUT_MODES.md).
+The former coarse fourth comparator is unused, with defined inputs and an unconnected output. The three signal comparators and electronic NPN/PNP/push-pull/float/keeper circuits retain their original values. Two pulldown controls move to PB5/PB6; channel 3 stays on PB4. Selecting 12 V sensor power never changes the signal pull-up from 3.3 V.
 
-JP101/JP201/JP301 remain removable 2 mm power headers: 1–2 selects 5 V, 2–3 selects 12 V, and no cap turns off that port's supply. CAN end termination remains a separate solder bridge. There are no input-bias solder selectors or DIP switches.
+External inputs remain digital: target LOW ≤1.2 V, HIGH ≥2.4 V, positive 0–30 V and common ground. Sensor off-state leakage, cable capacitance and residual voltage must meet the [input-mode limits](docs/INPUT_MODES.md). Rail ADCs do not add external analog or encoder support.
 
-The board is 52 × 64 mm, down from 52 × 70 mm. Four copper layers are retained: In1 is ground; In2 is ground with a short 12 V monitor branch and a 3.3 V service-contact connection. Converter switching/feedback/compensation and crystal nets stay on top without vias. All 119 fitted components are on top; the assembler places 110 SMT parts and the user fits six terminals and three headers. The user also supplies three removable caps.
+## Layout and assembly
 
-Firmware identity is hardware 6 / application 0.7.0 / protocol 4, with separate image/configuration tags. Use this revision's complete package. [Qualification](docs/VALIDATION.md) and [cost basis](docs/COST_REDUCTION.md) describe the remaining boundaries.
+The board is 52 × 74 mm with four copper layers and all 135 fitted components on top. The factory places 126 SMT parts; the user fits six terminals and three voltage headers, then three loose caps. U9 uses a split-paste exposed pad and surrounding thermal vias. No blind/buried vias or second-side assembly is required.
+
+One inner layer provides continuous ground; the other also carries a few slow control/service connections. Switching, feedback, compensation and crystal routes remain on top. Native and independently reconstructed fabrication geometry are checked separately.
+
+Use hardware 7, application 0.8.0, bootloader 1.0.0 and protocol 4 from the same release. [Verification](docs/VALIDATION.md) distinguishes calculations and simulation from physical qualification. [Cost basis](docs/COST_REDUCTION.md) includes supplier minimums and excludes assembly/freight/tax.
+
+Rev G design envelope: at most 100 µF total external capacitance on the shared 12 V rail, and 22 µF on the shared 5 V rail, at 300 mA per rail. The startup calculation includes +20% capacitance and the current-limit minimum; the 470 µF simulation is a typical diagnostic beyond that envelope. Qualify nonlinear sensor inrush separately.

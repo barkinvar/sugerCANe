@@ -1,10 +1,10 @@
 # CAN setup and firmware updates
 
-Rev F firmware **0.7.0**, bootloader **1.0.0**, service protocol **1**. Normal sensor messages remain protocol **4**, hardware **6**. Implemented and software-tested; actual STM32/robot-controller, power-cut and vibration qualification is pending. This is our own service protocol, not GrappleHook-compatible firmware.
+Rev G firmware **0.8.0**, bootloader **1.0.0**, service protocol **1**. Normal sensor messages remain protocol **4**, hardware **7**. Implemented and software-tested; actual STM32/robot-controller, power-cut and vibration qualification is pending. This is our own service protocol, not GrappleHook-compatible firmware.
 
 ## First installation and recovery
 
-Install [factory.hex](../firmware/build/factory.hex) once through SWD using [program_factory.tcl](../tools/program_factory.tcl). This combines the protected bootloader, relocated application and image manifest. Rev F requires its own factory image and fresh configuration. D/D2 hardware cannot gain the new bias circuit through firmware. The script preserves the two configuration pages and refuses an unexpected device/flash size or an already protected bootloader. Its hardware execution is a pilot qualification gate.
+Install [factory.hex](../firmware/build/factory.hex) once through SWD using [program_factory.tcl](../tools/program_factory.tcl). This combines the protected bootloader, relocated application and image manifest. Rev G requires its own factory image and fresh configuration. D/D2 hardware cannot gain the new bias circuit through firmware. The script preserves the two configuration pages and refuses an unexpected device/flash size or an already protected bootloader. Its hardware execution is a pilot qualification gate.
 
 From `current`, with J8 wired per the custom mapping and a separately powered, current-limited board:
 
@@ -47,7 +47,7 @@ Direct SocketCAN uses `--channel can0`. Other commands: `info`, `run`, `rate --m
 
 Discovery resolves the complete STM32 96-bit UID independently of assigned CAN IDs, including blank and duplicate-ID devices. Blink confirms physical selection. Before a change, the tool reads back all three UID words. ID conflict checks cover **responding SC12 devices only**; a powered-off board or another Team Use product can still have a conflicting address. Use one maintenance client per CAN network. The service APIs must be reserved against other Team Use devices.
 
-Opening a session suppresses normal telemetry on all participating SC12 boards, and freezes/rebaselines input counts. Sensors remain powered by hardware. Drivers may retain their last sample until its normal freshness timeout; robot code must treat maintenance as unavailable immediately. Close/lease expiry restores normal sampling/telemetry unless Broadcast Disable previously latched it off. Broadcast Disable cancels maintenance and pending transmissions; explicit resume remains necessary for that latch. Never interpret a missing sample as a false input.
+Opening a session suppresses normal telemetry on all participating SC12 boards, and freezes/rebaselines input counts. Application rail supervision continues during maintenance; the bootloader keeps both rails disabled. Drivers may retain their last sample until its normal freshness timeout; robot code must treat maintenance as unavailable immediately. Close/lease expiry restores normal sampling/telemetry unless Broadcast Disable previously latched it off. Broadcast Disable cancels maintenance and pending transmissions; explicit resume remains necessary for that latch. Never interpret a missing sample as a false input.
 
 ## Wire protocol
 
@@ -59,18 +59,29 @@ Classical CAN, extended identifiers, eight data bytes, no RTR. Request ID `0x0A0
 | PREFIX0/1/2 0x02–04 | Three raw UID words; no ACK; each change clears selection |
 | PROBE 0x05 | Prefix length 0–96, MSB first within each UID byte; matching nodes reply 1; only 96 selects |
 | CLOSE 0x06 | End session, no ACK |
-| INFO 0x10 | Index 0 flags/versions, 1 settings, 2 mode version, 3 upload offset, 4 capacity, 5 image validity, 6–8 UID words, 9 persistent input configuration |
+| INFO 0x10 | Index 0 flags/versions, 1 settings, 2 mode version, 3 upload offset, 4 capacity, 5 image validity, 6–8 UID words, 9 persistent input configuration, 10 rail millivolts, 11 rail states |
 | BLINK 0x11 | Zero; three-second identify LED |
 | SAVE 0x12 | ID/invert/debounce/reserved bytes; reserved must be zero; explicit save then reset |
 | BOOT / RUN 0x13/14 | Zero; enter bootloader / run verified application |
 | RATE 0x15 | 10, 20 or 50 ms; volatile status period |
 | INPUTS 0x16 | Stage validated per-input configuration; commit with SAVE; cleared on new selection/session |
+| POWER 0x17 | Application only, selected UID: mask 1=12 V, 2=5 V, 3=both; disable then restart requested rails |
 | SIZE / CRC 0x20/21 | Padded application length and CRC32; bootloader only |
-| BEGIN 0x22 | Product/layout tag 0x53433136; invalidate/read back manifest before application writes |
+| BEGIN 0x22 | Product/layout tag 0x53433137; invalidate/read back manifest before application writes |
 | OFFSET / DATA 0x23/24 | Byte offset then four image bytes; ACK next offset after flash readback |
 | FINISH 0x25 | Zero; validate complete flash CRC/vectors, commit manifest last, ACK image CRC |
 
-INFO index 0 packs service version in bits 0–7, bootloader mode in bit 8, configured in bit 9, boot protection in bit 10, application minor 7 in bits 16–23, and hardware 6 in bits 24–31. Index 1 packs ID/invert/debounce/status-period as bytes; unconfigured ID is 255. Index 2 is major/minor/patch in bits 16/8/0. Index 5 returns 0 or 1.
+INFO index 0 packs service version in bits 0–7, bootloader mode in bit 8, configured in bit 9, boot protection in bit 10, application minor 8 in bits 16–23, and hardware 7 in bits 24–31. Index 1 packs ID/invert/debounce/status-period as bytes; unconfigured ID is 255. Index 2 is major/minor/patch in bits 16/8/0. Index 5 returns 0 or 1.
+
+INFO index 10 packs measured 12 V millivolts in bits 0–15 and 5 V millivolts in bits 16–31. Index 11 packs enabled/good/latched/pending masks in bytes 0/1/2/3; mask bit 0 is 12 V and bit 1 is 5 V. Bootloader replies do not imply powered rails. Millivolt data is ADC-based and needs physical calibration verification.
+
+After removing a sensor-power fault, restart only the required rail:
+
+```sh
+python host/can_service.py --bridge localhost:5810 power-reset --uid UID --rail 12v
+```
+
+`--rail 5v` and `--rail both` are also supported. The desktop tool exposes **Reset power fault** and displays both voltages. Reset is explicit; the application does not repeatedly retry a short. Firmware uses 10/60 ms off-to-enable delays and requalifies the rail before reporting usable inputs. A persistent fault latches off again. The outputs have no active discharge, so this clears protection without guaranteeing a complete power cycle of every sensor.
 
 Host discovery walks binary UID prefixes; matching responders send identical presence frames. Prefix frames are paced; UID readback guards selection before writes. Queries retry four times, probes twice; default pacing is at least 6 ms between requests and a 300 ms ACK timeout. Binary discovery can take seconds per device; intermittent connectivity can omit a node, so repeat discovery before commissioning. Uploads send OFFSET and DATA for each four-byte word, bounding throughput and working around flash stalls. Only the immediately previous exact request is cached; offset/data logic also accepts an identical last word without rewriting it. Gaps, changed duplicate words and stale sessions are rejected.
 
@@ -86,7 +97,7 @@ Host discovery walks binary UID prefixes; matching responders send identical pre
 
 Both linkers reserve at least 1 KiB stack, excluding static data; runtime stack high-water measurement remains pending. The Cortex-M0 application copies vectors to SRAM and remaps them; bootloader handoff clears pending interrupts, stops SysTick/CAN and returns clocks to HSI. [Compiled-register tests](../reports/firmware-arm-registers.json) check vector copying, GPIO/CAN and configuration writes against peripheral models; they do not emulate analog effects or real interrupt timing.
 
-The update file uses `<8s6I`: `SC12UPD1`, format 1, hardware 6, application address, padded length, CRC32, packed version, then image bytes. Length is 192–21504 bytes and a multiple of four. Initial SP must be aligned and within application SRAM, and Thumb reset PC inside application executable bounds. Manifest words are magic 0x49324353, size, CRC, product tag, CRC of the first four words, and final commit 0xC035A19E. Boot verifies manifest, vectors and full application CRC. No update command can write bootloader, configuration or option-byte regions.
+The update file uses `<8s6I`: `SC12UPD1`, format 1, hardware 7, application address, padded length, CRC32, packed version, then image bytes. Length is 192–21504 bytes and a multiple of four. Initial SP must be aligned and within application SRAM, and Thumb reset PC inside application executable bounds. Manifest words are magic 0x49324353, size, CRC, product tag, CRC of the first four words, and final commit 0xC035A19E. Boot verifies manifest, vectors and full application CRC. No update command can write bootloader, configuration or option-byte regions.
 
 ## Evidence and remaining gates
 

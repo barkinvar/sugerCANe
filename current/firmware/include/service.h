@@ -7,12 +7,12 @@
 #define SC_SERVICE_RX ((10u<<24)|(8u<<16)|(0x300u<<6))
 #define SC_SERVICE_TX ((10u<<24)|(8u<<16)|(0x301u<<6))
 #define SC_SERVICE_MAGIC 0x314d4353u
-#define SC_IMAGE_TAG 0x53433136u
+#define SC_IMAGE_TAG 0x53433137u
 #define SC_IMAGE_MAGIC 0x49324353u
 #define SC_IMAGE_COMMIT 0xc035a19eu
 #define SC_LEASE_MS 5000u
 enum { SC_OPEN=1, SC_PREFIX0, SC_PREFIX1, SC_PREFIX2, SC_PROBE, SC_CLOSE,
-       SC_INFO=0x10, SC_BLINK, SC_SAVE, SC_BOOT, SC_RUN, SC_RATE, SC_INPUTS,
+       SC_INFO=0x10, SC_BLINK, SC_SAVE, SC_BOOT, SC_RUN, SC_RATE, SC_INPUTS, SC_POWER,
        SC_SIZE=0x20, SC_CRC, SC_BEGIN, SC_OFFSET, SC_DATA, SC_FINISH };
 enum { SC_OK=0, SC_BAD_ARGUMENT=1, SC_BAD_STATE, SC_FLASH_ERROR,
        SC_BAD_IMAGE, SC_NOT_PROTECTED };
@@ -27,6 +27,8 @@ typedef struct {
     bool (*save)(void *,sc_config_record *);
     bool (*protected_boot)(void *);
     void (*reset)(void *,bool);
+    bool (*power)(void *,uint8_t,uint32_t);
+    uint32_t (*rails)(void *,unsigned);
 } sc_service_io;
 typedef struct {
     sc_service_io io;

@@ -1,10 +1,10 @@
 {
   "result": "PASS archive integrity",
-  "archive": "FRC_Sensor_CAN_RevF_SC12_Prototype.zip",
-  "sha256": "d9776d83e09af1c457283ca3966c12961060b92c96c97dd2142780c1bbfaa7a8",
-  "files_verified": 305,
+  "archive": "FRC_Sensor_CAN_RevG_SC12_Prototype.zip",
+  "sha256": "5759aab5d9a53a40d7499cb8cd3209cc22da5468a4ea63333befd299bad89ba7",
+  "files_verified": 313,
   "extracted_erc_drc_and_parity": "PASS",
-  "simulation_screening": "FAIL",
-  "order_decision": "HOLD: not qualified for a single final hardware order",
+  "simulation_screening": "PASS transient screening only",
+  "order_decision": "PASS pre-fabrication engineering screens; unbuilt prototype",
   "physical_qualification": false
 }

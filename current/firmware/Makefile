@@ -7,7 +7,7 @@ CPU = -mcpu=cortex-m0 -mthumb
 INC = -Iinclude -Ithird_party/cmsis_device_f0/Include -Ithird_party/CMSIS_5/CMSIS/Core/Include
 CFLAGS = $(CPU) $(INC) -DSTM32F042x6 -DHSE_VALUE=8000000U -Os -g3 -std=c11 -ffunction-sections -fdata-sections -fno-common -fstack-usage -Wall -Wextra -Werror -MMD -MP
 LDFLAGS = -nostartfiles $(CPU) -Tstm32f042k6.ld --specs=nano.specs --specs=nosys.specs -Wl,--gc-sections,-Map=$(OUT)/sensor_can.map -Wl,--print-memory-usage
-SOURCES = src/main.c src/board.c src/sensor_core.c src/input_mode.c src/service.c src/board_service.c
+SOURCES = src/power.c src/main.c src/board.c src/sensor_core.c src/input_mode.c src/service.c src/board_service.c
 OBJECTS = $(SOURCES:src/%.c=$(OUT)/%.o) $(OUT)/startup.o
 all: $(OUT)/sensor_can.elf $(OUT)/sensor_can.bin $(OUT)/sensor_can.hex $(OUT)/bootloader.bin $(OUT)/factory.hex $(OUT)/application.sc12
 $(OUT):

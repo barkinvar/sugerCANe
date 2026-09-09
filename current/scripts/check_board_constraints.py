@@ -1,22 +1,27 @@
 """Final-native-board checks for assembly, selector and critical-route intent."""
 from pathlib import Path
-import json,math,collections,hashlib
+import json,math,collections,hashlib,heapq
 import pcbnew as p
 R=Path(__file__).resolve().parents[1];b=p.LoadBoard(str(R/'hardware/FRC_Sensor_CAN.kicad_pcb'))
 parts=json.loads((R/'hardware/design/circuit.json').read_text())['parts']
 fps={f.GetReference():f for f in b.GetFootprints()}
 assert abs(p.ToMM(b.GetDesignSettings().GetBoardThickness())-1.6)<1e-6
 fitted=[r for r,c in parts.items() if not c.get('exclude_bom')]
-assert len(fitted)==119 and all(not fps[r].IsFlipped() for r in fitted)
-assert len([r for r in fitted if r.startswith('R')])==46
-assert len([r for r in fitted if r.startswith('C')])==34
+assert len(fitted)==135 and all(not fps[r].IsFlipped() for r in fitted)
+assert len([r for r in fitted if r.startswith('R')])==54
+assert len([r for r in fitted if r.startswith('C')])==38
 def pads(ref):return {d.GetNumber():d for d in fps[ref].Pads() if d.GetNumber()}
 def nets(ref):return {n:d.GetNetname() for n,d in pads(ref).items()}
 assert b.GetCopperLayerCount()==4
 assert 'U3' not in fps
-assert nets('U8')==parts['U8']['pins'] and nets('U9')==parts['U9']['pins']
-assert nets('U9')['1']=='V5_INTERNAL' and nets('U9')['6']=='V5_BOOST'
-assert nets('U7')['13']=='PG_12V' and nets('U9')['4']=='PG_12V' and nets('U5')['9']=='PG_12V'
+assert nets('U8')==parts['U8']['pins'] and nets('U9')=={k:v or '' for k,v in parts['U9']['pins'].items()}
+assert nets('U9')['4']=='BOOST_12V' and nets('U9')['5']=='SENSOR_12V'
+assert nets('U9')['6']=='FAULT_12V_N' and nets('U5')['9']=='FAULT_12V_N'
+assert nets('U7')['10']=='+3V3' and nets('U7')['11']=='GND' and not nets('U7')['13']
+assert nets('U4')['3']=='POWER_5V_EN' and nets('U5')['25']=='POWER_5V_EN'
+assert nets('U5')['30']=='POWER_12V_EN' and nets('Q3')['1']=='POWER_12V_EN'
+assert nets('Q2')['1']=='EFUSE_INHIBIT' and nets('R70')['1']=='BOOST_12V'
+assert nets('U5')['14']=='ADC_5V' and nets('U5')['15']=='ADC_12V'
 assert nets('U4')['4']=='FAULT_5V_N' and nets('U5')['10']=='FAULT_5V_N'
 assert 'R64' not in fps and 'NT1' not in fps
 selectors=[]
@@ -26,9 +31,10 @@ for ch in range(1,4):
  assert nets(a)=={'1':'SENSOR_5V','2':f'VPORT{ch}','3':'SENSOR_12V'}
  pp=pads(a);xx=[p.ToMM(pp[str(n)].GetPosition().x) for n in (1,2,3)]
  assert xx==sorted(xx) and all(abs(xx[i+1]-xx[i]-2)<1e-6 for i in (0,1))
- assert all(d.GetAttribute()==p.PAD_ATTRIB_PTH and abs(p.ToMM(d.GetDrillSize().x)-.8)<1e-6 for d in pp.values())
+ assert all(d.GetAttribute()==p.PAD_ATTRIB_PTH and abs(p.ToMM(d.GetDrillSize().x)-.85)<1e-6 for d in pp.values())
+ assert all(min(p.ToMM(d.GetSize()))>=1.35 for d in pp.values())
  assert all(not d.IsOnLayer(p.F_Paste) for d in pp.values())
- selectors.append(dict(reference=a,pads_left_to_right=list(nets(a).values())))
+ selectors.append(dict(reference=a,pads_left_to_right=list(nets(a).values()),drill_mm=.85,nominal_annulus_mm=.25))
  assert nets(f'Q{ch}01')=={'1':f'BIAS_UP{ch}_N','2':'+3V3','3':f'BIAS_SOURCE{ch}'}
  assert nets(f'Q{ch}02')=={'1':f'BIAS_DOWN{ch}','2':'GND','3':f'BIAS_SINK{ch}'}
  assert nets(f'R{ch}10')=={'1':f'BIAS_PORT{ch}','2':f'SIG{ch}'}
@@ -44,20 +50,61 @@ tracks=collections.defaultdict(list);vias=collections.Counter()
 for t in b.GetTracks():
  if isinstance(t,p.PCB_VIA):vias[t.GetNetname()]+=1
  else:
-  assert t.GetLayer() in (p.F_Cu,p.B_Cu) or (t.GetLayer()==p.In2_Cu and t.GetNetname() in {'+3V3','SENSOR_12V'}),'Unexpected inner-layer routing'
+  if t.GetLength()==0:continue
+  assert t.GetLayer() in (p.F_Cu,p.B_Cu) or (t.GetLayer()==p.In2_Cu and t.GetNetname() in {'+3V3','UART_RX','UART_TX','BIAS_UP2_N','ADC_5V','POWER_5V_EN','BIAS_DOWN2','POWER_12V_EN','BIAS_DOWN1'}),'Unexpected inner-layer routing'
   tracks[t.GetNetname()].append(t)
 critical={}
-for net in ['HSE_IN','HSE_OUT','BUCK_SW','BUCK_CB','BUCK_FB','BOOST_SW','BOOST_FB','BOOST_COMP','BOOST_COMP_RC']:
+for net in ['HSE_IN','HSE_OUT','HSE_XTAL_OUT','BUCK_SW','BUCK_CB','BUCK_FB','BOOST_SW','BOOST_FB','BOOST_COMP','BOOST_COMP_RC']:
  tt=tracks[net];assert tt,net
  length=sum(p.ToMM(t.GetLength()) for t in tt)
  assert vias[net]==0 and all(t.GetLayer()==p.F_Cu for t in tt),(net,vias[net])
  assert length<30,(net,length)
  critical[net]=dict(total_track_length_mm=length,vias=vias[net],all_top=True)
-widths={n:dict(total_track_length_mm=sum(p.ToMM(t.GetLength()) for t in tt),minimum_width_mm=min(p.ToMM(t.GetWidth()) for t in tt),via_count=vias[n]) for n,tt in tracks.items() if n in ('VIN_RAW','VIN_FUSED','VIN_PROT','V5_INTERNAL','SENSOR_5V','SENSOR_12V','VPORT1','VPORT2','VPORT3')}
+widths={n:dict(total_track_length_mm=sum(p.ToMM(t.GetLength()) for t in tt),minimum_width_mm=min(p.ToMM(t.GetWidth()) for t in tt),via_count=vias[n]) for n,tt in tracks.items() if n in ('VIN_RAW','VIN_FUSED','VIN_PROT','V5_INTERNAL','BOOST_12V','SENSOR_5V','SENSOR_12V','VPORT1','VPORT2','VPORT3')}
 for r in ['J1','J2','J3','J4','J5','J6']:
  f=fps[r];assert f.GetOrientationDegrees()==(180 if r in ['J1','J2','J3'] else 0)
  assert all(abs(p.ToMM(d.GetDrillSize().x)-1.1)<1e-6 for d in f.Pads())
 for record in json.loads((R/'hardware/library/3d/vendor_connectors.json').read_text()):
  for path,sha in [('source_file','vendor_sha256'),('model_file','model_sha256')]:assert hashlib.sha256((R/record[path]).read_bytes()).hexdigest()==record[sha]
-report=dict(result='PASS',fitted_top_parts=119,resistors=46,capacitors=34,board_thickness_mm=1.6,selectors=selectors,service_mapping=mapping,critical_routes=critical,inner_service_and_monitor_routes={net:sum(p.ToMM(t.GetLength()) for t in tracks[net] if t.GetLayer()==p.In2_Cu) for net in ['+3V3','SENSOR_12V']},power_net_geometry=widths,limitations='Track geometry inventory is not a thermal, impedance or trace-drop qualification. VIN_PROT includes narrow low-current enable branches; 3D and programming checks are nominal geometry, not physical fit.')
+report=dict(result='PASS',fitted_top_parts=135,resistors=54,capacitors=38,board_thickness_mm=1.6,selectors=selectors,service_mapping=mapping,critical_routes=critical,inner_service_and_monitor_routes={net:sum(p.ToMM(t.GetLength()) for t in tracks[net] if t.GetLayer()==p.In2_Cu) for net in sorted({'+3V3','UART_RX','UART_TX','BIAS_UP2_N','ADC_5V','POWER_5V_EN','BIAS_DOWN2','POWER_12V_EN','BIAS_DOWN1'})},power_net_geometry=widths,limitations='Track geometry inventory is not a thermal, impedance or trace-drop qualification. VIN_PROT includes narrow low-current enable branches; 3D and programming checks are nominal geometry, not physical fit.')
+# At least six plated thermal vias outside the exposed-pad paste window.
+u9=pads('U9')['9'];center=u9.GetPosition()
+thermal=[t for t in b.GetTracks() if isinstance(t,p.PCB_VIA) and t.GetNetname()=='GND' and (t.GetPosition()-center).EuclideanNorm()<p.FromMM(3)]
+assert len(thermal)>=6
+for t in thermal:assert not u9.HitTest(t.GetPosition()),'Unfilled via in U9 paste pad'
+assert all(abs(a-z)<1e-6 for a,z in zip(p.ToMM(u9.GetSize()),(2.4,3.1)))
+paste=[d for d in fps['U9'].Pads() if not d.GetNumber() and d.IsOnLayer(p.F_Paste)]
+assert len(paste)==4 and not u9.IsOnLayer(p.F_Paste)
+area=0
+for d in paste:
+ w,h=p.ToMM(d.GetSize());radius=p.ToMM(d.GetRoundRectCornerRadius())
+ area+=w*h-(4-math.pi)*radius*radius
+coverage=area/(2.4*3.1)
+assert .50<coverage<.65
+report['efuse_assembly']=dict(exposed_pad_mm=[2.4,3.1],external_ground_thermal_vias=len(thermal),paste_windows=len(paste),paste_coverage_fraction=coverage)
+# These explicit local paths prevent a future placement change from leaving
+# input bypass capacitors remote from the buck, despite passing ordinary DRC.
+def top_path(net,first,last):
+ graph=collections.defaultdict(list)
+ def key(at):return (at.x,at.y)
+ for t in tracks[net]:
+  if t.GetLayer()!=p.F_Cu:continue
+  a,z=key(t.GetStart()),key(t.GetEnd());length=p.ToMM(t.GetLength())
+  graph[a].append((z,length));graph[z].append((a,length))
+ start,goal=key(first.GetPosition()),key(last.GetPosition());queue=[(0,start)];best={start:0}
+ while queue:
+  length,node=heapq.heappop(queue)
+  if length!=best[node]:continue
+  if node==goal:return length
+  for nxt,delta in graph[node]:
+   if length+delta<best.get(nxt,float('inf')):
+    best[nxt]=length+delta;heapq.heappush(queue,(length+delta,nxt))
+ raise AssertionError(('Missing direct top-side bypass path',net))
+local={}
+for ref,vin_limit,gnd_limit in [('C2',5.5,10),('C3',2.2,6)]:
+ vin=top_path('VIN_PROT',pads(ref)['1'],pads('U1')['3'])
+ gnd=top_path('GND',pads(ref)['2'],pads('U1')['1'])
+ assert vin<vin_limit and gnd<gnd_limit,(ref,vin,gnd)
+ local[ref]=dict(vin_top_path_mm=vin,ground_top_path_mm=gnd)
+report['buck_local_bypass']=local
 (R/'reports/board_constraints.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

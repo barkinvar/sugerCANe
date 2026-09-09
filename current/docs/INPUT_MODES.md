@@ -1,6 +1,6 @@
-# Software input modes - Rev F
+# Software input modes - Rev G
 
-Rev F removes JP103/JP203/JP303. Each input has its own electronically controlled pull-up and pull-down. Select the mode in the desktop setup tool, CAN service CLI, or Java/C++ runtime API. This is an independent design with CANdi-like input choices; CTRE Phoenix and GrappleHook are not compatible protocols.
+Each input has its own electronically controlled pull-up and pull-down; there are no input-bias jumpers or solder selectors. Select the mode in the desktop setup tool, CAN service CLI, or Java/C++ runtime API. This is an independent design with CANdi-like input choices; CTRE Phoenix and GrappleHook are not compatible protocols.
 
 | Mode in setup tool | Electrical behavior | Default active condition | Typical use |
 |---|---|---|---|
@@ -20,7 +20,7 @@ The pull-up uses the internal **3.3 V rail regardless of sensor supply**. Its se
 
 Targets: positive 0–30 V input, LOW ≤1.2 V, HIGH ≥2.4 V, ±0.1 V ground-offset allowance. The compatibility budget allows 100 µA OFF leakage for NPN or PNP sensors. NPN LOW residual must remain ≤1.2 V at up to approximately 3.5 mA sink current. Verify the exact sensor datasheet. A nominal 5 V push-pull signal works with bias off. A 3.3 V open-drain output may use NPN mode if it tolerates the board's pull-up while the sensor is unpowered; otherwise use an external pull-up to its own supply with onboard bias off.
 
-Both switches default off through external gate resistors during reset and in the bootloader. Firmware applies saved modes during startup and suppresses measurements until input/rail settling completes. Removing a power cap does not disconnect SIGNAL; an enabled pull-up can inject current into an unpowered sensor. Set push-pull/bias-off before servicing an externally connected unpowered device. Reverse diode leakage is finite: the 10 kΩ 3.3 V rail bleed budgets up to about 0.61 V unpowered rail rise using the BAT46W 60°C reverse-leakage specification. This is not isolation or a guarantee at higher temperatures.
+Both switches default off through external gate resistors during reset and in the bootloader. Firmware applies saved modes during startup and suppresses measurements until input/rail settling completes. Removing a power cap does not disconnect SIGNAL; an enabled pull-up can inject current into an unpowered sensor. Set push-pull/bias-off before servicing an externally connected unpowered device. Reverse diode leakage is finite: the 10 kΩ 3.3 V rail bleed budgets about 0.61 V from the three bias diodes alone using the BAT46W 60°C specification. Charged sensor-rail capacitors can temporarily add current through the ADC dividers. This is not isolation or a whole-board unpowered-voltage guarantee.
 
 ## Floating detection and counts
 

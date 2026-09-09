@@ -71,8 +71,8 @@ def decode(api: int, data: bytes) -> dict:
         return dict(kind="diagnostic", transmit_queue_drops=drops, transmit_errors=tec,
                     receive_errors=rec, last_error_code=lec, bus_off=bool(flags & 1), error_passive=bool(flags & 2))
     if api == IDENTITY:
-        if data[4] != 6:
-            raise ValueError("not Rev F hardware")
+        if data[4] != 7:
+            raise ValueError("not Rev G hardware")
         bounded(data[5], 0, 63, "device ID")
         bounded(data[6], 1, 100, "debounce")
         bounded(data[7], 0, 7, "invert")

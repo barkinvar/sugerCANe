@@ -1,5 +1,6 @@
 #include "board.h"
 #include "board_service.h"
+#include "power.h"
 #include <string.h>
 /* First 192 bytes are vectors; this validated, retained cookie is outside .bss. */
 typedef struct {uint32_t magic,stay,crashes,crc;} boot_cookie;
@@ -49,8 +50,24 @@ static bool load(void *ctx,sc_config_record *c){(void)ctx;const sc_config_record
 static bool save(void *ctx,sc_config_record *c){(void)ctx;bool ok=board_config_store(c);board_can_standby(false);return ok;}
 static bool protected_boot(void *ctx){(void)ctx;return (FLASH->WRPR&255u)==252u;}
 static void reset(void *ctx,bool stay){(void)ctx;board_boot_request(stay);}
+#ifdef SC_APPLICATION
+static bool power(void *ctx,uint8_t mask,uint32_t now) {
+    (void)ctx;if(!sensor_power.available)return false;
+    sc_power_restart(&sensor_power,mask,now);board_power_set(sensor_power.enabled);return true;
+}
+static uint32_t rails(void *ctx,unsigned index) {
+    (void)ctx;
+    return index ? sensor_power.enabled|((uint32_t)sensor_power.good<<8)|((uint32_t)sensor_power.latched<<16)|((uint32_t)sensor_power.pending<<24) : sensor_power.mv[0]|((uint32_t)sensor_power.mv[1]<<16);
+}
+#endif
 void board_service_init(sc_service *s,bool boot) {
-    const sc_service_io io={0,read_flash,erase_flash,write_flash,send,load,save,protected_boot,reset};
+    const sc_service_io io={0,read_flash,erase_flash,write_flash,send,load,save,protected_boot,reset,
+#ifdef SC_APPLICATION
+        power,rails
+#else
+        0,0
+#endif
+    };
     sc_service_init(s,&io,(const uint8_t *)UID_BASE,boot);
 }
 __attribute__((naked,noreturn)) static void jump(uint32_t sp __attribute__((unused)),uint32_t pc __attribute__((unused))) {

@@ -37,19 +37,20 @@ static void gpio_af(GPIO_TypeDef *port, unsigned pin, unsigned af) {
 void board_gpio_init(void) {
     RCC->AHBENR |= RCC_AHBENR_GPIOAEN | RCC_AHBENR_GPIOBEN | RCC_AHBENR_GPIOFEN;
     (void)RCC->AHBENR;
-    GPIOA->BSRR = 1u << 8; /* Transceiver standby before GPIO output enable. */
-    GPIOB->BSRR = 1u << (3+16);
+    GPIOA->BSRR = (1u << 8) | (1u << (15+16)); /* Transceiver standby before GPIO output enable. */
+    GPIOB->BSRR = (1u << (3+16)) | (1u << (7+16));
     for (unsigned i=0;i<5;i++) gpio_mode(GPIOA,i,0);
-    /* PA3: converter PG; PA4: TPS2553 active-low fault. Both open drain. */
+    /* PA3: TPS259620 fault; PA4: TPS2553 active-low fault. Both open drain. */
     GPIOA->PUPDR = (GPIOA->PUPDR & ~((3u<<6)|(3u<<8))) | (1u<<6) | (1u<<8);
     GPIOA->BSRR=7u<<5; /* PMOS gates HIGH = off before output enable. */
     for (unsigned i=5;i<=7;i++) gpio_mode(GPIOA,i,1);
     gpio_mode(GPIOA,8,1);
-    gpio_mode(GPIOA,15,3);
+    gpio_mode(GPIOA,15,1); /* 5 V enable, default OFF. */
     for (unsigned i=0;i<=7;i++) gpio_mode(GPIOB,i,3);
     gpio_mode(GPIOB,3,1); /* Single status LED. */
-    GPIOB->BSRR=((1u<<0)|(1u<<1)|(1u<<4))<<16;
-    gpio_mode(GPIOB,0,1);gpio_mode(GPIOB,1,1);gpio_mode(GPIOB,4,1);
+    GPIOB->BSRR=((1u<<5)|(1u<<6)|(1u<<4))<<16;
+    gpio_mode(GPIOB,5,1);gpio_mode(GPIOB,6,1);gpio_mode(GPIOB,4,1);
+    gpio_mode(GPIOB,7,1); /* HIGH enables 12 V; PB0/PB1 remain analog. */
     /* PA13/14 retain SWD; HSE, UART and CAN are configured by their drivers. */
 }
 void board_voltage_guard_init(void) {
@@ -69,7 +70,7 @@ void board_voltage_guard_init(void) {
     if (PWR->CSR & PWR_CSR_PVDO) {
         board_safe_off();
         for (;;) {
-        } /* Independent watchdog reset; hardware sensor supplies remain independent. */
+        } /* Independent watchdog reset; sensor supplies have been disabled. */
     }
 }
 void PVD_VDDIO2_IRQHandler(void) {
@@ -103,15 +104,16 @@ void board_can_standby(bool value) {
 }
 void board_bias(uint8_t up,uint8_t down) {
     up&=7;down&=7;down&=(uint8_t)~up;
-    uint32_t gates=(down&3u)|((uint32_t)(down&4u)<<2);
-    if(((GPIOA->ODR>>5)&7u)==(7u^up) && (GPIOB->ODR&0x13u)==gates)return;
+    uint32_t gates=((uint32_t)(down&3u)<<5)|((uint32_t)(down&4u)<<2);
+    if(((GPIOA->ODR>>5)&7u)==(7u^up) && (GPIOB->ODR&0x70u)==gates)return;
     /* Disable both directions before enabling requested paths. */
     GPIOA->BSRR=7u<<5;
-    GPIOB->BSRR=((1u<<0)|(1u<<1)|(1u<<4))<<16;
+    GPIOB->BSRR=((1u<<5)|(1u<<6)|(1u<<4))<<16;
     GPIOA->BSRR=(uint32_t)up<<(5+16);
-    GPIOB->BSRR=(down&3u)|((uint32_t)(down&4u)<<2);
+    GPIOB->BSRR=((uint32_t)(down&3u)<<5)|((uint32_t)(down&4u)<<2);
 }
 void board_safe_off(void) {
+    board_power_set(0);
     board_bias(0,0);
     board_can_standby(true);
 }
@@ -322,4 +324,43 @@ bool board_config_store(sc_config_record *record) {
     FLASH->CR = FLASH_CR_LOCK;
     __enable_irq();
     return ok && sc_config_valid((const sc_config_record *)address);
+}
+
+/* Rev G: PA15 enables U4, PB7 drives the active-HIGH Q3 enable transistor. */
+void board_power_set(uint8_t enabled) {
+    GPIOA->BSRR=(enabled&2u)?(1u<<15):(1u<<(15+16));
+    GPIOB->BSRR=(enabled&1u)?(1u<<7):(1u<<(7+16));
+}
+bool board_adc_init(void) {
+    RCC->APB2ENR |= RCC_APB2ENR_ADC1EN;(void)RCC->APB2ENR;
+    RCC->CR2 |= RCC_CR2_HSI14ON;
+    if(!wait_bits(&RCC->CR2,RCC_CR2_HSI14RDY,RCC_CR2_HSI14RDY,10000u))return false;
+    ADC1->CFGR1=0;ADC1->CFGR2=0;ADC1->SMPR=7u; /* HSI14; 239.5-cycle acquisition. */
+    ADC1->CR=ADC_CR_ADCAL;
+    if(!wait_bits(&ADC1->CR,ADC_CR_ADCAL,0,10000u))return false;
+    ADC1_COMMON->CCR |= ADC_CCR_VREFEN;
+    /* >10 us VREFINT startup, and >4 ADC clocks after calibration. */
+    for(unsigned n=0;n<1000;n++)__NOP();
+    ADC1->ISR=ADC_ISR_ADRDY;ADC1->CR=ADC_CR_ADEN;
+    return wait_bits(&ADC1->ISR,ADC_ISR_ADRDY,ADC_ISR_ADRDY,10000u);
+}
+static bool adc_channel(unsigned channel,uint16_t *value) {
+    if(ADC1->CR&ADC_CR_ADSTART)return false;
+    ADC1->CHSELR=1u<<channel;
+    ADC1->ISR=ADC_ISR_EOC|ADC_ISR_EOS|ADC_ISR_OVR;
+    ADC1->CR |= ADC_CR_ADSTART;
+    if(!wait_bits(&ADC1->ISR,ADC_ISR_EOC,ADC_ISR_EOC,2000u))return false;
+    *value=(uint16_t)ADC1->DR;
+    return !(ADC1->ISR&ADC_ISR_OVR);
+}
+bool board_rail_read(uint16_t *mv12,uint16_t *mv5) {
+    uint16_t a,b,reference;
+    if(!adc_channel(8,&a) || !adc_channel(9,&b) || !adc_channel(17,&reference))return false;
+    const uint16_t calibration=*(const uint16_t *)0x1ffff7bau;
+    if(calibration<1000u || calibration>2000u || reference<1000u || reference>2200u)return false;
+    uint32_t vdda=(3300u*calibration+reference/2u)/reference;
+    if(vdda<2900u || vdda>3600u)return false;
+    *mv5=(uint16_t)(((uint32_t)a*vdda*11u+2047u)/4095u);
+    *mv12=(uint16_t)(((uint32_t)b*vdda*11u+2047u)/4095u);
+    return true;
 }

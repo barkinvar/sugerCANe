@@ -19,5 +19,6 @@ python scripts/build_factory_files.py
 python scripts/verify_manufacturing.py > reports/manufacturing/export-parity.log
 python scripts/verify_gerber_geometry.py > reports/manufacturing/geometry.log
 python scripts/verify_gerber_connectivity.py > reports/manufacturing/connectivity.log
+python scripts/check_order_readiness.py
 python scripts/write_validation_summary.py
-echo 'PASS: Rev F saved design, BOM, electrical budgets, firmware/drivers and exported fabrication checks'
+echo 'PASS: Rev G saved design, BOM, electrical budgets, firmware/drivers and exported fabrication checks'

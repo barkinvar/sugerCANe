@@ -37,7 +37,7 @@ class Board:
         self.write(GPIOA,0x28000000) # PA13/PA14 reset SWD alternate functions.
         self.write(RCC,3) # HSI on/ready.
         self.write(0x1ffff7ba,1500,2)
-        self.hse=True;self.pll=True;self.adc_ready=True;self.adc_samples={17:1500,4:1354,5:3102}
+        self.hse=True;self.pll=True;self.adc_ready=True;self.adc_samples={17:1500,8:564,9:1354}
         self.adc_status=0;self.adc_channels=[];self.uart_status=0xc0;self.tx=[]
         self.fifos=[[],[]];self.can_ack_init=True;self.flash_status=0;self.flash_unlocked=False;self.flash_key=0
         self.flash_writes=[];self.erases=[];self.cut_after=None;self.flash_error_after=None;self.trace=[];self.returned=False
@@ -127,16 +127,16 @@ passed('Only first two 4 KiB protection blocks locked; application/config must r
 b=Board();b.call('board_gpio_init')
 assert b.read(GPIOA+0x14)&(1<<8)
 for pin in range(5):assert mode(b,GPIOA,pin)==0
-assert mode(b,GPIOA,15)==3
+assert mode(b,GPIOA,15)==1
 for pin in [5,6,7]:assert mode(b,GPIOA,pin)==1
-for pin in [0,1,4]:assert mode(b,GPIOB,pin)==1
-assert b.read(GPIOA+0x14)&0xe0==0xe0 and b.read(GPIOB+0x14)&0x13==0
+for pin in [5,6,4]:assert mode(b,GPIOB,pin)==1
+assert b.read(GPIOA+0x14)&0xe0==0xe0 and b.read(GPIOB+0x14)&0x70==0
 for up in range(8):
     for down in range(8):
         b.call('board_bias',up,down)
         assert ((b.read(GPIOA+0x14)>>5)&7)==(7^up)
-        effective=down&~up;expected=(effective&3)|((effective&4)<<2)
-        assert b.read(GPIOB+0x14)&0x13==expected
+        effective=down&~up;expected=((effective&3)<<5)|((effective&4)<<2)
+        assert b.read(GPIOB+0x14)&0x70==expected
 b.call('board_bias',0,0)
 passed('All 64 compiled bias combinations: mapped gates, off defaults and no source/sink overlap')
 assert mode(b,GPIOA,8)==1 and mode(b,GPIOB,3)==1
@@ -144,6 +144,22 @@ for pin in [13,14]:assert mode(b,GPIOA,pin)==2
 b.call('board_status_led',1);assert b.read(GPIOB+0x14)&8
 b.call('board_status_led',0);assert not b.read(GPIOB+0x14)&8
 b.call('board_safe_off');assert b.read(GPIOA+0x14)&256
+assert mode(b,GPIOB,0)==3 and mode(b,GPIOB,1)==3 and mode(b,GPIOB,7)==1
+assert not b.read(GPIOA+0x14)&(1<<15) and not b.read(GPIOB+0x14)&(1<<7)
+for enabled in range(4):
+    b.call('board_power_set',enabled)
+    assert bool(b.read(GPIOA+0x14)&(1<<15))==bool(enabled&2)
+    assert bool(b.read(GPIOB+0x14)&(1<<7))==bool(enabled&1)
+b.call('board_safe_off')
+assert not b.read(GPIOA+0x14)&(1<<15) and not b.read(GPIOB+0x14)&(1<<7)
+passed('Rev G reset defaults and all four power enable combinations; safe-off disables both rails')
+assert b.call('board_adc_init')==1 and b.read(ADC+0x14)==7
+assert b.call('board_rail_read',RAM+0x300,RAM+0x302)==1
+assert abs(b.read(RAM+0x300,2)-12000)<15 and abs(b.read(RAM+0x302,2)-5000)<15
+assert b.adc_channels==[8,9,17]
+b.adc_samples[17]=800;assert b.call('board_rail_read',RAM+0x300,RAM+0x302)==0
+b.adc_samples[17]=1500;b.adc_ready=False;assert b.call('board_rail_read',RAM+0x300,RAM+0x302)==0
+passed('Compiled ADC8/ADC9/VREFINT conversion, factory calibration, invalid reference and timeout')
 b.call('SystemInit')
 assert bytes(b.u.mem_read(RAM,192))==bytes(b.u.mem_read(FLASH+0x2000,192))
 assert b.read(0x40010000)&3==3

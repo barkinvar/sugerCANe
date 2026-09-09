@@ -12,7 +12,7 @@ from firmware_image import unpack, TAG, APP_SIZE
 
 RX, TX = (10<<24)|(8<<16)|(0x300<<6), (10<<24)|(8<<16)|(0x301<<6)
 OPEN, PREFIX0, PREFIX1, PREFIX2, PROBE, CLOSE = range(1,7)
-INFO, BLINK, SAVE, BOOT, RUN, RATE, INPUTS = range(0x10,0x17)
+INFO, BLINK, SAVE, BOOT, RUN, RATE, INPUTS, POWER = range(0x10,0x18)
 SIZE, CRC, BEGIN, OFFSET, DATA, FINISH = range(0x20,0x26)
 MAGIC = 0x314d4353
 WIRE = struct.Struct('<BBHI')
@@ -116,12 +116,21 @@ class Client:
         self.uid=uid
     def info(self):
         flags=self.request(INFO,0);cfg=self.request(INFO,1);version=self.request(INFO,2)
-        if flags&255!=1 or flags>>24!=6:raise RuntimeError('Unsupported service/hardware version')
+        if flags&255!=1 or flags>>24!=7:raise RuntimeError('Unsupported service/hardware version')
         word=self.request(INFO,9)
-        return dict(input_config=word, **unpack_settings(word), uid=self.uid.hex(),mode='bootloader' if flags&256 else 'application',
+        rail_mv=self.request(INFO,10) if not flags&256 else 0
+        rail_state=self.request(INFO,11) if not flags&256 else 0
+        return dict(rail12_mV=rail_mv&65535,rail5_mV=rail_mv>>16,rail_enabled=rail_state&3,rail_good=(rail_state>>8)&3,rail_latched=(rail_state>>16)&3,rail_pending=(rail_state>>24)&3,input_config=word, **unpack_settings(word), uid=self.uid.hex(),mode='bootloader' if flags&256 else 'application',
                     configured=bool(flags&512),boot_protected=bool(flags&1024),
                     device_id=cfg&255,invert=(cfg>>8)&255,debounce=(cfg>>16)&255,
                     status_period=(cfg>>24)&255,version=f'{version>>16}.{(version>>8)&255}.{version&255}')
+    def power_reset(self, uid, rail='both'):
+        mask={'12v':1,'5v':2,'both':3}[rail]
+        self.select(uid)
+        if self.info()['mode']!='application':raise ValueError('Power reset requires the application')
+        self.request(POWER,mask,expect=mask)
+        time.sleep(.4)
+        return self.info()
     def reconnect(self, uid, *, mode=None):
         deadline=time.monotonic()+5
         while time.monotonic()<deadline:
@@ -186,7 +195,7 @@ def parser():
     p.add_argument('--interface',default='socketcan');p.add_argument('--channel',default='can0')
     sub=p.add_subparsers(dest='command',required=True)
     sub.add_parser('discover')
-    for command in ('info','blink','configure','update','run','rate'):
+    for command in ('info','blink','configure','update','run','rate','power-reset'):
         q=sub.add_parser(command);q.add_argument('--uid',required=True)
         if command=='configure':
             q.add_argument('--device',type=int,required=True);q.add_argument('--invert',type=int,required=True);q.add_argument('--debounce',type=int,required=True)
@@ -194,6 +203,7 @@ def parser():
             q.add_argument('--modes',help='Three comma-separated modes: push-pull,npn,pnp,float,keeper')
             q.add_argument('--active',help='Three active states: high,low,driven,floating,not-high,not-low')
         if command=='update':q.add_argument('--file',type=Path,required=True)
+        if command=='power-reset':q.add_argument('--rail',choices=('12v','5v','both'),default='both')
         if command=='rate':q.add_argument('--milliseconds',type=int,choices=(10,20,50),required=True)
     return p
 
@@ -205,6 +215,7 @@ def main():
         client=Client(connect(args));client.open()
         if args.command=='discover':result=client.discover()
         elif args.command=='configure':result=client.configure(args.uid,args.device,args.invert,args.debounce,args.modes,args.active)
+        elif args.command=='power-reset':result=client.power_reset(args.uid,args.rail)
         elif args.command=='update':result=client.update(args.uid,args.file.read_bytes())
         else:
             client.select(args.uid)

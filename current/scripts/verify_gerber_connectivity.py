@@ -102,7 +102,7 @@ manifest=json.loads((ROOT/'reports/manufacturing/board_manifest.json').read_text
 fps={x['reference']:x for x in manifest['components']}
 def pad(ref,pin):return next(q for q in fps[ref]['pads'] if q['number']==str(pin))
 def land(q,hx,hy):return box(q['x_mm']-hx,q['y_mm']-hy,q['x_mm']+hx,q['y_mm']+hy)
-ties=[] # Rev F has no intentional copper net ties.
+ties=[] # Rev G has no intentional copper net ties.
 alias={a:b for a,b,_ in ties}
 # Cut only the declared physical tie lands from the top copper, then rebuild
 # the plated-barrel graph. Non-tie component-pad labels must now be separated.
@@ -134,7 +134,7 @@ for side,layer in layers.items():
     cut_nets[cr(node)].add(n)
 extra_ties={str(i):sorted(n) for i,n in cut_nets.items() if len(n)>1}
 assert not extra_ties,('Short outside declared copper net ties',extra_ties)
-intentional_isolation=dict(method='Rev F has no intentional ties; independently rebuild all four copper layers and plated barrels and reject merged pad net identities',removed_tie_pairs=[[a,b] for a,b,_ in ties],extra_shorts=extra_ties,track_net_labels_used=False)
+intentional_isolation=dict(method='Rev G has no intentional ties; independently rebuild all four copper layers and plated barrels and reject merged pad net identities',removed_tie_pairs=[[a,b] for a,b,_ in ties],extra_shorts=extra_ties,track_net_labels_used=False)
 shorts={str(r):sorted(nets) for r,nets in root_nets.items() if len({alias.get(n,n) for n in nets})>1}
 opens={net:sorted(roots) for net,roots in net_roots.items() if len(roots)>1}
 orphan_area=0.0;orphan_count=0

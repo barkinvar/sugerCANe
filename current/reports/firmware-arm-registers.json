@@ -3,6 +3,8 @@
   "completed_checks": [
     "Only first two 4 KiB protection blocks locked; application/config must remain writable",
     "All 64 compiled bias combinations: mapped gates, off defaults and no source/sink overlap",
+    "Rev G reset defaults and all four power enable combinations; safe-off disables both rails",
+    "Compiled ADC8/ADC9/VREFINT conversion, factory calibration, invalid reference and timeout",
     "SC12 GPIO directions, SWD, LED, CAN standby and compiled SRAM vector remap",
     "8 MHz HSE to 48 MHz PLL, flash wait state and clock-security setup",
     "Bounded HSE startup failure",
@@ -15,10 +17,10 @@
     "34 compiled flash halfword power-cut cases and programming-error rejection",
     "UART RX overflow ordering and bounded TX buffer under flooding"
   ],
-  "elapsed_seconds": 0.4961865259683691,
+  "elapsed_seconds": 0.49083784501999617,
   "emulator": "Unicorn2.1.4 Cortex-M0",
-  "elf_sha256": "51a86c972994ef23a20508a38a567bf6257ad6a092901c556b20f3dd0b285cba",
-  "binary_sha256": "053a0009fd6069dcbd83ad1ed86ee1a885c868b616f9357e799a4a681661ff56",
+  "elf_sha256": "844e82164058919eace32fcb1810a581e282e3305f9f9caabed507e92e6a03ed",
+  "binary_sha256": "10768bd4b956db65c5138adb2bddb51843b3a37553546092799b0e28d0c0548d",
   "limits": "Execute the actual linked Cortex-M0 functions against explicit register models.\n\nUnicorn emulates CPU instructions, not STM32 peripherals. The small behavioral\nmodels below supply ready bits, FIFO contents, flash erase and GPIO\nBSRR effects. These tests check compiled register/pin intent and data handling;\nno electrical behavior, interrupt timing, CAN arbitration or silicon erratum is\nvalidated by this harness. Host application/core tests remain separate.",
   "sources": [
     "https://github.com/unicorn-engine/unicorn",

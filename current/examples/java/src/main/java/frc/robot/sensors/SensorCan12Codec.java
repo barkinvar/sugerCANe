@@ -100,7 +100,7 @@ public final class SensorCan12Codec {
   public static Identity identity(byte[] data) {
     frame(data);
     require(u8(data, 0) == VERSION, "unsupported protocol version");
-    require(u8(data, 4) == 6, "not Rev F hardware");
+    require(u8(data, 4) == 7, "not Rev G hardware");
     range(u8(data, 5), 0, 63, "device ID");
     range(u8(data, 6), 1, 100, "debounce");
     range(u8(data, 7), 0, 7, "invert mask");

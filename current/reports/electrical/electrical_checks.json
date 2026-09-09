@@ -4,7 +4,7 @@
     "logic_rail_fraction": 0.03,
     "comparator_offset_V": 0.0055,
     "input_bias_A_per_pin": 5e-08,
-    "shared_reference_inputs": 4,
+    "shared_reference_inputs": 3,
     "output_leakage_A": 1e-07,
     "output_low_range_V": [
       0,
@@ -14,12 +14,12 @@
   },
   "thresholds": {
     "rising_V": [
-      1.6620080724114707,
-      2.2747490344067343
+      1.664874859813305,
+      2.2715951254513653
     ],
     "falling_V": [
-      1.3982897899944913,
-      1.9357610430493746
+      1.4011564667299934,
+      1.9326081474578904
     ],
     "corners": 4096,
     "logic_low_target_V": 1.2,
@@ -55,37 +55,38 @@
       0.8
     ],
     "entry_resistance_assumption_ohm": 0.276,
-    "input_current_at_6V_A": 1.7027014045820295,
-    "protected_input_at_6V_V": 5.530054412335359,
-    "max_duty_budget": 0.9443693546578404,
+    "input_current_at_6V_A": 1.6615294018908018,
+    "protected_input_at_6V_V": 5.541417885078139,
+    "max_duty_budget": 0.9424327897491249,
     "input_fuse_A": 3,
-    "input_fuse_normal_current_fraction": 0.5675671348606764,
+    "input_fuse_normal_current_fraction": 0.5538431339636006,
     "LDO_loss_budget_W": 0.19224139165998866,
     "buck_peak_ripple_at22V_A": 1.1063068061729966,
     "sensor5_min_before_distribution_loss_V": 4.871299057272681,
     "sensor5_max_DC_budget_V": 5.222413916599886,
     "sensor12_DC_budget_V": [
-      11.644670864490974,
+      11.604060864490975,
       12.37457882094258
     ],
     "boost_PCB_drop_allowance_V": 0.12,
-    "boost_min_input_V": 4.644649057272681,
-    "boost_normal_input_A": 1.0324029294757828,
-    "buck_normal_output_A": 1.442402929475783,
-    "buck_both_limiters_max_plus_logic_A": 1.9121412289046114,
+    "boost_min_input_V": 4.793149057272681,
+    "boost_normal_input_A": 1.000417311420669,
+    "buck_normal_output_A": 1.410417311420669,
+    "buck_both_limiters_max_plus_logic_A": 1.9002712894194165,
+    "boost_fault_input_budget_A": 1.2944972570205424,
     "buck_continuous_rating_A": 2.0,
     "note": "Efficiency, wiring resistance and PCB drops are explicit planning allowances. Current sharing, inrush and both simultaneous faults need scope/thermal tests. Below 6V is brownout territory."
   },
   "current_limiters": {
-    "boost_input_limit_A": [
-      1.097753439859413,
-      1.3063671965057375
+    "12V_output_limit_A": [
+      0.3146989860430964,
+      0.4011267549004124
     ],
     "5V_limit_A": [
       0.3936195296966631,
       0.5057740323988739
     ],
-    "note": "Both TPS2553DBVR-1 switches latch off after overload deglitch. Boost input protection interrupts the inductor/diode DC path. Limits are branch input limits; 12V useful output remains 300mA."
+    "note": "U9 limits the protected 12 V output after the boost reservoir. U4 and U9 latch on their specified faults. MCU enables allow deliberate CAN reset; no automatic retry."
   },
   "capacitors": {
     "part": "CL31A226KAHNNNE",
@@ -118,10 +119,11 @@
     "input_TVS_standoff_V": 30,
     "entry_TVS_standoff_V": 22,
     "entry_TVS_specified_pulse_clamp_V": 35.5,
-    "buck_abs_max_V": 40,
+    "buck_abs_max_V": 38,
     "bulk_rating_V": 50,
     "input_series_fault_tolerance": "One series resistor; no longer survives that resistor shorting as a guaranteed fault case.",
-    "scope": "Unidirectional TVS provides negative surge clamping; not continuous negative signal operation, sustained overvoltage regulation or load-dump qualification."
+    "scope": "Unidirectional TVS provides negative surge clamping; not continuous negative signal operation, sustained overvoltage regulation or load-dump qualification.",
+    "specified_clamp_to_buck_abs_margin_V": 2.5
   },
   "status": "Numerical assertions passed; physical qualification not performed.",
   "regulated12": {
@@ -147,27 +149,64 @@
     },
     "compensation_resistor_ohm": 13000,
     "compensation_cap_F": 3.3e-08,
-    "inductor_peak_A": 1.6572008441498385,
+    "inductor_peak_A": 1.6335571997288607,
     "switch_limit_min_A": 2.0,
     "switch_limit_max_A": 3.2,
     "inductor_saturation_rating_A": 8,
     "diode_average_rating_A": 2,
     "diode_reverse_rating_V": 40,
-    "output_ripple_capacitive_budget_V": 0.020342371048602242,
+    "output_ripple_capacitive_budget_V": 0.019975315412957252,
     "output_cap_energy_J": 0.0050532966328587815,
-    "scope": "Typical bias curves plus engineering allowances, not guaranteed capacitance. The charged output bank can discharge before U9 interrupts a short. Test short insertion, hot-plug capacitance, SW overshoot and transient response."
+    "scope": "Typical bias curves plus engineering allowances, not guaranteed capacitance. The boost reservoir is upstream of U9. Only C71 and external sensor capacitance can discharge directly into a port short. Test short insertion, hot-plug capacitance, SW overshoot and transient response."
   },
   "rail_monitor": {
-    "nominal_rising_V": 9.276435959903129,
-    "rising_budget_V": [
-      8.03653370722218,
-      10.612128987651586
+    "type": "ADC8/ADC9, calibrated against factory VREFINT",
+    "divider_ratio": 11,
+    "divider_thevenin_ohm": 18181.81818181818,
+    "ADC_at_30V_max_V": 2.7459249971503477,
+    "filter_time_constant_us": 181.8181818181818,
+    "ADC_acquisition_cycles": 239.5,
+    "firmware_good_windows_mV": [
+      [
+        11100,
+        12900
+      ],
+      [
+        4550,
+        5500
+      ]
     ],
-    "falling_budget_V": [
-      7.91603370722218,
-      10.457335659802736
+    "UVLO_rising_budget_V": [
+      10.849098871998601,
+      11.38864910459678
     ],
-    "note": "Healthy-rail indicator only. Not a 12V tolerance monitor or ADC. U9 active fault also forces PG low."
+    "UVLO_falling_budget_V": [
+      9.928827781151263,
+      10.54924794114292
+    ],
+    "efuse_max_RON_loss_at_300mA_W": 0.01179,
+    "efuse_slew_ms_at_12V": [
+      10.132747779219484,
+      16.162184552140243
+    ],
+    "note": "Rail ADCs qualify sensor power, not user analog inputs. Precision and transient excursions need measurement. Hardware UVLO, current limit and thermal latch remain independent of software. Startup grace 200ms; healthy 100ms; running low voltage 20ms; deliberate CAN restart only.",
+    "ADC_error_budget": {
+      "gain_fraction": 0.025,
+      "offset_V_at_sensor_rail": 0.09,
+      "post_switch_copper_allowance_V": 0.06,
+      "predicted_normal_readings_12V": [
+        11.1654593428787,
+        12.773943291466143
+      ],
+      "predicted_normal_readings_5V": [
+        4.601016580840865,
+        5.442974264514882
+      ],
+      "scope": "Engineering budget including divider drift, VREF calibration/drift, ADC reference/channel errors, input leakage and settling. Requires meter/temperature correlation; health flags are not precision voltage compliance."
+    },
+    "charged_rail_ADC_injection_upper_bound_A": 8.831614924739004e-05,
+    "bias_plus_charged_rails_bleed_upper_bound_V": 1.5091168185921942,
+    "unpowered_scope": "Stored sensor-rail charge can feed the MCU clamp through the 200kohm series ADC paths. Bound ignores diode drops and divider ground legs; no energized reverse-output support or unpowered functional guarantee."
   },
   "passive_substitutions": {
     "LDO_effective_output_cap_budget_uF": 1.7078625,
@@ -184,10 +223,27 @@
     "npn_inactive_min_V": 2.5183829320046027,
     "pnp_inactive_max_V": 1.02919,
     "npn_max_sink_A": 0.0034595419847328244,
-    "unpowered_rail_max_V_at_60C": 0.6105000000000002,
+    "bias_diodes_only_unpowered_rail_V_at_60C": 0.6105000000000002,
     "probe_settle_ms": 2,
     "classification_confirmation_pairs": 2,
     "estimated_floating_discharge_10nF_ms": 0.09315582040049435,
     "limitations": "Sensor residual LOW must be <=1.2 V at ~3.5 mA. Leakage budgets are compatibility limits, not measured guarantees. BAT46W 20uA reverse limit is specified at 60C/75V; 10k rail bleed is not galvanic isolation. Forward .55V and hot MOSFET 15ohm are engineering allowances requiring bench/temperature verification. Float mode for slow signals only; test actual cable capacitance and sensor leakage."
+  },
+  "startup_and_default_off": {
+    "external_12V_capacitance_design_limit_uF": 100,
+    "external_capacitance_tolerance_budget": 0.2,
+    "worst_constant_load_charge_ms": 102.73309041263653,
+    "firmware_startup_grace_ms": 200,
+    "inhibit_gate_min_at_UVLO_V": 8.799098871998602,
+    "Q3_on_inhibit_gate_max_V": 0.0019037813570680893,
+    "MCU_reset_gate_max_allowance_V": 0.020499999999999997,
+    "Q2_normal_gate_max_V": 12.37457882094258,
+    "MOSFET_gate_absolute_max_V": 20,
+    "R70_leakage_allowance_A": 2e-05,
+    "scope": "Steady resistor/leakage bounds and constant-current capacitor charging. Hot RDS(on)=15ohm and MCU/low-VGS gate leakage are engineering allowances; qualify over intended temperature. 470uF standalone SPICE is a typical diagnostic beyond the 100uF supported design envelope. No fast transient, single-fault or PCB thermal qualification.",
+    "external_5V_capacitance_design_limit_uF": 22,
+    "five_volt_charge_budget_ms": 2.948511991996393,
+    "five_volt_rise_allowance_ms": 1.5,
+    "five_volt_fault_deglitch_min_ms": 5
   }
 }

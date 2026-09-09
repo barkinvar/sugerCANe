@@ -6,8 +6,9 @@ ROOT=Path(__file__).resolve().parents[1]
 parts=json.loads((ROOT/'hardware/design/circuit.json').read_text())['parts']
 path=ROOT/'hardware/FRC_Sensor_CAN.kicad_pcb'
 b=p.LoadBoard(str(path))
+footprints={f.GetReference():f for f in b.GetFootprints()}
 for ref,c in parts.items():
-    f=b.FindFootprintByReference(ref)
+    f=footprints.get(ref)
     assert f, ref
     f.SetValue(c['value'])
     for key,value in [('MPN',c.get('mpn','')),('Notes',c.get('note','')),

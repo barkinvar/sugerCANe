@@ -5,17 +5,17 @@
       "Application": "Pcbnew",
       "Version": "10.0.6"
     },
-    "CreationDate": "2026-09-08T17:41:30-07:00"
+    "CreationDate": "2026-09-09T03:49:57-07:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "FRC_Sensor_CAN",
       "GUID": "4652435f-5365-46e7-936f-725f43414e2e",
-      "Revision": "F"
+      "Revision": "G"
     },
     "Size": {
       "X": 52.05,
-      "Y": 64.05
+      "Y": 74.05
     },
     "LayerNumber": 4,
     "BoardThickness": 1.6,
@@ -33,10 +33,10 @@
     },
     {
       "Layers": "Inner",
-      "PadToPad": 0.2,
-      "PadToTrack": 0.2,
+      "PadToPad": 0.0,
+      "PadToTrack": 0.0,
       "TrackToTrack": 0.2,
-      "MinLineWidth": 0.2,
+      "MinLineWidth": 0.25,
       "TrackToRegion": 0.2,
       "RegionToRegion": 0.2
     }

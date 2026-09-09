@@ -5,7 +5,7 @@ import struct
 import time
 import unittest
 import zlib
-from can_service import Client, WIRE, INFO, SIZE, CRC, BEGIN, OFFSET, DATA, FINISH, SAVE, RATE, INPUTS, OPEN, MAGIC
+from can_service import Client, WIRE, INFO, SIZE, CRC, BEGIN, OFFSET, DATA, FINISH, SAVE, RATE, INPUTS, OPEN, MAGIC, POWER, RUN
 from firmware_image import APP_BASE, APP_SIZE, HEADER, TAG, pack, unpack
 
 LIB=pathlib.Path(__file__).resolve().parents[1]/'firmware/build/service_sim.so'
@@ -62,7 +62,7 @@ class Service(unittest.TestCase):
     def test_update_retries_and_running_version(self):
         self.bus.drops={DATA:3,FINISH:2};self.bus.duplicates={DATA,OFFSET,BEGIN}
         info=self.client.update(self.uids[0],pack(image()))
-        self.assertEqual(info['mode'],'application');self.assertEqual(info['version'],'0.7.0')
+        self.assertEqual(info['mode'],'application');self.assertEqual(info['version'],'0.8.0')
         self.assertTrue(all(self.bus.lib.sim_valid(n) for n in self.bus.nodes))
         self.assertEqual([self.bus.lib.sim_writes(n) for n in self.bus.nodes[1:]],[0,0])
     def test_bounds_protection_offsets_and_crc(self):
@@ -104,6 +104,16 @@ class Service(unittest.TestCase):
         self.assertEqual(self.client.info()['input_config'],0)
         for bad in (5,7,6<<9,1<<18,0xffffffff):
             with self.assertRaises(RuntimeError):self.client.request(INPUTS,bad)
+
+    def test_rail_readback_and_explicit_reset(self):
+        c=self.client;c.select(self.uids[0])
+        with self.assertRaisesRegex(ValueError,'application'):c.power_reset(self.uids[0])
+        c.request(RUN);self.bus.lib.sim_tick(self.bus.nodes[0],60);c.open();c.select(self.uids[0])
+        info=c.power_reset(self.uids[0],'12v')
+        self.assertEqual((info['rail12_mV'],info['rail5_mV']),(12000,5000))
+        self.assertEqual((info['rail_enabled'],info['rail_good'],info['rail_latched']),(3,3,0))
+        for bad in (0,4,255):
+            with self.assertRaises(RuntimeError):c.request(POWER,bad)
 
     def test_wrong_file_rejected_without_writes(self):
         raw=bytearray(pack(image()));raw[-1]^=1

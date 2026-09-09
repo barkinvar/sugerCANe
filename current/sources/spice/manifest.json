@@ -19,5 +19,12 @@
     "retrieved": "2026-09-08",
     "sha256": "be511c04e88f3ee164258712e0d936b7943f02256243ec4a0718985e002ac2ab",
     "note": "Plaintext transcribed from manufacturer web response, preserving model parameters and notice; server rejected direct download"
+  },
+  {
+    "file": "tps259620.lib",
+    "url": "https://www.ti.com/lit/zip/slvmd54a",
+    "retrieved": "2026-09-09",
+    "sha256": "e1750f8486d592fbdb100470d26b6d0c2f297b184723dfb0e1bf64001a639dd9",
+    "note": "Original unencrypted TPS259620_TRANS.lib, Final 1.00, PSpice 17.2, 09Aug2019. Thermal timing is dissipation-dependent, not ambient-temperature calibrated."
   }
 ]

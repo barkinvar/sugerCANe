@@ -78,6 +78,7 @@ ic('BUCK',[(3,'VIN','power_in'),(5,'EN','input')],[(6,'CB','passive'),(2,'SW','p
 ic('PMOS8',[(5,'D','passive'),(6,'D','passive'),(7,'D','passive'),(8,'D','passive')],
    [(1,'S','passive'),(2,'S','passive'),(3,'S','passive')],bottom=[(4,'G','input')])
 ic('LDO',[(1,'VIN','power_in'),(3,'EN','input')],[(5,'VOUT','power_out'),(4,'NC','no_connect')],bottom=[(2,'GND','power_in')])
+ic('EFUSE',[(4,'IN','power_in'),(3,'EN/UVLO','input'),(7,'ILM','passive')],[(5,'OUT','power_out'),(6,'FAULT_N','open_collector'),(8,'OVCSEL/OPEN','passive'),(2,'dVdt','passive')],bottom=[(1,'GND','power_in'),(9,'EP/GND','passive')],width=25.4)
 ic('LOADSW',[(1,'IN','power_in'),(3,'EN','input'),(5,'ILIM','passive')],[(6,'OUT','power_out'),(4,'FAULT_N','open_collector')],bottom=[(2,'GND','power_in')])
 ic('HSD',[(8,'VS','power_in'),(1,'IN','input'),(2,'DIAG_EN','input'),(4,'CL','passive')],
    [(7,'OUT','power_out'),(3,'FAULT_N','open_collector'),(5,'DELAY','passive')],
@@ -87,13 +88,13 @@ ic('CAN',[(1,'TXD','input'),(4,'RXD','output'),(8,'STB','input')],[(7,'CANH','bi
 ic('CAN_TVS',[(1,'IO1','passive'),(2,'IO2','passive')],[],bottom=[(3,'GND','passive')],width=10.16)
 # MCU package mapping: ST DS10111 / DocID025832 LQFP32.
 ic('MCU',[(2,'PF0/OSC_IN','input'),(3,'PF1/OSC_OUT','output'),(4,'NRST','bidirectional'),
- (6,'PA0/IN1','input'),(7,'PA1/IN2','input'),(8,'PA2/IN3','input'),(9,'PA3/12V_PG','bidirectional'),
- (10,'PA4/5V_FAULT','bidirectional'),(11,'PA5/UP1_N','output'),(27,'PB4/DOWN3','output'),(28,'PB5/NC','input'),
+ (6,'PA0/IN1','input'),(7,'PA1/IN2','input'),(8,'PA2/IN3','input'),(9,'PA3/12V_FAULT','bidirectional'),
+ (10,'PA4/5V_FAULT','bidirectional'),(11,'PA5/UP1_N','output'),(27,'PB4/DOWN3','output'),(28,'PB5/DOWN1','output'),
  (31,'PB8/BOOT0','input'),(23,'PA13/SWDIO','bidirectional'),(24,'PA14/SWCLK','input')],
  [(21,'PA11/CAN_RX','input'),(22,'PA12/CAN_TX','output'),(18,'PA8/CAN_STB','output'),
- (19,'PA9/UART_TX','output'),(20,'PA10/UART_RX','input'),(14,'PB0/DOWN1','output'),(15,'PB1/DOWN2','output'),
- (12,'PA6/UP2_N','output'),(13,'PA7/UP3_N','output'),(29,'PB6/NC','output'),(30,'PB7/NC','output'),
- (25,'PA15/NC','output'),(26,'PB3/STATUS','output')],
+ (19,'PA9/UART_TX','output'),(20,'PA10/UART_RX','input'),(14,'PB0/ADC_5V','input'),(15,'PB1/ADC_12V','input'),
+ (12,'PA6/UP2_N','output'),(13,'PA7/UP3_N','output'),(29,'PB6/DOWN2','output'),(30,'PB7/12V_EN','output'),
+ (25,'PA15/5V_EN','output'),(26,'PB3/STATUS','output')],
  top=[(1,'VDD','power_in'),(5,'VDDA','power_in'),(17,'VDDIO2','power_in')],
  bottom=[(16,'VSS','power_in'),(32,'VSS','power_in')],width=45.72)
 
@@ -125,9 +126,9 @@ for count in [2,3]:
     graphics=[rect((i-(count-1)/2)*pitch-1.27,-2.54,(i-(count-1)/2)*pitch+1.27,0) for i in range(count)]
     define(f'SEL{count}',{1:pins},{1:graphics},prefix='JP')
 
-SHEETS=['power','regulated_12v','sensor_power','controller','can','input1','input2','input3']
+SHEETS=['power','regulated_12v','sensor_power','rail_sense','controller','can','input1','input2','input3']
 TITLES={'boost':'Fixed 5 V boost and reservoir','power':'Battery entry and internal supplies','sensor_power':'Protected sensor power rails','controller':'Controller, clock, debug and status',
-        'regulated_12v':'Protected 5 V to 12 V boost','can':'CAN physical interface and termination',**{f'input{i}':f'Input {i}: fixed-threshold digital input' for i in range(1,5)}}
+        'rail_sense':'Sensor supply voltage measurements','regulated_12v':'Internal 5 V to 12 V converter','can':'CAN physical interface and termination',**{f'input{i}':f'Input {i}: fixed-threshold digital input' for i in range(1,5)}}
 rootid=uid('root')
 
 class Sheet:
@@ -190,7 +191,7 @@ class Sheet:
         self.place(ref,x,y)
     def save(self):
         text=f'(kicad_sch (version 20250114) (generator "eeschema") (uuid {q(uid("page_"+self.name))}) (paper "A3")\n'
-        text+=f'(title_block (title {q("SC12 - "+TITLES[self.name])}) (date "2026-09-08") (rev "F") (company "Original sensor interface design") (comment 1 "Prototype: bench validation required before robot use"))\n'
+        text+=f'(title_block (title {q("SC12 - "+TITLES[self.name])}) (date "2026-09-09") (rev "G") (company "Original sensor interface design") (comment 1 "Prototype: bench validation required before robot use"))\n'
         text+='(lib_symbols\n'+'\n'.join(SYMS[n]['text'].replace('(symbol '+q(n),'(symbol '+q('FRC_Sensor_CAN:'+n),1) for n in sorted(self.usedlibs))+')\n'
         text+='\n'.join(self.items)+'\n(embedded_fonts no))\n'
         (OUT/(self.name+'.kicad_sch')).write_text(text)
@@ -253,23 +254,31 @@ for n in ['1','3']:p.label('V5_INTERNAL',u[n])
 p.label('GND',u['2']);p.label('+3V3',u['5'],180)
 for c,net in [(c7,'V5_INTERNAL'),(c8,'+3V3'),(r4,'+3V3')]:p.label(net,c['1']);p.label('GND',c['2'])
 p.flag('GND',375.92,195.58);p.flag('VIN_PROT',375.92,215.9);p.flag('V5_INTERNAL',375.92,236.22)
-p.text('6-22 V input target. Single buck: 5.07 V nominal.\nProtected 12 V boost supply is on the next sheet.\nR1/R2 = 102k / 13.7k, 0.1%. The boost input is fed by this 5 V rail through U9.\nTP1 is ground; use selectors/capacitor pads for rail checks.',243,246,1.0)
+p.text('6-22 V input target. Single buck: 5.07 V nominal.\nProtected 12 V boost supply is on the next sheet.\nR1/R2 = 102k / 13.7k, 0.1%. The boost input is fed directly by this 5 V rail; U9 protects the 12 V output.\nTP1 is ground; use selectors/capacitor pads for rail checks.',243,246,1.0)
 
 p=pages['sensor_power']
-p.text('HARDWARE CURRENT LIMITING; NO FIRMWARE ENABLE',15,28,1.8)
-p.place('U4',85,70)
-for ref,x,y in [('R10',155,70),('C11',235,70),('C12',315,70)]:p.place(ref,x,y)
-p.text('5 V sensor output: TPS2553-1 latch-off version, EN tied to input.\n59k current-limit resistor. Cycle board power to clear overload.\nFAULT_N goes to MCU PA4, with a firmware-enabled pull-up.\nDesign target: 300mA combined load on this rail, not per connector.\nDo not back-power either sensor supply output.',25,110,1.5)
+p.text('5 V BRANCH: INDEPENDENT HARDWARE LIMIT + DEFAULT-OFF ENABLE',15,28,1.6)
+p.place('U4',80,65)
+for ref,x,y in [('R10',155,65),('R71',235,65),('C11',310,65),('C12',380,65)]:p.place(ref,x,y)
+p.text('PA15 high enables 5 V. R71 holds EN low through reset and initial programming.\nTPS2553-1 latches off after overload; deliberate CAN service recovery cycles EN.',20,93,1.2)
+p.text('12 V BRANCH: OUTPUT ISOLATION / CONTROLLED INRUSH / HARDWARE LIMIT',15,117,1.6)
+u=p.place('U9',90,155,only=['2','3','4','5','6','7','8'])
+path(p,u['1'],(u['1'][0],175.26),(u['9'][0],175.26),u['9']);p.label('GND',(u['1'][0],175.26))
+for ref,x,y in [('C65',195,145),('C71',275,145),('D5',350,145),('R62',195,185),('C70',275,185),('D6',350,185),('R68',40,225),('R69',110,225),('Q2',180,225),('R70',250,225),('Q3',320,225),('R75',390,225)]:p.place(ref,x,y)
+p.text('U9 is after the boost reservoir: sensor shorts do not directly discharge it.\nR70 uses raw 12 V to inhibit U9 through Q2; PB7 HIGH enables via Q3. R75 defaults OFF without MCU power.\nHardware UVLO requires about 11.1 V upstream.\nOVCSEL is intentionally open for the 13.8 V-class fault clamp. No reverse-powered output support.\nBoth rails: 300 mA useful load shared between all ports; protection never depends on firmware.',15,260,1.1)
 
 p=pages['regulated_12v']
-p.place('U9',80,65);p.place('U8',240,65)
-for ref,x,y in [('C65',45,120),('R62',115,120),('C60',190,120),('C61',270,120),('C66',350,120),
- ('L2',45,163),('D4',115,163),('C62',190,163),('C63',270,163),('C64',350,163),
- ('R60',45,205),('R61',115,205),('R63',190,205),('C69',270,205)]:p.place(ref,x,y)
-p.place('U7',65,245,unit=4)
-for ref,x in [('R65',155),('R66',245),('R67',335)]:p.place(ref,x,245)
-p.flag('SENSOR_12V',360,205)
-p.text('U9 limits BOOST INPUT current and latches OFF on overload; cycle input power to reset.\n12 V useful output: 300 mA shared. U7D senses rail voltage; U9 fault also pulls PG low.\n100nF soft start; 13k / 33nF compensation requires assembled-board loop and transient qualification.',15,272,1.05)
+p.place('U8',85,65)
+for ref,x,y in [('C60',200,65),('C61',275,65),('C66',350,65),('L2',65,125),('D4',145,125),('C62',220,125),('C63',290,125),('C64',360,125),('R60',65,190),('R61',145,190),('R63',230,190),('C69',325,190)]:p.place(ref,x,y)
+p.flag('BOOST_12V',365,230)
+p.text('The internal converter charges only its own reservoir. U9 on the sensor-power sheet ramps sensor loads separately.\n100 nF boost soft-start; 1 uF IN bypass plus 22 uF bulk. Feedback is sensed BEFORE the output eFuse.\n13k / 33 nF compensation and the 3.3 uH inductor are retained. Converter output is nominally 12.003 V.',15,257,1.2)
+
+p=pages['rail_sense']
+p.text('11:1 PRECISION DIVIDERS; PB0/PB1 ADC + INTERNAL VREFINT',15,30,1.8)
+for y,refs in [(80,['R72','R73','R74','C73']),(150,['R65','R66','R67','C72'])]:
+ for x,ref in zip([65,160,255,350],refs):p.place(ref,x,y)
+p.place('U7',90,220,unit=4)
+p.text('Each rail uses two series 100k 0.1% resistors and a 20k 0.1% bottom resistor.\n10 nF filtering; long ADC acquisition. 30 V at the divider maps to about 2.73 V.\nThese dividers measure the sensor supplies AFTER protection. Firmware validates voltage and fault flags.\nU7D is unused: inputs fixed to GND/+3V3 and output unconnected.',160,205,1.2)
 
 p=pages['controller']
 u=p.place('U5',95,95,only=[str(n) for n in range(1,33) if n not in [1,5,17,16,32]])
@@ -298,7 +307,7 @@ for i,ref in enumerate(['C20','C21','C22','C23','C24']):
     c=gp(p,ref,14+i*14,68,270);caps.append(c);p.label('GND',c['2'])
 nodes=[(c['1'][0],63*2.54) for c in caps];path(p,*nodes);p.label('+3V3',nodes[0])
 for c,node in zip(caps,nodes):p.wire(node,c['1']);p.junction(node)
-p.text('TC2050-IDC-NL mechanical footprint; CUSTOM electrical pinout.\nPin 6 is 3.3 V reference OUTPUT, never a programming power input.\nUnused GPIOs are unconnected and initialized to analog mode.\nPA3 monitors 12 V PG; PA4 monitors active-low 5 V fault. No rail ADCs.',20,220,1.5)
+p.text('TC2050-IDC-NL mechanical footprint; CUSTOM electrical pinout.\nPin 6 is 3.3 V reference OUTPUT, never a programming power input.\nPB0/PB1 read sensor-rail ADCs; PA15 enables 5 V and PB7 high disables 12 V.\nPA3/PA4 monitor active-low fault flags. PB5/PB6/PB4 are input pull-down controls.',20,220,1.5)
 
 p=pages['can']
 u=gp(p,'U6',30,25)
@@ -360,13 +369,13 @@ for ref,c in PARTS.items():
         assert (ref,u) in placed, f'Missing unit {ref}.{u}'
 for page in pages.values():page.save()
 
-root=f'(kicad_sch (version 20250114) (generator "eeschema") (uuid {q(rootid)}) (paper "A3") (title_block (title "FRC Sensor CAN") (date "2026-09-08") (rev "F") (comment 1 "Original design - custom WPILib CAN protocol")) (lib_symbols)'
+root=f'(kicad_sch (version 20250114) (generator "eeschema") (uuid {q(rootid)}) (paper "A3") (title_block (title "FRC Sensor CAN") (date "2026-09-09") (rev "G") (comment 1 "Original design - custom WPILib CAN protocol")) (lib_symbols)'
 for i,name in enumerate(SHEETS):
-    x=25+(i%4)*95;y=90+(i//4)*85;si=uid('sheet_'+name)
-    root+=f'(sheet (at {x} {y}) (size 75 45) (stroke (width .254) (type solid)) (fill (color 0 0 0 0)) (uuid {q(si)})'
-    root+=prop('Sheetname',TITLES[name],x,y-3,justify='left')+prop('Sheetfile',name+'.kicad_sch',x,y+48,justify='left')
+    x=25+(i%3)*130;y=90+(i//3)*60;si=uid('sheet_'+name)
+    root+=f'(sheet (at {x} {y}) (size 100 32) (stroke (width .254) (type solid)) (fill (color 0 0 0 0)) (uuid {q(si)})'
+    root+=prop('Sheetname',TITLES[name],x,y-3,justify='left')+prop('Sheetfile',name+'.kicad_sch',x,y+35,justify='left')
     root+=f'(instances (project "FRC_Sensor_CAN" (path {q("/"+rootid)} (page {q(i+2)})))))'
-root+=f'(text {q("FRC SENSOR CAN - REVISION F REGULATED PROTOTYPE")} (at 25 25 0) {fx(3.81,"left")} (uuid {q(uid("root_title"))}))'
+root+=f'(text {q("FRC SENSOR CAN - REVISION G REGULATED PROTOTYPE")} (at 25 25 0) {fx(3.81,"left")} (uuid {q(uid("root_title"))}))'
 root+=f'(text {q("Three fixed-threshold digital inputs. 6-22 V input; regulated 12 V and 5 V sensor power.\nSTM32F042 + TCAN3413. Digital status and edge counts over a custom team CAN protocol.\nNot a CTRE Phoenix-compatible device. Inspect and bench-test prototypes before robot use.")} (at 25 43 0) {fx(2,"left top")} (uuid {q(uid("root_note"))}))'
 root+='(sheet_instances (path "/" (page "1"))) (embedded_fonts no))\n'
 (OUT/'FRC_Sensor_CAN.kicad_sch').write_text(root)

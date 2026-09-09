@@ -2,14 +2,14 @@
 <export version="E">
   <design>
     <source>/home/neuro/candi-clone/current/hardware/FRC_Sensor_CAN.kicad_sch</source>
-    <date>2026-09-08T17:41:29</date>
+    <date>2026-09-09T03:49:56</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>FRC Sensor CAN</title>
         <company/>
-        <rev>F</rev>
-        <date>2026-09-08</date>
+        <rev>G</rev>
+        <date>2026-09-09</date>
         <source>FRC_Sensor_CAN.kicad_sch</source>
         <comment number="1" value="Original design - custom WPILib CAN protocol"/>
         <comment number="2" value=""/>
@@ -26,8 +26,8 @@
       <title_block>
         <title>SC12 - Battery entry and internal supplies</title>
         <company>Original sensor interface design</company>
-        <rev>F</rev>
-        <date>2026-09-08</date>
+        <rev>G</rev>
+        <date>2026-09-09</date>
         <source>power.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
         <comment number="2" value=""/>
@@ -40,12 +40,12 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="3" name="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/">
+    <sheet number="3" name="/Internal 5 V to 12 V converter/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/">
       <title_block>
-        <title>SC12 - Protected 5 V to 12 V boost</title>
+        <title>SC12 - Internal 5 V to 12 V converter</title>
         <company>Original sensor interface design</company>
-        <rev>F</rev>
-        <date>2026-09-08</date>
+        <rev>G</rev>
+        <date>2026-09-09</date>
         <source>regulated_12v.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
         <comment number="2" value=""/>
@@ -62,8 +62,8 @@
       <title_block>
         <title>SC12 - Protected sensor power rails</title>
         <company>Original sensor interface design</company>
-        <rev>F</rev>
-        <date>2026-09-08</date>
+        <rev>G</rev>
+        <date>2026-09-09</date>
         <source>sensor_power.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
         <comment number="2" value=""/>
@@ -76,12 +76,30 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="5" name="/Controller, clock, debug and status/" tstamps="/019a6503-7c65-5b55-a3b1-c6260b8ca8f2/">
+    <sheet number="5" name="/Sensor supply voltage measurements/" tstamps="/818c8a66-d8b7-5025-a928-883ae8cbdb06/">
+      <title_block>
+        <title>SC12 - Sensor supply voltage measurements</title>
+        <company>Original sensor interface design</company>
+        <rev>G</rev>
+        <date>2026-09-09</date>
+        <source>rail_sense.kicad_sch</source>
+        <comment number="1" value="Prototype: bench validation required before robot use"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/Controller, clock, debug and status/" tstamps="/019a6503-7c65-5b55-a3b1-c6260b8ca8f2/">
       <title_block>
         <title>SC12 - Controller, clock, debug and status</title>
         <company>Original sensor interface design</company>
-        <rev>F</rev>
-        <date>2026-09-08</date>
+        <rev>G</rev>
+        <date>2026-09-09</date>
         <source>controller.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
         <comment number="2" value=""/>
@@ -94,12 +112,12 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="6" name="/CAN physical interface and termination/" tstamps="/665b1307-6e60-5756-a0db-e1fad53bf5c9/">
+    <sheet number="7" name="/CAN physical interface and termination/" tstamps="/665b1307-6e60-5756-a0db-e1fad53bf5c9/">
       <title_block>
         <title>SC12 - CAN physical interface and termination</title>
         <company>Original sensor interface design</company>
-        <rev>F</rev>
-        <date>2026-09-08</date>
+        <rev>G</rev>
+        <date>2026-09-09</date>
         <source>can.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
         <comment number="2" value=""/>
@@ -112,12 +130,12 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="7" name="/Input 1: fixed-threshold digital input/" tstamps="/842f42b4-db0c-5b9a-83f5-42125535f27c/">
+    <sheet number="8" name="/Input 1: fixed-threshold digital input/" tstamps="/842f42b4-db0c-5b9a-83f5-42125535f27c/">
       <title_block>
         <title>SC12 - Input 1: fixed-threshold digital input</title>
         <company>Original sensor interface design</company>
-        <rev>F</rev>
-        <date>2026-09-08</date>
+        <rev>G</rev>
+        <date>2026-09-09</date>
         <source>input1.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
         <comment number="2" value=""/>
@@ -130,12 +148,12 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="8" name="/Input 2: fixed-threshold digital input/" tstamps="/b233f995-482f-5588-a202-3091dc68d400/">
+    <sheet number="9" name="/Input 2: fixed-threshold digital input/" tstamps="/b233f995-482f-5588-a202-3091dc68d400/">
       <title_block>
         <title>SC12 - Input 2: fixed-threshold digital input</title>
         <company>Original sensor interface design</company>
-        <rev>F</rev>
-        <date>2026-09-08</date>
+        <rev>G</rev>
+        <date>2026-09-09</date>
         <source>input2.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
         <comment number="2" value=""/>
@@ -148,12 +166,12 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="9" name="/Input 3: fixed-threshold digital input/" tstamps="/30a87cbd-88bf-524f-bf72-b44683ce5cbe/">
+    <sheet number="10" name="/Input 3: fixed-threshold digital input/" tstamps="/30a87cbd-88bf-524f-bf72-b44683ce5cbe/">
       <title_block>
         <title>SC12 - Input 3: fixed-threshold digital input</title>
         <company>Original sensor interface design</company>
-        <rev>F</rev>
-        <date>2026-09-08</date>
+        <rev>G</rev>
+        <date>2026-09-09</date>
         <source>input3.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
         <comment number="2" value=""/>
@@ -329,14 +347,14 @@
       <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
       <fields>
         <field name="MPN">CL21B105KBFNNNE</field>
-        <field name="Notes">Rev F sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance.</field>
+        <field name="Notes">Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance.</field>
         <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
       <property name="MPN" value="CL21B105KBFNNNE"/>
-      <property name="Notes" value="Rev F sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."/>
+      <property name="Notes" value="Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."/>
       <property name="Sheetname" value="Battery entry and internal supplies"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Battery entry and internal supplies/" tstamps="/fb3c0a9e-b322-5632-9eb0-a957beaadad4/"/>
@@ -355,14 +373,14 @@
       <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
       <fields>
         <field name="MPN">CL21B475KAFNNNE</field>
-        <field name="Notes">Rev F sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance.</field>
+        <field name="Notes">Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance.</field>
         <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
       <property name="MPN" value="CL21B475KAFNNNE"/>
-      <property name="Notes" value="Rev F sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."/>
+      <property name="Notes" value="Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."/>
       <property name="Sheetname" value="Battery entry and internal supplies"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Battery entry and internal supplies/" tstamps="/fb3c0a9e-b322-5632-9eb0-a957beaadad4/"/>
@@ -766,9 +784,9 @@
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
       <property name="MPN" value="CL31A226KAHNNNE"/>
       <property name="Notes" value="22uF 25V X5R; effective capacitance budget uses manufacturer DC-bias curve."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
+      <property name="Sheetname" value="Internal 5 V to 12 V converter"/>
       <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
+      <sheetpath names="/Internal 5 V to 12 V converter/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
       <tstamps>c291e9df-d649-5339-8638-dce159c32f1e</tstamps>
       <units>
         <unit name="A">
@@ -780,21 +798,21 @@
       </units>
     </comp>
     <comp ref="C61">
-      <value>100nF</value>
+      <value>1uF</value>
       <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
       <fields>
-        <field name="MPN">CL21B104KCFNNNE</field>
-        <field name="Notes">Local decoupling.</field>
+        <field name="MPN">CL21B105KBFNNNE</field>
+        <field name="Notes">1uF local TPS61085 IN bypass, adjacent to U8; C60 provides bulk capacitance.</field>
         <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
-      <property name="MPN" value="CL21B104KCFNNNE"/>
-      <property name="Notes" value="Local decoupling."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
+      <property name="MPN" value="CL21B105KBFNNNE"/>
+      <property name="Notes" value="1uF local TPS61085 IN bypass, adjacent to U8; C60 provides bulk capacitance."/>
+      <property name="Sheetname" value="Internal 5 V to 12 V converter"/>
       <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
+      <sheetpath names="/Internal 5 V to 12 V converter/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
       <tstamps>1621a4b5-4a1c-5908-b8ad-35c7cb807e06</tstamps>
       <units>
         <unit name="A">
@@ -818,9 +836,9 @@
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
       <property name="MPN" value="CL31A226KAHNNNE"/>
       <property name="Notes" value="22uF 25V X5R; effective capacitance budget uses manufacturer DC-bias curve."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
+      <property name="Sheetname" value="Internal 5 V to 12 V converter"/>
       <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
+      <sheetpath names="/Internal 5 V to 12 V converter/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
       <tstamps>818bebd3-ec31-5894-b871-ef8eb25a45e6</tstamps>
       <units>
         <unit name="A">
@@ -844,9 +862,9 @@
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
       <property name="MPN" value="CL31A226KAHNNNE"/>
       <property name="Notes" value="22uF 25V X5R; effective capacitance budget uses manufacturer DC-bias curve."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
+      <property name="Sheetname" value="Internal 5 V to 12 V converter"/>
       <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
+      <sheetpath names="/Internal 5 V to 12 V converter/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
       <tstamps>5e86b437-27f1-5b68-b62f-511ba364dd3d</tstamps>
       <units>
         <unit name="A">
@@ -870,36 +888,10 @@
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
       <property name="MPN" value="CL31A226KAHNNNE"/>
       <property name="Notes" value="22uF 25V X5R; effective capacitance budget uses manufacturer DC-bias curve."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
+      <property name="Sheetname" value="Internal 5 V to 12 V converter"/>
       <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
+      <sheetpath names="/Internal 5 V to 12 V converter/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
       <tstamps>a94c5ea0-5c07-5cb6-b671-6fb46d5b010b</tstamps>
-      <units>
-        <unit name="A">
-          <pins>
-            <pin num="1"/>
-            <pin num="2"/>
-          </pins>
-        </unit>
-      </units>
-    </comp>
-    <comp ref="C65">
-      <value>100nF</value>
-      <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
-      <fields>
-        <field name="MPN">CL21B104KCFNNNE</field>
-        <field name="Notes">Local decoupling.</field>
-        <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
-        <field name="Datasheet"/>
-        <field name="Description"/>
-      </fields>
-      <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
-      <property name="MPN" value="CL21B104KCFNNNE"/>
-      <property name="Notes" value="Local decoupling."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
-      <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
-      <tstamps>d0f743d9-658e-512e-97c6-df453798e463</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -914,17 +906,17 @@
       <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
       <fields>
         <field name="MPN">CL21B104KCFNNNE</field>
-        <field name="Notes">100nF soft-start; qualify startup with full sensor capacitance.</field>
+        <field name="Notes">Boost soft-start charges only the local reservoir; external sensor capacitance ramps separately through U9.</field>
         <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
       <property name="MPN" value="CL21B104KCFNNNE"/>
-      <property name="Notes" value="100nF soft-start; qualify startup with full sensor capacitance."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
+      <property name="Notes" value="Boost soft-start charges only the local reservoir; external sensor capacitance ramps separately through U9."/>
+      <property name="Sheetname" value="Internal 5 V to 12 V converter"/>
       <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
+      <sheetpath names="/Internal 5 V to 12 V converter/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
       <tstamps>0e730a06-fd0e-53fa-9b30-dae0aae56ca6</tstamps>
       <units>
         <unit name="A">
@@ -948,9 +940,9 @@
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
       <property name="MPN" value="CC0805KRX7R9BB333"/>
       <property name="Notes" value="13k/33nF Type-II compensation; low crossover analytical screen, physical loop qualification required."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
+      <property name="Sheetname" value="Internal 5 V to 12 V converter"/>
       <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
+      <sheetpath names="/Internal 5 V to 12 V converter/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
       <tstamps>9b027b97-fe37-5f8d-b31c-8210fe605760</tstamps>
       <units>
         <unit name="A">
@@ -966,17 +958,17 @@
       <footprint>FRC_Sensor_CAN:D_SMA</footprint>
       <fields>
         <field name="MPN">B240A-13-F</field>
-        <field name="Notes">2A 40V Schottky rectifier; cathode on SENSOR_12V. U9 interrupts short-circuit DC path.</field>
+        <field name="Notes">2A 40V Schottky rectifier; cathode on BOOST_12V, before U9 output protection.</field>
         <field name="Footprint">FRC_Sensor_CAN:D_SMA</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="D" description=""/>
       <property name="MPN" value="B240A-13-F"/>
-      <property name="Notes" value="2A 40V Schottky rectifier; cathode on SENSOR_12V. U9 interrupts short-circuit DC path."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
+      <property name="Notes" value="2A 40V Schottky rectifier; cathode on BOOST_12V, before U9 output protection."/>
+      <property name="Sheetname" value="Internal 5 V to 12 V converter"/>
       <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
+      <sheetpath names="/Internal 5 V to 12 V converter/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
       <tstamps>de667c27-d187-5e5a-8819-737bde89244d</tstamps>
       <units>
         <unit name="A">
@@ -992,17 +984,17 @@
       <footprint>FRC_Sensor_CAN:L_Bourns_SRP5030T</footprint>
       <fields>
         <field name="MPN">SRP5030TA-3R3M</field>
-        <field name="Notes">3.3uH; retained 5A RMS / 8A saturation part, above 3.2A maximum converter switch threshold.</field>
+        <field name="Notes">3.3uH; 5A RMS and 8A at 20% inductance loss. Output eFuse prevents a sensor short directly discharging through this inductor.</field>
         <field name="Footprint">FRC_Sensor_CAN:L_Bourns_SRP5030T</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="L" description=""/>
       <property name="MPN" value="SRP5030TA-3R3M"/>
-      <property name="Notes" value="3.3uH; retained 5A RMS / 8A saturation part, above 3.2A maximum converter switch threshold."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
+      <property name="Notes" value="3.3uH; 5A RMS and 8A at 20% inductance loss. Output eFuse prevents a sensor short directly discharging through this inductor."/>
+      <property name="Sheetname" value="Internal 5 V to 12 V converter"/>
       <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
+      <sheetpath names="/Internal 5 V to 12 V converter/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
       <tstamps>881f402b-fbce-5770-80d6-df011d0d33ff</tstamps>
       <units>
         <unit name="A">
@@ -1026,9 +1018,9 @@
       <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
       <property name="MPN" value="RT0805BRD07100KL"/>
       <property name="Notes" value="Feedback upper arm, retained 0.1% 100k."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
+      <property name="Sheetname" value="Internal 5 V to 12 V converter"/>
       <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
+      <sheetpath names="/Internal 5 V to 12 V converter/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
       <tstamps>e446bd67-06a4-5f6f-8a0c-f03594a1a88e</tstamps>
       <units>
         <unit name="A">
@@ -1052,36 +1044,10 @@
       <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
       <property name="MPN" value="RC0805FR-0711K5L"/>
       <property name="Notes" value="Feedback lower arm, 1%. 12.003V nominal with 1.238V reference."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
+      <property name="Sheetname" value="Internal 5 V to 12 V converter"/>
       <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
+      <sheetpath names="/Internal 5 V to 12 V converter/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
       <tstamps>a0630cf8-87a5-5093-a917-bf9500346cb1</tstamps>
-      <units>
-        <unit name="A">
-          <pins>
-            <pin num="1"/>
-            <pin num="2"/>
-          </pins>
-        </unit>
-      </units>
-    </comp>
-    <comp ref="R62">
-      <value>21.5k</value>
-      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
-      <fields>
-        <field name="MPN">RC0805FR-0721K5L</field>
-        <field name="Notes">Sets BOOST INPUT limit; about 1.20A nominal, not 12V output current. Rated useful output remains 300mA shared.</field>
-        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
-        <field name="Datasheet"/>
-        <field name="Description"/>
-      </fields>
-      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
-      <property name="MPN" value="RC0805FR-0721K5L"/>
-      <property name="Notes" value="Sets BOOST INPUT limit; about 1.20A nominal, not 12V output current. Rated useful output remains 300mA shared."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
-      <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
-      <tstamps>ef590027-e898-51ee-9275-cab8510be898</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1104,9 +1070,9 @@
       <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
       <property name="MPN" value="RC0805FR-0713KL"/>
       <property name="Notes" value="13k compensation resistor; 33nF lowers compensation zero for derated output bank."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
+      <property name="Sheetname" value="Internal 5 V to 12 V converter"/>
       <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
+      <sheetpath names="/Internal 5 V to 12 V converter/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
       <tstamps>b0d10555-be32-5d12-8390-bc574352b9cd</tstamps>
       <units>
         <unit name="A">
@@ -1117,155 +1083,23 @@
         </unit>
       </units>
     </comp>
-    <comp ref="R65">
-      <value>100k</value>
-      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
-      <fields>
-        <field name="MPN">0805W8F1003T5E</field>
-        <field name="Notes">12V rail-monitor upper divider.</field>
-        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
-        <field name="Datasheet"/>
-        <field name="Description"/>
-      </fields>
-      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
-      <property name="MPN" value="0805W8F1003T5E"/>
-      <property name="Notes" value="12V rail-monitor upper divider."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
-      <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
-      <tstamps>5db3b6a3-64ad-51e3-87c1-40cdf2641cb0</tstamps>
-      <units>
-        <unit name="A">
-          <pins>
-            <pin num="1"/>
-            <pin num="2"/>
-          </pins>
-        </unit>
-      </units>
-    </comp>
-    <comp ref="R66">
-      <value>1.8k</value>
-      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
-      <fields>
-        <field name="MPN">RC0805FR-071K8L</field>
-        <field name="Notes">Rail monitor ~9.3V rising nominal, not a calibrated voltage measurement.</field>
-        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
-        <field name="Datasheet"/>
-        <field name="Description"/>
-      </fields>
-      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
-      <property name="MPN" value="RC0805FR-071K8L"/>
-      <property name="Notes" value="Rail monitor ~9.3V rising nominal, not a calibrated voltage measurement."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
-      <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
-      <tstamps>d4101146-580c-5439-8390-286aa4fea3a1</tstamps>
-      <units>
-        <unit name="A">
-          <pins>
-            <pin num="1"/>
-            <pin num="2"/>
-          </pins>
-        </unit>
-      </units>
-    </comp>
-    <comp ref="R67">
-      <value>2.2M</value>
-      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
-      <fields>
-        <field name="MPN">RC0805FR-072M2L</field>
-        <field name="Notes">Rail-monitor positive feedback; U9 fault can also pull PG low.</field>
-        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
-        <field name="Datasheet"/>
-        <field name="Description"/>
-      </fields>
-      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
-      <property name="MPN" value="RC0805FR-072M2L"/>
-      <property name="Notes" value="Rail-monitor positive feedback; U9 fault can also pull PG low."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
-      <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
-      <tstamps>416ee5dd-5cde-5a96-bb4c-18ff621d49f5</tstamps>
-      <units>
-        <unit name="A">
-          <pins>
-            <pin num="1"/>
-            <pin num="2"/>
-          </pins>
-        </unit>
-      </units>
-    </comp>
-    <comp ref="U7">
-      <value>LM339LV</value>
-      <footprint>FRC_Sensor_CAN:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
-      <fields>
-        <field name="MPN">LM339LVDR</field>
-        <field name="Notes">Three digital input comparators plus protected 12V rail monitor; all four share REF_LOGIC.</field>
-        <field name="Footprint">FRC_Sensor_CAN:SOIC-14_3.9x8.7mm_P1.27mm</field>
-        <field name="Datasheet"/>
-        <field name="Description"/>
-      </fields>
-      <libsource lib="FRC_Sensor_CAN" part="COMP4" description=""/>
-      <property name="MPN" value="LM339LVDR"/>
-      <property name="Notes" value="Three digital input comparators plus protected 12V rail monitor; all four share REF_LOGIC."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
-      <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
-      <tstamps>6ea5d576-105c-5dc7-be02-f711ee643760</tstamps>
-      <units>
-        <unit name="A">
-          <pins>
-            <pin num="5"/>
-            <pin num="4"/>
-            <pin num="2"/>
-          </pins>
-        </unit>
-        <unit name="B">
-          <pins>
-            <pin num="7"/>
-            <pin num="6"/>
-            <pin num="1"/>
-          </pins>
-        </unit>
-        <unit name="C">
-          <pins>
-            <pin num="9"/>
-            <pin num="8"/>
-            <pin num="14"/>
-          </pins>
-        </unit>
-        <unit name="D">
-          <pins>
-            <pin num="11"/>
-            <pin num="10"/>
-            <pin num="13"/>
-          </pins>
-        </unit>
-        <unit name="E">
-          <pins>
-            <pin num="3"/>
-            <pin num="12"/>
-          </pins>
-        </unit>
-      </units>
-    </comp>
     <comp ref="U8">
       <value>TPS61085DGKR</value>
       <footprint>FRC_Sensor_CAN:VSSOP-8_3x3mm_P0.65mm</footprint>
       <datasheet>https://www.ti.com/lit/ds/symlink/tps61085.pdf</datasheet>
       <fields>
         <field name="MPN">TPS61085DGKR</field>
-        <field name="Notes">5 V to 12 V nonsynchronous boost; 1.2 MHz. Branch input disconnected by U9 on overload. No output disconnect inside U8.</field>
+        <field name="Notes">5 V-fed boost, 1.2 MHz. Its output reservoir is isolated from sensor shorts and inrush by U9. No input-side sensor limiter.</field>
         <field name="Footprint">FRC_Sensor_CAN:VSSOP-8_3x3mm_P0.65mm</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps61085.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="BOOST12" description=""/>
       <property name="MPN" value="TPS61085DGKR"/>
-      <property name="Notes" value="5 V to 12 V nonsynchronous boost; 1.2 MHz. Branch input disconnected by U9 on overload. No output disconnect inside U8."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
+      <property name="Notes" value="5 V-fed boost, 1.2 MHz. Its output reservoir is isolated from sensor shorts and inrush by U9. No input-side sensor limiter."/>
+      <property name="Sheetname" value="Internal 5 V to 12 V converter"/>
       <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
+      <sheetpath names="/Internal 5 V to 12 V converter/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
       <tstamps>e57cf289-6dad-5a83-b746-8284b82492cb</tstamps>
       <units>
         <unit name="A">
@@ -1278,36 +1112,6 @@
             <pin num="2"/>
             <pin num="1"/>
             <pin num="8"/>
-          </pins>
-        </unit>
-      </units>
-    </comp>
-    <comp ref="U9">
-      <value>TPS2553DBVR-1</value>
-      <footprint>FRC_Sensor_CAN:SOT-23-6</footprint>
-      <fields>
-        <field name="MPN">TPS2553DBVR-1</field>
-        <field name="Notes">Latch-off switch BEFORE boost. R62 sets input current limit. Fault wired-AND with voltage comparator PG; power cycle to reset. Never substitute auto-retry variant.</field>
-        <field name="Footprint">FRC_Sensor_CAN:SOT-23-6</field>
-        <field name="Datasheet"/>
-        <field name="Description"/>
-      </fields>
-      <libsource lib="FRC_Sensor_CAN" part="LOADSW" description=""/>
-      <property name="MPN" value="TPS2553DBVR-1"/>
-      <property name="Notes" value="Latch-off switch BEFORE boost. R62 sets input current limit. Fault wired-AND with voltage comparator PG; power cycle to reset. Never substitute auto-retry variant."/>
-      <property name="Sheetname" value="Protected 5 V to 12 V boost"/>
-      <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
-      <sheetpath names="/Protected 5 V to 12 V boost/" tstamps="/a8b6029a-2c88-53a0-ae51-a49b2408ffb7/"/>
-      <tstamps>fc018dba-4f32-5fe0-b649-f07362040009</tstamps>
-      <units>
-        <unit name="A">
-          <pins>
-            <pin num="1"/>
-            <pin num="3"/>
-            <pin num="5"/>
-            <pin num="2"/>
-            <pin num="6"/>
-            <pin num="4"/>
           </pins>
         </unit>
       </units>
@@ -1364,6 +1168,190 @@
         </unit>
       </units>
     </comp>
+    <comp ref="C65">
+      <value>1uF</value>
+      <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">CL21B105KBFNNNE</field>
+        <field name="Notes">Local eFuse IN bypass. Three nearby boost reservoir capacitors provide bulk input energy and filtering.</field>
+        <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
+      <property name="MPN" value="CL21B105KBFNNNE"/>
+      <property name="Notes" value="Local eFuse IN bypass. Three nearby boost reservoir capacitors provide bulk input energy and filtering."/>
+      <property name="Sheetname" value="Protected sensor power rails"/>
+      <property name="Sheetfile" value="sensor_power.kicad_sch"/>
+      <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
+      <tstamps>d0f743d9-658e-512e-97c6-df453798e463</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C70">
+      <value>47nF</value>
+      <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">CL21B473KBCNNNC</field>
+        <field name="Notes">Separate sensor output ramp; approximately 13ms ideal ramp, longer if current limited.</field>
+        <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
+      <property name="MPN" value="CL21B473KBCNNNC"/>
+      <property name="Notes" value="Separate sensor output ramp; approximately 13ms ideal ramp, longer if current limited."/>
+      <property name="Sheetname" value="Protected sensor power rails"/>
+      <property name="Sheetfile" value="sensor_power.kicad_sch"/>
+      <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
+      <tstamps>7ed93028-b7a7-5602-92d7-4473b7af04f8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C71">
+      <value>1uF</value>
+      <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">CL21B105KBFNNNE</field>
+        <field name="Notes">Small capacitor after eFuse. Large converter reservoir stays before U9.</field>
+        <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
+      <property name="MPN" value="CL21B105KBFNNNE"/>
+      <property name="Notes" value="Small capacitor after eFuse. Large converter reservoir stays before U9."/>
+      <property name="Sheetname" value="Protected sensor power rails"/>
+      <property name="Sheetfile" value="sensor_power.kicad_sch"/>
+      <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
+      <tstamps>c7e47402-69e4-5c6a-b58e-d83994be5237</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D5">
+      <value>B240A</value>
+      <footprint>FRC_Sensor_CAN:D_SMA</footprint>
+      <fields>
+        <field name="MPN">B240A-13-F</field>
+        <field name="Notes">Output negative-transient Schottky clamp; same qualified 2A/40V SMA purchasing line as D4.</field>
+        <field name="Footprint">FRC_Sensor_CAN:D_SMA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="D" description=""/>
+      <property name="MPN" value="B240A-13-F"/>
+      <property name="Notes" value="Output negative-transient Schottky clamp; same qualified 2A/40V SMA purchasing line as D4."/>
+      <property name="Sheetname" value="Protected sensor power rails"/>
+      <property name="Sheetfile" value="sensor_power.kicad_sch"/>
+      <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
+      <tstamps>0263bd08-6e93-5ca0-a96a-035da5ebca8a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D6">
+      <value>SMAJ13A</value>
+      <footprint>FRC_Sensor_CAN:D_SMA</footprint>
+      <fields>
+        <field name="MPN">SMAJ13A-13-F</field>
+        <field name="Notes">Local eFuse input transient clamp. Review source energy; not a sustained overvoltage regulator.</field>
+        <field name="Footprint">FRC_Sensor_CAN:D_SMA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="D" description=""/>
+      <property name="MPN" value="SMAJ13A-13-F"/>
+      <property name="Notes" value="Local eFuse input transient clamp. Review source energy; not a sustained overvoltage regulator."/>
+      <property name="Sheetname" value="Protected sensor power rails"/>
+      <property name="Sheetfile" value="sensor_power.kicad_sch"/>
+      <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
+      <tstamps>b16bee30-fbc0-5266-aa3d-60e39b7ea106</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q2">
+      <value>BSS138BK</value>
+      <footprint>FRC_Sensor_CAN:SOT-23</footprint>
+      <fields>
+        <field name="MPN">BSS138BK,215</field>
+        <field name="Notes">Q2 shunts UVLO to ground by default, powered by raw BOOST_12V through R70. Remains disabled without MCU 3.3V.</field>
+        <field name="Footprint">FRC_Sensor_CAN:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="NMOS3" description=""/>
+      <property name="MPN" value="BSS138BK,215"/>
+      <property name="Notes" value="Q2 shunts UVLO to ground by default, powered by raw BOOST_12V through R70. Remains disabled without MCU 3.3V."/>
+      <property name="Sheetname" value="Protected sensor power rails"/>
+      <property name="Sheetfile" value="sensor_power.kicad_sch"/>
+      <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
+      <tstamps>1653224f-7b29-52e6-aeaf-9a31c3ba0b2a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q3">
+      <value>BSS138BK</value>
+      <footprint>FRC_Sensor_CAN:SOT-23</footprint>
+      <fields>
+        <field name="MPN">BSS138BK,215</field>
+        <field name="Notes">MCU HIGH turns on Q3, removing the Q2 inhibit. Loss of logic power or reset defaults to OFF through R75.</field>
+        <field name="Footprint">FRC_Sensor_CAN:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="NMOS3" description=""/>
+      <property name="MPN" value="BSS138BK,215"/>
+      <property name="Notes" value="MCU HIGH turns on Q3, removing the Q2 inhibit. Loss of logic power or reset defaults to OFF through R75."/>
+      <property name="Sheetname" value="Protected sensor power rails"/>
+      <property name="Sheetfile" value="sensor_power.kicad_sch"/>
+      <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
+      <tstamps>d63888d8-583b-5c99-97bb-e3cf67555324</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="R10">
       <value>59k</value>
       <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
@@ -1390,19 +1378,175 @@
         </unit>
       </units>
     </comp>
+    <comp ref="R62">
+      <value>2.61k</value>
+      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-072K61L</field>
+        <field name="Notes">Nominal output current limit about 357mA; user load rating remains 300mA shared on 12V.</field>
+        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
+      <property name="MPN" value="RC0805FR-072K61L"/>
+      <property name="Notes" value="Nominal output current limit about 357mA; user load rating remains 300mA shared on 12V."/>
+      <property name="Sheetname" value="Protected sensor power rails"/>
+      <property name="Sheetfile" value="sensor_power.kicad_sch"/>
+      <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
+      <tstamps>ef590027-e898-51ee-9275-cab8510be898</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R68">
+      <value>100k</value>
+      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">RT0805BRD07100KL</field>
+        <field name="Notes">Hardware UVLO upper resistor; converter must reach about 11.1V before sensor connection.</field>
+        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
+      <property name="MPN" value="RT0805BRD07100KL"/>
+      <property name="Notes" value="Hardware UVLO upper resistor; converter must reach about 11.1V before sensor connection."/>
+      <property name="Sheetname" value="Protected sensor power rails"/>
+      <property name="Sheetfile" value="sensor_power.kicad_sch"/>
+      <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
+      <tstamps>dee7b314-368b-5043-a7b3-474a2b7ca4cc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R69">
+      <value>12.1k</value>
+      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">RT0805BRD0712K1L</field>
+        <field name="Notes"/>
+        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
+      <property name="MPN" value="RT0805BRD0712K1L"/>
+      <property name="Notes" value=""/>
+      <property name="Sheetname" value="Protected sensor power rails"/>
+      <property name="Sheetfile" value="sensor_power.kicad_sch"/>
+      <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
+      <tstamps>bd749cbd-dd9e-5d3e-ab07-fa6f58d7ab6b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R70">
+      <value>100k</value>
+      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">0805W8F1003T5E</field>
+        <field name="Notes">Raw-rail pull-up defaults the Q2 inhibit ON independently of MCU power.</field>
+        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
+      <property name="MPN" value="0805W8F1003T5E"/>
+      <property name="Notes" value="Raw-rail pull-up defaults the Q2 inhibit ON independently of MCU power."/>
+      <property name="Sheetname" value="Protected sensor power rails"/>
+      <property name="Sheetfile" value="sensor_power.kicad_sch"/>
+      <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
+      <tstamps>78e859f9-8a5d-5467-83f5-017721161572</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R71">
+      <value>10k</value>
+      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">0805W8F1002T5E</field>
+        <field name="Notes">Default off through MCU reset and bootloader. 10k pulldown provides extra reset/leakage margin.</field>
+        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
+      <property name="MPN" value="0805W8F1002T5E"/>
+      <property name="Notes" value="Default off through MCU reset and bootloader. 10k pulldown provides extra reset/leakage margin."/>
+      <property name="Sheetname" value="Protected sensor power rails"/>
+      <property name="Sheetfile" value="sensor_power.kicad_sch"/>
+      <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
+      <tstamps>eecc4f43-5d8d-55b7-8964-a8e3238f5ffd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R75">
+      <value>10k</value>
+      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">0805W8F1002T5E</field>
+        <field name="Notes">100k gate pulldown keeps Q3 off during MCU reset/unpowered, so Q2 inhibits U9. 10k pulldown provides extra reset/leakage margin.</field>
+        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
+      <property name="MPN" value="0805W8F1002T5E"/>
+      <property name="Notes" value="100k gate pulldown keeps Q3 off during MCU reset/unpowered, so Q2 inhibits U9. 10k pulldown provides extra reset/leakage margin."/>
+      <property name="Sheetname" value="Protected sensor power rails"/>
+      <property name="Sheetfile" value="sensor_power.kicad_sch"/>
+      <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
+      <tstamps>bcecacfd-8eb3-56da-a26d-74462dbaa987</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="U4">
       <value>TPS2553DBVR-1</value>
       <footprint>FRC_Sensor_CAN:SOT-23-6</footprint>
       <fields>
         <field name="MPN">TPS2553DBVR-1</field>
-        <field name="Notes">TPS2553-1 LATCH-OFF version. Always enabled, hardware current limit. Reset overload by cycling board power.</field>
+        <field name="Notes">Independent 5 V hardware current limit; EN is MCU controlled with an external default-off pull-down. Exact TPS2553-1 latch-off variant.</field>
         <field name="Footprint">FRC_Sensor_CAN:SOT-23-6</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="LOADSW" description=""/>
       <property name="MPN" value="TPS2553DBVR-1"/>
-      <property name="Notes" value="TPS2553-1 LATCH-OFF version. Always enabled, hardware current limit. Reset overload by cycling board power."/>
+      <property name="Notes" value="Independent 5 V hardware current limit; EN is MCU controlled with an external default-off pull-down. Exact TPS2553-1 latch-off variant."/>
       <property name="Sheetname" value="Protected sensor power rails"/>
       <property name="Sheetfile" value="sensor_power.kicad_sch"/>
       <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
@@ -1416,6 +1560,302 @@
             <pin num="2"/>
             <pin num="6"/>
             <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U9">
+      <value>TPS259620DDAR</value>
+      <footprint>FRC_Sensor_CAN:TPS2596_DDA8</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps2596.pdf</datasheet>
+      <fields>
+        <field name="MPN">TPS259620DDAR</field>
+        <field name="Notes">Output-side eFuse. Exact latch-off TPS259620; 2.61k current setting, 47nF output slew. OVCSEL intentionally open for 13.8V-class fault clamp. MCU Q2 can disable/reset; no automatic retries or reverse-power support.</field>
+        <field name="Footprint">FRC_Sensor_CAN:TPS2596_DDA8</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps2596.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="EFUSE" description=""/>
+      <property name="MPN" value="TPS259620DDAR"/>
+      <property name="Notes" value="Output-side eFuse. Exact latch-off TPS259620; 2.61k current setting, 47nF output slew. OVCSEL intentionally open for 13.8V-class fault clamp. MCU Q2 can disable/reset; no automatic retries or reverse-power support."/>
+      <property name="Sheetname" value="Protected sensor power rails"/>
+      <property name="Sheetfile" value="sensor_power.kicad_sch"/>
+      <sheetpath names="/Protected sensor power rails/" tstamps="/0aacf9c7-060e-58ed-b759-3ac31ac433d8/"/>
+      <tstamps>fc018dba-4f32-5fe0-b649-f07362040009</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="4"/>
+            <pin num="3"/>
+            <pin num="7"/>
+            <pin num="1"/>
+            <pin num="9"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C72">
+      <value>10nF</value>
+      <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">CL21B103KBANNNC</field>
+        <field name="Notes">ADC anti-noise filter. Use long ADC acquisition time; firmware also measures internal VREFINT.</field>
+        <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
+      <property name="MPN" value="CL21B103KBANNNC"/>
+      <property name="Notes" value="ADC anti-noise filter. Use long ADC acquisition time; firmware also measures internal VREFINT."/>
+      <property name="Sheetname" value="Sensor supply voltage measurements"/>
+      <property name="Sheetfile" value="rail_sense.kicad_sch"/>
+      <sheetpath names="/Sensor supply voltage measurements/" tstamps="/818c8a66-d8b7-5025-a928-883ae8cbdb06/"/>
+      <tstamps>e8564bf8-2b9e-58b8-b58c-b0c52a737bdc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C73">
+      <value>10nF</value>
+      <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">CL21B103KBANNNC</field>
+        <field name="Notes">ADC anti-noise filter. Use long ADC acquisition time; firmware also measures internal VREFINT.</field>
+        <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
+      <property name="MPN" value="CL21B103KBANNNC"/>
+      <property name="Notes" value="ADC anti-noise filter. Use long ADC acquisition time; firmware also measures internal VREFINT."/>
+      <property name="Sheetname" value="Sensor supply voltage measurements"/>
+      <property name="Sheetfile" value="rail_sense.kicad_sch"/>
+      <sheetpath names="/Sensor supply voltage measurements/" tstamps="/818c8a66-d8b7-5025-a928-883ae8cbdb06/"/>
+      <tstamps>d2b29e53-508f-5b4c-8260-52769ff5dccf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R65">
+      <value>100k</value>
+      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">RT0805BRD07100KL</field>
+        <field name="Notes">Two series 100k resistors plus 20k bottom give 11:1 rail sensing; 30V maps to 2.73V.</field>
+        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
+      <property name="MPN" value="RT0805BRD07100KL"/>
+      <property name="Notes" value="Two series 100k resistors plus 20k bottom give 11:1 rail sensing; 30V maps to 2.73V."/>
+      <property name="Sheetname" value="Sensor supply voltage measurements"/>
+      <property name="Sheetfile" value="rail_sense.kicad_sch"/>
+      <sheetpath names="/Sensor supply voltage measurements/" tstamps="/818c8a66-d8b7-5025-a928-883ae8cbdb06/"/>
+      <tstamps>5db3b6a3-64ad-51e3-87c1-40cdf2641cb0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R66">
+      <value>100k</value>
+      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">RT0805BRD07100KL</field>
+        <field name="Notes"/>
+        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
+      <property name="MPN" value="RT0805BRD07100KL"/>
+      <property name="Notes" value=""/>
+      <property name="Sheetname" value="Sensor supply voltage measurements"/>
+      <property name="Sheetfile" value="rail_sense.kicad_sch"/>
+      <sheetpath names="/Sensor supply voltage measurements/" tstamps="/818c8a66-d8b7-5025-a928-883ae8cbdb06/"/>
+      <tstamps>d4101146-580c-5439-8390-286aa4fea3a1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R67">
+      <value>20k</value>
+      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">RT0805BRD0720KL</field>
+        <field name="Notes"/>
+        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
+      <property name="MPN" value="RT0805BRD0720KL"/>
+      <property name="Notes" value=""/>
+      <property name="Sheetname" value="Sensor supply voltage measurements"/>
+      <property name="Sheetfile" value="rail_sense.kicad_sch"/>
+      <sheetpath names="/Sensor supply voltage measurements/" tstamps="/818c8a66-d8b7-5025-a928-883ae8cbdb06/"/>
+      <tstamps>416ee5dd-5cde-5a96-bb4c-18ff621d49f5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R72">
+      <value>100k</value>
+      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">RT0805BRD07100KL</field>
+        <field name="Notes">Two series 100k resistors plus 20k bottom give 11:1 rail sensing; 30V maps to 2.73V.</field>
+        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
+      <property name="MPN" value="RT0805BRD07100KL"/>
+      <property name="Notes" value="Two series 100k resistors plus 20k bottom give 11:1 rail sensing; 30V maps to 2.73V."/>
+      <property name="Sheetname" value="Sensor supply voltage measurements"/>
+      <property name="Sheetfile" value="rail_sense.kicad_sch"/>
+      <sheetpath names="/Sensor supply voltage measurements/" tstamps="/818c8a66-d8b7-5025-a928-883ae8cbdb06/"/>
+      <tstamps>9ecac9ab-5c66-5691-b5b3-2f90b950d534</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R73">
+      <value>100k</value>
+      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">RT0805BRD07100KL</field>
+        <field name="Notes"/>
+        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
+      <property name="MPN" value="RT0805BRD07100KL"/>
+      <property name="Notes" value=""/>
+      <property name="Sheetname" value="Sensor supply voltage measurements"/>
+      <property name="Sheetfile" value="rail_sense.kicad_sch"/>
+      <sheetpath names="/Sensor supply voltage measurements/" tstamps="/818c8a66-d8b7-5025-a928-883ae8cbdb06/"/>
+      <tstamps>1d23f09b-b1ac-50a7-96a9-85914bf89986</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R74">
+      <value>20k</value>
+      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">RT0805BRD0720KL</field>
+        <field name="Notes"/>
+        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
+      <property name="MPN" value="RT0805BRD0720KL"/>
+      <property name="Notes" value=""/>
+      <property name="Sheetname" value="Sensor supply voltage measurements"/>
+      <property name="Sheetfile" value="rail_sense.kicad_sch"/>
+      <sheetpath names="/Sensor supply voltage measurements/" tstamps="/818c8a66-d8b7-5025-a928-883ae8cbdb06/"/>
+      <tstamps>413b3c40-229f-50ef-b396-5a02b3d15313</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U7">
+      <value>LM339LV</value>
+      <footprint>FRC_Sensor_CAN:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <fields>
+        <field name="MPN">LM339LVDR</field>
+        <field name="Notes">Three input comparators retained. Fourth comparator inputs tied to defined rails and output unconnected; rail measurements now use MCU ADC.</field>
+        <field name="Footprint">FRC_Sensor_CAN:SOIC-14_3.9x8.7mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="COMP4" description=""/>
+      <property name="MPN" value="LM339LVDR"/>
+      <property name="Notes" value="Three input comparators retained. Fourth comparator inputs tied to defined rails and output unconnected; rail measurements now use MCU ADC."/>
+      <property name="Sheetname" value="Sensor supply voltage measurements"/>
+      <property name="Sheetfile" value="rail_sense.kicad_sch"/>
+      <sheetpath names="/Sensor supply voltage measurements/" tstamps="/818c8a66-d8b7-5025-a928-883ae8cbdb06/"/>
+      <tstamps>6ea5d576-105c-5dc7-be02-f711ee643760</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="5"/>
+            <pin num="4"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="7"/>
+            <pin num="6"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="9"/>
+            <pin num="8"/>
+            <pin num="14"/>
+          </pins>
+        </unit>
+        <unit name="D">
+          <pins>
+            <pin num="11"/>
+            <pin num="10"/>
+            <pin num="13"/>
+          </pins>
+        </unit>
+        <unit name="E">
+          <pins>
+            <pin num="3"/>
+            <pin num="12"/>
           </pins>
         </unit>
       </units>
@@ -1503,14 +1943,14 @@
       <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
       <fields>
         <field name="MPN">CL21B105KBFNNNE</field>
-        <field name="Notes">Rev F sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance.</field>
+        <field name="Notes">Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance.</field>
         <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
       <property name="MPN" value="CL21B105KBFNNNE"/>
-      <property name="Notes" value="Rev F sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."/>
+      <property name="Notes" value="Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."/>
       <property name="Sheetname" value="Controller, clock, debug and status"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
       <sheetpath names="/Controller, clock, debug and status/" tstamps="/019a6503-7c65-5b55-a3b1-c6260b8ca8f2/"/>
@@ -1529,14 +1969,14 @@
       <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
       <fields>
         <field name="MPN">CL21B475KAFNNNE</field>
-        <field name="Notes">Rev F sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance.</field>
+        <field name="Notes">Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance.</field>
         <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
       <property name="MPN" value="CL21B475KAFNNNE"/>
-      <property name="Notes" value="Rev F sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."/>
+      <property name="Notes" value="Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."/>
       <property name="Sheetname" value="Controller, clock, debug and status"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
       <sheetpath names="/Controller, clock, debug and status/" tstamps="/019a6503-7c65-5b55-a3b1-c6260b8ca8f2/"/>
@@ -1746,14 +2186,14 @@
       <footprint>FRC_Sensor_CAN:LQFP-32_7x7mm_P0.8mm</footprint>
       <fields>
         <field name="MPN">STM32F042K6T6</field>
-        <field name="Notes">Three comparator inputs PA0/1/2. PA5/6/7 active-low pull-up gates; PB0/1/4 active-high pulldown gates. CAN service config; no software sensor-power control.</field>
+        <field name="Notes">PA0/1/2 digital sensors; PA5/6/7 pull-up gates; PB5/PB6/PB4 pull-down gates. PB0/PB1 measure sensor rails. PA15 enables 5V, PB7 high disables 12V. SWD/UART/CAN retained.</field>
         <field name="Footprint">FRC_Sensor_CAN:LQFP-32_7x7mm_P0.8mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="MCU" description=""/>
       <property name="MPN" value="STM32F042K6T6"/>
-      <property name="Notes" value="Three comparator inputs PA0/1/2. PA5/6/7 active-low pull-up gates; PB0/1/4 active-high pulldown gates. CAN service config; no software sensor-power control."/>
+      <property name="Notes" value="PA0/1/2 digital sensors; PA5/6/7 pull-up gates; PB5/PB6/PB4 pull-down gates. PB0/PB1 measure sensor rails. PA15 enables 5V, PB7 high disables 12V. SWD/UART/CAN retained."/>
       <property name="Sheetname" value="Controller, clock, debug and status"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
       <sheetpath names="/Controller, clock, debug and status/" tstamps="/019a6503-7c65-5b55-a3b1-c6260b8ca8f2/"/>
@@ -3640,6 +4080,26 @@
         <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="FRC_Sensor_CAN" part="EFUSE">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">EFUSE</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="dVdt" type="passive"/>
+        <pin num="3" name="EN/UVLO" type="input"/>
+        <pin num="4" name="IN" type="power_in"/>
+        <pin num="5" name="OUT" type="power_out"/>
+        <pin num="6" name="FAULT_N" type="open_collector"/>
+        <pin num="7" name="ILM" type="passive"/>
+        <pin num="8" name="OVCSEL/OPEN" type="passive"/>
+        <pin num="9" name="EP/GND" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="FRC_Sensor_CAN" part="L">
       <fields>
         <field name="Reference">L</field>
@@ -3716,13 +4176,13 @@
         <pin num="6" name="PA0/IN1" type="input"/>
         <pin num="7" name="PA1/IN2" type="input"/>
         <pin num="8" name="PA2/IN3" type="input"/>
-        <pin num="9" name="PA3/12V_PG" type="bidirectional"/>
+        <pin num="9" name="PA3/12V_FAULT" type="bidirectional"/>
         <pin num="10" name="PA4/5V_FAULT" type="bidirectional"/>
         <pin num="11" name="PA5/UP1_N" type="output"/>
         <pin num="12" name="PA6/UP2_N" type="output"/>
         <pin num="13" name="PA7/UP3_N" type="output"/>
-        <pin num="14" name="PB0/DOWN1" type="output"/>
-        <pin num="15" name="PB1/DOWN2" type="output"/>
+        <pin num="14" name="PB0/ADC_5V" type="input"/>
+        <pin num="15" name="PB1/ADC_12V" type="input"/>
         <pin num="16" name="VSS" type="power_in"/>
         <pin num="17" name="VDDIO2" type="power_in"/>
         <pin num="18" name="PA8/CAN_STB" type="output"/>
@@ -3732,12 +4192,12 @@
         <pin num="22" name="PA12/CAN_TX" type="output"/>
         <pin num="23" name="PA13/SWDIO" type="bidirectional"/>
         <pin num="24" name="PA14/SWCLK" type="input"/>
-        <pin num="25" name="PA15/NC" type="output"/>
+        <pin num="25" name="PA15/5V_EN" type="output"/>
         <pin num="26" name="PB3/STATUS" type="output"/>
         <pin num="27" name="PB4/DOWN3" type="output"/>
-        <pin num="28" name="PB5/NC" type="input"/>
-        <pin num="29" name="PB6/NC" type="output"/>
-        <pin num="30" name="PB7/NC" type="output"/>
+        <pin num="28" name="PB5/DOWN1" type="output"/>
+        <pin num="29" name="PB6/DOWN2" type="output"/>
+        <pin num="30" name="PB7/12V_EN" type="output"/>
         <pin num="31" name="PB8/BOOT0" type="input"/>
         <pin num="32" name="VSS" type="power_in"/>
       </pins>
@@ -3908,156 +4368,208 @@
       <node ref="U5" pin="5" pinfunction="VDDA_5" pintype="power_in"/>
       <node ref="U6" pin="3" pinfunction="VCC_3" pintype="power_in"/>
       <node ref="U6" pin="5" pinfunction="VIO_5" pintype="power_in"/>
+      <node ref="U7" pin="10" pinfunction="-_10" pintype="input"/>
       <node ref="U7" pin="3" pintype="power_in"/>
     </net>
-    <net code="2" name="BIAS_DOWN1" class="Default">
+    <net code="2" name="ADC5_DIV" class="Default">
+      <node ref="R72" pin="2" pintype="passive"/>
+      <node ref="R73" pin="1" pintype="passive"/>
+    </net>
+    <net code="3" name="ADC12_DIV" class="Default">
+      <node ref="R65" pin="2" pintype="passive"/>
+      <node ref="R66" pin="1" pintype="passive"/>
+    </net>
+    <net code="4" name="ADC_5V" class="Default">
+      <node ref="C73" pin="1" pintype="passive"/>
+      <node ref="R73" pin="2" pintype="passive"/>
+      <node ref="R74" pin="1" pintype="passive"/>
+      <node ref="U5" pin="14" pinfunction="PB0/ADC_5V_14" pintype="input"/>
+    </net>
+    <net code="5" name="ADC_12V" class="Default">
+      <node ref="C72" pin="1" pintype="passive"/>
+      <node ref="R66" pin="2" pintype="passive"/>
+      <node ref="R67" pin="1" pintype="passive"/>
+      <node ref="U5" pin="15" pinfunction="PB1/ADC_12V_15" pintype="input"/>
+    </net>
+    <net code="6" name="BIAS_DOWN1" class="Default">
       <node ref="Q102" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R112" pin="2" pintype="passive"/>
-      <node ref="U5" pin="14" pinfunction="PB0/DOWN1_14" pintype="output"/>
+      <node ref="U5" pin="28" pinfunction="PB5/DOWN1_28" pintype="output"/>
     </net>
-    <net code="3" name="BIAS_DOWN2" class="Default">
+    <net code="7" name="BIAS_DOWN2" class="Default">
       <node ref="Q202" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R212" pin="2" pintype="passive"/>
-      <node ref="U5" pin="15" pinfunction="PB1/DOWN2_15" pintype="output"/>
+      <node ref="U5" pin="29" pinfunction="PB6/DOWN2_29" pintype="output"/>
     </net>
-    <net code="4" name="BIAS_DOWN3" class="Default">
+    <net code="8" name="BIAS_DOWN3" class="Default">
       <node ref="Q302" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R312" pin="2" pintype="passive"/>
       <node ref="U5" pin="27" pinfunction="PB4/DOWN3_27" pintype="output"/>
     </net>
-    <net code="5" name="BIAS_PORT1" class="Default">
+    <net code="9" name="BIAS_PORT1" class="Default">
       <node ref="D102" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="R110" pin="1" pintype="passive"/>
     </net>
-    <net code="6" name="BIAS_PORT2" class="Default">
+    <net code="10" name="BIAS_PORT2" class="Default">
       <node ref="D202" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="R210" pin="1" pintype="passive"/>
     </net>
-    <net code="7" name="BIAS_PORT3" class="Default">
+    <net code="11" name="BIAS_PORT3" class="Default">
       <node ref="D302" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="R310" pin="1" pintype="passive"/>
     </net>
-    <net code="8" name="BIAS_SINK1" class="Default">
+    <net code="12" name="BIAS_SINK1" class="Default">
       <node ref="Q102" pin="3" pinfunction="D_3" pintype="passive"/>
       <node ref="R109" pin="2" pintype="passive"/>
     </net>
-    <net code="9" name="BIAS_SINK2" class="Default">
+    <net code="13" name="BIAS_SINK2" class="Default">
       <node ref="Q202" pin="3" pinfunction="D_3" pintype="passive"/>
       <node ref="R209" pin="2" pintype="passive"/>
     </net>
-    <net code="10" name="BIAS_SINK3" class="Default">
+    <net code="14" name="BIAS_SINK3" class="Default">
       <node ref="Q302" pin="3" pinfunction="D_3" pintype="passive"/>
       <node ref="R309" pin="2" pintype="passive"/>
     </net>
-    <net code="11" name="BIAS_SOURCE1" class="Default">
+    <net code="15" name="BIAS_SOURCE1" class="Default">
       <node ref="D102" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="Q101" pin="3" pinfunction="D_3" pintype="passive"/>
     </net>
-    <net code="12" name="BIAS_SOURCE2" class="Default">
+    <net code="16" name="BIAS_SOURCE2" class="Default">
       <node ref="D202" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="Q201" pin="3" pinfunction="D_3" pintype="passive"/>
     </net>
-    <net code="13" name="BIAS_SOURCE3" class="Default">
+    <net code="17" name="BIAS_SOURCE3" class="Default">
       <node ref="D302" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="Q301" pin="3" pinfunction="D_3" pintype="passive"/>
     </net>
-    <net code="14" name="BIAS_UP1_N" class="Default">
+    <net code="18" name="BIAS_UP1_N" class="Default">
       <node ref="Q101" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R111" pin="2" pintype="passive"/>
       <node ref="U5" pin="11" pinfunction="PA5/UP1_N_11" pintype="output"/>
     </net>
-    <net code="15" name="BIAS_UP2_N" class="Default">
+    <net code="19" name="BIAS_UP2_N" class="Default">
       <node ref="Q201" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R211" pin="2" pintype="passive"/>
       <node ref="U5" pin="12" pinfunction="PA6/UP2_N_12" pintype="output"/>
     </net>
-    <net code="16" name="BIAS_UP3_N" class="Default">
+    <net code="20" name="BIAS_UP3_N" class="Default">
       <node ref="Q301" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R311" pin="2" pintype="passive"/>
       <node ref="U5" pin="13" pinfunction="PA7/UP3_N_13" pintype="output"/>
     </net>
-    <net code="17" name="BOOST_COMP" class="Default">
+    <net code="21" name="BOOST_12V" class="Default">
+      <node ref="C62" pin="1" pintype="passive"/>
+      <node ref="C63" pin="1" pintype="passive"/>
+      <node ref="C64" pin="1" pintype="passive"/>
+      <node ref="C65" pin="1" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D6" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R60" pin="1" pintype="passive"/>
+      <node ref="R68" pin="1" pintype="passive"/>
+      <node ref="R70" pin="1" pintype="passive"/>
+      <node ref="U9" pin="4" pinfunction="IN_4" pintype="power_in"/>
+    </net>
+    <net code="22" name="BOOST_COMP" class="Default">
       <node ref="R63" pin="1" pintype="passive"/>
       <node ref="U8" pin="1" pinfunction="COMP_1" pintype="passive"/>
     </net>
-    <net code="18" name="BOOST_COMP_RC" class="Default">
+    <net code="23" name="BOOST_COMP_RC" class="Default">
       <node ref="C69" pin="1" pintype="passive"/>
       <node ref="R63" pin="2" pintype="passive"/>
     </net>
-    <net code="19" name="BOOST_FB" class="Default">
+    <net code="24" name="BOOST_FB" class="Default">
       <node ref="R60" pin="2" pintype="passive"/>
       <node ref="R61" pin="1" pintype="passive"/>
       <node ref="U8" pin="2" pinfunction="FB_2" pintype="input"/>
     </net>
-    <net code="20" name="BOOST_ILIM" class="Default">
-      <node ref="R62" pin="1" pintype="passive"/>
-      <node ref="U9" pin="5" pinfunction="ILIM_5" pintype="passive"/>
-    </net>
-    <net code="21" name="BOOST_SS" class="Default">
+    <net code="25" name="BOOST_SS" class="Default">
       <node ref="C66" pin="1" pintype="passive"/>
       <node ref="U8" pin="8" pinfunction="SS_8" pintype="passive"/>
     </net>
-    <net code="22" name="BOOST_SW" class="Default">
+    <net code="26" name="BOOST_SW" class="Default">
       <node ref="D4" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="L2" pin="2" pintype="passive"/>
       <node ref="U8" pin="5" pinfunction="SW_5" pintype="power_out"/>
     </net>
-    <net code="23" name="BOOT0" class="Default">
+    <net code="27" name="BOOT0" class="Default">
       <node ref="J8" pin="9" pinfunction="9_9" pintype="passive"/>
       <node ref="R22" pin="1" pintype="passive"/>
       <node ref="U5" pin="31" pinfunction="PB8/BOOT0_31" pintype="input"/>
     </net>
-    <net code="24" name="BUCK_CB" class="Default">
+    <net code="28" name="BUCK_CB" class="Default">
       <node ref="C6" pin="1" pintype="passive"/>
       <node ref="U1" pin="6" pinfunction="CB_6" pintype="passive"/>
     </net>
-    <net code="25" name="BUCK_FB" class="Default">
+    <net code="29" name="BUCK_FB" class="Default">
       <node ref="R1" pin="2" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
       <node ref="U1" pin="4" pinfunction="FB_4" pintype="input"/>
     </net>
-    <net code="26" name="BUCK_SW" class="Default">
+    <net code="30" name="BUCK_SW" class="Default">
       <node ref="C6" pin="2" pintype="passive"/>
       <node ref="L1" pin="1" pintype="passive"/>
       <node ref="U1" pin="2" pinfunction="SW_2" pintype="power_out"/>
     </net>
-    <net code="27" name="CANH" class="Default">
+    <net code="31" name="CANH" class="Default">
       <node ref="D20" pin="1" pinfunction="IO1_1" pintype="passive"/>
       <node ref="J2" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="J3" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="R42" pin="1" pintype="passive"/>
       <node ref="U6" pin="7" pinfunction="CANH_7" pintype="bidirectional"/>
     </net>
-    <net code="28" name="CANL" class="Default">
+    <net code="32" name="CANL" class="Default">
       <node ref="D20" pin="2" pinfunction="IO2_2" pintype="passive"/>
       <node ref="J2" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="J3" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="JP2" pin="2" pintype="passive"/>
       <node ref="U6" pin="6" pinfunction="CANL_6" pintype="bidirectional"/>
     </net>
-    <net code="29" name="CAN_RX" class="Default">
+    <net code="33" name="CAN_RX" class="Default">
       <node ref="U5" pin="21" pinfunction="PA11/CAN_RX_21" pintype="input"/>
       <node ref="U6" pin="4" pinfunction="RXD_4" pintype="output"/>
     </net>
-    <net code="30" name="CAN_STB" class="Default">
+    <net code="34" name="CAN_STB" class="Default">
       <node ref="R40" pin="2" pintype="passive"/>
       <node ref="U5" pin="18" pinfunction="PA8/CAN_STB_18" pintype="output"/>
       <node ref="U6" pin="8" pinfunction="STB_8" pintype="input"/>
     </net>
-    <net code="31" name="CAN_TERM" class="Default">
+    <net code="35" name="CAN_TERM" class="Default">
       <node ref="JP2" pin="1" pintype="passive"/>
       <node ref="R42" pin="2" pintype="passive"/>
     </net>
-    <net code="32" name="CAN_TX" class="Default">
+    <net code="36" name="CAN_TX" class="Default">
       <node ref="R41" pin="2" pintype="passive"/>
       <node ref="U5" pin="22" pinfunction="PA12/CAN_TX_22" pintype="output"/>
       <node ref="U6" pin="1" pinfunction="TXD_1" pintype="input"/>
     </net>
-    <net code="33" name="FAULT_5V_N" class="Default">
+    <net code="37" name="EFUSE_EN" class="Default">
+      <node ref="Q2" pin="3" pinfunction="D_3" pintype="passive"/>
+      <node ref="R68" pin="2" pintype="passive"/>
+      <node ref="R69" pin="1" pintype="passive"/>
+      <node ref="U9" pin="3" pinfunction="EN/UVLO_3" pintype="input"/>
+    </net>
+    <net code="38" name="EFUSE_ILM" class="Default">
+      <node ref="R62" pin="1" pintype="passive"/>
+      <node ref="U9" pin="7" pinfunction="ILM_7" pintype="passive"/>
+    </net>
+    <net code="39" name="EFUSE_INHIBIT" class="Default">
+      <node ref="Q2" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="Q3" pin="3" pinfunction="D_3" pintype="passive"/>
+      <node ref="R70" pin="2" pintype="passive"/>
+    </net>
+    <net code="40" name="EFUSE_SS" class="Default">
+      <node ref="C70" pin="1" pintype="passive"/>
+      <node ref="U9" pin="2" pinfunction="dVdt_2" pintype="passive"/>
+    </net>
+    <net code="41" name="FAULT_5V_N" class="Default">
       <node ref="U4" pin="4" pinfunction="FAULT_N_4" pintype="open_collector"/>
       <node ref="U5" pin="10" pinfunction="PA4/5V_FAULT_10" pintype="bidirectional"/>
     </net>
-    <net code="34" name="GND" class="Default">
+    <net code="42" name="FAULT_12V_N" class="Default">
+      <node ref="U5" pin="9" pinfunction="PA3/12V_FAULT_9" pintype="bidirectional"/>
+      <node ref="U9" pin="6" pinfunction="FAULT_N_6" pintype="open_collector"/>
+    </net>
+    <net code="43" name="GND" class="Default">
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="C101" pin="2" pintype="passive"/>
       <node ref="C11" pin="2" pintype="passive"/>
@@ -4090,6 +4602,10 @@
       <node ref="C66" pin="2" pintype="passive"/>
       <node ref="C69" pin="2" pintype="passive"/>
       <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C70" pin="2" pintype="passive"/>
+      <node ref="C71" pin="2" pintype="passive"/>
+      <node ref="C72" pin="2" pintype="passive"/>
+      <node ref="C73" pin="2" pintype="passive"/>
       <node ref="C8" pin="2" pintype="passive"/>
       <node ref="D10" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D101" pin="2" pinfunction="A_2" pintype="passive"/>
@@ -4097,6 +4613,8 @@
       <node ref="D20" pin="3" pinfunction="GND_3" pintype="passive"/>
       <node ref="D201" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D301" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D5" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D6" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="J1" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="J4" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="J5" pin="2" pinfunction="2_2" pintype="passive"/>
@@ -4105,7 +4623,9 @@
       <node ref="J8" pin="7" pinfunction="7_7" pintype="passive"/>
       <node ref="J8" pin="8" pinfunction="8_8" pintype="passive"/>
       <node ref="Q102" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="S_2" pintype="passive"/>
       <node ref="Q202" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q3" pin="2" pinfunction="S_2" pintype="passive"/>
       <node ref="Q302" pin="2" pinfunction="S_2" pintype="passive"/>
       <node ref="R10" pin="2" pintype="passive"/>
       <node ref="R103" pin="2" pintype="passive"/>
@@ -4122,7 +4642,11 @@
       <node ref="R52" pin="2" pintype="passive"/>
       <node ref="R61" pin="2" pintype="passive"/>
       <node ref="R62" pin="2" pintype="passive"/>
-      <node ref="R66" pin="2" pintype="passive"/>
+      <node ref="R67" pin="2" pintype="passive"/>
+      <node ref="R69" pin="2" pintype="passive"/>
+      <node ref="R71" pin="2" pintype="passive"/>
+      <node ref="R74" pin="2" pintype="passive"/>
+      <node ref="R75" pin="2" pintype="passive"/>
       <node ref="TP1" pin="1" pintype="passive"/>
       <node ref="U1" pin="1" pinfunction="GND_1" pintype="power_in"/>
       <node ref="U2" pin="2" pinfunction="GND_2" pintype="power_in"/>
@@ -4130,197 +4654,188 @@
       <node ref="U5" pin="16" pinfunction="VSS_16" pintype="power_in"/>
       <node ref="U5" pin="32" pinfunction="VSS_32" pintype="power_in"/>
       <node ref="U6" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U7" pin="11" pinfunction="+_11" pintype="input"/>
       <node ref="U7" pin="12" pintype="power_in"/>
       <node ref="U8" pin="4" pinfunction="PGND_4" pintype="power_in"/>
-      <node ref="U9" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U9" pin="1" pinfunction="GND_1" pintype="power_in"/>
+      <node ref="U9" pin="9" pinfunction="EP/GND_9" pintype="passive"/>
       <node ref="Y1" pin="2" pintype="passive"/>
       <node ref="Y1" pin="4" pintype="passive"/>
     </net>
-    <net code="35" name="HSE_IN" class="Default">
+    <net code="44" name="HSE_IN" class="Default">
       <node ref="C25" pin="1" pintype="passive"/>
       <node ref="U5" pin="2" pinfunction="PF0/OSC_IN_2" pintype="input"/>
       <node ref="Y1" pin="1" pintype="passive"/>
     </net>
-    <net code="36" name="HSE_OUT" class="Default">
+    <net code="45" name="HSE_OUT" class="Default">
       <node ref="R20" pin="1" pintype="passive"/>
       <node ref="U5" pin="3" pinfunction="PF1/OSC_OUT_3" pintype="output"/>
     </net>
-    <net code="37" name="HSE_XTAL_OUT" class="Default">
+    <net code="46" name="HSE_XTAL_OUT" class="Default">
       <node ref="C26" pin="1" pintype="passive"/>
       <node ref="R20" pin="2" pintype="passive"/>
       <node ref="Y1" pin="3" pintype="passive"/>
     </net>
-    <net code="38" name="INPUT1" class="Default">
+    <net code="47" name="INPUT1" class="Default">
       <node ref="R104" pin="1" pintype="passive"/>
       <node ref="R105" pin="2" pintype="passive"/>
       <node ref="U5" pin="6" pinfunction="PA0/IN1_6" pintype="input"/>
       <node ref="U7" pin="2" pinfunction="OUT_2" pintype="open_collector"/>
     </net>
-    <net code="39" name="INPUT2" class="Default">
+    <net code="48" name="INPUT2" class="Default">
       <node ref="R204" pin="1" pintype="passive"/>
       <node ref="R205" pin="2" pintype="passive"/>
       <node ref="U5" pin="7" pinfunction="PA1/IN2_7" pintype="input"/>
       <node ref="U7" pin="1" pinfunction="OUT_1" pintype="open_collector"/>
     </net>
-    <net code="40" name="INPUT3" class="Default">
+    <net code="49" name="INPUT3" class="Default">
       <node ref="R304" pin="1" pintype="passive"/>
       <node ref="R305" pin="2" pintype="passive"/>
       <node ref="U5" pin="8" pinfunction="PA2/IN3_8" pintype="input"/>
       <node ref="U7" pin="14" pinfunction="OUT_14" pintype="open_collector"/>
     </net>
-    <net code="41" name="NRST" class="Default">
+    <net code="50" name="NRST" class="Default">
       <node ref="C27" pin="1" pintype="passive"/>
       <node ref="J8" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="R21" pin="2" pintype="passive"/>
       <node ref="U5" pin="4" pinfunction="NRST_4" pintype="bidirectional"/>
     </net>
-    <net code="42" name="PG_12V" class="Default">
-      <node ref="R67" pin="1" pintype="passive"/>
-      <node ref="U5" pin="9" pinfunction="PA3/12V_PG_9" pintype="bidirectional"/>
-      <node ref="U7" pin="13" pinfunction="OUT_13" pintype="open_collector"/>
-      <node ref="U9" pin="4" pinfunction="FAULT_N_4" pintype="open_collector"/>
+    <net code="51" name="POWER_5V_EN" class="Default">
+      <node ref="R71" pin="1" pintype="passive"/>
+      <node ref="U4" pin="3" pinfunction="EN_3" pintype="input"/>
+      <node ref="U5" pin="25" pinfunction="PA15/5V_EN_25" pintype="output"/>
     </net>
-    <net code="43" name="REF_LOGIC" class="Default">
+    <net code="52" name="POWER_12V_EN" class="Default">
+      <node ref="Q3" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R75" pin="1" pintype="passive"/>
+      <node ref="U5" pin="30" pinfunction="PB7/12V_EN_30" pintype="output"/>
+    </net>
+    <net code="53" name="REF_LOGIC" class="Default">
       <node ref="C51" pin="1" pintype="passive"/>
       <node ref="R50" pin="2" pintype="passive"/>
       <node ref="R51" pin="1" pintype="passive"/>
-      <node ref="U7" pin="10" pinfunction="-_10" pintype="input"/>
       <node ref="U7" pin="4" pinfunction="-_4" pintype="input"/>
       <node ref="U7" pin="6" pinfunction="-_6" pintype="input"/>
       <node ref="U7" pin="8" pinfunction="-_8" pintype="input"/>
     </net>
-    <net code="44" name="REV_GATE" class="Default">
+    <net code="54" name="REV_GATE" class="Default">
       <node ref="D3" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="Q1" pin="4" pinfunction="G_4" pintype="input"/>
       <node ref="R3" pin="1" pintype="passive"/>
     </net>
-    <net code="45" name="SENSE1" class="Default">
+    <net code="55" name="SENSE1" class="Default">
       <node ref="C101" pin="1" pintype="passive"/>
       <node ref="R101" pin="2" pintype="passive"/>
       <node ref="R103" pin="1" pintype="passive"/>
       <node ref="R104" pin="2" pintype="passive"/>
       <node ref="U7" pin="5" pinfunction="+_5" pintype="input"/>
     </net>
-    <net code="46" name="SENSE2" class="Default">
+    <net code="56" name="SENSE2" class="Default">
       <node ref="C201" pin="1" pintype="passive"/>
       <node ref="R201" pin="2" pintype="passive"/>
       <node ref="R203" pin="1" pintype="passive"/>
       <node ref="R204" pin="2" pintype="passive"/>
       <node ref="U7" pin="7" pinfunction="+_7" pintype="input"/>
     </net>
-    <net code="47" name="SENSE3" class="Default">
+    <net code="57" name="SENSE3" class="Default">
       <node ref="C301" pin="1" pintype="passive"/>
       <node ref="R301" pin="2" pintype="passive"/>
       <node ref="R303" pin="1" pintype="passive"/>
       <node ref="R304" pin="2" pintype="passive"/>
       <node ref="U7" pin="9" pinfunction="+_9" pintype="input"/>
     </net>
-    <net code="48" name="SENSE_12V" class="Default">
-      <node ref="R65" pin="2" pintype="passive"/>
-      <node ref="R66" pin="1" pintype="passive"/>
-      <node ref="R67" pin="2" pintype="passive"/>
-      <node ref="U7" pin="11" pinfunction="+_11" pintype="input"/>
-    </net>
-    <net code="49" name="SENSOR_5V" class="Power,Default">
+    <net code="58" name="SENSOR_5V" class="Power,Default">
       <node ref="C12" pin="1" pintype="passive"/>
       <node ref="JP101" pin="1" pintype="passive"/>
       <node ref="JP201" pin="1" pintype="passive"/>
       <node ref="JP301" pin="1" pintype="passive"/>
+      <node ref="R72" pin="1" pintype="passive"/>
       <node ref="U4" pin="6" pinfunction="OUT_6" pintype="power_out"/>
     </net>
-    <net code="50" name="SENSOR_12V" class="Power,Default">
-      <node ref="C62" pin="1" pintype="passive"/>
-      <node ref="C63" pin="1" pintype="passive"/>
-      <node ref="C64" pin="1" pintype="passive"/>
-      <node ref="D4" pin="1" pinfunction="K_1" pintype="passive"/>
+    <net code="59" name="SENSOR_12V" class="Power,Default">
+      <node ref="C71" pin="1" pintype="passive"/>
+      <node ref="D5" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="JP101" pin="3" pintype="passive"/>
       <node ref="JP201" pin="3" pintype="passive"/>
       <node ref="JP301" pin="3" pintype="passive"/>
-      <node ref="R60" pin="1" pintype="passive"/>
       <node ref="R65" pin="1" pintype="passive"/>
+      <node ref="U9" pin="5" pinfunction="OUT_5" pintype="power_out"/>
     </net>
-    <net code="51" name="SIG1" class="Default">
+    <net code="60" name="SIG1" class="Default">
       <node ref="D101" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J4" pin="3" pinfunction="3_3" pintype="passive"/>
       <node ref="R101" pin="1" pintype="passive"/>
       <node ref="R109" pin="1" pintype="passive"/>
       <node ref="R110" pin="2" pintype="passive"/>
     </net>
-    <net code="52" name="SIG2" class="Default">
+    <net code="61" name="SIG2" class="Default">
       <node ref="D201" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J5" pin="3" pinfunction="3_3" pintype="passive"/>
       <node ref="R201" pin="1" pintype="passive"/>
       <node ref="R209" pin="1" pintype="passive"/>
       <node ref="R210" pin="2" pintype="passive"/>
     </net>
-    <net code="53" name="SIG3" class="Default">
+    <net code="62" name="SIG3" class="Default">
       <node ref="D301" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J6" pin="3" pinfunction="3_3" pintype="passive"/>
       <node ref="R301" pin="1" pintype="passive"/>
       <node ref="R309" pin="1" pintype="passive"/>
       <node ref="R310" pin="2" pintype="passive"/>
     </net>
-    <net code="54" name="STATUS_GREEN" class="Default">
+    <net code="63" name="STATUS_GREEN" class="Default">
       <node ref="R30" pin="1" pintype="passive"/>
       <node ref="U5" pin="26" pinfunction="PB3/STATUS_26" pintype="output"/>
     </net>
-    <net code="55" name="STATUS_GREEN_A" class="Default">
+    <net code="64" name="STATUS_GREEN_A" class="Default">
       <node ref="D10" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="R30" pin="2" pintype="passive"/>
     </net>
-    <net code="56" name="SWCLK" class="Default">
+    <net code="65" name="SWCLK" class="Default">
       <node ref="J8" pin="4" pinfunction="4_4" pintype="passive"/>
       <node ref="U5" pin="24" pinfunction="PA14/SWCLK_24" pintype="input"/>
     </net>
-    <net code="57" name="SWDIO" class="Default">
+    <net code="66" name="SWDIO" class="Default">
       <node ref="J8" pin="5" pinfunction="5_5" pintype="passive"/>
       <node ref="U5" pin="23" pinfunction="PA13/SWDIO_23" pintype="bidirectional"/>
     </net>
-    <net code="58" name="UART_RX" class="Default">
+    <net code="67" name="UART_RX" class="Default">
       <node ref="J8" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="U5" pin="20" pinfunction="PA10/UART_RX_20" pintype="input"/>
     </net>
-    <net code="59" name="UART_TX" class="Default">
+    <net code="68" name="UART_TX" class="Default">
       <node ref="J8" pin="3" pinfunction="3_3" pintype="passive"/>
       <node ref="U5" pin="19" pinfunction="PA9/UART_TX_19" pintype="output"/>
     </net>
-    <net code="60" name="V5_BOOST" class="Power,Default">
-      <node ref="C60" pin="1" pintype="passive"/>
-      <node ref="C61" pin="1" pintype="passive"/>
-      <node ref="L2" pin="1" pintype="passive"/>
-      <node ref="U8" pin="3" pinfunction="EN_3" pintype="input"/>
-      <node ref="U8" pin="6" pinfunction="IN_6" pintype="power_in"/>
-      <node ref="U8" pin="7" pinfunction="FREQ_7" pintype="input"/>
-      <node ref="U9" pin="6" pinfunction="OUT_6" pintype="power_out"/>
-    </net>
-    <net code="61" name="V5_ILIM" class="Default">
+    <net code="69" name="V5_ILIM" class="Default">
       <node ref="R10" pin="1" pintype="passive"/>
       <node ref="U4" pin="5" pinfunction="ILIM_5" pintype="passive"/>
     </net>
-    <net code="62" name="V5_INTERNAL" class="Power,Default">
+    <net code="70" name="V5_INTERNAL" class="Power,Default">
       <node ref="C11" pin="1" pintype="passive"/>
       <node ref="C13" pin="1" pintype="passive"/>
       <node ref="C4" pin="1" pintype="passive"/>
       <node ref="C5" pin="1" pintype="passive"/>
-      <node ref="C65" pin="1" pintype="passive"/>
+      <node ref="C60" pin="1" pintype="passive"/>
+      <node ref="C61" pin="1" pintype="passive"/>
       <node ref="C7" pin="1" pintype="passive"/>
       <node ref="L1" pin="2" pintype="passive"/>
+      <node ref="L2" pin="1" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
       <node ref="U2" pin="1" pinfunction="VIN_1" pintype="power_in"/>
       <node ref="U2" pin="3" pinfunction="EN_3" pintype="input"/>
       <node ref="U4" pin="1" pinfunction="IN_1" pintype="power_in"/>
-      <node ref="U4" pin="3" pinfunction="EN_3" pintype="input"/>
-      <node ref="U9" pin="1" pinfunction="IN_1" pintype="power_in"/>
-      <node ref="U9" pin="3" pinfunction="EN_3" pintype="input"/>
+      <node ref="U8" pin="3" pinfunction="EN_3" pintype="input"/>
+      <node ref="U8" pin="6" pinfunction="IN_6" pintype="power_in"/>
+      <node ref="U8" pin="7" pinfunction="FREQ_7" pintype="input"/>
     </net>
-    <net code="63" name="VIN_FUSED" class="Power,Default">
+    <net code="71" name="VIN_FUSED" class="Power,Default">
       <node ref="F1" pin="2" pintype="passive"/>
       <node ref="Q1" pin="5" pinfunction="D_5" pintype="passive"/>
       <node ref="Q1" pin="6" pinfunction="D_6" pintype="passive"/>
       <node ref="Q1" pin="7" pinfunction="D_7" pintype="passive"/>
       <node ref="Q1" pin="8" pinfunction="D_8" pintype="passive"/>
     </net>
-    <net code="64" name="VIN_PROT" class="Power,Default">
+    <net code="72" name="VIN_PROT" class="Power,Default">
       <node ref="C1" pin="1" pinfunction="+__1" pintype="passive"/>
       <node ref="C2" pin="1" pintype="passive"/>
       <node ref="C3" pin="1" pintype="passive"/>
@@ -4332,36 +4847,30 @@
       <node ref="U1" pin="3" pinfunction="VIN_3" pintype="power_in"/>
       <node ref="U1" pin="5" pinfunction="EN_5" pintype="input"/>
     </net>
-    <net code="65" name="VIN_RAW" class="Power,Default">
+    <net code="73" name="VIN_RAW" class="Power,Default">
       <node ref="F1" pin="1" pintype="passive"/>
       <node ref="J1" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="66" name="VPORT1" class="Power,Default">
+    <net code="74" name="VPORT1" class="Power,Default">
       <node ref="J4" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="JP101" pin="2" pintype="passive"/>
     </net>
-    <net code="67" name="VPORT2" class="Power,Default">
+    <net code="75" name="VPORT2" class="Power,Default">
       <node ref="J5" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="JP201" pin="2" pintype="passive"/>
     </net>
-    <net code="68" name="VPORT3" class="Power,Default">
+    <net code="76" name="VPORT3" class="Power,Default">
       <node ref="J6" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="JP301" pin="2" pintype="passive"/>
     </net>
-    <net code="69" name="unconnected-(U2-NC-Pad4)" class="Default">
+    <net code="77" name="unconnected-(U2-NC-Pad4)" class="Default">
       <node ref="U2" pin="4" pinfunction="NC_4" pintype="no_connect"/>
     </net>
-    <net code="70" name="unconnected-(U5-PA15/NC-Pad25)" class="Default">
-      <node ref="U5" pin="25" pinfunction="PA15/NC_25" pintype="output+no_connect"/>
+    <net code="78" name="unconnected-(U7D-OUT-Pad13)" class="Default">
+      <node ref="U7" pin="13" pinfunction="OUT_13" pintype="open_collector+no_connect"/>
     </net>
-    <net code="71" name="unconnected-(U5-PB5/NC-Pad28)" class="Default">
-      <node ref="U5" pin="28" pinfunction="PB5/NC_28" pintype="input+no_connect"/>
-    </net>
-    <net code="72" name="unconnected-(U5-PB6/NC-Pad29)" class="Default">
-      <node ref="U5" pin="29" pinfunction="PB6/NC_29" pintype="output+no_connect"/>
-    </net>
-    <net code="73" name="unconnected-(U5-PB7/NC-Pad30)" class="Default">
-      <node ref="U5" pin="30" pinfunction="PB7/NC_30" pintype="output+no_connect"/>
+    <net code="79" name="unconnected-(U9-OVCSEL/OPEN-Pad8)" class="Default">
+      <node ref="U9" pin="8" pinfunction="OVCSEL/OPEN_8" pintype="passive+no_connect"/>
     </net>
   </nets>
 </export>

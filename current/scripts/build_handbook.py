@@ -132,8 +132,8 @@ def page(canvas, doc):
     canvas.saveState()
     canvas.setFont('Guide', 7.3)
     canvas.setFillColor(colors.HexColor('#537080'))
-    canvas.drawString(42, 817, 'FRC SENSOR CAN  /  REVISION F SC12 PROTOTYPE')
-    canvas.drawRightString(553, 817, '2026-09-08')
+    canvas.drawString(42, 817, 'FRC SENSOR CAN  /  REVISION G SC12 PROTOTYPE')
+    canvas.drawRightString(553, 817, '2026-09-09')
     canvas.setStrokeColor(colors.HexColor('#cbd7dc'))
     canvas.line(42, 808, 553, 808)
     canvas.drawString(42, 24, 'Unbuilt design — qualification measurements remain pending')
@@ -141,7 +141,7 @@ def page(canvas, doc):
     canvas.restoreState()
 
 story = [Spacer(1, 33), Paragraph('FRC<br/>Sensor CAN', styles['cover']),
-         Paragraph('Revision F SC12 · Prototype engineering and assembly guide', styles['heading']),
+         Paragraph('Revision G SC12 · Prototype engineering and assembly guide', styles['heading']),
          Paragraph('Three industrial / logic sensor inputs<br/>Regulated 12 V and 5 V sensor power', styles['body']),
          Spacer(1, 10)]
 render = ROOT / 'output/review/board_3d_final.png'
@@ -150,8 +150,8 @@ if render.exists():
     with PILImage.open(render) as im:
         w, h = im.size
     story.append(Image(str(render), width=380, height=380*h/w))
-story.extend([Spacer(1, 12), Paragraph('2026-09-08', styles['heading']),
-              Paragraph('HOLD a final hardware order. No physical prototype has been tested, and power-stage findings remain unresolved. This guide accompanies evaluation files; it does not approve a one-shot robot build. See the pre-order decision and qualification chapters.', styles['body']),
+story.extend([Spacer(1, 12), Paragraph('2026-09-09', styles['heading']),
+              Paragraph('Rev G implements revised output protection, controlled startup and rail measurements. No physical prototype has been tested. This guide accompanies the engineering evidence and defines first-article acceptance.', styles['body']),
               PageBreak(), Paragraph('Contents', styles['chapter'])])
 toc = TableOfContents()
 toc.levelStyles = [ParagraphStyle('TOC', fontName='Guide', fontSize=10, leading=19, textColor=INK)]
@@ -169,9 +169,9 @@ for i, (title, path) in enumerate(chapters):
     story.append(Paragraph('Source: ' + path, styles['small']))
     story.extend(convert(ROOT / path))
 
-doc = Guide(str(OUT / 'SC12_RevF_Handbook.pdf'), pagesize=A4,
+doc = Guide(str(OUT / 'SC12_RevG_Handbook.pdf'), pagesize=A4,
             leftMargin=42, rightMargin=42, topMargin=48, bottomMargin=43,
-            title='FRC Sensor CAN — Revision F SC12 prototype handbook',
+            title='FRC Sensor CAN — Revision G SC12 prototype handbook',
             author='FRC Sensor CAN project')
 doc.multiBuild(story, onFirstPage=page, onLaterPages=page)
-print(OUT / 'SC12_RevF_Handbook.pdf')
+print(OUT / 'SC12_RevG_Handbook.pdf')

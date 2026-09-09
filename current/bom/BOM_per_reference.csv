@@ -9,8 +9,8 @@ C20,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
 C201,CC0805JRNPO9BN102,1nF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,C0G,
 C21,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
 C22,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
-C23,CL21B105KBFNNNE,1uF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,,X7R,"Rev F sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."
-C24,CL21B475KAFNNNE,4.7uF,FRC_Sensor_CAN:C_0805_2012Metric,25V,10%,,X7R,"Rev F sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."
+C23,CL21B105KBFNNNE,1uF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,,X7R,"Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."
+C24,CL21B475KAFNNNE,4.7uF,FRC_Sensor_CAN:C_0805_2012Metric,25V,10%,,X7R,"Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."
 C25,C0805C300J5GACTU,30pF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,C0G,
 C26,C0805C300J5GACTU,30pF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,C0G,
 C27,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
@@ -24,15 +24,19 @@ C50,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
 C51,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
 C6,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
 C60,CL31A226KAHNNNE,22uF,FRC_Sensor_CAN:C_1206_3216Metric,25V,10%,,X5R,22uF 25V X5R; effective capacitance budget uses manufacturer DC-bias curve.
-C61,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,Local decoupling.
+C61,CL21B105KBFNNNE,1uF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,,X7R,"1uF local TPS61085 IN bypass, adjacent to U8; C60 provides bulk capacitance."
 C62,CL31A226KAHNNNE,22uF,FRC_Sensor_CAN:C_1206_3216Metric,25V,10%,,X5R,22uF 25V X5R; effective capacitance budget uses manufacturer DC-bias curve.
 C63,CL31A226KAHNNNE,22uF,FRC_Sensor_CAN:C_1206_3216Metric,25V,10%,,X5R,22uF 25V X5R; effective capacitance budget uses manufacturer DC-bias curve.
 C64,CL31A226KAHNNNE,22uF,FRC_Sensor_CAN:C_1206_3216Metric,25V,10%,,X5R,22uF 25V X5R; effective capacitance budget uses manufacturer DC-bias curve.
-C65,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,Local decoupling.
-C66,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,100nF soft-start; qualify startup with full sensor capacitance.
+C65,CL21B105KBFNNNE,1uF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,,X7R,Local eFuse IN bypass. Three nearby boost reservoir capacitors provide bulk input energy and filtering.
+C66,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,Boost soft-start charges only the local reservoir; external sensor capacitance ramps separately through U9.
 C69,CC0805KRX7R9BB333,33nF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,,X7R,"13k/33nF Type-II compensation; low crossover analytical screen, physical loop qualification required."
-C7,CL21B105KBFNNNE,1uF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,,X7R,"Rev F sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."
-C8,CL21B475KAFNNNE,4.7uF,FRC_Sensor_CAN:C_0805_2012Metric,25V,10%,,X7R,"Rev F sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."
+C7,CL21B105KBFNNNE,1uF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,,X7R,"Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."
+C70,CL21B473KBCNNNC,47nF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,,X7R,"Separate sensor output ramp; approximately 13ms ideal ramp, longer if current limited."
+C71,CL21B105KBFNNNE,1uF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,,X7R,Small capacitor after eFuse. Large converter reservoir stays before U9.
+C72,CL21B103KBANNNC,10nF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,X7R,ADC anti-noise filter. Use long ADC acquisition time; firmware also measures internal VREFINT.
+C73,CL21B103KBANNNC,10nF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,X7R,ADC anti-noise filter. Use long ADC acquisition time; firmware also measures internal VREFINT.
+C8,CL21B475KAFNNNE,4.7uF,FRC_Sensor_CAN:C_0805_2012Metric,25V,10%,,X7R,"Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."
 D10,LTST-C170KGKT,GREEN,FRC_Sensor_CAN:LED_0805_2012Metric,,,,,
 D101,SMAJ30A,SMAJ30A,FRC_Sensor_CAN:D_SMA,,,,,30V working standoff; unidirectional transient clamp.
 D102,BAT46W-E3-18,BAT46W,FRC_Sensor_CAN:D_SOD-123,,,,,
@@ -43,7 +47,9 @@ D202,BAT46W-E3-18,BAT46W,FRC_Sensor_CAN:D_SOD-123,,,,,
 D3,MMSZ12T1G,12V ZENER,FRC_Sensor_CAN:D_SOD-123,,,,,"Cathode to Q1 source, anode to gate; protects +/-20V gate rating."
 D301,SMAJ30A,SMAJ30A,FRC_Sensor_CAN:D_SMA,,,,,30V working standoff; unidirectional transient clamp.
 D302,BAT46W-E3-18,BAT46W,FRC_Sensor_CAN:D_SOD-123,,,,,
-D4,B240A-13-F,B240A,FRC_Sensor_CAN:D_SMA,,,,,2A 40V Schottky rectifier; cathode on SENSOR_12V. U9 interrupts short-circuit DC path.
+D4,B240A-13-F,B240A,FRC_Sensor_CAN:D_SMA,,,,,"2A 40V Schottky rectifier; cathode on BOOST_12V, before U9 output protection."
+D5,B240A-13-F,B240A,FRC_Sensor_CAN:D_SMA,,,,,Output negative-transient Schottky clamp; same qualified 2A/40V SMA purchasing line as D4.
+D6,SMAJ13A-13-F,SMAJ13A,FRC_Sensor_CAN:D_SMA,,,,,Local eFuse input transient clamp. Review source energy; not a sustained overvoltage regulator.
 F1,0451003.MRL,3A FAST,FRC_Sensor_CAN:Fuse_Littelfuse-NANO2-451_453,,,,,Secondary 3 A fast fuse. Feed only from a protected FRC distribution branch; board fuse does not replace the branch fuse.
 J1,1824420000,2P PUSH 3.5mm,FRC_Sensor_CAN:Weidmuller_LSF_90_2P,,,,,"Horizontal /90 push-in; 8 mm strip, 7 mm pin-row spacing, two solder pins per pole."
 J2,1824420000,2P PUSH 3.5mm,FRC_Sensor_CAN:Weidmuller_LSF_90_2P,,,,,"Horizontal /90 push-in; 8 mm strip, 7 mm pin-row spacing, two solder pins per pole."
@@ -55,12 +61,14 @@ JP101,M22-2010305,5V / 12V,FRC_Sensor_CAN:PinHeader_1x03_P2.00mm_Vertical,,,,,"H
 JP201,M22-2010305,5V / 12V,FRC_Sensor_CAN:PinHeader_1x03_P2.00mm_Vertical,,,,,"Hand-fit 2 mm header. One removable SPN02SVEN-RC shunt: 1-2=5 V, 2-3=12 V, absent=off. Change only with power off. Ship shunts loose."
 JP301,M22-2010305,5V / 12V,FRC_Sensor_CAN:PinHeader_1x03_P2.00mm_Vertical,,,,,"Hand-fit 2 mm header. One removable SPN02SVEN-RC shunt: 1-2=5 V, 2-3=12 V, absent=off. Change only with power off. Ship shunts loose."
 L1,SRP7028A-100M,10uH,FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm,,,,,"3.5A RMS, 6A saturation; use specified family, not NRND SRP7030."
-L2,SRP5030TA-3R3M,3.3uH,FRC_Sensor_CAN:L_Bourns_SRP5030T,,,,,"3.3uH; retained 5A RMS / 8A saturation part, above 3.2A maximum converter switch threshold."
+L2,SRP5030TA-3R3M,3.3uH,FRC_Sensor_CAN:L_Bourns_SRP5030T,,,,,3.3uH; 5A RMS and 8A at 20% inductance loss. Output eFuse prevents a sensor short directly discharging through this inductor.
 Q1,AO4485,AO4485,FRC_Sensor_CAN:SOIC-8_3.9x4.9mm_P1.27mm,,,,,"Reverse-polarity PMOS: drain toward input, source toward load. Not a reverse-current blocker when on."
 Q101,AO3401A,AO3401A,FRC_Sensor_CAN:SOT-23,,,,,"3.3 V bias source, active-low gate. BAT46W isolates positive field voltage."
 Q102,"BSS138BK,215",BSS138BK,FRC_Sensor_CAN:SOT-23,,,,,"60 V bias sink, active-high gate; 6.5 ohm max at VGS=2.5 V, 25 C."
+Q2,"BSS138BK,215",BSS138BK,FRC_Sensor_CAN:SOT-23,,,,,"Q2 shunts UVLO to ground by default, powered by raw BOOST_12V through R70. Remains disabled without MCU 3.3V."
 Q201,AO3401A,AO3401A,FRC_Sensor_CAN:SOT-23,,,,,"3.3 V bias source, active-low gate. BAT46W isolates positive field voltage."
 Q202,"BSS138BK,215",BSS138BK,FRC_Sensor_CAN:SOT-23,,,,,"60 V bias sink, active-high gate; 6.5 ohm max at VGS=2.5 V, 25 C."
+Q3,"BSS138BK,215",BSS138BK,FRC_Sensor_CAN:SOT-23,,,,,"MCU HIGH turns on Q3, removing the Q2 inhibit. Loss of logic power or reset defaults to OFF through R75."
 Q301,AO3401A,AO3401A,FRC_Sensor_CAN:SOT-23,,,,,"3.3 V bias source, active-low gate. BAT46W isolates positive field voltage."
 Q302,"BSS138BK,215",BSS138BK,FRC_Sensor_CAN:SOT-23,,,,,"60 V bias sink, active-high gate; 6.5 ohm max at VGS=2.5 V, 25 C."
 R1,RT0805BRD07102KL,102k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,Precision feedback top resistor; 5.067 V nominal internal rail.
@@ -104,17 +112,25 @@ R51,RC0805FR-075K23L,5.23k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
 R52,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,10k logic-rail bleed bounds reverse-diode leakage with board power removed; not galvanic isolation.
 R60,RT0805BRD07100KL,100k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,"Feedback upper arm, retained 0.1% 100k."
 R61,RC0805FR-0711K5L,11.5k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,"Feedback lower arm, 1%. 12.003V nominal with 1.238V reference."
-R62,RC0805FR-0721K5L,21.5k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,"Sets BOOST INPUT limit; about 1.20A nominal, not 12V output current. Rated useful output remains 300mA shared."
+R62,RC0805FR-072K61L,2.61k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,Nominal output current limit about 357mA; user load rating remains 300mA shared on 12V.
 R63,RC0805FR-0713KL,13k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,13k compensation resistor; 33nF lowers compensation zero for derated output bank.
-R65,0805W8F1003T5E,100k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,12V rail-monitor upper divider.
-R66,RC0805FR-071K8L,1.8k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,"Rail monitor ~9.3V rising nominal, not a calibrated voltage measurement."
-R67,RC0805FR-072M2L,2.2M,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,Rail-monitor positive feedback; U9 fault can also pull PG low.
+R65,RT0805BRD07100KL,100k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,Two series 100k resistors plus 20k bottom give 11:1 rail sensing; 30V maps to 2.73V.
+R66,RT0805BRD07100KL,100k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,
+R67,RT0805BRD0720KL,20k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,
+R68,RT0805BRD07100KL,100k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,Hardware UVLO upper resistor; converter must reach about 11.1V before sensor connection.
+R69,RT0805BRD0712K1L,12.1k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,
+R70,0805W8F1003T5E,100k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,Raw-rail pull-up defaults the Q2 inhibit ON independently of MCU power.
+R71,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,Default off through MCU reset and bootloader. 10k pulldown provides extra reset/leakage margin.
+R72,RT0805BRD07100KL,100k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,Two series 100k resistors plus 20k bottom give 11:1 rail sensing; 30V maps to 2.73V.
+R73,RT0805BRD07100KL,100k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,
+R74,RT0805BRD0720KL,20k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,
+R75,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,"100k gate pulldown keeps Q3 off during MCU reset/unpowered, so Q2 inhibits U9. 10k pulldown provides extra reset/leakage margin."
 U1,LMR51420XDDCR,LMR51420XDDCR,FRC_Sensor_CAN:TSOT-23-6,,,,,
 U2,AP2112K-3.3TRG1,AP2112K-3.3,FRC_Sensor_CAN:SOT-23-5,,,,,
-U4,TPS2553DBVR-1,TPS2553DBVR-1,FRC_Sensor_CAN:SOT-23-6,,,,,"TPS2553-1 LATCH-OFF version. Always enabled, hardware current limit. Reset overload by cycling board power."
-U5,STM32F042K6T6,STM32F042K6T6,FRC_Sensor_CAN:LQFP-32_7x7mm_P0.8mm,,,,,Three comparator inputs PA0/1/2. PA5/6/7 active-low pull-up gates; PB0/1/4 active-high pulldown gates. CAN service config; no software sensor-power control.
+U4,TPS2553DBVR-1,TPS2553DBVR-1,FRC_Sensor_CAN:SOT-23-6,,,,,Independent 5 V hardware current limit; EN is MCU controlled with an external default-off pull-down. Exact TPS2553-1 latch-off variant.
+U5,STM32F042K6T6,STM32F042K6T6,FRC_Sensor_CAN:LQFP-32_7x7mm_P0.8mm,,,,,"PA0/1/2 digital sensors; PA5/6/7 pull-up gates; PB5/PB6/PB4 pull-down gates. PB0/PB1 measure sensor rails. PA15 enables 5V, PB7 high disables 12V. SWD/UART/CAN retained."
 U6,TCAN3413DR,TCAN3413DR,FRC_Sensor_CAN:SOIC-8_3.9x4.9mm_P1.27mm,,,,,
-U7,LM339LVDR,LM339LV,FRC_Sensor_CAN:SOIC-14_3.9x8.7mm_P1.27mm,,,,,Three digital input comparators plus protected 12V rail monitor; all four share REF_LOGIC.
-U8,TPS61085DGKR,TPS61085DGKR,FRC_Sensor_CAN:VSSOP-8_3x3mm_P0.65mm,,,,,5 V to 12 V nonsynchronous boost; 1.2 MHz. Branch input disconnected by U9 on overload. No output disconnect inside U8.
-U9,TPS2553DBVR-1,TPS2553DBVR-1,FRC_Sensor_CAN:SOT-23-6,,,,,Latch-off switch BEFORE boost. R62 sets input current limit. Fault wired-AND with voltage comparator PG; power cycle to reset. Never substitute auto-retry variant.
+U7,LM339LVDR,LM339LV,FRC_Sensor_CAN:SOIC-14_3.9x8.7mm_P1.27mm,,,,,Three input comparators retained. Fourth comparator inputs tied to defined rails and output unconnected; rail measurements now use MCU ADC.
+U8,TPS61085DGKR,TPS61085DGKR,FRC_Sensor_CAN:VSSOP-8_3x3mm_P0.65mm,,,,,"5 V-fed boost, 1.2 MHz. Its output reservoir is isolated from sensor shorts and inrush by U9. No input-side sensor limiter."
+U9,TPS259620DDAR,TPS259620DDAR,FRC_Sensor_CAN:TPS2596_DDA8,,,,,"Output-side eFuse. Exact latch-off TPS259620; 2.61k current setting, 47nF output slew. OVCSEL intentionally open for 13.8V-class fault clamp. MCU Q2 can disable/reset; no automatic retries or reverse-power support."
 Y1,ABM3B-8.000MHZ-B2-T,8MHz 18pF,FRC_Sensor_CAN:Abracon_ABM3B_5.0x3.2mm,,,,,Abracon recommended land pattern: 1.8x1.2mm pads on 4.0x2.4mm centers; pads 2/4 ground.

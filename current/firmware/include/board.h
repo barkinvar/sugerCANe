@@ -23,4 +23,7 @@ void board_status_led(bool on);
 bool board_config_store(sc_config_record *record);
 const sc_config_record *board_config_load(void);
 void board_safe_off(void);
+void board_power_set(uint8_t enabled);
+bool board_adc_init(void);
+bool board_rail_read(uint16_t *mv12,uint16_t *mv5);
 #endif

@@ -2,7 +2,7 @@ core: CRC, torn records, version/range rejection, rollover, debounce, inversion,
 input modes: exhaustive configuration validation, mixed polarity, float classification/confirmation, keeper, wrap passed
 application: runtime_modes passed (275 frames, 1200 scheduler feeds)
 application: float passed (275 frames, 1200 scheduler feeds)
-application: maintenance passed (243 frames, 1200 scheduler feeds)
+application: maintenance passed (220 frames, 1200 scheduler feeds)
 application: normal passed (275 frames, 1200 scheduler feeds)
 application: unconfigured passed (0 frames, 1200 scheduler feeds)
 application: clock_failure passed (0 frames, 1200 scheduler feeds)
@@ -23,16 +23,19 @@ test_format_crc_vectors_and_bounds (test_service.Images.test_format_crc_vectors_
 test_bounds_protection_offsets_and_crc (test_service.Service.test_bounds_protection_offsets_and_crc) ... ok
 test_discovery_blank_duplicate_ids_and_targeting (test_service.Service.test_discovery_blank_duplicate_ids_and_targeting) ... ok
 test_input_settings_persist_and_stage_isolation (test_service.Service.test_input_settings_persist_and_stage_isolation) ... ok
+test_rail_readback_and_explicit_reset (test_service.Service.test_rail_readback_and_explicit_reset) ... ok
 test_stale_session_and_expiry (test_service.Service.test_stale_session_and_expiry) ... ok
 test_update_retries_and_running_version (test_service.Service.test_update_retries_and_running_version) ... ok
 test_wrong_file_rejected_without_writes (test_service.Service.test_wrong_file_rejected_without_writes) ... ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 3.226s
+Ran 8 tests in 3.626s
 
 OK
 PASS Only first two 4 KiB protection blocks locked; application/config must remain writable
 PASS All 64 compiled bias combinations: mapped gates, off defaults and no source/sink overlap
+PASS Rev G reset defaults and all four power enable combinations; safe-off disables both rails
+PASS Compiled ADC8/ADC9/VREFINT conversion, factory calibration, invalid reference and timeout
 PASS SC12 GPIO directions, SWD, LED, CAN standby and compiled SRAM vector remap
 PASS 8 MHz HSE to 48 MHz PLL, flash wait state and clock-security setup
 PASS Bounded HSE startup failure
@@ -46,10 +49,10 @@ PASS 34 compiled flash halfword power-cut cases and programming-error rejection
 PASS UART RX overflow ordering and bounded TX buffer under flooding
 {
   "result": "PASS",
-  "elapsed_seconds": 0.4961865259683691,
+  "elapsed_seconds": 0.49083784501999617,
   "emulator": "Unicorn2.1.4 Cortex-M0",
-  "elf_sha256": "51a86c972994ef23a20508a38a567bf6257ad6a092901c556b20f3dd0b285cba",
-  "binary_sha256": "053a0009fd6069dcbd83ad1ed86ee1a885c868b616f9357e799a4a681661ff56",
+  "elf_sha256": "844e82164058919eace32fcb1810a581e282e3305f9f9caabed507e92e6a03ed",
+  "binary_sha256": "10768bd4b956db65c5138adb2bddb51843b3a37553546092799b0e28d0c0548d",
   "limits": "Execute the actual linked Cortex-M0 functions against explicit register models.\n\nUnicorn emulates CPU instructions, not STM32 peripherals. The small behavioral\nmodels below supply ready bits, FIFO contents, flash erase and GPIO\nBSRR effects. These tests check compiled register/pin intent and data handling;\nno electrical behavior, interrupt timing, CAN arbitration or silicon erratum is\nvalidated by this harness. Host application/core tests remain separate.",
   "sources": [
     "https://github.com/unicorn-engine/unicorn",
@@ -61,32 +64,32 @@ PASS UART RX overflow ordering and bounded TX buffer under flooding
   "regions": [
     {
       "image": "bootloader",
-      "flash_bytes": 6728,
+      "flash_bytes": 6876,
       "flash_capacity": 8192,
-      "allocated_ram_including_minimum_stack": 1816,
+      "allocated_ram_including_minimum_stack": 1824,
       "ram_capacity": 5888,
       "minimum_stack_reservation": 1024
     },
     {
       "image": "sensor_can",
-      "flash_bytes": 10428,
+      "flash_bytes": 11520,
       "flash_capacity": 21504,
-      "allocated_ram_including_minimum_stack": 1968,
+      "allocated_ram_including_minimum_stack": 2016,
       "ram_capacity": 5888,
       "minimum_stack_reservation": 1024
     }
   ],
-  "update_crc32": "34a1da2c",
-  "version": 1792,
+  "update_crc32": "137a30c1",
+  "version": 2048,
   "factory_hex_excludes_configuration": true,
   "images": {
-    "bootloader.elf": "1bf3111ce7190de8b95fcd8b4bafa8f3a61f0380156599419badeb91ba338071",
-    "sensor_can.bin": "053a0009fd6069dcbd83ad1ed86ee1a885c868b616f9357e799a4a681661ff56",
-    "bootloader.bin": "f5bd4791b5c292988d06d464859e02ff5e9b51b450b18c0ab6a73785371bf383",
-    "sensor_can.hex": "f94ffdcdf60d0b14ce907eb7f3ed2889a0a8981dc57bde44ed409a541e9f22a7",
-    "sensor_can.elf": "51a86c972994ef23a20508a38a567bf6257ad6a092901c556b20f3dd0b285cba",
-    "application.sc12": "56583dc059f0378474d5e1c757d8adf546bd5181c3ce285217001f88fa099684",
-    "factory.hex": "89a87d0178b3f34b34b5de7fff3dfdff7f5725b71e57b105f8de2feb101f172d"
+    "bootloader.elf": "1d782c5ed2f6a85778ec008a96af602b898a22e61183e331d8c158f8d318a22e",
+    "sensor_can.bin": "10768bd4b956db65c5138adb2bddb51843b3a37553546092799b0e28d0c0548d",
+    "bootloader.bin": "58ed405865ab5a2c33d3ad763ee93bb2c912261c0114eae891a1deef9a9ac78f",
+    "sensor_can.hex": "f86643d453e97c87e514b7c676762e1fce179f5c10740ec45ac547d849bad5e1",
+    "sensor_can.elf": "844e82164058919eace32fcb1810a581e282e3305f9f9caabed507e92e6a03ed",
+    "application.sc12": "d137282323614ca38cf93d0fb7c7e7f6db51f222a08f20e47ca90de14d342b10",
+    "factory.hex": "cea9f886766aa01b767c6f17e2cb38294a9ff2576e969cbac08e721c9ea50efd"
   },
   "limitations": "Static link/image checks; runtime stack and silicon handoff unmeasured"
 }

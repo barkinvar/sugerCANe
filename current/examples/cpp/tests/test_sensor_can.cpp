@@ -19,7 +19,7 @@ int main() {
   d[7]=0;assert(DecodeCount3(d.data(),8));
   d={255,255,255,255,128,127,7,3};assert(DecodeDiagnostic(d.data(),8)->transmitQueueDrops==0xffffffff);
   d[6]=8;assert(!DecodeDiagnostic(d.data(),8));
-  d={4,0,7,0,6,20,2,7};assert(DecodeIdentity(d.data(),8));d[4]=2;assert(!DecodeIdentity(d.data(),8));
+  d={4,0,8,0,7,20,2,7};assert(DecodeIdentity(d.data(),8));d[4]=2;assert(!DecodeIdentity(d.data(),8));
   assert((Configuration(7,100)==std::array<uint8_t,8>{0x53,0x43,4,7,100,0,0,0}));
   const auto settings=InputConfiguration({InputMode::PullHigh,InputMode::PullLow,InputMode::FloatDetect},{ActiveWhen::Low,ActiveWhen::High,ActiveWhen::Driven});
   assert((settings==std::array<uint8_t,8>{0x53,0x43,4,0,0xd1,2,1,0}));

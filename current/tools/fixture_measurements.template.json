@@ -8,5 +8,11 @@
   "input2_low_high": false,
   "input3_low_high": false,
   "telemetry_after_service": false,
-  "power_cycle_config_retained": false
+  "power_cycle_config_retained": false,
+  "sensor_5v": null,
+  "efuse_exposed_pad_inspected": false,
+  "rails_off_in_bootloader": false,
+  "rails_off_during_reset": false,
+  "rail_adc_matches_meter": false,
+  "sensor_rail_short_and_can_reset": false
 }

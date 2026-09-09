@@ -1,4 +1,4 @@
-"""Rev F per-channel bias and active-state wire encoding."""
+"""Rev G per-channel bias and active-state wire encoding."""
 MODES = ('push-pull', 'npn', 'pnp', 'float', 'keeper')
 ACTIVE = ('high', 'low', 'driven', 'floating', 'not-high', 'not-low')
 DEFAULT_ACTIVE = ('high', 'low', 'high', 'driven', 'high')

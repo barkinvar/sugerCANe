@@ -38,7 +38,7 @@ class App:
             ttk.Label(row,text='Active when').pack(side='left',padx=6)
             ttk.Combobox(row,textvariable=a,values=ACTIVE,state='readonly',width=14).pack(side='left')
         row=ttk.Frame(area);row.pack(fill='x',pady=12)
-        for label,callback in [('Blink',self.blink),('Save and verify',self.configure),('Update firmware…',self.update)]:self.button(row,label,callback).pack(side='left',padx=(0,8))
+        for label,callback in [('Blink',self.blink),('Reset power fault',self.power_reset),('Save and verify',self.configure),('Update firmware…',self.update)]:self.button(row,label,callback).pack(side='left',padx=(0,8))
         self.progress=ttk.Progressbar(area,maximum=100);self.progress.pack(fill='x')
         self.status=tk.StringVar(value='Open an SSH tunnel for the robot connection, then discover devices.')
         ttk.Label(area,textvariable=self.status,wraplength=760).pack(anchor='w',pady=8)
@@ -75,6 +75,10 @@ class App:
         except ValueError as e:messagebox.showerror('Select device',str(e));return
         def operation(c):c.select(uid);c.request(BLINK);return c.info()
         self.work(operation)
+    def power_reset(self):
+        try:uid=self.uid()
+        except ValueError as e:messagebox.showerror('Select device',str(e));return
+        self.work(lambda c:c.power_reset(uid))
     def configure(self):
         try:uid=self.uid();values=[int(v.get()) for v in self.fields.values()]
         except ValueError as e:messagebox.showerror('Check settings',str(e));return
@@ -104,7 +108,7 @@ class App:
                     uid=info['uid'];self.nodes[uid]=info
                     if self.table.exists(uid):self.table.delete(uid)
                     self.table.insert('', 'end', iid=uid,text=uid,values=('Unconfigured' if not info['configured'] else info['device_id'],info['mode'],info['version']))
-                self.status.set('Verified. '+str(len(rows))+' device(s) read back. Firmware updates are complete only after application/version verification.')
+                self.status.set(('12 V: %.2f V; 5 V: %.2f V; latched faults: %d. ' % (rows[0].get('rail12_mV',0)/1000,rows[0].get('rail5_mV',0)/1000,rows[0].get('rail_latched',0)) if len(rows)==1 else '')+'Verified. '+str(len(rows))+' device(s) read back. Firmware updates are complete only after application/version verification.')
         except queue.Empty:pass
         self.root.after(50,self.poll)
     def close(self):

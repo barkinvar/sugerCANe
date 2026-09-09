@@ -13,10 +13,10 @@ from gerbonara.graphic_objects import Flash
 import verify_gerber_connectivity as g
 
 ROOT=Path(__file__).resolve().parents[1]
-outline=box(0,-64,52,0)
+outline=box(0,-74,52,0)
 manifest=json.loads((ROOT/'reports/manufacturing/board_manifest.json').read_text())
 mounts=[(c['x_mm'],c['y_mm']) for c in manifest['components'] if c['reference'].startswith('H')]
-assert sorted(mounts)==[(3.5,-4.0),(48.5,-36.5)]
+assert sorted(mounts)==[(3.5,-4.0),(48.5,-46.5)]
 report={'units':'mm','arc_approximation_tolerance_mm':g.ERROR,'copper':{},'mask':{},'paste':{}}
 for side,polys in g.islands.items():
     copper=union_all(polys)

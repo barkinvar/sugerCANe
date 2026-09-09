@@ -2,7 +2,7 @@
 
 [Overview](README.md) · [Revision map](REVISIONS.md) · [Tools](current/TOOLS.md)
 
-Work in `current/`, the maintained Rev F project. Native KiCad schematic/PCB are authoritative; the explicit circuit model, BOM, firmware identity and instructions must agree. Do not rebuild a routed board from historical placement experiments. Prior released ZIPs under `archive/` are immutable; make a new revision when electrical behavior or compatibility changes.
+Work in `current/`, the maintained Rev G project. Native KiCad schematic/PCB are authoritative; the explicit circuit model, BOM, firmware identity and instructions must agree. Do not rebuild a routed board from historical placement experiments. Prior released ZIPs under `archive/` are immutable; make a new revision when electrical behavior or compatibility changes.
 
 Keep native CAD/local libraries, original sources, licenses and pinned manifests, BOMs, Gerbers/drills, final STEP/PDF/HTML/PNG exports, programming images, engineering reports and release/order ZIPs in Git. These deliverables let reviewers and assemblers use the project without recreating its toolchain.
 

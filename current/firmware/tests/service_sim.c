@@ -18,9 +18,11 @@ static bool send(void*v,const uint8_t*d){sim*x=v;memcpy(x->reply,d,8);x->has_rep
 static bool load(void*v,sc_config_record*c){sim*x=v;*c=x->config;return x->configured;}
 static bool save(void*v,sc_config_record*c){sim*x=v;x->config=*c;x->configured=true;return true;}
 static bool protected_boot(void*v){return ((sim*)v)->protected_boot;}
+static bool power(void *ctx,uint8_t mask,uint32_t now){(void)ctx;(void)now;return mask>0&&mask<=3;}
+static uint32_t rails(void *ctx,unsigned n){(void)ctx;return n?0x303u:(12000u|(5000u<<16));}
 static void init(sim*x,bool boot);
 static void reset(void*v,bool boot){sim*x=v;init(x,boot||!sc_image_valid(&x->s.io));}
-static void init(sim*x,bool boot){sc_service_io io={x,read_flash,erase,write_flash,send,load,save,protected_boot,reset};x->boot=boot;sc_service_init(&x->s,&io,x->uid,boot);}
+static void init(sim*x,bool boot){sc_service_io io={x,read_flash,erase,write_flash,send,load,save,protected_boot,reset,power,rails};x->boot=boot;sc_service_init(&x->s,&io,x->uid,boot);}
 void *sim_new(const uint8_t*uid,int boot){sim*x=calloc(1,sizeof(*x));assert(x);memset(x->flash,255,sizeof(x->flash));memcpy(x->uid,uid,12);x->protected_boot=true;init(x,boot!=0);return x;}
 void sim_free(void*v){free(v);}
 int sim_exchange(void*v,const uint8_t*d,uint8_t*out){sim*x=v;x->has_reply=false;sc_service_receive(&x->s,d,++x->now);sc_service_tick(&x->s,x->now);if(x->has_reply)memcpy(out,x->reply,8);return x->has_reply;}

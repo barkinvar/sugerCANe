@@ -7,9 +7,11 @@ import hashlib,json
 from pathlib import Path
 from can_service import Client,TcpBridge,SocketCan
 
-LIMITS={'internal_5v':(4.8,5.3),'logic_3v3':(3.15,3.45),'regulated_12v':(11.4,12.6)}
+LIMITS={'internal_5v':(4.8,5.3),'logic_3v3':(3.15,3.45),'regulated_12v':(11.4,12.6),'sensor_5v':(4.65,5.45)}
 CHECKS=('smt_inspected','terminal_polarity','input1_low_high','input2_low_high',
-        'input3_low_high','telemetry_after_service','power_cycle_config_retained')
+        'input3_low_high','telemetry_after_service','power_cycle_config_retained',
+        'efuse_exposed_pad_inspected','rails_off_in_bootloader','rails_off_during_reset',
+        'rail_adc_matches_meter','sensor_rail_short_and_can_reset')
 def assess(info, measurements):
     errors=[]
     if info['mode']!='application' or not info['configured'] or not info['boot_protected']:

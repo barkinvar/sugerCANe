@@ -86,10 +86,14 @@ void sc_service_receive(sc_service *s,const uint8_t *d,uint32_t now) {
         sc_config_record cfg={0};bool configured=s->io.load(s->io.ctx,&cfg);
         switch(value) {
         case 0:result=1u|((uint32_t)s->boot<<8)|((uint32_t)configured<<9)|
-                      ((uint32_t)s->io.protected_boot(s->io.ctx)<<10)|(6u<<16)|(6u<<24);break;
+                      ((uint32_t)s->io.protected_boot(s->io.ctx)<<10)|(8u<<16)|(7u<<24);break;
         case 1:result=(configured?cfg.device_id:255u)|((uint32_t)cfg.invert_mask<<8)|
                        ((uint32_t)(configured?cfg.debounce_ms:2u)<<16)|((uint32_t)s->period<<24);break;
-        case 2:result=s->boot?0x00010000u:0x00000700u;break;
+        case 2:result=s->boot?0x00010000u:0x00000800u;break;
+        case 10:case 11:
+            if(s->boot || !s->io.rails)error=SC_BAD_STATE;
+            else result=s->io.rails(s->io.ctx,value-10);
+            break;
         case 3:result=s->offset;break;
         case 9:result=configured?cfg.input_config:0;break;
         case 4:result=SC_APP_SIZE;break;
@@ -104,6 +108,10 @@ void sc_service_receive(sc_service *s,const uint8_t *d,uint32_t now) {
     } else if(op==SC_INPUTS) {
         if(!sc_input_config_valid(value))error=SC_BAD_ARGUMENT;
         else{s->staged_inputs=value;s->inputs_staged=true;result=value;}
+    } else if(op==SC_POWER) {
+        if(!value || value>3)error=SC_BAD_ARGUMENT;
+        else if(s->boot || !s->io.power || !s->io.power(s->io.ctx,(uint8_t)value,now))error=SC_BAD_STATE;
+        else result=value;
     } else if(op==SC_SAVE) {
         sc_config_record cfg={0};cfg.device_id=d[4];cfg.invert_mask=d[5];cfg.debounce_ms=d[6];
         if(d[7] || cfg.device_id>63 || cfg.invert_mask>7 || !cfg.debounce_ms || cfg.debounce_ms>100)error=SC_BAD_ARGUMENT;

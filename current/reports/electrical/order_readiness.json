@@ -1,110 +1,108 @@
 {
-  "order_decision": "HOLD: not qualified for a single final hardware order",
+  "order_decision": "PASS pre-fabrication engineering screens; unbuilt prototype",
   "physical_tests_performed": false,
-  "hardware_changed": false,
+  "hardware_changed": true,
+  "revision": "G",
   "input_hashes": {
-    "hardware/design/circuit.json": "3a55f30820d391818373b4208695c0ed10e71aa46baea795fb453f5822c7b203",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "901a85bc9c83d7ec6f27a73fdd4672a678c4915cf2e7a258dbf27861f44f4739",
-    "reports/electrical/electrical_checks.json": "21cbc85da8ebe2e9ff4f2dc6937170361c3df7a89c3dc39b0014846e5ae6d21a",
-    "reports/electrical/boost_spice.json": "65aa5cd757ec20fa1606a4236ad6bf54a17b3ab4fc9d9dd76d24066da8f4d0ad",
-    "reports/design_parity.json": "b392150690683d898848aa6d8d6d1172e696a1ee089dc334f6b4725461cff0af",
-    "reports/board_constraints.json": "c5e3edbac591166a3c5e23b8e120c28bf5bfe33e773b8bce7709d3b39e9e88f2",
-    "scripts/check_boost_spice.py": "2ec35f90a05cb0804e2689962bec8426d1e8e65238824289ca379555557f1df5",
-    "scripts/check_electrical.py": "2ea2cbbc503be2269989bd53051d0bd4089323d8f3eb90203ecfa6b4c3cc6b87",
-    "scripts/check_order_readiness.py": "eb0cb0f8e450abbbd9200ad1dc458780434ec27a47a10000f8e30696f833a642"
+    "hardware/design/circuit.json": "628448e602daa1dd8e1c357766c2b69a74969ecad914084fe6b7ee6043ba1e12",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "99e5cb31aa0881b20291b8853cd55cebe4716b7c874eb7c6de99d3121f9765a8",
+    "reports/electrical/electrical_checks.json": "9bc8c6f191deb39899b5031d02078fd71c71f6b8d662ec5c86f3d3a0cee3ac43",
+    "reports/electrical/boost_spice.json": "abf1fa1d953f90572f97d3d5d1e6b54312e6df57dad41d9b3b06d733a0ca6789",
+    "reports/design_parity.json": "7383268d702afec7b0b83e89f64da9616de98e7daea04e15c96c9aa9b08f9571",
+    "reports/board_constraints.json": "194f84bb64967752fe1dc27eab759ab6e7476cb587b148e6850b533cdb992e5c",
+    "scripts/check_boost_spice.py": "581bb55d77d235f98540b6552b15adccc7db74324cbee23ae97961415a7b3c8f",
+    "scripts/check_electrical.py": "be656cedc1803ba01aa5acb002ba08d0929d46a83e1d21b92484977a2a7fd30a",
+    "scripts/check_order_readiness.py": "4afe4b79774e97b4380c62323339782e613714d4985463be46d65d1c8029e53e"
   },
   "pin_review": {
     "checks": {
+      "U1": true,
+      "U2": true,
+      "U8": true,
+      "Q1": true,
+      "D4": true,
+      "D5": true,
+      "D6": true,
       "U5": true,
       "U6": true,
       "U7": true,
+      "U4": true,
+      "U9": true,
+      "Q2": true,
+      "Q3": true,
       "SWD_reset_and_BOOT0_exposed": true,
       "BOOT0_pulldown": true,
-      "CAN_defaults_to_standby": true
+      "CAN_defaults_to_standby": true,
+      "12V_disable_derived_from_raw_supply": true,
+      "12V_enable_defaults_low": true,
+      "5V_enable_defaults_low": true,
+      "raw_reservoir_before_limiter": true
     },
-    "power_switch_enable_nets": {
-      "U4": "V5_INTERNAL",
-      "U9": "V5_INTERNAL"
-    },
-    "firmware_can_reset_power_switches": false,
-    "scope": "Manufacturer pin-function review plus retained native parity checks; not physical operation."
+    "firmware_can_reset_power_switches": true,
+    "scope": "Independent manufacturer pin-function expectations and default-off circuit intent, alongside native parity checks."
   },
   "power_distribution": {
     "method": "Native routed-track resistor network with pad contacts and through vias; nodal DC solve",
     "trace_temperature_C": 85,
     "copper_um": 35,
     "via_plating_um": 20,
-    "boost_input_A": 1.1,
-    "other_5V_sensor_A": 0.31,
+    "boost_input_A": 1.3,
+    "other_5V_sensor_A": 0.51,
     "logic_A": 0.1,
-    "before_switch_drop_V": 0.029374128888183946,
-    "after_switch_drop_V": 0.0500947986934752,
-    "total_boost_path_drop_V": 0.07946892758165915,
+    "buck_to_boost_drop_V": 0.04552822472524169,
+    "boost_to_efuse_drop_V": 0.01232276112341765,
+    "total_boost_path_drop_V": 0.04552822472524169,
     "revised_PCB_allowance_V": 0.12,
     "results": {
       "V5_INTERNAL": {
-        "('L1', '2')": 0.019260313598152622,
-        "('U9', '1')": -0.029374128888183946,
-        "('U4', '1')": 0.017970026465511563,
-        "('U2', '1')": 0.008723011696956549
+        "('L1', '2')": 0.0632947485139618,
+        "('L2', '1')": -0.04552822472524169,
+        "('U4', '1')": 0.061968041986447724,
+        "('U2', '1')": 0.05649871230777952
       },
-      "V5_BOOST": {
-        "('U9', '6')": 1.5584100616037428e-15,
-        "('L2', '1')": -0.0500947986934752
+      "BOOST_12V": {
+        "('D4', '1')": -3.001557360734495e-17,
+        "('U9', '4')": -0.01232276112341765
       },
       "SENSOR_5V": {
         "1": {
-          "('U4', '6')": -2.597140832340883e-17,
-          "('JP101', '1')": -0.028327689996233644
+          "('U4', '6')": -1.122713739169246e-17,
+          "('JP101', '1')": -0.028327689996233047
         },
         "2": {
-          "('U4', '6')": -3.674886504527659e-17,
-          "('JP201', '1')": -0.03461064239992626
+          "('U4', '6')": -2.3352655404509586e-17,
+          "('JP201', '1')": -0.03461064239992565
         },
         "3": {
-          "('U4', '6')": -1.2930771036595249e-17,
-          "('JP301', '1')": -0.041793206798337916
+          "('U4', '6')": -1.256816507691458e-17,
+          "('JP301', '1')": -0.04179320679833727
         }
       },
       "SENSOR_12V": {
         "1": {
-          "('D4', '1')": -1.2261096222536129e-15,
-          "('JP101', '3')": -0.01553337511723232
+          "('U9', '5')": -1.3953396599209814e-17,
+          "('JP101', '3')": -0.0416747434814496
         },
         "2": {
-          "('D4', '1')": 3.179959828541432e-16,
-          "('JP201', '3')": -0.011372095384176334
+          "('U9', '5')": -2.6154498950347645e-16,
+          "('JP201', '3')": -0.0365911902431591
         },
         "3": {
-          "('D4', '1')": 5.538962977224903e-16,
-          "('JP301', '3')": -0.011761334765702732
+          "('U9', '5')": -6.756032017029219e-17,
+          "('JP301', '3')": -0.035812224370692876
         }
       }
     },
-    "geometry_sha256": "72f98d64f8c99eab2ce340a88b317db5a9766cc2359eae95d05265956a764f0e",
+    "geometry_sha256": "0b867b176dadb3e625c58ad8911d50ae460372de87c6b00fb6cc562e2267c904",
     "scope": "Nominal etched dimensions and ideal pads. No temperature solution, ground return, contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json."
   },
-  "accepted_hardware_substitutions": [],
-  "completed_additional_transient_evidence": false,
-  "planned_experiments": [
-    {
-      "name": "candidate_1u_full_cap_load",
-      "vin": 4.913149,
-      "cin": 22,
-      "cout": 66,
-      "extra_cap": 100,
-      "css": "1u",
-      "end": 45
-    },
-    {
-      "name": "candidate_1u_small_input_hotshort",
-      "cin": 1,
-      "css": "1u",
-      "end": 38,
-      "short": "0 0 25m 0 25.001m 1 36m 1 36.001m 0"
-    }
+  "resolved_rev_f_findings": [
+    "Output eFuse isolates reservoir from a sensor short",
+    "Boost input no longer passes through the former 1.2 A switch",
+    "Controlled output slew and staggered firmware startup",
+    "Explicit CAN reset and default-off rail enables",
+    "ADC monitoring replaces coarse comparator rail indication",
+    "Buck input capacitors relocated with verified local VIN and ground paths"
   ],
-  "exploration_status": "The two long component experiments were intentionally stopped before their requested end times. Neither is counted as a pass or fail, and neither supports a hardware substitution.",
-  "reason": "Startup, fault-current behavior, controlled reset and voltage monitoring require a combined hardware review. Capacitor-only experiments cannot close this order decision.",
-  "scope": "Native pin and DC routed-copper review plus retained original transient evidence. No new completed transient evidence, physical qualification, thermal/EMC or actual sensor tests."
+  "limitations": "Ideal pad/nominal copper DC model; no ground-return/contact/cable resistance or thermal solution. Vendor transient models use an idealized upstream 5 V supply and typical silicon. No board has been assembled or measured. Follow docs/VALIDATION.md for physical acceptance."
 }
