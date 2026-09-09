@@ -1,101 +1,102 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-09T21:59:37.589781+00:00",
+  "reviewed_utc": "2026-09-09T22:05:35.554121+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
       "file": "output/review/board_3d_final.png",
-      "sha256": "a2c4eb809031d4e877784997748b0ec623293691abed054b98344bde1e1d0f1a",
-      "scope": "Oblique CAD reviewed: aligned L(G)/H(Y) labels below both CAN connectors; unchanged component placement, including C1 and right-side RGB duct space.",
-      "reviewed_utc": "2026-09-09T21:59:37.589781+00:00"
+      "sha256": "eab425aacd01bb3f9fba59c7461afcc480b8dd4c8921bb6d296b3a6abd618da2",
+      "scope": "Oblique CAD reviewed: 5V/12V legends above all three headers; connector bodies, C1 and RGB placement unchanged.",
+      "reviewed_utc": "2026-09-09T22:05:35.554121+00:00"
     },
     {
       "file": "output/review/board_top.png",
-      "sha256": "b2908d81f5c5dea6978b0971f2cf18f3b0ca2f176c4668f0f37fad35281b609c",
-      "scope": "Top CAD reviewed: both CAN pairs share Y=10.8 mm, 0.8 mm text height and matching spacing; labels visible below connector bodies and clear of D20 pads.",
-      "reviewed_utc": "2026-09-09T21:59:37.589781+00:00"
+      "sha256": "4e249224491b490fe8e7a245909c156ad6a988c8e35776c074eb33d4f12e7809",
+      "scope": "Top CAD reviewed: all three 5V/12V pairs share Y=58.8 mm above the jumper pins, clear of component pads and the nominal cap envelope. CAN labels and input-terminal labels retained.",
+      "reviewed_utc": "2026-09-09T22:05:35.554121+00:00"
     },
     {
       "file": "output/review/board_bottom.png",
       "sha256": "c661d5e50731d4b20fa0c33c2dc354a5b72a0e58eaccaad4a2598e6847ec6f99",
       "scope": "Bottom CAD reviewed: both CAN pairs show H(Y)/L(G) with correct underside mirroring and aligned text; remaining legends unchanged.",
-      "reviewed_utc": "2026-09-09T21:59:37.589781+00:00"
+      "reviewed_utc": "2026-09-09T21:59:37.589781+00:00",
+      "evidence": "Unchanged artifact; previous visual review retained for this silkscreen-only update."
     },
     {
       "file": "output/review/board_connectors.png",
-      "sha256": "cfb09a6655968b3a010b8c869af6e3a424bc70dd1249b73e21c7fc2df07a666f",
-      "scope": "Connector-angle CAD reviewed: unchanged connector access and C1 position; CAN color labels updated. Nominal geometry only.",
-      "reviewed_utc": "2026-09-09T21:59:37.589781+00:00"
+      "sha256": "e7af84ff9f55bf016f677de67801749b5785c74f776ab4d4a145da6e8afff373",
+      "scope": "Connector-angle CAD reviewed: updated voltage labels above the headers; unchanged access and nominal component geometry.",
+      "reviewed_utc": "2026-09-09T22:05:35.554121+00:00"
     },
     {
       "file": "output/review/service_gui.png",
       "sha256": "e4cf0a7e3011c206410cccc592cd689df534eb19928cbc9ddcd41c88576e381d",
       "scope": "Simulated app0.9.0: three independent input modes and active levels, identify and Reset power fault controls; no physical CAN connection.",
       "reviewed_utc": "2026-09-09T19:59:05.532967+00:00",
-      "evidence": "Unchanged artifact; previous visual review retained, not repeated for this silkscreen change."
+      "evidence": "Unchanged artifact; previous visual review retained for this silkscreen-only update."
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "b289f55b8a02a8500c17bb33d906bcc75f3c73d6483d8ac2dd0e948cac99a9b6",
-      "scope": "All 38 pages compared as rendered images against the preceding reviewed handbook. Changed pages 1, 8, 9, 10 and 32 visually reviewed: new board render, CAN color labels and C1 enclosure/mounting advice. Other pages pixel-identical.",
-      "reviewed_utc": "2026-09-09T21:59:37.589781+00:00"
+      "sha256": "7298cd55113d5811263bdb37f32ee6e64012e2106a5635f7746402235ca6e75c",
+      "scope": "All 38 pages compared as rendered images with the preceding reviewed handbook. Changed pages 1, 8 and 32 reviewed: new cover render, voltage-label position and JP2/TP1 explanations. All other pages pixel-identical.",
+      "reviewed_utc": "2026-09-09T22:05:35.554121+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
       "sha256": "6dcda8e3c2ffe9f7426b0e7fcce7c344e274e119a566bb8e8fa8e3f5e249774d",
       "scope": "All three rendered pages are pixel-identical to the preceding reviewed BOM; its visual review is retained. BOM and parts price unchanged.",
       "reviewed_utc": "2026-09-09T21:28:24.716091+00:00",
-      "evidence": "Unchanged artifact; previous visual review retained, not repeated for this silkscreen change."
+      "evidence": "Unchanged artifact; previous visual review retained for this silkscreen-only update."
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
       "sha256": "9f01a25690cc4a0142cf40b85e46614eba36c72b35dd191f4bcb29e1943716d9",
       "scope": "Both pages reviewed: R1.5 contour and callout, same 52x74 outline bounds, mounting holes, connectors, LED duct, service socket and pin map.",
       "reviewed_utc": "2026-09-09T21:28:24.716091+00:00",
-      "evidence": "Unchanged artifact; previous visual review retained, not repeated for this silkscreen change."
+      "evidence": "Unchanged artifact; previous visual review retained for this silkscreen-only update."
     },
     {
       "file": "output/assembly/schematic.pdf",
       "sha256": "5deedab49075e784ef1b626358562ef316261e28a01a64da52e326b82728e90f",
       "scope": "All ten rendered pages are pixel-identical to the preceding reviewed schematic; prior visual review retained.",
-      "reviewed_utc": "2026-09-09T21:59:37.589781+00:00"
+      "reviewed_utc": "2026-09-09T21:59:37.589781+00:00",
+      "evidence": "Unchanged artifact; previous visual review retained for this silkscreen-only update."
     },
     {
       "file": "output/assembly/top_assembly.pdf",
-      "sha256": "4535b9dfbefe566237fb2ab2346288e1002da6a61667ca94be1c692e7bd91fba",
-      "scope": "Assembly page reviewed: CAN L(G)/H(Y) labels aligned; original body outlines, references and placements retained.",
-      "reviewed_utc": "2026-09-09T21:59:37.589781+00:00"
+      "sha256": "308e20ab4b3a293879f145a91b1ecd3ed5dfd9ccc6ab555c5c76b7a094bd75c4",
+      "scope": "Assembly page reviewed: all three voltage-label pairs above their headers, with unchanged footprint outlines and references.",
+      "reviewed_utc": "2026-09-09T22:05:35.554121+00:00"
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "sha256": "34d91a190b48615b8f38d71bd20a896b7bf9d93c288157910f74591a2f0a7600",
-      "scope": "Both rendered copper/drill pages pixel-identical to the preceding reviewed PDF; prior visual review retained.",
-      "reviewed_utc": "2026-09-09T21:59:37.589781+00:00"
+      "sha256": "aef51c649e338ebf1e127be0c11d1034a5316b76d0a6b33d48263e10c5fa450e",
+      "scope": "Both rendered pages pixel-identical to the preceding reviewed copper/drill PDF; prior visual review retained.",
+      "reviewed_utc": "2026-09-09T22:05:35.554121+00:00"
     },
     {
       "file": "reports/electrical/converter_loop.png",
       "sha256": "7795275a91cd9821e5ece2957a948549299dc94b29e0a7abc14d64fa0f897a28",
       "scope": "Rev H caption, nominal averaged-loop gain/phase curves and explicit analytical-model limitation inspected; 768-corner results retained in JSON.",
       "reviewed_utc": "2026-09-09T19:59:05.532967+00:00",
-      "evidence": "Unchanged artifact; previous visual review retained, not repeated for this silkscreen change."
+      "evidence": "Unchanged artifact; previous visual review retained for this silkscreen-only update."
     },
     {
       "file": "output/assembly/bottom_markings.pdf",
       "sha256": "8696c61972d7d04ecdc52b1a59d37f7bafdb50a3ae9b850f4854c8f33289d0d7",
       "scope": "Bottom markings PDF reviewed: L(G)/H(Y), CAN A/B labels and correct underside orientation.",
-      "reviewed_utc": "2026-09-09T21:59:37.589781+00:00"
+      "reviewed_utc": "2026-09-09T21:59:37.589781+00:00",
+      "evidence": "Unchanged artifact; previous visual review retained for this silkscreen-only update."
     }
   ],
   "limitations": "Nominal CAD/PDF inspection only. Simulations deferred by user until the final design; current sensor-distribution routing has no fresh DC/transient result. No physical board, optical, vibration or assembly-yield testing.",
-  "page_comparison_baseline_commit": "95032c67e51468d45fa17a8ac2e790de16a70362",
+  "page_comparison_baseline_commit": "1824ca6b416b7c54a04fbf0ee52ef42520a14090",
   "rendered_page_comparison": {
     "handbook": {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
       "changed_pages": [
         1,
         8,
-        9,
-        10,
         32
       ],
       "unchanged_pages": [
@@ -105,6 +106,8 @@
         5,
         6,
         7,
+        9,
+        10,
         11,
         12,
         13,
@@ -144,33 +147,6 @@
       "unchanged_pages": [],
       "page_count": 1,
       "previous_page_count": 1
-    },
-    "bottom": {
-      "file": "output/assembly/bottom_markings.pdf",
-      "changed_pages": [
-        1
-      ],
-      "unchanged_pages": [],
-      "page_count": 1,
-      "previous_page_count": 1
-    },
-    "schematic": {
-      "file": "output/assembly/schematic.pdf",
-      "changed_pages": [],
-      "unchanged_pages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "page_count": 10,
-      "previous_page_count": 10
     },
     "copper": {
       "file": "output/assembly/gerber_copper_review.pdf",
