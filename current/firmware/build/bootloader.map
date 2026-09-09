@@ -1,0 +1,915 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
+                              build/boot_input_mode.o (__gnu_thumb1_case_uqi)
+/home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+                              build/boot_service.o (__gnu_thumb1_case_uhi)
+/home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+                              build/boot_boot_main.o (__aeabi_uidiv)
+/home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                              /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+/home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
+                              build/startup.o (__libc_init_array)
+/home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
+                              build/boot_sensor_core.o (memset)
+/home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+                              build/boot_board.o (memcpy)
+/home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
+                              build/boot_service.o (memcmp)
+
+Discarded input sections
+
+ .group         0x00000000        0xc build/boot_boot_main.o
+ .group         0x00000000        0xc build/boot_boot_main.o
+ .group         0x00000000        0xc build/boot_boot_main.o
+ .group         0x00000000        0xc build/boot_boot_main.o
+ .group         0x00000000        0xc build/boot_boot_main.o
+ .group         0x00000000        0xc build/boot_boot_main.o
+ .group         0x00000000        0xc build/boot_boot_main.o
+ .group         0x00000000        0xc build/boot_boot_main.o
+ .group         0x00000000        0xc build/boot_boot_main.o
+ .group         0x00000000        0xc build/boot_boot_main.o
+ .group         0x00000000        0xc build/boot_boot_main.o
+ .group         0x00000000        0xc build/boot_boot_main.o
+ .group         0x00000000        0xc build/boot_boot_main.o
+ .text          0x00000000        0x0 build/boot_boot_main.o
+ .data          0x00000000        0x0 build/boot_boot_main.o
+ .bss           0x00000000        0x0 build/boot_boot_main.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .group         0x00000000        0xc build/boot_board.o
+ .text          0x00000000        0x0 build/boot_board.o
+ .data          0x00000000        0x0 build/boot_board.o
+ .bss           0x00000000        0x0 build/boot_board.o
+ .text.board_uart_init
+                0x00000000       0xa0 build/boot_board.o
+ .text.board_uart_write
+                0x00000000       0x48 build/boot_board.o
+ .text.board_uart_flush
+                0x00000000       0x3c build/boot_board.o
+ .text.board_uart_get
+                0x00000000       0x54 build/boot_board.o
+ .debug_macro   0x00000000      0xab4 build/boot_board.o
+ .debug_macro   0x00000000       0x22 build/boot_board.o
+ .debug_macro   0x00000000      0x34e build/boot_board.o
+ .debug_macro   0x00000000       0x52 build/boot_board.o
+ .debug_macro   0x00000000       0x2e build/boot_board.o
+ .debug_macro   0x00000000       0x22 build/boot_board.o
+ .debug_macro   0x00000000       0x1c build/boot_board.o
+ .debug_macro   0x00000000       0x22 build/boot_board.o
+ .debug_macro   0x00000000       0xd1 build/boot_board.o
+ .debug_macro   0x00000000      0x391 build/boot_board.o
+ .debug_macro   0x00000000     0xf209 build/boot_board.o
+ .debug_macro   0x00000000       0x66 build/boot_board.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_sensor_core.o
+ .text          0x00000000        0x0 build/boot_sensor_core.o
+ .data          0x00000000        0x0 build/boot_sensor_core.o
+ .bss           0x00000000        0x0 build/boot_sensor_core.o
+ .text.sc_inputs_init
+                0x00000000       0x38 build/boot_sensor_core.o
+ .text.sc_inputs_update
+                0x00000000       0x56 build/boot_sensor_core.o
+ .text.sc_can_is_ours
+                0x00000000       0x20 build/boot_sensor_core.o
+ .text.sc_put_u16
+                0x00000000        0x8 build/boot_sensor_core.o
+ .debug_macro   0x00000000      0xab4 build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x22 build/boot_sensor_core.o
+ .debug_macro   0x00000000      0x34e build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x52 build/boot_sensor_core.o
+ .debug_macro   0x00000000      0x190 build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x22 build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x60 build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x24 build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x5c build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x3c build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x34 build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x57 build/boot_sensor_core.o
+ .debug_macro   0x00000000      0x370 build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x16 build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x4a build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x34 build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x10 build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x52 build/boot_sensor_core.o
+ .debug_macro   0x00000000      0x1de build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x10 build/boot_sensor_core.o
+ .debug_macro   0x00000000       0x3c build/boot_sensor_core.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_input_mode.o
+ .text          0x00000000        0x0 build/boot_input_mode.o
+ .data          0x00000000        0x0 build/boot_input_mode.o
+ .bss           0x00000000        0x0 build/boot_input_mode.o
+ .text.drive    0x00000000       0x68 build/boot_input_mode.o
+ .text.sc_input_modes_init
+                0x00000000       0x3c build/boot_input_mode.o
+ .text.sc_input_modes_update
+                0x00000000      0x176 build/boot_input_mode.o
+ .debug_macro   0x00000000      0xab4 build/boot_input_mode.o
+ .debug_macro   0x00000000       0x22 build/boot_input_mode.o
+ .debug_macro   0x00000000      0x34e build/boot_input_mode.o
+ .debug_macro   0x00000000       0x22 build/boot_input_mode.o
+ .debug_macro   0x00000000       0x60 build/boot_input_mode.o
+ .debug_macro   0x00000000       0x24 build/boot_input_mode.o
+ .debug_macro   0x00000000       0x5c build/boot_input_mode.o
+ .debug_macro   0x00000000       0x3c build/boot_input_mode.o
+ .debug_macro   0x00000000       0x34 build/boot_input_mode.o
+ .debug_macro   0x00000000      0x190 build/boot_input_mode.o
+ .debug_macro   0x00000000       0x57 build/boot_input_mode.o
+ .debug_macro   0x00000000      0x370 build/boot_input_mode.o
+ .debug_macro   0x00000000       0x16 build/boot_input_mode.o
+ .debug_macro   0x00000000       0x4a build/boot_input_mode.o
+ .debug_macro   0x00000000       0x34 build/boot_input_mode.o
+ .debug_macro   0x00000000       0x10 build/boot_input_mode.o
+ .debug_macro   0x00000000       0x52 build/boot_input_mode.o
+ .debug_macro   0x00000000      0x1de build/boot_input_mode.o
+ .debug_macro   0x00000000       0x10 build/boot_input_mode.o
+ .debug_macro   0x00000000       0x3c build/boot_input_mode.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .group         0x00000000        0xc build/boot_service.o
+ .text          0x00000000        0x0 build/boot_service.o
+ .data          0x00000000        0x0 build/boot_service.o
+ .bss           0x00000000        0x0 build/boot_service.o
+ .debug_macro   0x00000000      0xab4 build/boot_service.o
+ .debug_macro   0x00000000       0x22 build/boot_service.o
+ .debug_macro   0x00000000      0x34e build/boot_service.o
+ .debug_macro   0x00000000       0x52 build/boot_service.o
+ .debug_macro   0x00000000       0x22 build/boot_service.o
+ .debug_macro   0x00000000       0x60 build/boot_service.o
+ .debug_macro   0x00000000       0x24 build/boot_service.o
+ .debug_macro   0x00000000       0x5c build/boot_service.o
+ .debug_macro   0x00000000       0x3c build/boot_service.o
+ .debug_macro   0x00000000       0x34 build/boot_service.o
+ .debug_macro   0x00000000      0x190 build/boot_service.o
+ .debug_macro   0x00000000       0x57 build/boot_service.o
+ .debug_macro   0x00000000      0x370 build/boot_service.o
+ .debug_macro   0x00000000       0x16 build/boot_service.o
+ .debug_macro   0x00000000       0x4a build/boot_service.o
+ .debug_macro   0x00000000       0x34 build/boot_service.o
+ .debug_macro   0x00000000       0x10 build/boot_service.o
+ .debug_macro   0x00000000       0x52 build/boot_service.o
+ .debug_macro   0x00000000      0x1de build/boot_service.o
+ .debug_macro   0x00000000       0x10 build/boot_service.o
+ .debug_macro   0x00000000       0x3c build/boot_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .group         0x00000000        0xc build/boot_board_service.o
+ .text          0x00000000        0x0 build/boot_board_service.o
+ .data          0x00000000        0x0 build/boot_board_service.o
+ .bss           0x00000000        0x0 build/boot_board_service.o
+ .text.board_boot_healthy
+                0x00000000       0x1e build/boot_board_service.o
+ .debug_macro   0x00000000      0xab4 build/boot_board_service.o
+ .debug_macro   0x00000000       0x22 build/boot_board_service.o
+ .debug_macro   0x00000000      0x34e build/boot_board_service.o
+ .debug_macro   0x00000000       0x52 build/boot_board_service.o
+ .debug_macro   0x00000000       0x2e build/boot_board_service.o
+ .debug_macro   0x00000000       0x22 build/boot_board_service.o
+ .debug_macro   0x00000000       0x1c build/boot_board_service.o
+ .debug_macro   0x00000000       0x22 build/boot_board_service.o
+ .debug_macro   0x00000000       0xd1 build/boot_board_service.o
+ .debug_macro   0x00000000      0x391 build/boot_board_service.o
+ .debug_macro   0x00000000     0xf209 build/boot_board_service.o
+ .debug_macro   0x00000000       0x66 build/boot_board_service.o
+ .debug_macro   0x00000000       0x46 build/boot_board_service.o
+ .debug_macro   0x00000000       0x22 build/boot_board_service.o
+ .debug_macro   0x00000000       0x60 build/boot_board_service.o
+ .debug_macro   0x00000000       0x24 build/boot_board_service.o
+ .debug_macro   0x00000000       0x5c build/boot_board_service.o
+ .debug_macro   0x00000000       0x3c build/boot_board_service.o
+ .debug_macro   0x00000000       0x34 build/boot_board_service.o
+ .debug_macro   0x00000000      0x190 build/boot_board_service.o
+ .debug_macro   0x00000000       0x57 build/boot_board_service.o
+ .debug_macro   0x00000000      0x370 build/boot_board_service.o
+ .debug_macro   0x00000000       0x16 build/boot_board_service.o
+ .debug_macro   0x00000000       0x4a build/boot_board_service.o
+ .debug_macro   0x00000000       0x34 build/boot_board_service.o
+ .debug_macro   0x00000000       0x10 build/boot_board_service.o
+ .debug_macro   0x00000000       0x52 build/boot_board_service.o
+ .debug_macro   0x00000000      0x1de build/boot_board_service.o
+ .debug_macro   0x00000000       0x10 build/boot_board_service.o
+ .debug_macro   0x00000000       0x3c build/boot_board_service.o
+ .text          0x00000000       0x14 build/startup.o
+ .data          0x00000000        0x0 build/startup.o
+ .bss           0x00000000        0x0 build/startup.o
+ .data          0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
+ .bss           0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
+ .data          0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+ .bss           0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+ .data          0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .data          0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
+ .bss           0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
+ .data          0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
+ .bss           0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
+ .data          0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+ .bss           0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+ .data          0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
+ .bss           0x00000000        0x0 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00002000         xr
+RAM              0x20000100         0x00001700         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD build/boot_boot_main.o
+LOAD build/boot_board.o
+LOAD build/boot_sensor_core.o
+LOAD build/boot_input_mode.o
+LOAD build/boot_service.o
+LOAD build/boot_board_service.o
+LOAD build/startup.o
+START GROUP
+LOAD /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a
+LOAD /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a
+END GROUP
+START GROUP
+LOAD /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a
+LOAD /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a
+LOAD /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libnosys.a
+END GROUP
+START GROUP
+LOAD /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a
+LOAD /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a
+LOAD /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libnosys.a
+END GROUP
+                0x20001800                        _estack = (ORIGIN (RAM) + LENGTH (RAM))
+                0x00000000                        _Min_Heap_Size = 0x0
+                0x00000400                        _Min_Stack_Size = 0x400
+
+.isr_vector     0x08000000       0xc0
+                0x08000000                        . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000       0xc0 build/startup.o
+                0x08000000                g_pfnVectors
+                0x080000c0                        . = ALIGN (0x4)
+
+.text           0x080000c0     0x1984
+                0x080000c0                        . = ALIGN (0x4)
+ *(.text*)
+ .text.startup.main
+                0x080000c0      0x16c build/boot_boot_main.o
+                0x080000c0                main
+ .text.flash_ready
+                0x0800022c       0x30 build/boot_board.o
+ .text._init    0x0800025c        0x2 build/boot_board.o
+                0x0800025c                _init
+ .text._fini    0x0800025e        0x2 build/boot_board.o
+                0x0800025e                _fini
+ .text.SystemInit
+                0x08000260        0x2 build/boot_board.o
+                0x08000260                SystemInit
+ *fill*         0x08000262        0x2 
+ .text.SysTick_Handler
+                0x08000264       0x10 build/boot_board.o
+                0x08000264                SysTick_Handler
+ .text.board_gpio_init
+                0x08000274      0x108 build/boot_board.o
+                0x08000274                board_gpio_init
+ .text.board_clock_init
+                0x0800037c       0xa0 build/boot_board.o
+                0x0800037c                board_clock_init
+ .text.board_can_abort
+                0x0800041c       0x10 build/boot_board.o
+                0x0800041c                board_can_abort
+ .text.board_can_standby
+                0x0800042c       0x1c build/boot_board.o
+                0x0800042c                board_can_standby
+ .text.board_bias
+                0x08000448       0x4c build/boot_board.o
+                0x08000448                board_bias
+ .text.board_safe_off
+                0x08000494       0x16 build/boot_board.o
+                0x08000494                board_safe_off
+ *fill*         0x080004aa        0x2 
+ .text.board_voltage_guard_init
+                0x080004ac       0x7c build/boot_board.o
+                0x080004ac                board_voltage_guard_init
+ .text.PVD_VDDIO2_IRQHandler
+                0x08000528       0x24 build/boot_board.o
+                0x08000528                PVD_VDDIO2_IRQHandler
+ .text.NMI_Handler
+                0x0800054c        0x8 build/boot_board.o
+                0x0800054c                NMI_Handler
+ .text.HardFault_Handler
+                0x08000554        0x8 build/boot_board.o
+                0x08000554                HardFault_Handler
+ .text.board_status_led
+                0x0800055c       0x1c build/boot_board.o
+                0x0800055c                board_status_led
+ .text.USART1_IRQHandler
+                0x08000578       0x98 build/boot_board.o
+                0x08000578                USART1_IRQHandler
+ .text.board_watchdog_start
+                0x08000610       0x48 build/boot_board.o
+                0x08000610                board_watchdog_start
+ .text.board_watchdog_feed
+                0x08000658       0x10 build/boot_board.o
+                0x08000658                board_watchdog_feed
+ .text.board_can_init
+                0x08000668      0x110 build/boot_board.o
+                0x08000668                board_can_init
+ .text.board_can_send
+                0x08000778       0x7c build/boot_board.o
+                0x08000778                board_can_send
+ .text.board_can_receive
+                0x080007f4       0xa4 build/boot_board.o
+                0x080007f4                board_can_receive
+ .text.board_config_load
+                0x08000898       0x28 build/boot_board.o
+                0x08000898                board_config_load
+ .text.board_config_store
+                0x080008c0       0xf0 build/boot_board.o
+                0x080008c0                board_config_store
+ .text.sc_crc32
+                0x080009b0       0x34 build/boot_sensor_core.o
+                0x080009b0                sc_crc32
+ .text.sc_config_valid
+                0x080009e4       0x64 build/boot_sensor_core.o
+                0x080009e4                sc_config_valid
+ .text.sc_config_newest
+                0x08000a48       0x34 build/boot_sensor_core.o
+                0x08000a48                sc_config_newest
+ .text.sc_can_id
+                0x08000a7c       0x14 build/boot_sensor_core.o
+                0x08000a7c                sc_can_id
+ .text.sc_put_u32
+                0x08000a90       0x10 build/boot_sensor_core.o
+                0x08000a90                sc_put_u32
+ .text.sc_input_config_valid
+                0x08000aa0       0x46 build/boot_input_mode.o
+                0x08000aa0                sc_input_config_valid
+ *fill*         0x08000ae6        0x2 
+ .text.image_crc
+                0x08000ae8       0x74 build/boot_service.o
+ .text.answer   0x08000b5c       0x4e build/boot_service.o
+ .text.matches  0x08000baa       0x3e build/boot_service.o
+ .text.sc_get32
+                0x08000be8       0x16 build/boot_service.o
+                0x08000be8                sc_get32
+ *fill*         0x08000bfe        0x2 
+ .text.vectors_valid
+                0x08000c00       0x78 build/boot_service.o
+ .text.sc_image_valid
+                0x08000c78       0x78 build/boot_service.o
+                0x08000c78                sc_image_valid
+ .text.sc_service_init
+                0x08000cf0       0x38 build/boot_service.o
+                0x08000cf0                sc_service_init
+ .text.sc_service_active
+                0x08000d28        0xc build/boot_service.o
+                0x08000d28                sc_service_active
+ .text.sc_service_disable
+                0x08000d34       0x16 build/boot_service.o
+                0x08000d34                sc_service_disable
+ *fill*         0x08000d4a        0x2 
+ .text.sc_service_tick
+                0x08000d4c       0x5c build/boot_service.o
+                0x08000d4c                sc_service_tick
+ .text.sc_service_receive
+                0x08000da8      0x564 build/boot_service.o
+                0x08000da8                sc_service_receive
+ .text.ready    0x0800130c       0x2c build/boot_board_service.o
+ .text.protected_boot
+                0x08001338       0x14 build/boot_board_service.o
+ .text.jump     0x0800134c        0x6 build/boot_board_service.o
+ *fill*         0x08001352        0x2 
+ .text.cookie_get
+                0x08001354       0x4c build/boot_board_service.o
+ .text.cookie_put
+                0x080013a0       0x30 build/boot_board_service.o
+ .text.save     0x080013d0       0x14 build/boot_board_service.o
+ .text.load     0x080013e4       0x20 build/boot_board_service.o
+ .text.send     0x08001404       0x10 build/boot_board_service.o
+ .text.read_flash
+                0x08001414       0x30 build/boot_board_service.o
+ .text.write_flash
+                0x08001444       0x9c build/boot_board_service.o
+ .text.erase_flash
+                0x080014e0       0x60 build/boot_board_service.o
+ .text.board_boot_request
+                0x08001540       0x34 build/boot_board_service.o
+                0x08001540                board_boot_request
+ .text.reset    0x08001574        0x8 build/boot_board_service.o
+ .text.board_boot_stay
+                0x0800157c       0x4c build/boot_board_service.o
+                0x0800157c                board_boot_stay
+ .text.board_service_init
+                0x080015c8       0x2c build/boot_board_service.o
+                0x080015c8                board_service_init
+ .text.board_run_application
+                0x080015f4       0xa4 build/boot_board_service.o
+                0x080015f4                board_run_application
+ .text.Reset_Handler
+                0x08001698       0x80 build/startup.o
+                0x08001698                Reset_Handler
+ .text.Default_Handler
+                0x08001718        0x2 build/startup.o
+                0x08001718                TIM1_CC_IRQHandler
+                0x08001718                TSC_IRQHandler
+                0x08001718                PendSV_Handler
+                0x08001718                I2C1_IRQHandler
+                0x08001718                RCC_CRS_IRQHandler
+                0x08001718                SPI1_IRQHandler
+                0x08001718                EXTI2_3_IRQHandler
+                0x08001718                ADC1_IRQHandler
+                0x08001718                TIM17_IRQHandler
+                0x08001718                CEC_CAN_IRQHandler
+                0x08001718                RTC_IRQHandler
+                0x08001718                TIM16_IRQHandler
+                0x08001718                TIM3_IRQHandler
+                0x08001718                EXTI4_15_IRQHandler
+                0x08001718                DMA1_Channel1_IRQHandler
+                0x08001718                Default_Handler
+                0x08001718                TIM14_IRQHandler
+                0x08001718                DMA1_Channel4_5_IRQHandler
+                0x08001718                EXTI0_1_IRQHandler
+                0x08001718                USB_IRQHandler
+                0x08001718                SPI2_IRQHandler
+                0x08001718                SVC_Handler
+                0x08001718                WWDG_IRQHandler
+                0x08001718                TIM2_IRQHandler
+                0x08001718                DMA1_Channel2_3_IRQHandler
+                0x08001718                USART2_IRQHandler
+                0x08001718                FLASH_IRQHandler
+                0x08001718                TIM1_BRK_UP_TRG_COM_IRQHandler
+ *fill*         0x0800171a        0x2 
+ .text          0x0800171c       0x14 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
+                0x0800171c                __gnu_thumb1_case_uqi
+ .text          0x08001730       0x14 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+                0x08001730                __gnu_thumb1_case_uhi
+ .text          0x08001744      0x114 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+                0x08001744                __udivsi3
+                0x08001744                __aeabi_uidiv
+                0x08001850                __aeabi_uidivmod
+ .text          0x08001858        0x4 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x08001858                __aeabi_ldiv0
+                0x08001858                __aeabi_idiv0
+ .text          0x0800185c       0x48 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
+                0x0800185c                __libc_init_array
+ .text          0x080018a4       0xa8 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
+                0x080018a4                memset
+ .text          0x0800194c       0x8c /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+                0x0800194c                memcpy
+ .text          0x080019d8       0x48 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
+                0x080019d8                memcmp
+ *(.rodata*)
+ .rodata        0x08001a20       0x24 build/boot_board_service.o
+ *(.init)
+ *(.fini)
+                0x08001a44                        . = ALIGN (0x4)
+                0x08001a44                        _etext = .
+
+.glue_7         0x08001a44        0x0
+ .glue_7        0x08001a44        0x0 linker stubs
+
+.glue_7t        0x08001a44        0x0
+ .glue_7t       0x08001a44        0x0 linker stubs
+
+.vfp11_veneer   0x08001a44        0x0
+ .vfp11_veneer  0x08001a44        0x0 linker stubs
+
+.v4_bx          0x08001a44        0x0
+ .v4_bx         0x08001a44        0x0 linker stubs
+
+.iplt           0x08001a44        0x0
+ .iplt          0x08001a44        0x0 build/boot_boot_main.o
+
+.rel.dyn        0x08001a44        0x0
+ .rel.iplt      0x08001a44        0x0 build/boot_boot_main.o
+
+.ARM.extab
+ *(.ARM.extab*)
+
+.ARM.exidx      0x08001a44        0x0
+                0x08001a44                        __exidx_start = .
+ *(.ARM.exidx*)
+                0x08001a44                        __exidx_end = .
+
+.preinit_array  0x08001a44        0x0
+                0x08001a44                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array*)
+                0x08001a44                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x08001a44        0x0
+                0x08001a44                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array*)
+                0x08001a44                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x08001a44        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array*)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+                0x08001a44                        _sidata = LOADADDR (.data)
+
+.data           0x20000100        0x4 load address 0x08001a44
+                0x20000100                        . = ALIGN (0x4)
+                0x20000100                        _sdata = .
+ *(.data*)
+ .data.SystemCoreClock
+                0x20000100        0x4 build/boot_board.o
+                0x20000100                SystemCoreClock
+                0x20000104                        . = ALIGN (0x4)
+                0x20000104                        _edata = .
+
+.igot.plt       0x20000104        0x0 load address 0x08001a48
+ .igot.plt      0x20000104        0x0 build/boot_boot_main.o
+
+.bss            0x20000104      0x310 load address 0x08001a48
+                0x20000104                        . = ALIGN (0x4)
+                0x20000104                        _sbss = .
+                0x20000104                        __bss_start__ = .
+ *(.bss*)
+ .bss.service   0x20000104       0x80 build/boot_boot_main.o
+ .bss.rx_error  0x20000184        0x1 build/boot_board.o
+ *fill*         0x20000185        0x1 
+ .bss.rx_tail   0x20000186        0x2 build/boot_board.o
+ .bss.rx_head   0x20000188        0x2 build/boot_board.o
+ .bss.tx_tail   0x2000018a        0x2 build/boot_board.o
+ .bss.tx_head   0x2000018c        0x2 build/boot_board.o
+ .bss.uart_rx   0x2000018e       0x80 build/boot_board.o
+ .bss.uart_tx   0x2000020e      0x200 build/boot_board.o
+ *fill*         0x2000040e        0x2 
+ .bss.board_millis
+                0x20000410        0x4 build/boot_board.o
+                0x20000410                board_millis
+ *(COMMON)
+                0x20000414                        . = ALIGN (0x4)
+                0x20000414                        _ebss = .
+                0x20000414                        __bss_end__ = .
+
+._user_heap_stack
+                0x20000414      0x404 load address 0x08001a48
+                0x20000418                        . = ALIGN (0x8)
+ *fill*         0x20000414        0x4 
+                [!provide]                        PROVIDE (end = .)
+                [!provide]                        PROVIDE (_end = .)
+                0x20000818                        . = ((. + _Min_Heap_Size) + _Min_Stack_Size)
+ *fill*         0x20000418      0x400 
+                0x20000818                        . = ALIGN (0x8)
+
+/DISCARD/
+ *(.note.GNU-stack)
+                0x00000001                        ASSERT (((_estack - _ebss) >= _Min_Stack_Size), Insufficient stack)
+OUTPUT(build/bootloader.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x00000000     0x58ce
+ .debug_info    0x00000000      0xb32 build/boot_boot_main.o
+ .debug_info    0x00000b32     0x1beb build/boot_board.o
+ .debug_info    0x0000271d      0x604 build/boot_sensor_core.o
+ .debug_info    0x00002d21      0x4d5 build/boot_input_mode.o
+ .debug_info    0x000031f6      0xf82 build/boot_service.o
+ .debug_info    0x00004178     0x11bd build/boot_board_service.o
+ .debug_info    0x00005335       0x31 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
+ .debug_info    0x00005366       0x31 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+ .debug_info    0x00005397       0x3e /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_info    0x000053d5       0x3c /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_info    0x00005411      0x10b /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
+ .debug_info    0x0000551c      0x135 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
+ .debug_info    0x00005651      0x152 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+ .debug_info    0x000057a3      0x12b /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
+
+.debug_abbrev   0x00000000     0x17b7
+ .debug_abbrev  0x00000000      0x2fb build/boot_boot_main.o
+ .debug_abbrev  0x000002fb      0x57c build/boot_board.o
+ .debug_abbrev  0x00000877      0x215 build/boot_sensor_core.o
+ .debug_abbrev  0x00000a8c      0x228 build/boot_input_mode.o
+ .debug_abbrev  0x00000cb4      0x31b build/boot_service.o
+ .debug_abbrev  0x00000fcf      0x470 build/boot_board_service.o
+ .debug_abbrev  0x0000143f       0x28 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
+ .debug_abbrev  0x00001467       0x28 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+ .debug_abbrev  0x0000148f       0x28 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_abbrev  0x000014b7       0x26 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_abbrev  0x000014dd       0xc9 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
+ .debug_abbrev  0x000015a6       0xb7 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
+ .debug_abbrev  0x0000165d       0xca /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+ .debug_abbrev  0x00001727       0x90 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
+
+.debug_loclists
+                0x00000000     0x2952
+ .debug_loclists
+                0x00000000      0x125 build/boot_boot_main.o
+ .debug_loclists
+                0x00000125      0xafa build/boot_board.o
+ .debug_loclists
+                0x00000c1f      0x3c0 build/boot_sensor_core.o
+ .debug_loclists
+                0x00000fdf      0x4b0 build/boot_input_mode.o
+ .debug_loclists
+                0x0000148f      0x958 build/boot_service.o
+ .debug_loclists
+                0x00001de7      0x55c build/boot_board_service.o
+ .debug_loclists
+                0x00002343       0x5a /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
+ .debug_loclists
+                0x0000239d      0x1c6 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
+ .debug_loclists
+                0x00002563      0x2c7 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+ .debug_loclists
+                0x0000282a      0x128 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
+
+.debug_aranges  0x00000000      0x3c0
+ .debug_aranges
+                0x00000000       0x20 build/boot_boot_main.o
+ .debug_aranges
+                0x00000020       0xf8 build/boot_board.o
+ .debug_aranges
+                0x00000118       0x60 build/boot_sensor_core.o
+ .debug_aranges
+                0x00000178       0x38 build/boot_input_mode.o
+ .debug_aranges
+                0x000001b0       0x70 build/boot_service.o
+ .debug_aranges
+                0x00000220       0xa0 build/boot_board_service.o
+ .debug_aranges
+                0x000002c0       0x20 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
+ .debug_aranges
+                0x000002e0       0x20 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+ .debug_aranges
+                0x00000300       0x20 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_aranges
+                0x00000320       0x20 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_aranges
+                0x00000340       0x20 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
+ .debug_aranges
+                0x00000360       0x20 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
+ .debug_aranges
+                0x00000380       0x20 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+ .debug_aranges
+                0x000003a0       0x20 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
+
+.debug_rnglists
+                0x00000000      0x561
+ .debug_rnglists
+                0x00000000       0x5d build/boot_boot_main.o
+ .debug_rnglists
+                0x0000005d      0x209 build/boot_board.o
+ .debug_rnglists
+                0x00000266       0x76 build/boot_sensor_core.o
+ .debug_rnglists
+                0x000002dc       0xdf build/boot_input_mode.o
+ .debug_rnglists
+                0x000003bb       0xfe build/boot_service.o
+ .debug_rnglists
+                0x000004b9       0xa8 build/boot_board_service.o
+
+.debug_macro    0x00000000    0x1172b
+ .debug_macro   0x00000000       0xb6 build/boot_boot_main.o
+ .debug_macro   0x000000b6      0xab4 build/boot_boot_main.o
+ .debug_macro   0x00000b6a       0x22 build/boot_boot_main.o
+ .debug_macro   0x00000b8c      0x34e build/boot_boot_main.o
+ .debug_macro   0x00000eda       0x52 build/boot_boot_main.o
+ .debug_macro   0x00000f2c       0x2e build/boot_boot_main.o
+ .debug_macro   0x00000f5a       0x22 build/boot_boot_main.o
+ .debug_macro   0x00000f7c       0x1c build/boot_boot_main.o
+ .debug_macro   0x00000f98       0x22 build/boot_boot_main.o
+ .debug_macro   0x00000fba       0xd1 build/boot_boot_main.o
+ .debug_macro   0x0000108b      0x391 build/boot_boot_main.o
+ .debug_macro   0x0000141c     0xf209 build/boot_boot_main.o
+ .debug_macro   0x00010625       0x66 build/boot_boot_main.o
+ .debug_macro   0x0001068b       0x46 build/boot_boot_main.o
+ .debug_macro   0x000106d1      0x17b build/boot_board.o
+ .debug_macro   0x0001084c       0x22 build/boot_board.o
+ .debug_macro   0x0001086e       0x60 build/boot_board.o
+ .debug_macro   0x000108ce       0x24 build/boot_board.o
+ .debug_macro   0x000108f2       0x5c build/boot_board.o
+ .debug_macro   0x0001094e       0x3c build/boot_board.o
+ .debug_macro   0x0001098a       0x34 build/boot_board.o
+ .debug_macro   0x000109be      0x190 build/boot_board.o
+ .debug_macro   0x00010b4e       0x57 build/boot_board.o
+ .debug_macro   0x00010ba5      0x370 build/boot_board.o
+ .debug_macro   0x00010f15       0x16 build/boot_board.o
+ .debug_macro   0x00010f2b       0x4a build/boot_board.o
+ .debug_macro   0x00010f75       0x34 build/boot_board.o
+ .debug_macro   0x00010fa9       0x10 build/boot_board.o
+ .debug_macro   0x00010fb9       0x52 build/boot_board.o
+ .debug_macro   0x0001100b      0x1de build/boot_board.o
+ .debug_macro   0x000111e9       0x10 build/boot_board.o
+ .debug_macro   0x000111f9       0x3c build/boot_board.o
+ .debug_macro   0x00011235      0x112 build/boot_sensor_core.o
+ .debug_macro   0x00011347       0xf9 build/boot_input_mode.o
+ .debug_macro   0x00011440      0x11d build/boot_service.o
+ .debug_macro   0x0001155d       0x40 build/boot_service.o
+ .debug_macro   0x0001159d      0x18e build/boot_board_service.o
+
+.debug_line     0x00000000     0x48b0
+ .debug_line    0x00000000      0x432 build/boot_boot_main.o
+ .debug_line    0x00000432     0x1460 build/boot_board.o
+ .debug_line    0x00001892      0x61d build/boot_sensor_core.o
+ .debug_line    0x00001eaf      0x7ca build/boot_input_mode.o
+ .debug_line    0x00002679      0xf38 build/boot_service.o
+ .debug_line    0x000035b1      0xbad build/boot_board_service.o
+ .debug_line    0x0000415e       0x52 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
+ .debug_line    0x000041b0       0x53 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+ .debug_line    0x00004203       0x56 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_line    0x00004259       0x4a /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_line    0x000042a3      0x105 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
+ .debug_line    0x000043a8      0x1bd /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
+ .debug_line    0x00004565      0x1e7 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+ .debug_line    0x0000474c      0x164 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
+
+.debug_str      0x00000000    0x5964e
+ .debug_str     0x00000000    0x5964e build/boot_boot_main.o
+                              0x55d2d (size before relaxing)
+ .debug_str     0x0005964e    0x58e33 build/boot_board.o
+ .debug_str     0x0005964e     0x6b60 build/boot_sensor_core.o
+ .debug_str     0x0005964e     0x6a3a build/boot_input_mode.o
+ .debug_str     0x0005964e     0x6ecf build/boot_service.o
+ .debug_str     0x0005964e    0x58bc5 build/boot_board_service.o
+ .debug_str     0x0005964e       0xb9 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
+ .debug_str     0x0005964e       0xb9 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+ .debug_str     0x0005964e       0xbe /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_str     0x0005964e       0xbf /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_str     0x0005964e      0x1f3 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
+ .debug_str     0x0005964e      0x1a6 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
+ .debug_str     0x0005964e      0x1c3 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+ .debug_str     0x0005964e      0x192 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
+
+.comment        0x00000000       0x26
+ .comment       0x00000000       0x26 build/boot_boot_main.o
+                                 0x27 (size before relaxing)
+ .comment       0x00000026       0x27 build/boot_board.o
+ .comment       0x00000026       0x27 build/boot_sensor_core.o
+ .comment       0x00000026       0x27 build/boot_input_mode.o
+ .comment       0x00000026       0x27 build/boot_service.o
+ .comment       0x00000026       0x27 build/boot_board_service.o
+ .comment       0x00000026       0x27 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
+ .comment       0x00000026       0x27 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
+ .comment       0x00000026       0x27 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+ .comment       0x00000026       0x27 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
+
+.ARM.attributes
+                0x00000000       0x2a
+ .ARM.attributes
+                0x00000000       0x2c build/boot_boot_main.o
+ .ARM.attributes
+                0x0000002c       0x2c build/boot_board.o
+ .ARM.attributes
+                0x00000058       0x2c build/boot_sensor_core.o
+ .ARM.attributes
+                0x00000084       0x2c build/boot_input_mode.o
+ .ARM.attributes
+                0x000000b0       0x2c build/boot_service.o
+ .ARM.attributes
+                0x000000dc       0x2c build/boot_board_service.o
+ .ARM.attributes
+                0x00000108       0x21 build/startup.o
+ .ARM.attributes
+                0x00000129       0x1e /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
+ .ARM.attributes
+                0x00000147       0x1e /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+ .ARM.attributes
+                0x00000165       0x1e /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x00000183       0x1e /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x000001a1       0x2c /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
+ .ARM.attributes
+                0x000001cd       0x2c /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
+ .ARM.attributes
+                0x000001f9       0x2c /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+ .ARM.attributes
+                0x00000225       0x2c /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
+
+.debug_frame    0x00000000      0x818
+ .debug_frame   0x00000000       0x30 build/boot_boot_main.o
+ .debug_frame   0x00000030      0x2a0 build/boot_board.o
+ .debug_frame   0x000002d0       0xec build/boot_sensor_core.o
+ .debug_frame   0x000003bc       0x84 build/boot_input_mode.o
+ .debug_frame   0x00000440      0x134 build/boot_service.o
+ .debug_frame   0x00000574      0x1cc build/boot_board_service.o
+ .debug_frame   0x00000740       0x20 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_frame   0x00000760       0x2c /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
+ .debug_frame   0x0000078c       0x30 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
+ .debug_frame   0x000007bc       0x30 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+ .debug_frame   0x000007ec       0x2c /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
+
+.debug_line_str
+                0x00000000       0x97
+ .debug_line_str
+                0x00000000       0x97 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
+ .debug_line_str
+                0x00000097       0x97 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+ .debug_line_str
+                0x00000097       0x97 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_line_str
+                0x00000097       0x97 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)

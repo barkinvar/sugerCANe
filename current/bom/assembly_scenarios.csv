@@ -1,0 +1,16 @@
+boards,service,charged_feeder_types,parts_per_board,setup_stencil_feeders_fixture_per_order,partial_per_board
+5,Standard,48,30.93,123.63,55.66
+5,Economic,10,30.93,40.41,39.01
+5,Economic,20,30.93,71.11,45.15
+5,Economic,30,30.93,101.81,51.29
+5,Economic,48,30.93,157.07,62.34
+10,Standard,48,27.17,123.63,39.53
+10,Economic,10,27.17,40.41,31.21
+10,Economic,20,27.17,71.11,34.28
+10,Economic,30,27.17,101.81,37.35
+10,Economic,48,27.17,157.07,42.88
+25,Standard,48,24.98,123.63,29.93
+25,Economic,10,24.98,40.41,26.6
+25,Economic,20,24.98,71.11,27.82
+25,Economic,30,24.98,101.81,29.05
+25,Economic,48,24.98,157.07,31.26

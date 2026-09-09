@@ -1,0 +1,34 @@
+make: Entering directory '/home/neuro/candi-clone/current/firmware'
+mkdir -p build
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -Iinclude -Ithird_party/cmsis_device_f0/Include -Ithird_party/CMSIS_5/CMSIS/Core/Include -DSTM32F042x6 -DHSE_VALUE=8000000U -Os -g3 -std=c11 -ffunction-sections -fdata-sections -fno-common -fstack-usage -Wall -Wextra -Werror -MMD -MP -DSC_APPLICATION -c src/main.c -o build/main.o
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -Iinclude -Ithird_party/cmsis_device_f0/Include -Ithird_party/CMSIS_5/CMSIS/Core/Include -DSTM32F042x6 -DHSE_VALUE=8000000U -Os -g3 -std=c11 -ffunction-sections -fdata-sections -fno-common -fstack-usage -Wall -Wextra -Werror -MMD -MP -DSC_APPLICATION -c src/board.c -o build/board.o
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -Iinclude -Ithird_party/cmsis_device_f0/Include -Ithird_party/CMSIS_5/CMSIS/Core/Include -DSTM32F042x6 -DHSE_VALUE=8000000U -Os -g3 -std=c11 -ffunction-sections -fdata-sections -fno-common -fstack-usage -Wall -Wextra -Werror -MMD -MP -DSC_APPLICATION -c src/sensor_core.c -o build/sensor_core.o
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -Iinclude -Ithird_party/cmsis_device_f0/Include -Ithird_party/CMSIS_5/CMSIS/Core/Include -DSTM32F042x6 -DHSE_VALUE=8000000U -Os -g3 -std=c11 -ffunction-sections -fdata-sections -fno-common -fstack-usage -Wall -Wextra -Werror -MMD -MP -DSC_APPLICATION -c src/input_mode.c -o build/input_mode.o
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -Iinclude -Ithird_party/cmsis_device_f0/Include -Ithird_party/CMSIS_5/CMSIS/Core/Include -DSTM32F042x6 -DHSE_VALUE=8000000U -Os -g3 -std=c11 -ffunction-sections -fdata-sections -fno-common -fstack-usage -Wall -Wextra -Werror -MMD -MP -DSC_APPLICATION -c src/service.c -o build/service.o
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -Iinclude -Ithird_party/cmsis_device_f0/Include -Ithird_party/CMSIS_5/CMSIS/Core/Include -DSTM32F042x6 -DHSE_VALUE=8000000U -Os -g3 -std=c11 -ffunction-sections -fdata-sections -fno-common -fstack-usage -Wall -Wextra -Werror -MMD -MP -DSC_APPLICATION -c src/board_service.c -o build/board_service.o
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -x assembler-with-cpp -c third_party/cmsis_device_f0/Source/Templates/gcc/startup_stm32f042x6.s -o build/startup.o
+arm-none-eabi-gcc build/main.o build/board.o build/sensor_core.o build/input_mode.o build/service.o build/board_service.o build/startup.o -nostartfiles -mcpu=cortex-m0 -mthumb -Tstm32f042k6.ld --specs=nano.specs --specs=nosys.specs -Wl,--gc-sections,-Map=build/sensor_can.map -Wl,--print-memory-usage -o build/sensor_can.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:       10428 B        21 KB     48.49%
+             RAM:        1968 B       5888 B     33.42%
+arm-none-eabi-size build/sensor_can.elf
+   text	   data	    bss	    dec	    hex	filename
+  10420	      8	   1960	  12388	   3064	build/sensor_can.elf
+arm-none-eabi-objcopy -O binary build/sensor_can.elf build/sensor_can.bin
+arm-none-eabi-objcopy -O ihex build/sensor_can.elf build/sensor_can.hex
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -Iinclude -Ithird_party/cmsis_device_f0/Include -Ithird_party/CMSIS_5/CMSIS/Core/Include -DSTM32F042x6 -DHSE_VALUE=8000000U -Os -g3 -std=c11 -ffunction-sections -fdata-sections -fno-common -fstack-usage -Wall -Wextra -Werror -MMD -MP -c src/boot_main.c -o build/boot_boot_main.o
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -Iinclude -Ithird_party/cmsis_device_f0/Include -Ithird_party/CMSIS_5/CMSIS/Core/Include -DSTM32F042x6 -DHSE_VALUE=8000000U -Os -g3 -std=c11 -ffunction-sections -fdata-sections -fno-common -fstack-usage -Wall -Wextra -Werror -MMD -MP -c src/board.c -o build/boot_board.o
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -Iinclude -Ithird_party/cmsis_device_f0/Include -Ithird_party/CMSIS_5/CMSIS/Core/Include -DSTM32F042x6 -DHSE_VALUE=8000000U -Os -g3 -std=c11 -ffunction-sections -fdata-sections -fno-common -fstack-usage -Wall -Wextra -Werror -MMD -MP -c src/sensor_core.c -o build/boot_sensor_core.o
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -Iinclude -Ithird_party/cmsis_device_f0/Include -Ithird_party/CMSIS_5/CMSIS/Core/Include -DSTM32F042x6 -DHSE_VALUE=8000000U -Os -g3 -std=c11 -ffunction-sections -fdata-sections -fno-common -fstack-usage -Wall -Wextra -Werror -MMD -MP -c src/input_mode.c -o build/boot_input_mode.o
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -Iinclude -Ithird_party/cmsis_device_f0/Include -Ithird_party/CMSIS_5/CMSIS/Core/Include -DSTM32F042x6 -DHSE_VALUE=8000000U -Os -g3 -std=c11 -ffunction-sections -fdata-sections -fno-common -fstack-usage -Wall -Wextra -Werror -MMD -MP -c src/service.c -o build/boot_service.o
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -Iinclude -Ithird_party/cmsis_device_f0/Include -Ithird_party/CMSIS_5/CMSIS/Core/Include -DSTM32F042x6 -DHSE_VALUE=8000000U -Os -g3 -std=c11 -ffunction-sections -fdata-sections -fno-common -fstack-usage -Wall -Wextra -Werror -MMD -MP -c src/board_service.c -o build/boot_board_service.o
+arm-none-eabi-gcc build/boot_boot_main.o build/boot_board.o build/boot_sensor_core.o build/boot_input_mode.o build/boot_service.o build/boot_board_service.o build/startup.o -nostartfiles -mcpu=cortex-m0 -mthumb -Tbootloader.ld --specs=nano.specs --specs=nosys.specs -Wl,--gc-sections,-Map=build/bootloader.map -Wl,--print-memory-usage -o build/bootloader.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:        6728 B         8 KB     82.13%
+             RAM:        1816 B       5888 B     30.84%
+arm-none-eabi-size build/bootloader.elf
+   text	   data	    bss	    dec	    hex	filename
+   6724	      4	   1812	   8540	   215c	build/bootloader.elf
+arm-none-eabi-objcopy -O binary build/bootloader.elf build/bootloader.bin
+python ../host/firmware_image.py --build build
+make: Leaving directory '/home/neuro/candi-clone/current/firmware'

@@ -1,0 +1,12 @@
+{
+  "revision": "F protected boost",
+  "modeled_parts": 122,
+  "fitted_parts": 119,
+  "factory_smt_parts": 110,
+  "hand_solder_parts": 9,
+  "purchase_lines": 52,
+  "factory_smt_types": 48,
+  "shunts": 3,
+  "component_consumed_first_tier_usd": 34.56,
+  "note": "Consumed parts at first supplier tier, including hand-fit parts and three loose shunts; not quantity-one purchasing cash or a PCBA quote. See cost_estimate.csv for MOQ and batch pricing."
+}

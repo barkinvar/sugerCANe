@@ -1,0 +1,192 @@
+{
+  "source_commit": "9ccb4b7",
+  "files": [
+    {
+      "original_path": "release/FRC_Sensor_CAN_RevA_Fabrication.zip",
+      "path": "release/FRC_Sensor_CAN_RevA_Fabrication.zip",
+      "sha256": "a1553db2573a84a84d2fbe31bab81dab042d1fc9110a18f4983647ff292d2dc0",
+      "bytes": 575282
+    },
+    {
+      "original_path": "release/FRC_Sensor_CAN_RevA_Prototype.zip",
+      "path": "release/FRC_Sensor_CAN_RevA_Prototype.zip",
+      "sha256": "b372f696022cda487f8f0dd92467a784ffa3dbb1f1e3bf66f4c7200a81ac6c67",
+      "bytes": 34933339
+    },
+    {
+      "original_path": "release/SHA256SUMS.txt",
+      "path": "release/SHA256SUMS.txt",
+      "sha256": "5fd1bf88a189e1eeb0b352bfc34d503d1588a57a9a15474aee7986a3998148bf",
+      "bytes": 282
+    },
+    {
+      "original_path": "rev_b/history/before_horizontal_connectors/release/FRC_Sensor_CAN_RevB_Prototype.zip",
+      "path": "rev_b/history/before_horizontal_connectors/release/FRC_Sensor_CAN_RevB_Prototype.zip",
+      "sha256": "fdbefeae9837c94831113bbf7c8cab7ae2b8121d782eac2746551d7af00a366c",
+      "bytes": 26097191
+    },
+    {
+      "original_path": "rev_b/history/before_horizontal_connectors/release/FRC_Sensor_CAN_RevB_Prototype.zip.sha256",
+      "path": "rev_b/history/before_horizontal_connectors/release/FRC_Sensor_CAN_RevB_Prototype.zip.sha256",
+      "sha256": "2b6083505b29dca9f4875e9a7024f781d9a92f5e998ef70e321c0e719497c885",
+      "bytes": 100
+    },
+    {
+      "original_path": "rev_b/release/FRC_Sensor_CAN_RevB_Prototype.zip",
+      "path": "rev_b/release/FRC_Sensor_CAN_RevB_Prototype.zip",
+      "sha256": "cc1a6085a4d4ed3dce4234cf5ac775e57a74358c77ca65efbffca607b6a403d4",
+      "bytes": 32348254
+    },
+    {
+      "original_path": "rev_b/release/FRC_Sensor_CAN_RevB_Prototype.zip.sha256",
+      "path": "rev_b/release/FRC_Sensor_CAN_RevB_Prototype.zip.sha256",
+      "sha256": "bda5be30e2704d40317ab5ee5e0c454a01c61794d3df1feb70de02ee1cd73ee6",
+      "bytes": 100
+    },
+    {
+      "original_path": "rev_b2/order/RevB2_Factory_Upload.zip",
+      "path": "rev_b2/order/RevB2_Factory_Upload.zip",
+      "sha256": "0090458acf21cda54e0a416053967d187a700dd705f75e8bf340d49577995c54",
+      "bytes": 2888313
+    },
+    {
+      "original_path": "rev_b2/order/RevB2_Gerbers.zip",
+      "path": "rev_b2/order/RevB2_Gerbers.zip",
+      "sha256": "ff9b033a88b98580508280cc8969a85d7debacd3253c72dad0fcdc97c2f70342",
+      "bytes": 462289
+    },
+    {
+      "original_path": "rev_b2/release/FRC_Sensor_CAN_RevB2_Prototype.zip",
+      "path": "rev_b2/release/FRC_Sensor_CAN_RevB2_Prototype.zip",
+      "sha256": "524201e60fc8e4bd54df8ef5ff5e2675ddb46b84a1c912d1948ae23615407174",
+      "bytes": 35798582
+    },
+    {
+      "original_path": "rev_b2/release/FRC_Sensor_CAN_RevB2_Prototype.zip.sha256",
+      "path": "rev_b2/release/FRC_Sensor_CAN_RevB2_Prototype.zip.sha256",
+      "sha256": "4bffbf192c79564444e37318cbfcb68540cc3d000e7fe735e0df344a9d8319d0",
+      "bytes": 101
+    },
+    {
+      "original_path": "rev_c/order/RevC_Lite_Factory_Upload.zip",
+      "path": "rev_c/order/RevC_Lite_Factory_Upload.zip",
+      "sha256": "027894c676ef7259c479847d6c040c5673c34e50d34fd330459777018dc17d13",
+      "bytes": 2368800
+    },
+    {
+      "original_path": "rev_c/order/RevC_Lite_Factory_Upload.zip.sha256",
+      "path": "rev_c/order/RevC_Lite_Factory_Upload.zip.sha256",
+      "sha256": "e6f345e0fd88156aff6a448d55c09e3422b80f27951454d88e40d3853267ecf4",
+      "bytes": 95
+    },
+    {
+      "original_path": "rev_c/release/FRC_Sensor_CAN_RevC_Lite_Prototype.zip",
+      "path": "rev_c/release/FRC_Sensor_CAN_RevC_Lite_Prototype.zip",
+      "sha256": "6be4a7570cce055c4c812dc22158a5318b709ed9298e38c322051f9fd0e4d711",
+      "bytes": 13783676
+    },
+    {
+      "original_path": "rev_c/release/FRC_Sensor_CAN_RevC_Lite_Prototype.zip.sha256",
+      "path": "rev_c/release/FRC_Sensor_CAN_RevC_Lite_Prototype.zip.sha256",
+      "sha256": "faa724d9984bb91ddd2b3bf9e47b5ac1cd81f735c06c67d25ee8a80618e477f5",
+      "bytes": 105
+    },
+    {
+      "original_path": "rev_d/order/RevD_SC12_Factory_Upload.zip",
+      "path": "rev_d/order/RevD_SC12_Factory_Upload.zip",
+      "sha256": "d4c210a8a14255a08c053611ba8ebc5a5a696d1b731b36a106a1e7805198313c",
+      "bytes": 2828971
+    },
+    {
+      "original_path": "rev_d/order/RevD_SC12_Factory_Upload.zip.sha256",
+      "path": "rev_d/order/RevD_SC12_Factory_Upload.zip.sha256",
+      "sha256": "2acabe31943a78918371744cb08d1519de601fb613b8ee833ddbb0314bc1f3cf",
+      "bytes": 95
+    },
+    {
+      "original_path": "rev_d/release/FRC_Sensor_CAN_RevD_SC12_Prototype.zip",
+      "path": "rev_d/release/FRC_Sensor_CAN_RevD_SC12_Prototype.zip",
+      "sha256": "d3f4f888e84cbb2c7a2c81a6439182ba1406e9bbceb4ba75fdd8142d03478286",
+      "bytes": 17343226
+    },
+    {
+      "original_path": "rev_d/release/FRC_Sensor_CAN_RevD_SC12_Prototype.zip.sha256",
+      "path": "rev_d/release/FRC_Sensor_CAN_RevD_SC12_Prototype.zip.sha256",
+      "sha256": "fd8a4c5800d65845d276dec38a94327cefa6785d69018eda92072f8d671741f7",
+      "bytes": 105
+    },
+    {
+      "original_path": "rev_d2/order/RevD2_SC12_Factory_Upload.zip",
+      "path": "rev_d2/order/RevD2_SC12_Factory_Upload.zip",
+      "sha256": "ed8af4c2ce086ebd38a12708bbe8d296b225f63f6640ac6a34d44aaa94ebc8ea",
+      "bytes": 3014827
+    },
+    {
+      "original_path": "rev_d2/order/RevD2_SC12_Factory_Upload.zip.sha256",
+      "path": "rev_d2/order/RevD2_SC12_Factory_Upload.zip.sha256",
+      "sha256": "eb37d211b29eb3b16de90c61fa5cdd2034b2a619412a271f7b67aa26c3482d29",
+      "bytes": 96
+    },
+    {
+      "original_path": "rev_d2/order/RevD2_SC12_Gerbers.zip",
+      "path": "rev_d2/order/RevD2_SC12_Gerbers.zip",
+      "sha256": "5e86cd59104843b7f99063315f36b7ed472c1a448479ff02a2cc8d57441dfa69",
+      "bytes": 484419
+    },
+    {
+      "original_path": "rev_d2/order/RevD2_SC12_Gerbers.zip.sha256",
+      "path": "rev_d2/order/RevD2_SC12_Gerbers.zip.sha256",
+      "sha256": "9d5079ec5ddb716a7d803eaa1db6c50d9ffaa7e0aa4fa49e21b7d87ad33f6b7b",
+      "bytes": 89
+    },
+    {
+      "original_path": "rev_d2/release/FRC_Sensor_CAN_RevD2_SC12_Prototype.zip",
+      "path": "rev_d2/release/FRC_Sensor_CAN_RevD2_SC12_Prototype.zip",
+      "sha256": "80b72cd2ce84a1f33faa3bbe0f157093a8809b5d7bfe7152b2a7ffd2bd8b8348",
+      "bytes": 18685307
+    },
+    {
+      "original_path": "rev_d2/release/FRC_Sensor_CAN_RevD2_SC12_Prototype.zip.sha256",
+      "path": "rev_d2/release/FRC_Sensor_CAN_RevD2_SC12_Prototype.zip.sha256",
+      "sha256": "0eb356735eec4337ee955ec0ff41a85abea21da455c67470602bd802fd5d470f",
+      "bytes": 106
+    },
+    {
+      "original_path": "rev_e/order/RevE_SC12_Factory_Upload.zip",
+      "path": "rev_e/order/RevE_SC12_Factory_Upload.zip",
+      "sha256": "3ea97cef7e6e0280df4065fb293acbb9d6815f553175bb895613fc2f9c9f4521",
+      "bytes": 3361244
+    },
+    {
+      "original_path": "rev_e/order/RevE_SC12_Factory_Upload.zip.sha256",
+      "path": "rev_e/order/RevE_SC12_Factory_Upload.zip.sha256",
+      "sha256": "5cae4f84c6fbdff5383007a02eab82e2e010d9b2d994f81ee1538f0a66ea1078",
+      "bytes": 95
+    },
+    {
+      "original_path": "rev_e/order/RevE_SC12_Gerbers.zip",
+      "path": "rev_e/order/RevE_SC12_Gerbers.zip",
+      "sha256": "457d3f57388f4a7d7966b03be2839460752e267bef60ee776cf697675f195b16",
+      "bytes": 574508
+    },
+    {
+      "original_path": "rev_e/order/RevE_SC12_Gerbers.zip.sha256",
+      "path": "rev_e/order/RevE_SC12_Gerbers.zip.sha256",
+      "sha256": "5c7c3f90b56b706b598ea67bda6023ef48f1468ba8d66b014d31df0611fea7ca",
+      "bytes": 88
+    },
+    {
+      "original_path": "rev_e/release/FRC_Sensor_CAN_RevE_SC12_Prototype.zip",
+      "path": "rev_e/release/FRC_Sensor_CAN_RevE_SC12_Prototype.zip",
+      "sha256": "5429a813dce9fef936968185e49a026098bbd9e0b00208f0ae963edf52342448",
+      "bytes": 19374640
+    },
+    {
+      "original_path": "rev_e/release/FRC_Sensor_CAN_RevE_SC12_Prototype.zip.sha256",
+      "path": "rev_e/release/FRC_Sensor_CAN_RevE_SC12_Prototype.zip.sha256",
+      "sha256": "6f35d28a75ed4167ab8613efa864f7195e0c80f4751ce1a8753eda56a94b4def",
+      "bytes": 105
+    }
+  ],
+  "scope": "Original published archives/checksums copied byte-for-byte; complete historical sources remain in Git history."
+}

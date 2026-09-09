@@ -1,0 +1,34 @@
+{
+  "result": "PASS",
+  "regions": [
+    {
+      "image": "bootloader",
+      "flash_bytes": 6728,
+      "flash_capacity": 8192,
+      "allocated_ram_including_minimum_stack": 1816,
+      "ram_capacity": 5888,
+      "minimum_stack_reservation": 1024
+    },
+    {
+      "image": "sensor_can",
+      "flash_bytes": 10428,
+      "flash_capacity": 21504,
+      "allocated_ram_including_minimum_stack": 1968,
+      "ram_capacity": 5888,
+      "minimum_stack_reservation": 1024
+    }
+  ],
+  "update_crc32": "34a1da2c",
+  "version": 1792,
+  "factory_hex_excludes_configuration": true,
+  "images": {
+    "bootloader.elf": "1bf3111ce7190de8b95fcd8b4bafa8f3a61f0380156599419badeb91ba338071",
+    "sensor_can.bin": "053a0009fd6069dcbd83ad1ed86ee1a885c868b616f9357e799a4a681661ff56",
+    "bootloader.bin": "f5bd4791b5c292988d06d464859e02ff5e9b51b450b18c0ab6a73785371bf383",
+    "sensor_can.hex": "f94ffdcdf60d0b14ce907eb7f3ed2889a0a8981dc57bde44ed409a541e9f22a7",
+    "sensor_can.elf": "51a86c972994ef23a20508a38a567bf6257ad6a092901c556b20f3dd0b285cba",
+    "application.sc12": "56583dc059f0378474d5e1c757d8adf546bd5181c3ce285217001f88fa099684",
+    "factory.hex": "89a87d0178b3f34b34b5de7fff3dfdff7f5725b71e57b105f8de2feb101f172d"
+  },
+  "limitations": "Static link/image checks; runtime stack and silicon handoff unmeasured"
+}

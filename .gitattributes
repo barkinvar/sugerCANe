@@ -1,33 +1,10 @@
-# Generated CAD and PDF deliverables: preserve bytes, avoid text diffs/merges.
-# No current-tree files require LFS; historical raw traces may still use it.
+# Preserve generated/vendored bytes; no current files require Git LFS.
 *.step binary
 *.stp binary
 *.pdf binary
-
-# CSV exports use the conventional CRLF terminator; preserve delivered bytes.
 *.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-# Preserve upstream source and machine-generated SVG/HTML formatting verbatim.
-rev_c/firmware/third_party/** -whitespace
-rev_c/output/**/*.svg -whitespace
-rev_c/output/assembly/interactive_bom.html -whitespace
-# Compiler-generated programming images/maps retain toolchain formatting.
 *.hex whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-rev_c/firmware/build/*.map -whitespace
-
-# Rev D retains vendor and generated artifact formatting without rewriting bytes.
-rev_d/firmware/third_party/** -whitespace
-rev_d/output/**/*.svg -whitespace
-rev_d/output/assembly/interactive_bom.html -whitespace
-rev_d/firmware/build/*.map -whitespace
-
-# Rev D-2 keeps the same upstream/generated formatting policy.
-rev_d2/firmware/third_party/** -whitespace
-rev_d2/output/**/*.svg -whitespace
-rev_d2/output/assembly/interactive_bom.html -whitespace
-rev_d2/firmware/build/*.map -whitespace
-
-# Rev E keeps upstream source and generated deliverables byte-for-byte.
-rev_e/firmware/third_party/** -whitespace
-rev_e/output/**/*.svg -whitespace
-rev_e/output/assembly/interactive_bom.html -whitespace
-rev_e/firmware/build/*.map -whitespace
+current/firmware/third_party/** -whitespace
+current/firmware/build/*.map -whitespace
+current/output/**/*.svg -whitespace
+current/output/assembly/interactive_bom.html -whitespace

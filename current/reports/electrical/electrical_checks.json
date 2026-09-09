@@ -1,0 +1,192 @@
+{
+  "assumptions": {
+    "resistors_total_fraction": 0.0175,
+    "logic_rail_fraction": 0.03,
+    "comparator_offset_V": 0.0055,
+    "input_bias_A_per_pin": 5e-08,
+    "shared_reference_inputs": 4,
+    "output_leakage_A": 1e-07,
+    "output_low_range_V": [
+      0,
+      0.55
+    ],
+    "scope": "Offset includes common-mode/supply margin. TI lists typical bias/leakage, not guaranteed maxima; these allowances require prototype qualification."
+  },
+  "thresholds": {
+    "rising_V": [
+      1.6620080724114707,
+      2.2747490344067343
+    ],
+    "falling_V": [
+      1.3982897899944913,
+      1.9357610430493746
+    ],
+    "corners": 4096,
+    "logic_low_target_V": 1.2,
+    "logic_high_target_V": 2.4,
+    "ground_offset_allowance_V": 0.1
+  },
+  "nominal_input": {
+    "rising_V": 1.9695471823624444,
+    "falling_V": 1.655966181383335,
+    "sense_filter_tau_us": 18.181818181818183
+  },
+  "buck": {
+    "nominal_V": 5.067153284671533,
+    "feedback_resistor_budget_fraction": 0.00375,
+    "DC_reference_divider_and_FB_leakage_budget_V": [
+      4.9531490572726815,
+      5.182413916599886
+    ],
+    "with_40mV_regulation_budget_V": [
+      4.9131490572726815,
+      5.222413916599886
+    ]
+  },
+  "power": {
+    "input_range_V": [
+      6,
+      22
+    ],
+    "sensor_load_A_per_rail_shared": 0.3,
+    "logic_allowance_A": 0.1,
+    "converter_efficiency_assumptions": [
+      0.8,
+      0.8
+    ],
+    "entry_resistance_assumption_ohm": 0.276,
+    "input_current_at_6V_A": 1.6829475587217415,
+    "protected_input_at_6V_V": 5.5355064737927995,
+    "max_duty_budget": 0.9434392212031161,
+    "input_fuse_A": 3,
+    "input_fuse_normal_current_fraction": 0.5609825195739139,
+    "LDO_loss_budget_W": 0.19224139165998866,
+    "buck_peak_ripple_at22V_A": 1.1063068061729966,
+    "sensor5_min_before_distribution_loss_V": 4.871299057272681,
+    "sensor5_max_DC_budget_V": 5.222413916599886,
+    "sensor12_DC_budget_V": [
+      11.644670864490974,
+      12.37457882094258
+    ],
+    "boost_min_input_V": 4.714649057272681,
+    "boost_normal_input_A": 1.0170744916248624,
+    "buck_normal_output_A": 1.4270744916248626,
+    "buck_both_limiters_max_plus_logic_A": 1.9121412289046114,
+    "buck_continuous_rating_A": 2.0,
+    "note": "Efficiency, wiring resistance and PCB drops are explicit planning allowances. Current sharing, inrush and both simultaneous faults need scope/thermal tests. Below 6V is brownout territory."
+  },
+  "current_limiters": {
+    "boost_input_limit_A": [
+      1.097753439859413,
+      1.3063671965057375
+    ],
+    "5V_limit_A": [
+      0.3936195296966631,
+      0.5057740323988739
+    ],
+    "note": "Both TPS2553DBVR-1 switches latch off after overload deglitch. Boost input protection interrupts the inductor/diode DC path. Limits are branch input limits; 12V useful output remains 300mA."
+  },
+  "capacitors": {
+    "part": "CL31A226KAHNNNE",
+    "count": 3,
+    "nominal_uF": 66,
+    "bias_voltage_V": 5.222413916599886,
+    "typical_bias_change_percent": -39.95653344382932,
+    "additional_factors": [
+      0.9,
+      0.85,
+      0.95,
+      0.9
+    ],
+    "budgeted_bank_uF": 25.920134055900043,
+    "two_part_bank_uF": 17.280089370600027,
+    "target_uF": 25,
+    "note": "Manufacturer typical curve and independent engineering budgets, not a guaranteed minimum. Keep all three output capacitors pending measured loop/transient qualification."
+  },
+  "stress": {
+    "input_signal_range_V": [
+      0,
+      30
+    ],
+    "sense_node_at30V_worst_V": 2.58837053262624,
+    "series_resistor_at30V_W": 0.004163775156141568,
+    "pulldown_at30V_W": 0.0916030534351145,
+    "pulldown_rating_W": 0.25,
+    "pullup_at3V3_W": 0.01175898320610687,
+    "pullup_rating_W": 0.125,
+    "input_TVS_standoff_V": 30,
+    "entry_TVS_standoff_V": 22,
+    "entry_TVS_specified_pulse_clamp_V": 35.5,
+    "buck_abs_max_V": 40,
+    "bulk_rating_V": 50,
+    "input_series_fault_tolerance": "One series resistor; no longer survives that resistor shorting as a guaranteed fault case.",
+    "scope": "Unidirectional TVS provides negative surge clamping; not continuous negative signal operation, sustained overvoltage regulation or load-dump qualification."
+  },
+  "status": "Numerical assertions passed; physical qualification not performed.",
+  "regulated12": {
+    "nominal_V": 12.003217391304347,
+    "DC_budget_V": [
+      11.644670864490974,
+      12.37457882094258
+    ],
+    "frequency_nominal_Hz": 1200000.0,
+    "inductor_uH": 3.3,
+    "inductor_min_uH": 2.64,
+    "input_cap_bank": {
+      "count": 1,
+      "voltage_V": 5.222413916599886,
+      "typical_bias_percent": -39.95653344382932,
+      "budgeted_each_uF": 8.640044685300014
+    },
+    "output_cap_bank": {
+      "count": 3,
+      "voltage_V": 12.37457882094258,
+      "typical_bias_percent": -74.92683112808507,
+      "budgeted_each_uF": 3.607941244577506
+    },
+    "compensation_resistor_ohm": 13000,
+    "compensation_cap_F": 3.3e-08,
+    "inductor_peak_A": 1.6458944666985773,
+    "switch_limit_min_A": 2.0,
+    "switch_limit_max_A": 3.2,
+    "inductor_saturation_rating_A": 8,
+    "diode_average_rating_A": 2,
+    "diode_reverse_rating_V": 40,
+    "output_ripple_capacitive_budget_V": 0.02016934819004905,
+    "output_cap_energy_J": 0.0050532966328587815,
+    "scope": "Typical bias curves plus engineering allowances, not guaranteed capacitance. The charged output bank can discharge before U9 interrupts a short. Test short insertion, hot-plug capacitance, SW overshoot and transient response."
+  },
+  "rail_monitor": {
+    "nominal_rising_V": 9.276435959903129,
+    "rising_budget_V": [
+      8.03653370722218,
+      10.612128987651586
+    ],
+    "falling_budget_V": [
+      7.91603370722218,
+      10.457335659802736
+    ],
+    "note": "Healthy-rail indicator only. Not a 12V tolerance monitor or ADC. U9 active fault also forces PG low."
+  },
+  "passive_substitutions": {
+    "LDO_effective_output_cap_budget_uF": 1.7078625,
+    "LDO_required_output_uF": 1.0,
+    "assumed_DC_bias_retention": 0.5,
+    "scope": "Engineering screening allowance, not a measured curve. Same nominal voltage, capacitance, dielectric and footprint; verify effective capacitance/ESR on prototype."
+  },
+  "software_bias": {
+    "pullup_rail_V": 3.3,
+    "pullup_ohm": 1000,
+    "pulldown_ohm": 10000,
+    "npn_off_leakage_budget_A": 0.0001,
+    "pnp_off_leakage_budget_A": 0.0001,
+    "npn_inactive_min_V": 2.5183829320046027,
+    "pnp_inactive_max_V": 1.02919,
+    "npn_max_sink_A": 0.0034595419847328244,
+    "unpowered_rail_max_V_at_60C": 0.6105000000000002,
+    "probe_settle_ms": 2,
+    "classification_confirmation_pairs": 2,
+    "estimated_floating_discharge_10nF_ms": 0.09315582040049435,
+    "limitations": "Sensor residual LOW must be <=1.2 V at ~3.5 mA. Leakage budgets are compatibility limits, not measured guarantees. BAT46W 20uA reverse limit is specified at 60C/75V; 10k rail bleed is not galvanic isolation. Forward .55V and hot MOSFET 15ohm are engineering allowances requiring bench/temperature verification. Float mode for slow signals only; test actual cable capacitance and sensor leakage."
+  }
+}

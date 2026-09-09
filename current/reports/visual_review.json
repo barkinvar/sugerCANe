@@ -1,0 +1,63 @@
+{
+  "result": "Visual review completed",
+  "reviewed_utc": "2026-09-09T00:43:48.985793+00:00",
+  "reviewer": "Codex visual inspection",
+  "artifacts": [
+    {
+      "file": "output/review/board_3d_final.png",
+      "sha256": "6ab27b2f7dc8ac915fb23cca89a352315b94691b39fd5ba5fd1543d9c766ef9c",
+      "scope": "Oblique CAD: top-only assembly, retained terminals and power headers, smaller outline."
+    },
+    {
+      "file": "output/review/board_top.png",
+      "sha256": "2090ee1e967a2cc4ce5aa9291be06179ce4c2dadc038c9bae7159e7e3059ce65",
+      "scope": "Top CAD: placement, VSSOP boost, diode, input switch, bias row and mount clearances."
+    },
+    {
+      "file": "output/review/board_bottom.png",
+      "sha256": "b85b5b050dd4061aa4345f19e286eacdd82a4a67efc6cf08ef42928370590181",
+      "scope": "Bottom CAD: Rev F, voltage and power-cycle fault legends; solder tails and no bottom components."
+    },
+    {
+      "file": "output/review/board_connectors.png",
+      "sha256": "884ce80f8dd05c4262e7fe4d3adc63b1e498431b4881f71d5dee8157d0152021",
+      "scope": "Horizontal wire-entry geometry and access to power headers; nominal CAD only."
+    },
+    {
+      "file": "output/review/service_gui.png",
+      "sha256": "30e498cd344b9522b4fc8210115a773f1ea13341611398b94c788637a1b7a1e9",
+      "scope": "Simulated app 0.7.0; per-channel modes/polarities, save argument capture; no physical CAN connection."
+    },
+    {
+      "file": "output/documentation/SC12_RevF_Handbook.pdf",
+      "sha256": "c1615da0886db9b2bb4dc9384fcd8e87b4ccf3d5f75a20d95e9f368fab43bacb",
+      "scope": "All chapter layouts reviewed as contact sheets; revised overview, protocol and connector pages inspected enlarged after final pagination."
+    },
+    {
+      "file": "output/documentation/BOM_RevF_SC12.pdf",
+      "sha256": "9d6f9674839e1192e458b9656bde161366080eaea7fbdfc5ddc1ef574e18772e",
+      "scope": "Three pages: current references/MPNs/quantities and extended first-tier cost; revised header enlarged."
+    },
+    {
+      "file": "output/mechanical/mechanical_drawing.pdf",
+      "sha256": "733c827d5109a3eecef9be96a7b051653223c63fbecbf8c56892fa06677b2647",
+      "scope": "Both pages: 52x64 outline, H2 at y36.5, custom service mapping and power jumper positions."
+    },
+    {
+      "file": "output/assembly/schematic.pdf",
+      "sha256": "b48167e930c870b3380e59a4c19857dc38cbebd9a2772128050ff81f319ba769",
+      "scope": "All nine sheets as contact sheets; new boost sheet enlarged for U8/U9/D4 pin mapping, feedback, compensation and U7D rail monitor."
+    },
+    {
+      "file": "output/assembly/top_assembly.pdf",
+      "sha256": "a8ae5eebf39ac0fb5e2c56733d7c6842265ad7805e47be2e10917b2e54feef79",
+      "scope": "Assembly labels, connector rows, pin-one/body marks and outline."
+    },
+    {
+      "file": "output/assembly/gerber_copper_review.pdf",
+      "sha256": "4108a3fe79a2e6b7655d902e361a0faaa29e2700f2bc1ba0314c73ce0e28e4b8",
+      "scope": "Top/bottom exported copper geometry with drills and correct 64 mm board height; individual copper images inspected."
+    }
+  ],
+  "limitations": "Nominal CAD/PDF/GUI inspection, not manufactured measurements, bench testing or assembly-yield qualification."
+}

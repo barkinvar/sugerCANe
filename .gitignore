@@ -1,123 +1,33 @@
+# Local tools, environments and scratch
 .venv/
-__pycache__/
-*.pyc
-.cache/
-tmp/
+**/.venv/
 .playwright-cli/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.DS_Store
-*~
-*.swp
-*-backups/
+tmp/
+**/__pycache__/
+*.pyc
 *.kicad_prl
-*.lck
-reports/toolchain/work/
+*.kicad_pcb.lck
+*.kicad_sch.lck
+**/*-backups/
+**/.DS_Store
 
-# Compiler scratch. Keep ready-to-program images and link maps as deliverables.
-*.o
-*.d
-*.su
-*.class
-**/firmware/build/*
-!**/firmware/build/sensor_can.bin
-!**/firmware/build/sensor_can.hex
-!**/firmware/build/sensor_can.elf
-!**/firmware/build/sensor_can.map
-
-# Restore host-test dependencies from tools/driver_dependencies.json.
-**/reports/driver/classes/
-**/reports/driver/deps/
-**/reports/driver/cpp-deps/
-**/reports/driver/test_cpp
-**/reports/driver/test_sensor_can_cpp
-
-# Large transient dumps; retain decks, sampled CSVs, plots and reports.
-**/simulation/*.raw
-**/calculations/spice/*.raw
-
-# Saved native product files are authoritative; router snapshots are scratch.
-**/hardware/*.kicad_pcb
-!**/hardware/FRC_Sensor_CAN.kicad_pcb
-**/hardware/*.kicad_pro
-!**/hardware/FRC_Sensor_CAN.kicad_pro
-**/hardware/design/*.dsn
-**/hardware/design/*.ses
-**/hardware/design/last_route*.json
-**/hardware/design/routing_geometry.json
-**/hardware/design/routed.routes.json
-**/hardware/design/*_route[0-9]*.json
-**/hardware/prerouted.kicad_dru
-
-# Rev C construction trials; final native design and verification stay tracked.
-rev_c/reports/autorouter.log
-rev_c/reports/*_route.log
-rev_c/reports/critical_routing.log
-rev_c/reports/drc/*.json
-!rev_c/reports/drc/final.json
-rev_c/reports/erc/initial.json
-rev_c/hardware/design/placement_geometry.json
-rev_c/hardware/design/placement_initial.json
-rev_c/hardware/design/placement_preferred.json
-rev_c/hardware/design/critical_routes.json
-rev_c/hardware/design/critical_unresolved.json
-
-# Keep the complete superseded connector revision as its release package.
-rev_b/history/before_horizontal_connectors/*
-!rev_b/history/before_horizontal_connectors/README.md
-!rev_b/history/before_horizontal_connectors/release/
-
-# PDF-review rasterizations and unfinished screenshots can be recreated.
-**/output/review/*handbook*.png
-**/output/review/*bom_page*.png
-**/output/review/*bom_contact*.png
-**/output/review/final_schematic-*.png
-**/output/review/schematic_page-*.png
-**/output/review/sheet-*.png
-**/output/review/kicad_gui_*.png
-**/output/review/*_draft.png
-**/output/review/board_3d_first.png
-**/output/review/board_3d_assembled.png
-**/output/review/current_board.*
-**/output/review/placed.svg
-**/output/review/routed.*
-**/output/review/grounded.*
-**/output/review/layout.*
-
-# Rev D construction trials; retain the reviewed native board and final reports.
-rev_d/reports/autorouter.log
-rev_d/reports/*_route.log
-rev_d/reports/critical_routing.log
-rev_d/reports/drc/*.json
-!rev_d/reports/drc/final.json
-rev_d/reports/erc/initial.json
-rev_d/hardware/design/placement_geometry.json
-rev_d/hardware/design/placement_initial.json
-rev_d/hardware/design/placement_preferred.json
-rev_d/hardware/design/critical_routes.json
-rev_d/hardware/design/critical_unresolved.json
-
-# Rev D-2 local construction scratch.
-rev_d2/hardware/design/jumper_route_jobs.json
-
-# CAN service deliverables and compiler/dependency scratch.
-!rev_d2/firmware/build/bootloader.bin
-!rev_d2/firmware/build/bootloader.elf
-!rev_d2/firmware/build/bootloader.map
-!rev_d2/firmware/build/factory.hex
-!rev_d2/firmware/build/application.sc12
-rev_d2/reports/driver/deps2027/
-rev_d2/reports/driver/classes2027/
-
-# Rev E construction and host-test scratch.
-rev_e/reports/bias-routing.log
-rev_e/reports/drc/construction.json
-rev_e/hardware/design/bias_routing.routes.json
-rev_e/reports/driver/deps2027/
-rev_e/reports/driver/classes2027/
-!rev_e/firmware/build/bootloader.bin
-!rev_e/firmware/build/bootloader.elf
-!rev_e/firmware/build/bootloader.map
-!rev_e/firmware/build/factory.hex
-!rev_e/firmware/build/application.sc12
+# Compile/test intermediates; retain final programming deliverables.
+current/firmware/build/*
+!current/firmware/build/sensor_can.bin
+!current/firmware/build/sensor_can.elf
+!current/firmware/build/sensor_can.hex
+!current/firmware/build/sensor_can.map
+!current/firmware/build/bootloader.bin
+!current/firmware/build/bootloader.elf
+!current/firmware/build/bootloader.map
+!current/firmware/build/factory.hex
+!current/firmware/build/application.sc12
+current/reports/driver/*
+!current/reports/driver/tests.log
+current/reports/drc/*
+!current/reports/drc/final.json
+current/reports/erc/*
+!current/reports/erc/final.json
+current/hardware/*.bak
+current/hardware/*.kicad_pcb~
+current/hardware/*.kicad_sch~

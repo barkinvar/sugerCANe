@@ -1,0 +1,201 @@
+{
+  "result": "PASS",
+  "baseline_commit": "9ccb4b7",
+  "baseline_source_sha256": "3ad3f6a8a35ace985ed3103708a6d939192db1074e1aba3f0c513766e56c6459",
+  "removed_parts": [
+    "C67",
+    "C68",
+    "C70",
+    "NT1",
+    "R64"
+  ],
+  "added_parts": [
+    "D4",
+    "R67",
+    "U9"
+  ],
+  "changed_parts": [
+    {
+      "reference": "C23",
+      "fields": [
+        "mpn"
+      ]
+    },
+    {
+      "reference": "C24",
+      "fields": [
+        "mpn"
+      ]
+    },
+    {
+      "reference": "C60",
+      "fields": [
+        "pins",
+        "mpn",
+        "value",
+        "footprint",
+        "voltage",
+        "dielectric"
+      ]
+    },
+    {
+      "reference": "C61",
+      "fields": [
+        "pins",
+        "mpn",
+        "footprint",
+        "voltage"
+      ]
+    },
+    {
+      "reference": "C62",
+      "fields": [
+        "pins",
+        "mpn",
+        "value",
+        "footprint",
+        "voltage",
+        "dielectric"
+      ]
+    },
+    {
+      "reference": "C63",
+      "fields": [
+        "pins",
+        "mpn",
+        "value",
+        "footprint",
+        "voltage",
+        "dielectric"
+      ]
+    },
+    {
+      "reference": "C64",
+      "fields": [
+        "pins",
+        "mpn",
+        "value",
+        "footprint",
+        "voltage",
+        "dielectric"
+      ]
+    },
+    {
+      "reference": "C65",
+      "fields": [
+        "pins",
+        "mpn",
+        "footprint",
+        "voltage"
+      ]
+    },
+    {
+      "reference": "C66",
+      "fields": [
+        "pins",
+        "mpn",
+        "footprint",
+        "voltage"
+      ]
+    },
+    {
+      "reference": "C69",
+      "fields": [
+        "pins"
+      ]
+    },
+    {
+      "reference": "C7",
+      "fields": [
+        "mpn"
+      ]
+    },
+    {
+      "reference": "C8",
+      "fields": [
+        "mpn"
+      ]
+    },
+    {
+      "reference": "L2",
+      "fields": [
+        "pins"
+      ]
+    },
+    {
+      "reference": "R60",
+      "fields": [
+        "pins"
+      ]
+    },
+    {
+      "reference": "R61",
+      "fields": [
+        "pins",
+        "mpn",
+        "value",
+        "tolerance"
+      ]
+    },
+    {
+      "reference": "R62",
+      "fields": [
+        "pins",
+        "mpn",
+        "value"
+      ]
+    },
+    {
+      "reference": "R63",
+      "fields": [
+        "pins",
+        "mpn",
+        "value"
+      ]
+    },
+    {
+      "reference": "R65",
+      "fields": [
+        "pins"
+      ]
+    },
+    {
+      "reference": "R66",
+      "fields": [
+        "pins",
+        "mpn",
+        "value"
+      ]
+    },
+    {
+      "reference": "U7",
+      "fields": [
+        "pins"
+      ]
+    },
+    {
+      "reference": "U8",
+      "fields": [
+        "pins",
+        "mpn",
+        "value",
+        "footprint"
+      ]
+    }
+  ],
+  "unchanged": "Connectors, removable voltage selectors, three signal/bias circuits, MCU and CAN; only the unused fourth comparator is repurposed.",
+  "board_mm": [
+    52,
+    64
+  ],
+  "area_reduction_percent": 8.571428571428575,
+  "cost_10_board_purchase_USD": {
+    "rev_e": 35.13539999999998,
+    "rev_f": 27.173799999999993,
+    "outside_power_passive_saving": 1.2997,
+    "power_stage_and_shared_price_break_saving": 6.66189999999999,
+    "total_saving": 7.96159999999999
+  },
+  "firmware": "Hardware 6 / app 0.7.0 / protocol 4; separate product and configuration tags.",
+  "scope": "Contract regression and procurement arithmetic. Native ERC/DRC/copper tests are separate; no physical qualification."
+}

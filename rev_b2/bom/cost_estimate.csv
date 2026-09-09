@@ -1,6 +1,0 @@
-assembled_boards,JLCPCB_minimum_met,components_including_moq_usd,consumed_components_usd,assembly_model_usd,pcb_allowance_low,pcb_allowance_high,attrition_allowance_low,attrition_allowance_high,sourcing_allowance_low,sourcing_allowance_high,shipping_allowance_low,shipping_allowance_high,order_estimate_low_usd,order_estimate_high_usd,per_board_low_usd,per_board_high_usd,optional_program_basic_test_low_usd,optional_program_basic_test_high_usd
-1,False,56.23,45.78,134.47,20.0,40.0,5,15,12.81,38.44,25,50,250,335,253.51,334.14,53,105
-2,True,99.5,91.55,138.22,20.0,40.0,5,15,14.97,44.92,25,50,300,390,151.35,193.82,56,110
-5,True,215.72,211.29,149.46,20.0,40.0,6.47,17.26,20.79,62.36,25,50,435,535,87.49,106.96,65,125
-10,True,407.73,405.88,168.2,25.0,50.0,12.23,32.62,30.39,91.16,25,50,665,800,66.85,79.97,80,150
-25,True,1012.96,1010.87,203.92,40.0,80.0,30.39,81.04,60.65,181.94,35,70,1380,1630,55.32,65.19,125,225
