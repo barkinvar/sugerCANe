@@ -90,13 +90,13 @@ def curve(start, commands):
     return pen.geometry()
 
 
-# Smooth geometric letterforms; the weight change makes CAN read within the name.
-fonts = {w: instantiateVariableFont(TTFont(R/'sources/fonts/Outfit.ttf'), {'wght': w})
-         for w in (550, 800)}
+# Soft serifs echo the leaves; the weight change emphasizes CAN within the name.
+fonts = {w: instantiateVariableFont(TTFont(R/'sources/fonts/Fraunces.ttf'),
+         {'wght': w, 'opsz': 72, 'SOFT': 70, 'WONK': 1}) for w in (650, 750)}
 word = []
 cursor = 0
 for letter in 'sugarCANe':
-    font = fonts[800 if letter.isupper() else 550]
+    font = fonts[750 if letter.isupper() else 650]
     glyphs = font.getGlyphSet()
     glyph = glyphs[font.getBestCmap()[ord(letter)]]
     pen = OutlinePen(glyphs, tolerance=.35)
@@ -150,9 +150,9 @@ veins = [
     curve((36.9, 33.9), [(38.6, 30.4, 42.2, 28.2, 45.3, 27.5),
           (42.2, 29, 40.8, 31.5, 36.9, 33.9)]),
 ]
-# One brush-like sweep gathers the stems, with open ends rather than a frame.
-root = curve((10.6, 42.6), [(20.5, 45.2, 35.8, 44.7, 45.8, 38.8),
-             (39, 46.7, 21, 49.3, 10.6, 42.6)])
+# The ground arches upward into a shallow convex hill beneath the stalks.
+root = curve((10.6, 46.2), [(19, 40.7, 37.4, 40.7, 45.8, 46.2),
+             (34, 45, 22.4, 45, 10.6, 46.2)])
 art = union_all([word, stalks, union_all(leaves).difference(union_all(veins)), root])
 assert art.is_valid
 
@@ -166,8 +166,8 @@ def pieces(geometry):
 
 
 svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="52mm" height="74mm" viewBox="0 0 52 74">',
-       '<title>sugarCANe — flowing cane and smooth wordmark</title>',
-       '<desc>Underside reading orientation. Original sweeping three-stalk cane illustration; Outfit weight 550 and ExtraBold outlined lettering. Only the product name is text. No border.</desc>',
+       '<title>sugarCANe — flowing cane on a convex hill</title>',
+       '<desc>Underside reading orientation. Original three-stalk cane on an upward-arching hill; Fraunces soft-serif outlined lettering, weights 650 and 750. Only the product name is text. No border.</desc>',
        '<g fill="#ffffff" fill-rule="evenodd">']
 for poly in pieces(art):
     contours = []

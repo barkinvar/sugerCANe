@@ -1,6 +1,6 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-09T23:21:25.387191+00:00",
+  "reviewed_utc": "2026-09-09T23:25:18.376501+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
@@ -17,9 +17,9 @@
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "755393e0080e3227be3f8f54cc49d0a25db8b592e9d623900649be890c77c0a5",
-      "scope": "Underside CAD reviewed: smooth Outfit sugarCANe wordmark with CAN emphasized, original curved three-stalk cane, sweeping leaves and open veins. All corner brackets and pixel accents removed; no other bottom text. Small via holes remain visible. Exact native comparison confirms all non-bottom-silkscreen geometry unchanged.",
-      "reviewed_utc": "2026-09-09T23:21:25.387191+00:00"
+      "sha256": "f221ac8e46036003930adabeae8e52920d227192af1e1918655bf6ed70744eff",
+      "scope": "Underside CAD reviewed: readable Fraunces soft-serif sugarCANe wordmark with CAN emphasized; the cane now grows from a convex hill with its center raised. Leaves, clear mounting holes, artwork-only bottom and absent borders retained. Small via holes remain visible. Exact native comparison confirms all other PCB geometry unchanged.",
+      "reviewed_utc": "2026-09-09T23:25:18.376501+00:00"
     },
     {
       "file": "output/review/board_connectors.png",
@@ -36,9 +36,9 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "f4b85a74dbaee3b6f88e6a3a482deeb96c08e8c0a465ae509e917c29f7ab5b8d",
-      "scope": "All 38 pages compared to 207dfc4 at 1x. Changed pages 3, 32, 35 and 37 visually reviewed at 1.4x: flowing cane description, Outfit lettering and source provenance. All other pages pixel-identical.",
-      "reviewed_utc": "2026-09-09T23:21:25.387191+00:00"
+      "sha256": "e6333b0c6cc3fb70f1ec0f3bdeaa000caa7438302a614c5656900cfa4b408209",
+      "scope": "All 38 pages compared to d23b27d at 1x. Changed pages 3, 35 and 37 visually reviewed at 1.4x: convex hill, soft-serif wordmark, Fraunces source and reproduction details. All other pages pixel-identical.",
+      "reviewed_utc": "2026-09-09T23:25:18.376501+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
@@ -82,9 +82,9 @@
     },
     {
       "file": "output/assembly/bottom_markings.pdf",
-      "sha256": "571e0ff7e4220637853ff5ee7d4a252ac40a7fceaf456ff09566a374f606b94f",
-      "scope": "Rendered underside drawing reviewed: readable smooth sugarCANe wordmark and original flowing cane mark, no corner borders or secondary text, clear of terminals and mounting holes. Outline shown by the drawing is Edge.Cuts, not printed silkscreen.",
-      "reviewed_utc": "2026-09-09T23:21:25.387191+00:00"
+      "sha256": "771ef8aba62fa2879f45d9bb15d6a6f80a77694ed4b10d85382d8c1064942c47",
+      "scope": "Rendered underside drawing reviewed: Fraunces sugarCANe wordmark and original cane on an upward-arching convex hill, clear of terminals and mounting holes. No corner borders or secondary text. Drawing outline is Edge.Cuts, not printed silk.",
+      "reviewed_utc": "2026-09-09T23:25:18.376501+00:00"
     },
     {
       "file": "reports/electrical/input_spice.png",
@@ -100,20 +100,19 @@
     },
     {
       "file": "hardware/artwork/sugarCANe.svg",
-      "sha256": "76d5055438219cb7e7347142cca64ee603280c066336d4fd7c2fbf1d167b2bc4",
-      "scope": "Final monochrome vector master reviewed from SVG render: smooth lettering with heavier CAN, three curved jointed stalks, sweeping leaves and open veins. No borders or pixel accents. Ordered Gerber dark/clear compositing matches the SVG without unexplained missing or extra ink at 1 um tolerance.",
-      "reviewed_utc": "2026-09-09T23:21:25.387191+00:00"
+      "sha256": "29e2ce2122141bbd7eeb962f15e07ae77b2aef31577da401207281b0e73540a5",
+      "scope": "Final vector master reviewed from SVG render: Fraunces soft serifs, heavier CAN, upward-arching convex hill, curved jointed stalks and sweeping leaves. No borders or extra text. Ordered Gerber dark/clear compositing matches the SVG without unexplained missing or extra ink at 1 um tolerance.",
+      "reviewed_utc": "2026-09-09T23:25:18.376501+00:00"
     }
   ],
   "limitations": "Nominal CAD/PDF inspection only. Fresh route DC and firmware waveform replay pass; full combined startup remains incomplete. No physical board, optical, vibration, assembly-yield or EMC qualification.",
-  "page_comparison_baseline_commit": "207dfc4b79dccfa6dd43a99299edb10f910ea451",
+  "page_comparison_baseline_commit": "d23b27d1fb6bbfd0ae97307651bc09f7c9a87282",
   "rendered_page_comparison": {
     "handbook": {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
       "pages": 38,
       "changed_pages": [
         3,
-        32,
         35,
         37
       ],
@@ -123,19 +122,19 @@
   "bottom_branding": {
     "extra_ink_mm2": 0.0,
     "unexplained_missing_ink_mm2": 0.0,
-    "ink_mm2": 594.9450903906302,
-    "source_ink_mm2": 594.9450942114443,
-    "minimum_mask_opening_clearance_mm": 2.0915246708167468,
+    "ink_mm2": 594.2410725155385,
+    "source_ink_mm2": 594.2410734899108,
+    "minimum_mask_opening_clearance_mm": 1.736335000000004,
     "scope": "Ordered dark/clear Gerber compositing compared against the outlined SVG; 1 um polygon tolerance. No printed sample was measured.",
     "only_bottom_silkscreen_changed": true,
     "legacy_bottom_labels_remain_absent": true,
     "native_artwork_shapes": 13,
     "copper_mask_drill_and_front_silk_exports_byte_identical": true,
     "source_hashes": {
-      "hardware/artwork/sugarCANe.svg": "76d5055438219cb7e7347142cca64ee603280c066336d4fd7c2fbf1d167b2bc4",
-      "sources/fonts/Outfit.ttf": "fc7287273e66929776e2ba54f144fe699080bec29f61bf649d70d871468aeade",
-      "licenses/Outfit-OFL.txt": "c676351bf8576b9aba743cd5eaa8c0e7ee0d51f805d720447b4df4ddb6a2e416",
-      "scripts/build_brand_artwork.py": "a8aa7e8a635ce693dfba610cf5307c28fef29c88e24b3116abf7bc84f9c8624e",
+      "hardware/artwork/sugarCANe.svg": "29e2ce2122141bbd7eeb962f15e07ae77b2aef31577da401207281b0e73540a5",
+      "sources/fonts/Fraunces.ttf": "177ff6c0f14e5550a3c624247cd1189611d4eb65d000b14944c63d967958abbb",
+      "licenses/Fraunces-OFL.txt": "bdf4c22802eaf804f998195871c6b8938aac2ac14b2d78a8bd66a6f1eced833b",
+      "scripts/build_brand_artwork.py": "ec78dab56d58e2ed35857157b73163640aafd2ca206ba9408ec886187718a1c5",
       "scripts/apply_bottom_artwork.py": "aab47c1f93f2ed558e0d94d5b60c74ec531f583fd9cffa7cdd3ff4b60fca3307"
     }
   }
