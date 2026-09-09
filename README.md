@@ -4,7 +4,7 @@
 
 A compact interface for **three NPN, PNP or logic sensors** on an FRC robot. Each port has a removable **5 V / 12 V power jumper**; input type is configured in software. CAN provides sensor readings, device-ID changes and recoverable firmware updates.
 
-**sugarCANe** is the product name; SC12 Rev H remains the hardware identity. The underside carries a large original cane illustration on a convex hill and a soft-serif **sugarCANe** wordmark, with no other text. [Bottom artwork render](current/output/review/board_bottom.png).
+**sugarCANe** is the product name; SC12 Rev H remains the hardware identity. The underside carries a large original pixel-cane illustration on a stepped mound and a clear **sugarCANe** wordmark, with no other text. [Bottom artwork render](current/output/review/board_bottom.png).
 
 **Start with [Rev H in `current/`](current/README.md).** It is an unbuilt engineering prototype, with [physical qualification still pending](current/docs/VALIDATION.md). It uses its own protocol and drivers; it is not compatible with CTRE Phoenix or GrappleHook.
 

@@ -10,4 +10,4 @@ current/output/**/*.svg -whitespace
 current/output/assembly/interactive_bom.html -whitespace
 current/sources/spice/*.lib -text -whitespace
 # Retain the font authors' original license notice byte for byte.
-current/licenses/Fraunces-OFL.txt -text -whitespace
+current/licenses/IBMPlexSans-OFL.txt -text -whitespace

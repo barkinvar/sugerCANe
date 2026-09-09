@@ -1,9 +1,9 @@
-"""Build the original sugarCANe wordmark and flowing cane illustration."""
+"""Build the original pixel cane with a clear, non-pixel sugarCANe wordmark."""
 from pathlib import Path
 from fontTools.ttLib import TTFont
 from fontTools.varLib.instancer import instantiateVariableFont
 from fontTools.pens.basePen import BasePen
-from shapely.geometry import LineString
+from shapely.geometry import LineString, box
 from shapely import affinity, union_all
 from shapely.ops import polygonize
 
@@ -77,83 +77,59 @@ class OutlinePen(BasePen):
         return union_all(filled)
 
 
-def curve(start, commands):
-    """An original closed path in millimetres, using cubic Bezier handles."""
-    pen = OutlinePen()
-    pen.moveTo(start)
-    for cmd in commands:
-        if len(cmd) == 2:
-            pen.lineTo(cmd)
-        else:
-            pen.curveTo(*zip(cmd[::2], cmd[1::2]))
-    pen.closePath()
-    return pen.geometry()
-
-
-# Soft serifs echo the leaves; the weight change emphasizes CAN within the name.
-fonts = {w: instantiateVariableFont(TTFont(R/'sources/fonts/Fraunces.ttf'),
-         {'wght': w, 'opsz': 72, 'SOFT': 70, 'WONK': 1}) for w in (650, 750)}
+# Clear, open letterforms keep the word readable beside the pixel illustration.
+fonts = {w: instantiateVariableFont(TTFont(R/'sources/fonts/IBMPlexSans.ttf'),
+         {'wght': w, 'wdth': 100}) for w in (600, 700)}
 word = []
 cursor = 0
 for letter in 'sugarCANe':
-    font = fonts[750 if letter.isupper() else 650]
+    font = fonts[700 if letter.isupper() else 600]
     glyphs = font.getGlyphSet()
     glyph = glyphs[font.getBestCmap()[ord(letter)]]
     pen = OutlinePen(glyphs, tolerance=.35)
     glyph.draw(pen)
     word.append(affinity.translate(pen.geometry(), cursor, 0))
-    cursor += glyph.width + 5
+    cursor += glyph.width + 14
 word = union_all(word)
 x0, y0, x1, y1 = word.bounds
-scale = 45.6/(x1-x0)
+scale = min(45.6/(x1-x0), 8.4/(y1-y0))
 word = affinity.scale(word, scale, -scale, origin=(0, 0))
-x0, y0, _, _ = word.bounds
-word = affinity.translate(word, 3.2-x0, 49.6-y0)
+x0, y0, x1, _ = word.bounds
+word = affinity.translate(word, (52-(x1-x0))/2-x0, 49.3-y0)
 
-# Three jointed stalks fan from a common root. Curved edges and broad blades
-# make this an original botanical mark, independent of game graphics.
-stems = [
-    curve((22.6, 44.5), [(24.8, 35.3, 25.3, 25.3, 31.4, 13.1),
-          (31.8, 12.4, 32.4, 12.4, 32.6, 13.1),
-          (28.8, 27.1, 28.4, 37.5, 26.3, 44.7)]),
-    curve((18.8, 43.6), [(19.9, 33.6, 17.4, 26.7, 14.6, 22.3),
-          (14.1, 21.6, 14.7, 21.1, 15.4, 21.8),
-          (20.8, 27.9, 23.5, 35.2, 22.1, 44.4)]),
-    curve((28.3, 44.1), [(30.2, 36.6, 34.2, 30.7, 39.2, 27.1),
-          (39.9, 26.5, 40.4, 26.9, 39.8, 27.6),
-          (35.8, 33.4, 34.1, 38.4, 32.2, 44.4)]),
-]
-# Open .5 mm node cuts distinguish the cane segments at actual print scale.
-nodes = [((24.5, 36.8), (28.9, 37.5)), ((26.3, 28.1), (30.4, 29.1)),
-         ((28.6, 20.2), (33, 21.6)), ((18.4, 36.5), (23.2, 36.1)),
-         ((16.7, 29.4), (20.5, 27.9)), ((30, 37.2), (35.1, 39.5))]
-stalks = union_all(stems).difference(union_all([
-    LineString([a,b]).buffer(.25, cap_style='round') for a,b in nodes]))
-leaves = [
-    curve((29.2, 25.3), [(21, 24.2, 21.1, 14.8, 8.2, 12.3),
-          (18.4, 11.2, 28.9, 16.1, 29.2, 25.3)]),
-    curve((28.5, 28.1), [(31.5, 17.6, 42.1, 13.5, 47.7, 18.1),
-          (40.1, 16.6, 38.9, 24.3, 28.5, 28.1)]),
-    curve((20.4, 33.8), [(10.5, 31.7, 10.6, 25, 4.8, 22.8),
-          (13.3, 21.8, 20.3, 27.4, 20.4, 33.8)]),
-    curve((34, 36.8), [(35.1, 29.4, 41.6, 26.2, 48, 26.8),
-          (42.4, 29.1, 42.2, 35.1, 34, 36.8)]),
-]
-# Sweeping negative-space veins reinforce the gesture of each blade.
-veins = [
-    curve((26.8, 22.6), [(24.1, 18.4, 18.7, 15.4, 14.5, 14.1),
-          (19.6, 16.9, 24.2, 19.7, 26.8, 22.6)]),
-    curve((31.6, 25.1), [(35.7, 20.3, 41, 17.4, 45.4, 17.8),
-          (40.4, 18.4, 37.3, 21.5, 31.6, 25.1)]),
-    curve((18.1, 30.9), [(15.7, 27.2, 11.1, 25, 7.3, 23.6),
-          (10.4, 25.7, 14.5, 28.7, 18.1, 30.9)]),
-    curve((36.9, 33.9), [(38.6, 30.4, 42.2, 28.2, 45.3, 27.5),
-          (42.2, 29, 40.8, 31.5, 36.9, 33.9)]),
-]
-# The ground arches upward into a shallow convex hill beneath the stalks.
-root = curve((10.6, 46.2), [(19, 40.7, 37.4, 40.7, 45.8, 46.2),
-             (34, 45, 22.4, 45, 10.6, 46.2)])
-art = union_all([word, stalks, union_all(leaves).difference(union_all(veins)), root])
+# Restore the original three pixel stalks and stair-step leaves. A stepped
+# convex mound retains the raised-ground silhouette without corner ornaments.
+cane = []
+def rect(x, y, width, height):
+    cane.append(box(x, y, x+width, y+height))
+
+def leaf(x, y, dx, dy, count):
+    for i in range(count):
+        size = 2 if i < count-1 else 1
+        rect(x+dx*i, y+dy*i, size, size)
+
+for x, top in [(7, 11), (17, 1), (28, 7)]:
+    rect(x, top, 3, 39-top)
+    for y in range(top+7, 35, 9):
+        rect(x-1, y, 5, 1)
+leaf(6, 15, -1, -1, 7)
+leaf(9, 21, 1, -1, 5)
+leaf(16, 8, -1, -1, 7)
+leaf(19, 13, 1, -1, 8)
+leaf(30, 16, 1, -1, 7)
+leaf(27, 25, -1, -1, 6)
+plant = union_all(cane)
+slots = [box(x+1, y, x+2, min(y+4, 35))
+         for x, top in [(7, 11), (17, 1), (28, 7)]
+         for y in range(top+2, 34, 9)]
+plant = plant.difference(union_all(slots))
+soil = union_all([box(4, 38, 34, 40), box(7, 37, 31, 38),
+                  box(11, 36, 27, 37), box(15, 35, 23, 36)])
+soil = soil.difference(union_all([
+    box(x, y, x+1, y+1) for x, y in [(8, 38), (14, 37), (21, 38), (29, 38)]]))
+plant = union_all([plant, soil])
+plant = affinity.translate(affinity.scale(plant, .8, .8, origin=(0, 0)), 10.4, 12.1)
+art = union_all([word, plant])
 assert art.is_valid
 
 
@@ -166,8 +142,8 @@ def pieces(geometry):
 
 
 svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="52mm" height="74mm" viewBox="0 0 52 74">',
-       '<title>sugarCANe — flowing cane on a convex hill</title>',
-       '<desc>Underside reading orientation. Original three-stalk cane on an upward-arching hill; Fraunces soft-serif outlined lettering, weights 650 and 750. Only the product name is text. No border.</desc>',
+       '<title>sugarCANe — pixel cane with clear lettering</title>',
+       '<desc>Underside reading orientation. Original three-stalk pixel cane on a stepped convex mound; clear IBM Plex Sans outlined lettering, weights 600 and 700. Only the product name is text. No border.</desc>',
        '<g fill="#ffffff" fill-rule="evenodd">']
 for poly in pieces(art):
     contours = []
