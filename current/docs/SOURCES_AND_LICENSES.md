@@ -2,6 +2,8 @@
 
 KiCad library/model notices are retained under `licenses/`, together with Arm CMSIS, ST device-header and WPILib notices. Firmware third-party directories and InteractiveHtmlBom output retain their notices. Original project work has no selected blanket license. Manufacturer documents/CAD remain their owners' material; retaining a file is not a redistribution-license grant.
 
+The sugarCANe underside uses an original pixel-cane illustration and outlined **Pixelify Sans Bold** lettering by Stefie Justprince. The original font is licensed under SIL OFL 1.1; [artwork provenance, pinned font and license](../hardware/artwork/README.md) are retained. No Minecraft asset is included. This branding changes the bottom silkscreen only; SC12 Rev H remains the hardware identity.
+
 | Subject | Primary reference |
 |---|---|
 | Input fuse interruption / derating | [Littelfuse 451/453](https://www.littelfuse.com/assetdocs/fuse-451-and-453-datasheet?assetguid=533cd5cc-956c-4243-867f-6ab5a62f6ba1) |

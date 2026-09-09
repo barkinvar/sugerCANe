@@ -12,7 +12,7 @@ Use the included hardware-8/protocol-v4 firmware and tools; older-revision firmw
 
 Each terminal pole has two solder legs; they are one electrical contact. J2/J3 are connected in parallel for bus continuation, with no onboard CAN ground terminal. Common ground comes through robot power. Use twisted H/L wiring; keep branches short. Strip 8 mm using the conductor range specified by Weidmüller for the exact terminal. Press the white release button for removal and for conductor types requiring it. Provide cable strain relief independently of the terminal.
 
-Both CAN connectors are marked **L(G)** for CAN Low / green and **H(Y)** for CAN High / yellow, following [WPILib's FRC CAN wiring convention](https://docs.wpilib.org/en/latest/docs/hardware/hardware-basics/can-wiring-basics.html). The four front labels share one horizontal baseline; the underside repeats the same color abbreviations.
+Both CAN connectors are marked **L(G)** for CAN Low / green and **H(Y)** for CAN High / yellow on the component side, following [WPILib's FRC CAN wiring convention](https://docs.wpilib.org/en/latest/docs/hardware/hardware-basics/can-wiring-basics.html). The four front labels share one horizontal baseline. The underside carries only the sugarCANe branding artwork; use the top labels and this guide for connections.
 
 Feed J1 from appropriately fused robot distribution. F1 is secondary board protection. Do not backfeed J4–J6 power pins, parallel the two sensor rails, or apply external power to the programming rail. The board is not galvanically isolated.
 

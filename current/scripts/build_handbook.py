@@ -140,7 +140,7 @@ def page(canvas, doc):
     canvas.drawRightString(553, 24, str(doc.page))
     canvas.restoreState()
 
-story = [Spacer(1, 33), Paragraph('FRC<br/>Sensor CAN', styles['cover']),
+story = [Spacer(1, 33), Paragraph('sugarCANe', styles['cover']),
          Paragraph('Revision H SC12 · Prototype engineering and assembly guide', styles['heading']),
          Paragraph('Three industrial / logic sensor inputs<br/>Regulated 12 V and 5 V sensor power', styles['body']),
          Spacer(1, 10)]
@@ -172,7 +172,7 @@ for i, (title, path) in enumerate(chapters):
 
 doc = Guide(str(OUT / 'SC12_RevH_Handbook.pdf'), pagesize=A4,
             leftMargin=42, rightMargin=42, topMargin=48, bottomMargin=43,
-            title='FRC Sensor CAN — Revision H SC12 prototype handbook',
+            title='sugarCANe — Revision H SC12 prototype handbook',
             author='FRC Sensor CAN project')
 doc.multiBuild(story, onFirstPage=page, onLaterPages=page)
 print(OUT / 'SC12_RevH_Handbook.pdf')
