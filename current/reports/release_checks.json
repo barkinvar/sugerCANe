@@ -23,7 +23,7 @@
   "firmware_application_scenarios": 19,
   "simulated_flash_boundaries": 2148,
   "input_hashes": {
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "68651136e63a4c4b42bba47a822ad40266748e1bf1eeed0289f37709ada14e33",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "6a8b69520939bc5513863322ef66eba9436c63dcaecbc3e2861b7f1045559f79",
     "hardware/design/circuit.json": "cf9e272fb1d32b9ad6e04e69c37d37f8c2610410835bd46e6231c3692547903e",
     "firmware/build/factory.hex": "e5f242ee70dd509caa3ee7d51d91d7942c954f1f8dd5c077d57498f5932626e0",
     "firmware/build/application.sc12": "2f213ad1b656ace778778e00540f48fb830398a738cf21e6803af82b43851b39",
@@ -37,19 +37,19 @@
     "scripts/check_board_constraints.py": "8fceb70697f439acda53099b37b7e3df1afa474c680973f959f990efb33b919c",
     "reports/manufacturing/board_manifest.json": "9226642abaa6f80ccc8bcc2c5d4099bc7e073010cf217cf6dcfed95c7f9a83b6",
     "reports/manufacturing/factory_files.json": "cd932d3db66704c6d13341d7a7c549f44180a7056a68eba9e5ecb39dc2b78f1b",
-    "reports/manufacturing/gerber_connectivity.json": "059601c8eecd0b6ba6ef140460c85985e3e75d09a2718c930cedb935f9913cac",
-    "reports/manufacturing/gerber_geometry.json": "c8b94c60af1d26d9c817d1c7e3a80e543154d619e235327f9fa6a50bb5cd0557",
+    "reports/manufacturing/gerber_connectivity.json": "e4d035816517002cfaef261a25592fb0f0fcbb9200c8a8ce38960516fe4c34c6",
+    "reports/manufacturing/gerber_geometry.json": "08a972d42929a3dc70ccd108d590b07f12cfd36082998f9a3895d769bff52d15",
     "reports/electrical/order_readiness.json": "877fe74ad451ac121a49b22dea51ea4296b06048aa0387d7e369c334a328281d",
     "hardware/controller.kicad_sch": "5e5b71d876902f94f22bf7c31ed5fa0d2f4bf344f7072afd3f5b089ff3a67f86",
     "hardware/library/FRC_Sensor_CAN.pretty/Service_2x05_P2.54mm.kicad_mod": "8f9b2a6def02861845a5cfcaaf09170c252789fae2cfcecbcd004680dd53c32c",
     "hardware/library/3d/Service_2x05_P2.54mm.step": "898d214b48f311c3dddac55abcf3a4928149378ea2bf7310c9e1f10bed48b20c",
     "scripts/build_service_model.py": "91caa486dc629be867eb7af8a27ba4458ad461b12375f29dbe4d26767e030a3a",
-    "scripts/finish_markings.py": "bb9d98a4e3e97565c11a770dec79ba2aeb24bbf594c1a2de65c1020046ce4a1a",
-    "reports/erc/final.json": "a4737ab5d751603f160d4acb58432008a604c4a5f3de41e2d94d39f4c028180a",
-    "reports/drc/final.json": "77275aebe4ef8e06f0a5d1656face60df92282e4d4b01c9976ce7470833a2e84",
+    "scripts/finish_markings.py": "2e03cd0be683738494e69af6a2a03e961a15aaab54c8627a890fa0c89de42bd5",
+    "reports/erc/final.json": "3be6eb2b0ab5fa71bc20efdd574505624a7e21e9487d4ea0b3e97fedb7c79e91",
+    "reports/drc/final.json": "a94f731d652942d38ee9b3e423357bd1fe2adeb0e3f678379b9f773ffc52a3bb",
     "reports/manufacturing/verification.json": "51e6039630c6a53936be39202f5260c62aaa918544e0d28f117c5e3da910ca4e",
-    "reports/document_review.json": "6e3a2fd206d1ab44dc232dc9af7d54b5ec8c98828878c829f5aa0ff9a440ad39",
-    "reports/visual_review.json": "fcf14431ab213aa210d33c96d988f9e01824149ee1228a7f63b19b457ae221d8",
+    "reports/document_review.json": "866e5db439b22f0aba8ece9945a04e9dc3caafc47a132e2283f442bed91cbba0",
+    "reports/visual_review.json": "459af5206918686436ec259f591b0abb95b6ecf3801eb286d995c765404ee9bf",
     "scripts/board_outline.py": "0db9c26ec161464637131123cd862d8c9066ed7a8997dd0b6e2235c9f9c7785f",
     "scripts/check_variant.py": "a4c064c673a044de8029fa1c0e39d8cfad799ccc9cdc53877f49c51ee021f5c1",
     "scripts/verify_manufacturing.py": "92fd95f19252699299bf0a39e5c22423f80a8e5ed390cee61fe4b4d42d9ec77a",
@@ -58,118 +58,39 @@
     "scripts/build_documents.py": "dc4dfd9d5c21d04051e4dbb445cd0a514faa2356d4eefbe08b5046d6c8fd4437"
   },
   "spice_result": "INCOMPLETE: coupled startup runs canceled; eight other cases passed",
-  "scope": "R1.5 board corners, input-bias transistor alignment and readable front labels; CAD/export checks only. Circuit, BOM and firmware unchanged. Final simulation deferred by user; no full power release or physical qualification.",
+  "scope": "Silkscreen-only CAN label alignment and L(G)/H(Y) color abbreviations, plus wiring and capacitor mounting notes. Native non-text PCB content, electrical connections, BOM and firmware unchanged. CAD/export cross-checks only; final simulation remains deferred by user.",
   "layout_change": {
     "result": "PASS",
-    "baseline_commit": "ed4b3648fd4117606a7af29862eb1be6aeca9354",
-    "moved_components": {
-      "R4": {
-        "before": {
-          "xy_mm": [
-            12.5,
-            60.5
-          ],
-          "rotation_deg": 180.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            12.5,
-            61.0
-          ],
-          "rotation_deg": 180.0,
-          "side": 0
-        }
-      },
-      "Q302": {
-        "before": {
-          "xy_mm": [
-            44.0,
-            57.45
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            44.0,
-            57.15
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        }
-      },
-      "Q202": {
-        "before": {
-          "xy_mm": [
-            28.0,
-            57.45
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            28.0,
-            57.15
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        }
-      },
-      "Q102": {
-        "before": {
-          "xy_mm": [
-            12.0,
-            57.45
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            12.0,
-            57.15
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        }
-      }
-    },
+    "baseline_commit": "95032c67e51468d45fa17a8ac2e790de16a70362",
+    "moved_components": {},
     "board_corner_radius_mm": 1.5,
     "unchanged_BOM": true,
-    "unchanged_tracks_and_vias": 8074,
-    "unchanged_critical_nets": [
-      "BOOST_12V",
-      "BOOST_COMP",
-      "BOOST_COMP_RC",
-      "BOOST_FB",
-      "BOOST_SW",
-      "BUCK_CB",
-      "BUCK_FB",
-      "BUCK_SW",
-      "CANH",
-      "CANL",
-      "HSE_IN",
-      "HSE_OUT",
-      "HSE_XTAL_OUT",
-      "V5_INTERNAL",
-      "VIN_PROT"
-    ],
-    "retained_copper_net_identity": true,
     "unchanged_electrical_connections": true,
     "unchanged_firmware": true,
-    "scope": "R1.5 board corners, aligned input-bias transistors, R4 alignment and readable front labels. Local sensor/logic routing updated; switching/feedback/clock/CAN trunk copper retained. No new parts or firmware changes; final simulation deferred.",
+    "unchanged_native_non_text_content": true,
+    "unchanged_fabrication_geometry": [
+      "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl",
+      "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs",
+      "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp",
+      "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1",
+      "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl",
+      "output/fabrication/FRC_Sensor_CAN-F_Mask.gts",
+      "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp",
+      "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1",
+      "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2",
+      "output/fabrication/FRC_Sensor_CAN-NPTH.drl",
+      "output/fabrication/FRC_Sensor_CAN-PTH.drl"
+    ],
+    "scope": "Only board text changed: aligned front CAN labels and matching underside color abbreviations. C1 placement retained; mechanical impact/vibration durability untested.",
     "checks": [
       "Zero native ERC/DRC violations and zero unconnected items",
-      "Unchanged circuit, BOM, firmware and critical power/clock/CAN routes",
-      "R1.5 outline and aligned six-transistor row",
-      "Independent four-layer Gerber connectivity and rounded-outline copper clearance",
-      "BOM/placement/drill/model manufacturing parity",
-      "Updated board renders and PDF visual review; unchanged pages compared as rendered images"
+      "Native PCB identical after removing board-text records",
+      "All copper, mask, paste, outline and drill exports identical after removing export dates",
+      "Independent four-layer Gerber connectivity and manufacturing geometry pass",
+      "Rendered board images and changed PDF pages visually reviewed; unchanged pages compared as images"
     ]
   },
-  "reviewed_utc": "2026-09-09T21:28:24.716091+00:00",
+  "reviewed_utc": "2026-09-09T21:59:37.589781+00:00",
   "simulation_deferred_by_user": true,
   "power_distribution_valid_for_current_layout": false,
   "firmware_evidence": "Previous passing firmware tests retained; sources and programming images unchanged. No firmware tests rerun for this CAD change."

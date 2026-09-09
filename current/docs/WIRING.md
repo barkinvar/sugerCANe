@@ -5,12 +5,14 @@ Use the included hardware-8/protocol-v4 firmware and tools; older-revision firmw
 | Connector | Pin 1 | Pin 2 | Pin 3 |
 |---|---|---|---|
 | J1 power | Positive input, 6–22 V | GND | — |
-| J2, J3 CAN | CAN H | CAN L | — |
+| J2, J3 CAN | CAN H, yellow: H(Y) | CAN L, green: L(G) | — |
 | J4 input 1 | Selected sensor power | GND | Signal |
 | J5 input 2 | Selected sensor power | GND | Signal |
 | J6 input 3 | Selected sensor power | GND | Signal |
 
 Each terminal pole has two solder legs; they are one electrical contact. J2/J3 are connected in parallel for bus continuation, with no onboard CAN ground terminal. Common ground comes through robot power. Use twisted H/L wiring; keep branches short. Strip 8 mm using the conductor range specified by Weidmüller for the exact terminal. Press the white release button for removal and for conductor types requiring it. Provide cable strain relief independently of the terminal.
+
+Both CAN connectors are marked **L(G)** for CAN Low / green and **H(Y)** for CAN High / yellow, following [WPILib's FRC CAN wiring convention](https://docs.wpilib.org/en/latest/docs/hardware/hardware-basics/can-wiring-basics.html). The four front labels share one horizontal baseline; the underside repeats the same color abbreviations.
 
 Feed J1 from appropriately fused robot distribution. F1 is secondary board protection. Do not backfeed J4–J6 power pins, parallel the two sensor rails, or apply external power to the programming rail. The board is not galvanically isolated.
 
