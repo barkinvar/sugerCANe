@@ -101,7 +101,7 @@
     }
   },
   "inner_service_and_monitor_routes": {
-    "+3V3": 13.910838738653233,
+    "+3V3": 16.992640101342293,
     "ADC_5V": 6.1305086527633215,
     "BIAS_DOWN1": 38.39132602052242,
     "BIAS_DOWN2": 36.8552561210872,
@@ -113,7 +113,7 @@
   },
   "power_net_geometry": {
     "SENSOR_12V": {
-      "total_track_length_mm": 161.0264701611949,
+      "total_track_length_mm": 161.02647016119505,
       "minimum_width_mm": 0.5,
       "via_count": 9
     },
@@ -143,7 +143,7 @@
       "via_count": 7
     },
     "SENSOR_5V": {
-      "total_track_length_mm": 115.0503299021301,
+      "total_track_length_mm": 115.2042979712483,
       "minimum_width_mm": 0.35,
       "via_count": 10
     },
@@ -176,6 +176,8 @@
     "R30": 1.7,
     "R31": 1.7
   },
+  "board_corner_radius_mm": 1.5,
+  "input_bias_transistor_row_y_mm": 57.15,
   "edge_scope": "Pad bounding boxes to finished edges. R1/R2 retain original 1.30 mm edge clearance and local buck feedback routing. Terminals/test pads/termination bridge have intentional exceptions.",
   "efuse_assembly": {
     "exposed_pad_mm": [

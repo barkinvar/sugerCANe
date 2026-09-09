@@ -2,7 +2,7 @@
 
 Rev H retains Rev G's power-path repairs and adds RGB diagnostics plus a recessed female service socket. The LED/header checks pass; the additional full power-transient rerun was stopped before completion and is not reported as a Rev H pass. No physical board has been tested; the package is a prototype design with reproducible engineering evidence.
 
-The latest clearance, socket and silkscreen edit receives CAD, pinout and manufacturing cross-checks only. Final simulations are deferred until the design is finalized, as requested. Sensor-rail distribution was rerouted for the moved jumpers; the retained DC report is from the preceding layout and is not presented as a fresh pass.
+The latest clearance, socket, rounded-outline and alignment edits receive CAD, pinout and manufacturing cross-checks only. Final simulations are deferred until the design is finalized, as requested. Sensor-rail distribution was rerouted for the moved jumpers and local transistor clearances; the retained DC report is from an earlier layout and is not presented as a fresh pass.
 
 The power-stage simulation findings below refer to the completed Rev G baseline. Current H evidence separately covers the added RGB load allowance, native geometry, pin mapping and firmware.
 

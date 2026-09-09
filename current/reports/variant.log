@@ -54,7 +54,9 @@
     52,
     74
   ],
-  "area_change_from_rev_g_percent": 0,
+  "corner_radius_mm": 1.5,
+  "bounding_box_area_change_from_rev_g_percent": 0,
+  "area_change_from_rev_g_percent": -0.050192737251116566,
   "cost_10_board_purchase_USD": {
     "rev_g": 28.8123,
     "rev_h": 28.988599999999998,

@@ -16,9 +16,10 @@ for x,label in [(9.5,'GND'),(13,'+'),(35.5,'L'),(39,'H'),(45,'L'),(48.5,'H')]:te
 text('CAN',42,6,.8,angle=90)
 text('TERM',16.3,5.2,.8,angle=90)
 text('DEBUG',25.3,9.55,.8)
+text('SC12 REV H',25,.7,.8)
 text('RGB',48,41.3,.8)
 for ch,x in enumerate([5,21,37],1):
- text('5V',x+{1:0,2:-1.5,3:.5}[ch],62.55 if ch==2 else 61.95,.8);text('12V',x+4+(.8 if ch==1 else 0),61.95,.8)
+ text('5V',x+{1:0,2:0,3:.5}[ch],61.95,.8);text('12V',x+4+(.8 if ch==1 else 0),61.95,.8)
  for xx,label in [(x+1.5,f'V{ch}'),(x+5,'GND'),(x+8.5,f'IN{ch}')]:text(label,xx+(.5 if ch==3 and label=='GND' else 0),62.95,.8)
 for value,y,size in [('SC12',17,2.7),('REV H - 3 DIGITAL INPUTS',21,1.2),('6-22V IN | 5V / 12V OUT',24,1.1),('300mA TOTAL PER RAIL',26.5,1.0),('POWER: 1-2=5V / 2-3=12V',30,.95),('INPUT MODE: CAN SOFTWARE',32.5,.95),('NPN / PNP / PUSH-PULL',35,.95),('ONE CAP PER POWER HEADER',37.5,.95),('FAULT RESET: CAN SERVICE',40,.85),('INPUTS ONLY - NO ACTUATORS',42,.85),('DEBUG: CUSTOM 2x5 PINOUT',46,.95),('1 RST / 2 RX / 3 TX / 4 CLK / 5 DIO',48.5,.85),('6 3V3 / 7 GND / 8 GND / 9 BOOT / 10 GND',51,.85),('3V3 = TARGET REFERENCE ONLY',53.5,.85),('POWER OFF TO MOVE CAPS',56,.9)]:text(value,26,y,size,True)
 for x,l in [(13,'VIN+'),(9.5,'GND'),(39,'H'),(35.5,'L'),(48.5,'H'),(45,'L')]:text(l,x,5.5,.85,True)

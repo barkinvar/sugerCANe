@@ -89,7 +89,7 @@
     "geometry_sha256": "11e217094d602b9d50b6f384a8032dedaf020fd171260eed68d26169aa582dd5",
     "scope": "Nominal etched dimensions and ideal pads. No temperature solution, ground return, contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json."
   },
-  "scope": "Pin mapping and CAD/export checks cover the clearance/socket/label edit. Retained power_distribution results precede the relocated power headers and their supply routing; no current-layout DC or transient simulation pass is claimed. Final simulation deferred by user.",
+  "scope": "CAD, pin mapping, rounded-outline clearance and manufacturing checks cover the current layout refinement. Retained power_distribution precedes the moved selector and local sensor/logic routing; no current-layout DC or transient pass is claimed. Simulations remain deferred by user until design finalization.",
   "power_distribution_baseline_commit": "f4de467fd256327cd4beca55338915f698db33fc",
   "power_distribution_valid_for_current_layout": false,
   "simulation_deferred_by_user": true

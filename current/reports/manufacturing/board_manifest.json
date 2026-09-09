@@ -370,14 +370,14 @@
       "value": "1k",
       "package": "R_0805_2012Metric",
       "x_mm": 12.5,
-      "y_mm": -60.5,
+      "y_mm": -61.0,
       "rotation_deg": 180.0,
       "pads": [
         {
           "number": "1",
           "net": "+3V3",
           "x_mm": 13.4125,
-          "y_mm": -60.5,
+          "y_mm": -61.0,
           "copper_top": true,
           "copper_bottom": false
         },
@@ -385,7 +385,7 @@
           "number": "2",
           "net": "GND",
           "x_mm": 11.5875,
-          "y_mm": -60.5,
+          "y_mm": -61.0,
           "copper_top": true,
           "copper_bottom": false
         }
@@ -2003,14 +2003,14 @@
       "value": "BSS138BK",
       "package": "SOT-23",
       "x_mm": 44.0,
-      "y_mm": -57.45,
+      "y_mm": -57.15,
       "rotation_deg": 90.0,
       "pads": [
         {
           "number": "1",
           "net": "BIAS_DOWN3",
           "x_mm": 43.05,
-          "y_mm": -58.3875,
+          "y_mm": -58.0875,
           "copper_top": true,
           "copper_bottom": false
         },
@@ -2018,7 +2018,7 @@
           "number": "2",
           "net": "GND",
           "x_mm": 44.95,
-          "y_mm": -58.3875,
+          "y_mm": -58.0875,
           "copper_top": true,
           "copper_bottom": false
         },
@@ -2026,7 +2026,7 @@
           "number": "3",
           "net": "BIAS_SINK3",
           "x_mm": 44.0,
-          "y_mm": -56.5125,
+          "y_mm": -56.2125,
           "copper_top": true,
           "copper_bottom": false
         }
@@ -3088,14 +3088,14 @@
       "value": "BSS138BK",
       "package": "SOT-23",
       "x_mm": 28.0,
-      "y_mm": -57.45,
+      "y_mm": -57.15,
       "rotation_deg": 90.0,
       "pads": [
         {
           "number": "1",
           "net": "BIAS_DOWN2",
           "x_mm": 27.05,
-          "y_mm": -58.3875,
+          "y_mm": -58.0875,
           "copper_top": true,
           "copper_bottom": false
         },
@@ -3103,7 +3103,7 @@
           "number": "2",
           "net": "GND",
           "x_mm": 28.95,
-          "y_mm": -58.3875,
+          "y_mm": -58.0875,
           "copper_top": true,
           "copper_bottom": false
         },
@@ -3111,7 +3111,7 @@
           "number": "3",
           "net": "BIAS_SINK2",
           "x_mm": 28.0,
-          "y_mm": -56.5125,
+          "y_mm": -56.2125,
           "copper_top": true,
           "copper_bottom": false
         }
@@ -4803,14 +4803,14 @@
       "value": "BSS138BK",
       "package": "SOT-23",
       "x_mm": 12.0,
-      "y_mm": -57.45,
+      "y_mm": -57.15,
       "rotation_deg": 90.0,
       "pads": [
         {
           "number": "1",
           "net": "BIAS_DOWN1",
           "x_mm": 11.05,
-          "y_mm": -58.3875,
+          "y_mm": -58.0875,
           "copper_top": true,
           "copper_bottom": false
         },
@@ -4818,7 +4818,7 @@
           "number": "2",
           "net": "GND",
           "x_mm": 12.95,
-          "y_mm": -58.3875,
+          "y_mm": -58.0875,
           "copper_top": true,
           "copper_bottom": false
         },
@@ -4826,7 +4826,7 @@
           "number": "3",
           "net": "BIAS_SINK1",
           "x_mm": 12.0,
-          "y_mm": -56.5125,
+          "y_mm": -56.2125,
           "copper_top": true,
           "copper_bottom": false
         }
@@ -5527,6 +5527,13 @@
       "source": "via"
     },
     {
+      "x_mm": 10.65,
+      "y_mm": -55.225,
+      "diameter_mm": 0.4,
+      "plated": true,
+      "source": "via"
+    },
+    {
       "x_mm": 8.525,
       "y_mm": -61.75,
       "diameter_mm": 0.4,
@@ -5570,13 +5577,6 @@
     },
     {
       "x_mm": 5.65,
-      "y_mm": -55.225,
-      "diameter_mm": 0.4,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 17.775,
       "y_mm": -55.225,
       "diameter_mm": 0.4,
       "plated": true,
@@ -6094,8 +6094,8 @@
       "source": "via"
     },
     {
-      "x_mm": 20.5,
-      "y_mm": -61.95,
+      "x_mm": 20.275,
+      "y_mm": -65.125,
       "diameter_mm": 0.3,
       "plated": true,
       "source": "via"
@@ -6528,6 +6528,13 @@
       "source": "via"
     },
     {
+      "x_mm": 46.025,
+      "y_mm": -56.525,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
       "x_mm": 43.5726,
       "y_mm": -63.8147,
       "diameter_mm": 0.3,
@@ -6549,6 +6556,13 @@
       "source": "via"
     },
     {
+      "x_mm": 41.25,
+      "y_mm": -53.65,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
       "x_mm": 45.9306,
       "y_mm": -57.1113,
       "diameter_mm": 0.3,
@@ -6557,7 +6571,14 @@
     },
     {
       "x_mm": 43.1172,
-      "y_mm": -57.1113,
+      "y_mm": -59.349999,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 44.6,
+      "y_mm": -52.325,
       "diameter_mm": 0.3,
       "plated": true,
       "source": "via"
@@ -6906,8 +6927,8 @@
       "source": "via"
     },
     {
-      "x_mm": 28.775,
-      "y_mm": -55.4,
+      "x_mm": 28.9,
+      "y_mm": -55.3,
       "diameter_mm": 0.4,
       "plated": true,
       "source": "via"

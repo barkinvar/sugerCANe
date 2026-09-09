@@ -1,31 +1,31 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-09T20:21:24.753584+00:00",
+  "reviewed_utc": "2026-09-09T21:28:24.716091+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
       "file": "output/review/board_3d_final.png",
-      "sha256": "5c3fdb32fd203f8fdcca3d9419e2b06aee9ce52ddb4c6f94274ec5b1b4d01fbe",
-      "scope": "Oblique CAD: recessed female J8 body, inward component placement, visible selector/input legends and retained right-side RGB circle. Nominal package envelopes only.",
-      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
+      "sha256": "2c31c57509f3688deb67bd3347834cb838e342a059f826319e64fbe4dfd82aef",
+      "scope": "Oblique CAD reviewed: R1.5 outline corners, six input-bias transistors aligned, retained recessed socket, terminals and right-side RGB duct space. Nominal envelopes only.",
+      "reviewed_utc": "2026-09-09T21:28:24.716091+00:00"
     },
     {
       "file": "output/review/board_top.png",
-      "sha256": "5e5b68e058b362253c47c7642e9bf309aafd5f39ef65c083f38f2cd493f8c929",
-      "scope": "Top CAD and enlarged selector row: socket cavities, pin-one marker, 5V/12V and V1/V2/V3/GND/IN1/IN2/IN3 labels outside connector bodies; right-side D10 duct area retained. Some header shadows darken lettering in the render.",
-      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
+      "sha256": "6120d9be2f73733435b214fe9b11d08e8e15e945412ee7cec4397cc02364e1d4",
+      "scope": "Top CAD reviewed: rounded corners and SC12 REV H identity, common transistor row, aligned voltage-label baseline and middle 5V legend clear of the relocated drill. Header shadows still darken some lettering.",
+      "reviewed_utc": "2026-09-09T21:28:24.716091+00:00"
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "7ebfffed1c1bbd77f5ab22a7e0beeb5ccf8764149f47d29a356bfd41b0050d88",
-      "scope": "Bottom CAD: power/CAN/input labels, separated TERM legend, full custom debug pin map, reference-only 3V3 warning, selector orientation and power-off instruction. No bottom components.",
-      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
+      "sha256": "1a20aa9851917026a38b5200be5b8f68c424684c2ed3e178d5b4e2191aa3aa65",
+      "scope": "Bottom CAD reviewed: rounded contour, retained wiring/debug legends, moved vias and no bottom-side components.",
+      "reviewed_utc": "2026-09-09T21:28:24.716091+00:00"
     },
     {
       "file": "output/review/board_connectors.png",
-      "sha256": "0135a532de595a3d56fd6f815e927412c9c0e21fc7f75c18777a34f1c9cb4bf8",
-      "scope": "Wire-entry CAD view: outward-facing terminals, recessed J8 contacts and unchanged nominal 8.5 mm maximum component height; physical cable fit and retention untested.",
-      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
+      "sha256": "d6f91a30f6adb9f5b4a3e7e9bfd80840af6ed2ff4a975b4f3a88911a6bee5921",
+      "scope": "Connector-angle CAD reviewed: same outward wire entries and service/selector access, with rounded corners. Physical fit and retention untested.",
+      "reviewed_utc": "2026-09-09T21:28:24.716091+00:00"
     },
     {
       "file": "output/review/service_gui.png",
@@ -36,39 +36,39 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "f869bf5a3046dc823fbdaa5a7f468b5a85815cee146f884c762594a24a9141ed",
-      "scope": "All 38 pages inspected as rendered contact sheets; final revised pages 7 and 15 inspected enlarged. Socket mapping, enclosure dimensions, wiring labels, clearance exceptions, cost and deferred-simulation scope checked. No text clipping or overlapping rows observed.",
-      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
+      "sha256": "bbcc5abeba8559b62384df6ab5c69d1e70eee6dbf046332619376a52935c60a9",
+      "scope": "All 38 rendered pages compared with the preceding reviewed handbook. Only pages 1, 3, 4 and 32 changed; those pages were visually reviewed for updated render, rounded-outline/alignment description, deferred simulations and LaserCAN reference. All other pages are pixel-identical to the preceding review.",
+      "reviewed_utc": "2026-09-09T21:28:24.716091+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
-      "sha256": "43b2071871db018008e82c7a44e81212f0fbf85f6df44e4a3bac88739fa1fead",
-      "scope": "All three pages inspected: recessed female J8 MPN and cost; 140 fitted parts, 130 SMT and ten hand-fitted parts; $28.99 ten-board parts purchasing estimate.",
-      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
+      "sha256": "6dcda8e3c2ffe9f7426b0e7fcce7c344e274e119a566bb8e8fa8e3f5e249774d",
+      "scope": "All three rendered pages are pixel-identical to the preceding reviewed BOM; its visual review is retained. BOM and parts price unchanged.",
+      "reviewed_utc": "2026-09-09T21:28:24.716091+00:00"
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
-      "sha256": "953907ac32f2f81ef3acf98b69775d6b51b0096c74f9dfa0b8f036ff98c68797",
-      "scope": "Both pages inspected: 52x74 outline, retained right-side LED/duct geometry, J8 nominal 13.1x5 mm body and 8.5 mm height, approximately 1.6 mm underside tail extension; ten-pin map and moved voltage headers.",
-      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
+      "sha256": "9f01a25690cc4a0142cf40b85e46614eba36c72b35dd191f4bcb29e1943716d9",
+      "scope": "Both pages reviewed: R1.5 contour and callout, same 52x74 outline bounds, mounting holes, connectors, LED duct, service socket and pin map.",
+      "reviewed_utc": "2026-09-09T21:28:24.716091+00:00"
     },
     {
       "file": "output/assembly/schematic.pdf",
-      "sha256": "b873ba7a90cf6c8bbee90dea781d9c88c30f10d68b8bc5f2d8b423e201bcb072",
-      "scope": "All ten re-exported pages inspected for layout. J8 metadata/note now specifies a recessed female socket; circuit and electrical pin mapping unchanged, independently checked by parity and regression.",
-      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
+      "sha256": "543055c93dadc0364a509017a10f4ff134ca164ff7eb4cf2bc4dd6c01538153e",
+      "scope": "All ten rendered pages are pixel-identical to the preceding reviewed schematic; its visual review is retained. Circuit and pin mappings unchanged.",
+      "reviewed_utc": "2026-09-09T21:28:24.716091+00:00"
     },
     {
       "file": "output/assembly/top_assembly.pdf",
-      "sha256": "30f84452e4232cd76eeca7fb628981da874e8f45834b3cbcfbf341c6a4121bec",
-      "scope": "Assembly map inspected: inward resistor placement, moved voltage headers, recessed service socket and retained LED circle.",
-      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
+      "sha256": "b56fadd5c3fef97994b02e27e5d65fc66dd93fa38c8b56337338b50b9b97e46b",
+      "scope": "Updated assembly page reviewed: rounded outline, Q102/Q202/Q302 and R4 alignment, top identity and middle voltage legend.",
+      "reviewed_utc": "2026-09-09T21:28:24.716091+00:00"
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "sha256": "61c4d07119e4d5622e4834fc353680d63e4abee578023a7181de6c2f4785d0c2",
-      "scope": "Both outer-copper views inspected with updated routing and drills; bottom view mirrored for underside. Four-layer connectivity independently passed.",
-      "reviewed_utc": "2026-09-09T20:21:24.753584+00:00"
+      "sha256": "b35b502f06747c6cb6799b1f23de0a0ca2d0e8587f698d6f31d63e1ec3ac0206",
+      "scope": "Both updated copper/drill pages reviewed: rounded contour rendered from independent Gerber reconstruction, affected local routing and correct underside mirroring.",
+      "reviewed_utc": "2026-09-09T21:28:24.716091+00:00"
     },
     {
       "file": "reports/electrical/converter_loop.png",
@@ -78,5 +78,81 @@
       "evidence": "Unchanged artifact; previous visual review retained, not repeated for this layout change."
     }
   ],
-  "limitations": "Nominal CAD/PDF inspection only. Simulations deferred by user until the final design; current sensor-distribution routing has no fresh DC/transient result. No physical board, optical, vibration or assembly-yield testing."
+  "limitations": "Nominal CAD/PDF inspection only. Simulations deferred by user until the final design; current sensor-distribution routing has no fresh DC/transient result. No physical board, optical, vibration or assembly-yield testing.",
+  "page_comparison_baseline_commit": "ed4b3648fd4117606a7af29862eb1be6aeca9354",
+  "rendered_page_comparison": {
+    "handbook": {
+      "file": "output/documentation/SC12_RevH_Handbook.pdf",
+      "changed_pages": [
+        1,
+        3,
+        4,
+        32
+      ],
+      "unchanged_pages": [
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "page_count": 38
+    },
+    "bom": {
+      "file": "output/documentation/BOM_RevH_SC12.pdf",
+      "changed_pages": [],
+      "unchanged_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_count": 3
+    },
+    "schematic": {
+      "file": "output/assembly/schematic.pdf",
+      "changed_pages": [],
+      "unchanged_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "page_count": 10
+    }
+  }
 }

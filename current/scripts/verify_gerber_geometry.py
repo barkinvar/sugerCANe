@@ -11,9 +11,10 @@ from shapely.ops import nearest_points
 from shapely import union_all,STRtree
 from gerbonara.graphic_objects import Flash
 import verify_gerber_connectivity as g
+from board_outline import verified_outline
 
 ROOT=Path(__file__).resolve().parents[1]
-outline=box(0,-74,52,0)
+outline=verified_outline(g.stack.outline.instance.objects, g.ERROR)
 manifest=json.loads((ROOT/'reports/manufacturing/board_manifest.json').read_text())
 mounts=[(c['x_mm'],c['y_mm']) for c in manifest['components'] if c['reference'].startswith('H')]
 assert sorted(mounts)==[(3.5,-4.0),(48.5,-46.5)]

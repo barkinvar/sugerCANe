@@ -11,6 +11,7 @@ import warnings
 import cairosvg
 from gerbonara import LayerStack
 from gerbonara.graphic_objects import Flash
+from board_outline import verified_outline
 
 ROOT = Path(__file__).resolve().parents[1]
 manifest = json.loads((ROOT / 'reports/manufacturing/board_manifest.json').read_text())
@@ -24,10 +25,7 @@ with warnings.catch_warnings(record=True) as parser_warnings:
 expected_layers = {(side, use) for side in ('top', 'bottom') for use in ('copper', 'mask', 'silk', 'paste')}
 expected_layers.update({('mechanical','outline'),('inner_1','copper'),('inner_2','copper')})
 assert set(stack.graphic_layers) == expected_layers
-outline = stack.outline.instance.objects
-assert len(outline) == 4
-corners = {(round(o.x1, 6), round(o.y1, 6)) for o in outline}
-assert corners == {(0, 0), (52, 0), (52, -74), (0, -74)}
+outline = verified_outline(stack.outline.instance.objects)
 
 def coord(value):
     return round(float(value), 5)
@@ -99,7 +97,8 @@ for side in ('top', 'bottom'):
     cairosvg.svg2png(bytestring=svg.encode(), write_to=str(dest.with_suffix('.png')),
                     output_width=1600, background_color='white')
 result = dict(result='PASS', parser='Gerbonara 1.6.3', graphic_layers=11,
-              board_outline_mm=[52, 74], plated_drills=sum(n for k, n in actual_drills.items() if k[-1]),
+              board_outline_mm=[52, 74], corner_radius_mm=1.5,
+              plated_drills=sum(n for k, n in actual_drills.items() if k[-1]),
               nonplated_drills=2, copper_pad_flashes_verified=pad_results,
               maximum_drill_coordinate_quantization_mm=drill_error,
               maximum_drill_diameter_quantization_mm=diameter_error,

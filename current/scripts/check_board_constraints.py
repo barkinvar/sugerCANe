@@ -13,6 +13,10 @@ assert len([r for r in fitted if r.startswith('C')])==40
 def pads(ref):return {d.GetNumber():d for d in fps[ref].Pads() if d.GetNumber()}
 def nets(ref):return {n:d.GetNetname() for n,d in pads(ref).items()}
 assert b.GetCopperLayerCount()==4
+edges=[d for d in b.GetDrawings() if d.GetLayer()==p.Edge_Cuts]
+assert len(edges)==8
+arcs=[d for d in edges if d.GetShape()==p.SHAPE_T_ARC]
+assert len(arcs)==4 and all(abs(p.ToMM(d.GetRadius())-1.5)<1e-5 for d in arcs)
 assert 'U3' not in fps
 assert nets('U8')==parts['U8']['pins'] and nets('U9')=={k:v or '' for k,v in parts['U9']['pins'].items()}
 assert nets('U9')['4']=='BOOST_12V' and nets('U9')['5']=='SENSOR_12V'
@@ -40,6 +44,8 @@ for ch in range(1,4):
  assert nets(f'Q{ch}02')=={'1':f'BIAS_DOWN{ch}','2':'GND','3':f'BIAS_SINK{ch}'}
  assert nets(f'R{ch}10')=={'1':f'BIAS_PORT{ch}','2':f'SIG{ch}'}
  assert nets(f'R{ch}09')=={'1':f'SIG{ch}','2':f'BIAS_SINK{ch}'}
+ for ref in (f'Q{ch}01',f'Q{ch}02'):
+  assert abs(p.ToMM(fps[ref].GetPosition().y)-57.15)<1e-6
 assert all(not d.IsOnLayer(p.F_Paste) for d in pads('JP2').values())
 service=pads('J8');mapping={'1':'NRST','2':'UART_RX','3':'UART_TX','4':'SWCLK','5':'SWDIO','6':'+3V3','7':'GND','8':'GND','9':'BOOT0','10':'GND'}
 assert nets('J8')==mapping
@@ -112,6 +118,8 @@ for d in paste:
 coverage=area/(2.4*3.1)
 assert .50<coverage<.65
 report['improved_edge_clearances_mm']=edge_clearances
+report['board_corner_radius_mm']=1.5
+report['input_bias_transistor_row_y_mm']=57.15
 report['edge_scope']='Pad bounding boxes to finished edges. R1/R2 retain original 1.30 mm edge clearance and local buck feedback routing. Terminals/test pads/termination bridge have intentional exceptions.'
 report['efuse_assembly']=dict(exposed_pad_mm=[2.4,3.1],external_ground_thermal_vias=len(thermal),paste_windows=len(paste),paste_coverage_fraction=coverage)
 # These explicit local paths prevent a future placement change from leaving

@@ -1,24 +1,24 @@
-top 7052 primitives, 219 copper islands
-bottom 3172 primitives, 125 copper islands
-inner_2 2209 primitives, 204 copper islands
-inner_1 292 primitives, 220 copper islands
+top 7284 primitives, 221 copper islands
+bottom 3215 primitives, 126 copper islands
+inner_2 2246 primitives, 206 copper islands
+inner_1 295 primitives, 222 copper islands
 {
   "result": "PASS",
   "method": "Gerbonara1.6.3 plus Shapely2.1.2 copper polygon union and plated-barrel graph",
   "maximum_arc_approximation_error_mm": 0.001,
   "copper_area_mm2": {
-    "top": 2772.8734318876504,
-    "bottom": 2714.50624411739,
-    "inner_2": 3416.770023334577,
-    "inner_1": 3551.4381467001026
+    "top": 2773.438591434482,
+    "bottom": 2716.688701971863,
+    "inner_2": 3413.192864183163,
+    "inner_1": 3549.1619891908845
   },
   "layer_island_counts": {
-    "top": 219,
-    "bottom": 125,
-    "inner_2": 204,
-    "inner_1": 220
+    "top": 221,
+    "bottom": 126,
+    "inner_2": 206,
+    "inner_1": 222
   },
-  "plated_barrels_joined": 291,
+  "plated_barrels_joined": 294,
   "pad_layer_records": 455,
   "identified_nets": 81,
   "shorts": {},
@@ -31,7 +31,7 @@ inner_1 292 primitives, 220 copper islands
   },
   "unassigned_copper_islands": 0,
   "unassigned_copper_area_mm2": 0.0,
-  "elapsed_seconds": 1.557053808006458,
+  "elapsed_seconds": 1.5903328679851256,
   "limitations": "Plated holes represented as connected filled pad centers; no barrel manufacturing defect, annular-ring fracture, impedance, thermal or EMC model. Positive Gerber primitives only."
 }
 {
@@ -119,21 +119,21 @@ inner_1 292 primitives, 220 copper islands
     }
   },
   "minimum_hole_to_hole_web": 0.2851392996543623,
-  "minimum_hole_edge_distance": 0.7950000000000003,
+  "minimum_hole_edge_distance": 0.7950000000000004,
   "sha256": {
-    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "94f99ddbf515bb0e8222da800805d10e9f2235b1eb57ff57797b21e010955003",
-    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "31f983e7251a50e624c89b2ee7a34e0d8232de2d504f94193f52baaee7353880",
-    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "bf2429ce85499e67759cb29793fc1994ac94445a2f608bc59eff8464c9a7297d",
-    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "0aa88fd56d1e7ba2297466f548ddf152ac4f0d9cb239fb4681d94a8e4e35112f",
-    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "2b0d389f5c4b1ee9051b88d4bec0d891e668fbd4291b5ed362ae084e56591e58",
-    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "fe445b59deb30d13b997774f1cdb27bcb93988ce5f014e9c149bb8104663ba7e",
-    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "b7d310167273cca75d90295f52a094a6158ecf76b4e58dd057b728441977178d",
-    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "9f7c7966e7be5e8337c945128d28632bca636e9c1abedecb3f5442bf595a5933",
-    "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": "ce27e5bed4e38b9debc8dafea48ccbd65bcc2e20717425bc6af43a4f0853e0d8",
-    "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": "3206292e39905e0d823ba25dd7c05bd2a9639d2cc0356e72b2eba617ac1e8324",
-    "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": "b2fe3a637a7f12741dcc6a8e173f1ed3138419c1f58e22d3ede8f1b7d5c6f708",
-    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "fcf7f74ffa9c7894d5527d6877d29f5bdb411af987c59117ac04880e5c997bea",
-    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "0c521570529d871189c233cb1a6afd2bd173c98ba3ef1faa63dd1a58fddf254c"
+    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "b2f54e96b536d83676a23bbae7d5bdac9d54eb1bc40dfa6e7abc9710d9d431b8",
+    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "be096d69fa71a4521be18a77cea5d9fac7c0641339aba38f81c148f63effff1c",
+    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "645f07fc5d341f44e81fba91d712988b0da1752c1786ea3962a5f0771af7bcc8",
+    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "8af78746d04c6aea3057db6f2e4d5f675fcb661a50892799de215a063b6d4b28",
+    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "af3a4f03473803e3c9fe84ba63cc3789d2ccfc0703a34e367bab58eebcdf300b",
+    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "c780fc27a3b827f15ddc3f709fbba69c574fe77149fbd2d2941a023b00601c1a",
+    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "c3f538585a2321860ebeb66fcec08602c3e530f555f6ca0883f5690057934820",
+    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "f446fd947890c5a280fba341122638a4845f3adb499818a766d42fdc0cd31156",
+    "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": "537c3699e1fbaf10c7427143c2eab6795d4ce4b3d221beae169d7bdf7dda94d4",
+    "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": "e6ac3e5ca03753b8226b0c04b17ef6b6eef074d97256ea3078c78ec69fd06983",
+    "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": "14ebb88d3ae052240c47546df455393f06e74f8000a0fb25c1382f401d7efbed",
+    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "1af93c6b56aa9f353d0d39799ad53fd6b8f2b5761a258e2b78512ce8a70cb129",
+    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "f9006b59dc2f054091439ca7f55955797d50e427f708bb709a514a93b5da2b56"
   },
   "result": "PASS",
   "limits": "Etch geometry only, with1um arc approximation. Annular rings use filled pad copper and drill center/diameter, not drill wander or plated thickness tolerance. Mask and paste figures do not establish stencil release, registration or assembly yield. Nominal holes and copper are not fabricated measurements."

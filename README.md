@@ -68,4 +68,4 @@ archive/                 Original older release/order ZIPs and checksums
 
 Earlier expanded project copies and unused experiments were removed from the current tree. Historical packages are unchanged, and previous sources remain in Git history. [Contributing and generated-file policy](CONTRIBUTING.md).
 
-The current layout uses a recessed female debug socket, moves the vulnerable bottom/right resistors inward, and adds visible voltage-selector and input/power labels. Board size and top-side assembly are unchanged. See [connector and clearance details](current/docs/CONNECTORS.md).
+The current layout has rounded corners, aligned input-bias transistors, a recessed female debug socket, improved edge clearances and visible voltage-selector/input labels. It remains 52 × 74 mm with top-side assembly. See [connector and layout details](current/docs/CONNECTORS.md).

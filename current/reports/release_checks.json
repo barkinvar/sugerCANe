@@ -18,12 +18,12 @@
     "gerber_connectivity": "PASS",
     "gerber_geometry": "PASS",
     "document_review": "PASS",
-    "visual_review": "Completed; unchanged GUI and converter plot retain prior review"
+    "visual_review": "Completed; unchanged artifacts/pages retain prior review as documented"
   },
   "firmware_application_scenarios": 19,
   "simulated_flash_boundaries": 2148,
   "input_hashes": {
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "cc465d74e312e2a41ae18ab712d0ed15a9f4efd2199a73d0e791ac7011634359",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "68651136e63a4c4b42bba47a822ad40266748e1bf1eeed0289f37709ada14e33",
     "hardware/design/circuit.json": "cf9e272fb1d32b9ad6e04e69c37d37f8c2610410835bd46e6231c3692547903e",
     "firmware/build/factory.hex": "e5f242ee70dd509caa3ee7d51d91d7942c954f1f8dd5c077d57498f5932626e0",
     "firmware/build/application.sc12": "2f213ad1b656ace778778e00540f48fb830398a738cf21e6803af82b43851b39",
@@ -31,126 +31,60 @@
     "reports/firmware-arm-registers.json": "b70874cacb67588d0e06f5b5bf11a4eea07f440b63f39964beffa89fbb76f7be",
     "reports/firmware-tests.log": "8b02bc299d1e27f24e36d32878016dfc57bf04a52d44db37195b5f9a70f6dc3c",
     "reports/design_parity.json": "d79cbd2f9a9dd988ede7c9394aad08e31f1f18c110d687679477102b4768bee5",
-    "reports/board_constraints.json": "9f348e138a10e96664d3b3b57d9709c947fdd98b943fc7549ce1b66ce7f12a71",
-    "reports/variant_verification.json": "f6cf929e4d028e6b70f9ae5985139a815fd0a8e30f4ca15c92a1bc2080c0412e",
+    "reports/board_constraints.json": "c4a58231c4a296b972dac2b7dde1574bf8a7bd9195efa2439ca6a81a247fd8d1",
+    "reports/variant_verification.json": "9c1f87b2c78e513630519f018353acf9f6bd9f62e54ea5ef75d751c71ebffd05",
     "hardware/library/FRC_Sensor_CAN.pretty/LED_SK6805_EC15.kicad_mod": "5c3476324c7f3d50583f46e60bdd0fc7a298496ef5a910fb5958ba4290008a0b",
-    "scripts/check_board_constraints.py": "f10f98f69c268c7e01fe47e2b34325b01926cdd964af31a8189d0e82966c29cd",
-    "reports/manufacturing/board_manifest.json": "187c5ebb9cde61d3857181a32dfa777ed26330195f09ab4af0060c81e840c1e6",
-    "reports/manufacturing/factory_files.json": "ad861aa2de7510f673ad00695abcdc6ceda3f446e0cb095eb2ae6406c69d77af",
-    "reports/manufacturing/gerber_connectivity.json": "065db784193e0bf0135e6786e6761e7752049ea3a4b3a0c976704a385d6479e6",
-    "reports/manufacturing/gerber_geometry.json": "d6a5f9cf58177c7d41de430e39a885d4b16cac8f0e1e49c04001928bc2455793",
-    "reports/electrical/order_readiness.json": "a5cbf545b4018ac84a8fd6e0c4e089691268bce0018ba45f34cc4b77ab6b62be",
+    "scripts/check_board_constraints.py": "8fceb70697f439acda53099b37b7e3df1afa474c680973f959f990efb33b919c",
+    "reports/manufacturing/board_manifest.json": "9226642abaa6f80ccc8bcc2c5d4099bc7e073010cf217cf6dcfed95c7f9a83b6",
+    "reports/manufacturing/factory_files.json": "cd932d3db66704c6d13341d7a7c549f44180a7056a68eba9e5ecb39dc2b78f1b",
+    "reports/manufacturing/gerber_connectivity.json": "059601c8eecd0b6ba6ef140460c85985e3e75d09a2718c930cedb935f9913cac",
+    "reports/manufacturing/gerber_geometry.json": "c8b94c60af1d26d9c817d1c7e3a80e543154d619e235327f9fa6a50bb5cd0557",
+    "reports/electrical/order_readiness.json": "877fe74ad451ac121a49b22dea51ea4296b06048aa0387d7e369c334a328281d",
     "hardware/controller.kicad_sch": "5e5b71d876902f94f22bf7c31ed5fa0d2f4bf344f7072afd3f5b089ff3a67f86",
     "hardware/library/FRC_Sensor_CAN.pretty/Service_2x05_P2.54mm.kicad_mod": "8f9b2a6def02861845a5cfcaaf09170c252789fae2cfcecbcd004680dd53c32c",
     "hardware/library/3d/Service_2x05_P2.54mm.step": "898d214b48f311c3dddac55abcf3a4928149378ea2bf7310c9e1f10bed48b20c",
     "scripts/build_service_model.py": "91caa486dc629be867eb7af8a27ba4458ad461b12375f29dbe4d26767e030a3a",
-    "scripts/finish_markings.py": "98ea69e4ba28438d4b0ecb5466dd0c6673f798864d93dee0b7705aa22b761205",
-    "reports/erc/final.json": "68b9c9b5adec6e6875370a90631e6c2fcb181f1d756b39a260ee3a10784dc29a",
-    "reports/drc/final.json": "43d30f8ad55eb16f30e4d4b6b391dbee15adce8c7b2f6afe2a0953d356846547",
-    "reports/manufacturing/verification.json": "f56853717b8349034e22a98538224bd4f5d5276e48e3677d5089fb595b42224a",
+    "scripts/finish_markings.py": "bb9d98a4e3e97565c11a770dec79ba2aeb24bbf594c1a2de65c1020046ce4a1a",
+    "reports/erc/final.json": "a4737ab5d751603f160d4acb58432008a604c4a5f3de41e2d94d39f4c028180a",
+    "reports/drc/final.json": "77275aebe4ef8e06f0a5d1656face60df92282e4d4b01c9976ce7470833a2e84",
+    "reports/manufacturing/verification.json": "51e6039630c6a53936be39202f5260c62aaa918544e0d28f117c5e3da910ca4e",
     "reports/document_review.json": "6e3a2fd206d1ab44dc232dc9af7d54b5ec8c98828878c829f5aa0ff9a440ad39",
-    "reports/visual_review.json": "1baba88d2af2b40258f5d9fcd17a6289b4d3c89e8ba111b82804f0c0745732eb"
+    "reports/visual_review.json": "fcf14431ab213aa210d33c96d988f9e01824149ee1228a7f63b19b457ae221d8",
+    "scripts/board_outline.py": "0db9c26ec161464637131123cd862d8c9066ed7a8997dd0b6e2235c9f9c7785f",
+    "scripts/check_variant.py": "a4c064c673a044de8029fa1c0e39d8cfad799ccc9cdc53877f49c51ee021f5c1",
+    "scripts/verify_manufacturing.py": "92fd95f19252699299bf0a39e5c22423f80a8e5ed390cee61fe4b4d42d9ec77a",
+    "scripts/verify_gerber_geometry.py": "48497c7bbb2fa2ee688d736a28aab96c5ffeab6ecf3a40b9f82cd39215f72ff2",
+    "scripts/render_gerber_previews.py": "4729eab1cd347b2841c737ba1c1b5b20a31e7a701e3608e3db624684b6c6adba",
+    "scripts/build_documents.py": "dc4dfd9d5c21d04051e4dbb445cd0a514faa2356d4eefbe08b5046d6c8fd4437"
   },
   "spice_result": "INCOMPLETE: coupled startup runs canceled; eight other cases passed",
-  "scope": "Edge-clearance, recessed programming socket and wiring-label CAD/export review. Simulation deferred by user until design finalization; no full power release or physical qualification.",
+  "scope": "R1.5 board corners, input-bias transistor alignment and readable front labels; CAD/export checks only. Circuit, BOM and firmware unchanged. Final simulation deferred by user; no full power release or physical qualification.",
   "layout_change": {
     "result": "PASS",
-    "baseline_commit": "f4de467fd256327cd4beca55338915f698db33fc",
+    "baseline_commit": "ed4b3648fd4117606a7af29862eb1be6aeca9354",
     "moved_components": {
-      "Q201": {
+      "R4": {
         "before": {
           "xy_mm": [
-            20.0,
-            57.45
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            20.0,
-            57.15
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        }
-      },
-      "F1": {
-        "before": {
-          "xy_mm": [
-            5.0,
-            13.5
-          ],
-          "rotation_deg": 0.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            5.5,
-            13.5
-          ],
-          "rotation_deg": 0.0,
-          "side": 0
-        }
-      },
-      "D102": {
-        "before": {
-          "xy_mm": [
-            4.0,
-            54.0
-          ],
-          "rotation_deg": 180.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            4.2,
-            54.0
-          ],
-          "rotation_deg": 180.0,
-          "side": 0
-        }
-      },
-      "R22": {
-        "before": {
-          "xy_mm": [
-            32.0,
-            3.0
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            32.0,
-            3.5
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        }
-      },
-      "R103": {
-        "before": {
-          "xy_mm": [
-            50.5,
+            12.5,
             60.5
           ],
-          "rotation_deg": 90.0,
+          "rotation_deg": 180.0,
           "side": 0
         },
         "after": {
           "xy_mm": [
-            49.25,
-            69.0
+            12.5,
+            61.0
           ],
-          "rotation_deg": 90.0,
+          "rotation_deg": 180.0,
           "side": 0
         }
       },
-      "Q301": {
+      "Q302": {
         "before": {
           "xy_mm": [
-            36.0,
+            44.0,
             57.45
           ],
           "rotation_deg": 90.0,
@@ -158,161 +92,17 @@
         },
         "after": {
           "xy_mm": [
-            36.0,
+            44.0,
             57.15
           ],
           "rotation_deg": 90.0,
           "side": 0
         }
       },
-      "JP301": {
+      "Q202": {
         "before": {
           "xy_mm": [
-            37.0,
-            61.5
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            37.0,
-            60.4
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        }
-      },
-      "R109": {
-        "before": {
-          "xy_mm": [
-            2.5,
-            63.5
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            2.9,
-            65.15
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        }
-      },
-      "R30": {
-        "before": {
-          "xy_mm": [
-            16.399999,
-            7.5
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            20.8,
-            2.4
-          ],
-          "rotation_deg": 0.0,
-          "side": 0
-        }
-      },
-      "R31": {
-        "before": {
-          "xy_mm": [
-            22.7,
-            2.0
-          ],
-          "rotation_deg": 0.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            26.0,
-            2.4
-          ],
-          "rotation_deg": 0.0,
-          "side": 0
-        }
-      },
-      "JP101": {
-        "before": {
-          "xy_mm": [
-            5.0,
-            61.5
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            5.0,
-            60.4
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        }
-      },
-      "JP201": {
-        "before": {
-          "xy_mm": [
-            21.0,
-            61.5
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            21.0,
-            60.4
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        }
-      },
-      "R203": {
-        "before": {
-          "xy_mm": [
-            50.5,
-            51.5
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            49.25,
-            64.5
-          ],
-          "rotation_deg": 90.0,
-          "side": 0
-        }
-      },
-      "R101": {
-        "before": {
-          "xy_mm": [
-            19.0,
-            72.0
-          ],
-          "rotation_deg": -90.0,
-          "side": 0
-        },
-        "after": {
-          "xy_mm": [
-            18.0,
-            71.1
-          ],
-          "rotation_deg": 0.0,
-          "side": 0
-        }
-      },
-      "Q101": {
-        "before": {
-          "xy_mm": [
-            4.0,
+            28.0,
             57.45
           ],
           "rotation_deg": 90.0,
@@ -320,33 +110,35 @@
         },
         "after": {
           "xy_mm": [
-            4.0,
+            28.0,
             57.15
           ],
           "rotation_deg": 90.0,
           "side": 0
         }
       },
-      "R104": {
+      "Q102": {
         "before": {
           "xy_mm": [
-            34.0,
-            71.5
+            12.0,
+            57.45
           ],
-          "rotation_deg": 0.0,
+          "rotation_deg": 90.0,
           "side": 0
         },
         "after": {
           "xy_mm": [
-            34.0,
-            71.32
+            12.0,
+            57.15
           ],
-          "rotation_deg": 0.0,
+          "rotation_deg": 90.0,
           "side": 0
         }
       }
     },
-    "unchanged_tracks_and_vias": 6539,
+    "board_corner_radius_mm": 1.5,
+    "unchanged_BOM": true,
+    "unchanged_tracks_and_vias": 8074,
     "unchanged_critical_nets": [
       "BOOST_12V",
       "BOOST_COMP",
@@ -367,18 +159,17 @@
     "retained_copper_net_identity": true,
     "unchanged_electrical_connections": true,
     "unchanged_firmware": true,
-    "scope": "Component edge clearances, recessed female service socket and visible wiring legends. Sensor-rail distribution and affected low-speed routes updated; switching/feedback/clock/CAN trunk copper retained. Physical qualification remains pending.",
+    "scope": "R1.5 board corners, aligned input-bias transistors, R4 alignment and readable front labels. Local sensor/logic routing updated; switching/feedback/clock/CAN trunk copper retained. No new parts or firmware changes; final simulation deferred.",
     "checks": [
-      "Native ERC/DRC: zero violations and zero unconnected items",
-      "Model/schematic/PCB parity and electrical-connection regression",
-      "Recessed socket footprint/pinout and component edge clearances",
-      "Retained critical power/clock/CAN copper and retained net identity",
-      "SMT placement/BOM/export parity",
-      "Independent four-layer Gerber connectivity and manufacturing geometry",
-      "Updated drawings, renders and documentation visual review"
+      "Zero native ERC/DRC violations and zero unconnected items",
+      "Unchanged circuit, BOM, firmware and critical power/clock/CAN routes",
+      "R1.5 outline and aligned six-transistor row",
+      "Independent four-layer Gerber connectivity and rounded-outline copper clearance",
+      "BOM/placement/drill/model manufacturing parity",
+      "Updated board renders and PDF visual review; unchanged pages compared as rendered images"
     ]
   },
-  "reviewed_utc": "2026-09-09T20:21:24.753584+00:00",
+  "reviewed_utc": "2026-09-09T21:28:24.716091+00:00",
   "simulation_deferred_by_user": true,
   "power_distribution_valid_for_current_layout": false,
   "firmware_evidence": "Previous passing firmware tests retained; sources and programming images unchanged. No firmware tests rerun for this CAD change."

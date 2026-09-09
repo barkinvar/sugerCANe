@@ -30,7 +30,7 @@ def heading(title,sub):
 heading('SC12 - nominal mechanical drawing','Rev H / component-side view / 1:1 at 100% print / dimensions in mm')
 ox,oy=180,660
 def xy(x,y):return ox+x*mm,oy-y*mm
-c.setLineWidth(.6);c.rect(*xy(0,74),52*mm,74*mm)
+c.setLineWidth(.6);c.roundRect(*xy(0,74),52*mm,74*mm,1.5*mm)
 for ref in ['J1','J2','J3','J4','J5','J6']:
  f=fps[ref];n=2 if ref in ['J1','J2','J3'] else 3
  xs=[p['x_mm'] for p in f['pads']];ys=[-p['y_mm'] for p in f['pads']]
@@ -52,7 +52,7 @@ for x in (0,52):
  c.line(*xy(x,0),*xy(x,-9))
 c.line(*xy(0,-7),*xy(52,-7));c.setFont('Helvetica',9);c.drawCentredString(*xy(26,-9),'52.00')
 c.line(*xy(52,0),*xy(61,0));c.line(*xy(52,74),*xy(61,74));c.line(*xy(59,0),*xy(59,74));c.drawString(*xy(61,29),'74.00')
-lines=['PCB: 52 x 74 x 1.6 mm. Four layers, nominal 1 oz copper.',
+lines=['PCB: 52 x 74 x 1.6 mm; corner radius 1.5 mm. Four layers, 1 oz copper.',
  'Mounts: H1 (3.5, 4.0), H2 (48.5, 46.5); diameter 3.2 NPTH.',
  'Keep hardware contact diameter <=6.4 mm; use insulating supports as needed.',
  'Conservative terminal envelope: 52 x 82.1 mm, before wires/button clearance.',

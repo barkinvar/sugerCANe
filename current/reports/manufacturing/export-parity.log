@@ -6,7 +6,8 @@
     52,
     74
   ],
-  "plated_drills": 291,
+  "corner_radius_mm": 1.5,
+  "plated_drills": 294,
   "nonplated_drills": 2,
   "copper_pad_flashes_verified": {
     "top": 406,

@@ -32,3 +32,9 @@ The bottom resistor R101 now lies horizontally between the first two sensor term
 The board remains 52 × 74 mm, with all components on top. Keep an insulating enclosure around the board and underside solder tails. The recessed debug contacts reduce accidental bridging from above; the socket is unkeyed and is not sealed against metal debris. Remove the programming cable for robot use.
 
 The power headers moved 1.1 mm toward the center to expose their voltage labels. The specified [Sullins SPN02SVEN-RC cap](https://s3.amazonaws.com/catalogspreads-pdf/PAGE127%202mm%20JUMPER.pdf) has a nominal 4 × 2 mm footprint; both fitted positions leave the labels below it exposed. Front legends identify VIN, CAN H/L, termination, DEBUG, each 5V/12V selection, and V1/V2/V3, GND and IN1/IN2/IN3 at the sensor terminals. The back repeats the full connection and custom debug map. Select voltages with power off; fit one cap per header.
+
+## Layout refinement
+
+The outline now has **1.5 mm corner radii**, within the same 52 × 74 mm dimensions. Mounting-hole centers, connector positions, service socket and the LED duct space stay fixed. All six input-bias transistors share the same Y=57.15 mm row; R4 aligns with the neighboring support parts. Native DRC and the independent Gerber check use the rounded contour, including copper-to-edge clearance around the corners.
+
+[LaserCAN's board](https://github.com/GrappleRobotics/LaserCAN/tree/5f444a38242da367e60176aecb3b1c7f20c92063/LaserCAN-Board) informed the rounded outline and consistent grouping. Its approximately 25 × 25 mm board places components on both sides and uses a different connector and sensor arrangement. SC12 retains top-side assembly, hand-solderable terminals, three external input circuits and two protected sensor supplies. The refinement changes no purchased parts or functions; it does not claim a lower factory quote. No LaserCAN circuit or library files were copied into the design.

@@ -9,7 +9,9 @@ from matplotlib.patches import PathPatch,Circle
 from matplotlib.backends.backend_pdf import PdfPages
 from shapely.geometry.polygon import orient
 import verify_gerber_connectivity as g
+from board_outline import verified_outline
 ROOT=Path(__file__).resolve().parents[1]
+outline=verified_outline(g.stack.outline.instance.objects, g.ERROR)
 def patch(poly):
     poly=orient(poly,sign=1);vertices=[];codes=[]
     for ring in [poly.exterior,*poly.interiors]:
@@ -19,7 +21,8 @@ def patch(poly):
 with PdfPages(ROOT/'output/assembly/gerber_copper_review.pdf') as pdf:
     for side in ['top','bottom']:
         fig,ax=plt.subplots(figsize=(8,8.7));fig.patch.set_facecolor('white')
-        ax.set_facecolor('#f6f3e8');ax.set_aspect('equal')
+        ax.set_facecolor('white');ax.set_aspect('equal')
+        contour=patch(outline);contour.set_facecolor('#f6f3e8');contour.set_edgecolor('#594b3d');contour.set_linewidth(.5);ax.add_patch(contour)
         for poly in g.islands[side]:ax.add_patch(patch(poly))
         for d in g.drills+list(g.stack.drill_npth.instance.objects):
             ax.add_patch(Circle((d.x,d.y),d.aperture.diameter/2,facecolor='white',edgecolor='#594b3d',linewidth=.12))

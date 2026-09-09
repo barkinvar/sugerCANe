@@ -1,9 +1,9 @@
 {
   "method": "Independent Gerbonara/Shapely geometry with actual drill overlays; bottom mirrored for underside view",
   "sha256": {
-    "FRC_Sensor_CAN-B_Cu.gbl": "94f99ddbf515bb0e8222da800805d10e9f2235b1eb57ff57797b21e010955003",
-    "FRC_Sensor_CAN-F_Cu.gtl": "fe445b59deb30d13b997774f1cdb27bcb93988ce5f014e9c149bb8104663ba7e",
-    "FRC_Sensor_CAN-NPTH.drl": "fcf7f74ffa9c7894d5527d6877d29f5bdb411af987c59117ac04880e5c997bea",
-    "FRC_Sensor_CAN-PTH.drl": "0c521570529d871189c233cb1a6afd2bd173c98ba3ef1faa63dd1a58fddf254c"
+    "FRC_Sensor_CAN-B_Cu.gbl": "b2f54e96b536d83676a23bbae7d5bdac9d54eb1bc40dfa6e7abc9710d9d431b8",
+    "FRC_Sensor_CAN-F_Cu.gtl": "c780fc27a3b827f15ddc3f709fbba69c574fe77149fbd2d2941a023b00601c1a",
+    "FRC_Sensor_CAN-NPTH.drl": "1af93c6b56aa9f353d0d39799ad53fd6b8f2b5761a258e2b78512ce8a70cb129",
+    "FRC_Sensor_CAN-PTH.drl": "f9006b59dc2f054091439ca7f55955797d50e427f708bb709a514a93b5da2b56"
   }
 }

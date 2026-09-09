@@ -8,6 +8,6 @@
   "estimated_smt_joints_per_board": 354,
   "position_origin": "PCB lower-left, X right / Y up, mm; native footprint rotation counterclockwise. Factory must reconcile part-library pin 1.",
   "matched_to": "Native manifest and model/BOM exact reference sets",
-  "sha256": "6aade0f82d78e90ad0deccc1206da4307e9c6a61120dab1bbf43c9ca2b7d81ed",
+  "sha256": "faff9a8477f2f79eb601effea500a8eaf37dd6f02ebab33591ff9f4e656fbb0e",
   "factory_part_allocation_confirmed": false
 }
