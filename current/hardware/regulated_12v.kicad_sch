@@ -1,5 +1,5 @@
 (kicad_sch (version 20250114) (generator "eeschema") (uuid "9b528c7f-862b-59fa-910f-14edc5fc7bba") (paper "A3")
-(title_block (title "SC12 - Internal 5 V to 12 V converter") (date "2026-09-09") (rev "G") (company "Original sensor interface design") (comment 1 "Prototype: bench validation required before robot use"))
+(title_block (title "SC12 - Internal 5 V to 12 V converter") (date "2026-09-09") (rev "H") (company "Original sensor interface design") (comment 1 "Prototype: bench validation required before robot use"))
 (lib_symbols
 (symbol "FRC_Sensor_CAN:BOOST12" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
 (property "Reference" "U" (at 0 10 0) (effects (font (size 1.27 1.27))))

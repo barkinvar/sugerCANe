@@ -52,6 +52,7 @@ class Service(unittest.TestCase):
     def test_discovery_blank_duplicate_ids_and_targeting(self):
         found=self.client.discover();self.assertEqual({x['uid'] for x in found},{u.hex() for u in self.uids})
         self.assertTrue(all(not x['configured'] for x in found))
+        self.assertTrue(all(x['version']=='1.1.0' for x in found))
         for node in self.bus.nodes:
             # Each targeted change is followed by the real C reset callback.
             self.client.select(self.uids[self.bus.nodes.index(node)]);self.client.request(SAVE,17|(2<<16));self.bus.lib.sim_tick(node,60);self.client.open()
@@ -62,7 +63,10 @@ class Service(unittest.TestCase):
     def test_update_retries_and_running_version(self):
         self.bus.drops={DATA:3,FINISH:2};self.bus.duplicates={DATA,OFFSET,BEGIN}
         info=self.client.update(self.uids[0],pack(image()))
-        self.assertEqual(info['mode'],'application');self.assertEqual(info['version'],'0.8.0')
+        self.assertEqual(info['mode'],'application');self.assertEqual(info['version'],'0.9.0')
+        self.client.open();self.client.select(self.uids[0])
+        flags=self.client.request(INFO,0)
+        self.assertEqual((flags>>16)&255,9);self.assertEqual(flags>>24,8)
         self.assertTrue(all(self.bus.lib.sim_valid(n) for n in self.bus.nodes))
         self.assertEqual([self.bus.lib.sim_writes(n) for n in self.bus.nodes[1:]],[0,0])
     def test_bounds_protection_offsets_and_crc(self):

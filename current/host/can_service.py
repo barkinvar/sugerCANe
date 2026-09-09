@@ -116,7 +116,7 @@ class Client:
         self.uid=uid
     def info(self):
         flags=self.request(INFO,0);cfg=self.request(INFO,1);version=self.request(INFO,2)
-        if flags&255!=1 or flags>>24!=7:raise RuntimeError('Unsupported service/hardware version')
+        if flags&255!=1 or flags>>24!=8:raise RuntimeError('Unsupported service/hardware version')
         word=self.request(INFO,9)
         rail_mv=self.request(INFO,10) if not flags&256 else 0
         rail_state=self.request(INFO,11) if not flags&256 else 0

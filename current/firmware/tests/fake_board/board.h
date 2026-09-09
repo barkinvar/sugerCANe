@@ -3,6 +3,7 @@
 /* Host boundary model for testing the real main.c scheduler and protocol.
  * This is not an STM32 peripheral emulator. Register code is built separately. */
 #include "sensor_core.h"
+#include "status.h"
 #include <stdint.h>
 typedef struct {
     volatile uint32_t IDR;
@@ -47,7 +48,10 @@ bool board_can_send(uint32_t id, const uint8_t data[8]);
 bool board_can_receive(uint32_t *id, uint8_t data[8], uint8_t *len);
 void board_can_standby(bool value);
 void board_can_abort(void);
-void board_status_led(bool on);
+void board_status_init(void);
+void board_status_stop(void);
+void board_status_led(uint32_t rgb);
+bool board_can_link_ok(uint32_t now);
 bool board_config_store(sc_config_record *record);
 const sc_config_record *board_config_load(void);
 void board_safe_off(void);

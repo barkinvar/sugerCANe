@@ -2,13 +2,13 @@
 <export version="E">
   <design>
     <source>/home/neuro/candi-clone/current/hardware/FRC_Sensor_CAN.kicad_sch</source>
-    <date>2026-09-09T03:49:56</date>
+    <date>2026-09-09T12:03:13</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>FRC Sensor CAN</title>
         <company/>
-        <rev>G</rev>
+        <rev>H</rev>
         <date>2026-09-09</date>
         <source>FRC_Sensor_CAN.kicad_sch</source>
         <comment number="1" value="Original design - custom WPILib CAN protocol"/>
@@ -26,7 +26,7 @@
       <title_block>
         <title>SC12 - Battery entry and internal supplies</title>
         <company>Original sensor interface design</company>
-        <rev>G</rev>
+        <rev>H</rev>
         <date>2026-09-09</date>
         <source>power.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
@@ -44,7 +44,7 @@
       <title_block>
         <title>SC12 - Internal 5 V to 12 V converter</title>
         <company>Original sensor interface design</company>
-        <rev>G</rev>
+        <rev>H</rev>
         <date>2026-09-09</date>
         <source>regulated_12v.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
@@ -62,7 +62,7 @@
       <title_block>
         <title>SC12 - Protected sensor power rails</title>
         <company>Original sensor interface design</company>
-        <rev>G</rev>
+        <rev>H</rev>
         <date>2026-09-09</date>
         <source>sensor_power.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
@@ -80,7 +80,7 @@
       <title_block>
         <title>SC12 - Sensor supply voltage measurements</title>
         <company>Original sensor interface design</company>
-        <rev>G</rev>
+        <rev>H</rev>
         <date>2026-09-09</date>
         <source>rail_sense.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
@@ -98,7 +98,7 @@
       <title_block>
         <title>SC12 - Controller, clock, debug and status</title>
         <company>Original sensor interface design</company>
-        <rev>G</rev>
+        <rev>H</rev>
         <date>2026-09-09</date>
         <source>controller.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
@@ -116,7 +116,7 @@
       <title_block>
         <title>SC12 - CAN physical interface and termination</title>
         <company>Original sensor interface design</company>
-        <rev>G</rev>
+        <rev>H</rev>
         <date>2026-09-09</date>
         <source>can.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
@@ -134,7 +134,7 @@
       <title_block>
         <title>SC12 - Input 1: fixed-threshold digital input</title>
         <company>Original sensor interface design</company>
-        <rev>G</rev>
+        <rev>H</rev>
         <date>2026-09-09</date>
         <source>input1.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
@@ -152,7 +152,7 @@
       <title_block>
         <title>SC12 - Input 2: fixed-threshold digital input</title>
         <company>Original sensor interface design</company>
-        <rev>G</rev>
+        <rev>H</rev>
         <date>2026-09-09</date>
         <source>input2.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
@@ -170,7 +170,7 @@
       <title_block>
         <title>SC12 - Input 3: fixed-threshold digital input</title>
         <company>Original sensor interface design</company>
-        <rev>G</rev>
+        <rev>H</rev>
         <date>2026-09-09</date>
         <source>input3.kicad_sch</source>
         <comment number="1" value="Prototype: bench validation required before robot use"/>
@@ -2069,21 +2069,20 @@
       </units>
     </comp>
     <comp ref="J8">
-      <value>POGO SERVICE</value>
-      <footprint>FRC_Sensor_CAN:Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical</footprint>
+      <value>2x5 SERVICE 2.54mm</value>
+      <footprint>FRC_Sensor_CAN:Service_2x05_P2.54mm</footprint>
       <fields>
-        <field name="MPN"/>
-        <field name="Notes">Standard TC2050-IDC-NL mechanical footprint; CUSTOM electrical pinout. Cable pin6 VTref output only. Follow adapter wiring table.</field>
-        <field name="Footprint">FRC_Sensor_CAN:Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical</field>
+        <field name="MPN">PZ254V-12-10P</field>
+        <field name="Notes">Hand-solder 2x5 2.54mm header. CUSTOM pinout; see wiring drawing. Pin6 is target VTref sense only, never power from probe. 1.10mm finished holes.</field>
+        <field name="Footprint">FRC_Sensor_CAN:Service_2x05_P2.54mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="CONN10" description=""/>
-      <property name="MPN" value=""/>
-      <property name="Notes" value="Standard TC2050-IDC-NL mechanical footprint; CUSTOM electrical pinout. Cable pin6 VTref output only. Follow adapter wiring table."/>
+      <property name="MPN" value="PZ254V-12-10P"/>
+      <property name="Notes" value="Hand-solder 2x5 2.54mm header. CUSTOM pinout; see wiring drawing. Pin6 is target VTref sense only, never power from probe. 1.10mm finished holes."/>
       <property name="Sheetname" value="Controller, clock, debug and status"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
-      <property name="exclude_from_bom"/>
       <sheetpath names="/Controller, clock, debug and status/" tstamps="/019a6503-7c65-5b55-a3b1-c6260b8ca8f2/"/>
       <tstamps>0d21a0cd-2225-5250-9cea-71d21474865b</tstamps>
       <units>
@@ -2317,19 +2316,71 @@
         </unit>
       </units>
     </comp>
-    <comp ref="D10">
-      <value>GREEN</value>
-      <footprint>FRC_Sensor_CAN:LED_0805_2012Metric</footprint>
+    <comp ref="C74">
+      <value>100nF</value>
+      <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
       <fields>
-        <field name="MPN">LTST-C170KGKT</field>
-        <field name="Notes"/>
-        <field name="Footprint">FRC_Sensor_CAN:LED_0805_2012Metric</field>
+        <field name="MPN">CL21B104KCFNNNE</field>
+        <field name="Notes">Local 100nF bypass for U10 level buffer.</field>
+        <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="FRC_Sensor_CAN" part="LED" description=""/>
-      <property name="MPN" value="LTST-C170KGKT"/>
-      <property name="Notes" value=""/>
+      <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
+      <property name="MPN" value="CL21B104KCFNNNE"/>
+      <property name="Notes" value="Local 100nF bypass for U10 level buffer."/>
+      <property name="Sheetname" value="CAN physical interface and termination"/>
+      <property name="Sheetfile" value="can.kicad_sch"/>
+      <sheetpath names="/CAN physical interface and termination/" tstamps="/665b1307-6e60-5756-a0db-e1fad53bf5c9/"/>
+      <tstamps>dd2cce09-2370-5140-bf8a-3c8a2318cf96</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C75">
+      <value>100nF</value>
+      <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">CL21B104KCFNNNE</field>
+        <field name="Notes">Local 100nF bypass for D10 addressable RGB LED.</field>
+        <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
+      <property name="MPN" value="CL21B104KCFNNNE"/>
+      <property name="Notes" value="Local 100nF bypass for D10 addressable RGB LED."/>
+      <property name="Sheetname" value="CAN physical interface and termination"/>
+      <property name="Sheetfile" value="can.kicad_sch"/>
+      <sheetpath names="/CAN physical interface and termination/" tstamps="/665b1307-6e60-5756-a0db-e1fad53bf5c9/"/>
+      <tstamps>bc8a30a0-a686-5cd8-a3c2-290f207fb726</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D10">
+      <value>SK6805-EC15</value>
+      <footprint>FRC_Sensor_CAN:LED_SK6805_EC15</footprint>
+      <fields>
+        <field name="MPN">SK6805-EC15</field>
+        <field name="Notes">Single addressable RGB indicator; internal 5V, independent of protected sensor rails. OPSCO A/1 pinout and GRB data. No generic WS2812 substitution; future light pipe clearance above D10.</field>
+        <field name="Footprint">FRC_Sensor_CAN:LED_SK6805_EC15</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="RGB_LED" description=""/>
+      <property name="MPN" value="SK6805-EC15"/>
+      <property name="Notes" value="Single addressable RGB indicator; internal 5V, independent of protected sensor rails. OPSCO A/1 pinout and GRB data. No generic WS2812 substitution; future light pipe clearance above D10."/>
       <property name="Sheetname" value="CAN physical interface and termination"/>
       <property name="Sheetfile" value="can.kicad_sch"/>
       <sheetpath names="/CAN physical interface and termination/" tstamps="/665b1307-6e60-5756-a0db-e1fad53bf5c9/"/>
@@ -2337,8 +2388,10 @@
       <units>
         <unit name="A">
           <pins>
-            <pin num="2"/>
             <pin num="1"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="3"/>
           </pins>
         </unit>
       </units>
@@ -2450,22 +2503,48 @@
       </units>
     </comp>
     <comp ref="R30">
-      <value>1k</value>
+      <value>330</value>
       <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
       <fields>
-        <field name="MPN">0805W8F1001T5E</field>
-        <field name="Notes"/>
+        <field name="MPN">0805W8F3300T5E</field>
+        <field name="Notes">330 ohm LED data series resistor; short local route after level buffer.</field>
         <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
-      <property name="MPN" value="0805W8F1001T5E"/>
-      <property name="Notes" value=""/>
+      <property name="MPN" value="0805W8F3300T5E"/>
+      <property name="Notes" value="330 ohm LED data series resistor; short local route after level buffer."/>
       <property name="Sheetname" value="CAN physical interface and termination"/>
       <property name="Sheetfile" value="can.kicad_sch"/>
       <sheetpath names="/CAN physical interface and termination/" tstamps="/665b1307-6e60-5756-a0db-e1fad53bf5c9/"/>
       <tstamps>eeff8497-fb22-5599-b574-1bcc8f34a3c3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R31">
+      <value>10k</value>
+      <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">0805W8F1002T5E</field>
+        <field name="Notes">10k holds RGB data LOW during MCU reset or loss of 3.3V.</field>
+        <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
+      <property name="MPN" value="0805W8F1002T5E"/>
+      <property name="Notes" value="10k holds RGB data LOW during MCU reset or loss of 3.3V."/>
+      <property name="Sheetname" value="CAN physical interface and termination"/>
+      <property name="Sheetfile" value="can.kicad_sch"/>
+      <sheetpath names="/CAN physical interface and termination/" tstamps="/665b1307-6e60-5756-a0db-e1fad53bf5c9/"/>
+      <tstamps>51dca9fd-431e-5291-8e4f-434299afc337</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2581,6 +2660,35 @@
             <pin num="5"/>
             <pin num="7"/>
             <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U10">
+      <value>SN74AHCT1G125</value>
+      <footprint>FRC_Sensor_CAN:SOT-23-5</footprint>
+      <fields>
+        <field name="MPN">SN74AHCT1G125DBVR</field>
+        <field name="Notes">5V AHCT buffer accepts 3.3V MCU data. OE_N grounded. R31 holds input LOW while MCU reset; LED is a software indicator, not an independent power-good signal.</field>
+        <field name="Footprint">FRC_Sensor_CAN:SOT-23-5</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="FRC_Sensor_CAN" part="LED_BUFFER" description=""/>
+      <property name="MPN" value="SN74AHCT1G125DBVR"/>
+      <property name="Notes" value="5V AHCT buffer accepts 3.3V MCU data. OE_N grounded. R31 holds input LOW while MCU reset; LED is a software indicator, not an independent power-good signal."/>
+      <property name="Sheetname" value="CAN physical interface and termination"/>
+      <property name="Sheetfile" value="can.kicad_sch"/>
+      <sheetpath names="/CAN physical interface and termination/" tstamps="/665b1307-6e60-5756-a0db-e1fad53bf5c9/"/>
+      <tstamps>15a7280a-fa2a-5f71-9de1-f3f68adec2b9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="4"/>
           </pins>
         </unit>
       </units>
@@ -4129,17 +4237,20 @@
         <pin num="5" name="VOUT" type="power_out"/>
       </pins>
     </libpart>
-    <libpart lib="FRC_Sensor_CAN" part="LED">
+    <libpart lib="FRC_Sensor_CAN" part="LED_BUFFER">
       <fields>
-        <field name="Reference">L</field>
-        <field name="Value">LED</field>
+        <field name="Reference">U</field>
+        <field name="Value">LED_BUFFER</field>
         <field name="Footprint"/>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="K" type="passive"/>
-        <pin num="2" name="A" type="passive"/>
+        <pin num="1" name="OE_N" type="input"/>
+        <pin num="2" name="A" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="Y" type="output"/>
+        <pin num="5" name="VCC" type="power_in"/>
       </pins>
     </libpart>
     <libpart lib="FRC_Sensor_CAN" part="LOADSW">
@@ -4260,6 +4371,21 @@
       <pins>
         <pin num="1" name="" type="passive"/>
         <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="FRC_Sensor_CAN" part="RGB_LED">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">RGB_LED</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="DIN" type="input"/>
+        <pin num="2" name="VDD" type="power_in"/>
+        <pin num="3" name="DOUT" type="output"/>
+        <pin num="4" name="GND" type="power_in"/>
       </pins>
     </libpart>
     <libpart lib="FRC_Sensor_CAN" part="SEL2">
@@ -4606,8 +4732,10 @@
       <node ref="C71" pin="2" pintype="passive"/>
       <node ref="C72" pin="2" pintype="passive"/>
       <node ref="C73" pin="2" pintype="passive"/>
+      <node ref="C74" pin="2" pintype="passive"/>
+      <node ref="C75" pin="2" pintype="passive"/>
       <node ref="C8" pin="2" pintype="passive"/>
-      <node ref="D10" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D10" pin="4" pinfunction="GND_4" pintype="power_in"/>
       <node ref="D101" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D2" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D20" pin="3" pinfunction="GND_3" pintype="passive"/>
@@ -4636,6 +4764,7 @@
       <node ref="R22" pin="2" pintype="passive"/>
       <node ref="R3" pin="2" pintype="passive"/>
       <node ref="R303" pin="2" pintype="passive"/>
+      <node ref="R31" pin="2" pintype="passive"/>
       <node ref="R312" pin="1" pintype="passive"/>
       <node ref="R4" pin="2" pintype="passive"/>
       <node ref="R51" pin="2" pintype="passive"/>
@@ -4649,6 +4778,8 @@
       <node ref="R75" pin="2" pintype="passive"/>
       <node ref="TP1" pin="1" pintype="passive"/>
       <node ref="U1" pin="1" pinfunction="GND_1" pintype="power_in"/>
+      <node ref="U10" pin="1" pinfunction="OE_N_1" pintype="input"/>
+      <node ref="U10" pin="3" pinfunction="GND_3" pintype="power_in"/>
       <node ref="U2" pin="2" pinfunction="GND_2" pintype="power_in"/>
       <node ref="U4" pin="2" pinfunction="GND_2" pintype="power_in"/>
       <node ref="U5" pin="16" pinfunction="VSS_16" pintype="power_in"/>
@@ -4782,35 +4913,40 @@
       <node ref="R309" pin="1" pintype="passive"/>
       <node ref="R310" pin="2" pintype="passive"/>
     </net>
-    <net code="63" name="STATUS_GREEN" class="Default">
+    <net code="63" name="STATUS_5V_DATA" class="Default">
       <node ref="R30" pin="1" pintype="passive"/>
+      <node ref="U10" pin="4" pinfunction="Y_4" pintype="output"/>
+    </net>
+    <net code="64" name="STATUS_DATA" class="Default">
+      <node ref="R31" pin="1" pintype="passive"/>
+      <node ref="U10" pin="2" pinfunction="A_2" pintype="input"/>
       <node ref="U5" pin="26" pinfunction="PB3/STATUS_26" pintype="output"/>
     </net>
-    <net code="64" name="STATUS_GREEN_A" class="Default">
-      <node ref="D10" pin="2" pinfunction="A_2" pintype="passive"/>
+    <net code="65" name="STATUS_DIN" class="Default">
+      <node ref="D10" pin="1" pinfunction="DIN_1" pintype="input"/>
       <node ref="R30" pin="2" pintype="passive"/>
     </net>
-    <net code="65" name="SWCLK" class="Default">
+    <net code="66" name="SWCLK" class="Default">
       <node ref="J8" pin="4" pinfunction="4_4" pintype="passive"/>
       <node ref="U5" pin="24" pinfunction="PA14/SWCLK_24" pintype="input"/>
     </net>
-    <net code="66" name="SWDIO" class="Default">
+    <net code="67" name="SWDIO" class="Default">
       <node ref="J8" pin="5" pinfunction="5_5" pintype="passive"/>
       <node ref="U5" pin="23" pinfunction="PA13/SWDIO_23" pintype="bidirectional"/>
     </net>
-    <net code="67" name="UART_RX" class="Default">
+    <net code="68" name="UART_RX" class="Default">
       <node ref="J8" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="U5" pin="20" pinfunction="PA10/UART_RX_20" pintype="input"/>
     </net>
-    <net code="68" name="UART_TX" class="Default">
+    <net code="69" name="UART_TX" class="Default">
       <node ref="J8" pin="3" pinfunction="3_3" pintype="passive"/>
       <node ref="U5" pin="19" pinfunction="PA9/UART_TX_19" pintype="output"/>
     </net>
-    <net code="69" name="V5_ILIM" class="Default">
+    <net code="70" name="V5_ILIM" class="Default">
       <node ref="R10" pin="1" pintype="passive"/>
       <node ref="U4" pin="5" pinfunction="ILIM_5" pintype="passive"/>
     </net>
-    <net code="70" name="V5_INTERNAL" class="Power,Default">
+    <net code="71" name="V5_INTERNAL" class="Power,Default">
       <node ref="C11" pin="1" pintype="passive"/>
       <node ref="C13" pin="1" pintype="passive"/>
       <node ref="C4" pin="1" pintype="passive"/>
@@ -4818,9 +4954,13 @@
       <node ref="C60" pin="1" pintype="passive"/>
       <node ref="C61" pin="1" pintype="passive"/>
       <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="C74" pin="1" pintype="passive"/>
+      <node ref="C75" pin="1" pintype="passive"/>
+      <node ref="D10" pin="2" pinfunction="VDD_2" pintype="power_in"/>
       <node ref="L1" pin="2" pintype="passive"/>
       <node ref="L2" pin="1" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="U10" pin="5" pinfunction="VCC_5" pintype="power_in"/>
       <node ref="U2" pin="1" pinfunction="VIN_1" pintype="power_in"/>
       <node ref="U2" pin="3" pinfunction="EN_3" pintype="input"/>
       <node ref="U4" pin="1" pinfunction="IN_1" pintype="power_in"/>
@@ -4828,14 +4968,14 @@
       <node ref="U8" pin="6" pinfunction="IN_6" pintype="power_in"/>
       <node ref="U8" pin="7" pinfunction="FREQ_7" pintype="input"/>
     </net>
-    <net code="71" name="VIN_FUSED" class="Power,Default">
+    <net code="72" name="VIN_FUSED" class="Power,Default">
       <node ref="F1" pin="2" pintype="passive"/>
       <node ref="Q1" pin="5" pinfunction="D_5" pintype="passive"/>
       <node ref="Q1" pin="6" pinfunction="D_6" pintype="passive"/>
       <node ref="Q1" pin="7" pinfunction="D_7" pintype="passive"/>
       <node ref="Q1" pin="8" pinfunction="D_8" pintype="passive"/>
     </net>
-    <net code="72" name="VIN_PROT" class="Power,Default">
+    <net code="73" name="VIN_PROT" class="Power,Default">
       <node ref="C1" pin="1" pinfunction="+__1" pintype="passive"/>
       <node ref="C2" pin="1" pintype="passive"/>
       <node ref="C3" pin="1" pintype="passive"/>
@@ -4847,29 +4987,32 @@
       <node ref="U1" pin="3" pinfunction="VIN_3" pintype="power_in"/>
       <node ref="U1" pin="5" pinfunction="EN_5" pintype="input"/>
     </net>
-    <net code="73" name="VIN_RAW" class="Power,Default">
+    <net code="74" name="VIN_RAW" class="Power,Default">
       <node ref="F1" pin="1" pintype="passive"/>
       <node ref="J1" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="74" name="VPORT1" class="Power,Default">
+    <net code="75" name="VPORT1" class="Power,Default">
       <node ref="J4" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="JP101" pin="2" pintype="passive"/>
     </net>
-    <net code="75" name="VPORT2" class="Power,Default">
+    <net code="76" name="VPORT2" class="Power,Default">
       <node ref="J5" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="JP201" pin="2" pintype="passive"/>
     </net>
-    <net code="76" name="VPORT3" class="Power,Default">
+    <net code="77" name="VPORT3" class="Power,Default">
       <node ref="J6" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="JP301" pin="2" pintype="passive"/>
     </net>
-    <net code="77" name="unconnected-(U2-NC-Pad4)" class="Default">
+    <net code="78" name="unconnected-(D10-DOUT-Pad3)" class="Default">
+      <node ref="D10" pin="3" pinfunction="DOUT_3" pintype="output+no_connect"/>
+    </net>
+    <net code="79" name="unconnected-(U2-NC-Pad4)" class="Default">
       <node ref="U2" pin="4" pinfunction="NC_4" pintype="no_connect"/>
     </net>
-    <net code="78" name="unconnected-(U7D-OUT-Pad13)" class="Default">
+    <net code="80" name="unconnected-(U7D-OUT-Pad13)" class="Default">
       <node ref="U7" pin="13" pinfunction="OUT_13" pintype="open_collector+no_connect"/>
     </net>
-    <net code="79" name="unconnected-(U9-OVCSEL/OPEN-Pad8)" class="Default">
+    <net code="81" name="unconnected-(U9-OVCSEL/OPEN-Pad8)" class="Default">
       <node ref="U9" pin="8" pinfunction="OVCSEL/OPEN_8" pintype="passive+no_connect"/>
     </net>
   </nets>

@@ -2,11 +2,13 @@
 
 A compact interface for **three NPN, PNP or logic sensors** on an FRC robot. Each port has a removable **5 V / 12 V power jumper**; input type is configured in software. CAN provides sensor readings, device-ID changes and recoverable firmware updates.
 
-**Start with [Rev G in `current/`](current/README.md).** It is an unbuilt engineering prototype, with [physical qualification still pending](current/docs/VALIDATION.md). It uses its own protocol and drivers; it is not compatible with CTRE Phoenix or GrappleHook.
+**Start with [Rev H in `current/`](current/README.md).** It is an unbuilt engineering prototype, with [physical qualification still pending](current/docs/VALIDATION.md). It uses its own protocol and drivers; it is not compatible with CTRE Phoenix or GrappleHook.
 
-Rev G revises the power circuit to address Rev F's startup and short-circuit findings. It adds an output eFuse, CAN-controlled fault reset and measurement of both sensor rails. See [the engineering review](current/docs/ORDER_READINESS.md) for the evidence and remaining physical tests.
+Rev H adds one RGB status LED near the top edge and an ordinary programming header for small batches. It retains G's protected sensor supplies, CAN fault reset and rail measurements. See [the engineering review](current/docs/ORDER_READINESS.md) for the evidence and remaining physical tests.
 
-![SC12 Rev G](current/output/review/board_3d_final.png)
+RGB/header checks pass. The optional full power rerun was stopped before completion; [current check scope](current/reports/release_checks.json) is explicit.
+
+![SC12 Rev H](current/output/review/board_3d_final.png)
 
 | Current design | Detail |
 |---|---|
@@ -14,11 +16,11 @@ Rev G revises the power circuit to address Rev F's startup and short-circuit fin
 | Sensor power | Regulated 5 V / 12 V; 300 mA shared per rail |
 | Signals | Positive 0–30 V targets; NPN / PNP / push-pull / floating detection / keeper |
 | Size and assembly | 52 × 74 mm, four copper layers; **all components on top** |
-| User assembly | Six terminals, three headers and three removable caps |
-| Parts estimate | **$28.81 per board at 10 boards**; $53.23 for one board, including minimum packs |
+| User assembly | Six terminals, three voltage headers, one service header and three removable caps |
+| Parts estimate | **$28.94 per board at 10 boards**; $55.28 for one board, including minimum packs |
 | Cost exclusions | PCB, assembly, freight, tax and testing; no factory quotation yet |
 
-The revised protection adds about **$1.64 per board at ten boards** compared with F, while retaining about **$6.32** of the savings against E. [Cost basis](current/docs/COST_REDUCTION.md).
+RGB diagnostics and ordinary-header programming add approximately **$0.13 per board in parts at ten boards** versus G. Assembly and the reusable programmer are separate. [Cost basis](current/docs/COST_REDUCTION.md).
 
 ## Find what you need
 
@@ -26,10 +28,11 @@ The revised protection adds about **$1.64 per board at ten boards** compared wit
 |---|---|
 | Connect and configure sensors | [Wiring](current/docs/WIRING.md) · [input modes](current/docs/INPUT_MODES.md) |
 | Understand the power circuit | [Circuit explanation](current/DESIGN_PLAN.md) · [schematic PDF](current/output/assembly/schematic.pdf) |
-| Assemble or request a quote | [Factory instructions](current/docs/FACTORY_ORDER.md) · [factory packet](current/order/RevG_SC12_Factory_Upload.zip) |
+| Assemble or request a quote | [Factory instructions](current/docs/FACTORY_ORDER.md) · [package status](current/order/README.md) |
+| Read LED / choose a programmer | [Status and programming](current/docs/STATUS_AND_PROGRAMMING.md) |
 | Program or update over CAN | [CAN service](current/docs/CAN_SERVICE.md) · [robot drivers](current/examples/README.md) |
 | Review CAD and tests | [Current design](current/README.md) · [power simulations](current/docs/VALIDATION.md#manufacturer-model-transient-screen) · [validation summary](current/reports/release_checks.json) |
-| Download the full design | [Rev G source/review ZIP](current/release/FRC_Sensor_CAN_RevG_SC12_Prototype.zip) |
+| Download the full design | [Rev H source/release status](current/release/README.md) |
 
 ## Why the revisions differ
 
@@ -43,22 +46,23 @@ The revised protection adds about **$1.64 per board at ten boards** compared wit
 | D2 SC12 | Lower-cost assembly and CAN servicing | Hand-fitted terminals, removable voltage jumpers, CAN setup/update |
 | E SC12 | Mixed sensor types without bias solder settings | Software NPN/PNP/push-pull/float/keeper; 52 × 70 mm |
 | F SC12 | Keep E's features at lower cost | Input-protected boost, cheaper passives; startup/short findings remain in the archive |
-| **G SC12 — current** | **Resolve the power-path findings and enable CAN recovery** | **Output eFuse, controlled inrush, rail ADCs, default-off enables; 52 × 74 mm** |
+| G SC12 | Resolve the power-path findings and enable CAN recovery | Output eFuse, controlled inrush, rail ADCs, default-off enables; 52 × 74 mm |
+| **H SC12 — current** | **Visible diagnostics and inexpensive programming for ten boards** | **One RGB LED, buffered data, ordinary 2.54 mm service header; same 52 × 74 mm, top-side assembly** |
 
 [Revision details](REVISIONS.md) · [Historical downloads](archive/README.md). Use hardware, firmware and instructions from the same revision.
 
 ## Folder map
 
 ```text
-current/                 The maintained Rev G design
+current/                 The maintained Rev H design
   hardware/              Native KiCad, local libraries and circuit model
   firmware/              MCU application, bootloader and tests
   host/ + examples/      CAN setup tools and robot drivers
-  bom/ + order/          Parts lists and factory upload packages
+  bom/ + order/          Parts lists and factory package status
   docs/                  Wiring, assembly, servicing and qualification
   output/ + reports/     Fabrication exports, drawings and check evidence
   scripts/ + tools/      Reproduction scripts and pinned dependencies
-  release/               Complete downloadable Rev G package
+  release/               Release package status
 archive/                 Original older release/order ZIPs and checksums
 ```
 

@@ -1,12 +1,12 @@
 """Validate delivered hashes and native CAD from a temporary extracted package."""
 from pathlib import Path
 import json,zipfile,tempfile,hashlib,subprocess,sys
-R=Path(__file__).resolve().parents[1];zpath=R/'release/FRC_Sensor_CAN_RevG_SC12_Prototype.zip'
+R=Path(__file__).resolve().parents[1];zpath=R/'release/FRC_Sensor_CAN_RevH_SC12_Prototype.zip'
 assert hashlib.sha256(zpath.read_bytes()).hexdigest()==(zpath.with_suffix('.zip.sha256')).read_text().split()[0]
 with tempfile.TemporaryDirectory(prefix='sc_lite_release_') as t:
  with zipfile.ZipFile(zpath) as z:
   assert z.testzip() is None;z.extractall(t)
- base=Path(t)/'SC12_RevG';manifest=json.loads((base/'manifest.json').read_text())
+ base=Path(t)/'SC12_RevH';manifest=json.loads((base/'manifest.json').read_text())
  for e in manifest['files']:
   p=base/e['path'];assert p.stat().st_size==e['bytes'] and hashlib.sha256(p.read_bytes()).hexdigest()==e['sha256'],e['path']
  for kind,command,extension in [('pcb','drc','kicad_pcb'),('sch','erc','kicad_sch')]:

@@ -7,9 +7,9 @@ parts=json.loads((R/'hardware/design/circuit.json').read_text())['parts']
 fps={f.GetReference():f for f in b.GetFootprints()}
 assert abs(p.ToMM(b.GetDesignSettings().GetBoardThickness())-1.6)<1e-6
 fitted=[r for r,c in parts.items() if not c.get('exclude_bom')]
-assert len(fitted)==135 and all(not fps[r].IsFlipped() for r in fitted)
-assert len([r for r in fitted if r.startswith('R')])==54
-assert len([r for r in fitted if r.startswith('C')])==38
+assert len(fitted)==140 and all(not fps[r].IsFlipped() for r in fitted)
+assert len([r for r in fitted if r.startswith('R')])==55
+assert len([r for r in fitted if r.startswith('C')])==40
 def pads(ref):return {d.GetNumber():d for d in fps[ref].Pads() if d.GetNumber()}
 def nets(ref):return {n:d.GetNetname() for n,d in pads(ref).items()}
 assert b.GetCopperLayerCount()==4
@@ -43,9 +43,18 @@ assert all(not d.IsOnLayer(p.F_Paste) for d in pads('JP2').values())
 service=pads('J8');mapping={'1':'NRST','2':'UART_RX','3':'UART_TX','4':'SWCLK','5':'SWDIO','6':'+3V3','7':'GND','8':'GND','9':'BOOT0','10':'GND'}
 assert nets('J8')==mapping
 for n,d in service.items():
- assert not d.IsOnLayer(p.F_Paste) and abs(p.ToMM(d.GetSize().x)-.7874)<1e-6
-expected=[(21.46,6.385),(22.73,6.385),(24,6.385),(25.27,6.385),(26.54,6.385),(26.54,5.115),(25.27,5.115),(24,5.115),(22.73,5.115),(21.46,5.115)]
-for i,xy in enumerate(expected,1):assert all(abs(a-z)<1e-6 for a,z in zip(p.ToMM(service[str(i)].GetPosition()),xy))
+ assert d.GetAttribute()==p.PAD_ATTRIB_PTH and not d.IsOnLayer(p.F_Paste)
+ assert abs(p.ToMM(d.GetDrillSize().x)-1.1)<1e-6 and abs(p.ToMM(d.GetSize().x)-1.7)<1e-6
+for i in range(1,11):
+ expected=(18.92+2.54*((i-1)//2),7.57 if i%2 else 5.03)
+ assert all(abs(a-z)<1e-6 for a,z in zip(p.ToMM(service[str(i)].GetPosition()),expected))
+assert nets('D10')=={'1':'STATUS_DIN','2':'V5_INTERNAL','3':'','4':'GND'}
+assert nets('U10')=={'1':'GND','2':'STATUS_DATA','3':'GND','4':'STATUS_5V_DATA','5':'V5_INTERNAL'}
+assert nets('U5')['26']=='STATUS_DATA'
+assert nets('R31')=={'1':'STATUS_DATA','2':'GND'} and parts['R31']['value']=='10k'
+assert nets('R30')=={'1':'STATUS_5V_DATA','2':'STATUS_DIN'} and parts['R30']['value']=='330'
+assert all(nets(r)=={'1':'V5_INTERNAL','2':'GND'} for r in ('C74','C75'))
+assert all(abs(a-z)<1e-6 for a,z in zip(p.ToMM(fps['D10'].GetPosition()),(26,2)))
 tracks=collections.defaultdict(list);vias=collections.Counter()
 for t in b.GetTracks():
  if isinstance(t,p.PCB_VIA):vias[t.GetNetname()]+=1
@@ -66,7 +75,7 @@ for r in ['J1','J2','J3','J4','J5','J6']:
  assert all(abs(p.ToMM(d.GetDrillSize().x)-1.1)<1e-6 for d in f.Pads())
 for record in json.loads((R/'hardware/library/3d/vendor_connectors.json').read_text()):
  for path,sha in [('source_file','vendor_sha256'),('model_file','model_sha256')]:assert hashlib.sha256((R/record[path]).read_bytes()).hexdigest()==record[sha]
-report=dict(result='PASS',fitted_top_parts=135,resistors=54,capacitors=38,board_thickness_mm=1.6,selectors=selectors,service_mapping=mapping,critical_routes=critical,inner_service_and_monitor_routes={net:sum(p.ToMM(t.GetLength()) for t in tracks[net] if t.GetLayer()==p.In2_Cu) for net in sorted({'+3V3','UART_RX','UART_TX','BIAS_UP2_N','ADC_5V','POWER_5V_EN','BIAS_DOWN2','POWER_12V_EN','BIAS_DOWN1'})},power_net_geometry=widths,limitations='Track geometry inventory is not a thermal, impedance or trace-drop qualification. VIN_PROT includes narrow low-current enable branches; 3D and programming checks are nominal geometry, not physical fit.')
+report=dict(result='PASS',fitted_top_parts=140,resistors=55,capacitors=40,board_thickness_mm=1.6,selectors=selectors,service_mapping=mapping,critical_routes=critical,inner_service_and_monitor_routes={net:sum(p.ToMM(t.GetLength()) for t in tracks[net] if t.GetLayer()==p.In2_Cu) for net in sorted({'+3V3','UART_RX','UART_TX','BIAS_UP2_N','ADC_5V','POWER_5V_EN','BIAS_DOWN2','POWER_12V_EN','BIAS_DOWN1'})},power_net_geometry=widths,limitations='Track geometry inventory is not a thermal, impedance or trace-drop qualification. VIN_PROT includes narrow low-current enable branches; 3D and programming checks are nominal geometry, not physical fit.')
 # At least six plated thermal vias outside the exposed-pad paste window.
 u9=pads('U9')['9'];center=u9.GetPosition()
 thermal=[t for t in b.GetTracks() if isinstance(t,p.PCB_VIA) and t.GetNetname()=='GND' and (t.GetPosition()-center).EuclideanNorm()<p.FromMM(3)]
@@ -107,4 +116,11 @@ for ref,vin_limit,gnd_limit in [('C2',5.5,10),('C3',2.2,6)]:
  assert vin<vin_limit and gnd<gnd_limit,(ref,vin,gnd)
  local[ref]=dict(vin_top_path_mm=vin,ground_top_path_mm=gnd)
 report['buck_local_bypass']=local
+report['status_optical_access']=dict(center_top_left_mm=[26,2],reserved_diameter_mm=3,LED_nominal_height_mm=.65,scope='Nominal placement; enclosure/light-pipe and physical optical fit require qualification.')
+led_bypass={}
+for ref,ic,pin,limit in [('C74','U10','5',3),('C75','D10','2',4)]:
+ length=top_path('V5_INTERNAL',pads(ref)['1'],pads(ic)[pin])
+ assert length<limit,(ref,length)
+ led_bypass[ref]=dict(supply_top_path_mm=length)
+report['rgb_local_bypass']=led_bypass
 (R/'reports/board_constraints.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

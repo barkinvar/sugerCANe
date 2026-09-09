@@ -127,8 +127,66 @@ void HardFault_Handler(void) {
     for (;;) {
     }
 }
-void board_status_led(bool on) {
-    GPIOB->BSRR = on ? (1u << 3) : (1u << (3+16));
+/* PB3 AF2 = TIM2_CH2. TIM2 update requests use DMA1 channel 2 (RM0091
+ * table 29). PWM preload gives DMA a whole bit period to prepare the next
+ * duty cycle. No interrupt masking, polling loop or ISR is needed. */
+static uint16_t led_duty[26];
+static uint32_t led_rgb=0xffffffffu, led_started;
+static bool led_busy;
+void board_status_stop(void) {
+    RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
+    RCC->AHBENR |= RCC_AHBENR_DMA1EN;
+    (void)RCC->AHBENR;
+    TIM2->DIER=0; TIM2->CR1=0; TIM2->CCER=0;
+    DMA1_Channel2->CCR=0;
+    GPIOB->BSRR=1u<<(3+16); gpio_mode(GPIOB,3,1);
+    led_busy=false; led_rgb=0xffffffffu;
+}
+void board_status_init(void) {
+    board_status_stop();
+    RCC->APB1RSTR |= RCC_APB1RSTR_TIM2RST;
+    RCC->APB1RSTR &= ~RCC_APB1RSTR_TIM2RST;
+    GPIOB->OSPEEDR=(GPIOB->OSPEEDR&~(3u<<6))|(1u<<6);
+    led_started=board_millis; /* At least one ms LOW before the first word. */
+}
+void board_status_led(uint32_t rgb) {
+    uint32_t now=board_millis;
+    /* One tick can straddle a boundary and represent almost no elapsed time.
+     * Two ticks after the previous start guarantee at least one full ms. */
+    if ((uint32_t)(now-led_started)<2u) return;
+    if (led_busy && DMA1_Channel2->CNDTR && !(DMA1->ISR&DMA_ISR_TEIF2)) {
+        if ((uint32_t)(now-led_started)<=2u) return;
+        /* A stalled DMA must not stall sensor supervision or the watchdog. */
+        board_status_stop(); led_started=board_millis; return;
+    }
+    if (led_busy && (DMA1->ISR&DMA_ISR_TEIF2)) {
+        board_status_stop(); led_started=board_millis; return;
+    }
+    led_busy=false;
+    if (rgb==led_rgb) return;
+    TIM2->CR1=0; TIM2->DIER=0; DMA1_Channel2->CCR=0;
+    DMA1->IFCR=DMA_IFCR_CGIF2;
+    uint32_t ticks=SystemCoreClock/800000u; /* 60 at 48 MHz; 10 on HSI. */
+    uint32_t grb=((rgb&0xff00u)<<8)|((rgb>>8)&0xff00u)|(rgb&255u);
+    for (unsigned i=0;i<24;i++)
+        led_duty[i]=(uint16_t)((grb&(1u<<(23u-i))) ? ticks*7u/10u : ticks/4u);
+    led_duty[24]=0; led_duty[25]=0;
+    TIM2->PSC=0; TIM2->ARR=ticks-1u; TIM2->CNT=0;
+    TIM2->CCMR1=TIM_CCMR1_OC2PE|(6u<<TIM_CCMR1_OC2M_Pos);
+    TIM2->CR1=TIM_CR1_ARPE;
+    TIM2->CCR2=0; TIM2->EGR=TIM_EGR_UG; /* Active duty 0, preload bit 0. */
+    TIM2->CCR2=led_duty[0]; TIM2->SR=0;
+    DMA1_Channel2->CPAR=(uint32_t)&TIM2->CCR2;
+    DMA1_Channel2->CMAR=(uint32_t)&led_duty[1];
+    DMA1_Channel2->CNDTR=25;
+    DMA1_Channel2->CCR=DMA_CCR_DIR|DMA_CCR_MINC|DMA_CCR_PSIZE_0|
+        DMA_CCR_MSIZE_0|DMA_CCR_PL_1|DMA_CCR_EN;
+    __DMB();
+    TIM2->CCER=TIM_CCER_CC2E; gpio_af(GPIOB,3,2);
+    TIM2->DIER=TIM_DIER_UDE; TIM2->CR1|=TIM_CR1_CEN;
+    /* Two trailing zeros ensure the last bit has finished before DMA completes.
+     * At least one ms between starts leaves >960 us LOW (LED needs >200 us). */
+    led_rgb=rgb; led_started=board_millis; led_busy=true;
 }
 static uint8_t uart_tx[512], uart_rx[128];
 static volatile uint16_t tx_head, tx_tail, rx_head, rx_tail;
@@ -212,7 +270,23 @@ void board_watchdog_start(void) {
 void board_watchdog_feed(void) {
     IWDG->KR = 0xaaaa;
 }
+static uint32_t can_last_ack;
+static bool can_seen_ack;
+static void can_collect_tx(void) {
+    uint32_t tsr=CAN->TSR;
+    const uint32_t done=CAN_TSR_RQCP0|CAN_TSR_RQCP1|CAN_TSR_RQCP2;
+    if (tsr&(CAN_TSR_TXOK0|CAN_TSR_TXOK1|CAN_TSR_TXOK2)) {
+        can_last_ack=board_millis; can_seen_ack=true;
+    }
+    CAN->TSR=tsr&done; /* W1C completion bits also clear TXOK/error flags. */
+}
+bool board_can_link_ok(uint32_t now) {
+    can_collect_tx();
+    return can_seen_ack && (uint32_t)(now-can_last_ack)<500u &&
+        !(CAN->ESR&(CAN_ESR_BOFF|CAN_ESR_EPVF));
+}
 bool board_can_init(uint8_t id) {
+    can_seen_ack=false; can_last_ack=0;
     RCC->APB1ENR |= RCC_APB1ENR_CANEN;
     gpio_af(GPIOA, 11, 4);
     gpio_af(GPIOA, 12, 4);
@@ -238,6 +312,7 @@ bool board_can_init(uint8_t id) {
     return wait_bits(&CAN->MSR, CAN_MSR_INAK, 0, 100000u);
 }
 bool board_can_send(uint32_t id, const uint8_t data[8]) {
+    can_collect_tx();
     if (CAN->ESR & CAN_ESR_BOFF)
         return false;
     uint32_t tsr = CAN->TSR;

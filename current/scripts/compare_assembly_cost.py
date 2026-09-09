@@ -12,6 +12,6 @@ for n in (5,10,25):
   rows.append(dict(boards=n,service=service,charged_feeder_types=extended,parts_per_board=parts[n],setup_stencil_feeders_fixture_per_order=round(fixed,2),partial_per_board=round(parts[n]+fixed/n,2)))
 with (R/'bom/assembly_scenarios.csv').open('w',newline='') as f:
  w=csv.DictWriter(f,fieldnames=rows[0]);w.writeheader();w.writerows(rows)
-report=dict(date='2026-09-08',source='https://jlcpcb.com/help/article/pcb-assembly-price',smt_mpn_types=mpns,economic_cheaper_in_this_limited_comparison_when_charged_extended_types_at_most=int((25.56+8.21+1.53*mpns+16.42-8.18-1.53)/3.07),unknowns=['Exact part allocation and Economic eligibility','PCB','Placement and minimum adjustments','X-ray','Attrition','Handling/packing','Programming/test','Freight','Tax/duty'],scenarios=rows)
+report=dict(date='2026-09-09',source='https://jlcpcb.com/help/article/pcb-assembly-price',smt_mpn_types=mpns,economic_cheaper_in_this_limited_comparison_when_charged_extended_types_at_most=int((25.56+8.21+1.53*mpns+16.42-8.18-1.53)/3.07),unknowns=['Exact part allocation and Economic eligibility','PCB','Placement and minimum adjustments','X-ray','Attrition','Handling/packing','Programming/test','Freight','Tax/duty'],scenarios=rows)
 (R/'reports/manufacturing/cost_scenarios.json').write_text(json.dumps(report,indent=2)+'\n')
 print('Wrote partial-cost scenarios; no factory quote or delivery total claimed.')

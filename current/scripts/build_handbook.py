@@ -113,7 +113,7 @@ def convert(path):
                 ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
                 ('LINEBELOW', (0, 0), (-1, 0), .7, BLUE),
             ]))
-            flow.extend([table, Spacer(1, 10)])
+            flow.extend([KeepTogether([table]) if len(rows)<=8 else table, Spacer(1, 10)])
     return flow
 
 class Guide(SimpleDocTemplate):
@@ -132,7 +132,7 @@ def page(canvas, doc):
     canvas.saveState()
     canvas.setFont('Guide', 7.3)
     canvas.setFillColor(colors.HexColor('#537080'))
-    canvas.drawString(42, 817, 'FRC SENSOR CAN  /  REVISION G SC12 PROTOTYPE')
+    canvas.drawString(42, 817, 'FRC SENSOR CAN  /  REVISION H SC12 PROTOTYPE')
     canvas.drawRightString(553, 817, '2026-09-09')
     canvas.setStrokeColor(colors.HexColor('#cbd7dc'))
     canvas.line(42, 808, 553, 808)
@@ -141,7 +141,7 @@ def page(canvas, doc):
     canvas.restoreState()
 
 story = [Spacer(1, 33), Paragraph('FRC<br/>Sensor CAN', styles['cover']),
-         Paragraph('Revision G SC12 · Prototype engineering and assembly guide', styles['heading']),
+         Paragraph('Revision H SC12 · Prototype engineering and assembly guide', styles['heading']),
          Paragraph('Three industrial / logic sensor inputs<br/>Regulated 12 V and 5 V sensor power', styles['body']),
          Spacer(1, 10)]
 render = ROOT / 'output/review/board_3d_final.png'
@@ -151,13 +151,14 @@ if render.exists():
         w, h = im.size
     story.append(Image(str(render), width=380, height=380*h/w))
 story.extend([Spacer(1, 12), Paragraph('2026-09-09', styles['heading']),
-              Paragraph('Rev G implements revised output protection, controlled startup and rail measurements. No physical prototype has been tested. This guide accompanies the engineering evidence and defines first-article acceptance.', styles['body']),
+              Paragraph('Rev H adds RGB diagnostics and inexpensive header programming while retaining protected sensor power and physical voltage jumpers. No physical prototype has been tested. This guide accompanies the engineering evidence and defines first-article acceptance.', styles['body']),
               PageBreak(), Paragraph('Contents', styles['chapter'])])
 toc = TableOfContents()
 toc.levelStyles = [ParagraphStyle('TOC', fontName='Guide', fontSize=10, leading=19, textColor=INK)]
 story.extend([toc, PageBreak()])
-chapters = [('1  Product overview', 'README.md'), ('2  Power and input circuit', 'DESIGN_PLAN.md'), ('3  Wiring and programming contacts', 'docs/WIRING.md'), ('4  Software input modes', 'docs/INPUT_MODES.md'), ('5  Assembly', 'docs/ASSEMBLY.md'), ('6  Firmware', 'firmware/README.md'), ('7  CAN protocol', 'docs/CAN_PROTOCOL.md'), ('8  CAN setup and updates', 'docs/CAN_SERVICE.md'), ('9  Robot integration', 'examples/README.md'), ('10  Purchasing and factory quote', 'docs/FACTORY_ORDER.md'), ('11  Qualification', 'docs/VALIDATION.md'), ('12  Unit fixture', 'docs/FIXTURE.md'), ('13  Connectors', 'docs/CONNECTORS.md'), ('14  Cost reduction', 'docs/COST_REDUCTION.md'), ('15  Tools', 'TOOLS.md'), ('16  Sources and notices', 'docs/SOURCES_AND_LICENSES.md')]
+chapters = [('1  Product overview', 'README.md'), ('2  Power and input circuit', 'DESIGN_PLAN.md'), ('3  Wiring and programming header', 'docs/WIRING.md'), ('4  Software input modes', 'docs/INPUT_MODES.md'), ('5  Assembly', 'docs/ASSEMBLY.md'), ('6  Firmware', 'firmware/README.md'), ('7  CAN protocol', 'docs/CAN_PROTOCOL.md'), ('8  CAN setup and updates', 'docs/CAN_SERVICE.md'), ('9  Robot integration', 'examples/README.md'), ('10  Purchasing and factory quote', 'docs/FACTORY_ORDER.md'), ('11  Qualification', 'docs/VALIDATION.md'), ('12  Unit fixture', 'docs/FIXTURE.md'), ('13  Connectors', 'docs/CONNECTORS.md'), ('14  Cost reduction', 'docs/COST_REDUCTION.md'), ('15  Tools', 'TOOLS.md'), ('16  Sources and notices', 'docs/SOURCES_AND_LICENSES.md')]
 
+chapters.insert(4, ('Status and programming', 'docs/STATUS_AND_PROGRAMMING.md'))
 chapters.insert(1, ('Pre-order decision', 'docs/ORDER_READINESS.md'))
 chapters = [(str(i) + '  ' + re.sub(r'^\d+\s+', '', title), path)
             for i, (title, path) in enumerate(chapters, 1)]
@@ -169,9 +170,9 @@ for i, (title, path) in enumerate(chapters):
     story.append(Paragraph('Source: ' + path, styles['small']))
     story.extend(convert(ROOT / path))
 
-doc = Guide(str(OUT / 'SC12_RevG_Handbook.pdf'), pagesize=A4,
+doc = Guide(str(OUT / 'SC12_RevH_Handbook.pdf'), pagesize=A4,
             leftMargin=42, rightMargin=42, topMargin=48, bottomMargin=43,
-            title='FRC Sensor CAN — Revision G SC12 prototype handbook',
+            title='FRC Sensor CAN — Revision H SC12 prototype handbook',
             author='FRC Sensor CAN project')
 doc.multiBuild(story, onFirstPage=page, onLaterPages=page)
-print(OUT / 'SC12_RevG_Handbook.pdf')
+print(OUT / 'SC12_RevH_Handbook.pdf')

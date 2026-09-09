@@ -25,7 +25,7 @@ with PdfPages(ROOT/'output/assembly/gerber_copper_review.pdf') as pdf:
             ax.add_patch(Circle((d.x,d.y),d.aperture.diameter/2,facecolor='white',edgecolor='#594b3d',linewidth=.12))
         ax.set(xlim=(0,52) if side=='top' else (52,0),ylim=(-74,0),xlabel='Board X (mm)',ylabel='Gerber Y (mm)')
         ax.tick_params(labelsize=8)
-        fig.suptitle('FRC Sensor CAN · Rev G SC12 · '+side.upper()+' copper',fontsize=15,fontweight='bold',y=.98)
+        fig.suptitle('FRC Sensor CAN · Rev H SC12 · '+side.upper()+' copper',fontsize=15,fontweight='bold',y=.98)
         ax.set_title('Viewed from '+side+'; exported copper and drills, without solder mask',fontsize=9,pad=10)
         fig.text(.06,.025,'Nominal manufacturing geometry only. Compare to native KiCad, assembly and fabrication files.',fontsize=8)
         fig.tight_layout(rect=(0,.045,1,.955))

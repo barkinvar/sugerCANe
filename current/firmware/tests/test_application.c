@@ -35,7 +35,10 @@ bool board_can_send(uint32_t id,const uint8_t d[8]) {
  assert(!standby && sends<512);tx[sends]=(frame){.at=board_millis,.id=id,.len=8};memcpy(tx[sends++].d,d,8);return !is("busy");
 }
 bool board_can_receive(uint32_t *id,uint8_t d[8],uint8_t *len){if(irx==nrx||rx[irx].at>board_millis)return false;frame *f=&rx[irx++];*id=f->id;*len=f->len;memcpy(d,f->d,8);return true;}
-void board_status_led(bool on){(void)on;}
+static uint32_t led_at_1000;
+void board_status_init(void){} void board_status_stop(void){}
+bool board_can_link_ok(uint32_t now){return !is("can_unplug") || now<650u;}
+void board_status_led(uint32_t rgb){if(board_millis==1000)led_at_1000=rgb;}
 void board_safe_off(void){standby=true;stops++;longjmp(done,3);}
 void host_wait(void){if(board_millis>=1200)longjmp(done,1);board_millis+=(is("stall") && board_millis==49)?21:1;host_gpioa.IDR=((board_millis>=250 && board_millis<270)?7u:0u)|24u;
  if((is("rail12_fault")||is("rail5_fault")) && board_millis>=300 && board_millis<350)host_gpioa.IDR &= ~(is("rail12_fault")?8u:16u);
@@ -70,7 +73,7 @@ int main(int argc,char **argv) {
      unsigned rail=(f->d[6]>>4)&3; if(f->at<100)assert(rail==0);if(f->at>=600)assert(rail==(is("rail12_fault")||is("rail_chatter")?2:is("rail5_fault")?1:3));
      if(f->at>=300&&f->at<=440){if(is("rail12_fault"))assert(!(rail&1));if(is("rail5_fault"))assert(!(rail&2));}
      if(is("rail_chatter") && f->at>=300&&f->at<=580)assert(!(rail&1));}
-    if(api==SC_API_IDENTITY){identities++;assert(f->d[0]==4&&f->d[1]==0&&f->d[2]==8&&f->d[4]==7&&f->d[5]==17);assert(f->d[7]==(is("config")?4:0));}
+    if(api==SC_API_IDENTITY){identities++;assert(f->d[0]==4&&f->d[1]==0&&f->d[2]==9&&f->d[4]==8&&f->d[5]==17);assert(f->d[7]==(is("config")?4:0));}
     if(api==SC_API_COUNTS12&&is("float")&&f->at>=300)assert(sc_get_u32(f->d)==1);
     if(api==SC_API_INPUT_STATE&&is("runtime_modes")&&f->at>=50)assert(sc_get_u32(f->d+4)==(1u<<9));
     if(api==SC_API_INPUT_STATE&&is("float")&&f->at>=300)assert(f->d[1]==7&&f->d[2]==1&&!(f->d[3]&1));
@@ -82,6 +85,9 @@ int main(int argc,char **argv) {
   }
   assert(stores==0);
  }
+ if(is("normal"))assert(led_at_1000==0x006000u);
+ if(is("unconfigured"))assert(led_at_1000==0x604000u);
+ if(is("clock_failure")||is("can_failure")||is("can_unplug")||is("rail12_fault")||is("rail5_fault"))assert(led_at_1000==0x800000u);
  printf("application: %s passed (%u frames, %u scheduler feeds)\n",scenario,sends,feeds);
 }
 

@@ -86,10 +86,10 @@ void sc_service_receive(sc_service *s,const uint8_t *d,uint32_t now) {
         sc_config_record cfg={0};bool configured=s->io.load(s->io.ctx,&cfg);
         switch(value) {
         case 0:result=1u|((uint32_t)s->boot<<8)|((uint32_t)configured<<9)|
-                      ((uint32_t)s->io.protected_boot(s->io.ctx)<<10)|(8u<<16)|(7u<<24);break;
+                      ((uint32_t)s->io.protected_boot(s->io.ctx)<<10)|(9u<<16)|(8u<<24);break;
         case 1:result=(configured?cfg.device_id:255u)|((uint32_t)cfg.invert_mask<<8)|
                        ((uint32_t)(configured?cfg.debounce_ms:2u)<<16)|((uint32_t)s->period<<24);break;
-        case 2:result=s->boot?0x00010000u:0x00000800u;break;
+        case 2:result=s->boot?0x00010100u:0x00000900u;break;
         case 10:case 11:
             if(s->boot || !s->io.rails)error=SC_BAD_STATE;
             else result=s->io.rails(s->io.ctx,value-10);

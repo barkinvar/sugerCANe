@@ -1,8 +1,8 @@
-# Rev G SC12 protocol v4
+# Rev H SC12 protocol v4
 
 1 Mbit/s classic CAN, extended 29-bit identifiers, 8-byte telemetry. This is an original Team Use protocol, not CTRE Phoenix. Device type=10 (Miscellaneous), manufacturer=8 (Team Use), unique device ID=0–63. Address = `(10 << 24) | (8 << 16) | (API << 6) | device`.
 
-The APIs differ from A/B/B-2; Rev C shares these API numbers but uses protocol v2, which Rev G drivers reject. The version and capability checks prevent drivers from interpreting the wrong revision’s payload. Provision each board by full-UID CAN service or 3.3 V UART. An unconfigured board suppresses telemetry but answers service requests; its sensor power hardware is still enabled.
+The APIs differ from A/B/B-2; Rev C shares these API numbers but uses protocol v2, which Rev H drivers reject. The version and capability checks prevent drivers from interpreting the wrong revision’s payload. Provision each board by full-UID CAN service or 3.3 V UART. An unconfigured board suppresses telemetry but answers service requests; its sensor power hardware is still enabled.
 
 All multibyte fields are little endian. Masks use bits 0–2 for inputs 1–3. Unsupported versions, reserved bits, wrong lengths or stale frames must be reported as unavailable.
 
@@ -13,7 +13,7 @@ All multibyte fields are little endian. Masks use bits 0–2 for inputs 1–3. U
 | 0x122 count 3 | 100 ms | uint32 total, uint32 reserved=0 |
 | 0x130 diagnostics | 100 ms | uint32 transmit drops, TEC byte, REC byte, LEC byte, CAN flags byte |
 | 0x132 input state | Same as status | version=4, valid mask, floating mask, classified HIGH mask, uint32 input configuration |
-| 0x131 identity | 1000 ms | 4, firmware major=0, minor=8, patch=0, hardware=7, device ID, debounce ms, inversion mask |
+| 0x131 identity | 1000 ms | 4, firmware major=0, minor=9, patch=0, hardware=8, device ID, debounce ms, inversion mask |
 
 Status flags: configured=1, clock healthy=2, CAN initialized=4, bus-off=8, qualified 12 V power-good=16, qualified 5 V no-fault=32, all input classifications settled=64. Reset flags: power-on=1, pin reset=2, watchdog=4, software=8. Capabilities bits 0–4 indicate edge counts, runtime configuration, UART persistence, standalone hardware power and broadcast disable. Bit 5 indicates rail-health reporting capability; bit 6 indicates software bias/classification. Capabilities are static; flags bits 4/5 carry live qualified indications. The raw mask is the classified HIGH mask, excluding float probe transitions; check the valid mask in 0x132 before interpreting it. The debounced mask applies the active-state condition, inversion and debounce. Sequence is an unsigned byte and wraps. Counters wrap at 2^32 and clear on reset; runtime configuration preserves totals.
 
@@ -31,11 +31,11 @@ Extended arbitration ID **0** is the FRC broadcast disable. Firmware stops telem
 
 Read timeouts: status 100 ms, counters/diagnostics 350 ms, identity 1500 ms. Counters 1/2 and 3 are separate snapshots. Sampling is 1 kHz; debounce requires a continuously stable logical state for the selected interval. This is not a high-speed pulse counter or encoder.
 
-UART: 115200 baud, 8N1, 3.3 V logic. Commands `INFO`, `HELP`, `SET id invert debounce_ms`, `RESUME`. `SET` saves a version-4 redundant CRC-protected record and resets. The old four-argument command and earlier flash records are rejected; provision Rev G explicitly. No power-control command exists.
+UART: 115200 baud, 8N1, 3.3 V logic. Commands `INFO`, `HELP`, `SET id invert debounce_ms`, `RESUME`. `SET` saves a version-4 redundant CRC-protected record and resets. The old four-argument command and earlier flash records are rejected; provision Rev H explicitly. No power-control command exists.
 
-## Service extension in firmware 0.8.0
+## Service extension in firmware 0.9.0
 
-Rev G retains protocol 4 with hardware identity 7; use only the matching drivers. APIs 0x300/0x301 at address 0 are reserved for [CAN service](CAN_SERVICE.md). Opening maintenance pauses telemetry/counting on participating SC12 nodes; treat samples as unavailable immediately in robot code. Status period can be 10/20/50 ms until reset.
+Rev H retains protocol 4 with hardware identity 8; use only the matching drivers. APIs 0x300/0x301 at address 0 are reserved for [CAN service](CAN_SERVICE.md). Opening maintenance pauses telemetry/counting on participating SC12 nodes; treat samples as unavailable immediately in robot code. Status period can be 10/20/50 ms until reset.
 
 ## Per-input configuration word
 

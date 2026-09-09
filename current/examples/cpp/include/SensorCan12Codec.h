@@ -74,7 +74,7 @@ inline std::optional<Diagnostic> DecodeDiagnostic(const uint8_t *d,
 inline std::optional<Identity> DecodeIdentity(const uint8_t *d,
                                               std::size_t size) {
   if (!d || size != 8 || d[0] != 4 || d[5] > 63 || d[6] < 1 || d[6] > 100 ||
-      d[7] > 7 || d[4] != 7)
+      d[7] > 7 || d[4] != 8)
     return std::nullopt;
   return Identity{d[1], d[2], d[3], d[4], d[5], d[6], d[7]};
 }

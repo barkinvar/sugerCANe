@@ -1,73 +1,68 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-09T10:51:06.145753+00:00",
+  "reviewed_utc": "2026-09-09T19:27:26.579116+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
       "file": "output/review/board_3d_final.png",
-      "sha256": "27ed62293eebcbbc885665642ad37d17a0329b5d992f87b60a6d3f5b878dc8f2",
-      "scope": "Oblique CAD: top-only assembly, 52x74 outline, power headers and exposed-pad eFuse placement. Final C2/C3 local buck bypass, moved Q3/R70 and resulting clearance inspected."
+      "sha256": "6d903fecb21808f674e41e27ee9977bac9ecc4d5e643296728a22b9b8c946ee8",
+      "scope": "Oblique CAD: top-only assembly, 52x74 outline, single top-edge RGB LED, ordinary J8 header, terminal and power-header access. Nominal package envelopes only."
     },
     {
       "file": "output/review/board_top.png",
-      "sha256": "219879c1e7701176cf448e253aab4bb0e4031784d08248d2afbfa8d5948bf3e9",
-      "scope": "Top CAD: regulator/eFuse/ADC placement, terminals, headers and mounting clearances. Final C2/C3 local buck bypass, moved Q3/R70 and resulting clearance inspected."
+      "sha256": "b762d88c979be99079c2a5a1e921498dab5f1b4fc777f05a9bd043083e2ba4a2",
+      "scope": "Top CAD: D10 at (26,2), adjacent bypass, buffered data path, ordinary 2x5 J8 and retained power/sensor placement. LED optical path and component clearances inspected."
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "64ab983dd28c96bbdfab4ab120884036924672f6bb465088679274e06ce115bb",
-      "scope": "Bottom CAD: Rev G, voltage/current and CAN fault-reset legends, terminal polarity, solder tails; no bottom components. Final C2/C3 local buck bypass, moved Q3/R70 and resulting clearance inspected."
+      "sha256": "81bed1c0b10272149475d95b2c46bb2165b0843a7e48b34a115a73911990ef0f",
+      "scope": "Bottom CAD: Rev H identification, service-header pin-one marking, voltage/current and fault-reset legends, solder tails and absence of bottom components."
     },
     {
       "file": "output/review/board_connectors.png",
-      "sha256": "89c1ad96ba5ee99b64ccf3daaeb3217f21a7e691ea8b1f64038aacfb6e9eae9e",
-      "scope": "Horizontal wire-entry geometry and access to power headers; nominal manufacturer and header CAD only. Final C2/C3 local buck bypass, moved Q3/R70 and resulting clearance inspected."
+      "sha256": "00e106236b5cf4666a042e7b482c13275975a06910a8fe2822d669f69463d2c2",
+      "scope": "Wire-entry CAD view: outward-facing terminal entries, removable voltage-cap access and taller ordinary service header; no physical fit or retention claim."
     },
     {
       "file": "output/review/service_gui.png",
-      "sha256": "63d9539f1eb0b3d65b025c9ca8d92f1a0ef81ea51b717e9e44233092ee2212c1",
-      "scope": "Simulated app0.8.0: three independent input modes, active levels, and Reset power fault control; no physical CAN connection."
+      "sha256": "e4cf0a7e3011c206410cccc592cd689df534eb19928cbc9ddcd41c88576e381d",
+      "scope": "Simulated app0.9.0: three independent input modes and active levels, identify and Reset power fault controls; no physical CAN connection."
     },
     {
-      "file": "output/documentation/SC12_RevG_Handbook.pdf",
-      "sha256": "dcc470870cb00a724fdeaf9118540bcd07ae6ed6ff4bd87c6e289a19ea333c3d",
-      "scope": "All 34 pages reviewed across revisions. Final numerical-method pages 25, 31 and 32 inspected; the other 31 pages are pixel-identical to the reviewed buck-layout version. No clipping or overlapping rows observed."
+      "file": "output/documentation/SC12_RevH_Handbook.pdf",
+      "sha256": "da30caf788d3c095f20205ffae5ab1a88b722ea0d6868ed8c32cec96b0dbceea",
+      "scope": "All 37 pages inspected as rendered contact sheets, with status/programming pages enlarged. Tables, headings, code blocks, revision identity, RGB legend, enclosure geometry and programmer mapping checked; no clipping or overlapping rows observed. Updated pages 3-5, 24-27 and 34-35 reinspected after documenting the canceled extra power run."
     },
     {
-      "file": "output/documentation/BOM_RevG_SC12.pdf",
-      "sha256": "a80d97c6635d1dd088bb37a88d797e5cc1db6e5cb5378ca9d578b32713c4449f",
-      "scope": "All three pages: current references/MPNs/quantities, 135 fitted parts, 126 SMT and $28.81 ten-board purchasing estimate. Final exported pages are pixel-identical to the reviewed baseline; only PDF metadata changed."
+      "file": "output/documentation/BOM_RevH_SC12.pdf",
+      "sha256": "87105377a69116fbd205e4e3f465f61befcaa3d567c2e7c93f728132632f5b13",
+      "scope": "All three pages inspected: current references, exact MPNs and quantities; 140 fitted parts, 130 SMT and ten hand-fitted parts; $28.94 ten-board parts purchasing estimate."
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
-      "sha256": "25c56c7fe3540f9695c49638a839c91b34d39277631ca9c4573d68d87b464d05",
-      "scope": "Both pages: 52x74 outline, H2 at y46.5, custom J8 service mapping and 2mm power jumper positions. Final exported pages are pixel-identical to the reviewed baseline; only PDF metadata changed."
+      "sha256": "33a0ff023e86beb1c8b2cdcaa13c1ed69093ba1cab4fce7c137e43eec866d17e",
+      "scope": "Both pages inspected: 52x74 dimensions, H1/H2, RGB optical-path position, J8 body and height, odd/even header pin mapping with square pin one, VTref sense-only note and 2mm voltage-jumper positions."
     },
     {
       "file": "output/assembly/schematic.pdf",
-      "sha256": "f86856db325406b59377818701e5384405ecba8c597aec0f8f170d86934df605",
-      "scope": "All ten pages inspected as contact sheets; protected-rail and ADC sheets enlarged. Root sheet fits all nine child sheets. U9 ground/EP connection, Q2/Q3 enables and R71/R75 pulldowns inspected. Final exported ten pages remain pixel-identical after metadata update. Final exported pages are pixel-identical to the reviewed baseline; only PDF metadata changed."
+      "sha256": "5e01321f3e82f325ca993d3b60fd0ac304c82c9c1d42508599b73f8ac9664ada",
+      "scope": "All ten pages inspected, with revised CAN/RGB sheet enlarged. Rev H titles, full root hierarchy, custom J8 mapping, LED/buffer pinout and bypass, unused DOUT, and retained power/ADC/input circuits checked."
     },
     {
       "file": "output/assembly/top_assembly.pdf",
-      "sha256": "3b095e17eff82ca25d8dc2074b2d506df726d4e815e1b2ef752c75f4e2bb11ad",
-      "scope": "Assembly references, connector rows, pin-one/body marks and outline. Final exported pages are pixel-identical to the reviewed baseline; only PDF metadata changed."
+      "sha256": "ae6a03fd56bfabd85640b10616495c3926f29f948be5c131d891fd599ba22a78",
+      "scope": "Assembly references, connector rows, service-header pin-one/body marks and board outline inspected."
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "sha256": "38987c67b2640aad32bba417d5f0027292fd0a2810aad6b505787abffdefb4a8",
-      "scope": "Both exported copper layers with drill overlays and correct 74mm board height; lower view mirrored for underside. Final exported pages are pixel-identical to the reviewed baseline; only PDF metadata changed."
+      "sha256": "b98f36bbbad2992960d1ae91cbaf2de077ed31f82cb6540dd22b3a9cfe2db158",
+      "scope": "Both exported outer copper layers with drill overlays and 74mm board height inspected; lower view mirrored for underside. Four-layer connectivity is independently checked by the manufacturing report."
     },
     {
       "file": "reports/electrical/converter_loop.png",
-      "sha256": "df63207ec4ebe773d51206e4c4dfcc2c4fd431434c4dc9698f4236e11301ddbe",
-      "scope": "Legible nominal averaged-loop gain/phase curves and explicit analytical-model limitation; 768-corner results are in the JSON."
-    },
-    {
-      "file": "reports/electrical/boost_spice.png",
-      "sha256": "a506660228c9e3f8eafb6d8e40db80e73b871b6990847159267712ee50ca3962",
-      "scope": "All nine scenario panels, complete combined-startup repeat overlay, overall PASS label, legends and axes inspected. Fault traces show active-low pin voltages. Manufacturer-model screening with idealized upstream supply, not measured waveforms."
+      "sha256": "7795275a91cd9821e5ece2957a948549299dc94b29e0a7abc14d64fa0f897a28",
+      "scope": "Rev H caption, nominal averaged-loop gain/phase curves and explicit analytical-model limitation inspected; 768-corner results retained in JSON."
     }
   ],
-  "limitations": "Nominal CAD/PDF/GUI inspection, not manufactured measurements, bench testing or assembly-yield qualification."
+  "limitations": "Nominal CAD/PDF/GUI inspection only. Full Rev H transient rerun incomplete; no physical board, optical or assembly-yield testing."
 }

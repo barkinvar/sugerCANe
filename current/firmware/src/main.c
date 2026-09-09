@@ -46,7 +46,7 @@ static void diagnostic_frame(void) {
     send_frame(SC_API_DIAGNOSTIC,d);
 }
 static void identity_frame(void) {
-    uint8_t d[8] = {SC_PROTOCOL_VERSION, 0, 8, 0, 7, device_id, (uint8_t)inputs.debounce_ms,
+    uint8_t d[8] = {SC_PROTOCOL_VERSION, 0, 9, 0, 8, device_id, (uint8_t)inputs.debounce_ms,
                     inputs.invert};
     send_frame(SC_API_IDENTITY, d);
 }
@@ -125,7 +125,7 @@ static void uart_uint(uint32_t n) {
     board_uart_write(b + i);
 }
 static void print_status(void) {
-    board_uart_write("SC12 v0.8.0 proto=4 configured=");
+    board_uart_write("SC12 v0.9.0 proto=4 configured=");
     uart_uint(configured);
     board_uart_write(" id=");
     uart_uint(device_id);
@@ -232,6 +232,7 @@ int main(void) {
     board_voltage_guard_init();
     clock_ok = board_clock_init();
     SysTick_Config(SystemCoreClock / 1000u);
+    board_status_init();
     board_uart_init();
     const sc_config_record *cfg = board_config_load();
     configured = cfg != 0;
@@ -245,7 +246,7 @@ int main(void) {
     can_ok = clock_ok && board_can_init(device_id);
     if (can_ok)
         board_can_standby(false);
-    board_uart_write("FRC Sensor CAN SC12 prototype v0.8.0\r\n");
+    board_uart_write("FRC Sensor CAN SC12 prototype v0.9.0\r\n");
     print_status();
     uint32_t last_tick = board_millis, next_status = last_tick + 10,
              next_counts12 = last_tick + 100, next_counts34 = last_tick + 125,
@@ -264,10 +265,17 @@ int main(void) {
             bool previously_powered=rail_good==3;
             power_status(now);
             update_inputs(now,rail_good==3 && previously_powered && !sc_service_active(&service));
-            bool error=!clock_ok || !configured || !can_ok || rail_good!=3 || (CAN->ESR & CAN_ESR_BOFF);
             sc_service_tick(&service,now);
             if(now>=2000)board_boot_healthy();
-            board_status_led(service.blink_until && (uint32_t)(service.blink_until-now)<0x80000000u ? now%100<50 : error ? ((now%200)<100) : ((now%1000)<100));
+            bool identify=service.blink_until && (uint32_t)(service.blink_until-now)<0x80000000u;
+            bool link=can_ok && board_can_link_ok(now);
+            sc_led_state led=SC_LED_READY;
+            if (!clock_ok || sensor_power.latched) led=SC_LED_POWER_FAULT;
+            else if (!can_ok || (CAN->ESR&(CAN_ESR_BOFF|CAN_ESR_EPVF))) led=SC_LED_CAN_ERROR;
+            else if (identify) led=SC_LED_IDENTIFY;
+            else if (!configured || !telemetry_enabled || sc_service_active(&service) || rail_good!=3) led=SC_LED_WAIT;
+            else if (!link) led=now<1000u ? SC_LED_WAIT : SC_LED_CAN_ERROR;
+            board_status_led(sc_status_color(led,now));
             if (can_ok)
                 receive_commands(now);
             uart_poll();

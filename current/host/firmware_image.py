@@ -6,7 +6,7 @@ import zlib
 
 MAGIC = b'SC12UPD1'
 APP_BASE, APP_SIZE, MANIFEST = 0x08002000, 21*1024, 0x08007400
-TAG, IMAGE_MAGIC, COMMIT = 0x53433137, 0x49324353, 0xc035a19e
+TAG, IMAGE_MAGIC, COMMIT = 0x53433138, 0x49324353, 0xc035a19e
 HEADER = struct.Struct('<8s6I')
 
 def unpack(raw):
@@ -14,7 +14,7 @@ def unpack(raw):
         raise ValueError('Truncated SC12 update header')
     magic, fmt, hardware, base, length, crc, version = HEADER.unpack_from(raw)
     data = raw[HEADER.size:]
-    if (magic, fmt, hardware, base) != (MAGIC, 1, 7, APP_BASE):
+    if (magic, fmt, hardware, base) != (MAGIC, 1, 8, APP_BASE):
         raise ValueError('Wrong update format, hardware or application address')
     if len(data) != length or not 192 <= length <= APP_SIZE or length % 4:
         raise ValueError('Invalid application length')
@@ -26,9 +26,9 @@ def unpack(raw):
         raise ValueError('Invalid application vectors')
     return data, crc, version
 
-def pack(data, version=0x00000800):
+def pack(data, version=0x00000900):
     data += b'\xff' * (-len(data) % 4)
-    raw = HEADER.pack(MAGIC, 1, 7, APP_BASE, len(data), zlib.crc32(data), version) + data
+    raw = HEADER.pack(MAGIC, 1, 8, APP_BASE, len(data), zlib.crc32(data), version) + data
     unpack(raw)
     return raw
 

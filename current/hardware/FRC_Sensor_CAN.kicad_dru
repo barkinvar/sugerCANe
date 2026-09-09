@@ -1,10 +1,4 @@
 (version 1)
-# Manufacturer requires 0.020 inch from contact pads to other tracks/signals.
-# Adjacent contact pads are deliberately excluded: their standard pattern is fixed.
-(rule "TC2050 contact to foreign track clearance"
- (condition "A.memberOfFootprint('J8') && (B.Type == 'Track' || B.Type == 'Via')")
- (constraint clearance (min 0.508mm)))
-
 (rule "VSSOP 0.65mm pitch adjacent pad spacing"
  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U8') && B.memberOfFootprint('U8')")
  (constraint clearance (min 0.15mm)))

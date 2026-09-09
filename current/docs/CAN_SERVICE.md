@@ -1,10 +1,10 @@
 # CAN setup and firmware updates
 
-Rev G firmware **0.8.0**, bootloader **1.0.0**, service protocol **1**. Normal sensor messages remain protocol **4**, hardware **7**. Implemented and software-tested; actual STM32/robot-controller, power-cut and vibration qualification is pending. This is our own service protocol, not GrappleHook-compatible firmware.
+Rev H firmware **0.9.0**, bootloader **1.1.0**, service protocol **1**. Normal sensor messages remain protocol **4**, hardware **8**. Implemented and software-tested; actual STM32/robot-controller, power-cut and vibration qualification is pending. This is our own service protocol, not GrappleHook-compatible firmware.
 
 ## First installation and recovery
 
-Install [factory.hex](../firmware/build/factory.hex) once through SWD using [program_factory.tcl](../tools/program_factory.tcl). This combines the protected bootloader, relocated application and image manifest. Rev G requires its own factory image and fresh configuration. D/D2 hardware cannot gain the new bias circuit through firmware. The script preserves the two configuration pages and refuses an unexpected device/flash size or an already protected bootloader. Its hardware execution is a pilot qualification gate.
+Install [factory.hex](../firmware/build/factory.hex) once through SWD using [program_factory.tcl](../tools/program_factory.tcl). This combines the protected bootloader, relocated application and image manifest. Rev H requires its own factory image and fresh configuration. D/D2 hardware cannot gain the new bias circuit through firmware. The script preserves the two configuration pages and refuses an unexpected device/flash size or an already protected bootloader. Its hardware execution is a pilot qualification gate.
 
 From `current`, with J8 wired per the custom mapping and a separately powered, current-limited board:
 
@@ -67,11 +67,11 @@ Classical CAN, extended identifiers, eight data bytes, no RTR. Request ID `0x0A0
 | INPUTS 0x16 | Stage validated per-input configuration; commit with SAVE; cleared on new selection/session |
 | POWER 0x17 | Application only, selected UID: mask 1=12 V, 2=5 V, 3=both; disable then restart requested rails |
 | SIZE / CRC 0x20/21 | Padded application length and CRC32; bootloader only |
-| BEGIN 0x22 | Product/layout tag 0x53433137; invalidate/read back manifest before application writes |
+| BEGIN 0x22 | Product/layout tag 0x53433138; invalidate/read back manifest before application writes |
 | OFFSET / DATA 0x23/24 | Byte offset then four image bytes; ACK next offset after flash readback |
 | FINISH 0x25 | Zero; validate complete flash CRC/vectors, commit manifest last, ACK image CRC |
 
-INFO index 0 packs service version in bits 0–7, bootloader mode in bit 8, configured in bit 9, boot protection in bit 10, application minor 8 in bits 16–23, and hardware 7 in bits 24–31. Index 1 packs ID/invert/debounce/status-period as bytes; unconfigured ID is 255. Index 2 is major/minor/patch in bits 16/8/0. Index 5 returns 0 or 1.
+INFO index 0 packs service version in bits 0–7, bootloader mode in bit 8, configured in bit 9, boot protection in bit 10, application minor 9 in bits 16–23, and hardware 8 in bits 24–31. Index 1 packs ID/invert/debounce/status-period as bytes; unconfigured ID is 255. Index 2 is major/minor/patch in bits 16/8/0. Index 5 returns 0 or 1.
 
 INFO index 10 packs measured 12 V millivolts in bits 0–15 and 5 V millivolts in bits 16–31. Index 11 packs enabled/good/latched/pending masks in bytes 0/1/2/3; mask bit 0 is 12 V and bit 1 is 5 V. Bootloader replies do not imply powered rails. Millivolt data is ADC-based and needs physical calibration verification.
 
@@ -97,7 +97,7 @@ Host discovery walks binary UID prefixes; matching responders send identical pre
 
 Both linkers reserve at least 1 KiB stack, excluding static data; runtime stack high-water measurement remains pending. The Cortex-M0 application copies vectors to SRAM and remaps them; bootloader handoff clears pending interrupts, stops SysTick/CAN and returns clocks to HSI. [Compiled-register tests](../reports/firmware-arm-registers.json) check vector copying, GPIO/CAN and configuration writes against peripheral models; they do not emulate analog effects or real interrupt timing.
 
-The update file uses `<8s6I`: `SC12UPD1`, format 1, hardware 7, application address, padded length, CRC32, packed version, then image bytes. Length is 192–21504 bytes and a multiple of four. Initial SP must be aligned and within application SRAM, and Thumb reset PC inside application executable bounds. Manifest words are magic 0x49324353, size, CRC, product tag, CRC of the first four words, and final commit 0xC035A19E. Boot verifies manifest, vectors and full application CRC. No update command can write bootloader, configuration or option-byte regions.
+The update file uses `<8s6I`: `SC12UPD1`, format 1, hardware 8, application address, padded length, CRC32, packed version, then image bytes. Length is 192–21504 bytes and a multiple of four. Initial SP must be aligned and within application SRAM, and Thumb reset PC inside application executable bounds. Manifest words are magic 0x49324353, size, CRC, product tag, CRC of the first four words, and final commit 0xC035A19E. Boot verifies manifest, vectors and full application CRC. No update command can write bootloader, configuration or option-byte regions.
 
 ## Evidence and remaining gates
 

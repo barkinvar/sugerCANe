@@ -9,8 +9,8 @@ from input_settings import pack_settings,unpack_settings
 from PIL import ImageGrab
 root=tk.Tk();app=App(root);root.update()
 uid='000000000000000000000001'
-info=dict(uid=uid,mode='application',version='0.8.0',configured=True,device_id=17,invert=0,debounce=2,**unpack_settings(pack_settings(['npn','pnp','push-pull'])))
-app.nodes[uid]=info;app.table.insert('','end',iid=uid,text=uid,values=(17,'application','0.8.0'));app.table.selection_set(uid);app.selected();root.update()
+info=dict(uid=uid,mode='application',version='0.9.0',configured=True,device_id=17,invert=0,debounce=2,**unpack_settings(pack_settings(['npn','pnp','push-pull'])))
+app.nodes[uid]=info;app.table.insert('','end',iid=uid,text=uid,values=(17,'application','0.9.0'));app.table.selection_set(uid);app.selected();root.update()
 assert [v.get() for v in app.input_modes]==['npn','pnp','push-pull']
 assert [v.get() for v in app.input_active]==['low','high','high']
 class Fake:

@@ -1678,5 +1678,169 @@
     "digikey_sku": "",
     "digikey_url": "",
     "factory_stock_status": "LCSC observation; factory allocation/feeder charges require quotation"
+  },
+  "SK6805-EC15": {
+    "mpn": "SK6805-EC15",
+    "manufacturer": "OPSCO Optoelectronics",
+    "supplier": "LCSC",
+    "supplier_part": "C2890035",
+    "url": "https://www.lcsc.com/product-detail/C2890035.html",
+    "stock_observed": 262605,
+    "observed_date": "2026-09-09",
+    "moq": 5,
+    "multiple": 5,
+    "tiers": [
+      [
+        5,
+        0.0956
+      ],
+      [
+        50,
+        0.0768
+      ],
+      [
+        150,
+        0.0664
+      ],
+      [
+        500,
+        0.0602
+      ],
+      [
+        2500,
+        0.0548
+      ],
+      [
+        4500,
+        0.0518
+      ]
+    ],
+    "lcsc": "C2890035",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "LCSC stock observed; JLCPCB allocation unconfirmed. Header uses undiscounted price."
+  },
+  "SN74AHCT1G125DBVR": {
+    "mpn": "SN74AHCT1G125DBVR",
+    "manufacturer": "Texas Instruments",
+    "supplier": "LCSC",
+    "supplier_part": "C7484",
+    "url": "https://www.lcsc.com/product-detail/C7484.html",
+    "stock_observed": 9585,
+    "observed_date": "2026-09-09",
+    "moq": 5,
+    "multiple": 5,
+    "tiers": [
+      [
+        5,
+        0.1009
+      ],
+      [
+        50,
+        0.0804
+      ],
+      [
+        150,
+        0.0701
+      ],
+      [
+        500,
+        0.0624
+      ],
+      [
+        3000,
+        0.0523
+      ],
+      [
+        6000,
+        0.0493
+      ]
+    ],
+    "lcsc": "C7484",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "LCSC stock observed; JLCPCB allocation unconfirmed. Header uses undiscounted price."
+  },
+  "PZ254V-12-10P": {
+    "mpn": "PZ254V-12-10P",
+    "manufacturer": "XFCN",
+    "supplier": "LCSC",
+    "supplier_part": "C492422",
+    "url": "https://www.lcsc.com/product-detail/C492422.html",
+    "stock_observed": 108590,
+    "observed_date": "2026-09-09",
+    "moq": 10,
+    "multiple": 10,
+    "tiers": [
+      [
+        10,
+        0.0718
+      ],
+      [
+        100,
+        0.0586
+      ],
+      [
+        300,
+        0.0519
+      ],
+      [
+        1000,
+        0.0434
+      ],
+      [
+        5000,
+        0.0394
+      ],
+      [
+        10000,
+        0.0375
+      ]
+    ],
+    "lcsc": "C492422",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "LCSC stock observed; JLCPCB allocation unconfirmed. Header uses undiscounted price."
+  },
+  "0805W8F3300T5E": {
+    "mpn": "0805W8F3300T5E",
+    "manufacturer": "UNI-ROYAL",
+    "supplier": "LCSC",
+    "supplier_part": "C17630",
+    "url": "https://www.lcsc.com/product-detail/C17630.html",
+    "stock_observed": 1818400,
+    "observed_date": "2026-09-09",
+    "moq": 100,
+    "multiple": 100,
+    "tiers": [
+      [
+        100,
+        0.0054
+      ],
+      [
+        1000,
+        0.0044
+      ],
+      [
+        5000,
+        0.0037
+      ],
+      [
+        10000,
+        0.0034
+      ],
+      [
+        50000,
+        0.0031
+      ],
+      [
+        100000,
+        0.0029
+      ]
+    ],
+    "lcsc": "C17630",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "LCSC stock observed; JLCPCB allocation unconfirmed. Header uses undiscounted price."
   }
 }

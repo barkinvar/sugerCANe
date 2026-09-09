@@ -1,5 +1,5 @@
 Drill report for FRC_Sensor_CAN.kicad_pcb
-Created on 2026-09-09T03:49:58
+Created on 2026-09-09T12:03:14
 
 Copper Layer Stackup:
     =============================================================
@@ -12,18 +12,17 @@ Copper Layer Stackup:
 Drill file 'FRC_Sensor_CAN-PTH.drl' contains
     plated through holes:
     =============================================================
-    T1  0.300mm  0.0118"  (202 holes))
+    T1  0.300mm  0.0118"  (197 holes))
     T2  0.400mm  0.0157"  (23 holes))
     T3  0.850mm  0.0335"  (9 holes))
-    T4  1.100mm  0.0433"  (30 holes))
+    T4  1.100mm  0.0433"  (40 holes))
 
-    Total plated holes count 264
+    Total plated holes count 269
 
 
 Drill file 'FRC_Sensor_CAN-NPTH.drl' contains
     unplated through holes:
     =============================================================
-    T1  0.991mm  0.0390"  (3 holes))
-    T2  3.200mm  0.1260"  (2 holes))
+    T1  3.200mm  0.1260"  (2 holes))
 
-    Total unplated holes count 5
+    Total unplated holes count 2

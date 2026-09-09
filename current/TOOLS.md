@@ -17,7 +17,7 @@ CANDI_JDK25=/path/to/jdk25 bash scripts/validate_release.sh
 
 `tools/env.sh` uses this directory's venv, or the repository venv. It prepends `$CANDI_TOOLS_ROOT/bin` (default `$HOME/.local/share/candi-tools/bin`). Expected wrappers include `kicad-cli`, `kicad-python`, `host-gcc`, `host-g++`, `ibom` and Arm compiler commands. `kicad-python` must match the installed KiCad binary bindings. Java 17 can be selected with `CANDI_JDK`; the 2027 test downloads its pinned dependencies.
 
-The validation script refreshes electrical budgets, loop sensitivity, board constraints, firmware/driver/bridge tests, native ERC/DRC/parity, manufacturing exports and independent Gerber geometry/connectivity checks. It compares against the small frozen Rev F contract in `hardware/design/rev_f_baseline.json`, without depending on an expanded historical checkout.
+The validation script refreshes electrical budgets, loop sensitivity, board constraints, firmware/driver/bridge tests, native ERC/DRC/parity, manufacturing exports and independent Gerber geometry/connectivity checks. It compares against the small frozen Rev G contract in `hardware/design/rev_g_baseline.json`, without depending on an expanded historical checkout.
 
 After validated changes, refresh documents and inspect the results:
 
@@ -40,6 +40,8 @@ Compiler objects, downloaded Java dependencies, test runners, caches and scratch
 
 ## Power transient simulation
 
+The additional H power rerun was canceled; its report explicitly says INCOMPLETE. The LED/header checks are complete, but the full-release scripts below intentionally continue to require a complete power report. They will fail at that gate until a full run is requested and completed.
+
 The optional native simulator is **ngspice 42 with KLU, XSPICE and PSpice compatibility**. Original manufacturer model files and hashes are retained in `sources/spice/`. The harness reads the maintained circuit's pin connections and component values; it generates simulator-specific copies, decks and raw traces under ignored `tmp/spice/`. The full run includes nine cases plus a complete combined-startup solver repeat; the coupled switching models can take several hours.
 
 ```sh
@@ -53,4 +55,4 @@ python scripts/check_boost_spice.py --verify-report
 python scripts/check_boost_spice.py --verify-report --require-pass
 ```
 
-The published [summary](reports/electrical/boost_spice.json) and [waveforms](reports/electrical/boost_spice.png) cover the protected boost stage, not the upstream buck or the whole board. A circuit, budget, source-model or harness change invalidates saved evidence. Each case has an eight-hour wall-time limit; a timeout or incomplete trace cannot pass. `--case NAME` produces separate partial reports and cannot replace the full release result. A failed screening criterion returns a nonzero exit status and remains visible in the report. See the [simulation scope](docs/VALIDATION.md#manufacturer-model-transient-screen). Individual-case outputs remain under ignored `tmp/spice/`; the full run is required for the release report.
+The published [summary](reports/electrical/boost_spice.json) cover the protected boost stage, not the upstream buck or the whole board. A circuit, budget, source-model or harness change invalidates saved evidence. Each case has an eight-hour wall-time limit; a timeout or incomplete trace cannot pass. `--case NAME` produces separate partial reports and cannot replace the full release result. A failed screening criterion returns a nonzero exit status and remains visible in the report. See the [simulation scope](docs/VALIDATION.md#manufacturer-model-transient-screen). Individual-case outputs remain under ignored `tmp/spice/`; the full run is required for the release report.

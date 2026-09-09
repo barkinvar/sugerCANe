@@ -15,7 +15,7 @@ test_update_retries_and_running_version (test_service.Service.test_update_retrie
 test_wrong_file_rejected_without_writes (test_service.Service.test_wrong_file_rejected_without_writes) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 3.627s
+Ran 13 tests in 3.624s
 
 OK
 PASS: 12 V C++ protocol validation, unsigned counters and reserved fields

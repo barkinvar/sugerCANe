@@ -1,6 +1,6 @@
 # Revision purposes and compatibility
 
-[Overview](README.md) · [Current Rev G](current/README.md) · [Historical packages](archive/README.md)
+[Overview](README.md) · [Current Rev H](current/README.md) · [Historical packages](archive/README.md)
 
 | Revision | Purpose | Hardware and behavior |
 |---|---|---|
@@ -13,6 +13,7 @@
 | E SC12 | Software selection of sensor input type | 52 × 70 mm; 111 SMT + nine hand-fitted parts; app 0.6.0 / hardware 5 / protocol 4; NPN/PNP/push-pull/float/keeper |
 | F SC12 | Lower cost with E's input features retained | 52 × 64 mm; 110 SMT + nine hand-fitted parts; app 0.7.0 / hardware 6 / protocol 4; input-protected boost; unresolved startup/short findings |
 | **G SC12** | **Resolve the power-path findings and add CAN recovery** | **52 × 74 mm; 126 SMT + nine hand-fitted parts; app 0.8.0 / hardware 7 / protocol 4; output eFuse, rail ADCs and default-off power enables** |
+| **H SC12** | **RGB status and low-cost initial programming** | **52 × 74 mm; 130 SMT + ten hand-fitted parts; app 0.9.0 / hardware 8 / boot 1.1.0 / protocol 4; one buffered RGB LED, 2.54 mm service header** |
 
 All revisions are unbuilt prototypes. The early B package with angled terminals is preserved separately because its footprint is not interchangeable with the later horizontal-terminal version.
 
@@ -27,10 +28,17 @@ All revisions are unbuilt prototypes. The early B package with angled terminals 
 
 Rev F's original packages and failed simulation evidence are preserved in [the archive](archive/README.md). [Current circuit](current/DESIGN_PLAN.md) · [exact regression](current/reports/variant_verification.json) · [verification](current/docs/VALIDATION.md).
 
+## G to H
+
+- Replace the green indicator with one SK6805-EC15 RGB LED at (26,2) mm for a future case window/light pipe. Use a 5 V AHCT buffer and a reset pulldown.
+- Use timer/DMA serialization and distinct ready, wait, fault, bootloader and identify patterns. Green requires a recent CAN acknowledgment.
+- Replace the pogo pattern with a hand-soldered 2×5 2.54 mm header. Electrical pin numbers stay the same, but the physical layout is now odd/even rows; old cables do not plug in directly.
+- Retain G's power circuit, digital inputs, physical voltage jumpers, board outline and top-side assembly. Parts purchasing increases about $0.13 per board at ten; additional assembly fees and a reusable programmer are separate.
+
 ## Firmware and wiring compatibility
 
-Use each revision's complete package. G is hardware 7 with a new update-image tag; F images drive different pins and must not be used. CAN telemetry remains protocol 4; the supplied drivers recognize hardware 7. First installation still requires the matching bootloader through the custom SWD contact mapping.
+Use each revision's complete package. H is hardware 8, app 0.9.0, bootloader 1.1.0, with its own update-image tag. Drivers recognize hardware 8; older images are rejected. CAN telemetry remains protocol 4. Initial installation uses the matching factory image and the custom five-wire SWD mapping on J8. [Programming and LED guide](current/docs/STATUS_AND_PROGRAMMING.md).
 
-Voltage selection stays physical. E/F/G select input bias in software; D/D2 cannot gain that circuit through firmware. C's battery output is not regulated 12 V. Neither Phoenix nor GrappleHook is this project's protocol.
+Voltage selection stays physical. E/F/G/H select input bias in software; D/D2 cannot gain that circuit through firmware. C's battery output is not regulated 12 V. Neither Phoenix nor GrappleHook is this project's protocol.
 
 All revisions are unbuilt designs. The [archive manifest](archive/manifest.json) records immutable packages; prior sources remain in Git history.

@@ -3,7 +3,7 @@
 static sc_service service;
 int main(void) {
     board_gpio_init();bool stay=board_boot_stay();board_watchdog_start();board_voltage_guard_init();
-    bool clock_ok=board_clock_init();SysTick_Config(SystemCoreClock/1000u);
+    bool clock_ok=board_clock_init();SysTick_Config(SystemCoreClock/1000u);board_status_init();
     board_service_init(&service,true);
     bool valid=sc_image_valid(&service.io);
     const sc_config_record *cfg=board_config_load();
@@ -23,7 +23,9 @@ int main(void) {
                 }
             }
             sc_service_tick(&service,now);
-            board_status_led(service.blink_until && (uint32_t)(service.blink_until-now)<0x80000000u ? now%100<50 : now%1000<200);
+            sc_led_state led= !clock_ok ? SC_LED_POWER_FAULT :
+                service.blink_until && (uint32_t)(service.blink_until-now)<0x80000000u ? SC_LED_IDENTIFY : SC_LED_BOOT;
+            board_status_led(sc_status_color(led,now));
             /* Recheck after maintenance, including a partially failed manifest erase. */
             if(valid && !stay && now>=500 && !sc_service_active(&service)) {
                 if(sc_image_valid(&service.io))board_run_application();

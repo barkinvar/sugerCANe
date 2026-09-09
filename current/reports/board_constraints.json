@@ -1,8 +1,8 @@
 {
   "result": "PASS",
-  "fitted_top_parts": 135,
-  "resistors": 54,
-  "capacitors": 38,
+  "fitted_top_parts": 140,
+  "resistors": 55,
+  "capacitors": 40,
   "board_thickness_mm": 1.6,
   "selectors": [
     {
@@ -101,15 +101,15 @@
     }
   },
   "inner_service_and_monitor_routes": {
-    "+3V3": 9.283883476483185,
+    "+3V3": 9.252386360737624,
     "ADC_5V": 6.1305086527633215,
     "BIAS_DOWN1": 38.39132602052242,
     "BIAS_DOWN2": 36.8552561210872,
     "BIAS_UP2_N": 24.85665372593843,
     "POWER_12V_EN": 31.49696211073403,
     "POWER_5V_EN": 23.799369256621805,
-    "UART_RX": 25.276942003573303,
-    "UART_TX": 2.8734571731034757
+    "UART_RX": 31.157406537771376,
+    "UART_TX": 16.053317135219608
   },
   "power_net_geometry": {
     "SENSOR_12V": {
@@ -123,9 +123,9 @@
       "via_count": 2
     },
     "V5_INTERNAL": {
-      "total_track_length_mm": 156.00412305577487,
+      "total_track_length_mm": 196.43724893717547,
       "minimum_width_mm": 0.25,
-      "via_count": 8
+      "via_count": 10
     },
     "VIN_RAW": {
       "total_track_length_mm": 19.627201854158205,
@@ -181,6 +181,23 @@
     "C3": {
       "vin_top_path_mm": 1.9276650429449553,
       "ground_top_path_mm": 5.28100288425444
+    }
+  },
+  "status_optical_access": {
+    "center_top_left_mm": [
+      26,
+      2
+    ],
+    "reserved_diameter_mm": 3,
+    "LED_nominal_height_mm": 0.65,
+    "scope": "Nominal placement; enclosure/light-pipe and physical optical fit require qualification."
+  },
+  "rgb_local_bypass": {
+    "C74": {
+      "supply_top_path_mm": 2.2060028842544392
+    },
+    "C75": {
+      "supply_top_path_mm": 2.9181980515339445
     }
   }
 }

@@ -1,6 +1,6 @@
-# Rev G SC12 wiring
+# Rev H SC12 wiring
 
-Use the included hardware-7/protocol-v4 firmware and tools; older-revision firmware must not be used on Rev G. Board coordinates below are viewed from the component side, origin at the top-left PCB corner. Bottom silkscreen is read after turning the board over. Do not infer pin numbering from left/right after flipping.
+Use the included hardware-8/protocol-v4 firmware and tools; older-revision firmware must not be used on Rev H. Board coordinates below are viewed from the component side, origin at the top-left PCB corner. Bottom silkscreen is read after turning the board over. Do not infer pin numbering from left/right after flipping.
 
 | Connector | Pin 1 | Pin 2 | Pin 3 |
 |---|---|---|---|
@@ -30,7 +30,7 @@ Design targets: 0–30 V positive input, LOW ≤1.2 V / HIGH ≥2.4 V, common-gr
 
 Regulated 12 V is a suitable nominal supply for the following families, subject to exact model and cable checks. Connect the selected output only; insulate unused complementary output wires separately. Brown/blue/black is common supply/ground/output coloring, but follow the specific datasheet rather than assuming colors.
 
-| Family | Published limits | Rev G setup / limitation |
+| Family | Published limits | Rev H setup / limitation |
 |---|---|---|
 | Omron E3Z three-wire NPN/PNP | 12–24 V ±10%; typically 30 mA maximum, through-beam pair 35 mA; residual ≤1 V below 10 mA | Power 2–3 for 12 V. NPN or PNP software mode. Residual voltage fits the LOW target at this board's small load |
 | Banner QS18 standard opposed/diffuse/retroreflective variants | 10–30 V; <25 mA excluding output load; standard outputs <1 V at 10 mA | 12 V supply is in range. Select NPN or PNP bias to match model; use one output. Account for its 100 ms power-up delay |
@@ -40,13 +40,13 @@ Sources: [Omron E3Z specifications](https://www.ia.omron.com/products/family/407
 
 12 V is specified at the board, not guaranteed at the remote cable end under every transient. The analytical DC divider/reference budget is approximately 11.64–12.38 V before dynamic/distribution allowances; check ≥10.8 V at an E3Z during startup and worst battery/load conditions. Three 30 mA sensors are comfortably within the 300 mA shared design target, but include emitters, indicator loads, cable losses and inrush. The board's 100 ms rail qualification is not proof that every sensor has completed its own startup.
 
-## Programming contacts
+## Programming header
 
-J8 uses the **TC2050-IDC-NL mechanical pattern and a custom electrical mapping**, centered at (24, 5.75) mm. Use a mapped adapter, not an assumed ARM/STDC ribbon pinout. Ten 0.7874 mm contact pads are on 1.27 mm pitch, with three mechanical guide holes. In the component-side view, the upper row runs **10, 9, 8, 7, 6** left to right at Y=5.115 mm; the lower row runs **1, 2, 3, 4, 5** at Y=6.385 mm. Pin 1 is at X=21.46 mm, Y=6.385 mm. Use this U-shaped numbering, not an odd/even ribbon numbering assumption.
+J8 is an ordinary **2×5, 2.54 mm through-hole header**, centered at (24, 6.30) mm. Its electrical mapping is custom, not an ARM/STDC ribbon pinout. Use individual mapped leads. In the component-side view, the upper row is **2, 4, 6, 8, 10** left to right at Y=5.03 mm; the lower row is **1, 3, 5, 7, 9** at Y=7.57 mm. Pin 1 is square at (18.92, 7.57) mm. Hole diameter is 1.10 mm. The larger pattern replaces the former pogo interface.
 
 | J8 pin | Signal | Connection |
 |---|---|---|
-| 1 | NRST | Probe reset, optional |
+| 1 | NRST | Probe reset; connect for factory programming |
 | 2 | MCU UART RX | 3.3 V UART adapter TX |
 | 3 | MCU UART TX | UART adapter RX |
 | 4 | SWCLK | SWD clock |
@@ -57,8 +57,8 @@ J8 uses the **TC2050-IDC-NL mechanical pattern and a custom electrical mapping**
 | 9 | BOOT0 | Normally leave open; onboard pulldown |
 | 10 | GND | Ground |
 
-Power the board through J1 during programming. Leave adapter/probe power disconnected. BOOT0 is normally low. SWD programming and custom pogo-adapter fit require bench verification. The intended clip-free probe is held perpendicular by a fixture; the no-legs pattern does not retain itself.
+Power the board through J1 during programming. Leave adapter/probe power disconnected; pin 6 is a voltage-reference input to the probe, not a power input to SC12. Leave BOOT0 open. One reusable ST-Link and five mapped wires program all ten boards. See [status and low-cost programming](STATUS_AND_PROGRAMMING.md) for the exact probe connections and LED legend. Remove programming wires for robot operation.
 
 Disabling a rail opens its supply switch; it does not actively discharge the output. Stored charge decays through connected loads and the voltage divider. `power-reset` clears the protection latch and re-enables the rail; it does not guarantee a particular power-off voltage or reset interval for every sensor.
 
-Rev G design envelope: at most 100 µF total external capacitance on the shared 12 V rail, and 22 µF on the shared 5 V rail, at 300 mA per rail. The startup calculation includes +20% capacitance and the current-limit minimum; the 470 µF simulation is a typical diagnostic beyond that envelope. Qualify nonlinear sensor inrush separately.
+Rev H design envelope: at most 100 µF total external capacitance on the shared 12 V rail, and 22 µF on the shared 5 V rail, at 300 mA per rail. The startup calculation includes +20% capacitance and the current-limit minimum; the 470 µF simulation is a typical diagnostic beyond that envelope. Qualify nonlinear sensor inrush separately.

@@ -54,7 +54,7 @@ for got in actual_drills.elements():
     diameter_error = max(diameter_error, abs(got[2]-exp[2]))
     unmatched.pop(i)
 assert not unmatched
-assert sum(n for k, n in actual_drills.items() if not k[-1]) == 5
+assert sum(n for k, n in actual_drills.items() if not k[-1]) == 2
 
 pad_results = {}
 for side in ('top', 'bottom'):
@@ -100,7 +100,7 @@ for side in ('top', 'bottom'):
                     output_width=1600, background_color='white')
 result = dict(result='PASS', parser='Gerbonara 1.6.3', graphic_layers=11,
               board_outline_mm=[52, 74], plated_drills=sum(n for k, n in actual_drills.items() if k[-1]),
-              nonplated_drills=5, copper_pad_flashes_verified=pad_results,
+              nonplated_drills=2, copper_pad_flashes_verified=pad_results,
               maximum_drill_coordinate_quantization_mm=drill_error,
               maximum_drill_diameter_quantization_mm=diameter_error,
               assembly_rows_verified=len(placed), purchased_references_verified=len(purchased),

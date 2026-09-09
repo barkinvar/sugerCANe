@@ -1,12 +1,12 @@
 {
-  "revision": "G output eFuse / CAN reset / rail ADC",
-  "modeled_parts": 138,
-  "fitted_parts": 135,
-  "factory_smt_parts": 126,
-  "hand_solder_parts": 9,
-  "purchase_lines": 57,
-  "factory_smt_types": 53,
+  "revision": "H RGB status / solderable service header",
+  "modeled_parts": 142,
+  "fitted_parts": 140,
+  "factory_smt_parts": 130,
+  "hand_solder_parts": 10,
+  "purchase_lines": 60,
+  "factory_smt_types": 55,
   "shunts": 3,
-  "component_consumed_first_tier_usd": 35.94,
+  "component_consumed_first_tier_usd": 36.11,
   "note": "Consumed parts at first supplier tier, including hand-fit parts and three loose shunts; not quantity-one purchasing cash or a PCBA quote. See cost_estimate.csv for MOQ and batch pricing."
 }

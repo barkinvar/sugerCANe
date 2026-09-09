@@ -1,8 +1,8 @@
-# Rev G prototype fabrication and assembly order
+# Rev H prototype fabrication and assembly order
 
-Use [RevG_SC12_Factory_Upload.zip](../order/RevG_SC12_Factory_Upload.zip) for the Rev G prototype lot. Read the [pre-fabrication review](ORDER_READINESS.md) and [physical acceptance procedure](VALIDATION.md). No factory quotation or order is included. The exact-MPN BOM requires supplier matching; it is not a confirmed turnkey basket.
+Rev H native CAD, BOM, firmware and individual manufacturing exports include the RGB/header change. A refreshed full-validation factory ZIP has not been issued; see [package status](../order/README.md). The extra power rerun was canceled before completion, while the focused LED/header checks passed. Previous Rev G ZIPs are historical and do not contain the new LED/header.
 
-For a JLCPCB upload, start with the [fabrication-only Gerber ZIP](../order/RevG_SC12_Gerbers.zip), then supply [BOM_JLCPCB.csv](../bom/BOM_JLCPCB.csv) and [CPL_JLCPCB.csv](../output/assembly/CPL_JLCPCB.csv). Keep [Factory_BOM.csv](../bom/Factory_BOM.csv) alongside for exact-MPN matching. The larger factory packet is a complete reference handoff.
+For quotation, use [BOM_JLCPCB.csv](../bom/BOM_JLCPCB.csv), [CPL_JLCPCB.csv](../output/assembly/CPL_JLCPCB.csv), the [fabrication exports](../output/fabrication/) and [Factory_BOM.csv](../bom/Factory_BOM.csv) for exact-MPN matching. Read the [engineering review](ORDER_READINESS.md) and [physical acceptance procedure](VALIDATION.md). No factory quotation or order is included.
 
 ## Fabrication
 
@@ -12,11 +12,11 @@ For a JLCPCB upload, start with the [fabrication-only Gerber ZIP](../order/RevG_
 | Layer order | F.Cu signal/power, In1.Cu GND, In2.Cu GND with short/slow control and service routes, B.Cu signal/power |
 | Copper | 35 µm nominal each layer; verify finished copper with supplier |
 | Dielectric | Symmetric four-layer stack; target outer-to-inner dielectric ≤0.25 mm; supplier must confirm final stack |
-| Finish | ENIG specified for exposed programming contacts and fine-pitch ICs |
+| Finish | ENIG retained for fine-pitch IC assembly |
 | Minimum trace | 0.18 mm |
 | Clearance | 0.20 mm general; U8 package pad-to-pad 0.15 mm local minimum |
 | Vias | Through vias, minimum 0.30 mm drill / 0.60 mm pad; no blind/buried vias |
-| Drills | Separate PTH and NPTH Excellon; no plated mounting or alignment holes |
+| Drills | Separate PTH and NPTH Excellon; mounting holes remain nonplated |
 | Solder mask | Both sides; preserve fine-pitch openings; review U8 mask webs with CAM |
 | Stencil | Top only, nominal 0.10 mm laser-cut; use supplied paste apertures |
 | Panels | Factory rails/fiducials may be added outside the delivered outline; preserve connector overhang |
@@ -27,23 +27,23 @@ This stack is an order requirement, not a confirmed laminate/impedance quotation
 
 ## Assembly
 
-**Factory scope: 126 SMT components on the top side only.** Use `bom/Factory_BOM.csv` (exact MPNs) and `output/assembly/CPL_JLCPCB.csv`. The simplified `bom/BOM_JLCPCB.csv` is a matching aid; blank LCSC numbers require exact-MPN matching against Factory_BOM, never an automatic substitution.
+**Factory scope: 130 SMT components on the top side only.** Use `bom/Factory_BOM.csv` (exact MPNs) and `output/assembly/CPL_JLCPCB.csv`. The simplified `bom/BOM_JLCPCB.csv` is a matching aid; blank LCSC numbers require exact-MPN matching against Factory_BOM, never an automatic substitution.
 
-**User scope: six terminal blocks plus three voltage headers (nine through-hole parts), then three loose caps.** The factory must leave J1–J6 and JP101/JP201/JP301 empty. `positions_all_top.csv`, the complete BOM and drawings describe the finished board, not additional factory placements.
+**User scope: six terminal blocks, three voltage headers and one J8 service header (ten through-hole parts), then three loose caps.** The factory must leave J1–J6, J8 and JP101/JP201/JP301 empty. `positions_all_top.csv`, the complete BOM and drawings describe the finished board, not additional factory placements.
 
 CPL coordinates are mm from the PCB lower-left, positive X right and Y up, with native KiCad counterclockwise rotation. Match the uploaded preview to the assembly drawing and check IC/diode pin 1; machine-library rotation conventions can differ.
 
-Power headers are unpopulated; the JP2 termination bridge and all J8 contacts are **unbridged/unpasted as supplied**. The factory must not add solder across JP2 unless a separate reviewed port-configuration work instruction is supplied. The user will hand solder all through-hole parts after delivery. The family name “LSF-SMT” does not make these exact connectors ordinary two-pad SMT parts.
+Power headers are unpopulated; the JP2 termination bridge and all J8 holes are **unbridged/unpasted as supplied**. The factory must not add solder across JP2 unless a separate reviewed port-configuration work instruction is supplied. The user will hand solder all through-hole parts after delivery. The family name “LSF-SMT” does not make these exact connectors ordinary two-pad SMT parts.
 
 Use exact TPS61085DGKR for U8, latch-off TPS2553DBVR-1 for U4 and TPS259620DDAR for U9. U9 has an exposed ground pad with supplied segmented paste apertures and six adjacent thermal vias. Inspect its solder attachment. Do not substitute auto-retry TPS2553, a lower-saturation inductor, or nominally equal small MLCCs without electrical review. Preserve capacitor voltage/dielectric/DC-bias behavior, the precision resistors and the 13 kΩ / 33 nF compensation network.
 
-Inspect VSSOP/MCU lead joints, diode polarity and all passive values. Perform unpowered shorts/selector checks, staged current-limited bring-up, firmware programming/readback and rail/input/CAN tests. Track every component substitution and lot.
+D10 is OPSCO SK6805-EC15 (C2890035), with the exact supplied A/1 pin layout; U10 is SN74AHCT1G125DBVR. Inspect VSSOP/MCU lead joints, diode polarity and all passive values. Perform unpowered shorts/selector checks, staged current-limited bring-up, firmware programming/readback and rail/input/CAN tests. Track every component substitution and lot.
 
 ## Sourcing, cost and delivery
 
 [Cost reduction and batch estimates](COST_REDUCTION.md) separates parts procurement from assembly. LCSC inventory is not proof of JLCPCB factory allocation. No SMT part allocation, complete cart or final quotation has been confirmed. Request exact-MPN matching and incoming date confirmation before paying; the STM32 and any unavailable exact MPN may require outside procurement. Any unapproved item must remain unresolved rather than being silently substituted.
 
-Request Economic PCBA first if the exact parts and four-layer board qualify; compare Standard PCBA with the same SMT-only scope. Avoid paying for bottom-side assembly or through-hole work. Standard assembly still charges feeder loading for all 53 SMT types. No programming or functional-test service is included by this package unless separately quoted; the user performs bring-up and programming.
+Request Economic PCBA first if the exact parts and four-layer board qualify; compare Standard PCBA with the same SMT-only scope. Avoid paying for bottom-side assembly or through-hole work. Standard assembly still charges feeder loading for all 55 SMT types. No programming or functional-test service is included by this package unless separately quoted; the user performs bring-up and programming.
 
 One-month delivery is unconfirmed. Obtain allocated-part dates, CAM/assembly timing and a destination-specific tracked express quote before scheduling the robot build. Procurement holds and customs may exceed the target. Order hand-fitted parts in parallel once the BOM is finalized.
 

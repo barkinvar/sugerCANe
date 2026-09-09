@@ -4,11 +4,11 @@ Saved DRC Report to reports/drc/final.json
 Found 0 violations
 Saved ERC Report to reports/erc/final.json
 {
-  "physical_components": 138,
-  "model_pin_count": 378,
-  "unique_named_nets": 76,
-  "schematic_nodes": 378,
-  "board_numbered_pads": 393,
+  "physical_components": 142,
+  "model_pin_count": 391,
+  "unique_named_nets": 77,
+  "schematic_nodes": 391,
+  "board_numbered_pads": 406,
   "errors": [],
   "pass": true
 }
@@ -32,7 +32,7 @@ Wrote position data to 'output/assembly/positions_all_top.csv'.
 Wrote position data to 'output/assembly/positions_smd_top.csv'.
 Plotted to '/home/neuro/candi-clone/current/output/assembly/top_assembly.pdf'.
 Done.
-Assembly-only redundant labels removed: 131
+Assembly-only redundant labels removed: 134
 Plotted to 'output/assembly/bottom_markings.pdf'.
 Done.
 Plotted to 'output/assembly/top_copper.svg'.
@@ -41,26 +41,26 @@ Plotted to 'output/assembly/bottom_copper.svg'.
 Done.
 Plotted to 'output/assembly/schematic.pdf'.
 Done.
-03:50:00: Debug: Adding duplicate image handler for 'PNG file'
-03:50:00: Debug: Adding duplicate image handler for 'JPEG file'
-03:50:00: Debug: Adding duplicate image handler for 'TIFF file'
-03:50:00: Debug: Adding duplicate image handler for 'GIF file'
-03:50:00: Debug: Adding duplicate image handler for 'PNM file'
-03:50:00: Debug: Adding duplicate image handler for 'PCX file'
-03:50:00: Debug: Adding duplicate image handler for 'IFF file'
-03:50:00: Debug: Adding duplicate image handler for 'Windows icon file'
-03:50:00: Debug: Adding duplicate image handler for 'Windows cursor file'
-03:50:00: Debug: Adding duplicate image handler for 'Windows animated cursor file'
-03:50:00: Debug: Adding duplicate image handler for 'TGA file'
-03:50:00: Debug: Adding duplicate image handler for 'XPM file'
-03:50:00: Debug: Adding duplicate image handler for 'WebP file'
+12:03:17: Debug: Adding duplicate image handler for 'PNG file'
+12:03:17: Debug: Adding duplicate image handler for 'JPEG file'
+12:03:17: Debug: Adding duplicate image handler for 'TIFF file'
+12:03:17: Debug: Adding duplicate image handler for 'GIF file'
+12:03:17: Debug: Adding duplicate image handler for 'PNM file'
+12:03:17: Debug: Adding duplicate image handler for 'PCX file'
+12:03:17: Debug: Adding duplicate image handler for 'IFF file'
+12:03:17: Debug: Adding duplicate image handler for 'Windows icon file'
+12:03:17: Debug: Adding duplicate image handler for 'Windows cursor file'
+12:03:17: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+12:03:17: Debug: Adding duplicate image handler for 'TGA file'
+12:03:17: Debug: Adding duplicate image handler for 'XPM file'
+12:03:17: Debug: Adding duplicate image handler for 'WebP file'
 Loading hardware/FRC_Sensor_CAN.kicad_pcb
-2026-09-09 03:50:01,157 WARNING Component H2 is missing from schematic data.
-2026-09-09 03:50:01,157 WARNING Component H1 is missing from schematic data.
-2026-09-09 03:50:01,157 WARNING Netlist/xml file is likely out of date.
-2026-09-09 03:50:01,207 INFO Compressing pcb data
-2026-09-09 03:50:01,521 INFO Dumping pcb data
-2026-09-09 03:50:01,522 INFO Created file /home/neuro/candi-clone/current/hardware/../output/assembly/interactive_bom.html
+2026-09-09 12:03:17,584 WARNING Component H2 is missing from schematic data.
+2026-09-09 12:03:17,584 WARNING Component H1 is missing from schematic data.
+2026-09-09 12:03:17,584 WARNING Netlist/xml file is likely out of date.
+2026-09-09 12:03:17,638 INFO Compressing pcb data
+2026-09-09 12:03:17,980 INFO Dumping pcb data
+2026-09-09 12:03:17,982 INFO Created file /home/neuro/candi-clone/current/hardware/../output/assembly/interactive_bom.html
 STEP file 'output/mechanical/FRC_Sensor_CAN.step' created.
 
-Export time 1.177 s
+Export time 1.283 s

@@ -1,226 +1,65 @@
 {
   "result": "PASS",
-  "baseline_commit": "ebdd1b1681c73dcc166af08f16474a8b3da037c5",
-  "baseline_sha256": "15dec7cdf49aa18515ace2ceabd1f637e07f6ecce912edf748c8dd4587812b06",
+  "baseline_commit": "e7d5fe6918b5b763572faffb6a5d66720c1ba648",
+  "baseline_sha256": "26ea57f6580597ce87de8d732c17e6b7dd39b15da5c0d2419e6a276a276bc8d7",
   "added_parts": [
-    "C70",
-    "C71",
-    "C72",
-    "C73",
-    "D5",
-    "D6",
-    "Q2",
-    "Q3",
-    "R68",
-    "R69",
-    "R70",
-    "R71",
-    "R72",
-    "R73",
-    "R74",
-    "R75"
+    "C74",
+    "C75",
+    "R31",
+    "U10"
   ],
   "removed_parts": [],
   "changed_parts": [
     {
-      "reference": "C23",
+      "reference": "D10",
       "fields": [
-        "note"
-      ]
-    },
-    {
-      "reference": "C24",
-      "fields": [
-        "note"
-      ]
-    },
-    {
-      "reference": "C60",
-      "fields": [
-        "pins"
-      ]
-    },
-    {
-      "reference": "C61",
-      "fields": [
-        "mpn",
-        "note",
-        "pins",
-        "value",
-        "voltage"
-      ]
-    },
-    {
-      "reference": "C62",
-      "fields": [
-        "pins"
-      ]
-    },
-    {
-      "reference": "C63",
-      "fields": [
-        "pins"
-      ]
-    },
-    {
-      "reference": "C64",
-      "fields": [
-        "pins"
-      ]
-    },
-    {
-      "reference": "C65",
-      "fields": [
-        "mpn",
-        "note",
-        "pins",
-        "sheet",
-        "value",
-        "voltage"
-      ]
-    },
-    {
-      "reference": "C66",
-      "fields": [
-        "note"
-      ]
-    },
-    {
-      "reference": "C7",
-      "fields": [
-        "note"
-      ]
-    },
-    {
-      "reference": "C8",
-      "fields": [
-        "note"
-      ]
-    },
-    {
-      "reference": "D4",
-      "fields": [
-        "note",
-        "pins"
-      ]
-    },
-    {
-      "reference": "L2",
-      "fields": [
-        "note",
-        "pins"
-      ]
-    },
-    {
-      "reference": "R60",
-      "fields": [
-        "pins"
-      ]
-    },
-    {
-      "reference": "R62",
-      "fields": [
-        "mpn",
-        "note",
-        "pins",
-        "sheet",
-        "source_footprint",
-        "value"
-      ]
-    },
-    {
-      "reference": "R65",
-      "fields": [
-        "mpn",
-        "note",
-        "pins",
-        "sheet",
-        "source_footprint",
-        "temperature_coefficient_ppm_C",
-        "tolerance"
-      ]
-    },
-    {
-      "reference": "R66",
-      "fields": [
-        "mpn",
-        "note",
-        "pins",
-        "sheet",
-        "source_footprint",
-        "temperature_coefficient_ppm_C",
-        "tolerance",
-        "value"
-      ]
-    },
-    {
-      "reference": "R67",
-      "fields": [
-        "mpn",
-        "note",
-        "pins",
-        "sheet",
-        "temperature_coefficient_ppm_C",
-        "tolerance",
-        "value"
-      ]
-    },
-    {
-      "reference": "U4",
-      "fields": [
-        "note",
-        "pins"
-      ]
-    },
-    {
-      "reference": "U5",
-      "fields": [
-        "note",
-        "pins"
-      ]
-    },
-    {
-      "reference": "U7",
-      "fields": [
-        "note",
-        "pins"
-      ]
-    },
-    {
-      "reference": "U8",
-      "fields": [
-        "note",
-        "pins"
-      ]
-    },
-    {
-      "reference": "U9",
-      "fields": [
-        "datasheet",
         "footprint",
         "kind",
         "mpn",
         "note",
         "pins",
-        "sheet",
         "source_footprint",
         "value"
       ]
+    },
+    {
+      "reference": "J8",
+      "fields": [
+        "exclude_bom",
+        "footprint",
+        "mpn",
+        "note",
+        "source_footprint",
+        "value"
+      ]
+    },
+    {
+      "reference": "R30",
+      "fields": [
+        "mpn",
+        "note",
+        "pins",
+        "value"
+      ]
+    },
+    {
+      "reference": "U5",
+      "fields": [
+        "pins"
+      ]
     }
   ],
-  "unchanged": "Sensor connectors, power jumpers, CAN transceiver, MCU part, clock and three comparator/bias signal circuits. Two MCU bias-control pins moved to free ADC channels.",
+  "unchanged": "All sensor-power, protection, comparator/bias, CAN and clock circuits. MCU part/pin assignments unchanged; PB3 now sends RGB data. J8 electrical pin numbers retained, physical pattern replaced.",
   "board_mm": [
     52,
     74
   ],
-  "area_change_from_rev_f_percent": 15.625,
+  "area_change_from_rev_g_percent": 0,
   "cost_10_board_purchase_USD": {
-    "rev_e": 35.13539999999998,
-    "rev_f": 27.1738,
-    "rev_g": 28.812299999999997,
-    "saving_vs_rev_e": 6.323099999999986,
-    "added_vs_rev_f": 1.638499999999997
+    "rev_g": 28.8123,
+    "rev_h": 28.944599999999998,
+    "added_vs_rev_g": 0.1322999999999972
   },
-  "firmware": "Hardware 7 / app 0.8.0 / protocol 4. New power enables and rail ADC pins; prior update image tags rejected.",
-  "scope": "Electrical contract and procurement arithmetic; native CAD/copper verification and physical testing are separate."
+  "firmware": "Hardware 8 / app 0.9.0 / boot 1.1.0 / protocol 4. Rev H image tag prevents accidental cross-revision LED firmware.",
+  "scope": "Circuit contract and procurement arithmetic; native CAD/copper verification and physical testing remain separate."
 }

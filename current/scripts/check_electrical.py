@@ -39,7 +39,7 @@ efuse_max=(903/(2610*(1-budget))+.0112)*(1+.104)
 switch={'12V_output_limit_A':[efuse_min,efuse_max],'5V_limit_A':ilim(59),
         'note':'U9 limits the protected 12 V output after the boost reservoir. U4 and U9 latch on their specified faults. MCU enables allow deliberate CAN reset; no automatic retry.'}
 assert efuse_min>.3001 and efuse_max<.41
-logic=.10
+logic=.15 # Includes 20 mA RGB/buffer allowance; retained 3.3 V logic reserve.
 # The removed boost-input switch no longer contributes RON or overload deglitch.
 vin_boost_min=vregmin-.12
 iboost=v12max*.31/(vin_boost_min*.80)

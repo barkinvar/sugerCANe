@@ -1,19 +1,7 @@
 {
-  "order_decision": "PASS pre-fabrication engineering screens; unbuilt prototype",
+  "revision": "H",
+  "order_decision": "LED/header review complete; full power rerun not completed",
   "physical_tests_performed": false,
-  "hardware_changed": true,
-  "revision": "G",
-  "input_hashes": {
-    "hardware/design/circuit.json": "628448e602daa1dd8e1c357766c2b69a74969ecad914084fe6b7ee6043ba1e12",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "99e5cb31aa0881b20291b8853cd55cebe4716b7c874eb7c6de99d3121f9765a8",
-    "reports/electrical/electrical_checks.json": "9bc8c6f191deb39899b5031d02078fd71c71f6b8d662ec5c86f3d3a0cee3ac43",
-    "reports/electrical/boost_spice.json": "abf1fa1d953f90572f97d3d5d1e6b54312e6df57dad41d9b3b06d733a0ca6789",
-    "reports/design_parity.json": "7383268d702afec7b0b83e89f64da9616de98e7daea04e15c96c9aa9b08f9571",
-    "reports/board_constraints.json": "194f84bb64967752fe1dc27eab759ab6e7476cb587b148e6850b533cdb992e5c",
-    "scripts/check_boost_spice.py": "581bb55d77d235f98540b6552b15adccc7db74324cbee23ae97961415a7b3c8f",
-    "scripts/check_electrical.py": "be656cedc1803ba01aa5acb002ba08d0929d46a83e1d21b92484977a2a7fd30a",
-    "scripts/check_order_readiness.py": "4afe4b79774e97b4380c62323339782e613714d4985463be46d65d1c8029e53e"
-  },
   "pin_review": {
     "checks": {
       "U1": true,
@@ -28,6 +16,8 @@
       "U7": true,
       "U4": true,
       "U9": true,
+      "D10": true,
+      "U10": true,
       "Q2": true,
       "Q3": true,
       "SWD_reset_and_BOOT0_exposed": true,
@@ -48,17 +38,20 @@
     "via_plating_um": 20,
     "boost_input_A": 1.3,
     "other_5V_sensor_A": 0.51,
-    "logic_A": 0.1,
-    "buck_to_boost_drop_V": 0.04552822472524169,
+    "logic_A": 0.13,
+    "RGB_buffer_A": 0.02,
+    "buck_to_boost_drop_V": 0.04621120907683994,
     "boost_to_efuse_drop_V": 0.01232276112341765,
-    "total_boost_path_drop_V": 0.04552822472524169,
+    "total_boost_path_drop_V": 0.04621120907683994,
     "revised_PCB_allowance_V": 0.12,
     "results": {
       "V5_INTERNAL": {
-        "('L1', '2')": 0.0632947485139618,
-        "('L2', '1')": -0.04552822472524169,
-        "('U4', '1')": 0.061968041986447724,
-        "('U2', '1')": 0.05649871230777952
+        "('L1', '2')": 0.0643717640633362,
+        "('L2', '1')": -0.04621120907683994,
+        "('U4', '1')": 0.06304505753582217,
+        "('U2', '1')": 0.05687916943472996,
+        "('U10', '5')": -0.02324133968279363,
+        "('D10', '2')": -0.046916272226060096
       },
       "BOOST_12V": {
         "('D4', '1')": -3.001557360734495e-17,
@@ -93,16 +86,8 @@
         }
       }
     },
-    "geometry_sha256": "0b867b176dadb3e625c58ad8911d50ae460372de87c6b00fb6cc562e2267c904",
+    "geometry_sha256": "9b610aa446d6ecb0b4a3b2c3b186a2adbb9ebdb248dd883561e14f81805ecde6",
     "scope": "Nominal etched dimensions and ideal pads. No temperature solution, ground return, contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json."
   },
-  "resolved_rev_f_findings": [
-    "Output eFuse isolates reservoir from a sensor short",
-    "Boost input no longer passes through the former 1.2 A switch",
-    "Controlled output slew and staggered firmware startup",
-    "Explicit CAN reset and default-off rail enables",
-    "ADC monitoring replaces coarse comparator rail indication",
-    "Buck input capacitors relocated with verified local VIN and ground paths"
-  ],
-  "limitations": "Ideal pad/nominal copper DC model; no ground-return/contact/cable resistance or thermal solution. Vendor transient models use an idealized upstream 5 V supply and typical silicon. No board has been assembled or measured. Follow docs/VALIDATION.md for physical acceptance."
+  "scope": "Current native pin and routed-copper DC checks pass with the RGB reserve. This is not a completed full power transient review."
 }

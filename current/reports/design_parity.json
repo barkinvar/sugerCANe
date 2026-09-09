@@ -1,9 +1,9 @@
 {
-  "physical_components": 138,
-  "model_pin_count": 378,
-  "unique_named_nets": 76,
-  "schematic_nodes": 378,
-  "board_numbered_pads": 393,
+  "physical_components": 142,
+  "model_pin_count": 391,
+  "unique_named_nets": 77,
+  "schematic_nodes": 391,
+  "board_numbered_pads": 406,
   "errors": [],
   "pass": true
 }

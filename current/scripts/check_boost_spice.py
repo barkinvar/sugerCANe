@@ -99,7 +99,7 @@ def circuit(case, parts, electrical):
     else:
         lines += [f'Vsrc SOURCE 0 PWL({case.get("source",f"0 0 100u 0 200u {vin}")})',
                   'Rsource SOURCE V5_INTERNAL .12','Cinternal V5_INTERNAL 0 25.92u',
-                  'Bother V5_INTERNAL 0 I={.4*limit(v(V5_INTERNAL),0,1)}',
+                  'Bother V5_INTERNAL 0 I={.45*limit(v(V5_INTERNAL),0,1)}',
                   f'Xu8 {pins("U8",[3,2,6,8,4,5,1,7])} BST_TPS61085',
                   'L2 V5_INTERNAL LX 3.3u','Rdcr LX BOOST_SW .032',
                   'D4 BOOST_SW BOOST_12V DI_B240A',
@@ -232,6 +232,7 @@ def main():
     def digest(deck):return hashlib.sha256((deck+version+''.join(sha(WORK/f) for f in files)).encode()).hexdigest()
     if args.verify_report:
         report=json.loads((REPORT/'boost_spice.json').read_text())
+        assert report['result']!='INCOMPLETE', 'Full transient report is incomplete; canceled traces are not passing evidence'
         assert report['circuit_sha256']==sha(ROOT/'hardware/design/circuit.json')
         assert report['script_sha256']==sha(Path(__file__))
         assert report['sources']==json.loads((SOURCE/'manifest.json').read_text())
@@ -275,8 +276,8 @@ def main():
     runs=all_runs[:len(selected)]
     passed=all(r['pass'] for r,d in all_runs)
     report=dict(result='PASS transient screening only' if passed else 'FAIL',
-        scope='Rev G vendor TPS61085/TPS259620/TPS2553-1 models, 27C typical silicon. Syntax-only ngspice ports; no PSpice/board correlation. Combined startup with a 4ms source ramp plus separate boost load/fault-limit steps, eFuse fault/reset cases and 5V-switch fault/reset. Not physical qualification.',
-        source_assumptions='Boost cases: ideal upstream 5 V source, 120 milliohm series resistance, 25.92 uF internal capacitance, 0.4 A concurrent logic/5 V load. The standalone 5 V switch case instead has 1.3 A concurrent internal load. Standalone eFuse cases use an ideal 12.003 V source with 120 milliohm series resistance and 66 uF reservoir. Upstream buck control loop/current limit and PCB/cable inductance are not modeled.',
+        scope='Rev H vendor TPS61085/TPS259620/TPS2553-1 models, 27C typical silicon. Syntax-only ngspice ports; no PSpice/board correlation. Combined startup with a 4ms source ramp plus separate boost load/fault-limit steps, eFuse fault/reset cases and 5V-switch fault/reset. Not physical qualification.',
+        source_assumptions='Boost cases: ideal upstream 5 V source, 120 milliohm series resistance, 25.92 uF internal capacitance, 0.45 A concurrent logic/RGB/5 V load. The standalone 5 V switch case instead has 1.3 A concurrent internal load. Standalone eFuse cases use an ideal 12.003 V source with 120 milliohm series resistance and 66 uF reservoir. Upstream buck control loop/current limit and PCB/cable inductance are not modeled.',
         passive_assumptions='Boost C60 and reservoir use explicit derated/nameplate case values; C61/C65/C71 1uF nominal. Inductor 3.3uH and 32mOhm DCR, linear below its 8A/20%-inductance-drop domain. External capacitor ESR .1ohm. One explicitly identified current-limit surrogate uses a 2.92k test resistor instead of fitted R62=2.61k, giving typical-model current below the calculated 314.699mA minimum, with 120uF external capacitance. This tests reduced charging headroom, not all silicon corners. D5 uses the B240A vendor model; D6 behavioral clamp approximates static conduction only. Q2 enable uses 2ohm final shunt resistance; standalone fault tests apply a finite 1us conductance ramp to avoid a discontinuous behavioral-device transition. No transistor timing claim. eFuse thermal timing is manufacturer-model-only, not temperature qualification.',
         numerical_notes='Gear integration, 1fF numerical node shunt, relative tolerance .003. Combined startup uses KLU/xtrtol=2 with maximum step 50 ns and a complete KLU/xtrtol=7 repeat at maximum step 25 ns; both must pass the same electrical criteria and the voltage/peak-current comparison. Original xtrtol=1 stopped numerically near 28.971 ms and is retained as an incomplete diagnostic. Vendor helper names prefixed; duplicate PARAMS removed and Boolean XOR syntax translated. No semiconductor parameters tuned. Standalone zero-supply operating-point warnings are accepted only after successful transient OP fallback and complete transient output. Other warnings/errors fail. Extreme values use all adaptive timesteps; plots decimated.',
         circuit_sha256=sha(ROOT/'hardware/design/circuit.json'),script_sha256=sha(Path(__file__)),
@@ -319,7 +320,7 @@ def main():
             ax.plot(repeat_data['time']*1000,repeat_data['v(sensor_12v)'],'--',label=repeat_label,lw=.8)
         ax.set_title(r['case']['name'].replace('_',' ')+' — '+('PASS' if r['pass'] else 'FAIL'),fontsize=9)
         ax.set_xlabel('ms');ax.set_ylabel('V');ax.grid(alpha=.2);ax.legend(fontsize=7)
-    fig.suptitle('Rev G transient screening — '+('PASS' if passed else 'FAIL')+'\nVendor models, idealized upstream supply');fig.tight_layout()
+    fig.suptitle('Rev H transient screening — '+('PASS' if passed else 'FAIL')+'\nVendor models, idealized upstream supply');fig.tight_layout()
     fig.savefig(dest/f'boost_spice{suffix}.png',dpi=150);plt.close(fig)
     raise SystemExit(0 if passed else 1)
 

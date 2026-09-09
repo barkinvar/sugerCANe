@@ -213,121 +213,6 @@
       ]
     },
     {
-      "reference": "J8",
-      "value": "POGO SERVICE",
-      "package": "Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical",
-      "x_mm": 24.0,
-      "y_mm": -5.75,
-      "rotation_deg": 0.0,
-      "pads": [
-        {
-          "number": "",
-          "net": "",
-          "x_mm": 20.19,
-          "y_mm": -5.75,
-          "copper_top": false,
-          "copper_bottom": false
-        },
-        {
-          "number": "",
-          "net": "",
-          "x_mm": 27.81,
-          "y_mm": -4.734,
-          "copper_top": false,
-          "copper_bottom": false
-        },
-        {
-          "number": "",
-          "net": "",
-          "x_mm": 27.81,
-          "y_mm": -6.766,
-          "copper_top": false,
-          "copper_bottom": false
-        },
-        {
-          "number": "1",
-          "net": "NRST",
-          "x_mm": 21.46,
-          "y_mm": -6.385,
-          "copper_top": true,
-          "copper_bottom": false
-        },
-        {
-          "number": "2",
-          "net": "UART_RX",
-          "x_mm": 22.73,
-          "y_mm": -6.385,
-          "copper_top": true,
-          "copper_bottom": false
-        },
-        {
-          "number": "3",
-          "net": "UART_TX",
-          "x_mm": 24.0,
-          "y_mm": -6.385,
-          "copper_top": true,
-          "copper_bottom": false
-        },
-        {
-          "number": "4",
-          "net": "SWCLK",
-          "x_mm": 25.27,
-          "y_mm": -6.385,
-          "copper_top": true,
-          "copper_bottom": false
-        },
-        {
-          "number": "5",
-          "net": "SWDIO",
-          "x_mm": 26.54,
-          "y_mm": -6.385,
-          "copper_top": true,
-          "copper_bottom": false
-        },
-        {
-          "number": "6",
-          "net": "+3V3",
-          "x_mm": 26.54,
-          "y_mm": -5.115,
-          "copper_top": true,
-          "copper_bottom": false
-        },
-        {
-          "number": "7",
-          "net": "GND",
-          "x_mm": 25.27,
-          "y_mm": -5.115,
-          "copper_top": true,
-          "copper_bottom": false
-        },
-        {
-          "number": "8",
-          "net": "GND",
-          "x_mm": 24.0,
-          "y_mm": -5.115,
-          "copper_top": true,
-          "copper_bottom": false
-        },
-        {
-          "number": "9",
-          "net": "BOOT0",
-          "x_mm": 22.73,
-          "y_mm": -5.115,
-          "copper_top": true,
-          "copper_bottom": false
-        },
-        {
-          "number": "10",
-          "net": "GND",
-          "x_mm": 21.46,
-          "y_mm": -5.115,
-          "copper_top": true,
-          "copper_bottom": false
-        }
-      ],
-      "models": []
-    },
-    {
       "reference": "C40",
       "value": "100nF",
       "package": "C_0805_2012Metric",
@@ -1729,6 +1614,35 @@
       ]
     },
     {
+      "reference": "C74",
+      "value": "100nF",
+      "package": "C_0805_2012Metric",
+      "x_mm": 13.0,
+      "y_mm": -17.0,
+      "rotation_deg": 180.0,
+      "pads": [
+        {
+          "number": "1",
+          "net": "V5_INTERNAL",
+          "x_mm": 13.95,
+          "y_mm": -17.0,
+          "copper_top": true,
+          "copper_bottom": false
+        },
+        {
+          "number": "2",
+          "net": "GND",
+          "x_mm": 12.05,
+          "y_mm": -17.0,
+          "copper_top": true,
+          "copper_bottom": false
+        }
+      ],
+      "models": [
+        "${KIPRJMOD}/library/3d/C_0805_2012Metric.step"
+      ]
+    },
+    {
       "reference": "R2",
       "value": "13.7k",
       "package": "R_0805_2012Metric",
@@ -2025,7 +1939,7 @@
         },
         {
           "number": "26",
-          "net": "STATUS_GREEN",
+          "net": "STATUS_DATA",
           "x_mm": 41.5,
           "y_mm": -20.825,
           "copper_top": true,
@@ -2468,23 +2382,23 @@
       "reference": "JP2",
       "value": "TERM 120R",
       "package": "SolderSelector_2",
-      "x_mm": 17.0,
-      "y_mm": -4.0,
-      "rotation_deg": 90.0,
+      "x_mm": 17.1,
+      "y_mm": -2.0,
+      "rotation_deg": 0.0,
       "pads": [
         {
           "number": "1",
           "net": "CAN_TERM",
-          "x_mm": 17.0,
-          "y_mm": -4.75,
+          "x_mm": 16.35,
+          "y_mm": -2.0,
           "copper_top": true,
           "copper_bottom": false
         },
         {
           "number": "2",
           "net": "CANL",
-          "x_mm": 17.0,
-          "y_mm": -3.25,
+          "x_mm": 17.85,
+          "y_mm": -2.0,
           "copper_top": true,
           "copper_bottom": false
         }
@@ -2942,6 +2856,51 @@
       ]
     },
     {
+      "reference": "D10",
+      "value": "SK6805-EC15",
+      "package": "LED_SK6805_EC15",
+      "x_mm": 26.0,
+      "y_mm": -2.0,
+      "rotation_deg": 0.0,
+      "pads": [
+        {
+          "number": "1",
+          "net": "STATUS_DIN",
+          "x_mm": 25.525,
+          "y_mm": -2.475,
+          "copper_top": true,
+          "copper_bottom": false
+        },
+        {
+          "number": "2",
+          "net": "V5_INTERNAL",
+          "x_mm": 26.475,
+          "y_mm": -2.475,
+          "copper_top": true,
+          "copper_bottom": false
+        },
+        {
+          "number": "3",
+          "net": "",
+          "x_mm": 26.475,
+          "y_mm": -1.525,
+          "copper_top": true,
+          "copper_bottom": false
+        },
+        {
+          "number": "4",
+          "net": "GND",
+          "x_mm": 25.525,
+          "y_mm": -1.525,
+          "copper_top": true,
+          "copper_bottom": false
+        }
+      ],
+      "models": [
+        "${KIPRJMOD}/library/3d/LED_SK6805_EC15.step"
+      ]
+    },
+    {
       "reference": "R303",
       "value": "20k",
       "package": "R_0805_2012Metric",
@@ -3275,6 +3234,35 @@
       ],
       "models": [
         "${KIPRJMOD}/library/3d/D_SOD-123.step"
+      ]
+    },
+    {
+      "reference": "C75",
+      "value": "100nF",
+      "package": "C_0805_2012Metric",
+      "x_mm": 29.3,
+      "y_mm": -1.75,
+      "rotation_deg": 90.0,
+      "pads": [
+        {
+          "number": "1",
+          "net": "V5_INTERNAL",
+          "x_mm": 29.3,
+          "y_mm": -2.7,
+          "copper_top": true,
+          "copper_bottom": false
+        },
+        {
+          "number": "2",
+          "net": "GND",
+          "x_mm": 29.3,
+          "y_mm": -0.8,
+          "copper_top": true,
+          "copper_bottom": false
+        }
+      ],
+      "models": [
+        "${KIPRJMOD}/library/3d/C_0805_2012Metric.step"
       ]
     },
     {
@@ -4006,32 +3994,125 @@
       ]
     },
     {
-      "reference": "D10",
-      "value": "GREEN",
-      "package": "LED_0805_2012Metric",
-      "x_mm": 17.5,
+      "reference": "R30",
+      "value": "330",
+      "package": "R_0805_2012Metric",
+      "x_mm": 16.399999,
       "y_mm": -7.5,
       "rotation_deg": 90.0,
       "pads": [
         {
           "number": "1",
-          "net": "GND",
-          "x_mm": 17.5,
-          "y_mm": -8.4375,
+          "net": "STATUS_5V_DATA",
+          "x_mm": 16.399999,
+          "y_mm": -8.4125,
           "copper_top": true,
           "copper_bottom": false
         },
         {
           "number": "2",
-          "net": "STATUS_GREEN_A",
-          "x_mm": 17.5,
-          "y_mm": -6.5625,
+          "net": "STATUS_DIN",
+          "x_mm": 16.399999,
+          "y_mm": -6.5875,
           "copper_top": true,
           "copper_bottom": false
         }
       ],
       "models": [
-        "${KIPRJMOD}/library/3d/LED_0805_2012Metric.step"
+        "${KIPRJMOD}/library/3d/R_0805_2012Metric.step"
+      ]
+    },
+    {
+      "reference": "J8",
+      "value": "2x5 SERVICE 2.54mm",
+      "package": "Service_2x05_P2.54mm",
+      "x_mm": 18.92,
+      "y_mm": -7.57,
+      "rotation_deg": 90.0,
+      "pads": [
+        {
+          "number": "1",
+          "net": "NRST",
+          "x_mm": 18.92,
+          "y_mm": -7.57,
+          "copper_top": true,
+          "copper_bottom": true
+        },
+        {
+          "number": "2",
+          "net": "UART_RX",
+          "x_mm": 18.92,
+          "y_mm": -5.03,
+          "copper_top": true,
+          "copper_bottom": true
+        },
+        {
+          "number": "3",
+          "net": "UART_TX",
+          "x_mm": 21.46,
+          "y_mm": -7.57,
+          "copper_top": true,
+          "copper_bottom": true
+        },
+        {
+          "number": "4",
+          "net": "SWCLK",
+          "x_mm": 21.46,
+          "y_mm": -5.03,
+          "copper_top": true,
+          "copper_bottom": true
+        },
+        {
+          "number": "5",
+          "net": "SWDIO",
+          "x_mm": 24.0,
+          "y_mm": -7.57,
+          "copper_top": true,
+          "copper_bottom": true
+        },
+        {
+          "number": "6",
+          "net": "+3V3",
+          "x_mm": 24.0,
+          "y_mm": -5.03,
+          "copper_top": true,
+          "copper_bottom": true
+        },
+        {
+          "number": "7",
+          "net": "GND",
+          "x_mm": 26.54,
+          "y_mm": -7.57,
+          "copper_top": true,
+          "copper_bottom": true
+        },
+        {
+          "number": "8",
+          "net": "GND",
+          "x_mm": 26.54,
+          "y_mm": -5.03,
+          "copper_top": true,
+          "copper_bottom": true
+        },
+        {
+          "number": "9",
+          "net": "BOOT0",
+          "x_mm": 29.08,
+          "y_mm": -7.57,
+          "copper_top": true,
+          "copper_bottom": true
+        },
+        {
+          "number": "10",
+          "net": "GND",
+          "x_mm": 29.08,
+          "y_mm": -5.03,
+          "copper_top": true,
+          "copper_bottom": true
+        }
+      ],
+      "models": [
+        "${KIPRJMOD}/library/3d/Service_2x05_P2.54mm.step"
       ]
     },
     {
@@ -4142,6 +4223,35 @@
           "net": "INPUT3",
           "x_mm": 46.0,
           "y_mm": -26.4125,
+          "copper_top": true,
+          "copper_bottom": false
+        }
+      ],
+      "models": [
+        "${KIPRJMOD}/library/3d/R_0805_2012Metric.step"
+      ]
+    },
+    {
+      "reference": "R31",
+      "value": "10k",
+      "package": "R_0805_2012Metric",
+      "x_mm": 22.7,
+      "y_mm": -2.0,
+      "rotation_deg": 0.0,
+      "pads": [
+        {
+          "number": "1",
+          "net": "STATUS_DATA",
+          "x_mm": 21.7875,
+          "y_mm": -2.0,
+          "copper_top": true,
+          "copper_bottom": false
+        },
+        {
+          "number": "2",
+          "net": "GND",
+          "x_mm": 23.6125,
+          "y_mm": -2.0,
           "copper_top": true,
           "copper_bottom": false
         }
@@ -4792,35 +4902,6 @@
       ]
     },
     {
-      "reference": "R30",
-      "value": "1k",
-      "package": "R_0805_2012Metric",
-      "x_mm": 18.0,
-      "y_mm": -17.0,
-      "rotation_deg": 90.0,
-      "pads": [
-        {
-          "number": "1",
-          "net": "STATUS_GREEN",
-          "x_mm": 18.0,
-          "y_mm": -17.9125,
-          "copper_top": true,
-          "copper_bottom": false
-        },
-        {
-          "number": "2",
-          "net": "STATUS_GREEN_A",
-          "x_mm": 18.0,
-          "y_mm": -16.0875,
-          "copper_top": true,
-          "copper_bottom": false
-        }
-      ],
-      "models": [
-        "${KIPRJMOD}/library/3d/R_0805_2012Metric.step"
-      ]
-    },
-    {
       "reference": "R74",
       "value": "20k",
       "package": "R_0805_2012Metric",
@@ -4847,6 +4928,59 @@
       ],
       "models": [
         "${KIPRJMOD}/library/3d/R_0805_2012Metric.step"
+      ]
+    },
+    {
+      "reference": "U10",
+      "value": "SN74AHCT1G125",
+      "package": "SOT-23-5",
+      "x_mm": 16.9,
+      "y_mm": -17.0,
+      "rotation_deg": 180.0,
+      "pads": [
+        {
+          "number": "1",
+          "net": "GND",
+          "x_mm": 18.0375,
+          "y_mm": -17.95,
+          "copper_top": true,
+          "copper_bottom": false
+        },
+        {
+          "number": "2",
+          "net": "STATUS_DATA",
+          "x_mm": 18.0375,
+          "y_mm": -17.0,
+          "copper_top": true,
+          "copper_bottom": false
+        },
+        {
+          "number": "3",
+          "net": "GND",
+          "x_mm": 18.0375,
+          "y_mm": -16.05,
+          "copper_top": true,
+          "copper_bottom": false
+        },
+        {
+          "number": "4",
+          "net": "STATUS_5V_DATA",
+          "x_mm": 15.7625,
+          "y_mm": -16.05,
+          "copper_top": true,
+          "copper_bottom": false
+        },
+        {
+          "number": "5",
+          "net": "V5_INTERNAL",
+          "x_mm": 15.7625,
+          "y_mm": -17.95,
+          "copper_top": true,
+          "copper_bottom": false
+        }
+      ],
+      "models": [
+        "${KIPRJMOD}/library/3d/SOT-23-5.step"
       ]
     },
     {
@@ -4882,14 +5016,14 @@
       "reference": "R42",
       "value": "120",
       "package": "R_1206_3216Metric",
-      "x_mm": 31.5,
+      "x_mm": 31.95,
       "y_mm": -7.5,
       "rotation_deg": 90.0,
       "pads": [
         {
           "number": "1",
           "net": "CANH",
-          "x_mm": 31.5,
+          "x_mm": 31.95,
           "y_mm": -8.9625,
           "copper_top": true,
           "copper_bottom": false
@@ -4897,7 +5031,7 @@
         {
           "number": "2",
           "net": "CAN_TERM",
-          "x_mm": 31.5,
+          "x_mm": 31.95,
           "y_mm": -6.0375,
           "copper_top": true,
           "copper_bottom": false
@@ -5028,27 +5162,6 @@
     }
   ],
   "drills": [
-    {
-      "x_mm": 20.19,
-      "y_mm": -5.75,
-      "diameter_mm": 0.9906,
-      "plated": false,
-      "source": "J8."
-    },
-    {
-      "x_mm": 27.81,
-      "y_mm": -4.734,
-      "diameter_mm": 0.9906,
-      "plated": false,
-      "source": "J8."
-    },
-    {
-      "x_mm": 27.81,
-      "y_mm": -6.766,
-      "diameter_mm": 0.9906,
-      "plated": false,
-      "source": "J8."
-    },
     {
       "x_mm": 13.0,
       "y_mm": -9.0,
@@ -5251,6 +5364,76 @@
       "diameter_mm": 1.1,
       "plated": true,
       "source": "J2.2"
+    },
+    {
+      "x_mm": 18.92,
+      "y_mm": -7.57,
+      "diameter_mm": 1.1,
+      "plated": true,
+      "source": "J8.1"
+    },
+    {
+      "x_mm": 18.92,
+      "y_mm": -5.03,
+      "diameter_mm": 1.1,
+      "plated": true,
+      "source": "J8.2"
+    },
+    {
+      "x_mm": 21.46,
+      "y_mm": -7.57,
+      "diameter_mm": 1.1,
+      "plated": true,
+      "source": "J8.3"
+    },
+    {
+      "x_mm": 21.46,
+      "y_mm": -5.03,
+      "diameter_mm": 1.1,
+      "plated": true,
+      "source": "J8.4"
+    },
+    {
+      "x_mm": 24.0,
+      "y_mm": -7.57,
+      "diameter_mm": 1.1,
+      "plated": true,
+      "source": "J8.5"
+    },
+    {
+      "x_mm": 24.0,
+      "y_mm": -5.03,
+      "diameter_mm": 1.1,
+      "plated": true,
+      "source": "J8.6"
+    },
+    {
+      "x_mm": 26.54,
+      "y_mm": -7.57,
+      "diameter_mm": 1.1,
+      "plated": true,
+      "source": "J8.7"
+    },
+    {
+      "x_mm": 26.54,
+      "y_mm": -5.03,
+      "diameter_mm": 1.1,
+      "plated": true,
+      "source": "J8.8"
+    },
+    {
+      "x_mm": 29.08,
+      "y_mm": -7.57,
+      "diameter_mm": 1.1,
+      "plated": true,
+      "source": "J8.9"
+    },
+    {
+      "x_mm": 29.08,
+      "y_mm": -5.03,
+      "diameter_mm": 1.1,
+      "plated": true,
+      "source": "J8.10"
     },
     {
       "x_mm": 5.0,
@@ -5470,13 +5653,6 @@
       "source": "via"
     },
     {
-      "x_mm": 21.46,
-      "y_mm": -2.8,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
       "x_mm": 17.5,
       "y_mm": -47.8,
       "diameter_mm": 0.3,
@@ -5528,13 +5704,6 @@
     {
       "x_mm": 29.0,
       "y_mm": -20.6,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 16.592099,
-      "y_mm": -7.5296,
       "diameter_mm": 0.3,
       "plated": true,
       "source": "via"
@@ -5715,13 +5884,6 @@
       "source": "via"
     },
     {
-      "x_mm": 25.27,
-      "y_mm": -2.8,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
       "x_mm": 9.65,
       "y_mm": -37.65,
       "diameter_mm": 0.3,
@@ -5843,13 +6005,6 @@
     {
       "x_mm": 34.1906,
       "y_mm": -52.1488,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 26.54,
-      "y_mm": -2.8,
       "diameter_mm": 0.3,
       "plated": true,
       "source": "via"
@@ -6100,111 +6255,6 @@
       "source": "via"
     },
     {
-      "x_mm": 21.46,
-      "y_mm": -8.8,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 36.6083,
-      "y_mm": -23.0263,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 30.5,
-      "y_mm": -19.2131,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 22.73,
-      "y_mm": -8.8,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 41.5012,
-      "y_mm": -23.3368,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 26.025,
-      "y_mm": -10.825,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 42.3904,
-      "y_mm": -25.6488,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 24.0,
-      "y_mm": -8.8,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 42.3161,
-      "y_mm": -22.2744,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 25.27,
-      "y_mm": -8.8,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 26.54,
-      "y_mm": -8.8,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 42.3659,
-      "y_mm": -23.1909,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 37.5,
-      "y_mm": -16.439,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 32.924599,
-      "y_mm": -4.8371,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 22.73,
-      "y_mm": -2.8,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
       "x_mm": 12.625,
       "y_mm": -27.0,
       "diameter_mm": 0.3,
@@ -6226,6 +6276,13 @@
       "source": "via"
     },
     {
+      "x_mm": 13.55,
+      "y_mm": -25.725,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
       "x_mm": 19.737,
       "y_mm": -51.2907,
       "diameter_mm": 0.4,
@@ -6243,6 +6300,13 @@
       "x_mm": 10.3194,
       "y_mm": -49.3646,
       "diameter_mm": 0.4,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 9.725,
+      "y_mm": -26.85,
+      "diameter_mm": 0.3,
       "plated": true,
       "source": "via"
     },
@@ -6320,6 +6384,20 @@
       "x_mm": 9.0624,
       "y_mm": -13.3243,
       "diameter_mm": 0.4,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 31.425,
+      "y_mm": -4.75,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 37.275,
+      "y_mm": -19.675,
+      "diameter_mm": 0.3,
       "plated": true,
       "source": "via"
     },
@@ -6751,6 +6829,27 @@
       "source": "via"
     },
     {
+      "x_mm": 28.825,
+      "y_mm": -17.1,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 36.6,
+      "y_mm": -23.05,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 31.55,
+      "y_mm": -18.35,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
       "x_mm": 37.0852,
       "y_mm": -53.4749,
       "diameter_mm": 0.3,
@@ -6779,15 +6878,78 @@
       "source": "via"
     },
     {
-      "x_mm": 22.7568,
-      "y_mm": -25.0265,
+      "x_mm": 42.375,
+      "y_mm": -25.6,
       "diameter_mm": 0.3,
       "plated": true,
       "source": "via"
     },
     {
-      "x_mm": 39.2038,
-      "y_mm": -23.8796,
+      "x_mm": 31.8,
+      "y_mm": -19.125,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 40.875,
+      "y_mm": -23.1,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 42.375,
+      "y_mm": -22.5,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 32.75,
+      "y_mm": -18.325,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 31.925,
+      "y_mm": -17.125,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 44.025,
+      "y_mm": -20.875,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 40.625,
+      "y_mm": -9.775,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 42.975,
+      "y_mm": -15.475,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 24.575,
+      "y_mm": -17.325,
+      "diameter_mm": 0.3,
+      "plated": true,
+      "source": "via"
+    },
+    {
+      "x_mm": 41.35,
+      "y_mm": -21.9,
       "diameter_mm": 0.3,
       "plated": true,
       "source": "via"
@@ -6870,20 +7032,6 @@
       "source": "via"
     },
     {
-      "x_mm": 30.477,
-      "y_mm": -7.0605,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 18.4567,
-      "y_mm": -4.75,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
       "x_mm": 31.2345,
       "y_mm": -59.5875,
       "diameter_mm": 0.3,
@@ -6912,5 +7060,5 @@
       "source": "via"
     }
   ],
-  "models_resolved": 135
+  "models_resolved": 140
 }

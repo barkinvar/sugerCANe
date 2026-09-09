@@ -41,8 +41,8 @@ public final class SensorCan12Test {
     check(b.status().isEmpty());f.put(0x120,"04000502037f7701");check(b.status().isPresent());
     f.now=100;check(b.status().isPresent());f.now=101;check(b.status().isEmpty());
     f.put(0x120,"01000502033f3701");check(b.status().isEmpty());
-    f.put(0x131,"0400080007150207");check(b.identity().isEmpty());
-    f.put(0x131,"0400080007140207");check(b.identity().isPresent());
+    f.put(0x131,"0400090008150207");check(b.identity().isEmpty());
+    f.put(0x131,"0400090008140207");check(b.identity().isPresent());
     f.put(0x122,"0000000001000000");check(b.count3().isEmpty());
     check(f.writes==0);
     f.put(0x120,"04000502037f7701");check(b.input(1).orElse(false));

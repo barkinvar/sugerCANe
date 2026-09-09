@@ -1,12 +1,14 @@
-# SC12 Rev G — current design
+# SC12 Rev H — current design
 
 Three digital sensor inputs over CAN, with regulated **5 V / 12 V sensor power** and software-selectable **NPN, PNP, push-pull, floating detection and keeper**. Removable 2 mm jumpers select each port's power voltage. All components mount on the top.
 
-Rev G changes the power path in response to Rev F's simulation findings. The 12 V reservoir is upstream of a controlled output eFuse; both rails have default-off enables and CAN fault reset. Two ADC channels measure the protected rails. [Engineering review](docs/ORDER_READINESS.md) · [verification and bench procedure](docs/VALIDATION.md). This design uses its own CAN protocol; it is not CTRE Phoenix or GrappleHook compatible.
+Rev H adds one enclosure-facing RGB status LED and an ordinary hand-soldered programming header for a ten-board batch. It retains Rev G's power protection and physical voltage jumpers. The 12 V reservoir is upstream of a controlled output eFuse; both rails have default-off enables and CAN fault reset. Two ADC channels measure the protected rails. [Engineering review](docs/ORDER_READINESS.md) · [verification and bench procedure](docs/VALIDATION.md). This design uses its own CAN protocol; it is not CTRE Phoenix or GrappleHook compatible.
 
-![Rev G board](output/review/board_3d_final.png)
+**Rev H status:** RGB/header hardware, firmware and focused checks are complete. The extra full power-transient rerun was stopped before completion; it is not claimed as passed. See the [check summary](reports/release_checks.json).
 
-| Specification | Rev G |
+![Rev H board](output/review/board_3d_final.png)
+
+| Specification | Rev H |
 |---|---|
 | Board supply | 6–22 V DC |
 | Sensor supplies | Regulated 5 V / 12 V; **300 mA shared per rail**, not per port |
@@ -15,22 +17,23 @@ Rev G changes the power path in response to Rev F's simulation findings. The 12 
 | Protection | Reverse input, fuse/TVS, separate protected 5 V and 12 V outputs, controlled 12 V inrush |
 | Fault reset | Remove the fault, then use CAN power reset; hardware limits remain independent |
 | Controller | STM32F042K6T6, TCAN3413; 1 Mbit/s classic CAN |
-| Software | App 0.8.0, bootloader 1.0.0, hardware 7, protocol 4 |
-| Servicing | CAN discovery, ID/settings and recoverable firmware upload; initial installation through SWD contacts |
-| PCB / assembly | **52 × 74 mm**, four copper layers, 126 top SMT parts + nine hand-soldered parts + three loose caps |
+| Software | App 0.9.0, bootloader 1.1.0, hardware 8, protocol 4 |
+| Servicing | CAN discovery, ID/settings and recoverable firmware upload; initial installation through a 2.54 mm SWD header |
+| PCB / assembly | **52 × 74 mm**, four copper layers, 130 top SMT parts + ten hand-soldered parts + three loose caps |
 
-Parts purchasing is about **$28.81 per board at ten boards**, including supplier minimum packs, hand-fitted parts and three loose caps. Protection and measurement add about $1.64 versus F; the design remains about $6.32 below E. PCB, assembly, freight and tax are extra. [Cost calculation](docs/COST_REDUCTION.md).
+Parts purchasing is about **$28.94 per board at ten boards**, including supplier minimum packs, hand-fitted parts and three loose caps. RGB/header changes add about $0.13 in parts versus G; the design remains about $6.19 below E. PCB, assembly, freight and tax are extra. [Cost calculation](docs/COST_REDUCTION.md).
 
 | What you want to do | Start here |
 |---|---|
 | Wire and configure a sensor | [Wiring](docs/WIRING.md), [input modes](docs/INPUT_MODES.md) |
 | Understand the circuit | [Power and input design](DESIGN_PLAN.md), [schematic PDF](output/assembly/schematic.pdf) |
-| Request a prototype quotation | [Factory instructions](docs/FACTORY_ORDER.md), [complete factory packet](order/RevG_SC12_Factory_Upload.zip) |
+| Request a prototype quotation | [Factory instructions](docs/FACTORY_ORDER.md), [package status](order/README.md) |
+| Read LED / choose a programmer | [Status and programming](docs/STATUS_AND_PROGRAMMING.md) |
 | Assemble and program | [Assembly](docs/ASSEMBLY.md), [unit fixture](docs/FIXTURE.md), [CAN service](docs/CAN_SERVICE.md) |
 | Write robot code | [Examples/drivers](examples/README.md), [CAN protocol](docs/CAN_PROTOCOL.md) |
 | Edit the board | [KiCad project](hardware/FRC_Sensor_CAN.kicad_pro), [PCB](hardware/FRC_Sensor_CAN.kicad_pcb), [interactive BOM](output/assembly/interactive_bom.html) |
 | Design an enclosure | [STEP](output/mechanical/FRC_Sensor_CAN.step), [mechanical drawing](output/mechanical/mechanical_drawing.pdf) |
 | Review or reproduce checks | [Validation](docs/VALIDATION.md), [power simulations](reports/electrical/boost_spice.json), [check summary](reports/release_checks.json), [tool setup](TOOLS.md) |
-| Download everything | [Source/review ZIP](release/FRC_Sensor_CAN_RevG_SC12_Prototype.zip), [handbook](output/documentation/SC12_RevG_Handbook.pdf) |
+| Download everything | [Source/release status](release/README.md), [handbook](output/documentation/SC12_RevH_Handbook.pdf) |
 
 Change voltage jumpers only with power disconnected. A missing cap disconnects port power, not its signal wire. Input mode changes use CAN software. Rail voltage readback uses the MCU ADC and factory voltage-reference calibration. External signal inputs remain digital; rail measurement does not add user analog-input or encoder support.

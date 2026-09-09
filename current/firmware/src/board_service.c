@@ -74,6 +74,7 @@ __attribute__((naked,noreturn)) static void jump(uint32_t sp __attribute__((unus
     __asm volatile("msr msp, r0\n bx r1");
 }
 void board_run_application(void) {
+    board_status_stop();
     board_can_standby(true);__disable_irq();SysTick->CTRL=0;SysTick->LOAD=0;SysTick->VAL=0;
     SCB->ICSR=SCB_ICSR_PENDSTCLR_Msk|SCB_ICSR_PENDSVCLR_Msk;
     NVIC->ICER[0]=0xffffffffu;NVIC->ICPR[0]=0xffffffffu;

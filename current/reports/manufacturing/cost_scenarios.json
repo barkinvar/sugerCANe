@@ -1,8 +1,8 @@
 {
-  "date": "2026-09-08",
+  "date": "2026-09-09",
   "source": "https://jlcpcb.com/help/article/pcb-assembly-price",
-  "smt_mpn_types": 53,
-  "economic_cheaper_in_this_limited_comparison_when_charged_extended_types_at_most": 39,
+  "smt_mpn_types": 55,
+  "economic_cheaper_in_this_limited_comparison_when_charged_extended_types_at_most": 40,
   "unknowns": [
     "Exact part allocation and Economic eligibility",
     "PCB",
@@ -18,122 +18,122 @@
     {
       "boards": 5,
       "service": "Standard",
-      "charged_feeder_types": 53,
-      "parts_per_board": 32.95,
-      "setup_stencil_feeders_fixture_per_order": 131.28,
-      "partial_per_board": 59.21
+      "charged_feeder_types": 55,
+      "parts_per_board": 33.21,
+      "setup_stencil_feeders_fixture_per_order": 134.34,
+      "partial_per_board": 60.08
     },
     {
       "boards": 5,
       "service": "Economic",
       "charged_feeder_types": 10,
-      "parts_per_board": 32.95,
+      "parts_per_board": 33.21,
       "setup_stencil_feeders_fixture_per_order": 40.41,
-      "partial_per_board": 41.03
+      "partial_per_board": 41.29
     },
     {
       "boards": 5,
       "service": "Economic",
       "charged_feeder_types": 20,
-      "parts_per_board": 32.95,
+      "parts_per_board": 33.21,
       "setup_stencil_feeders_fixture_per_order": 71.11,
-      "partial_per_board": 47.17
+      "partial_per_board": 47.43
     },
     {
       "boards": 5,
       "service": "Economic",
       "charged_feeder_types": 30,
-      "parts_per_board": 32.95,
+      "parts_per_board": 33.21,
       "setup_stencil_feeders_fixture_per_order": 101.81,
-      "partial_per_board": 53.31
+      "partial_per_board": 53.57
     },
     {
       "boards": 5,
       "service": "Economic",
-      "charged_feeder_types": 53,
-      "parts_per_board": 32.95,
-      "setup_stencil_feeders_fixture_per_order": 172.42,
-      "partial_per_board": 67.43
+      "charged_feeder_types": 55,
+      "parts_per_board": 33.21,
+      "setup_stencil_feeders_fixture_per_order": 178.56,
+      "partial_per_board": 68.92
     },
     {
       "boards": 10,
       "service": "Standard",
-      "charged_feeder_types": 53,
-      "parts_per_board": 28.81,
-      "setup_stencil_feeders_fixture_per_order": 131.28,
-      "partial_per_board": 41.94
+      "charged_feeder_types": 55,
+      "parts_per_board": 28.94,
+      "setup_stencil_feeders_fixture_per_order": 134.34,
+      "partial_per_board": 42.37
     },
     {
       "boards": 10,
       "service": "Economic",
       "charged_feeder_types": 10,
-      "parts_per_board": 28.81,
+      "parts_per_board": 28.94,
       "setup_stencil_feeders_fixture_per_order": 40.41,
-      "partial_per_board": 32.85
+      "partial_per_board": 32.98
     },
     {
       "boards": 10,
       "service": "Economic",
       "charged_feeder_types": 20,
-      "parts_per_board": 28.81,
+      "parts_per_board": 28.94,
       "setup_stencil_feeders_fixture_per_order": 71.11,
-      "partial_per_board": 35.92
+      "partial_per_board": 36.05
     },
     {
       "boards": 10,
       "service": "Economic",
       "charged_feeder_types": 30,
-      "parts_per_board": 28.81,
+      "parts_per_board": 28.94,
       "setup_stencil_feeders_fixture_per_order": 101.81,
-      "partial_per_board": 38.99
+      "partial_per_board": 39.12
     },
     {
       "boards": 10,
       "service": "Economic",
-      "charged_feeder_types": 53,
-      "parts_per_board": 28.81,
-      "setup_stencil_feeders_fixture_per_order": 172.42,
-      "partial_per_board": 46.05
+      "charged_feeder_types": 55,
+      "parts_per_board": 28.94,
+      "setup_stencil_feeders_fixture_per_order": 178.56,
+      "partial_per_board": 46.8
     },
     {
       "boards": 25,
       "service": "Standard",
-      "charged_feeder_types": 53,
-      "parts_per_board": 26.36,
-      "setup_stencil_feeders_fixture_per_order": 131.28,
-      "partial_per_board": 31.61
+      "charged_feeder_types": 55,
+      "parts_per_board": 26.54,
+      "setup_stencil_feeders_fixture_per_order": 134.34,
+      "partial_per_board": 31.91
     },
     {
       "boards": 25,
       "service": "Economic",
       "charged_feeder_types": 10,
-      "parts_per_board": 26.36,
+      "parts_per_board": 26.54,
       "setup_stencil_feeders_fixture_per_order": 40.41,
-      "partial_per_board": 27.98
+      "partial_per_board": 28.16
     },
     {
       "boards": 25,
       "service": "Economic",
       "charged_feeder_types": 20,
-      "parts_per_board": 26.36,
+      "parts_per_board": 26.54,
       "setup_stencil_feeders_fixture_per_order": 71.11,
-      "partial_per_board": 29.2
+      "partial_per_board": 29.38
     },
     {
       "boards": 25,
       "service": "Economic",
       "charged_feeder_types": 30,
-      "parts_per_board": 26.36,
+      "parts_per_board": 26.54,
       "setup_stencil_feeders_fixture_per_order": 101.81,
-      "partial_per_board": 30.43
+      "partial_per_board": 30.61
     },
     {
       "boards": 25,
       "service": "Economic",
-      "charged_feeder_types": 53,
-      "parts_per_board": 26.36,
-      "setup_stencil_feeders_fixture_per_order": 172.42,
-      "partial_per_board": 33.26
+      "charged_feeder_types": 55,
+      "parts_per_board": 26.54,
+      "setup_stencil_feeders_fixture_per_order": 178.56,
+      "partial_per_board": 33.68
     }
   ]
 }

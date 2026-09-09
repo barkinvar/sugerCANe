@@ -1,4 +1,4 @@
-# Software input modes - Rev G
+# Software input modes - Rev H
 
 Each input has its own electronically controlled pull-up and pull-down; there are no input-bias jumpers or solder selectors. Select the mode in the desktop setup tool, CAN service CLI, or Java/C++ runtime API. This is an independent design with CANdi-like input choices; CTRE Phoenix and GrappleHook are not compatible protocols.
 

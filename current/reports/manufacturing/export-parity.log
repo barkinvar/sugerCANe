@@ -6,16 +6,16 @@
     52,
     74
   ],
-  "plated_drills": 264,
-  "nonplated_drills": 5,
+  "plated_drills": 269,
+  "nonplated_drills": 2,
   "copper_pad_flashes_verified": {
-    "top": 393,
-    "bottom": 39
+    "top": 406,
+    "bottom": 49
   },
   "maximum_drill_coordinate_quantization_mm": 0.0005000000000023874,
-  "maximum_drill_diameter_quantization_mm": 0.00039999999999995595,
-  "assembly_rows_verified": 135,
-  "purchased_references_verified": 135,
-  "portable_models_verified": 135,
+  "maximum_drill_diameter_quantization_mm": 0.0,
+  "assembly_rows_verified": 140,
+  "purchased_references_verified": 140,
+  "portable_models_verified": 140,
   "limitations": "X2 pad/net/coordinate and drill/placement parity; not a copper connectivity solver or fabrication-house CAM review."
 }

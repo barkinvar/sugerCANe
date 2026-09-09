@@ -5,6 +5,7 @@ source tools/env.sh
 mkdir -p reports/electrical reports/manufacturing reports/driver
 python scripts/build_bom.py
 python scripts/estimate_cost.py
+python scripts/compare_assembly_cost.py
 python scripts/check_electrical.py > reports/electrical/check.log
 python scripts/check_converter_loop.py > reports/electrical/loop.log
 python scripts/check_boost_spice.py --verify-report --require-pass
@@ -21,4 +22,4 @@ python scripts/verify_gerber_geometry.py > reports/manufacturing/geometry.log
 python scripts/verify_gerber_connectivity.py > reports/manufacturing/connectivity.log
 python scripts/check_order_readiness.py
 python scripts/write_validation_summary.py
-echo 'PASS: Rev G saved design, BOM, electrical budgets, firmware/drivers and exported fabrication checks'
+echo 'PASS: Rev H saved design, BOM, electrical budgets, firmware/drivers and exported fabrication checks'

@@ -1,8 +1,8 @@
-# Rev G robot drivers and host utility
+# Rev H robot drivers and host utility
 
-Java 17 and C++ examples target WPILib 2026.2.1. Rev G uses protocol **4**, hardware **7** and firmware **0.8.0**. Use the matching `SensorCan12` and `SensorCan12Codec` files; older revisions are rejected. Provision a unique device ID through CAN service or UART.
+Java 17 and C++ examples target WPILib 2026.2.1. Rev H uses protocol **4**, hardware **8** and firmware **0.9.0**. Use the matching `SensorCan12` and `SensorCan12Codec` files; older revisions are rejected. Provision a unique device ID through CAN service or UART.
 
-Choose each sensor's 5 V / 12 V supply using the physical jumper before operation; the drivers do not select port voltage. See the [Rev G setup guide](../README.md) and [wiring](../docs/WIRING.md).
+Choose each sensor's 5 V / 12 V supply using the physical jumper before operation; the drivers do not select port voltage. See the [Rev H setup guide](../README.md) and [wiring](../docs/WIRING.md).
 
 CAN discovery, persistent settings and firmware updates are provided by the new [service tools](../docs/CAN_SERVICE.md). The [robot bridge](bridge/README.md) has separately compiled 2026 and 2027 alpha-7 adapters. Sensor driver classes below remain pinned to 2026.2.1; the 2027 bridge does not port the normal drivers. Physical end-to-end CAN testing is pending.
 

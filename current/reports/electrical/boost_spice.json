@@ -1,74 +1,11 @@
 {
-  "result": "PASS transient screening only",
-  "scope": "Rev G vendor TPS61085/TPS259620/TPS2553-1 models, 27C typical silicon. Syntax-only ngspice ports; no PSpice/board correlation. Combined startup with a 4ms source ramp plus separate boost load/fault-limit steps, eFuse fault/reset cases and 5V-switch fault/reset. Not physical qualification.",
-  "source_assumptions": "Boost cases: ideal upstream 5 V source, 120 milliohm series resistance, 25.92 uF internal capacitance, 0.4 A concurrent logic/5 V load. The standalone 5 V switch case instead has 1.3 A concurrent internal load. Standalone eFuse cases use an ideal 12.003 V source with 120 milliohm series resistance and 66 uF reservoir. Upstream buck control loop/current limit and PCB/cable inductance are not modeled.",
-  "passive_assumptions": "Boost C60 and reservoir use explicit derated/nameplate case values; C61/C65/C71 1uF nominal. Inductor 3.3uH and 32mOhm DCR, linear below its 8A/20%-inductance-drop domain. External capacitor ESR .1ohm. One explicitly identified current-limit surrogate uses a 2.92k test resistor instead of fitted R62=2.61k, giving typical-model current below the calculated 314.699mA minimum, with 120uF external capacitance. This tests reduced charging headroom, not all silicon corners. D5 uses the B240A vendor model; D6 behavioral clamp approximates static conduction only. Q2 enable uses 2ohm final shunt resistance; standalone fault tests apply a finite 1us conductance ramp to avoid a discontinuous behavioral-device transition. No transistor timing claim. eFuse thermal timing is manufacturer-model-only, not temperature qualification.",
-  "numerical_notes": "Gear integration, 1fF numerical node shunt, relative tolerance .003. Combined startup uses KLU/xtrtol=2 with maximum step 50 ns and a complete KLU/xtrtol=7 repeat at maximum step 25 ns; both must pass the same electrical criteria and the voltage/peak-current comparison. Original xtrtol=1 stopped numerically near 28.971 ms and is retained as an incomplete diagnostic. Vendor helper names prefixed; duplicate PARAMS removed and Boolean XOR syntax translated. No semiconductor parameters tuned. Standalone zero-supply operating-point warnings are accepted only after successful transient OP fallback and complete transient output. Other warnings/errors fail. Extreme values use all adaptive timesteps; plots decimated.",
-  "circuit_sha256": "628448e602daa1dd8e1c357766c2b69a74969ecad914084fe6b7ee6043ba1e12",
-  "script_sha256": "581bb55d77d235f98540b6552b15adccc7db74324cbee23ae97961415a7b3c8f",
-  "simulator": "******\n** ngspice-42 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2023, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Sun Mar 31 20:15:14 UTC 2024\n******",
-  "sources": [
-    {
-      "file": "tps61085.lib",
-      "url": "https://www.ti.com/lit/zip/slim133b",
-      "retrieved": "2026-09-08",
-      "sha256": "123cb9408dc926fcff98e5a2e83be7d95e950e86d49bb76dc63892b8a8fa3111",
-      "note": "Final 1.10, PSpice 16.0, original bytes from SLIM133A/TPS61085_PSPICE_TRANS/tps61085.lib"
-    },
-    {
-      "file": "tps2553-1.lib",
-      "url": "https://www.ti.com/lit/zip/slvm426a",
-      "retrieved": "2026-09-08",
-      "sha256": "2c4436b54cf8efc9dd522e110708fcb942e741a9620d6f442c577f787f451622",
-      "note": "Final 1.00, PSpice 16.2, original bytes from SLVM426/TPS2553-1_PSPICE_TRANS/tps2553-1_trans.lib"
-    },
-    {
-      "file": "B240A.lib",
-      "url": "https://www.diodes.com/spice/download/94/B240A.spice.txt",
-      "retrieved": "2026-09-08",
-      "sha256": "be511c04e88f3ee164258712e0d936b7943f02256243ec4a0718985e002ac2ab",
-      "note": "Plaintext transcribed from manufacturer web response, preserving model parameters and notice; server rejected direct download"
-    },
-    {
-      "file": "tps259620.lib",
-      "url": "https://www.ti.com/lit/zip/slvmd54a",
-      "retrieved": "2026-09-09",
-      "sha256": "e1750f8486d592fbdb100470d26b6d0c2f297b184723dfb0e1bf64001a639dd9",
-      "note": "Original unencrypted TPS259620_TRANS.lib, Final 1.00, PSpice 17.2, 09Aug2019. Thermal timing is dissipation-dependent, not ambient-temperature calibrated."
-    }
-  ],
+  "result": "INCOMPLETE",
+  "revision": "H",
+  "reason": "Broad power rerun stopped after user requested focus on the ARGB change; not required to establish LED pinout/routing/firmware correctness.",
+  "scope": "Eight completed cases; the two coupled startup traces are incomplete. No full Rev H transient pass is claimed. Previous complete Rev G evidence remains in its immutable archive.",
+  "circuit_sha256": "936a394edaadeba1fa9be1bbaa8231163c140c426ca1372b95e7c5a4ae846b71",
+  "script_sha256": "44d4c0f4d6fd7944d2dda0f4b9387391c9e35fdd984e57e5e4b8072c41089209",
   "cases": [
-    {
-      "case": {
-        "name": "combined_low_input_capacitive_start",
-        "vin": 4.913149,
-        "cin": 22,
-        "cout": 66,
-        "extra_cap": 100,
-        "end": 40,
-        "source": "0 0 4m 4.913149",
-        "xtrtol": 2
-      },
-      "checks": {
-        "final_regulation": true,
-        "output_below_13V": true,
-        "inductor_linear_domain": true,
-        "below_minimum_switch_current_limit": true,
-        "boost_input_above_uvlo_after_start": true,
-        "no_false_startup_fault": true
-      },
-      "final_output_range_V": [
-        11.974850286723184,
-        11.979836840547371
-      ],
-      "peak_output_V": 12.053348284394321,
-      "peak_inductor_A": 1.5443614211671266,
-      "pass": true,
-      "deck_and_model_hash": "c2f5be473b2f7d28bb38a75e6f3053ef14f10a17fb537db311deaffad260db4b",
-      "simulated_netlist": "combined_low_input_capacitive_start\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 4m 4.913149)\nRsource SOURCE V5_INTERNAL .12\nCinternal V5_INTERNAL 0 25.92u\nBother V5_INTERNAL 0 I={.4*limit(v(V5_INTERNAL),0,1)}\nXu8 V5_INTERNAL BOOST_FB V5_INTERNAL BOOST_SS 0 BOOST_SW BOOST_COMP V5_INTERNAL BST_TPS61085\nL2 V5_INTERNAL LX 3.3u\nRdcr LX BOOST_SW .032\nD4 BOOST_SW BOOST_12V DI_B240A\nRcin V5_INTERNAL CI .01\nCin CI 0 22u\nRcout BOOST_12V CO .01\nCout CO 0 66u\nC61 V5_INTERNAL 0 1u\nC66 BOOST_SS 0 100n\nR60 BOOST_12V BOOST_FB 100k\nR61 BOOST_FB 0 11.5k\nR63 BOOST_COMP BOOST_COMP_RC 13k\nC69 BOOST_COMP_RC 0 33n\nXef 0 EFUSE_SS EFUSE_EN BOOST_12V SENSOR_12V FAULT_12V_N EFUSE_ILM OVC EF_TPS259620_TRANS PARAMS: Cdvdt=47n\nR62 EFUSE_ILM 0 2.61k\nR68 BOOST_12V EFUSE_EN 100k\nR69 EFUSE_EN 0 12.1k\nC65 BOOST_12V 0 1u\nC70 EFUSE_SS 0 47n\nC71 SENSOR_12V 0 1u\nVdisable DISABLE 0 PWL(0 0)\nSdisable EFUSE_EN 0 DISABLE 0 DISABLE_MODEL\n.model DISABLE_MODEL VSWITCH(Ron=2 Roff=1e9 Von=2 Voff=.5)\nRext SENSOR_12V EC .1\nCext EC 0 100u\nBload SENSOR_12V 0 I={.3*limit(v(SENSOR_12V),0,1)}\nD5 0 SENSOR_12V DI_B240A\nBTVS BOOST_12V 0 I={max(0,(v(BOOST_12V)-14.4)/.382)}\nRADC SENSOR_12V 0 220k\nVshort SHORT 0 PWL(0 0)\nSshort SENSOR_12V 0 SHORT 0 SHORTMODEL\n.model SHORTMODEL VSWITCH(Ron=.05 Roff=1e12 Von=.9 Voff=.1)\n.save v(V5_INTERNAL) v(BOOST_12V) v(SENSOR_12V) v(EFUSE_EN) v(FAULT_12V_N) i(Vsrc) i(L2)\n.options klu method=gear xtrtol=2 reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 40m 0 50n\n.end\n",
-      "raw_trace_sha256": "43db43cb11055adac2734e24b3fbf13c65993ad51337c84237f2dfa79210439b",
-      "initial_transient_OP_fallback": true
-    },
     {
       "case": {
         "name": "boost_load_steps",
@@ -86,15 +23,15 @@
         "boost_input_above_uvlo_after_start": true
       },
       "final_output_range_V": [
-        12.409001756937858,
-        12.420025479410274
+        12.397491721199202,
+        12.408505383712964
       ],
-      "peak_output_V": 12.432290260908706,
-      "peak_inductor_A": 1.4464210998633802,
+      "peak_output_V": 12.420771158331299,
+      "peak_inductor_A": 1.447660266623149,
       "pass": true,
-      "deck_and_model_hash": "ff1e7caae9b57cc82f253af89d58ce6061aa720367fac72bf5b6adaced7a0a45",
-      "simulated_netlist": "boost_load_steps\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 100u 0 200u 5.067153284671533)\nRsource SOURCE V5_INTERNAL .12\nCinternal V5_INTERNAL 0 25.92u\nBother V5_INTERNAL 0 I={.4*limit(v(V5_INTERNAL),0,1)}\nXu8 V5_INTERNAL BOOST_FB V5_INTERNAL BOOST_SS 0 BOOST_SW BOOST_COMP V5_INTERNAL BST_TPS61085\nL2 V5_INTERNAL LX 3.3u\nRdcr LX BOOST_SW .032\nD4 BOOST_SW BOOST_12V DI_B240A\nRcin V5_INTERNAL CI .01\nCin CI 0 8.64u\nRcout BOOST_12V CO .01\nCout CO 0 10.8238u\nC61 V5_INTERNAL 0 1u\nC66 BOOST_SS 0 100n\nR60 BOOST_12V BOOST_FB 100k\nR61 BOOST_FB 0 11.5k\nR63 BOOST_COMP BOOST_COMP_RC 13k\nC69 BOOST_COMP_RC 0 33n\nVload LOAD 0 PWL(0 .03 4m .03 4.01m .31 6m .31 6.01m .41 8m .41 8.01m 0)\nBload BOOST_12V 0 I={v(LOAD)*limit(v(BOOST_12V),0,1)}\n.save v(V5_INTERNAL) v(BOOST_12V) v(FAULT_12V_N) i(Vsrc) i(L2)\n.options method=gear reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 10m 0 50n\n.end\n",
-      "raw_trace_sha256": "84fd1e75a91c73cba9af01434cc85aa207fcc77c7178a751ff0cc36dcd731f3f",
+      "deck_and_model_hash": "22a1e27b800e00d296acf486ccb58d39580cd6a8e5b0a58635fe2bc6b72df019",
+      "simulated_netlist": "boost_load_steps\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 100u 0 200u 5.067153284671533)\nRsource SOURCE V5_INTERNAL .12\nCinternal V5_INTERNAL 0 25.92u\nBother V5_INTERNAL 0 I={.45*limit(v(V5_INTERNAL),0,1)}\nXu8 V5_INTERNAL BOOST_FB V5_INTERNAL BOOST_SS 0 BOOST_SW BOOST_COMP V5_INTERNAL BST_TPS61085\nL2 V5_INTERNAL LX 3.3u\nRdcr LX BOOST_SW .032\nD4 BOOST_SW BOOST_12V DI_B240A\nRcin V5_INTERNAL CI .01\nCin CI 0 8.64u\nRcout BOOST_12V CO .01\nCout CO 0 10.8238u\nC61 V5_INTERNAL 0 1u\nC66 BOOST_SS 0 100n\nR60 BOOST_12V BOOST_FB 100k\nR61 BOOST_FB 0 11.5k\nR63 BOOST_COMP BOOST_COMP_RC 13k\nC69 BOOST_COMP_RC 0 33n\nVload LOAD 0 PWL(0 .03 4m .03 4.01m .31 6m .31 6.01m .41 8m .41 8.01m 0)\nBload BOOST_12V 0 I={v(LOAD)*limit(v(BOOST_12V),0,1)}\n.save v(V5_INTERNAL) v(BOOST_12V) v(FAULT_12V_N) i(Vsrc) i(L2)\n.options method=gear reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 10m 0 50n\n.end\n",
+      "raw_trace_sha256": "dcfc600a4024e6ed505320f3513bdb9484c90ff22e872cfcc0c33048b72202f4",
       "initial_transient_OP_fallback": false
     },
     {
@@ -306,57 +243,48 @@
       "initial_transient_OP_fallback": true
     }
   ],
-  "timestep_repeat": {
-    "pass": true,
-    "max_step_s": [
-      1e-06,
-      5e-07
-    ],
-    "output_difference_V": 0.000770717448548397,
-    "source_current_difference_A": 0.0003857031251037202,
-    "scope": "3-130ms at 10us sample intervals, excluding +/-10us around ideal test-switch edges; raw extrema separately checked in both cases."
-  },
-  "combined_solver_repeat": {
-    "pass": true,
-    "voltage_difference_V": {
-      "v(v5_internal)": 0.00408958127847292,
-      "v(boost_12v)": 0.014744631862592783,
-      "v(sensor_12v)": 0.010534816361190025
+  "canceled": [
+    {
+      "case": "combined_low_input_capacitive_start",
+      "result": "Canceled before completion; not a pass or circuit failure",
+      "last_simulated_ms": 10.388060961106945,
+      "required_ms": 40
     },
-    "peak_inductor_difference_A": 0.00035666952082635817,
-    "secondary": {
-      "case": {
-        "name": "combined_low_input_capacitive_start",
-        "vin": 4.913149,
-        "cin": 22,
-        "cout": 66,
-        "extra_cap": 100,
-        "end": 40,
-        "source": "0 0 4m 4.913149",
-        "xtrtol": 7,
-        "step": "25n",
-        "trace_name": "combined_low_input_capacitive_start_trtol7_25n"
-      },
-      "checks": {
-        "final_regulation": true,
-        "output_below_13V": true,
-        "inductor_linear_domain": true,
-        "below_minimum_switch_current_limit": true,
-        "boost_input_above_uvlo_after_start": true,
-        "no_false_startup_fault": true
-      },
-      "final_output_range_V": [
-        11.974841705910304,
-        11.979853144252683
-      ],
-      "peak_output_V": 12.053884520137649,
-      "peak_inductor_A": 1.5440047516463002,
-      "pass": true,
-      "deck_and_model_hash": "43652ab7107327fccb0bd4d2df314fc7bca86bbe8666edc45105f7c2742f372e",
-      "simulated_netlist": "combined_low_input_capacitive_start\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 4m 4.913149)\nRsource SOURCE V5_INTERNAL .12\nCinternal V5_INTERNAL 0 25.92u\nBother V5_INTERNAL 0 I={.4*limit(v(V5_INTERNAL),0,1)}\nXu8 V5_INTERNAL BOOST_FB V5_INTERNAL BOOST_SS 0 BOOST_SW BOOST_COMP V5_INTERNAL BST_TPS61085\nL2 V5_INTERNAL LX 3.3u\nRdcr LX BOOST_SW .032\nD4 BOOST_SW BOOST_12V DI_B240A\nRcin V5_INTERNAL CI .01\nCin CI 0 22u\nRcout BOOST_12V CO .01\nCout CO 0 66u\nC61 V5_INTERNAL 0 1u\nC66 BOOST_SS 0 100n\nR60 BOOST_12V BOOST_FB 100k\nR61 BOOST_FB 0 11.5k\nR63 BOOST_COMP BOOST_COMP_RC 13k\nC69 BOOST_COMP_RC 0 33n\nXef 0 EFUSE_SS EFUSE_EN BOOST_12V SENSOR_12V FAULT_12V_N EFUSE_ILM OVC EF_TPS259620_TRANS PARAMS: Cdvdt=47n\nR62 EFUSE_ILM 0 2.61k\nR68 BOOST_12V EFUSE_EN 100k\nR69 EFUSE_EN 0 12.1k\nC65 BOOST_12V 0 1u\nC70 EFUSE_SS 0 47n\nC71 SENSOR_12V 0 1u\nVdisable DISABLE 0 PWL(0 0)\nSdisable EFUSE_EN 0 DISABLE 0 DISABLE_MODEL\n.model DISABLE_MODEL VSWITCH(Ron=2 Roff=1e9 Von=2 Voff=.5)\nRext SENSOR_12V EC .1\nCext EC 0 100u\nBload SENSOR_12V 0 I={.3*limit(v(SENSOR_12V),0,1)}\nD5 0 SENSOR_12V DI_B240A\nBTVS BOOST_12V 0 I={max(0,(v(BOOST_12V)-14.4)/.382)}\nRADC SENSOR_12V 0 220k\nVshort SHORT 0 PWL(0 0)\nSshort SENSOR_12V 0 SHORT 0 SHORTMODEL\n.model SHORTMODEL VSWITCH(Ron=.05 Roff=1e12 Von=.9 Voff=.1)\n.save v(V5_INTERNAL) v(BOOST_12V) v(SENSOR_12V) v(EFUSE_EN) v(FAULT_12V_N) i(Vsrc) i(L2)\n.options klu method=gear xtrtol=7 reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 40m 0 25n\n.end\n",
-      "raw_trace_sha256": "9ceb79a21af84467b1119457f463f013f2a49a5744e38db00d5f7cf5606a7c6a",
-      "initial_transient_OP_fallback": true
+    {
+      "case": "combined_low_input_capacitive_start_trtol7_25n",
+      "result": "Canceled before completion; not a pass or circuit failure",
+      "last_simulated_ms": 10.113778920267118,
+      "required_ms": 40
+    }
+  ],
+  "sources": [
+    {
+      "file": "tps61085.lib",
+      "url": "https://www.ti.com/lit/zip/slim133b",
+      "retrieved": "2026-09-08",
+      "sha256": "123cb9408dc926fcff98e5a2e83be7d95e950e86d49bb76dc63892b8a8fa3111",
+      "note": "Final 1.10, PSpice 16.0, original bytes from SLIM133A/TPS61085_PSPICE_TRANS/tps61085.lib"
     },
-    "scope": "Complete 0-40 ms comparison at 0.5 us intervals: KLU/Gear xtrtol=2, maximum step 50 ns, versus xtrtol=7, maximum step 25 ns, both with reltol=.003 and identical circuit/models. Each full adaptive trace independently passes all electrical criteria. Voltage differences must stay below 50 mV and peak-inductor difference below 20 mA. Numerical sensitivity, not physical correlation."
-  }
+    {
+      "file": "tps2553-1.lib",
+      "url": "https://www.ti.com/lit/zip/slvm426a",
+      "retrieved": "2026-09-08",
+      "sha256": "2c4436b54cf8efc9dd522e110708fcb942e741a9620d6f442c577f787f451622",
+      "note": "Final 1.00, PSpice 16.2, original bytes from SLVM426/TPS2553-1_PSPICE_TRANS/tps2553-1_trans.lib"
+    },
+    {
+      "file": "B240A.lib",
+      "url": "https://www.diodes.com/spice/download/94/B240A.spice.txt",
+      "retrieved": "2026-09-08",
+      "sha256": "be511c04e88f3ee164258712e0d936b7943f02256243ec4a0718985e002ac2ab",
+      "note": "Plaintext transcribed from manufacturer web response, preserving model parameters and notice; server rejected direct download"
+    },
+    {
+      "file": "tps259620.lib",
+      "url": "https://www.ti.com/lit/zip/slvmd54a",
+      "retrieved": "2026-09-09",
+      "sha256": "e1750f8486d592fbdb100470d26b6d0c2f297b184723dfb0e1bf64001a639dd9",
+      "note": "Original unencrypted TPS259620_TRANS.lib, Final 1.00, PSpice 17.2, 09Aug2019. Thermal timing is dissipation-dependent, not ambient-temperature calibrated."
+    }
+  ]
 }

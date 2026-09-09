@@ -1,4 +1,4 @@
-"""Rev G pre-fabrication checks, including native routed-copper voltage drop.
+"""Rev H pre-fabrication checks, including native routed-copper voltage drop.
 
 This is a reproducible engineering screen. Physical qualification remains separate.
 """
@@ -84,7 +84,7 @@ def power_distribution_screen():
       v=np.linalg.solve(G2,current)
       assert np.max(np.abs(G@v-expected))<1e-8, 'DC network violates current conservation'
       return {str(pin):float(v[index[root(pin)]]) for pin in [source,*loads]}
-     if net=='V5_INTERNAL':result=solve(('L1','2'),{('L2','1'):1.3,('U4','1'):.51,('U2','1'):.1},('R1','1'))
+     if net=='V5_INTERNAL':result=solve(('L1','2'),{('L2','1'):1.3,('U4','1'):.51,('U2','1'):.13,('U10','5'):.001,('D10','2'):.019},('R1','1'))
      elif net=='BOOST_12V':result=solve(('D4','1'),{('U9','4'):.41})
      else:
       source=('U4','6') if net=='SENSOR_5V' else ('U9','5');pin='1' if net=='SENSOR_5V' else '3'
@@ -98,7 +98,7 @@ def power_distribution_screen():
     assert 0 < drop < allowance, (drop, allowance)
     return dict(method='Native routed-track resistor network with pad contacts and through vias; nodal DC solve',
                 trace_temperature_C=85, copper_um=35, via_plating_um=20,
-                boost_input_A=1.3, other_5V_sensor_A=.51, logic_A=.1,
+                boost_input_A=1.3, other_5V_sensor_A=.51, logic_A=.13, RGB_buffer_A=.02,
                 buck_to_boost_drop_V=before, boost_to_efuse_drop_V=after,
                 total_boost_path_drop_V=drop, revised_PCB_allowance_V=allowance,
                 results=results, geometry_sha256=hashlib.sha256(geometry.encode()).hexdigest(),
@@ -130,11 +130,13 @@ def pin_review(parts):
     expected.update({
         'U4': {'1':'V5_INTERNAL','2':'GND','3':'POWER_5V_EN','4':'FAULT_5V_N','5':'V5_ILIM','6':'SENSOR_5V'},
         'U9': {'1':'GND','2':'EFUSE_SS','3':'EFUSE_EN','4':'BOOST_12V','5':'SENSOR_12V','6':'FAULT_12V_N','7':'EFUSE_ILM','8':None,'9':'GND'},
+        'D10': {'1':'STATUS_DIN','2':'V5_INTERNAL','3':None,'4':'GND'},
+        'U10': {'1':'GND','2':'STATUS_DATA','3':'GND','4':'STATUS_5V_DATA','5':'V5_INTERNAL'},
         'Q2': {'1':'EFUSE_INHIBIT','2':'GND','3':'EFUSE_EN'},
         'Q3': {'1':'POWER_12V_EN','2':'GND','3':'EFUSE_INHIBIT'},
     })
     expected['U5'].update({'9':'FAULT_12V_N','10':'FAULT_5V_N','14':'ADC_5V','15':'ADC_12V',
-                           '25':'POWER_5V_EN','27':'BIAS_DOWN3','28':'BIAS_DOWN1','29':'BIAS_DOWN2','30':'POWER_12V_EN'})
+                           '25':'POWER_5V_EN','26':'STATUS_DATA','27':'BIAS_DOWN3','28':'BIAS_DOWN1','29':'BIAS_DOWN2','30':'POWER_12V_EN'})
     checks = {ref: all(parts[ref]['pins'][pin] == net for pin, net in pins.items())
               for ref, pins in expected.items()}
     checks['SWD_reset_and_BOOT0_exposed'] = all(net in parts['J8']['pins'].values()
@@ -164,7 +166,7 @@ def main():
     assert transient['result']=='PASS transient screening only'
     assert all(r['pass'] for r in transient['cases'])
     result=dict(order_decision='PASS pre-fabrication engineering screens; unbuilt prototype',
-                physical_tests_performed=False,hardware_changed=True,revision='G',
+                physical_tests_performed=False,hardware_changed=True,revision='H',
                 input_hashes=inputs(),pin_review=pins,power_distribution=distribution,
                 resolved_rev_f_findings=['Output eFuse isolates reservoir from a sensor short',
                  'Boost input no longer passes through the former 1.2 A switch',

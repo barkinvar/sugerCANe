@@ -73,6 +73,8 @@ def ic(name,left,right,top=(),bottom=(),width=20.32):
             pins.append((str(number),pn,typ,x,height/2+5.08 if side=='T' else -height/2-5.08,270 if side=='T' else 90,5.08))
     define(name,{1:pins},{1:[rect(-width/2,height/2,width/2,-height/2)]})
 
+ic('RGB_LED',[(1,'DIN','input')],[(3,'DOUT','output')],top=[(2,'VDD','power_in')],bottom=[(4,'GND','power_in')])
+ic('LED_BUFFER',[(2,'A','input'),(1,'OE_N','input')],[(4,'Y','output')],top=[(5,'VCC','power_in')],bottom=[(3,'GND','power_in')])
 ic('BOOST12',[(6,'IN','power_in'),(3,'EN','input'),(7,'FREQ','input')],[(5,'SW','power_out'),(2,'FB','input'),(1,'COMP','passive'),(8,'SS','passive')],bottom=[(4,'PGND','power_in')])
 ic('BUCK',[(3,'VIN','power_in'),(5,'EN','input')],[(6,'CB','passive'),(2,'SW','power_out'),(4,'FB','input')],bottom=[(1,'GND','power_in')])
 ic('PMOS8',[(5,'D','passive'),(6,'D','passive'),(7,'D','passive'),(8,'D','passive')],
@@ -191,7 +193,7 @@ class Sheet:
         self.place(ref,x,y)
     def save(self):
         text=f'(kicad_sch (version 20250114) (generator "eeschema") (uuid {q(uid("page_"+self.name))}) (paper "A3")\n'
-        text+=f'(title_block (title {q("SC12 - "+TITLES[self.name])}) (date "2026-09-09") (rev "G") (company "Original sensor interface design") (comment 1 "Prototype: bench validation required before robot use"))\n'
+        text+=f'(title_block (title {q("SC12 - "+TITLES[self.name])}) (date "2026-09-09") (rev "H") (company "Original sensor interface design") (comment 1 "Prototype: bench validation required before robot use"))\n'
         text+='(lib_symbols\n'+'\n'.join(SYMS[n]['text'].replace('(symbol '+q(n),'(symbol '+q('FRC_Sensor_CAN:'+n),1) for n in sorted(self.usedlibs))+')\n'
         text+='\n'.join(self.items)+'\n(embedded_fonts no))\n'
         (OUT/(self.name+'.kicad_sch')).write_text(text)
@@ -307,7 +309,7 @@ for i,ref in enumerate(['C20','C21','C22','C23','C24']):
     c=gp(p,ref,14+i*14,68,270);caps.append(c);p.label('GND',c['2'])
 nodes=[(c['1'][0],63*2.54) for c in caps];path(p,*nodes);p.label('+3V3',nodes[0])
 for c,node in zip(caps,nodes):p.wire(node,c['1']);p.junction(node)
-p.text('TC2050-IDC-NL mechanical footprint; CUSTOM electrical pinout.\nPin 6 is 3.3 V reference OUTPUT, never a programming power input.\nPB0/PB1 read sensor-rail ADCs; PA15 enables 5 V and PB7 high disables 12 V.\nPA3/PA4 monitor active-low fault flags. PB5/PB6/PB4 are input pull-down controls.',20,220,1.5)
+p.text('J8: hand-solder 2x5 2.54 mm header; CUSTOM electrical pinout.\nPin 6 is 3.3 V reference OUTPUT, never a programming power input.\nPB0/PB1 read sensor-rail ADCs; PA15 enables 5 V and PB7 high enables 12 V.\nPA3/PA4 monitor active-low fault flags. PB5/PB6/PB4 are input pull-down controls.',20,220,1.5)
 
 p=pages['can']
 u=gp(p,'U6',30,25)
@@ -325,11 +327,9 @@ for ref,gx,net in [('R40',20,'CAN_STB'),('R41',48,'CAN_TX')]:
 for ref,gx in [('C40',76),('C41',102)]:
     c=gp(p,ref,gx,58,270);p.label('+3V3',c['1']);p.label('GND',c['2'])
 p.text('1 Mbit/s. Bridge JP2 only at a physical CAN trunk end.\nTCAN3413 uses 3.3 V for both VCC and VIO.\nSTB pull-up keeps the bus silent during MCU reset.\nCAN ground is shared through the power connection.',230,175,1.3)
-p.text('SINGLE STATUS INDICATOR',15,195,1.8)
-for i in range(1):
-    r=gp(p,f'R{30+i}',18+i*23,86,270);d=gp(p,f'D{10+i}',18+i*23,96,270)
-    p.label(PARTS[f'R{30+i}']['pins']['1'],r['1']);path(p,r['2'],d['2']);p.label('GND',d['1'])
-    p.label(PARTS[f'R{30+i}']['pins']['2'],(r['2'][0],(r['2'][1]+d['2'][1])/2))
+p.text('SINGLE RGB STATUS INDICATOR / INTERNAL 5 V',15,195,1.8)
+for ref,x,y in [('U10',65,233),('R30',145,233),('D10',225,233),('R31',310,215),('C74',350,215),('C75',390,215)]:p.place(ref,x,y)
+p.text('PB3 / TIM2_CH2 drives one SK6805-EC15 through a 5 V AHCT buffer. R31 holds data LOW on reset.\nD10 remains powered when sensor supplies are disabled. DOUT is unused.\nRGB patterns are firmware diagnostics, not an independent hardware power-good indicator.',15,270,1.1)
 
 for ch in range(1,4):
     p=pages[f'input{ch}'];z=ch*100
@@ -369,13 +369,13 @@ for ref,c in PARTS.items():
         assert (ref,u) in placed, f'Missing unit {ref}.{u}'
 for page in pages.values():page.save()
 
-root=f'(kicad_sch (version 20250114) (generator "eeschema") (uuid {q(rootid)}) (paper "A3") (title_block (title "FRC Sensor CAN") (date "2026-09-09") (rev "G") (comment 1 "Original design - custom WPILib CAN protocol")) (lib_symbols)'
+root=f'(kicad_sch (version 20250114) (generator "eeschema") (uuid {q(rootid)}) (paper "A3") (title_block (title "FRC Sensor CAN") (date "2026-09-09") (rev "H") (comment 1 "Original design - custom WPILib CAN protocol")) (lib_symbols)'
 for i,name in enumerate(SHEETS):
     x=25+(i%3)*130;y=90+(i//3)*60;si=uid('sheet_'+name)
     root+=f'(sheet (at {x} {y}) (size 100 32) (stroke (width .254) (type solid)) (fill (color 0 0 0 0)) (uuid {q(si)})'
     root+=prop('Sheetname',TITLES[name],x,y-3,justify='left')+prop('Sheetfile',name+'.kicad_sch',x,y+35,justify='left')
     root+=f'(instances (project "FRC_Sensor_CAN" (path {q("/"+rootid)} (page {q(i+2)})))))'
-root+=f'(text {q("FRC SENSOR CAN - REVISION G REGULATED PROTOTYPE")} (at 25 25 0) {fx(3.81,"left")} (uuid {q(uid("root_title"))}))'
+root+=f'(text {q("FRC SENSOR CAN - REVISION H REGULATED PROTOTYPE")} (at 25 25 0) {fx(3.81,"left")} (uuid {q(uid("root_title"))}))'
 root+=f'(text {q("Three fixed-threshold digital inputs. 6-22 V input; regulated 12 V and 5 V sensor power.\nSTM32F042 + TCAN3413. Digital status and edge counts over a custom team CAN protocol.\nNot a CTRE Phoenix-compatible device. Inspect and bench-test prototypes before robot use.")} (at 25 43 0) {fx(2,"left top")} (uuid {q(uid("root_note"))}))'
 root+='(sheet_instances (path "/" (page "1"))) (embedded_fonts no))\n'
 (OUT/'FRC_Sensor_CAN.kicad_sch').write_text(root)

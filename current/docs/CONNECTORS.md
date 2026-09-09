@@ -13,12 +13,14 @@ Current renders use the official STEP solids with a rigid translation (-2.13,-12
 
 Top terminals face outward at the power/CAN edge; three sensor terminals face outward at the opposite edge. The board and nominal terminal bodies occupy a conservative 52 × 82.1 mm envelope; add room for cable bend, strain relief and button access. Renders do not validate conductor retention, tool clearance in an enclosure, molding tolerances or actual solder fit.
 
-## Rev G voltage headers
+## Rev H voltage headers
 
 JP101/JP201/JP301 use [Harwin M22-2010305](https://www.harwin.com/products/M22-2010305): 2 mm pitch, 0.50 mm square pins, 6 × 2 mm body, nominal 5 mm height above the PCB and 3.4 mm tails. The project's 2 mm header footprint uses 0.85 mm drills in 1.35 mm pads, retaining a 0.25 mm nominal copper annulus, and a 0.25 mm nominal body courtyard margin. Pads 1–3 run left-to-right at Y=61.5 mm; pin-1 positions are X=5, 21 and 37 mm.
 
-The [Harwin drawing](https://content.harwin.com/asset/8870086f-d3e9-4bcd-99da-e6fb77550f38/DRG-00483-Technical-Drawing-Datasheet-M22-201-pdf.pdf) recommends 0.80 ±0.05 mm holes. Rev G adds 0.05 mm nominal diameter for hand assembly: with [JLCPCB's normal −0.08/+0.13 mm hole tolerance](https://jlcpcb.com/capabilities/pcb-capabilities), the minimum becomes 0.77 mm, above Harwin's 0.75 mm minimum. This trades a slightly larger solder gap for insertion clearance; verify finished holes and solder fill on the first article.
+The [Harwin drawing](https://content.harwin.com/asset/8870086f-d3e9-4bcd-99da-e6fb77550f38/DRG-00483-Technical-Drawing-Datasheet-M22-201-pdf.pdf) recommends 0.80 ±0.05 mm holes. The retained footprint adds 0.05 mm nominal diameter for hand assembly: with [JLCPCB's normal −0.08/+0.13 mm hole tolerance](https://jlcpcb.com/capabilities/pcb-capabilities), the minimum becomes 0.77 mm, above Harwin's 0.75 mm minimum. This trades a slightly larger solder gap for insertion clearance; verify finished holes and solder fill on the first article.
 
 The [Sullins SPN02SVEN-RC drawing](https://www.sullinscorp.com/drawings/273_SVEN_11502.pdf) specifies a closed top, 2 mm pitch, 0.50 mm square mating pins and nominal 4 × 2 × 4.92 mm body. Contact height is 2.45 mm from the entry, within the header’s 3.5 mm mating pin length. Nominal mating geometry agrees; physical fit and retention remain untested. Caps are delivered loose and not included in the assembled-board STEP model. Use the finished cap envelope for enclosure access/clearance and allow room to remove them.
 
 The generic local header STEP represents the nominal pin/body geometry, not manufacturer-qualified tolerances. Vendor connector hashes continue to cover the unchanged six terminal models. See [wiring](WIRING.md) for one-cap-per-header configuration and vibration retention qualification.
+
+J8 is a hand-fitted XFCN PZ254V-12-10P, 2×5 at 2.54 mm pitch, with 1.10 mm plated holes and 1.70 mm pads. The matching nominal model and the full custom pin map are in [status and programming](STATUS_AND_PROGRAMMING.md) and [wiring](WIRING.md).

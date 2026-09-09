@@ -1,6 +1,6 @@
-# Rev G validation and release boundary
+# Rev H validation and release boundary
 
-**No Rev G prototype has been assembled, powered or tested.** The automated evidence checks the design, software and manufacturing package. Physical acceptance remains a separate step.
+**No Rev H prototype has been assembled, powered or tested.** The automated evidence checks the design, software and manufacturing package. Physical acceptance remains a separate step.
 
 ## Automated evidence
 
@@ -10,7 +10,9 @@ Electrical calculations cover input thresholds, sensor leakage/residual-voltage 
 
 ## Manufacturer-model transient screen
 
-The [harness](../scripts/check_boost_spice.py) maps the fitted TPS61085 and TPS259620 pins/components into original TI models, with the Diodes B240A rectifier model. [Results](../reports/electrical/boost_spice.json) retain every scenario, criterion and generated netlist; [waveforms](../reports/electrical/boost_spice.png) show the responses. A failed criterion returns nonzero and prevents the release validation command from passing.
+**Current run status:** eight standalone/load-step cases passed or reused matching completed traces. The two coupled startup runs were canceled before 40 ms, so the H full-suite result is incomplete. The following describes the test design and historical G findings, not a completed H startup validation. The complete G evidence remains in the [archive](../../archive/README.md).
+
+The [harness](../scripts/check_boost_spice.py) maps the fitted TPS61085 and TPS259620 pins/components into original TI models, with the Diodes B240A rectifier model. [Results](../reports/electrical/boost_spice.json) retain every scenario, criterion and generated netlist; [archived Rev G waveforms](../../archive/README.md) show the responses. A failed criterion returns nonzero and prevents the release validation command from passing.
 
 | Scenario | Engineering question |
 |---|---|
@@ -28,7 +30,7 @@ Capacitance stress cases use constant nameplate values; ceramic DC-bias reductio
 
 The reduced-limit case uses a 2.92 kΩ test resistor in the typical eFuse model, producing approximately 314.4 mA, below the calculated 314.7 mA minimum for the fitted 2.61 kΩ resistor. This deliberately harder charging condition reaches 11.4 V in about 93 ms with no model fault. It supplements the analytical startup budget; it does not represent a full silicon or temperature corner model, and does not change the BOM.
 
-The upstream supply is idealized with 120 mΩ series resistance, 25.92 µF internal capacitance and 400 mA concurrent load. The encrypted LMR51420 vendor model cannot be used in this ngspice flow. Its control loop/current limit, PCB/cable inductance, robot brownouts, temperature and production corners are not simulated. The default-off transistor stage is represented by an idealized enable switch; its physical startup behavior needs the separate bench check below. The eFuse thermal timing comes from its behavioral model, not a board thermal solution.
+The upstream supply is idealized with 120 mΩ series resistance, 25.92 µF internal capacitance and 450 mA concurrent logic/RGB/5 V load. The encrypted LMR51420 vendor model cannot be used in this ngspice flow. Its control loop/current limit, PCB/cable inductance, robot brownouts, temperature and production corners are not simulated. The default-off transistor stage is represented by an idealized enable switch; its physical startup behavior needs the separate bench check below. The eFuse thermal timing comes from its behavioral model, not a board thermal solution.
 
 The normal boost case uses fixed derated C60/reservoir values. Silicon models are typical 27°C; inductor DCR is 32 mΩ and inductance is linear below the specified 8 A/20%-drop domain. D5 uses the vendor diode model; D6 uses an approximate static TVS clamp. This does not establish fast fault overshoot or reverse-power survival.
 
@@ -62,13 +64,13 @@ The custom Team Use CAN address uses manufacturer 8 and miscellaneous device typ
 
 Primary references: [2026 FIRST manual](https://firstfrc.blob.core.windows.net/frc2026/Manual/HTML/2026GameManual.htm), especially custom-circuit voltage, distribution/wire and frame-ground rules; [WPILib CAN addressing and acceptance requirements](https://docs.wpilib.org/en/stable/docs/software/can-devices/can-addressing.html). Recheck applicable rules for the actual event/season.
 
-## Rev G-specific prototype checks
+## Rev H-specific prototype checks
 
 Measure the 5 V/12 V ADC readings against a calibrated meter throughout the supply and load sweep. Check 11:1 divider scaling, VDDA compensation, settling and fault thresholds. Confirm both rails stay disabled during SWD programming, bootloader operation and MCU reset. Remove 3.3 V while raw boost remains energized and verify the Q2/Q3 stage holds the 12 V supply switch off. There is no active output discharge: distinguish residual capacitor charge from a conducting switch, using a known test load and probing EN. Check the six U9 ground thermal vias and exposed-pad solder joint.
 
 Confirm the output eFuse nominal 357 mA limit, tolerance bounds, load-capacitance startup and thermal latch behavior. Verify a short on either branch does not cause unsafe shared-supply oscillation. The 768-corner CCM screen uses assumed amplifier/modulator bounds and does not qualify silicon behavior.
 
-Verify the exact 2 mm header and cap fit, both 5 V / 12 V positions and unpowered open state on every channel. Verify no connection between the two rails in either position. Check solder fill on all 39 user-fitted through-hole joints. Fit/retention, vibration and impact testing must include the actual caps, chosen removable retention compound, enclosure and robot harness; these headers have no positive latch. Compare the substituted passive values/ratings against the supplied BOM. Factory BOM and CPL must contain exactly 126 SMT references, with all nine through-hole components omitted. Firmware identity is hardware 7 / protocol 4; prior-revision firmware is rejected.
+Verify the exact 2 mm header and cap fit, both 5 V / 12 V positions and unpowered open state on every channel. Verify no connection between the two rails in either position. Check solder fill on all 49 user-fitted through-hole joints. Fit/retention, vibration and impact testing must include the actual caps, chosen removable retention compound, enclosure and robot harness; these headers have no positive latch. Compare the substituted passive values/ratings against the supplied BOM. Factory BOM and CPL must contain exactly 130 SMT references, with all ten through-hole components omitted. Firmware identity is hardware 8 / protocol 4; prior-revision firmware is rejected.
 
 ## CAN servicing qualification
 
@@ -82,4 +84,10 @@ Sweep external signal 0–30 V in every mode. Measure inactive sensor leakage ma
 
 Test floating detection with open contacts, NPN and PNP inactive outputs, long cables and added capacitance. Verify UNKNOWN during inconsistent probe pairs, no probe-generated edge counts, and one debounced edge on actual active-state transitions. Check keeper retention while released and LOW initialization after reset. Verify fixed input modes for faster signals; float detection can alias changing sources.
 
-Rev G design envelope: at most 100 µF total external capacitance on the shared 12 V rail, and 22 µF on the shared 5 V rail, at 300 mA per rail. The startup calculation includes +20% capacitance and the current-limit minimum; the 470 µF simulation is a typical diagnostic beyond that envelope. Qualify nonlinear sensor inrush separately.
+Rev H design envelope: at most 100 µF total external capacitance on the shared 12 V rail, and 22 µF on the shared 5 V rail, at 300 mA per rail. The startup calculation includes +20% capacitance and the current-limit minimum; the 470 µF simulation is a typical diagnostic beyond that envelope. Qualify nonlinear sensor inrush separately.
+
+## Rev H RGB and service header
+
+The circuit regression compares H against G and permits only the status indicator, its buffer/passives and the physical service-header replacement. Power component values and sensor inputs are unchanged. Compiled ARM tests check TIM2 update DMA mapping, both 8/48 MHz pulse settings, GRB encoding, reset gaps, bounded transfer-error recovery and CAN acknowledgment freshness. The application harness checks status during normal, unplugged-CAN, initialization, clock and power-fault cases. These tests emulate CPU/register boundaries, not the actual timer/DMA silicon or emitted optical waveform.
+
+Follow [the fixture checks](FIXTURE.md) and [status/programming guide](STATUS_AND_PROGRAMMING.md) on the first assembled unit. Verify LED package orientation and 5 V buffer margin, reset/brownout transitions, no sampling interruption, the five-wire programming harness, and the enclosure optical opening. The nominal STEP model is not physical-fit evidence.

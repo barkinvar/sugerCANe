@@ -36,7 +36,7 @@ class RegulatedProtocolTest(unittest.TestCase):
         self.assertEqual(sc.resume().hex(),'5343040000000000')
         for inv,db in ((8,1),(-1,1),(0,0),(0,101)):
             with self.assertRaises(ValueError):sc.configuration(inv,db)
-        self.assertEqual(sc.decode(sc.IDENTITY,bytes.fromhex('0400080007140207'))['device_id'],20)
+        self.assertEqual(sc.decode(sc.IDENTITY,bytes.fromhex('0400090008140207'))['device_id'],20)
         for h in ('0100030003140207','0300040003140207','0300040004400207','0300040004140208'):
             with self.assertRaises(ValueError):sc.decode(sc.IDENTITY,bytes.fromhex(h))
         for device in range(64):

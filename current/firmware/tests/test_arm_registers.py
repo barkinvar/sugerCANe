@@ -16,6 +16,7 @@ ELF=ROOT/'firmware/build/sensor_can.elf'
 FLASH=0x08000000;RAM=0x20000000;STOP=FLASH+0x7000
 RCC=0x40021000;GPIOA=0x48000000;GPIOB=0x48000400;GPIOF=0x48001400
 CAN=0x40006400;ADC=0x40012400;UART=0x40013800;FCTL=0x40022000
+TIM2=0x40000000;DMA=0x40020000;DMA2=DMA+0x1c
 PWR=0x40007000;EXTI=0x40010400;IWDG=0x40003000
 with ELF.open('rb') as f:
     elf=ELFFile(f)
@@ -34,6 +35,7 @@ class Board:
         self.u.mem_write(FLASH,b'\xff'*0x8000)
         self.u.mem_write(STOP,b'\x00\xbf')
         for address,data in initialized:self.u.mem_write(address,data)
+        self.can_tsr=0x1c000000
         self.write(GPIOA,0x28000000) # PA13/PA14 reset SWD alternate functions.
         self.write(RCC,3) # HSI on/ready.
         self.write(0x1ffff7ba,1500,2)
@@ -46,7 +48,9 @@ class Board:
         self.u.hook_add(uc.UC_HOOK_MEM_WRITE,self.on_flash,begin=FLASH+0x7800,end=FLASH+0x7fff)
         self.u.hook_add(uc.UC_HOOK_CODE,self.on_stop,begin=STOP,end=STOP)
     def read(self,address,size=4):return int.from_bytes(self.u.mem_read(address,size),'little')
-    def write(self,address,value,size=4):self.u.mem_write(address,int(value).to_bytes(size,'little'))
+    def write(self,address,value,size=4):
+        if address==CAN+8:self.can_tsr=value
+        self.u.mem_write(address,int(value).to_bytes(size,'little'))
     def on_stop(self,*args):self.returned=True;self.u.emu_stop()
     def on_read(self,u,access,a,size,value,data):
         if a==RCC:
@@ -55,11 +59,16 @@ class Board:
             v=self.read(a);self.write(a,(v&~12)|((v&3)<<2))
         elif a==RCC+0x34:
             v=self.read(a);self.write(a,v|2 if v&1 else v&~2)
+        elif a==CAN+8:self.u.mem_write(a,struct.pack('<I',self.can_tsr))
         elif a==CAN+4:self.write(a,1 if self.read(CAN)&1 and self.can_ack_init else 0)
         elif a in (CAN+0xc,CAN+0x10):self.write(a,len(self.fifos[(a-CAN-0xc)//4]))
         elif CAN+0x1b0<=a<CAN+0x1d0:
             fifo=(a-CAN-0x1b0)//16;off=(a-CAN-0x1b0)%16
             if self.fifos[fifo]:self.write(a,self.fifos[fifo][0][off//4])
+        elif a==CAN+8:
+            for shift in (0,8,16):
+                if v&(1<<shift):self.can_tsr&=~(15<<shift)
+        elif a==DMA+4:self.write(DMA,self.read(DMA)&~v)
         elif a==ADC+8:
             v=self.read(a)&~((1<<31)|(1<<2));self.write(a,v)
         elif a==ADC:self.write(a,self.adc_status if self.adc_ready else 0)
@@ -70,7 +79,11 @@ class Board:
         self.trace.append((a,size,v))
         for port in [GPIOA,GPIOB,GPIOF]:
             if a==port+0x18:self.write(port+0x14,(self.read(port+0x14)|(v&0xffff))&~(v>>16))
-        if a==ADC+8:
+        if a==CAN+8:
+            for shift in (0,8,16):
+                if v&(1<<shift):self.can_tsr&=~(15<<shift)
+        elif a==DMA+4:self.write(DMA,self.read(DMA)&~v)
+        elif a==ADC+8:
             if v&1:self.adc_status|=1
             if v&4:
                 selected=self.read(ADC+0x28);assert selected and selected&(selected-1)==0
@@ -141,8 +154,46 @@ b.call('board_bias',0,0)
 passed('All 64 compiled bias combinations: mapped gates, off defaults and no source/sink overlap')
 assert mode(b,GPIOA,8)==1 and mode(b,GPIOB,3)==1
 for pin in [13,14]:assert mode(b,GPIOA,pin)==2
-b.call('board_status_led',1);assert b.read(GPIOB+0x14)&8
-b.call('board_status_led',0);assert not b.read(GPIOB+0x14)&8
+# Compiled timer/DMA setup and GRB order at both available clock rates.
+for clock in (8000000,48000000):
+    led=Board();led.call('board_gpio_init');led.write(symbols['SystemCoreClock'],clock)
+    led.call('board_status_init');assert led.read(DMA2)==0 and mode(led,GPIOB,3)==1
+    led.call('board_status_led',0x12a55a);assert led.read(DMA2)==0 # reset gap
+    led.write(symbols['board_millis'],1);led.call('board_status_led',0x12a55a)
+    assert led.read(DMA2)==0 # Adjacent ticks may be arbitrarily close in time.
+    led.write(symbols['board_millis'],2);led.call('board_status_led',0x12a55a)
+    assert af(led,GPIOB,3)==2 and led.read(TIM2+0xc)==256 and led.read(TIM2+0x20)==16
+    assert led.read(DMA2+4)==25 and led.read(DMA2+8)==TIM2+0x38
+    assert led.read(DMA2)==0x2591 # memory -> peripheral, 16-bit, high priority
+    assert led.read(TIM2+0x18)==0x6800 # PWM1 plus CCR2 preload
+    period=led.read(TIM2+0x2c)+1;assert period==clock//800000
+    data=struct.unpack('<26H',led.u.mem_read(symbols['led_duty'],52))
+    bits=[int(x) for x in f'{0xa5125a:024b}']
+    assert data==tuple(period*7//10 if bit else period//4 for bit in bits)+(0,0)
+    # Decode the preload pipeline: initial active 0, then 24 PWM cells,
+    # final active 0 before the second tail zero completes DMA.
+    active=0;preload=led.read(TIM2+0x38);cells=[]
+    for duty in data[1:]:
+        cells.append(active);active=preload;preload=duty
+    cells.append(active);assert cells==[0]+list(data[:24])+[0]
+    for bit,duty in zip(bits,data):
+        high=duty/clock*1e6;low=(period-duty)/clock*1e6
+        assert (.2<=high<=.4 and low>=.7) if not bit else (high>=.7 and low>=.2)
+    assert led.u.reg_read(ar.UC_ARM_REG_PRIMASK)==0
+    led.write(DMA2+4,0);led.write(symbols['board_millis'],3)
+    led.call('board_status_led',0)
+    assert struct.unpack('<26H',led.u.mem_read(symbols['led_duty'],52))==data
+    led.write(symbols['board_millis'],4)
+    led.call('board_status_led',0)
+    assert struct.unpack('<24H',led.u.mem_read(symbols['led_duty'],48))==(period//4,)*24
+    led.write(symbols['board_millis'],7);led.call('board_status_led',0x800000)
+    assert mode(led,GPIOB,3)==1 and led.read(DMA2)==0 # stalled DMA bounded
+    led.write(symbols['board_millis'],8);led.call('board_status_led',0x800000)
+    assert led.read(DMA2)==0 # Error recovery also preserves a full reset gap.
+    led.write(symbols['board_millis'],9);led.call('board_status_led',0x800000)
+    led.write(DMA,1<<7);led.write(symbols['board_millis'],11);led.call('board_status_led',0)
+    assert mode(led,GPIOB,3)==1 and led.read(DMA2)==0 # transfer error bounded
+passed('RGB timer/DMA setup, GRB waveform pipeline, HSI/PLL timing, reset gap and bounded DMA errors')
 b.call('board_safe_off');assert b.read(GPIOA+0x14)&256
 assert mode(b,GPIOB,0)==3 and mode(b,GPIOB,1)==3 and mode(b,GPIOB,7)==1
 assert not b.read(GPIOA+0x14)&(1<<15) and not b.read(GPIOB+0x14)&(1<<7)
@@ -152,7 +203,7 @@ for enabled in range(4):
     assert bool(b.read(GPIOB+0x14)&(1<<7))==bool(enabled&1)
 b.call('board_safe_off')
 assert not b.read(GPIOA+0x14)&(1<<15) and not b.read(GPIOB+0x14)&(1<<7)
-passed('Rev G reset defaults and all four power enable combinations; safe-off disables both rails')
+passed('Retained rail reset defaults and all four power enable combinations; safe-off disables both rails')
 assert b.call('board_adc_init')==1 and b.read(ADC+0x14)==7
 assert b.call('board_rail_read',RAM+0x300,RAM+0x302)==1
 assert abs(b.read(RAM+0x300,2)-12000)<15 and abs(b.read(RAM+0x302,2)-5000)<15
@@ -167,6 +218,14 @@ passed('SC12 GPIO directions, SWD, LED, CAN standby and compiled SRAM vector rem
 assert b.call('board_clock_init')==1 and b.read(symbols['SystemCoreClock'])==48000000
 assert b.read(RCC+4)&3==2 and b.read(RCC+4)&0x003c0000==0x00100000
 assert b.read(FCTL)&1 and b.read(RCC)&(1<<19)
+ack=Board();ack.call('board_gpio_init');ack.call('board_clock_init');ack.call('board_can_init',17)
+assert not ack.call('board_can_link_ok',0)
+ack.write(symbols['board_millis'],100);ack.write(CAN+8,0x1c000003)
+assert ack.call('board_can_link_ok',100)==1 and ack.can_tsr&15==0
+assert ack.call('board_can_link_ok',599)==1 and ack.call('board_can_link_ok',600)==0
+ack.write(CAN+8,0x1c000009);ack.write(symbols['board_millis'],700)
+assert not ack.call('board_can_link_ok',700) # completion/error without TXOK
+passed('CAN LED requires TX acknowledgment, clears completion flags and expires at 500 ms')
 passed('8 MHz HSE to 48 MHz PLL, flash wait state and clock-security setup')
 f=Board();f.hse=False;assert f.call('board_clock_init')==0 and f.read(symbols['SystemCoreClock'])==8000000
 passed('Bounded HSE startup failure')

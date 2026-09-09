@@ -8,11 +8,11 @@ physical={c['reference']:c for c in manifest['components']}
 bom=list(csv.DictReader((R/'bom/Factory_BOM.csv').open()))
 expected={r.strip() for c in bom for r in c['Designator'].split(',')}
 manual={r.strip() for c in csv.DictReader((R/'bom/Hand_solder_BOM.csv').open()) for r in c['References'].split(',')}
-assert len(expected)==126 and len(manual)==9 and not expected&manual
+assert len(expected)==130 and len(manual)==10 and not expected&manual
 assert expected|manual=={r for r,p in parts.items() if not p.get('exclude_bom')}
 native=list(csv.DictReader((R/'output/assembly/positions_smd_top.csv').open()))
 selected=[r for r in native if r['Ref'] in expected]
-assert len(selected)==126 and {r['Ref'] for r in selected}==expected
+assert len(selected)==130 and {r['Ref'] for r in selected}==expected
 rows=[]
 for r in selected:
  c=physical[r['Ref']]
@@ -24,6 +24,6 @@ with dest.open('w',newline='') as f:
  w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
 # All fitted component numbered pads are soldered terminations.
 joints=sum(len({p['number'] for p in physical[r]['pads'] if p['number']}) for r in expected)
-report=dict(result='PASS',factory_smt_placements=126,factory_smt_types=len(bom),hand_solder_parts=9,hand_solder_joints=39,loose_shunts=3,estimated_smt_joints_per_board=joints,position_origin='PCB lower-left, X right / Y up, mm; native footprint rotation counterclockwise. Factory must reconcile part-library pin 1.',matched_to='Native manifest and model/BOM exact reference sets',sha256=hashlib.sha256(dest.read_bytes()).hexdigest(),factory_part_allocation_confirmed=False)
+report=dict(result='PASS',factory_smt_placements=130,factory_smt_types=len(bom),hand_solder_parts=10,hand_solder_joints=49,loose_shunts=3,estimated_smt_joints_per_board=joints,position_origin='PCB lower-left, X right / Y up, mm; native footprint rotation counterclockwise. Factory must reconcile part-library pin 1.',matched_to='Native manifest and model/BOM exact reference sets',sha256=hashlib.sha256(dest.read_bytes()).hexdigest(),factory_part_allocation_confirmed=False)
 (R/'reports/manufacturing/factory_files.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))

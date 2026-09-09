@@ -444,7 +444,7 @@
         "23": "SWDIO",
         "24": "SWCLK",
         "25": "POWER_5V_EN",
-        "26": "STATUS_GREEN",
+        "26": "STATUS_DATA",
         "27": "BIAS_DOWN3",
         "28": "BIAS_DOWN1",
         "29": "BIAS_DOWN2",
@@ -664,7 +664,7 @@
     "J8": {
       "ref": "J8",
       "kind": "CONN10",
-      "value": "POGO SERVICE",
+      "value": "2x5 SERVICE 2.54mm",
       "pins": {
         "1": "NRST",
         "2": "UART_RX",
@@ -678,24 +678,23 @@
         "10": "GND"
       },
       "sheet": "controller",
-      "footprint": "FRC_Sensor_CAN:Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical",
-      "mpn": "",
-      "note": "Standard TC2050-IDC-NL mechanical footprint; CUSTOM electrical pinout. Cable pin6 VTref output only. Follow adapter wiring table.",
-      "source_footprint": "Connector:Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical",
-      "exclude_bom": true
+      "footprint": "FRC_Sensor_CAN:Service_2x05_P2.54mm",
+      "mpn": "PZ254V-12-10P",
+      "note": "Hand-solder 2x5 2.54mm header. CUSTOM pinout; see wiring drawing. Pin6 is target VTref sense only, never power from probe. 1.10mm finished holes.",
+      "source_footprint": "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical"
     },
     "R30": {
       "ref": "R30",
       "kind": "R",
-      "value": "1k",
+      "value": "330",
       "pins": {
-        "1": "STATUS_GREEN",
-        "2": "STATUS_GREEN_A"
+        "1": "STATUS_5V_DATA",
+        "2": "STATUS_DIN"
       },
       "sheet": "controller",
       "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
-      "mpn": "0805W8F1001T5E",
-      "note": "",
+      "mpn": "0805W8F3300T5E",
+      "note": "330 ohm LED data series resistor; short local route after level buffer.",
       "tolerance": "1%",
       "rated_power_W": 0.125,
       "temperature_coefficient_ppm_C": 100,
@@ -703,17 +702,19 @@
     },
     "D10": {
       "ref": "D10",
-      "kind": "LED",
-      "value": "GREEN",
+      "kind": "RGB_LED",
+      "value": "SK6805-EC15",
       "pins": {
-        "1": "GND",
-        "2": "STATUS_GREEN_A"
+        "1": "STATUS_DIN",
+        "2": "V5_INTERNAL",
+        "3": null,
+        "4": "GND"
       },
       "sheet": "controller",
-      "footprint": "FRC_Sensor_CAN:LED_0805_2012Metric",
-      "mpn": "LTST-C170KGKT",
-      "note": "",
-      "source_footprint": "LED_SMD:LED_0805_2012Metric"
+      "footprint": "FRC_Sensor_CAN:LED_SK6805_EC15",
+      "mpn": "SK6805-EC15",
+      "note": "Single addressable RGB indicator; internal 5V, independent of protected sensor rails. OPSCO A/1 pinout and GRB data. No generic WS2812 substitution; future light pipe clearance above D10.",
+      "source_footprint": "Project:OPSCO_SK6805-EC15_A1"
     },
     "U6": {
       "ref": "U6",
@@ -2316,6 +2317,74 @@
       "temperature_coefficient_ppm_C": 100,
       "rated_power_W": 0.125,
       "note": "100k gate pulldown keeps Q3 off during MCU reset/unpowered, so Q2 inhibits U9. 10k pulldown provides extra reset/leakage margin."
+    },
+    "U10": {
+      "ref": "U10",
+      "kind": "LED_BUFFER",
+      "value": "SN74AHCT1G125",
+      "mpn": "SN74AHCT1G125DBVR",
+      "sheet": "controller",
+      "footprint": "FRC_Sensor_CAN:SOT-23-5",
+      "source_footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "1": "GND",
+        "2": "STATUS_DATA",
+        "3": "GND",
+        "4": "STATUS_5V_DATA",
+        "5": "V5_INTERNAL"
+      },
+      "note": "5V AHCT buffer accepts 3.3V MCU data. OE_N grounded. R31 holds input LOW while MCU reset; LED is a software indicator, not an independent power-good signal."
+    },
+    "R31": {
+      "ref": "R31",
+      "kind": "R",
+      "value": "10k",
+      "pins": {
+        "1": "STATUS_DATA",
+        "2": "GND"
+      },
+      "sheet": "controller",
+      "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+      "mpn": "0805W8F1002T5E",
+      "note": "10k holds RGB data LOW during MCU reset or loss of 3.3V.",
+      "tolerance": "1%",
+      "rated_power_W": 0.125,
+      "temperature_coefficient_ppm_C": 100,
+      "source_footprint": "Resistor_SMD:R_0805_2012Metric"
+    },
+    "C74": {
+      "ref": "C74",
+      "kind": "C",
+      "value": "100nF",
+      "pins": {
+        "1": "V5_INTERNAL",
+        "2": "GND"
+      },
+      "sheet": "controller",
+      "footprint": "FRC_Sensor_CAN:C_0805_2012Metric",
+      "mpn": "CL21B104KCFNNNE",
+      "note": "Local 100nF bypass for U10 level buffer.",
+      "voltage": "100V",
+      "dielectric": "X7R",
+      "tolerance": "10%",
+      "source_footprint": "Capacitor_SMD:C_0805_2012Metric"
+    },
+    "C75": {
+      "ref": "C75",
+      "kind": "C",
+      "value": "100nF",
+      "pins": {
+        "1": "V5_INTERNAL",
+        "2": "GND"
+      },
+      "sheet": "controller",
+      "footprint": "FRC_Sensor_CAN:C_0805_2012Metric",
+      "mpn": "CL21B104KCFNNNE",
+      "note": "Local 100nF bypass for D10 addressable RGB LED.",
+      "voltage": "100V",
+      "dielectric": "X7R",
+      "tolerance": "10%",
+      "source_footprint": "Capacitor_SMD:C_0805_2012Metric"
     }
   }
 }

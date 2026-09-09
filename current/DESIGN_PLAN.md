@@ -1,6 +1,6 @@
-# Rev G power and input design
+# Rev H power and input design
 
-Rev G addresses the startup, short-current, recovery and rail-monitoring problems identified in F. The [regression report](reports/variant_verification.json) records every change against the frozen F circuit.
+Rev H retains G's protected power circuit and adds RGB status and ordinary-header programming. The [regression report](reports/variant_verification.json) records every change against the frozen G circuit.
 
 ## Supply path
 
@@ -14,7 +14,7 @@ SENSOR_5V / SENSOR_12V → removable jumper per port → sensor power
 
 U1 remains LMR51420XDDCR. U8 remains TPS61085DGKR, with the 3.3 µH shielded inductor, B240A diode and 13 kΩ / 33 nF compensation. C61 is now a 1 µF local bypass. C60 remains 22 µF, and C62–C64 remain three 22 µF reservoir capacitors. Their effective capacitance at 12 V is much smaller than their nameplate value; the checks include both explicit derated and nameplate cases.
 
-A boost has a direct path through its inductor and diode. Rev G puts **TPS259620DDAR after the reservoir**, so a sensor short cannot discharge that reservoir directly through the port. R62=2.61 kΩ sets about 357 mA nominal output current limit; the tolerance budget is in [electrical_checks.json](reports/electrical/electrical_checks.json). Useful sensor load remains **300 mA shared per rail**. C70=47 nF controls output slew; C65/C71 provide local input/output bypassing. D5 clamps negative output transients and D6 limits raw-rail transients. These parts do not authorize reverse powering a sensor port.
+A boost has a direct path through its inductor and diode. Rev H puts **TPS259620DDAR after the reservoir**, so a sensor short cannot discharge that reservoir directly through the port. R62=2.61 kΩ sets about 357 mA nominal output current limit; the tolerance budget is in [electrical_checks.json](reports/electrical/electrical_checks.json). Useful sensor load remains **300 mA shared per rail**. C70=47 nF controls output slew; C65/C71 provide local input/output bypassing. D5 clamps negative output transients and D6 limits raw-rail transients. These parts do not authorize reverse powering a sensor port.
 
 U9's UVLO divider requires approximately 11.1 V on the raw boost before connection. OVCSEL is intentionally open for its **13.8 V-class fault clamp**, not a precision 12 V ceiling. R70 pulls Q2's gate from raw 12 V, holding UVLO low by default. PB7 HIGH enables Q3, which removes that inhibit. R75 holds Q3 off without MCU power. U4's PA15 enable has a hardware pulldown. Both branches therefore start disabled; their current limits operate independently of firmware.
 
@@ -30,10 +30,14 @@ External inputs remain digital: target LOW ≤1.2 V, HIGH ≥2.4 V, positive 0�
 
 ## Layout and assembly
 
-The board is 52 × 74 mm with four copper layers and all 135 fitted components on top. The factory places 126 SMT parts; the user fits six terminals and three voltage headers, then three loose caps. U9 uses a split-paste exposed pad and surrounding thermal vias. No blind/buried vias or second-side assembly is required.
+The board is 52 × 74 mm with four copper layers and all 140 fitted components on top. The factory places 130 SMT parts; the user fits six terminals, three voltage headers and one J8 service header, then three loose caps. U9 uses a split-paste exposed pad and surrounding thermal vias. No blind/buried vias or second-side assembly is required.
 
 One inner layer provides continuous ground; the other also carries a few slow control/service connections. Switching, feedback, compensation and crystal routes remain on top. Native and independently reconstructed fabrication geometry are checked separately.
 
-Use hardware 7, application 0.8.0, bootloader 1.0.0 and protocol 4 from the same release. [Verification](docs/VALIDATION.md) distinguishes calculations and simulation from physical qualification. [Cost basis](docs/COST_REDUCTION.md) includes supplier minimums and excludes assembly/freight/tax.
+Use hardware 8, application 0.9.0, bootloader 1.1.0 and protocol 4 from the same release. [Verification](docs/VALIDATION.md) distinguishes calculations and simulation from physical qualification. [Cost basis](docs/COST_REDUCTION.md) includes supplier minimums and excludes assembly/freight/tax.
 
-Rev G design envelope: at most 100 µF total external capacitance on the shared 12 V rail, and 22 µF on the shared 5 V rail, at 300 mA per rail. The startup calculation includes +20% capacitance and the current-limit minimum; the 470 µF simulation is a typical diagnostic beyond that envelope. Qualify nonlinear sensor inrush separately.
+Rev H design envelope: at most 100 µF total external capacitance on the shared 12 V rail, and 22 µF on the shared 5 V rail, at 300 mA per rail. The startup calculation includes +20% capacitance and the current-limit minimum; the 470 µF simulation is a typical diagnostic beyond that envelope. Qualify nonlinear sensor inrush separately.
+
+## RGB diagnostics and low-volume programming
+
+H replaces the single green LED with one SK6805-EC15, a 5 V AHCT buffer, data pulldown, series resistor and local bypass capacitors. PB3 remains the status pin and uses timer/DMA serialization. J8 becomes a hand-fitted 2×5 2.54 mm header with the same electrical pin numbers and a new odd/even physical pattern. [Status, case opening and inexpensive programmer](docs/STATUS_AND_PROGRAMMING.md).

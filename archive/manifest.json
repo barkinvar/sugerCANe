@@ -249,6 +249,48 @@
       "source_commit": "ebdd1b1681c73dcc166af08f16474a8b3da037c5",
       "sha256": "f169abc001c0504604f95c9fe382075b7729cd20c12a1874254ddabf1bbdd396",
       "bytes": 616
+    },
+    {
+      "original_path": "current/release/FRC_Sensor_CAN_RevG_SC12_Prototype.zip",
+      "path": "rev_g/release/FRC_Sensor_CAN_RevG_SC12_Prototype.zip",
+      "sha256": "5759aab5d9a53a40d7499cb8cd3209cc22da5468a4ea63333befd299bad89ba7",
+      "bytes": 19044616,
+      "source_commit": "e7d5fe6918b5b763572faffb6a5d66720c1ba648"
+    },
+    {
+      "original_path": "current/order/RevG_SC12_Gerbers.zip",
+      "path": "rev_g/order/RevG_SC12_Gerbers.zip",
+      "sha256": "40679d2d635fe2fd5d5a0ecea7e217c293529b1b4f9c9b01c6e40b10717d86a2",
+      "bytes": 600252,
+      "source_commit": "e7d5fe6918b5b763572faffb6a5d66720c1ba648"
+    },
+    {
+      "original_path": "current/order/RevG_SC12_Factory_Upload.zip",
+      "path": "rev_g/order/RevG_SC12_Factory_Upload.zip",
+      "sha256": "b6cc954eeb4884359e8de97b818503eda9f350027f2ced9006f294e09351d344",
+      "bytes": 3776602,
+      "source_commit": "e7d5fe6918b5b763572faffb6a5d66720c1ba648"
+    },
+    {
+      "original_path": "current/release/FRC_Sensor_CAN_RevG_SC12_Prototype.zip.sha256",
+      "path": "rev_g/release/FRC_Sensor_CAN_RevG_SC12_Prototype.zip.sha256",
+      "sha256": "264d71f42931a0ecf479c4223ac887c49ca0090d72337009e2217190d1ea6033",
+      "bytes": 105,
+      "source_commit": "e7d5fe6918b5b763572faffb6a5d66720c1ba648"
+    },
+    {
+      "original_path": "current/order/RevG_SC12_Factory_Upload.zip.sha256",
+      "path": "rev_g/order/RevG_SC12_Factory_Upload.zip.sha256",
+      "sha256": "be5d9bb6188b3033814bb5224a3b908df139e17efaa2bf66a634e8dbe55afa82",
+      "bytes": 95,
+      "source_commit": "e7d5fe6918b5b763572faffb6a5d66720c1ba648"
+    },
+    {
+      "original_path": "current/order/RevG_SC12_Gerbers.zip.sha256",
+      "path": "rev_g/order/RevG_SC12_Gerbers.zip.sha256",
+      "sha256": "0b0504e8a87b6aa0edefcfb144e6e9105329cd34e7ae7248a8a587ff23ebf986",
+      "bytes": 88,
+      "source_commit": "e7d5fe6918b5b763572faffb6a5d66720c1ba648"
     }
   ],
   "scope": "Original published archives/checksums copied byte-for-byte; complete historical sources remain in Git history."

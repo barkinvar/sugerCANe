@@ -7,7 +7,7 @@
 #define SC_SERVICE_RX ((10u<<24)|(8u<<16)|(0x300u<<6))
 #define SC_SERVICE_TX ((10u<<24)|(8u<<16)|(0x301u<<6))
 #define SC_SERVICE_MAGIC 0x314d4353u
-#define SC_IMAGE_TAG 0x53433137u
+#define SC_IMAGE_TAG 0x53433138u
 #define SC_IMAGE_MAGIC 0x49324353u
 #define SC_IMAGE_COMMIT 0xc035a19eu
 #define SC_LEASE_MS 5000u

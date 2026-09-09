@@ -1,5 +1,5 @@
 (kicad_sch (version 20250114) (generator "eeschema") (uuid "07d6b478-c036-5981-bc2b-e07256917327") (paper "A3")
-(title_block (title "SC12 - Sensor supply voltage measurements") (date "2026-09-09") (rev "G") (company "Original sensor interface design") (comment 1 "Prototype: bench validation required before robot use"))
+(title_block (title "SC12 - Sensor supply voltage measurements") (date "2026-09-09") (rev "H") (company "Original sensor interface design") (comment 1 "Prototype: bench validation required before robot use"))
 (lib_symbols
 (symbol "FRC_Sensor_CAN:C" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
 (property "Reference" "C" (at 0 10 0) (effects (font (size 1.27 1.27))))
