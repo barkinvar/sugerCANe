@@ -8,6 +8,8 @@ A compact interface for industrial photoelectric sensors and digital logic, with
 
 Rev E targets 6–22 V board input, positive 0–30 V digital signals and 300 mA shared per sensor rail. Its 52 × 70 mm four-layer PCB keeps every component on top: 111 factory SMT parts and nine user-soldered through-hole parts. Parts purchasing at ten boards is approximately **$35.14 each**, before PCB, assembly, freight and tax. [Cost basis](rev_e/docs/COST_REDUCTION.md).
 
+[Next cost and robot-use plan](COST_OPTIMIZATION_PLAN.md): evaluate locking sensor connectors, a protected 5 V-to-12 V boost stage and factory sourcing, targeting $24–27 in parts at ten boards. These are proposals; Rev E hardware and manufacturing files are unchanged.
+
 CAN setup includes full-UID discovery, ID and persistent per-input settings, a desktop window, robot drivers and recoverable firmware uploads after initial SWD installation. Rev E uses hardware identity 5 / protocol 4 / firmware 0.6.0. This is an independent sensor-to-CAN design; it is not compatible with CTRE Phoenix or GrappleHook.
 
 **All revisions are unbuilt engineering prototypes.** Native CAD, manufacturing files and computational checks are provided; physical power, sensor, thermal, CAN, EMC and vibration qualification remain pending. Floating detection cannot distinguish a broken cable from a normally inactive open-collector output.
