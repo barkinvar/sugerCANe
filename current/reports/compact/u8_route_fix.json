@@ -2,7 +2,7 @@
   "result": "PASS",
   "baseline_commit": "fbb77cb4d89d5443efa965c6bbcddf3715804a42",
   "baseline_board_sha256": "5e43a87482b98fb8de0b105626381735209c22386c14bbe29e93f3bb7c3696dc",
-  "board_sha256": "f2a08206016cc9e3d576d27210aa77b042df628b72892f1a989f5f5c8db9e7a0",
+  "board_sha256": "b0b37abc5f0641ca8850481cd67a4e6609b9bd30ba9fa350d82ea41f0c2709cd",
   "location": {
     "side": "bottom",
     "gerber_xy_mm": [
@@ -17,7 +17,7 @@
   "switch_track_length_after_mm": 12.1369687860985,
   "minimum_switch_trace_to_other_u8_pad_clearance_mm": 0.22499999999999784,
   "input_hashes": {
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "f2a08206016cc9e3d576d27210aa77b042df628b72892f1a989f5f5c8db9e7a0",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "b0b37abc5f0641ca8850481cd67a4e6609b9bd30ba9fa350d82ea41f0c2709cd",
     "hardware/design/layout_contract.json": "b26ecc942a35872b12e28b6e06028b8024cb26e8660d9aaca84eb89df2acf8b9",
     "hardware/design/routing_widths.json": "ee6ece33cb23ae3f4dec01b12e4398397d6c3040af9837702a733133512e9467",
     "scripts/export_routing_geometry.py": "184ae2226e3b37849ae200420e333a554e60ba3c86afb542729f1c7de62b7224",

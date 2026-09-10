@@ -2,4 +2,5 @@ PASS rejects corner_contact
 PASS rejects narrow_diode_leg
 PASS rejects missing_pad_entry
 PASS rejects unlisted_clock_change
-PASS compact repair: valid board accepted; four unsafe/unreviewed mutations rejected
+PASS rejects missing_local_ground_via
+PASS compact repair: valid board accepted; five unsafe/unreviewed mutations rejected

@@ -94,12 +94,12 @@
   "output": "output/assembly/factory_top_paste.gtp",
   "input_hashes": {
     "bom/assembly_plan.json": "3ddff6cab3d7df84938cd10b9cc9549515d288c65915f7252b9b6a726b85b627",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "f2a08206016cc9e3d576d27210aa77b042df628b72892f1a989f5f5c8db9e7a0",
-    "reports/manufacturing/board_manifest.json": "4e2dcabe9e57109e35dda1acdf6c1779f34212f9c6cdc568a9ff65da5fe4736e",
-    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "b1c2d38927190f0ca2b895ffd9b677c9e210998b30c13b0642d7643fb1393a24",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "b0b37abc5f0641ca8850481cd67a4e6609b9bd30ba9fa350d82ea41f0c2709cd",
+    "reports/manufacturing/board_manifest.json": "8b2ae938e67059a4c2339cda4b3b6c417e9b7d9fae5ddf4fd2c22e6e16efb5ee",
+    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "2de2a2259ec7324647ad96c180a2c5d1b9d2a4b2f9fe11f9de6f48ae672163fb",
     "scripts/build_factory_stencil.py": "ab0bb706466ff6033ff6fc9a4bcfde8ea487291ac0a7824e16969f48b9ce6848",
     "hardware/design/layout_contract.json": "b26ecc942a35872b12e28b6e06028b8024cb26e8660d9aaca84eb89df2acf8b9",
-    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "dd9d953dcbfb61db70b1e3152d5321b679c7e02b86f608af5cda0790a6cf3d47"
+    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "9a357de22990a1dc9d5c05561c2859d7a87b7fc205689337dd9ece9ec76bd8ee"
   },
-  "output_sha256": "52d29360e7ed7e7aa4558b91b4331d8fecee687fecfb190c574afa979856bd5b"
+  "output_sha256": "89aef5c4d6306adfe7f8316b2251cef40e4c8fc5d1efd8dae71c4a7088233c9f"
 }

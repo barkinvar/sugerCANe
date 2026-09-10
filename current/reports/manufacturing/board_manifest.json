@@ -7118,6 +7118,13 @@
       "source": "via"
     },
     {
+      "x_mm": 36.2,
+      "y_mm": -22.85,
+      "diameter_mm": 0.2,
+      "plated": true,
+      "source": "via"
+    },
+    {
       "x_mm": 22.8,
       "y_mm": -18.05,
       "diameter_mm": 0.3,

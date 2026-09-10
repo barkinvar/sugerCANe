@@ -88,7 +88,7 @@
     "U8",
     "U9"
   ],
-  "plated_drills": 294,
+  "plated_drills": 295,
   "nonplated_drills": 2,
   "copper_pad_flashes_verified": {
     "top": 208,
@@ -100,8 +100,8 @@
   "purchased_references_verified": 140,
   "portable_models_verified": 140,
   "parser_warnings": [
-    "/home/neuro/candi-compact-board/current/output/fabrication/FRC_Sensor_CAN-NPTH.drl:12 \"G90\": G90 header statement found after end of header",
-    "/home/neuro/candi-compact-board/current/output/fabrication/FRC_Sensor_CAN-PTH.drl:20 \"G90\": G90 header statement found after end of header"
+    "/home/neuro/candi-compact-ground-review/current/output/fabrication/FRC_Sensor_CAN-NPTH.drl:12 \"G90\": G90 header statement found after end of header",
+    "/home/neuro/candi-compact-ground-review/current/output/fabrication/FRC_Sensor_CAN-PTH.drl:20 \"G90\": G90 header statement found after end of header"
   ],
   "limitations": "X2 pad/net/coordinate and drill/placement parity; not a copper connectivity solver or fabrication-house CAM review."
 }
