@@ -56,6 +56,7 @@ for path,digest in packages['input_hashes'].items():
  assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale package review',path)
 files += ['docs/JLC_PACKAGE_REVIEW.md','bom/jlc_package_review.json',
           'reports/manufacturing/jlc_packages.json','sources/datasheets/jlc_package_drawings.pdf']
+files += ['reports/compact/easteregg.json','hardware/artwork/compact-pixel-cane.svg']
 files += ['reports/electrical/component_margins.json','reports/manufacturing/clock_load_change.json','reports/manufacturing/buck_margin_change.json','reports/manufacturing/final_native_recheck.json',
           'docs/ORDER_READINESS.md','reports/electrical/boost_spice.json',
           'reports/electrical/input_spice.json','reports/electrical/power_replay.json']

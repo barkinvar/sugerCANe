@@ -1,33 +1,33 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-10T21:14:34.142054+00:00",
+  "reviewed_utc": "2026-09-10T21:29:14.705415+00:00",
   "reviewer": "Codex visual inspection",
   "variant": "Rev H compact 44 x 48 mm prototype",
-  "board_sha256": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
+  "board_sha256": "859fb2086981529432f13e17f79136d3fe0666b081be5559e058b1ec7fb04586",
   "artifacts": [
     {
       "file": "output/review/board_top.png",
-      "sha256": "7097ac6f7fb86985856d9e260e63cb7ff9e4a1a692671056efbdaaf0ec95dfaf",
-      "scope": "Fresh final 44 x 48 mm board render or true-scale outline comparison. Inspected for placement, connector access, labels, underside population and mechanical envelope; nominal geometry only.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "50668b218ed9a85835868ca1d9c5c521ccc63d918ed11ce62b6bf2d0dedb48b2",
+      "scope": "Refreshed board renders, top assembly drawing and handbook pages 1-8 visually inspected. Front pixel-cane island is visible below H1 and above C1; existing labels remain readable. Bottom appearance retained. Original non-artwork native content and all non-front-silkscreen fabrication files are byte-identical, checked separately in reports/compact/easteregg.json.",
+      "reviewed_utc": "2026-09-10T21:29:14.705415+00:00"
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "9a55c28c5ee05f0a5047a39e84b679d17214dfb6a4f22080c062ce1aa2d9ce7c",
-      "scope": "Fresh final 44 x 48 mm board render or true-scale outline comparison. Inspected for placement, connector access, labels, underside population and mechanical envelope; nominal geometry only.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "0aed1c4860b123975efb11ed884d1876552343bda2310c5b1260cf357b388436",
+      "scope": "Refreshed board renders, top assembly drawing and handbook pages 1-8 visually inspected. Front pixel-cane island is visible below H1 and above C1; existing labels remain readable. Bottom appearance retained. Original non-artwork native content and all non-front-silkscreen fabrication files are byte-identical, checked separately in reports/compact/easteregg.json.",
+      "reviewed_utc": "2026-09-10T21:29:14.705415+00:00"
     },
     {
       "file": "output/review/board_3d_final.png",
-      "sha256": "2a85c83ba8547df8436fb2452b491a94ac8d23414b6551a99b34bd255d6588b6",
-      "scope": "Fresh final 44 x 48 mm board render or true-scale outline comparison. Inspected for placement, connector access, labels, underside population and mechanical envelope; nominal geometry only.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "483e0ea9fb2377ec10225caada3dbada4ee1a60538abaa3270d12eba138e85b8",
+      "scope": "Refreshed board renders, top assembly drawing and handbook pages 1-8 visually inspected. Front pixel-cane island is visible below H1 and above C1; existing labels remain readable. Bottom appearance retained. Original non-artwork native content and all non-front-silkscreen fabrication files are byte-identical, checked separately in reports/compact/easteregg.json.",
+      "reviewed_utc": "2026-09-10T21:29:14.705415+00:00"
     },
     {
       "file": "output/review/board_connectors.png",
-      "sha256": "1bad1cd86dcd57affad2b4abe7b8f4691c5693e45013b5152c71abd0b8877ed7",
-      "scope": "Fresh final 44 x 48 mm board render or true-scale outline comparison. Inspected for placement, connector access, labels, underside population and mechanical envelope; nominal geometry only.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "508cf1f7f401a22b7ecfd0fe6a10098d8648dd93948b92a341443c809ad561e5",
+      "scope": "Refreshed board renders, top assembly drawing and handbook pages 1-8 visually inspected. Front pixel-cane island is visible below H1 and above C1; existing labels remain readable. Bottom appearance retained. Original non-artwork native content and all non-front-silkscreen fabrication files are byte-identical, checked separately in reports/compact/easteregg.json.",
+      "reviewed_utc": "2026-09-10T21:29:14.705415+00:00"
     },
     {
       "file": "output/review/size_comparison.png",
@@ -91,9 +91,9 @@
     },
     {
       "file": "output/assembly/top_assembly.pdf",
-      "sha256": "6c88b0e604d857c8ce38b6a09a3d1011c5edfc23c1a445eda0c7ccdc365e1c67",
-      "scope": "Rendered mechanical/assembly/order pages and changed handbook sections inspected for readable layout, current dimensions, part counts and header mapping; all PDF text bounds checked separately.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "d4184f2dd2761e359bd46e7e4551facf2ef4e9c7a27719feaa7da4c58627f91a",
+      "scope": "Refreshed board renders, top assembly drawing and handbook pages 1-8 visually inspected. Front pixel-cane island is visible below H1 and above C1; existing labels remain readable. Bottom appearance retained. Original non-artwork native content and all non-front-silkscreen fabrication files are byte-identical, checked separately in reports/compact/easteregg.json.",
+      "reviewed_utc": "2026-09-10T21:29:14.705415+00:00"
     },
     {
       "file": "output/assembly/bottom_assembly.pdf",
@@ -115,9 +115,9 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "72a3e2f76dff872d6dc1390112b703bb2449d670e416047329ca62f4c33269c8",
-      "scope": "Rendered all three ordering-guide pages and handbook pages 5-8, 29-31 after package-review links, panel minimum and crystal-orientation note changed. Readable tables/text and page transitions; independent text-bounds check passed.",
-      "reviewed_utc": "2026-09-10T21:14:34.142054+00:00"
+      "sha256": "ae3a269e41d721e92a204dfb8e8637f2afa48fdafeca6c82193b81ce387140aa",
+      "scope": "Refreshed board renders, top assembly drawing and handbook pages 1-8 visually inspected. Front pixel-cane island is visible below H1 and above C1; existing labels remain readable. Bottom appearance retained. Original non-artwork native content and all non-front-silkscreen fabrication files are byte-identical, checked separately in reports/compact/easteregg.json.",
+      "reviewed_utc": "2026-09-10T21:29:14.705415+00:00"
     },
     {
       "file": "output/review/u8_switch_route_fix.png",

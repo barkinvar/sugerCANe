@@ -2385,7 +2385,7 @@
       ],
       "scope": "Same filled bottom-copper polygon and adjacent In2 GND plane; nominal geometry only, not return-path impedance qualification."
     },
-    "board_sha256": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
+    "board_sha256": "859fb2086981529432f13e17f79136d3fe0666b081be5559e058b1ec7fb04586",
     "limitations": "Checks nominal layout/electrical identity, rigidly transformed critical copper and exact reviewed local repairs. Supply interconnects are rerouted and independently DC-screened. Native DRC, routing style, exported copper checks and physical qualification remain separate."
   },
   "factory_top_placements": 50,
@@ -3119,12 +3119,12 @@
     "bom/BOM_JLCPCB.csv": "65d87b4314cb78a52060040566e124783331d796e4b4def95172a4edeb509ad4",
     "output/assembly/CPL_JLCPCB.csv": "542da3cf1f5e684c6d71b1dcf05a518cb22b74ac9ae09e722e1a39a8745ef1d6",
     "hardware/design/circuit.json": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "859fb2086981529432f13e17f79136d3fe0666b081be5559e058b1ec7fb04586",
     "scripts/check_jlc_sourcing.py": "921834560aeaafc96faabed5180a66401f749eca6582ae7990cc40190fdfdbe0",
     "hardware/design/layout_contract.json": "b26ecc942a35872b12e28b6e06028b8024cb26e8660d9aaca84eb89df2acf8b9",
     "scripts/layout_contract.py": "9598a57eebaece0e23c6472cbd3b3d61b3fe85ebb4e8065455d84972ea526596",
     "scripts/check_compact_layout.py": "72ae2137441fd0e1b7fe09a1e3ebed72699d9d048e191305c7a919edab841423",
-    "reports/compact/layout_verification.json": "d473fbcd19a0586349974f2f2a992d13c42926a6742612d1e7a4478428417728",
+    "reports/compact/layout_verification.json": "4e93c54f180feea28e9c485bbcaffc6085655eb68d0d9bad2da58c62c6bcde2c",
     "sources/datasheets/yageo_np0.pdf": "495287fc811dc714366f2edd3bc974d98d2d80133266a0a73bb01ac01237e3eb",
     "sources/datasheets/uniroyal_thick_film.pdf": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
     "sources/datasheets/panasonic_fk.pdf": "b36857d089adaddf3042b33bf11d0f7d83bf70734e983f33b7827152e11854e3",

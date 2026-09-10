@@ -35,6 +35,8 @@ The circuit, pads, tracks, Gerbers and component positions were not changed by t
 | Resistors / MLCCs | 0805, 1206 and 1210 dimensions were checked by manufacturer family; all use the correct case size. C2 is a relatively tall 1210, **2.50 ±0.20 mm** before solder stand-off. |
 | Diodes / MOSFETs | SMA, SMB, SOD123, SOT23 and SOIC8 variants fit. Diode pad 1 is cathode. AOS SOT23 has a different lead span from some other makers; the current lands still cover it. |
 
+D10's `xrayFlag=false` catalog field means it is **not currently flagged for automatic X-ray**, not that its underside joints become visible. The order notes request inspection coverage separately. Changing D10 would not remove U9's exposed-pad inspection request. A reviewed alternative, [WS2812B-MINI-V3/W C527089](https://jlcpcb.com/partdetail/C527089), has exposed side terminals, a roughly 3.5 mm body and a different footprint/pin numbering (1=VDD, 2=DOUT, 3=GND, 4=DIN). It is **not fitted or an approved substitution**. At the September 10 catalog check it was $0.1134 versus $0.0993 for the fitted LED at quantity 1–49; both had `xrayFlag=false`. The SK6812MINI-E alternative was rejected because it is a reverse-mount package requiring a board opening. A different LED must also have its timing, current and moisture/reflow requirements checked before substitution; the factory determines final inspection and pricing.
+
 ## Required factory confirmations
 
 1. **Both sides**, 50 top and 79 bottom. The outdated “top side only” assembly-plan field and old finished-board count were corrected; the finished board is 61 top + 79 bottom.

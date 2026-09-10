@@ -16,6 +16,7 @@ python scripts/check_boost_spice.py --verify-report --require-pass
 kicad-python scripts/check_board_constraints.py > reports/board-constraints.log
 kicad-python scripts/test_compact_layout.py > reports/compact/layout-tests.log
 kicad-python scripts/check_compact_layout.py > reports/compact/layout-verification.log
+kicad-python scripts/check_compact_easteregg.py
 bash scripts/test_firmware.sh
 bash scripts/test_drivers.sh > reports/driver/tests.log 2>&1
 bash scripts/test_bridge2027.sh > reports/bridge2027-tests.log 2>&1

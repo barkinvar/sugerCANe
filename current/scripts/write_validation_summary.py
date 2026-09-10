@@ -103,6 +103,12 @@ tracked += ['scripts/test_compact_layout.py','reports/compact/layout-tests.log',
 tracked += ['scripts/render_pad_contact_review.py','reports/compact/pad_contact_sweep.json','output/review/pad_contact_sweep.png']
 compact=read('reports/compact/layout_verification.json')
 assert compact['result']=='PASS' and compact['board_sha256']==routing['board_sha256']
+artwork=read('reports/compact/easteregg.json')
+assert artwork['result']=='PASS' and artwork['board_sha256']==routing['board_sha256']
+assert artwork['non_artwork_native_content_byte_identical']
+for path,digest in artwork['input_hashes'].items():
+ assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale artwork review',path)
+tracked += ['reports/compact/easteregg.json',*artwork['input_hashes']]
 repair=read('reports/compact/u8_route_fix.json')
 assert repair['result']=='PASS' and repair['board_sha256']==routing['board_sha256']
 for path,digest in repair['input_hashes'].items():

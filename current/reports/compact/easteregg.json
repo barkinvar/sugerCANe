@@ -1,0 +1,88 @@
+{
+  "result": "PASS",
+  "baseline_commit": "69d38a0",
+  "board_sha256": "859fb2086981529432f13e17f79136d3fe0666b081be5559e058b1ec7fb04586",
+  "baseline_board_sha256": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
+  "non_artwork_native_content_byte_identical": true,
+  "layer": "F.Silkscreen",
+  "pixel_mm": 0.25,
+  "rectangles": 34,
+  "artwork_bounds_mm": [
+    1.35,
+    7.65,
+    6.1,
+    11.15
+  ],
+  "minimum_required_clearance_mm": 0.2,
+  "unchanged_fabrication_files": {
+    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "7ed0f94fec186b684ed48d12e286fe3cbc1612f589f3f651432eedfb30e01956",
+    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "1bab0ec8d4e92822571b23fe3c40fec9ef8a1d70452b1caf9b68feddc000cc0b",
+    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "d18e49365176561c6ffd6ee86a6d9b1ece83fd1ac00c10e6e8a8e1539c00a697",
+    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "b71740dcff14e6bde17b3ef289e4828bed60b77d73274d508269f463e3939034",
+    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "775dca44d713ff0c15bab27a98a55d50790501347345223f97c9a2b43d83c482",
+    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "ee009bf6226a573033624ec5557a433ebb672c4aee18cb93a13312a5c85796fc",
+    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "64e8cc5778db769b926ee60562c6c090b97cf23592f40255283c18ba8743f4f7",
+    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "935cc2d6e7c573ad46e431ced63641e639d379215bcf1a1fdbfac6aafaaf9676",
+    "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": "def973f8b02852c3eb0368369b7c14657be03414a6eb737aa49d6b94b4db77af",
+    "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": "92a718c8ce9d8f96948657db9a10a63d7b4c85a1a9684f2cc1daff521651a9c4",
+    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "d934392390c59404b2466a0273f482d0a0cca5bf782c604f62aa3a351d95205c",
+    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "4b368ead75fd951a2290d06fde2b50956779cf9f8b608c10396eb87a8e0069e2",
+    "output/fabrication/FRC_Sensor_CAN-job.gbrjob": "c5f6799ae7b48c196632c8fb06267cc5840ecfdc8c0f0d6f3250826f6c5a4ca4"
+  },
+  "closest_obstacles": [
+    {
+      "clearance_mm": 0.23717082451262816,
+      "item": "C1 F.Courtyard"
+    },
+    {
+      "clearance_mm": 0.23717082451262816,
+      "item": "C1 F.Courtyard"
+    },
+    {
+      "clearance_mm": 0.4249999999999998,
+      "item": "H1 F.Courtyard"
+    },
+    {
+      "clearance_mm": 0.7250000000000005,
+      "item": "J1 F.Courtyard"
+    },
+    {
+      "clearance_mm": 0.9192388155425116,
+      "item": "C1.2 mask/drill"
+    },
+    {
+      "clearance_mm": 1.1752659273543162,
+      "item": "C1 F.Courtyard"
+    },
+    {
+      "clearance_mm": 1.3250000000000002,
+      "item": "board edge"
+    },
+    {
+      "clearance_mm": 1.375,
+      "item": "C1 F.Courtyard"
+    },
+    {
+      "clearance_mm": 1.3806701271484076,
+      "item": "C1 F.Courtyard"
+    },
+    {
+      "clearance_mm": 1.4800000000000004,
+      "item": "C1 F.Silkscreen"
+    },
+    {
+      "clearance_mm": 1.4800000000000004,
+      "item": "C1 F.Silkscreen"
+    },
+    {
+      "clearance_mm": 2.0500000000000007,
+      "item": "H1. mask/drill"
+    }
+  ],
+  "scope": "Conservative native bounding-box clearance to front courtyards, pad mask openings, holes, existing silk and edges. Only added front silk and its locked group; all original native content is byte-identical, including all four copper layers, zones, pads, vias, net assignments and stack.",
+  "input_hashes": {
+    "scripts/check_compact_easteregg.py": "3ad64eb6eef0e140e938e0dcd48fa36faa930759d5d3013b2da13179bb3b1a0a",
+    "scripts/apply_compact_easteregg.py": "2250ac71b7a1c761094ea1e8f3456227a297cad72a8122c1dacc5c68cf631acd",
+    "hardware/artwork/compact-pixel-cane.svg": "a7ac0e1c7b98263cdf933dfec46e32e0e0d07546a6cd2198102e310ba7002712"
+  }
+}

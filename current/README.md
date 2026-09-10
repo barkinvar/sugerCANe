@@ -4,7 +4,7 @@
 
 Three digital sensor inputs over CAN, with regulated **5 V / 12 V sensor power** and software-selectable **NPN, PNP, push-pull, floating detection and keeper**. Removable 2 mm jumpers select each port's power voltage. Components populate both PCB surfaces.
 
-The underside carries 79 fitted SMT parts, a compact sugarCANe wordmark, and labels for the termination bridge and ground test pad. Connector and voltage labels remain on top; the programming map is in the wiring guide. [Bottom render](output/review/board_bottom.png).
+A tiny pixel-cane island sits on the front, below the upper-left mounting hole and above C1. The underside carries 79 fitted SMT parts, a compact sugarCANe wordmark, and labels for the termination bridge and ground test pad. Connector and voltage labels remain on top; the programming map is in the wiring guide. [Bottom render](output/review/board_bottom.png).
 
 Rev H adds one enclosure-facing RGB status LED and a hand-soldered recessed female programming socket for a ten-board batch. The LED is on the right, above the mounting hole, with a 6 mm circular area reserved for a printed light duct; see the [enclosure dimensions](docs/STATUS_AND_PROGRAMMING.md#enclosure-location). It retains Rev G's power protection and physical voltage jumpers. The 12 V reservoir is upstream of a controlled output eFuse; both rails have default-off enables and CAN fault reset. Two ADC channels measure the protected rails. [Engineering review](docs/ORDER_READINESS.md) · [verification and bench procedure](docs/VALIDATION.md). This design uses its own CAN protocol; it is not CTRE Phoenix or GrappleHook compatible.
 
