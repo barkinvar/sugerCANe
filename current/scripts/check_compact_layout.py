@@ -82,6 +82,23 @@ for repair in adjustments:
    expected_routes.remove(before);adjusted_count+=1
   expected_routes.append(after)
 assert sorted(expected_routes)==new_routes,'Clock/converter copper differs beyond declared transforms and exact repairs'
+# A DC-connected GND net can still leave the boost IC with a remote return.
+# Require a nearby through via in the SAME filled bottom-copper polygon as
+# U8.4, also landed in the immediately adjacent In2 ground plane. Distances
+# below are pad-to-via straight-line spacing, not impedance or path length.
+u8_ground=next(d for d in newfp['U8'].Pads() if d.GetNumber()=='4')
+bottom_ground=next(z for z in new.Zones() if not z.GetIsRuleArea() and z.GetNetname()=='GND' and z.GetLayer()==p.B_Cu).GetFilledPolysList(p.B_Cu)
+inner_ground=next(z for z in new.Zones() if not z.GetIsRuleArea() and z.GetNetname()=='GND' and z.GetLayer()==p.In2_Cu).GetFilledPolysList(p.In2_Cu)
+local_ground=[]
+for via in new.GetTracks():
+ if not isinstance(via,p.PCB_VIA) or via.GetNetname()!='GND':continue
+ if via.GetViaType()!=p.VIATYPE_THROUGH or not {p.B_Cu,p.In2_Cu}.issubset(via.GetLayerSet().Seq()):continue
+ distance=math.dist(p.ToMM(u8_ground.GetPosition()),p.ToMM(via.GetPosition()))
+ if distance>3.2 or not inner_ground.Contains(via.GetPosition()):continue
+ if any(bottom_ground.Contains(u8_ground.GetPosition(),i) and bottom_ground.Contains(via.GetPosition(),i) for i in range(bottom_ground.OutlineCount())):
+  local_ground.append(dict(uuid=via.m_Uuid.AsString(),at_mm=list(p.ToMM(via.GetPosition())),pad_to_via_spacing_mm=distance,
+   diameter_mm=p.ToMM(via.GetWidth(p.F_Cu)),drill_mm=p.ToMM(via.GetDrillValue()),through_via=True))
+assert local_ground,'Boost ground return lacks a local via in its bottom copper island and In2 plane'
 report=dict(result='PASS',variant=CONTRACT['variant'],baseline_commit=CONTRACT['baseline_commit'],
  baseline_size_mm=[52,74],size_mm=[WIDTH,HEIGHT],saved_area_mm2=52*74-WIDTH*HEIGHT,
  bounding_area_reduction_percent=100*(1-WIDTH*HEIGHT/(52*74)),bottom_references=sorted(BOTTOM_REFERENCES),
@@ -91,6 +108,7 @@ report=dict(result='PASS',variant=CONTRACT['variant'],baseline_commit=CONTRACT['
  preserved_critical_nets=sorted(set(transforms)-adjusted_nets),verified_critical_nets=sorted(transforms),
  preserved_critical_tracks_and_vias=len(old_routes)-adjusted_count,verified_critical_tracks_and_vias=len(new_routes),
  critical_route_adjustments=adjustments,critical_route_transforms=CONTRACT['critical_route_transforms'],
+ boost_local_ground=dict(pad='U8.4',maximum_spacing_mm=3.2,vias=local_ground,scope='Same filled bottom-copper polygon and adjacent In2 GND plane; nominal geometry only, not return-path impedance qualification.'),
  board_sha256=sha(args.board.read_bytes()),
  limitations='Checks nominal layout/electrical identity, rigidly transformed critical copper and exact reviewed local repairs. Supply interconnects are rerouted and independently DC-screened. Native DRC, routing style, exported copper checks and physical qualification remain separate.')
 args.output.write_text(json.dumps(report,indent=2)+'\n')

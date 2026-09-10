@@ -26,6 +26,24 @@ The subsequent [full-board pad-contact sweep](../reports/compact/pad_contact_swe
 
 Main power distribution and signals are rerouted for the new placement. Circuit values, pad geometry and pin mappings, schematics, custom DRC rules and firmware are unchanged; the project drill-size setting changes as described above.
 
+### Comparison with the completed original-board simulations
+
+The completed `main` design at `6862984` has the same circuit model, power/input simulation harnesses and firmware power logic. Its completed circuit-level SPICE results therefore remain applicable to this variant. They do not model the relocated PCB's switching-loop inductance, ground impedance, coupling or cooling.
+
+The clock and converter feedback routes retain their original geometry under translation or mirroring. BOOST_SW has the separately reviewed pad-entry repair above. Supply routing and ground pours differ. C63/C64 retain their positions relative to the boost IC; C62 is approximately 7.08 mm from its position under a rigid mirror of the original circuit, so the output-capacitor layout is not identical.
+
+The grounding review found that U8.4's bottom copper island originally had only one ground via, 6.86 mm away. An additional **0.50 mm / 0.20 mm ground via at (36.2,22.85) mm** reduces the nearest spacing to **3.07 mm**, without moving a component or changing a routed trace. The original board has a via 0.91 mm from that pin. These are straight-line pad-to-via spacings, not measured return-path lengths or inductances. The compact audit now requires a through via within 3.2 mm in the same filled bottom-copper polygon and the adjacent In2 ground plane; its regression tests reject removal of that return or a via that does not reach those layers.
+
+This change was reviewed from [455e8cb](https://github.com/barkinvar/sugerCANe/commit/455e8cb27c173d665ca2954342671e62ad56bb67) and applied to the newer compact board after the Q1 pad-contact sweep. Both Q1 and U8 contact repairs remain intact. Checks, renders and review packages were regenerated for the combined board; the older branch's generated reports are not used as evidence for this version.
+
+| Routed positive-copper DC screen | Original 52 × 74 mm | Compact 44 × 48 mm |
+| --- | ---: | ---: |
+| Buck-to-boost drop, defined 1.3 A load case | 51.14 mV | 43.69 mV |
+| Boost-to-eFuse drop | 12.30 mV | 6.66 mV |
+| Worst sensor positive path at 300 mA | 44.01 mV | 14.04 mV |
+
+These screens use 85 °C copper resistance, nominal 35 µm copper and 20 µm via plating; they exclude ground return, component and connector drops. See the [current DC report](../reports/electrical/order_readiness.json). The smaller board has less copper for heat spreading, especially around the eFuse, although its six required local thermal vias remain. Comparable circuit simulations and passing geometry checks **do not establish identical ripple, temperature or EMC behavior**; those require first-board measurements with the intended loads and enclosure. Manufacturer references: [TPS61085 layout guidance](https://www.ti.com/lit/ds/symlink/tps61085.pdf) and [LMR51430 layout guidance](https://www.ti.com/lit/ds/symlink/lmr51430.pdf).
+
 The following checks passed on the saved compact board:
 
 - Native ERC/DRC: zero violations and zero unconnected pads; model/schematic/PCB parity.

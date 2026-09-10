@@ -2047,6 +2047,24 @@
       "side": "top"
     }
   ],
-  "board_sha256": "0914c355dbdfe854247d9627f84cfd5622cc321e3bbc4cd0683f92fdec2c35ba",
+  "boost_local_ground": {
+    "pad": "U8.4",
+    "maximum_spacing_mm": 3.2,
+    "vias": [
+      {
+        "uuid": "ebde20cb-ab86-430d-91c4-3e24b3b6bb4e",
+        "at_mm": [
+          36.2,
+          22.85
+        ],
+        "pad_to_via_spacing_mm": 3.0738056623670946,
+        "diameter_mm": 0.5,
+        "drill_mm": 0.2,
+        "through_via": true
+      }
+    ],
+    "scope": "Same filled bottom-copper polygon and adjacent In2 GND plane; nominal geometry only, not return-path impedance qualification."
+  },
+  "board_sha256": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
   "limitations": "Checks nominal layout/electrical identity, rigidly transformed critical copper and exact reviewed local repairs. Supply interconnects are rerouted and independently DC-screened. Native DRC, routing style, exported copper checks and physical qualification remain separate."
 }

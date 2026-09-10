@@ -1,12 +1,12 @@
 {
   "result": "PASS",
   "variant": "Rev H compact 44 x 48 mm prototype",
-  "board_sha256": "0914c355dbdfe854247d9627f84cfd5622cc321e3bbc4cd0683f92fdec2c35ba",
+  "board_sha256": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
   "baseline_commit": "1c03fd1",
   "baseline_segments": 1530,
   "baseline_vias": 242,
   "segments": 1303,
-  "vias": 245,
+  "vias": 246,
   "native_drc_violations": 0,
   "native_unconnected_items": 0,
   "routing_findings": {},
@@ -19,7 +19,8 @@
     "Signal jogs, redundant tracks and unused vias removed; all free bends and branches pass strict routing checks",
     "Ground stitching and minimum pour features verified on all four layers",
     "U8.5 BOOST_SW corner contact replaced by centered pad entry; redundant parallel loop removed, diode leg widened to 0.50 mm and In2 return guard extended. Three tracks adjusted and one added; Other critical nets preserved.",
-    "Full-board scan: both stray VIN_PROT branch contacts at Q1 pin 2 removed by rerouting two 0.80 mm segments into pin 3. Pads, vias, all other tracks and critical copper unchanged from 4f238f9. New gate reports zero incidental pad contacts."
+    "Full-board scan: both stray VIN_PROT branch contacts at Q1 pin 2 removed by rerouting two 0.80 mm segments into pin 3. The Q1 repair preserves pads and all other tracks; the later local GND via addition is recorded separately. Zero incidental pad contacts remain.",
+    "Added one 0.50/0.20 mm through GND via at (36.2,22.85) from review 455e8cb. Existing tracks, pads and vias are unchanged from 94b7b20. U8.4 nearest via in the same bottom copper island and adjacent In2 plane is now 3.07 mm away, previously 6.86 mm. This is a geometric spacing screen, not an impedance measurement."
   ],
   "unchanged": [
     "Circuit, schematics, firmware, parts and pin mappings",
@@ -29,5 +30,24 @@
   ],
   "scope": "Native DRC and strict trace geometry pass. Independent exported copper checks, DC screens, completed transient evidence and physical qualification are separate.",
   "repair_report": "reports/compact/u8_route_fix.json",
-  "pad_contact_sweep": "reports/compact/pad_contact_sweep.json"
+  "pad_contact_sweep": "reports/compact/pad_contact_sweep.json",
+  "grounding_review": {
+    "source_commit": "455e8cb27c173d665ca2954342671e62ad56bb67",
+    "applied_to_commit": "94b7b20709a691bff456951805ce3bdd87f75eef",
+    "added_via": {
+      "uuid": "ebde20cb-ab86-430d-91c4-3e24b3b6bb4e",
+      "at_mm": [
+        36.2,
+        22.85
+      ],
+      "pad_to_via_spacing_mm": 3.0738056623670946,
+      "diameter_mm": 0.5,
+      "drill_mm": 0.2,
+      "through_via": true
+    },
+    "existing_tracks_pads_and_vias_unchanged": true,
+    "previous_nearest_same_island_via_spacing_mm": 6.861634735979464,
+    "evidence": "reports/compact/layout_verification.json",
+    "scope": "Same filled bottom-copper polygon and adjacent In2 GND plane; nominal geometry only, not return-path impedance qualification."
+  }
 }

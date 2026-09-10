@@ -2367,7 +2367,25 @@
         "side": "top"
       }
     ],
-    "board_sha256": "0914c355dbdfe854247d9627f84cfd5622cc321e3bbc4cd0683f92fdec2c35ba",
+    "boost_local_ground": {
+      "pad": "U8.4",
+      "maximum_spacing_mm": 3.2,
+      "vias": [
+        {
+          "uuid": "ebde20cb-ab86-430d-91c4-3e24b3b6bb4e",
+          "at_mm": [
+            36.2,
+            22.85
+          ],
+          "pad_to_via_spacing_mm": 3.0738056623670946,
+          "diameter_mm": 0.5,
+          "drill_mm": 0.2,
+          "through_via": true
+        }
+      ],
+      "scope": "Same filled bottom-copper polygon and adjacent In2 GND plane; nominal geometry only, not return-path impedance qualification."
+    },
+    "board_sha256": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
     "limitations": "Checks nominal layout/electrical identity, rigidly transformed critical copper and exact reviewed local repairs. Supply interconnects are rerouted and independently DC-screened. Native DRC, routing style, exported copper checks and physical qualification remain separate."
   },
   "factory_top_placements": 50,
@@ -3101,12 +3119,12 @@
     "bom/BOM_JLCPCB.csv": "65d87b4314cb78a52060040566e124783331d796e4b4def95172a4edeb509ad4",
     "output/assembly/CPL_JLCPCB.csv": "542da3cf1f5e684c6d71b1dcf05a518cb22b74ac9ae09e722e1a39a8745ef1d6",
     "hardware/design/circuit.json": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "0914c355dbdfe854247d9627f84cfd5622cc321e3bbc4cd0683f92fdec2c35ba",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
     "scripts/check_jlc_sourcing.py": "921834560aeaafc96faabed5180a66401f749eca6582ae7990cc40190fdfdbe0",
     "hardware/design/layout_contract.json": "b26ecc942a35872b12e28b6e06028b8024cb26e8660d9aaca84eb89df2acf8b9",
     "scripts/layout_contract.py": "9598a57eebaece0e23c6472cbd3b3d61b3fe85ebb4e8065455d84972ea526596",
-    "scripts/check_compact_layout.py": "2b2b6d7bdd1a5cace78a446437b9e21f56508c34133cd10a0196f04724e38e34",
-    "reports/compact/layout_verification.json": "60923ebe23f4a1fce1e9df0b2e1d58e27cac474aa331f950e76662efa2debe37",
+    "scripts/check_compact_layout.py": "72ae2137441fd0e1b7fe09a1e3ebed72699d9d048e191305c7a919edab841423",
+    "reports/compact/layout_verification.json": "d473fbcd19a0586349974f2f2a992d13c42926a6742612d1e7a4478428417728",
     "sources/datasheets/yageo_np0.pdf": "495287fc811dc714366f2edd3bc974d98d2d80133266a0a73bb01ac01237e3eb",
     "sources/datasheets/uniroyal_thick_film.pdf": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
     "sources/datasheets/panasonic_fk.pdf": "b36857d089adaddf3042b33bf11d0f7d83bf70734e983f33b7827152e11854e3",

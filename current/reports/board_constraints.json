@@ -379,7 +379,7 @@
         "non_45_degree_segments": []
       }
     },
-    "vias": 245,
+    "vias": 246,
     "scope": "Straight horizontal/vertical/45-degree centerlines enforced. The separate routing_rules.json gate also rejects redundant geometry, tiny free jogs and sharp free bends. Rounded copper end caps are normal. Native DRC and independent Gerber checks establish connectivity/clearance, not EMC qualification."
   }
 }

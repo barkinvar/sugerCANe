@@ -1,55 +1,55 @@
 {
   "result": "PASS",
   "variant": "Rev H compact 44 x 48 mm prototype",
-  "checked_utc": "2026-09-10T19:42:28.589976+00:00",
-  "board_sha256": "0914c355dbdfe854247d9627f84cfd5622cc321e3bbc4cd0683f92fdec2c35ba",
+  "checked_utc": "2026-09-10T20:03:48.163009+00:00",
+  "board_sha256": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
   "erc_violations": 0,
   "drc_violations": 0,
   "unconnected_items": 0,
   "segments": 1303,
-  "vias": 245,
+  "vias": 246,
   "fabrication_files": {
     "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": {
-      "export_sha256": "7b2b97459e00e315260f29406326833c29e52e9b4ee1a16b6d01f6dc7ed928b8"
+      "export_sha256": "7ed0f94fec186b684ed48d12e286fe3cbc1612f589f3f651432eedfb30e01956"
     },
     "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": {
-      "export_sha256": "c067c0bbb32bb9b07f6ff55b1a6c62aa3534416f4e052a229f1e248bf6f8c965"
+      "export_sha256": "1bab0ec8d4e92822571b23fe3c40fec9ef8a1d70452b1caf9b68feddc000cc0b"
     },
     "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": {
-      "export_sha256": "6bbcdb045835d65076f48744493befadd645c75c2153375f89cf32ef9985c58c"
+      "export_sha256": "d18e49365176561c6ffd6ee86a6d9b1ece83fd1ac00c10e6e8a8e1539c00a697"
     },
     "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": {
-      "export_sha256": "56aa8f8f8fb2d2f831949dae189f3750c6524b89662e901f215cd985f6f6feab"
+      "export_sha256": "b71740dcff14e6bde17b3ef289e4828bed60b77d73274d508269f463e3939034"
     },
     "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": {
-      "export_sha256": "70a0613a89c80ebda82a05351260c6b74e2832ac3c27fa522bfef2de7c18b76d"
+      "export_sha256": "775dca44d713ff0c15bab27a98a55d50790501347345223f97c9a2b43d83c482"
     },
     "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": {
-      "export_sha256": "9c8c8972d85cd7fed9ca0c057e98c345d6c507e4ed29fbdda7118cf1d2533e15"
+      "export_sha256": "ee009bf6226a573033624ec5557a433ebb672c4aee18cb93a13312a5c85796fc"
     },
     "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": {
-      "export_sha256": "998eb91e7e03d31869326d040e07f625aceaf4ad0102424f1d205bfb3e641a65"
+      "export_sha256": "64e8cc5778db769b926ee60562c6c090b97cf23592f40255283c18ba8743f4f7"
     },
     "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": {
-      "export_sha256": "2e1ab19cd25f825b90a9280c1d0107fd9faa31b07afea0afac4e037896126e4e"
+      "export_sha256": "935cc2d6e7c573ad46e431ced63641e639d379215bcf1a1fdbfac6aafaaf9676"
     },
     "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": {
-      "export_sha256": "90708fefd598cf1740edf23f9375ac507a603a9082bebe242617f07e6fdaf45c"
+      "export_sha256": "fb6edde0b093ae692a9e40af692b2cce37dff0a3ea79507ed00e10c879ce1cb2"
     },
     "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": {
-      "export_sha256": "196bde8d7c8d31b6e85170845943ab6a628a3e336cf7551c269a01ddb18ae74e"
+      "export_sha256": "def973f8b02852c3eb0368369b7c14657be03414a6eb737aa49d6b94b4db77af"
     },
     "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": {
-      "export_sha256": "2b3ed77324e633f85ae9cbe98fcb0e5bab26c6d3eccfabf96b2b10b4429f2f26"
+      "export_sha256": "92a718c8ce9d8f96948657db9a10a63d7b4c85a1a9684f2cc1daff521651a9c4"
     },
     "output/fabrication/FRC_Sensor_CAN-NPTH.drl": {
-      "export_sha256": "d93b2488b586898231d87f85546073748eb22c22b595de47c2ced601aa876198"
+      "export_sha256": "d934392390c59404b2466a0273f482d0a0cca5bf782c604f62aa3a351d95205c"
     },
     "output/fabrication/FRC_Sensor_CAN-PTH.drl": {
-      "export_sha256": "0a6c85e885005c2377cbab5a72ea1456f748c5f86f0de475df9c8c2e5a23cee5"
+      "export_sha256": "4b368ead75fd951a2290d06fde2b50956779cf9f8b608c10396eb87a8e0069e2"
     },
     "output/fabrication/FRC_Sensor_CAN-job.gbrjob": {
-      "export_sha256": "862c30a2e92f5b562c763bcd3b41db0c1e2fe526edf942d6e74f127057b7215e"
+      "export_sha256": "c5f6799ae7b48c196632c8fb06267cc5840ecfdc8c0f0d6f3250826f6c5a4ca4"
     }
   },
   "scope": "Final native ERC/DRC and strict routing pass on the saved board. Independent Gerber geometry/connectivity and manufacturing parity pass. Physical and factory process qualification remain pending."

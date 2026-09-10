@@ -2,7 +2,7 @@
   "result": "PASS compact CAD, trace, exported copper and engineering checks; manufacturing release HOLD",
   "branch": "codex/compact-board",
   "worktree": "/home/neuro/candi-compact-board",
-  "board_sha256": "0914c355dbdfe854247d9627f84cfd5622cc321e3bbc4cd0683f92fdec2c35ba",
+  "board_sha256": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
   "size_before_mm": [
     52,
     74
@@ -22,7 +22,7 @@
   "gerber_opens": {},
   "gerber_shorts": {},
   "routing_segments": 1303,
-  "routing_vias": 245,
+  "routing_vias": 246,
   "power_transient_cases": 9,
   "firmware_waveform_replay_cases": 16,
   "reports": [
@@ -41,7 +41,26 @@
     "provenance": "reports/compact/completed_simulation_sources.json"
   },
   "original_branch": "main",
-  "checked_utc": "2026-09-10T19:42:28.589976+00:00",
+  "checked_utc": "2026-09-10T20:03:48.163009+00:00",
   "limitations": "Engineering screens do not establish physical perfection. Factory two-sided assembly/reflow quotation, allocation and physical thermal/EMC/fit qualification remain pending; package is review-only.",
-  "latest_repair": "Full-board contact sweep removed both incidental Q1 pin 2 contacts; zero incidental contacts remain across 561 native pad/layer shapes and 493 same-net contact pairs."
+  "latest_repair": "Full-board contact sweep removed both incidental Q1 pin 2 contacts; zero incidental contacts remain across 561 native pad/layer shapes and 493 same-net contact pairs.",
+  "grounding_review": {
+    "source_commit": "455e8cb27c173d665ca2954342671e62ad56bb67",
+    "applied_to_commit": "94b7b20709a691bff456951805ce3bdd87f75eef",
+    "added_via": {
+      "uuid": "ebde20cb-ab86-430d-91c4-3e24b3b6bb4e",
+      "at_mm": [
+        36.2,
+        22.85
+      ],
+      "pad_to_via_spacing_mm": 3.0738056623670946,
+      "diameter_mm": 0.5,
+      "drill_mm": 0.2,
+      "through_via": true
+    },
+    "existing_tracks_pads_and_vias_unchanged": true,
+    "previous_nearest_same_island_via_spacing_mm": 6.861634735979464,
+    "evidence": "reports/compact/layout_verification.json",
+    "scope": "Same filled bottom-copper polygon and adjacent In2 GND plane; nominal geometry only, not return-path impedance qualification."
+  }
 }

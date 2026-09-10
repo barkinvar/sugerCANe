@@ -15,6 +15,7 @@ from check_routing import pad_contact_audit
 ROOT = Path(__file__).resolve().parents[1]
 BOARD = ROOT / 'hardware/FRC_Sensor_CAN.kicad_pcb'
 BASELINE = '4f238f9856be0e8ce036d0285594219fe225b4d0'
+GROUND_REVIEW = '455e8cb27c173d665ca2954342671e62ad56bb67'
 sha = lambda data: hashlib.sha256(data).hexdigest()
 
 
@@ -31,7 +32,13 @@ before_audit, after_audit = pad_contact_audit(old), pad_contact_audit(new)
 assert len(before_audit['incidental_contacts']) == 2
 assert {(p['reference'], p['pad']) for p in before_audit['incidental_contacts']} == {('Q1', '2')}
 assert not after_audit['incidental_contacts']
-assert old['pads'] == new['pads'] and old['vias'] == new['vias']
+assert old['pads'] == new['pads']
+old_vias = {v['id']:v for v in old['vias']}
+new_vias = {v['id']:v for v in new['vias']}
+assert all(new_vias.get(uid) == v for uid,v in old_vias.items())
+added_vias = [v for uid,v in new_vias.items() if uid not in old_vias]
+assert added_vias == [dict(id='ebde20cb-ab86-430d-91c4-3e24b3b6bb4e', net='GND',
+                           at=[36.2,22.85], width=.5, layers=[0,2,4,6])], 'Unreviewed via change'
 old_tracks = {t['id']:t for t in old['tracks']}
 new_tracks = {t['id']:t for t in new['tracks']}
 assert set(old_tracks) == set(new_tracks)
@@ -77,7 +84,8 @@ assert gap >= .2
 sources = ['hardware/FRC_Sensor_CAN.kicad_pcb','scripts/check_routing.py','scripts/export_routing_geometry.py','scripts/render_pad_contact_review.py']
 report = dict(result='PASS',baseline_commit=BASELINE,baseline_board_sha256=sha(baseline),
               board_sha256=sha(BOARD.read_bytes()),before=before_audit,after=after_audit,
-              changed_tracks=changes,pads_and_vias_unchanged=True,all_other_tracks_unchanged=True,
+              changed_tracks=changes,pads_unchanged=True,existing_vias_unchanged=True,
+              added_vias=added_vias,ground_review_commit=GROUND_REVIEW,all_other_tracks_unchanged=True,
               corrected_locations=[dict(reference='Q1',pad='2',layer='B.Cu',gerber_xy_mm=[27.36,-5.5],incidental_contacts_removed=2)],
               repaired_branch_to_q1_pin2_clearance_mm=gap,
               input_hashes={p:sha((ROOT/p).read_bytes()) for p in sources},

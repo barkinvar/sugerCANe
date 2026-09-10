@@ -6,7 +6,7 @@
     "scripts/check_power_replay.py": "74e70691150ded834917c00a8c1fe81667455eb6b8c68cb506b5000b9775302c",
     "reports/electrical/electrical_checks.json": "8875e81607c1f1e6f8048b847b20cfb0e09b9fd53edc5eb51d696a563bd6568c",
     "reports/electrical/boost_spice.json": "255e2ee5605ecd3690d006c201c7430930f48add0bedd8d04d862a38e2ec9cbb",
-    "reports/electrical/order_readiness.json": "f849399691820a9f6360da6bd62e01a63b81e6d79f87e9ce8193b6fc4b94a08f"
+    "reports/electrical/order_readiness.json": "154e00b1b2babcb1e79a22175df29699573b423b5f84ec5fd078118c09d25ecc"
   },
   "cases": [
     {

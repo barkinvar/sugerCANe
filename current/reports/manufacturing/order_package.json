@@ -10,7 +10,7 @@
   "other_fabrication_files_byte_identical": 13,
   "all_package_hashes_verified": true,
   "shopping_imports_verified": true,
-  "packet_sha256": "bbd8d2f98c73a4dbdea050e5ef2a2c2d5403098d65762f6a9a83ee576e213c0a",
+  "packet_sha256": "ab62ddcbd7e72c721ed8194efc14da50deeff6486f898a3de7ec9721e51515be",
   "clock_capacitors": {
     "references": [
       "C25",
@@ -20,6 +20,6 @@
     "jlc_part": "C105173"
   },
   "upstream_buck": "LMR51430XDDCR with SRP7028A-8R2M",
-  "board_sha256": "0914c355dbdfe854247d9627f84cfd5622cc321e3bbc4cd0683f92fdec2c35ba",
+  "board_sha256": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
   "limitations": "File integrity and assembly scope only; no new simulation, physical qualification or supplier allocation."
 }

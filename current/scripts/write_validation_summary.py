@@ -141,6 +141,7 @@ out['vendor_model_transient_cases']=[r['case']['name'] for r in (spice if comple
 out['compact_layout']={k:compact[k] for k in ('size_mm','baseline_size_mm','bounding_area_reduction_percent','bottom_references','preserved_critical_nets','verified_critical_nets','preserved_critical_tracks_and_vias','verified_critical_tracks_and_vias')}
 out['compact_layout']['reviewed_critical_repair']='reports/compact/u8_route_fix.json'
 out['compact_layout']['pad_contact_sweep']='reports/compact/pad_contact_sweep.json'
+out['compact_layout']['boost_local_ground']=compact['boost_local_ground']
 out['routing_rules']={key:routing[key] for key in ('result','segments','vias','rules')}
 out['input_transient_cases']=[r['name'] for r in input_spice['cases']]
 out['input_transient_scope']=input_spice['limitations']
