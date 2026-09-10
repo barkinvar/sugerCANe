@@ -8,7 +8,7 @@ The bold pixel **sugarCANe** wordmark and original pixel-cane illustration on a 
 
 Rev H adds one enclosure-facing RGB status LED and a hand-soldered recessed female programming socket for a ten-board batch. The LED is on the right, above the mounting hole, with a 6 mm circular area reserved for a printed light duct; see the [enclosure dimensions](docs/STATUS_AND_PROGRAMMING.md#enclosure-location). It retains Rev G's power protection and physical voltage jumpers. The 12 V reservoir is upstream of a controlled output eFuse; both rails have default-off enables and CAN fault reset. Two ADC channels measure the protected rails. [Engineering review](docs/ORDER_READINESS.md) · [verification and bench procedure](docs/VALIDATION.md). This design uses its own CAN protocol; it is not CTRE Phoenix or GrappleHook compatible.
 
-**Selected assembly plan:** JLC fits **129 top-side SMT parts**. You buy **STM32F042K6T6 from DigiKey** and solder U5, then fit ten through-hole parts and three jumper caps. U5 is omitted from the factory BOM, CPL and stencil. All 54 factory types currently have stock for ten boards; final simulation review and factory quotation remain pending. **[Start here: where to buy and how to order](docs/FACTORY_ORDER.md).**
+**Selected assembly plan:** JLC fits **129 top-side SMT parts**. You buy **STM32F042K6T6 from DigiKey** and solder U5, then fit ten through-hole parts and three jumper caps. U5 is omitted from the factory BOM, CPL and stencil. All 54 factory types had stock for ten boards in the September 10, 07:22 UTC check. Full power/input/firmware and four-layer CAD screens pass; factory process/stack/inspection confirmation and quotation remain pending. **[Start here: where to buy and how to order](docs/FACTORY_ORDER.md).**
 
 ![Rev H board](output/review/board_3d_final.png)
 
@@ -25,7 +25,7 @@ Rev H adds one enclosure-facing RGB status LED and a hand-soldered recessed fema
 | Servicing | CAN discovery, ID/settings and recoverable firmware upload; initial installation through a 2.54 mm SWD service socket |
 | PCB / assembly | **52 × 74 mm**, four copper layers, 129 factory SMT + user-fitted MCU + ten through-hole parts + three caps |
 
-Parts purchasing is about **$26.46 per board at ten boards before SMT attrition**, or **$27.34** including a conservative allowance. These include the user-fitted DigiKey MCU, through-hole parts and caps; two optional spare MCUs are extra. PCB, assembly, freight and tax are extra. [Cost calculation](docs/COST_REDUCTION.md).
+Parts purchasing is about **$27.18 per board at ten boards before SMT attrition**, or **$28.06** including a conservative allowance. These include the user-fitted DigiKey MCU, through-hole parts and caps; two optional spare MCUs are extra. PCB, assembly, freight and tax are extra. [Cost calculation](docs/COST_REDUCTION.md).
 
 | What you want to do | Start here |
 |---|---|

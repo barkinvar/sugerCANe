@@ -36,6 +36,7 @@ python scripts/build_handbook.py --order-guide
 python scripts/build_mcu_map.py
 python scripts/review_documents.py
 # Inspect final renders/PDFs and update reports/visual_review.json with their hashes.
+python scripts/write_validation_summary.py
 python scripts/build_release.py
 python scripts/verify_archive.py
 ```
@@ -63,18 +64,21 @@ kicad-python scripts/export_board_manifest.py
 python scripts/build_factory_files.py
 python scripts/build_factory_stencil.py
 python scripts/verify_manufacturing.py
+python scripts/render_gerber_previews.py
 python scripts/verify_gerber_geometry.py
 python scripts/verify_gerber_connectivity.py
-python scripts/write_validation_summary.py --defer-simulation
+python scripts/write_validation_summary.py
 python scripts/build_documents.py --drawings-only
 python scripts/build_handbook.py
 python scripts/build_handbook.py --order-guide
 python scripts/build_mcu_map.py
 python scripts/review_documents.py
+# Inspect PDFs; update reports/visual_review.json, then bind the final files.
+python scripts/write_validation_summary.py
 python scripts/build_jlc_candidate.py
 ```
 
-`--defer-simulation` publishes only the CAD/sourcing evidence with an explicit HOLD. It does not certify the existing power/input reports against a changed BOM. The separate review ZIP builder labels its outputs REVIEW_ONLY; it cannot satisfy the full-release gates. Use full electrical validation for the final order review; verify the user-purchased MCU and factory quote before issuing the order package.
+The current BOM has full passing power/input/firmware evidence. The summary still holds manufacturing release while factory confirmation is pending. For future unfinished runs, `--allow-incomplete` records that state explicitly; `--defer-simulation` is only for a deliberately deferred review. Neither option establishes a pass. The separate review ZIP builder labels its outputs REVIEW_ONLY; verify the user-purchased MCU and factory quote before issuing the order package.
 
 ## Sensor-input transient simulation
 
@@ -89,7 +93,7 @@ It uses the original TI comparator model linked for LM339LV, the three native in
 
 ## Power transient simulation
 
-The current final-order BOM has eight freshly completed standalone/load-step cases. The two full coupled-startup traces are running, so the factory/release gate remains on HOLD. The [standalone results](reports/electrical/boost_spice_partial.json) and [waveforms](reports/electrical/boost_spice_partial.png) are separate from the full-suite report.
+The final-order BOM passes all nine power cases plus a complete startup numerical repeat. Both coupled traces reach 40 ms and pass the unchanged electrical and comparison limits. [Full results](reports/electrical/boost_spice.json) · [Waveforms](reports/electrical/boost_spice.png). Manufacturing release remains on HOLD for factory process/stack/inspection confirmation, not unfinished simulation.
 
 The optional native simulator is **ngspice 42 with KLU, XSPICE and PSpice compatibility**. Original manufacturer model files and hashes are retained in `sources/spice/`. The harness reads the maintained circuit's pin connections and component values; it generates simulator-specific copies, decks and raw traces under ignored `tmp/spice/`. The full run includes nine cases plus a complete combined-startup solver repeat; the coupled switching models can take several hours.
 

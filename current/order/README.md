@@ -2,7 +2,7 @@
 
 **Read [where to buy and how to order](../docs/FACTORY_ORDER.md) first.** The assembly plan is fixed: JLC fits 129 top SMT parts / 54 types; you buy STM32F042K6T6 from DigiKey and hand solder U5, ten through-hole parts and three caps. U5 is omitted from BOM, CPL and factory stencil.
 
-**Review/quotation only until final simulation review.** The existing coupled-startup evidence is incomplete. Assembly-scope approval does not establish an electrical pass. Factory stack/process/inspection and quote remain unconfirmed.
+**Engineering screens pass; review/quotation only until factory confirmation.** Nine power cases, both complete startup traces, ten input cases, firmware checks and all-four-layer CAD/connectivity checks pass. Factory stack/process/inspection and quote remain unconfirmed; no physical board has been tested.
 
 | Download | Use |
 |---|---|

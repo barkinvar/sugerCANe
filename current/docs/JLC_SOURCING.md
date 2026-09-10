@@ -1,12 +1,12 @@
 # JLCPCB sourcing and assembly plan
 
-The selected build uses **54 JLC SMT types / 129 top-side placements**. **U5 / STM32F042K6T6 is purchased from DigiKey and hand soldered by the user**, together with the existing ten through-hole parts. The BOM, CPL and factory stencil all omit U5. The MCU footprint is unchanged. C25/C26 now use 20 pF clock-load capacitors in their existing footprints. [Complete ordering guide](FACTORY_ORDER.md).
+The selected build uses **54 JLC SMT types / 129 top-side placements**. **U5 / STM32F042K6T6 is purchased from DigiKey and hand soldered by the user**, together with the existing ten through-hole parts. The BOM, CPL and factory stencil all omit U5. The MCU footprint is unchanged. C25/C26 use 20 pF clock-load capacitors; U1/L1 use LMR51430XDDCR and SRP7028A-8R2M. All four retain their footprints. [Complete ordering guide](FACTORY_ORDER.md).
 
-The September 10, 2026, 03:43–04:05 UTC public JLC checks found enough orderable stock for all **54 factory types at ten boards**, including displayed attrition/minimums. U9 has 25 available and L2 has 39. No inventory is reserved. Final electrical simulation review, factory stack/process/inspection confirmation and quotation remain pending; the package is REVIEW_ONLY. Older simulation evidence is not a fresh pass for the sourced BOM.
+The September 10, 2026, 07:22 UTC public JLC checks found enough orderable stock for all **54 factory types at ten boards**, including displayed attrition/minimums. U9 has 25 available and L2 has 39. No inventory is reserved. The final electrical simulation and CAD review pass for the current BOM. Factory stack/process/inspection confirmation and quotation remain pending; the package is REVIEW_ONLY. [Engineering results](ORDER_READINESS.md).
 
 ## Implemented substitutions
 
-The following six sourced types cover nine placements. Five retain their previous values; C25/C26 intentionally change from 30 pF to 20 pF after the final crystal startup review. Footprints and nets are retained. The separate C1 update below also changes its footprint. A subsequent user-requested [branch cleanup](ROUTING_RULES.md) changes routing only; fresh CAD/DC checks and renders accompany it. Rev H firmware, MCU, component positions and four-layer stack remain unchanged.
+The following six sourced types cover nine placements. Five retain their previous values; C25/C26 intentionally change from 30 pF to 20 pF after the final crystal startup review. Footprints and nets are retained. The separate C1 update below changes its footprint; the U1/L1 margin correction below retains its footprints. A subsequent user-requested [branch cleanup](ROUTING_RULES.md) changes routing only; fresh CAD/DC checks and renders accompany it. Rev H firmware, MCU, component positions and four-layer stack remain unchanged.
 
 | References | Original MPN | Replacement MPN / JLC code | Specification |
 |---|---|---|---|
@@ -23,7 +23,13 @@ C25/C26 now use **20 pF**, 5%, 50 V C0G/NP0 parts. The previous 30 pF loading re
 
 All nine replacements are nonpolar two-terminal parts, so there is no active-device pinout conversion. Actual PCB pads are 1.025 × 1.4 mm for 0805 resistors, 1.125 × 1.75 mm for R42 and 1 × 1.45 mm for the two capacitors. The sourcing checker now verifies these reviewed dimensions and pad positions. Download provenance, hashes and the per-substitution review are in the [dated snapshot](../bom/jlc_sourcing.json).
 
-The remaining previously blank SMT codes now point to the existing exact manufacturer/MPN. The MCU, comparators, power switches, inductors and protection devices are retained; C1 is the separately reviewed exception among the capacitors. Matching is by manufacturer as well as MPN; listings from a different maker with the same short part name are not substitutes.
+The remaining previously blank SMT codes now point to the existing exact manufacturer/MPN. The MCU, comparators, sensor power switches, boost inductor and protection devices are retained. U1/L1 and C1 are the separately reviewed active/inductive/capacitor exceptions. Matching is by manufacturer as well as MPN; listings from a different maker with the same short part name are not substitutes.
+
+## Internal buck margin correction
+
+The final review replaces **U1 with LMR51430XDDCR / [C5185863](https://jlcpcb.com/partdetail/C5185863)** and **L1 with SRP7028A-8R2M / [C2041815](https://jlcpcb.com/partdetail/C2041815)**. The former 2 A buck lacked guaranteed current-limit headroom at the lowest-input maximum-charging corner. The 3 A replacement and 8.2 µH inductor pass all nine normal/charging/fault current-limit screens. L1 has 4 A RMS, 7.5 A saturation and 68 milliohm maximum DCR ratings. Pins, footprints, copper and placement are unchanged. Sensor output limits remain 300 mA per shared rail.
+
+The exact JLC listings had 8,835 and 111 orderable pieces respectively in the September 10, 05:13 UTC check. This pair adds **$0.62 per board** at ten boards. Current-limit calculations and downstream SPICE do not establish the upstream control-loop, dropout or thermal response. [Calculation](../reports/electrical/component_margins.json) · [Native change proof](../reports/manufacturing/buck_margin_change.json) · [TI datasheet](../sources/datasheets/ti_lmr51430.pdf) · [Bourns datasheet](../sources/datasheets/bourns_srp7028a.pdf).
 
 ## Assembly scope and remaining availability
 
@@ -47,7 +53,7 @@ Do not infer a reflow recipe from an LED's solder-heat reliability test. This au
 
 ## Cost and files
 
-With the user-fitted DigiKey MCU, ten-board parts are about **$26.46 per board before SMT attrition**, or **$27.34** with conservative JLC allowances. Two recommended spare MCUs add about $6.55 per batch, not per board. PCB, assembly, inspection, freight and taxes are additional. [Cost basis](COST_REDUCTION.md).
+With the user-fitted DigiKey MCU, ten-board parts are about **$27.18 per board before SMT attrition**, or **$28.06** with conservative JLC allowances. Two recommended spare MCUs add about $6.55 per batch, not per board. PCB, assembly, inspection, freight and taxes are additional. [Cost basis](COST_REDUCTION.md).
 
 Use Standard PCBA. Posted setup/stencil/loading plus two fixtures total **$132.81 per order** for 54 types; this is a partial fee estimate, not a quote. Confirm the panel/rails, 35 µm copper on every layer, reflow limits and U9 X-ray coverage before payment. [Review packet](../order/README.md).
 
@@ -57,58 +63,58 @@ Use Standard PCBA. Posted setup/stencil/loading plus two fixtures total **$132.8
 
 | Exact MPN | JLC code | Per board | Needed for 10 | Available | Stock result |
 |---|---|---:|---:|---:|---|
-| 0451003.MRL | [C13982](https://jlcpcb.com/partdetail/C13982) | 1 | 12 | 45,245 | Enough |
-| 0805W8F1001T5E | [C17513](https://jlcpcb.com/partdetail/C17513) | 4 | 50 | 29,783,840 | Enough |
-| 0805W8F1002T5E | [C17414](https://jlcpcb.com/partdetail/C17414) | 12 | 130 | 52,921,658 | Enough |
-| 0805W8F1003T5E | [C149504](https://jlcpcb.com/partdetail/C149504) | 8 | 90 | 4,752,691 | Enough |
-| 0805W8F3300T5E | [C17630](https://jlcpcb.com/partdetail/C17630) | 1 | 20 | 2,314,746 | Enough |
-| ABM3B-8.000MHZ-B2-T | [C83312](https://jlcpcb.com/partdetail/C83312) | 1 | 10 | 7,001 | Enough |
-| AO3401A | [C15127](https://jlcpcb.com/partdetail/C15127) | 3 | 34 | 305,462 | Enough |
-| AO4485 | [C51499](https://jlcpcb.com/partdetail/C51499) | 1 | 10 | 72,826 | Enough |
-| AP2112K-3.3TRG1 | [C51118](https://jlcpcb.com/partdetail/C51118) | 1 | 10 | 60,534 | Enough |
-| B240A-13-F | [C92506](https://jlcpcb.com/partdetail/C92506) | 2 | 24 | 163,752 | Enough |
+| 0451003.MRL | [C13982](https://jlcpcb.com/partdetail/C13982) | 1 | 12 | 45,148 | Enough |
+| 0805W8F1001T5E | [C17513](https://jlcpcb.com/partdetail/C17513) | 4 | 50 | 29,728,751 | Enough |
+| 0805W8F1002T5E | [C17414](https://jlcpcb.com/partdetail/C17414) | 12 | 130 | 52,860,584 | Enough |
+| 0805W8F1003T5E | [C149504](https://jlcpcb.com/partdetail/C149504) | 8 | 90 | 4,745,764 | Enough |
+| 0805W8F3300T5E | [C17630](https://jlcpcb.com/partdetail/C17630) | 1 | 20 | 2,316,763 | Enough |
+| ABM3B-8.000MHZ-B2-T | [C83312](https://jlcpcb.com/partdetail/C83312) | 1 | 10 | 6,741 | Enough |
+| AO3401A | [C15127](https://jlcpcb.com/partdetail/C15127) | 3 | 34 | 519,549 | Enough |
+| AO4485 | [C51499](https://jlcpcb.com/partdetail/C51499) | 1 | 10 | 72,841 | Enough |
+| AP2112K-3.3TRG1 | [C51118](https://jlcpcb.com/partdetail/C51118) | 1 | 10 | 60,472 | Enough |
+| B240A-13-F | [C92506](https://jlcpcb.com/partdetail/C92506) | 2 | 24 | 163,590 | Enough |
 | BAT46W-E3-18 | [C5557780](https://jlcpcb.com/partdetail/C5557780) | 3 | 34 | 4,733 | Enough |
 | BSS138BK,215 | [C282529](https://jlcpcb.com/partdetail/C282529) | 5 | 54 | 70,842 | Enough |
-| CC0805JRNPO9BN200 | [C105173](https://jlcpcb.com/partdetail/C105173) | 2 | 30 | 535,719 | Enough |
-| CC0805JRNPO9BN102 | [C62774](https://jlcpcb.com/partdetail/C62774) | 3 | 40 | 1,143,220 | Enough |
-| CC0805KRX7R9BB333 | [C107150](https://jlcpcb.com/partdetail/C107150) | 1 | 20 | 1,800,061 | Enough |
-| CL21B103KBANNNC | [C1710](https://jlcpcb.com/partdetail/C1710) | 2 | 30 | 2,671,459 | Enough |
-| CL21B104KCFNNNE | [C28233](https://jlcpcb.com/partdetail/C28233) | 14 | 150 | 1,390,137 | Enough |
-| CL21B105KBFNNNE | [C28323](https://jlcpcb.com/partdetail/C28323) | 5 | 60 | 3,094,211 | Enough |
-| CL21B473KBCNNNC | [C53134](https://jlcpcb.com/partdetail/C53134) | 1 | 20 | 218,593 | Enough |
-| CL21B475KAFNNNE | [C98195](https://jlcpcb.com/partdetail/C98195) | 2 | 28 | 197,867 | Enough |
-| CL31A226KAHNNNE | [C12891](https://jlcpcb.com/partdetail/C12891) | 8 | 84 | 756,677 | Enough |
+| CC0805JRNPO9BN200 | [C105173](https://jlcpcb.com/partdetail/C105173) | 2 | 30 | 534,289 | Enough |
+| CC0805JRNPO9BN102 | [C62774](https://jlcpcb.com/partdetail/C62774) | 3 | 40 | 1,141,135 | Enough |
+| CC0805KRX7R9BB333 | [C107150](https://jlcpcb.com/partdetail/C107150) | 1 | 20 | 1,799,721 | Enough |
+| CL21B103KBANNNC | [C1710](https://jlcpcb.com/partdetail/C1710) | 2 | 30 | 2,603,295 | Enough |
+| CL21B104KCFNNNE | [C28233](https://jlcpcb.com/partdetail/C28233) | 14 | 150 | 1,386,629 | Enough |
+| CL21B105KBFNNNE | [C28323](https://jlcpcb.com/partdetail/C28323) | 5 | 60 | 3,074,976 | Enough |
+| CL21B473KBCNNNC | [C53134](https://jlcpcb.com/partdetail/C53134) | 1 | 20 | 215,438 | Enough |
+| CL21B475KAFNNNE | [C98195](https://jlcpcb.com/partdetail/C98195) | 2 | 28 | 197,514 | Enough |
+| CL31A226KAHNNNE | [C12891](https://jlcpcb.com/partdetail/C12891) | 8 | 84 | 775,325 | Enough |
 | CL32B106KBJNNWE | [C3844168](https://jlcpcb.com/partdetail/C3844168) | 1 | 10 | 626 | Enough |
 | EEEFT1H470AP | [C92059](https://jlcpcb.com/partdetail/C92059) | 1 | 10 | 1,695 | Enough |
 | ESD2CAN24DBZRQ1 | [C5736151](https://jlcpcb.com/partdetail/C5736151) | 1 | 10 | 2,427 | Enough |
 | LM339LVDR | [C22427665](https://jlcpcb.com/partdetail/C22427665) | 1 | 10 | 110 | Enough |
-| LMR51420XDDCR | [C5246146](https://jlcpcb.com/partdetail/C5246146) | 1 | 10 | 4,040 | Enough |
+| LMR51430XDDCR | [C5185863](https://jlcpcb.com/partdetail/C5185863) | 1 | 10 | 8,835 | Enough |
 | MMSZ12T1G | [C72599](https://jlcpcb.com/partdetail/C72599) | 1 | 14 | 6,517 | Enough |
 | 0805W8F1152T5E | [C17418](https://jlcpcb.com/partdetail/C17418) | 1 | 20 | 3,238 | Enough |
-| RC0805FR-0713KL | [C137592](https://jlcpcb.com/partdetail/C137592) | 1 | 20 | 13,578 | Enough |
-| RC0805FR-0720KL | [C114566](https://jlcpcb.com/partdetail/C114566) | 3 | 40 | 1,914,116 | Enough |
-| 0805W8F2203T5E | [C17556](https://jlcpcb.com/partdetail/C17556) | 3 | 40 | 289,433 | Enough |
+| RC0805FR-0713KL | [C137592](https://jlcpcb.com/partdetail/C137592) | 1 | 20 | 13,478 | Enough |
+| RC0805FR-0720KL | [C114566](https://jlcpcb.com/partdetail/C114566) | 3 | 40 | 1,908,886 | Enough |
+| 0805W8F2203T5E | [C17556](https://jlcpcb.com/partdetail/C17556) | 3 | 40 | 289,378 | Enough |
 | RC0805FR-072K61L | [C273965](https://jlcpcb.com/partdetail/C273965) | 1 | 20 | 2,680 | Enough |
 | RC0805FR-072M2L | [C137552](https://jlcpcb.com/partdetail/C137552) | 3 | 40 | 6,844 | Enough |
 | 0805W8F5902T5E | [C17763](https://jlcpcb.com/partdetail/C17763) | 1 | 20 | 6,289 | Enough |
 | 0805W8F5231T5E | [C17739](https://jlcpcb.com/partdetail/C17739) | 1 | 20 | 2,225 | Enough |
-| RC0805JR-070RL | [C96345](https://jlcpcb.com/partdetail/C96345) | 1 | 20 | 2,040,155 | Enough |
-| RC1206FR-0710KL | [C132649](https://jlcpcb.com/partdetail/C132649) | 3 | 40 | 1,937,202 | Enough |
-| 1206W4F1200T5E | [C17909](https://jlcpcb.com/partdetail/C17909) | 1 | 20 | 709,711 | Enough |
-| RT0805BRD07100KL | [C122537](https://jlcpcb.com/partdetail/C122537) | 6 | 68 | 533,527 | Enough |
+| RC0805JR-070RL | [C96345](https://jlcpcb.com/partdetail/C96345) | 1 | 20 | 2,038,660 | Enough |
+| RC1206FR-0710KL | [C132649](https://jlcpcb.com/partdetail/C132649) | 3 | 40 | 1,934,977 | Enough |
+| 1206W4F1200T5E | [C17909](https://jlcpcb.com/partdetail/C17909) | 1 | 20 | 706,352 | Enough |
+| RT0805BRD07100KL | [C122537](https://jlcpcb.com/partdetail/C122537) | 6 | 68 | 533,083 | Enough |
 | RT0805BRD07102KL | [C865126](https://jlcpcb.com/partdetail/C865126) | 1 | 14 | 9,215 | Enough |
 | RT0805BRD0712K1L | [C865169](https://jlcpcb.com/partdetail/C865169) | 1 | 14 | 6,666 | Enough |
 | RT0805BRD0713K7L | [C865183](https://jlcpcb.com/partdetail/C865183) | 1 | 14 | 89 | Enough |
-| RT0805BRD0720KL | [C469660](https://jlcpcb.com/partdetail/C469660) | 2 | 24 | 26,820 | Enough |
-| SK6805-EC15 | [C2890035](https://jlcpcb.com/partdetail/C2890035) | 1 | 12 | 233,479 | Enough |
+| RT0805BRD0720KL | [C469660](https://jlcpcb.com/partdetail/C469660) | 2 | 24 | 26,705 | Enough |
+| SK6805-EC15 | [C2890035](https://jlcpcb.com/partdetail/C2890035) | 1 | 12 | 233,469 | Enough |
 | SMAJ13A-13-F | [C110519](https://jlcpcb.com/partdetail/C110519) | 1 | 12 | 12,888 | Enough |
 | SMAJ30A | [C148230](https://jlcpcb.com/partdetail/C148230) | 3 | 32 | 29,233 | Enough |
 | SMBJ22A-E3/52 | [C3698580](https://jlcpcb.com/partdetail/C3698580) | 1 | 12 | 177 | Enough |
-| SN74AHCT1G125DBVR | [C7484](https://jlcpcb.com/partdetail/C7484) | 1 | 12 | 16,214 | Enough |
+| SN74AHCT1G125DBVR | [C7484](https://jlcpcb.com/partdetail/C7484) | 1 | 12 | 16,208 | Enough |
 | SRP5030TA-3R3M | [C2042118](https://jlcpcb.com/partdetail/C2042118) | 1 | 10 | 39 | Enough |
-| SRP7028A-100M | [C2687402](https://jlcpcb.com/partdetail/C2687402) | 1 | 10 | 5,146 | Enough |
-| TCAN3413DR | [C22433320](https://jlcpcb.com/partdetail/C22433320) | 1 | 10 | 2,422 | Enough |
-| TPS2553DBVR-1 | [C111738](https://jlcpcb.com/partdetail/C111738) | 1 | 10 | 13,065 | Enough |
+| SRP7028A-8R2M | [C2041815](https://jlcpcb.com/partdetail/C2041815) | 1 | 10 | 111 | Enough |
+| TCAN3413DR | [C22433320](https://jlcpcb.com/partdetail/C22433320) | 1 | 10 | 2,400 | Enough |
+| TPS2553DBVR-1 | [C111738](https://jlcpcb.com/partdetail/C111738) | 1 | 10 | 13,060 | Enough |
 | TPS259620DDAR | [C2155773](https://jlcpcb.com/partdetail/C2155773) | 1 | 10 | 25 | Enough |
 | TPS61085DGKR | [C113659](https://jlcpcb.com/partdetail/C113659) | 1 | 10 | 2,041 | Enough |
 

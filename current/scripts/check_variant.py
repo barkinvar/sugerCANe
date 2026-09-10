@@ -17,6 +17,10 @@ for ref in sorted(old):
   cap=json.loads((R/'bom/jlc_sourcing.json').read_text())['capacitor_reflow_review']
   assert old[ref]==cap['before'] and new[ref]==cap['after']
   assert set(fields)=={'mpn','footprint','source_footprint','note'},fields
+ elif ref in ('U1','L1'):
+  buck=json.loads((R/'bom/jlc_sourcing.json').read_text())['buck_margin_review']
+  assert old[ref]==buck['before'][ref] and new[ref]==buck['after'][ref]
+  assert set(fields)==set(buck['changed_fields'][ref]),(ref,fields)
  elif ref in procurement:
   s=procurement[ref]
   assert old[ref]['mpn']==s['old_mpn'] and new[ref]['mpn']==s['new_mpn']
@@ -36,7 +40,7 @@ current=sum(float(r['purchase_usd'])/10 for r in csv.DictReader((R/'bom/cost_det
 report=dict(result='PASS',baseline_commit=base['source_commit'],baseline_sha256=hashlib.sha256(basefile.read_bytes()).hexdigest(),
  added_parts=sorted(added),removed_parts=[],changed_parts=changes,
  procurement_substitutions=substitutions,
- unchanged='Sensor-power, protection, comparator/bias and CAN topology/values retained. Five passive MPN types use equal-value JLC parts; C25/C26 intentionally change from 30 pF to 20 pF for improved crystal startup gain margin. C1 uses the high-reflow Panasonic FT capacitor and size-D lands. MCU remains STM32F042K6T6; PB3 sends RGB data. J8 electrical pin numbers retained, physical pattern replaced.',
+ unchanged='Sensor-output current limits, protection, comparator/bias and CAN topology retained. Internal buck now uses LMR51430XDDCR with SRP7028A-8R2M, in unchanged footprints. Five passive MPN types use equal-value JLC parts; C25/C26 are 20 pF for crystal startup gain margin. C1 uses the high-reflow Panasonic FT capacitor and size-D lands. MCU remains STM32F042K6T6; PB3 sends RGB data. J8 electrical pin numbers retained, physical pattern replaced.',
  board_mm=[52,74],corner_radius_mm=1.5,bounding_box_area_change_from_rev_g_percent=0,
  area_change_from_rev_g_percent=-(4-math.pi)*1.5**2/(52*74)*100,
  cost_10_board_purchase_USD=dict(rev_g=base['cost_10_board_purchase_usd'],rev_h=current,added_vs_rev_g=current-base['cost_10_board_purchase_usd']),

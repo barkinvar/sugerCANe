@@ -29,7 +29,7 @@ BSS138BK,"Q102, Q202, Q302, Q2, Q3",FRC_Sensor_CAN:SOT-23,5,Nexperia,"BSS138BK,2
 47uF,C1,FRC_Sensor_CAN:CP_Panasonic_FT_6.3x5.8,1,Panasonic,EEEFT1H470AP,C92059,https://jlcpcb.com/partdetail/C92059
 ESD2CAN24-Q1,D20,FRC_Sensor_CAN:SOT-23,1,Texas Instruments,ESD2CAN24DBZRQ1,C5736151,https://jlcpcb.com/partdetail/C5736151
 LM339LV,U7,FRC_Sensor_CAN:SOIC-14_3.9x8.7mm_P1.27mm,1,Texas Instruments,LM339LVDR,C22427665,https://jlcpcb.com/partdetail/C22427665
-LMR51420XDDCR,U1,FRC_Sensor_CAN:TSOT-23-6,1,Texas Instruments,LMR51420XDDCR,C5246146,https://jlcpcb.com/partdetail/C5246146
+LMR51430XDDCR,U1,FRC_Sensor_CAN:TSOT-23-6,1,Texas Instruments,LMR51430XDDCR,C5185863,https://jlcpcb.com/partdetail/C5185863
 12V ZENER,D3,FRC_Sensor_CAN:D_SOD-123,1,onsemi,MMSZ12T1G,C72599,https://jlcpcb.com/partdetail/C72599
 13k,R63,FRC_Sensor_CAN:R_0805_2012Metric,1,YAGEO,RC0805FR-0713KL,C137592,https://jlcpcb.com/partdetail/C137592
 20k,"R103, R203, R303",FRC_Sensor_CAN:R_0805_2012Metric,3,YAGEO,RC0805FR-0720KL,C114566,https://jlcpcb.com/partdetail/C114566
@@ -48,7 +48,7 @@ SMAJ30A,"D101, D201, D301",FRC_Sensor_CAN:D_SMA,3,Littelfuse,SMAJ30A,C148230,htt
 SMBJ22A,D2,FRC_Sensor_CAN:D_SMB,1,Vishay,SMBJ22A-E3/52,C3698580,https://jlcpcb.com/partdetail/C3698580
 SN74AHCT1G125,U10,FRC_Sensor_CAN:SOT-23-5,1,Texas Instruments,SN74AHCT1G125DBVR,C7484,https://jlcpcb.com/partdetail/C7484
 3.3uH,L2,FRC_Sensor_CAN:L_Bourns_SRP5030T,1,Bourns,SRP5030TA-3R3M,C2042118,https://jlcpcb.com/partdetail/C2042118
-10uH,L1,FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm,1,Bourns,SRP7028A-100M,C2687402,https://jlcpcb.com/partdetail/C2687402
+8.2uH,L1,FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm,1,BOURNS,SRP7028A-8R2M,C2041815,https://jlcpcb.com/partdetail/C2041815
 TCAN3413DR,U6,FRC_Sensor_CAN:SOIC-8_3.9x4.9mm_P1.27mm,1,Texas Instruments,TCAN3413DR,C22433320,https://jlcpcb.com/partdetail/C22433320
 TPS2553DBVR-1,U4,FRC_Sensor_CAN:SOT-23-6,1,Texas Instruments,TPS2553DBVR-1,C111738,https://jlcpcb.com/partdetail/C111738
 TPS259620DDAR,U9,FRC_Sensor_CAN:TPS2596_DDA8,1,Texas Instruments,TPS259620DDAR,C2155773,https://jlcpcb.com/partdetail/C2155773

@@ -23,7 +23,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 1,CC0805KRX7R9BB333,Factory SMT,1,1,0.012,0.012,0,JLCPCB,https://jlcpcb.com/partdetail/C107150
 1,CL21B103KBANNNC,Factory SMT,2,2,0.013,0.026,0,JLCPCB,https://jlcpcb.com/partdetail/C1710
 1,CL21B104KCFNNNE,Factory SMT,14,14,0.0407,0.5698,0,JLCPCB,https://jlcpcb.com/partdetail/C28233
-1,CL21B105KBFNNNE,Factory SMT,5,5,0.0433,0.2165,0,JLCPCB,https://jlcpcb.com/partdetail/C28323
+1,CL21B105KBFNNNE,Factory SMT,5,5,0.0399,0.1995,0,JLCPCB,https://jlcpcb.com/partdetail/C28323
 1,CL21B473KBCNNNC,Factory SMT,1,1,0.0173,0.0173,0,JLCPCB,https://jlcpcb.com/partdetail/C53134
 1,CL21B475KAFNNNE,Factory SMT,2,2,0.0608,0.1216,0,JLCPCB,https://jlcpcb.com/partdetail/C98195
 1,CL31A226KAHNNNE,Factory SMT,8,8,0.1694,1.3552,0,JLCPCB,https://jlcpcb.com/partdetail/C12891
@@ -31,7 +31,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 1,EEEFT1H470AP,Factory SMT,1,1,0.3573,0.3573,0,JLCPCB,https://jlcpcb.com/partdetail/C92059
 1,ESD2CAN24DBZRQ1,Factory SMT,1,1,0.3486,0.3486,0,JLCPCB,https://jlcpcb.com/partdetail/C5736151
 1,LM339LVDR,Factory SMT,1,1,0.5859,0.5859,0,JLCPCB,https://jlcpcb.com/partdetail/C22427665
-1,LMR51420XDDCR,Factory SMT,1,1,1.0221,1.0221,0,JLCPCB,https://jlcpcb.com/partdetail/C5246146
+1,LMR51430XDDCR,Factory SMT,1,1,0.8479,0.8479,0,JLCPCB,https://jlcpcb.com/partdetail/C5185863
 1,M22-2010305,Hand solder,3,3,0.22,0.66,0,DigiKey,https://www.digikey.com/en/products/detail/harwin-inc/M22-2010305/3728238
 1,MMSZ12T1G,Factory SMT,1,1,0.0723,0.0723,0,JLCPCB,https://jlcpcb.com/partdetail/C72599
 1,PM254V-12-10P-H85,Hand solder,1,5,0.1158,0.579,4,LCSC,https://www.lcsc.com/product-detail/C492399.html
@@ -52,9 +52,9 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 1,SMBJ22A-E3/52,Factory SMT,1,1,0.4671,0.4671,0,JLCPCB,https://jlcpcb.com/partdetail/C3698580
 1,SN74AHCT1G125DBVR,Factory SMT,1,1,0.1001,0.1001,0,JLCPCB,https://jlcpcb.com/partdetail/C7484
 1,SRP5030TA-3R3M,Factory SMT,1,1,2.3956,2.3956,0,JLCPCB,https://jlcpcb.com/partdetail/C2042118
-1,SRP7028A-100M,Factory SMT,1,1,0.9358,0.9358,0,JLCPCB,https://jlcpcb.com/partdetail/C2687402
+1,SRP7028A-8R2M,Factory SMT,1,1,1.8407,1.8407,0,JLCPCB,https://jlcpcb.com/partdetail/C2041815
 1,STM32F042K6T6,Hand solder,1,1,4.34,4.34,0,DigiKey,https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294
-1,TCAN3413DR,Factory SMT,1,1,1.0156,1.0156,0,JLCPCB,https://jlcpcb.com/partdetail/C22433320
+1,TCAN3413DR,Factory SMT,1,1,1.1539,1.1539,0,JLCPCB,https://jlcpcb.com/partdetail/C22433320
 1,TPS2553DBVR-1,Factory SMT,1,1,0.2912,0.2912,0,JLCPCB,https://jlcpcb.com/partdetail/C111738
 1,TPS259620DDAR,Factory SMT,1,1,0.8154,0.8154,0,JLCPCB,https://jlcpcb.com/partdetail/C2155773
 1,TPS61085DGKR,Factory SMT,1,1,0.6006,0.6006,0,JLCPCB,https://jlcpcb.com/partdetail/C113659
@@ -83,7 +83,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 5,CC0805KRX7R9BB333,Factory SMT,5,5,0.012,0.06,0,JLCPCB,https://jlcpcb.com/partdetail/C107150
 5,CL21B103KBANNNC,Factory SMT,10,10,0.013,0.13,0,JLCPCB,https://jlcpcb.com/partdetail/C1710
 5,CL21B104KCFNNNE,Factory SMT,70,70,0.0407,2.849,0,JLCPCB,https://jlcpcb.com/partdetail/C28233
-5,CL21B105KBFNNNE,Factory SMT,25,25,0.0433,1.0825,0,JLCPCB,https://jlcpcb.com/partdetail/C28323
+5,CL21B105KBFNNNE,Factory SMT,25,25,0.0399,0.9975,0,JLCPCB,https://jlcpcb.com/partdetail/C28323
 5,CL21B473KBCNNNC,Factory SMT,5,5,0.0173,0.0865,0,JLCPCB,https://jlcpcb.com/partdetail/C53134
 5,CL21B475KAFNNNE,Factory SMT,10,10,0.0608,0.608,0,JLCPCB,https://jlcpcb.com/partdetail/C98195
 5,CL31A226KAHNNNE,Factory SMT,40,40,0.1694,6.776,0,JLCPCB,https://jlcpcb.com/partdetail/C12891
@@ -91,7 +91,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 5,EEEFT1H470AP,Factory SMT,5,5,0.3573,1.7865,0,JLCPCB,https://jlcpcb.com/partdetail/C92059
 5,ESD2CAN24DBZRQ1,Factory SMT,5,5,0.3486,1.743,0,JLCPCB,https://jlcpcb.com/partdetail/C5736151
 5,LM339LVDR,Factory SMT,5,5,0.5859,2.9295,0,JLCPCB,https://jlcpcb.com/partdetail/C22427665
-5,LMR51420XDDCR,Factory SMT,5,5,1.0221,5.1105,0,JLCPCB,https://jlcpcb.com/partdetail/C5246146
+5,LMR51430XDDCR,Factory SMT,5,5,0.8479,4.2395,0,JLCPCB,https://jlcpcb.com/partdetail/C5185863
 5,M22-2010305,Hand solder,15,15,0.188,2.82,0,DigiKey,https://www.digikey.com/en/products/detail/harwin-inc/M22-2010305/3728238
 5,MMSZ12T1G,Factory SMT,5,5,0.0723,0.3615,0,JLCPCB,https://jlcpcb.com/partdetail/C72599
 5,PM254V-12-10P-H85,Hand solder,5,5,0.1158,0.579,0,LCSC,https://www.lcsc.com/product-detail/C492399.html
@@ -112,9 +112,9 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 5,SMBJ22A-E3/52,Factory SMT,5,5,0.4671,2.3355,0,JLCPCB,https://jlcpcb.com/partdetail/C3698580
 5,SN74AHCT1G125DBVR,Factory SMT,5,5,0.1001,0.5005,0,JLCPCB,https://jlcpcb.com/partdetail/C7484
 5,SRP5030TA-3R3M,Factory SMT,5,5,2.3956,11.978,0,JLCPCB,https://jlcpcb.com/partdetail/C2042118
-5,SRP7028A-100M,Factory SMT,5,5,0.9358,4.679,0,JLCPCB,https://jlcpcb.com/partdetail/C2687402
+5,SRP7028A-8R2M,Factory SMT,5,5,1.8407,9.2035,0,JLCPCB,https://jlcpcb.com/partdetail/C2041815
 5,STM32F042K6T6,Hand solder,5,5,4.34,21.7,0,DigiKey,https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294
-5,TCAN3413DR,Factory SMT,5,5,1.0156,5.078,0,JLCPCB,https://jlcpcb.com/partdetail/C22433320
+5,TCAN3413DR,Factory SMT,5,5,1.1539,5.7695,0,JLCPCB,https://jlcpcb.com/partdetail/C22433320
 5,TPS2553DBVR-1,Factory SMT,5,5,0.2912,1.456,0,JLCPCB,https://jlcpcb.com/partdetail/C111738
 5,TPS259620DDAR,Factory SMT,5,5,0.8154,4.077,0,JLCPCB,https://jlcpcb.com/partdetail/C2155773
 5,TPS61085DGKR,Factory SMT,5,5,0.6006,3.003,0,JLCPCB,https://jlcpcb.com/partdetail/C113659
@@ -143,7 +143,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 10,CC0805KRX7R9BB333,Factory SMT,10,10,0.012,0.12,0,JLCPCB,https://jlcpcb.com/partdetail/C107150
 10,CL21B103KBANNNC,Factory SMT,20,20,0.013,0.26,0,JLCPCB,https://jlcpcb.com/partdetail/C1710
 10,CL21B104KCFNNNE,Factory SMT,140,140,0.0407,5.698,0,JLCPCB,https://jlcpcb.com/partdetail/C28233
-10,CL21B105KBFNNNE,Factory SMT,50,50,0.0433,2.165,0,JLCPCB,https://jlcpcb.com/partdetail/C28323
+10,CL21B105KBFNNNE,Factory SMT,50,50,0.0399,1.995,0,JLCPCB,https://jlcpcb.com/partdetail/C28323
 10,CL21B473KBCNNNC,Factory SMT,10,10,0.0173,0.173,0,JLCPCB,https://jlcpcb.com/partdetail/C53134
 10,CL21B475KAFNNNE,Factory SMT,20,20,0.0608,1.216,0,JLCPCB,https://jlcpcb.com/partdetail/C98195
 10,CL31A226KAHNNNE,Factory SMT,80,80,0.1694,13.552,0,JLCPCB,https://jlcpcb.com/partdetail/C12891
@@ -151,7 +151,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 10,EEEFT1H470AP,Factory SMT,10,10,0.3573,3.573,0,JLCPCB,https://jlcpcb.com/partdetail/C92059
 10,ESD2CAN24DBZRQ1,Factory SMT,10,10,0.3486,3.486,0,JLCPCB,https://jlcpcb.com/partdetail/C5736151
 10,LM339LVDR,Factory SMT,10,10,0.4655,4.655,0,JLCPCB,https://jlcpcb.com/partdetail/C22427665
-10,LMR51420XDDCR,Factory SMT,10,10,0.8544,8.544,0,JLCPCB,https://jlcpcb.com/partdetail/C5246146
+10,LMR51430XDDCR,Factory SMT,10,10,0.6901,6.901,0,JLCPCB,https://jlcpcb.com/partdetail/C5185863
 10,M22-2010305,Hand solder,30,30,0.188,5.64,0,DigiKey,https://www.digikey.com/en/products/detail/harwin-inc/M22-2010305/3728238
 10,MMSZ12T1G,Factory SMT,10,10,0.0723,0.723,0,JLCPCB,https://jlcpcb.com/partdetail/C72599
 10,PM254V-12-10P-H85,Hand solder,10,10,0.1158,1.158,0,LCSC,https://www.lcsc.com/product-detail/C492399.html
@@ -172,9 +172,9 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 10,SMBJ22A-E3/52,Factory SMT,10,10,0.3727,3.727,0,JLCPCB,https://jlcpcb.com/partdetail/C3698580
 10,SN74AHCT1G125DBVR,Factory SMT,10,10,0.1001,1.001,0,JLCPCB,https://jlcpcb.com/partdetail/C7484
 10,SRP5030TA-3R3M,Factory SMT,10,10,2.0376,20.376,0,JLCPCB,https://jlcpcb.com/partdetail/C2042118
-10,SRP7028A-100M,Factory SMT,10,10,0.7731,7.731,0,JLCPCB,https://jlcpcb.com/partdetail/C2687402
+10,SRP7028A-8R2M,Factory SMT,10,10,1.5575,15.575,0,JLCPCB,https://jlcpcb.com/partdetail/C2041815
 10,STM32F042K6T6,Hand solder,10,10,3.277,32.77,0,DigiKey,https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294
-10,TCAN3413DR,Factory SMT,10,10,0.8333,8.333,0,JLCPCB,https://jlcpcb.com/partdetail/C22433320
+10,TCAN3413DR,Factory SMT,10,10,0.9472,9.472,0,JLCPCB,https://jlcpcb.com/partdetail/C22433320
 10,TPS2553DBVR-1,Factory SMT,10,10,0.2912,2.912,0,JLCPCB,https://jlcpcb.com/partdetail/C111738
 10,TPS259620DDAR,Factory SMT,10,10,0.6543,6.543,0,JLCPCB,https://jlcpcb.com/partdetail/C2155773
 10,TPS61085DGKR,Factory SMT,10,10,0.485,4.85,0,JLCPCB,https://jlcpcb.com/partdetail/C113659
@@ -203,7 +203,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 25,CC0805KRX7R9BB333,Factory SMT,25,25,0.012,0.3,0,JLCPCB,https://jlcpcb.com/partdetail/C107150
 25,CL21B103KBANNNC,Factory SMT,50,50,0.013,0.65,0,JLCPCB,https://jlcpcb.com/partdetail/C1710
 25,CL21B104KCFNNNE,Factory SMT,350,350,0.0407,14.245,0,JLCPCB,https://jlcpcb.com/partdetail/C28233
-25,CL21B105KBFNNNE,Factory SMT,125,125,0.0341,4.2625,0,JLCPCB,https://jlcpcb.com/partdetail/C28323
+25,CL21B105KBFNNNE,Factory SMT,125,125,0.0306,3.825,0,JLCPCB,https://jlcpcb.com/partdetail/C28323
 25,CL21B473KBCNNNC,Factory SMT,25,25,0.0173,0.4325,0,JLCPCB,https://jlcpcb.com/partdetail/C53134
 25,CL21B475KAFNNNE,Factory SMT,50,50,0.0608,3.04,0,JLCPCB,https://jlcpcb.com/partdetail/C98195
 25,CL31A226KAHNNNE,Factory SMT,200,200,0.1286,25.72,0,JLCPCB,https://jlcpcb.com/partdetail/C12891
@@ -211,7 +211,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 25,EEEFT1H470AP,Factory SMT,25,25,0.3573,8.9325,0,JLCPCB,https://jlcpcb.com/partdetail/C92059
 25,ESD2CAN24DBZRQ1,Factory SMT,25,25,0.3486,8.715,0,JLCPCB,https://jlcpcb.com/partdetail/C5736151
 25,LM339LVDR,Factory SMT,25,25,0.4655,11.6375,0,JLCPCB,https://jlcpcb.com/partdetail/C22427665
-25,LMR51420XDDCR,Factory SMT,25,25,0.8544,21.36,0,JLCPCB,https://jlcpcb.com/partdetail/C5246146
+25,LMR51430XDDCR,Factory SMT,25,25,0.6901,17.2525,0,JLCPCB,https://jlcpcb.com/partdetail/C5185863
 25,M22-2010305,Hand solder,75,75,0.188,14.1,0,DigiKey,https://www.digikey.com/en/products/detail/harwin-inc/M22-2010305/3728238
 25,MMSZ12T1G,Factory SMT,25,25,0.0723,1.8075,0,JLCPCB,https://jlcpcb.com/partdetail/C72599
 25,PM254V-12-10P-H85,Hand solder,25,25,0.1158,2.895,0,LCSC,https://www.lcsc.com/product-detail/C492399.html
@@ -232,9 +232,9 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 25,SMBJ22A-E3/52,Factory SMT,25,25,0.3727,9.3175,0,JLCPCB,https://jlcpcb.com/partdetail/C3698580
 25,SN74AHCT1G125DBVR,Factory SMT,25,25,0.1001,2.5025,0,JLCPCB,https://jlcpcb.com/partdetail/C7484
 25,SRP5030TA-3R3M,Factory SMT,25,25,2.0376,50.94,0,JLCPCB,https://jlcpcb.com/partdetail/C2042118
-25,SRP7028A-100M,Factory SMT,25,25,0.7731,19.3275,0,JLCPCB,https://jlcpcb.com/partdetail/C2687402
+25,SRP7028A-8R2M,Factory SMT,25,25,1.5575,38.9375,0,JLCPCB,https://jlcpcb.com/partdetail/C2041815
 25,STM32F042K6T6,Hand solder,25,25,3.277,81.925,0,DigiKey,https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294
-25,TCAN3413DR,Factory SMT,25,25,0.8333,20.8325,0,JLCPCB,https://jlcpcb.com/partdetail/C22433320
+25,TCAN3413DR,Factory SMT,25,25,0.9472,23.68,0,JLCPCB,https://jlcpcb.com/partdetail/C22433320
 25,TPS2553DBVR-1,Factory SMT,25,25,0.2912,7.28,0,JLCPCB,https://jlcpcb.com/partdetail/C111738
 25,TPS259620DDAR,Factory SMT,25,25,0.6543,16.3575,0,JLCPCB,https://jlcpcb.com/partdetail/C2155773
 25,TPS61085DGKR,Factory SMT,25,25,0.485,12.125,0,JLCPCB,https://jlcpcb.com/partdetail/C113659

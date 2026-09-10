@@ -5,7 +5,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C13982",
     "url": "https://jlcpcb.com/partdetail/C13982",
-    "stock_observed": 45245,
+    "stock_observed": 45148,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -50,7 +50,7 @@
     "supplier_part": "C17513",
     "url": "https://jlcpcb.com/partdetail/C17513",
     "lcsc": "C17513",
-    "stock_observed": 29797798,
+    "stock_observed": 29728751,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -92,7 +92,7 @@
     "supplier_part": "C17414",
     "url": "https://jlcpcb.com/partdetail/C17414",
     "lcsc": "C17414",
-    "stock_observed": 52936609,
+    "stock_observed": 52860584,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -134,7 +134,7 @@
     "supplier_part": "C149504",
     "url": "https://jlcpcb.com/partdetail/C149504",
     "lcsc": "C149504",
-    "stock_observed": 4758023,
+    "stock_observed": 4745764,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -214,7 +214,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C17556",
     "url": "https://jlcpcb.com/partdetail/C17556",
-    "stock_observed": 289620,
+    "stock_observed": 289378,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -256,7 +256,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C17630",
     "url": "https://jlcpcb.com/partdetail/C17630",
-    "stock_observed": 2318391,
+    "stock_observed": 2316763,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -381,7 +381,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C17909",
     "url": "https://jlcpcb.com/partdetail/C17909",
-    "stock_observed": 710078,
+    "stock_observed": 706352,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -497,7 +497,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C83312",
     "url": "https://jlcpcb.com/partdetail/C83312",
-    "stock_observed": 7026,
+    "stock_observed": 6741,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -539,7 +539,7 @@
     "supplier_part": "C15127",
     "url": "https://jlcpcb.com/partdetail/C15127",
     "lcsc": "C15127",
-    "stock_observed": 311819,
+    "stock_observed": 519549,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -620,7 +620,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C51118",
     "url": "https://jlcpcb.com/partdetail/C51118",
-    "stock_observed": 60541,
+    "stock_observed": 60472,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -661,7 +661,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C92506",
     "url": "https://jlcpcb.com/partdetail/C92506",
-    "stock_observed": 164252,
+    "stock_observed": 163590,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -784,7 +784,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C62774",
     "url": "https://jlcpcb.com/partdetail/C62774",
-    "stock_observed": 1143347,
+    "stock_observed": 1141135,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -825,7 +825,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C107150",
     "url": "https://jlcpcb.com/partdetail/C107150",
-    "stock_observed": 1800261,
+    "stock_observed": 1799721,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -866,7 +866,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C1710",
     "url": "https://jlcpcb.com/partdetail/C1710",
-    "stock_observed": 2678768,
+    "stock_observed": 2603295,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -911,7 +911,7 @@
     "supplier_part": "C28233",
     "url": "https://jlcpcb.com/partdetail/C28233",
     "lcsc": "C28233",
-    "stock_observed": 1391143,
+    "stock_observed": 1386629,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -949,34 +949,34 @@
     "supplier": "JLCPCB",
     "supplier_part": "C28323",
     "url": "https://jlcpcb.com/partdetail/C28323",
-    "stock_observed": 3097023,
+    "stock_observed": 3074976,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        0.0433
+        0.0399
       ],
       [
         100,
-        0.0341
+        0.0306
       ],
       [
         300,
-        0.0292
+        0.0258
       ],
       [
         2000,
-        0.0253
+        0.0219
       ],
       [
         4000,
-        0.024
+        0.0206
       ],
       [
         10000,
-        0.023
+        0.0196
       ]
     ],
     "lcsc": "C28323",
@@ -990,7 +990,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C53134",
     "url": "https://jlcpcb.com/partdetail/C53134",
-    "stock_observed": 218653,
+    "stock_observed": 215438,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1031,7 +1031,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C98195",
     "url": "https://jlcpcb.com/partdetail/C98195",
-    "stock_observed": 225867,
+    "stock_observed": 197514,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1072,7 +1072,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C12891",
     "url": "https://jlcpcb.com/partdetail/C12891",
-    "stock_observed": 783341,
+    "stock_observed": 775325,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1230,47 +1230,6 @@
     "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/LM339LVDR/21598795",
     "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
-  "LMR51420XDDCR": {
-    "mpn": "LMR51420XDDCR",
-    "manufacturer": "Texas Instruments",
-    "supplier": "JLCPCB",
-    "supplier_part": "C5246146",
-    "url": "https://jlcpcb.com/partdetail/C5246146",
-    "stock_observed": 4040,
-    "observed_date": "2026-09-10",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        1.0221
-      ],
-      [
-        10,
-        0.8544
-      ],
-      [
-        30,
-        0.7698
-      ],
-      [
-        100,
-        0.6868
-      ],
-      [
-        500,
-        0.6364
-      ],
-      [
-        1000,
-        0.6103
-      ]
-    ],
-    "lcsc": "C5246146",
-    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
-    "digikey_sku": "296-LMR51420XDDCRCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/LMR51420XDDCR/16705125"
-  },
   "LTST-C170KGKT": {
     "mpn": "LTST-C170KGKT",
     "manufacturer": "Lite-On",
@@ -1405,7 +1364,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C137592",
     "url": "https://jlcpcb.com/partdetail/C137592",
-    "stock_observed": 13578,
+    "stock_observed": 13478,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1483,7 +1442,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C114566",
     "url": "https://jlcpcb.com/partdetail/C114566",
-    "stock_observed": 1915416,
+    "stock_observed": 1908886,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1598,7 +1557,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C137552",
     "url": "https://jlcpcb.com/partdetail/C137552",
-    "stock_observed": 6944,
+    "stock_observed": 6844,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1639,7 +1598,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C96345",
     "url": "https://jlcpcb.com/partdetail/C96345",
-    "stock_observed": 2040265,
+    "stock_observed": 2038660,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1680,7 +1639,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C132649",
     "url": "https://jlcpcb.com/partdetail/C132649",
-    "stock_observed": 1937212,
+    "stock_observed": 1934977,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1721,7 +1680,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C122537",
     "url": "https://jlcpcb.com/partdetail/C122537",
-    "stock_observed": 533568,
+    "stock_observed": 533083,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1885,7 +1844,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C469660",
     "url": "https://jlcpcb.com/partdetail/C469660",
-    "stock_observed": 26836,
+    "stock_observed": 26705,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1926,7 +1885,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C2890035",
     "url": "https://jlcpcb.com/partdetail/C2890035",
-    "stock_observed": 233479,
+    "stock_observed": 233469,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -2008,7 +1967,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C148230",
     "url": "https://jlcpcb.com/partdetail/C148230",
-    "stock_observed": 29435,
+    "stock_observed": 29233,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -2090,7 +2049,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C7484",
     "url": "https://jlcpcb.com/partdetail/C7484",
-    "stock_observed": 16260,
+    "stock_observed": 16208,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -2203,47 +2162,6 @@
     "digikey_url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP5030TA-3R3M/5429672",
     "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
-  "SRP7028A-100M": {
-    "mpn": "SRP7028A-100M",
-    "manufacturer": "Bourns",
-    "supplier": "JLCPCB",
-    "supplier_part": "C2687402",
-    "url": "https://jlcpcb.com/partdetail/C2687402",
-    "stock_observed": 5146,
-    "observed_date": "2026-09-10",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.9358
-      ],
-      [
-        10,
-        0.7731
-      ],
-      [
-        30,
-        0.6917
-      ],
-      [
-        100,
-        0.612
-      ],
-      [
-        500,
-        0.5631
-      ],
-      [
-        1000,
-        0.5387
-      ]
-    ],
-    "lcsc": "C2687402",
-    "digikey_sku": "SRP7028A-100MCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP7028A-100M/4876733",
-    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
-  },
   "STM32F042K6T6": {
     "mpn": "STM32F042K6T6",
     "manufacturer": "STMicroelectronics",
@@ -2292,34 +2210,34 @@
     "supplier": "JLCPCB",
     "supplier_part": "C22433320",
     "url": "https://jlcpcb.com/partdetail/C22433320",
-    "stock_observed": 2422,
+    "stock_observed": 2400,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        1.0156
+        1.1539
       ],
       [
         10,
-        0.8333
+        0.9472
       ],
       [
         30,
-        0.7422
+        0.8431
       ],
       [
         100,
-        0.6526
+        0.7422
       ],
       [
         500,
-        0.5989
+        0.6803
       ],
       [
         1000,
-        0.5713
+        0.6494
       ]
     ],
     "lcsc": "C22433320",
@@ -2333,7 +2251,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C111738",
     "url": "https://jlcpcb.com/partdetail/C111738",
-    "stock_observed": 13075,
+    "stock_observed": 13060,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -2456,7 +2374,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C92059",
     "url": "https://jlcpcb.com/partdetail/C92059",
-    "stock_observed": 1815,
+    "stock_observed": 1695,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -2489,7 +2407,7 @@
     "lcsc": "C92059",
     "digikey_sku": "",
     "digikey_url": "",
-    "factory_stock_status": "JLC public stock sufficient for 10 boards; factory SMT with Panasonic profile (5) dwell limits; unallocated"
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
   "CC0805JRNPO9BN200": {
     "mpn": "CC0805JRNPO9BN200",
@@ -2497,7 +2415,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C105173",
     "url": "https://jlcpcb.com/partdetail/C105173",
-    "stock_observed": 535719,
+    "stock_observed": 534289,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -2532,5 +2450,89 @@
     "digikey_url": "",
     "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
     "previous_mpn": "CC0805JRNPO9BN300"
+  },
+  "LMR51430XDDCR": {
+    "mpn": "LMR51430XDDCR",
+    "manufacturer": "Texas Instruments",
+    "supplier": "JLCPCB",
+    "supplier_part": "C5185863",
+    "url": "https://jlcpcb.com/partdetail/C5185863",
+    "stock_observed": 8835,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.8479
+      ],
+      [
+        10,
+        0.6901
+      ],
+      [
+        30,
+        0.612
+      ],
+      [
+        100,
+        0.5322
+      ],
+      [
+        500,
+        0.4866
+      ],
+      [
+        1000,
+        0.4622
+      ]
+    ],
+    "lcsc": "C5185863",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "previous_mpn": "LMR51420XDDCR"
+  },
+  "SRP7028A-8R2M": {
+    "mpn": "SRP7028A-8R2M",
+    "manufacturer": "BOURNS",
+    "supplier": "JLCPCB",
+    "supplier_part": "C2041815",
+    "url": "https://jlcpcb.com/partdetail/C2041815",
+    "stock_observed": 111,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        1.8407
+      ],
+      [
+        10,
+        1.5575
+      ],
+      [
+        30,
+        1.4013
+      ],
+      [
+        100,
+        1.2255
+      ],
+      [
+        500,
+        1.1474
+      ],
+      [
+        1000,
+        1.1132
+      ]
+    ],
+    "lcsc": "C2041815",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "previous_mpn": "SRP7028A-100M"
   }
 }

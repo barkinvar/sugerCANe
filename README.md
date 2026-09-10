@@ -10,7 +10,7 @@ A compact interface for **three NPN, PNP or logic sensors** on an FRC robot. Eac
 
 Rev H adds one RGB status LED on the right, with space for a printed light duct, and a recessed female programming socket for small batches. It retains G's protected sensor supplies, CAN fault reset and rail measurements. See [the engineering review](current/docs/ORDER_READINESS.md) for the evidence and remaining physical tests.
 
-**Selected assembly plan:** JLC fits **129 top-side SMT parts**. You buy **STM32F042K6T6 from DigiKey** and solder U5, then fit ten through-hole parts and three jumper caps. U5 is omitted from the factory BOM, CPL and stencil. All 54 factory types currently have stock for ten boards; final simulation review and factory quotation remain pending. **[Start here: where to buy and how to order](current/docs/FACTORY_ORDER.md).**
+**Selected assembly plan:** JLC fits **129 top-side SMT parts**. You buy **STM32F042K6T6 from DigiKey** and solder U5, then fit ten through-hole parts and three jumper caps. U5 is omitted from the factory BOM, CPL and stencil. All 54 factory types had stock for ten boards in the September 10, 07:22 UTC check. Full power/input/firmware and four-layer CAD screens pass; factory process/stack/inspection confirmation and quotation remain pending. **[Start here: where to buy and how to order](current/docs/FACTORY_ORDER.md).**
 
 ![SC12 Rev H](current/output/review/board_3d_final.png)
 
@@ -22,10 +22,10 @@ Rev H adds one RGB status LED on the right, with space for a printed light duct,
 | Signals | Positive 0–30 V targets; NPN / PNP / push-pull / floating detection / keeper |
 | Size and assembly | 52 × 74 mm, four copper layers; **all components on top** |
 | User assembly | DigiKey MCU, six terminals, three voltage headers, service socket and three caps |
-| Parts estimate | **$26.46 per board at 10 boards** before SMT attrition; **$27.34** with conservative allowance |
+| Parts estimate | **$27.18 per board at 10 boards** before SMT attrition; **$28.06** with conservative allowance |
 | Cost exclusions | PCB, assembly, freight, tax and testing; no factory quotation yet |
 
-The selected purchasing estimate is $2.54 lower per board than the preceding $28.99 estimate, before SMT attrition. It includes the DigiKey MCU; optional spares are extra. Assembly and the reusable programmer are separate. [Cost basis](current/docs/COST_REDUCTION.md).
+The selected purchasing estimate is $1.81 lower per board than the preceding $28.99 estimate, before SMT attrition. It includes the DigiKey MCU; optional spares are extra. Assembly and the reusable programmer are separate. [Cost basis](current/docs/COST_REDUCTION.md).
 
 ## Find what you need
 

@@ -7,7 +7,7 @@ The sugarCANe underside uses an original pixel-cane illustration and original gr
 | Subject | Primary reference |
 |---|---|
 | Input fuse interruption / derating | [Littelfuse 451/453](https://www.littelfuse.com/assetdocs/fuse-451-and-453-datasheet?assetguid=533cd5cc-956c-4243-867f-6ab5a62f6ba1) |
-| Buck and capacitors | [TI LMR51420](https://www.ti.com/lit/ds/symlink/lmr51420.pdf) |
+| Buck and capacitors | [TI LMR51430](https://www.ti.com/lit/ds/symlink/lmr51430.pdf) |
 | Regulated 12 V boost | [TI TPS61085](https://www.ti.com/lit/ds/symlink/tps61085.pdf), exact DGK VSSOP package |
 | Shielded 3.3 µH inductor | [Bourns SRP5030TA](https://www.bourns.com/docs/product-datasheets/srp5030ta.pdf) |
 | Input/output/bias capacitor curve | [Samsung CL32B106KBJNNW](https://product.samsungsem.com/mlcc/CL32B106KBJNNW.do) |

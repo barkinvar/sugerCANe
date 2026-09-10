@@ -5,14 +5,14 @@ Rev H retains G's protected power circuit and adds RGB status and ordinary-heade
 ## Supply path
 
 ```text
-6–22 V → fuse / reverse protection / TVS → internal 5 V, 2 A
+6–22 V → fuse / reverse protection / TVS → internal 5 V, 3 A buck
                                           ├─ 3.3 V MCU / CAN / comparators
                                           ├─ U4 latch limiter → SENSOR_5V
                                           └─ U8 boost → reservoir → U9 eFuse → SENSOR_12V
 SENSOR_5V / SENSOR_12V → removable jumper per port → sensor power
 ```
 
-U1 remains LMR51420XDDCR. U8 remains TPS61085DGKR, with the 3.3 µH shielded inductor, B240A diode and 13 kΩ / 33 nF compensation. C61 is now a 1 µF local bypass. C60 remains 22 µF, and C62–C64 remain three 22 µF reservoir capacitors. Their effective capacitance at 12 V is much smaller than their nameplate value; the checks include both explicit derated and nameplate cases.
+U1 is LMR51430XDDCR, paired with L1 SRP7028A-8R2M (8.2 µH). The final current-margin review replaces the former 2 A buck and 10 µH inductor in the same footprints; the 300 mA shared sensor-rail limits are unchanged. U8 remains TPS61085DGKR, with the 3.3 µH shielded inductor, B240A diode and 13 kΩ / 33 nF compensation. C61 is now a 1 µF local bypass. C60 remains 22 µF, and C62–C64 remain three 22 µF reservoir capacitors. Their effective capacitance at 12 V is much smaller than their nameplate value; the checks include both explicit derated and nameplate cases.
 
 A boost has a direct path through its inductor and diode. Rev H puts **TPS259620DDAR after the reservoir**, so a sensor short cannot discharge that reservoir directly through the port. R62=2.61 kΩ sets about 357 mA nominal output current limit; the tolerance budget is in [electrical_checks.json](reports/electrical/electrical_checks.json). Useful sensor load remains **300 mA shared per rail**. C70=47 nF controls output slew; C65/C71 provide local input/output bypassing. D5 clamps negative output transients and D6 limits raw-rail transients. These parts do not authorize reverse powering a sensor port.
 

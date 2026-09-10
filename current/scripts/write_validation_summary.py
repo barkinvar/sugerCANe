@@ -57,7 +57,7 @@ assert 'PASS: WPILib 2027.0.0-alpha-7' in (R/'reports/bridge2027-tests.log').rea
 assert read('reports/firmware-images.json')['result']=='PASS'
 loop=read('reports/electrical/converter_loop.json');assert loop['result']=='PASS analytical screening only'
 margins=read('reports/electrical/component_margins.json')
-assert margins['buck']['normal_load_pass'] and margins['oscillator']['all_gain_corners_pass']
+assert margins['buck']['normal_load_pass'] and margins['buck']['all_current_limit_corners_pass'] and margins['oscillator']['all_gain_corners_pass']
 for path,digest in margins['input_hashes'].items():
  assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale component margin review',path)
 subprocess.run([sys.executable,str(R/'scripts/check_input_spice.py'),'--verify-report'],check=True)
@@ -99,7 +99,7 @@ tracked += ['hardware/FRC_Sensor_CAN.kicad_pro','hardware/FRC_Sensor_CAN.kicad_d
             'hardware/design/routing_widths.json']
 tracked += ['scripts/ground_geometry.py','scripts/verify_gerber_geometry.py']
 tracked += ['scripts/check_component_margins.py','reports/electrical/component_margins.json',
-            'reports/manufacturing/clock_load_change.json']
+            'reports/manufacturing/clock_load_change.json','reports/manufacturing/buck_margin_change.json']
 tracked += ['reports/erc/final.json','reports/drc/final.json','reports/design_parity.json','reports/board_constraints.json',
             'reports/variant_verification.json','reports/firmware-tests.log','reports/power-tests.log','reports/firmware-images.json',
             'reports/firmware-arm-registers.json','reports/driver/tests.log','reports/bridge2027-tests.log',
@@ -143,6 +143,7 @@ if diagnostics and diagnostics['circuit_sha256']==out['input_hashes']['hardware/
 out['simulation_deferred_by_user']=False
 out['component_margin_review']={
  'normal_load_buck_pass':margins['buck']['normal_load_pass'],
+ 'all_buck_current_limit_corners_pass':margins['buck']['all_current_limit_corners_pass'],
  'crystal_gain_corners_pass':margins['oscillator']['all_gain_corners_pass'],
  'fitted_crystal_capacitors_pF':margins['oscillator']['fitted_capacitors_pF'],
  'simultaneous_fault_regulation_guaranteed':False,

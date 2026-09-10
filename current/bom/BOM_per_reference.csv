@@ -63,7 +63,7 @@ J8,PM254V-12-10P-H85,2x5 SERVICE SOCKET 2.54mm,FRC_Sensor_CAN:Service_2x05_P2.54
 JP101,M22-2010305,5V / 12V,FRC_Sensor_CAN:PinHeader_1x03_P2.00mm_Vertical,,,,,"Hand-fit 2 mm header. One removable SPN02SVEN-RC shunt: 1-2=5 V, 2-3=12 V, absent=off. Change only with power off. Ship shunts loose."
 JP201,M22-2010305,5V / 12V,FRC_Sensor_CAN:PinHeader_1x03_P2.00mm_Vertical,,,,,"Hand-fit 2 mm header. One removable SPN02SVEN-RC shunt: 1-2=5 V, 2-3=12 V, absent=off. Change only with power off. Ship shunts loose."
 JP301,M22-2010305,5V / 12V,FRC_Sensor_CAN:PinHeader_1x03_P2.00mm_Vertical,,,,,"Hand-fit 2 mm header. One removable SPN02SVEN-RC shunt: 1-2=5 V, 2-3=12 V, absent=off. Change only with power off. Ship shunts loose."
-L1,SRP7028A-100M,10uH,FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm,,,,,"3.5A RMS, 6A saturation; use specified family, not NRND SRP7030."
+L1,SRP7028A-8R2M,8.2uH,FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm,,,,,"4A RMS, 7.5A saturation; paired with 3A LMR51430. Use specified SRP7028A family."
 L2,SRP5030TA-3R3M,3.3uH,FRC_Sensor_CAN:L_Bourns_SRP5030T,,,,,3.3uH; 5A RMS and 8A at 20% inductance loss. Output eFuse prevents a sensor short directly discharging through this inductor.
 Q1,AO4485,AO4485,FRC_Sensor_CAN:SOIC-8_3.9x4.9mm_P1.27mm,,,,,"Reverse-polarity PMOS: drain toward input, source toward load. Not a reverse-current blocker when on."
 Q101,AO3401A,AO3401A,FRC_Sensor_CAN:SOT-23,,,,,"3.3 V bias source, active-low gate. BAT46W isolates positive field voltage."
@@ -129,7 +129,7 @@ R72,RT0805BRD07100KL,100k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,Two seri
 R73,RT0805BRD07100KL,100k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,
 R74,RT0805BRD0720KL,20k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,
 R75,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,"100k gate pulldown keeps Q3 off during MCU reset/unpowered, so Q2 inhibits U9. 10k pulldown provides extra reset/leakage margin."
-U1,LMR51420XDDCR,LMR51420XDDCR,FRC_Sensor_CAN:TSOT-23-6,,,,,
+U1,LMR51430XDDCR,LMR51430XDDCR,FRC_Sensor_CAN:TSOT-23-6,,,,,
 U10,SN74AHCT1G125DBVR,SN74AHCT1G125,FRC_Sensor_CAN:SOT-23-5,,,,,"5V AHCT buffer accepts 3.3V MCU data. OE_N grounded. R31 holds input LOW while MCU reset; LED is a software indicator, not an independent power-good signal."
 U2,AP2112K-3.3TRG1,AP2112K-3.3,FRC_Sensor_CAN:SOT-23-5,,,,,
 U4,TPS2553DBVR-1,TPS2553DBVR-1,FRC_Sensor_CAN:SOT-23-6,,,,,Independent 5 V hardware current limit; EN is MCU controlled with an external default-off pull-down. Exact TPS2553-1 latch-off variant.

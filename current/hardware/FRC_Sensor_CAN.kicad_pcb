@@ -7456,7 +7456,7 @@
 				)
 			)
 		)
-		(property "Value" "LMR51420XDDCR"
+		(property "Value" "LMR51430XDDCR"
 			(at 0 2.4 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -7502,7 +7502,7 @@
 				)
 			)
 		)
-		(property "MPN" "LMR51420XDDCR"
+		(property "MPN" "LMR51430XDDCR"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -18572,7 +18572,7 @@
 				)
 			)
 		)
-		(property "Value" "10uH"
+		(property "Value" "8.2uH"
 			(at 0 4.5 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18610,7 +18610,7 @@
 				)
 			)
 		)
-		(property "MPN" "SRP7028A-100M"
+		(property "MPN" "SRP7028A-8R2M"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -18622,7 +18622,7 @@
 				)
 			)
 		)
-		(property "Notes" "3.5A RMS, 6A saturation; use specified family, not NRND SRP7030."
+		(property "Notes" "4A RMS, 7.5A saturation; paired with 3A LMR51430. Use specified SRP7028A family."
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)

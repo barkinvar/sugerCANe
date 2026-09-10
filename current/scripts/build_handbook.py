@@ -149,7 +149,7 @@ def page(canvas, doc):
     canvas.setFont('Guide', 7.3)
     canvas.setFillColor(colors.HexColor('#537080'))
     canvas.drawString(42, 817, 'FRC SENSOR CAN  /  REVISION H SC12 PROTOTYPE')
-    canvas.drawRightString(553, 817, '2026-09-09')
+    canvas.drawRightString(553, 817, '2026-09-10')
     canvas.setStrokeColor(colors.HexColor('#cbd7dc'))
     canvas.line(42, 808, 553, 808)
     canvas.drawString(42, 24, 'Unbuilt design — qualification measurements remain pending')
@@ -166,7 +166,7 @@ if args.order_guide:
     story=[Paragraph('sugarCANe / Rev H',styles['cover']),
            Paragraph('Order and build guide',styles['heading']),
            Paragraph('JLCPCB assembly + user-soldered DigiKey MCU',styles['body']),
-           Paragraph('Selected assembly plan. Final simulation review required before paying for fabrication.',styles['small']),
+           Paragraph('Engineering screens passed. Factory process, stack, inspection and quote confirmation remain required.',styles['small']),
            Spacer(1,12),*convert(ROOT/'docs/FACTORY_ORDER.md')]
     doc=Guide(str(OUT/'ORDER_GUIDE.pdf'),pagesize=A4,leftMargin=42,rightMargin=42,topMargin=48,bottomMargin=43,
               title='sugarCANe Rev H ordering guide',author='sugarCANe project')
@@ -184,7 +184,7 @@ if render.exists():
     with PILImage.open(render) as im:
         w, h = im.size
     story.append(Image(str(render), width=380, height=380*h/w))
-story.extend([Spacer(1, 12), Paragraph('2026-09-09', styles['heading']),
+story.extend([Spacer(1, 12), Paragraph('2026-09-10', styles['heading']),
               Paragraph('Rev H adds RGB diagnostics and inexpensive header programming while retaining protected sensor power and physical voltage jumpers. No physical prototype has been tested. This guide accompanies the engineering evidence and defines first-article acceptance.', styles['body']),
               PageBreak(), Paragraph('Contents', styles['chapter'])])
 toc = TableOfContents()
