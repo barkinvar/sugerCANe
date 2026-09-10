@@ -1,5 +1,6 @@
 """Create/refill four ground pours; retained inner service route remains isolated from ground."""
 from pathlib import Path
+from layout_contract import WIDTH, HEIGHT
 import pcbnew as p
 R=Path(__file__).resolve().parents[1];f=R/'hardware/FRC_Sensor_CAN.kicad_pcb';b=p.LoadBoard(str(f))
 assert b.GetCopperLayerCount()==4
@@ -9,7 +10,7 @@ for layer in (p.F_Cu,p.In1_Cu,p.In2_Cu,p.B_Cu):
   assert existing[layer].GetNetname()=='GND';continue
  z=p.ZONE(b);z.SetLayer(layer);z.SetNet(b.GetNetsByName()['GND']);z.SetLocalClearance(p.FromMM(.2));z.SetMinThickness(p.FromMM(.2));z.SetThermalReliefGap(p.FromMM(.25));z.SetThermalReliefSpokeWidth(p.FromMM(.3));z.SetPadConnection(p.ZONE_CONNECTION_FULL if layer in (p.In1_Cu,p.In2_Cu) else p.ZONE_CONNECTION_THERMAL)
  poly=z.Outline();poly.NewOutline()
- for x,y in ((.3,.3),(51.7,.3),(51.7,73.7),(.3,73.7)):poly.Append(p.VECTOR2I(p.FromMM(x),p.FromMM(y)))
+ for x,y in ((.3,.3),(WIDTH-.3,.3),(WIDTH-.3,HEIGHT-.3),(.3,HEIGHT-.3)):poly.Append(p.VECTOR2I(p.FromMM(x),p.FromMM(y)))
  b.Add(z)
 assert len([z for z in b.Zones() if not z.GetIsRuleArea()])==4
 p.ZONE_FILLER(b).Fill(b.Zones());p.SaveBoard(str(f),b)

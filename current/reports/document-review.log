@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "local_links_checked": 189,
+  "local_links_checked": 259,
   "broken_links": [],
   "pdfs": [
     {
@@ -9,8 +9,18 @@
       "text_within_page": true
     },
     {
+      "file": "output/documentation/ORDER_GUIDE.pdf",
+      "pages": 3,
+      "text_within_page": true
+    },
+    {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "pages": 38,
+      "pages": 43,
+      "text_within_page": true
+    },
+    {
+      "file": "output/documentation/MCU_hand_solder_map.pdf",
+      "pages": 1,
       "text_within_page": true
     },
     {
@@ -20,6 +30,11 @@
     },
     {
       "file": "output/assembly/top_assembly.pdf",
+      "pages": 1,
+      "text_within_page": true
+    },
+    {
+      "file": "output/assembly/bottom_assembly.pdf",
       "pages": 1,
       "text_within_page": true
     },

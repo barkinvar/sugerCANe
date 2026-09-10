@@ -19,9 +19,9 @@
     "34 compiled flash halfword power-cut cases and programming-error rejection",
     "UART RX overflow ordering and bounded TX buffer under flooding"
   ],
-  "elapsed_seconds": 0.5107646679971367,
+  "elapsed_seconds": 0.5328228999860585,
   "emulator": "Unicorn2.1.4 Cortex-M0",
-  "elf_sha256": "ccd3214ff520b6dd2605da9ee1731d8de485415adb9a98ab45c5a1d3442fe92f",
+  "elf_sha256": "1d412f7cf96540185eccd46a711f28cf3b73be03966c39ce8a59760658a3c940",
   "binary_sha256": "c8e68ff7857d7a12299a846599a4fd11e875bf50a71f7348c17f29ecc29f008f",
   "limits": "Execute the actual linked Cortex-M0 functions against explicit register models.\n\nUnicorn emulates CPU instructions, not STM32 peripherals. The small behavioral\nmodels below supply ready bits, FIFO contents, flash erase and GPIO\nBSRR effects. These tests check compiled register/pin intent and data handling;\nno electrical behavior, interrupt timing, CAN arbitration or silicon erratum is\nvalidated by this harness. Host application/core tests remain separate.",
   "sources": [

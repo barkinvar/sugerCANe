@@ -22,11 +22,11 @@
   "version": 2304,
   "factory_hex_excludes_configuration": true,
   "images": {
-    "bootloader.elf": "db0069d59029879d464e98c582e87f25a2ed4e766b9d27fa45f01796832e3c5e",
+    "bootloader.elf": "82a72e53ee1e4881c0f7b4ac5958ff9c42ba32a00a5da7b845ea1a0b95f6c977",
     "sensor_can.bin": "c8e68ff7857d7a12299a846599a4fd11e875bf50a71f7348c17f29ecc29f008f",
     "bootloader.bin": "8ff29a6ba2908719d9612b37778d277c708af53c2b0cfea5c46c6d8c26ac6768",
     "sensor_can.hex": "c7920842e3c104f199e3bc55c33cc98489ac867c0a2a9bc934c1eebd43b96a53",
-    "sensor_can.elf": "ccd3214ff520b6dd2605da9ee1731d8de485415adb9a98ab45c5a1d3442fe92f",
+    "sensor_can.elf": "1d412f7cf96540185eccd46a711f28cf3b73be03966c39ce8a59760658a3c940",
     "application.sc12": "2f213ad1b656ace778778e00540f48fb830398a738cf21e6803af82b43851b39",
     "factory.hex": "e5f242ee70dd509caa3ee7d51d91d7942c954f1f8dd5c077d57498f5932626e0"
   },

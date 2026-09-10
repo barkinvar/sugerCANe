@@ -3,18 +3,18 @@
   "method": "Gerbonara1.6.3 plus Shapely2.1.2 copper polygon union and plated-barrel graph",
   "maximum_arc_approximation_error_mm": 0.001,
   "copper_area_mm2": {
-    "top": 2843.6564336165907,
-    "bottom": 2740.611025694921,
-    "inner_2": 3395.1297856160313,
-    "inner_1": 3550.1179409901774
+    "top": 2778.023244472245,
+    "bottom": 2814.560578198513,
+    "inner_2": 3097.188595220581,
+    "inner_1": 3359.025826881737
   },
   "layer_island_counts": {
-    "top": 218,
-    "bottom": 124,
-    "inner_2": 204,
-    "inner_1": 219
+    "top": 212,
+    "bottom": 132,
+    "inner_2": 156,
+    "inner_1": 194
   },
-  "plated_barrels_joined": 291,
+  "plated_barrels_joined": 272,
   "pad_layer_records": 455,
   "identified_nets": 81,
   "shorts": {},
@@ -27,6 +27,6 @@
   },
   "unassigned_copper_islands": 0,
   "unassigned_copper_area_mm2": 0.0,
-  "elapsed_seconds": 0.9531831039930694,
+  "elapsed_seconds": 0.9449567740084603,
   "limitations": "Plated holes represented as connected filled pad centers; no barrel manufacturing defect, annular-ring fracture, impedance, thermal or EMC model. Positive Gerber primitives only."
 }

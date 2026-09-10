@@ -96,6 +96,8 @@ report['sha256']={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdig
 report['source_hashes'] = {name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
                          for name in ['scripts/verify_gerber_geometry.py', 'scripts/ground_geometry.py',
                                       'scripts/verify_gerber_connectivity.py', 'scripts/board_outline.py']}
+report['source_hashes'].update({name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
+                               for name in ['scripts/layout_contract.py','hardware/design/layout_contract.json']})
 report['ground_scope'] = 'Same-layer ground islands require 0.25 mm separation. A 0.24 mm erosion screen rejects necks splitting substantial ground areas (cores over 0.025 mm²); native zone minimum and pad-connection rules also require 0.25 mm. Sharp concave corners and intended thermal slots are not minimum-gap measurements. No current-crowding, ground-return impedance or fabrication-tolerance qualification.'
 report['result']='PASS'
 report['limits']='Etch geometry only, with1um arc approximation. Annular rings use filled pad copper and drill center/diameter, not drill wander or plated thickness tolerance. Mask and paste figures do not establish stencil release, registration or assembly yield. Nominal holes and copper are not fabricated measurements.'

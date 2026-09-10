@@ -4,6 +4,7 @@ from pathlib import Path
 import csv,hashlib,io,json,tempfile,zipfile
 from gerbonara import GerberFile
 from gerbonara.graphic_objects import Flash
+from layout_contract import HEIGHT, BOTTOM_REFERENCES
 
 R=Path(__file__).resolve().parents[1]
 packet=R/'order/sugarCANe_RevH_JLC_REVIEW_ONLY.zip'
@@ -35,9 +36,9 @@ with zipfile.ZipFile(packet) as z:
     native={c['reference']:c for c in json.loads((R/'reports/manufacturing/board_manifest.json').read_text())['components']}
     for row in cpl:
         n=native[row['Designator']]
-        assert row['Layer']=='Top'
+        assert row['Layer'].lower()==n['side']==('bottom' if row['Designator'] in BOTTOM_REFERENCES else 'top')
         assert abs(float(row['Mid X'].removesuffix('mm'))-n['x_mm'])<1e-5
-        assert abs(float(row['Mid Y'].removesuffix('mm'))-(74+n['y_mm']))<1e-5
+        assert abs(float(row['Mid Y'].removesuffix('mm'))-(HEIGHT+n['y_mm']))<1e-5
         assert abs((float(row['Rotation'])-n['rotation_deg']+180)%360-180)<1e-5
     gerber_data=z.read('order/sugarCANe_RevH_Gerbers_REVIEW_ONLY.zip')
     with zipfile.ZipFile(io.BytesIO(gerber_data)) as g:
@@ -51,11 +52,13 @@ with zipfile.ZipFile(packet) as z:
         assert len(same)==13
         with tempfile.TemporaryDirectory(prefix='sugarcane-order-') as folder:
             d=Path(folder)
-            for name in ['FRC_Sensor_CAN-F_Paste.gtp','FRC_Sensor_CAN-F_Cu.gtl']:
+            for name in ['FRC_Sensor_CAN-F_Paste.gtp','FRC_Sensor_CAN-F_Cu.gtl','FRC_Sensor_CAN-B_Paste.gbp']:
                 (d/name).write_bytes(g.read(name))
             paste=GerberFile.open(d/'FRC_Sensor_CAN-F_Paste.gtp')
             copper=GerberFile.open(d/'FRC_Sensor_CAN-F_Cu.gtl')
-            assert len(paste.objects)==325
+            bottom=GerberFile.open(d/'FRC_Sensor_CAN-B_Paste.gbp')
+            assert len(paste.objects)+len(bottom.objects)==325
+            assert {o.attrs['.C'][0] for o in bottom.objects}==BOTTOM_REFERENCES
             assert not [o for o in paste.objects if o.attrs.get('.C')==('U5',)]
             u5=[o for o in copper.objects if isinstance(o,Flash) and o.attrs.get('.P',('',))[0]=='U5']
             assert {o.attrs['.P'][1] for o in u5}=={str(i) for i in range(1,33)}

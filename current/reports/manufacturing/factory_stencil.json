@@ -5,17 +5,37 @@
     "U5"
   ],
   "removed_u5_apertures": 32,
-  "retained_apertures": 325,
+  "retained_apertures": 289,
+  "bottom_apertures": 36,
+  "bottom_references": [
+    "C101",
+    "Q101",
+    "Q102",
+    "Q201",
+    "Q202",
+    "Q301",
+    "Q302",
+    "R111",
+    "R112",
+    "R210",
+    "R211",
+    "R212",
+    "R311",
+    "R312",
+    "R52"
+  ],
   "all_other_paste_geometry_unchanged": true,
   "native_board_unchanged": true,
   "source": "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp",
   "output": "output/assembly/factory_top_paste.gtp",
   "input_hashes": {
     "bom/assembly_plan.json": "3ddff6cab3d7df84938cd10b9cc9549515d288c65915f7252b9b6a726b85b627",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
-    "reports/manufacturing/board_manifest.json": "3ef4bd34b1267e15d6e0d0eb7c578abfcfec241cc5432c7511e3414cbe8f291a",
-    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "675665a9971349c90a6e68b16a624fd81302608c385ccee79d8f1aaa9764280b",
-    "scripts/build_factory_stencil.py": "1b0049cd5a99010b7aeae209b3cd5f41bd91d3ced428c9f3ca49741771ff0aa9"
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "102fc9d9801b6628781927c5ed5e05a98d0c7c0c52214b0afe3950f8ac40370c",
+    "reports/manufacturing/board_manifest.json": "8dc99fc5661c43f9d7f69f10bc67b413f0b6de209d1ba4d1c8f38f4657fe0991",
+    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "b37bb92bcd06d2440cf01fc5b0de2844d9653ecd862dee1c3524bcff31895946",
+    "scripts/build_factory_stencil.py": "f6caf0bcdfc62893cf7cf69a399d45e149630bca637d5576a1df4cdbf1290682",
+    "hardware/design/layout_contract.json": "7937c3c262e16533ec1bbdf2bef60005d9fcdae744384866a2a462aed6efc483",
+    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "9681a8fe5470d255a661fe59a1978020ea69112c0978f3bc86c566607679d771"
   },
-  "output_sha256": "e2ee28ba34170b412318fec7fe1cd9efd9ef00807c7b5565f002953941e94138"
+  "output_sha256": "576a931f704e9d5f8d86570eab6a3b3aa958dc1071bc1427da2b42f7043822a1"
 }

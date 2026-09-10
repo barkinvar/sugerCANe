@@ -1,23 +1,23 @@
 {
   "method": "Independent Gerbonara/Shapely geometry with actual drill overlays; all four copper layers in PNG, SVG and PDF; inner layers viewed from top, bottom mirrored for underside view",
   "sha256": {
-    "FRC_Sensor_CAN-B_Cu.gbl": "36d3090360a22954e2a3c44d59f6972887700932327e5ae78aaf55f37f24a446",
-    "FRC_Sensor_CAN-F_Cu.gtl": "e6f0fb4bad8dcf803f81841ae145e9e995c6cd20cde1de7a78b2c393ef51db24",
-    "FRC_Sensor_CAN-In1_Cu.g1": "41b6c5a74135c29e4e789e06843d4a9664fda2c5d0c055b47ccf5a727da4e3b9",
-    "FRC_Sensor_CAN-In2_Cu.g2": "d3232e8c05fbbc220a5f08f0046a87c04846f0ca4636e4df7d99dc75af8f6aeb",
-    "FRC_Sensor_CAN-NPTH.drl": "6ceae18d6d5bbf811876e44c6f664b5e4f5b8939b1d3f60b78eb20982ff9c13e",
-    "FRC_Sensor_CAN-PTH.drl": "b75dc3b2dcc881fcd90daac258e565a44cf0caea6f3cdd5d01189471e6c23a7e"
+    "FRC_Sensor_CAN-B_Cu.gbl": "13696581cb26946f122079cf0df3c7723aea3c7130ce1b4338cb111e3e07dd8c",
+    "FRC_Sensor_CAN-F_Cu.gtl": "83af5d36752b149fe92f62beed3af812967b966f9a9f2f9c9915bd5dfce9cdfe",
+    "FRC_Sensor_CAN-In1_Cu.g1": "98383e69fd958b48cc9211a50080cbe2c4c1777617192fb94e3554b26ef0f99f",
+    "FRC_Sensor_CAN-In2_Cu.g2": "5f9ab32360d2c968fcdbf01a89d8c0a6a38ea3d4cfd8fd024d5bff5aeb8063b9",
+    "FRC_Sensor_CAN-NPTH.drl": "4b9c3ed47c3c92989b7665328c0c399ec043623f70abbcfc18baa51b87baad4b",
+    "FRC_Sensor_CAN-PTH.drl": "2316a4526f243954eeff2870ef9ecce7c0fff056697695def900415dcedc712e"
   },
   "output_sha256": {
-    "output/assembly/gerber_copper_review.pdf": "912d3eeee3133c22737a8ec255db525bbd9efd803c1d349aba1267d957e400bd",
-    "output/review/gerber_bottom_copper.png": "6eb81f96c1847c3347b52ce679c78e29e1de662d5d6f3ed67fcfb61f8ff7c988",
-    "output/review/gerber_bottom_copper.svg": "e70fa556075d932a9df40f473cdd732567ec8292c3e27a221245f77824157d37",
-    "output/review/gerber_inner_1_copper.png": "f0c9436a3e9819c83197957af7c39012d8607feeb272c4e5d5f6cf68a8e2a4d9",
-    "output/review/gerber_inner_1_copper.svg": "c38388460d7893cc8e6d551a8f3fd6176597040b24dcfa8d90605d7a8ce990e9",
-    "output/review/gerber_inner_2_copper.png": "a490a1bea1b086c21450bf512b7218ddbbc225122d8cd72e0e0b9e9de7b1d521",
-    "output/review/gerber_inner_2_copper.svg": "3faee5832555befabf376b50434931fabac277a17bc4862d7b0405717bf45795",
-    "output/review/gerber_top_copper.png": "5c4110e89d5466c70a0b9001cf361cebd818458cb50c1f5ebdadfb67aced88d4",
-    "output/review/gerber_top_copper.svg": "bc58066cfabc08e1dd530f01bbb0b88c37c22715d5bf68234cf46ffc89826470"
+    "output/assembly/gerber_copper_review.pdf": "98fd2513828e7064b4faf78cbf30886e46628c2adf9914209794cad74c134e5e",
+    "output/review/gerber_bottom_copper.png": "a7cba5af2d6ef6b6a0c51afea5b13fc3392f4765184735b243f1d080be736d37",
+    "output/review/gerber_bottom_copper.svg": "5b9211e1fbced07da15a31ab9b157960b2e5c2187773fdb8134c39ebefb100e6",
+    "output/review/gerber_inner_1_copper.png": "d08494ec15a36a0c0fa1fd99040ee899ec42d5fc583c369d92f62928e623f2e1",
+    "output/review/gerber_inner_1_copper.svg": "04f683f573736774056c4062215238513d7bd4aa34e7d77c3b1ddbf061f16395",
+    "output/review/gerber_inner_2_copper.png": "023eca3f503b61421491f5c5b2017b0bab8404489385ce91e150bc1083843bed",
+    "output/review/gerber_inner_2_copper.svg": "63665456581ff5cc79d3452ac7efeb65573d94708d8d8652f89f10da9c33eaaa",
+    "output/review/gerber_top_copper.png": "183b84c303aa1fcda1e5b1b3d3d665641c837ff6cbbb383b0d9dd96f11e85036",
+    "output/review/gerber_top_copper.svg": "dfd7ff22ebd25507ed49efb28a0b2690fb6312f7ad8e5efc4862c9e4c5bffc2e"
   },
-  "script_sha256": "b6c21da2492c9ee32ebb0edcea7607c207215bdd85435b00acb59cad17c49c59"
+  "script_sha256": "bdfa70e92b7e0d9b0227b68153257097ac3569f451520d631dc5cb1a36ec630f"
 }

@@ -160,7 +160,7 @@ ap=argparse.ArgumentParser(description=__doc__)
 ap.add_argument('--order-guide',action='store_true',help='Build only the concise ordering guide')
 args=ap.parse_args()
 if args.order_guide:
-    styles['body'].spaceAfter=4.5
+    styles['body'].spaceAfter=4.0
     styles['body'].leading=11.5
     styles['small'].spaceAfter=3
     story=[Paragraph('sugarCANe / Rev H',styles['cover']),

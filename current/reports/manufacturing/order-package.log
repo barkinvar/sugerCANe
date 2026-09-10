@@ -1,0 +1,25 @@
+{
+  "result": "PASS assembly-package integrity; manufacturing release remains HOLD",
+  "factory_placements": 129,
+  "factory_mpn_types": 54,
+  "manual_parts": 11,
+  "finished_parts": 140,
+  "u5_bom_cpl_and_paste_omitted": true,
+  "u5_copper_pads_preserved": 32,
+  "u9_paste_apertures_preserved": 12,
+  "other_fabrication_files_byte_identical": 13,
+  "all_package_hashes_verified": true,
+  "shopping_imports_verified": true,
+  "packet_sha256": "413f55f848a7b6faa5a28c632d0845035abe7689bfbb35d1369395a3d7d9518e",
+  "clock_capacitors": {
+    "references": [
+      "C25",
+      "C26"
+    ],
+    "value": "20pF",
+    "jlc_part": "C105173"
+  },
+  "upstream_buck": "LMR51430XDDCR with SRP7028A-8R2M",
+  "board_sha256": "102fc9d9801b6628781927c5ed5e05a98d0c7c0c52214b0afe3950f8ac40370c",
+  "limitations": "File integrity and assembly scope only; no new simulation, physical qualification or supplier allocation."
+}

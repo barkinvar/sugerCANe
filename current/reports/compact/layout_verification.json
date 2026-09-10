@@ -1,0 +1,455 @@
+{
+  "result": "PASS",
+  "variant": "Rev H compact prototype",
+  "baseline_commit": "1c03fd1",
+  "baseline_size_mm": [
+    52,
+    74
+  ],
+  "size_mm": [
+    52,
+    70
+  ],
+  "saved_area_mm2": 208,
+  "bounding_area_reduction_percent": 5.405405405405405,
+  "bottom_references": [
+    "C101",
+    "Q101",
+    "Q102",
+    "Q201",
+    "Q202",
+    "Q301",
+    "Q302",
+    "R111",
+    "R112",
+    "R210",
+    "R211",
+    "R212",
+    "R311",
+    "R312",
+    "R52"
+  ],
+  "placement_changes": [
+    {
+      "reference": "R4",
+      "before_mm": [
+        12.5,
+        61.0
+      ],
+      "after_mm": [
+        12.5,
+        57.0
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "D301",
+      "before_mm": [
+        34.0,
+        66.5
+      ],
+      "after_mm": [
+        34.0,
+        62.5
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "D201",
+      "before_mm": [
+        18.0,
+        66.5
+      ],
+      "after_mm": [
+        18.0,
+        62.5
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "R103",
+      "before_mm": [
+        49.25,
+        69.0
+      ],
+      "after_mm": [
+        49.25,
+        65.0
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "J4",
+      "before_mm": [
+        6.5,
+        65.0
+      ],
+      "after_mm": [
+        6.5,
+        61.0
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "J5",
+      "before_mm": [
+        22.5,
+        65.0
+      ],
+      "after_mm": [
+        22.5,
+        61.0
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "JP301",
+      "before_mm": [
+        37.0,
+        60.4
+      ],
+      "after_mm": [
+        37.0,
+        56.4
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "R109",
+      "before_mm": [
+        2.9,
+        65.15
+      ],
+      "after_mm": [
+        2.9,
+        61.15
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "D202",
+      "before_mm": [
+        17.0,
+        61.0
+      ],
+      "after_mm": [
+        17.0,
+        57.0
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "R209",
+      "before_mm": [
+        29.0,
+        61.0
+      ],
+      "after_mm": [
+        29.0,
+        57.0
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "JP101",
+      "before_mm": [
+        5.0,
+        60.4
+      ],
+      "after_mm": [
+        5.0,
+        56.4
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "JP201",
+      "before_mm": [
+        21.0,
+        60.4
+      ],
+      "after_mm": [
+        21.0,
+        56.4
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "R203",
+      "before_mm": [
+        49.25,
+        64.5
+      ],
+      "after_mm": [
+        49.25,
+        60.5
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "R309",
+      "before_mm": [
+        45.0,
+        61.0
+      ],
+      "after_mm": [
+        45.0,
+        57.0
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "R101",
+      "before_mm": [
+        18.0,
+        71.1
+      ],
+      "after_mm": [
+        18.0,
+        67.1
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "R104",
+      "before_mm": [
+        34.0,
+        71.32
+      ],
+      "after_mm": [
+        34.0,
+        67.32
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "J6",
+      "before_mm": [
+        38.5,
+        65.0
+      ],
+      "after_mm": [
+        38.5,
+        61.0
+      ],
+      "side": "top"
+    },
+    {
+      "reference": "Q201",
+      "before_mm": [
+        20.0,
+        57.15
+      ],
+      "after_mm": [
+        20.0,
+        64.5
+      ],
+      "side": "bottom"
+    },
+    {
+      "reference": "R111",
+      "before_mm": [
+        7.9,
+        57.45
+      ],
+      "after_mm": [
+        7.9,
+        64.8
+      ],
+      "side": "bottom"
+    },
+    {
+      "reference": "R212",
+      "before_mm": [
+        31.9,
+        57.45
+      ],
+      "after_mm": [
+        31.9,
+        64.8
+      ],
+      "side": "bottom"
+    },
+    {
+      "reference": "R311",
+      "before_mm": [
+        39.9,
+        57.45
+      ],
+      "after_mm": [
+        39.9,
+        64.8
+      ],
+      "side": "bottom"
+    },
+    {
+      "reference": "Q302",
+      "before_mm": [
+        44.0,
+        57.15
+      ],
+      "after_mm": [
+        44.0,
+        64.5
+      ],
+      "side": "bottom"
+    },
+    {
+      "reference": "R112",
+      "before_mm": [
+        15.9,
+        57.45
+      ],
+      "after_mm": [
+        15.9,
+        64.8
+      ],
+      "side": "bottom"
+    },
+    {
+      "reference": "Q301",
+      "before_mm": [
+        36.0,
+        57.15
+      ],
+      "after_mm": [
+        36.0,
+        64.5
+      ],
+      "side": "bottom"
+    },
+    {
+      "reference": "Q202",
+      "before_mm": [
+        28.0,
+        57.15
+      ],
+      "after_mm": [
+        28.0,
+        64.5
+      ],
+      "side": "bottom"
+    },
+    {
+      "reference": "R210",
+      "before_mm": [
+        32.5,
+        60.5
+      ],
+      "after_mm": [
+        32.0,
+        55.7
+      ],
+      "side": "bottom"
+    },
+    {
+      "reference": "R52",
+      "before_mm": [
+        48.5,
+        61.0
+      ],
+      "after_mm": [
+        48.5,
+        57.0
+      ],
+      "side": "bottom"
+    },
+    {
+      "reference": "R312",
+      "before_mm": [
+        47.9,
+        57.45
+      ],
+      "after_mm": [
+        47.9,
+        64.8
+      ],
+      "side": "bottom"
+    },
+    {
+      "reference": "C101",
+      "before_mm": [
+        40.0,
+        54.5
+      ],
+      "after_mm": [
+        43.0,
+        55.5
+      ],
+      "side": "bottom"
+    },
+    {
+      "reference": "Q102",
+      "before_mm": [
+        12.0,
+        57.15
+      ],
+      "after_mm": [
+        12.0,
+        64.5
+      ],
+      "side": "bottom"
+    },
+    {
+      "reference": "Q101",
+      "before_mm": [
+        4.0,
+        57.15
+      ],
+      "after_mm": [
+        4.0,
+        64.5
+      ],
+      "side": "bottom"
+    },
+    {
+      "reference": "R211",
+      "before_mm": [
+        23.9,
+        57.45
+      ],
+      "after_mm": [
+        23.9,
+        64.8
+      ],
+      "side": "bottom"
+    }
+  ],
+  "unchanged_electrical_sources": {
+    "hardware/design/circuit.json": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
+    "hardware/design/circuit.py": "5fd0e887ce7c06aca3b1828dd4c8b47f5d09f22404f4ac228c516dd693d3243b",
+    "firmware/src/power.c": "0e26e751b00961e6d86043e7a28429c86fb9178d3e0023c77d5db8a39b1a5b2b",
+    "hardware/FRC_Sensor_CAN.kicad_pro": "bc605bc1de9321ebce59bd9cd42a013de901d69073d204e90783d38577749f91",
+    "hardware/FRC_Sensor_CAN.kicad_dru": "421c76f90b944480db7977505b21af2907ea1699c15898f66b6e1bfccc97c56d",
+    "hardware/FRC_Sensor_CAN.kicad_sch": "d536746e8aea9ca88743493b2bd7c7d42fa3786f5bd90ebce42ce876038cdf36",
+    "hardware/can.kicad_sch": "731ce88665c283b6e6c71f94d28fcf3137dfc1af43014fe3c6a016ce82000322",
+    "hardware/controller.kicad_sch": "8560abd1260b5980a657a50dfca34b8a55274cf27a7d0e16155f1f325627c6a2",
+    "hardware/input1.kicad_sch": "70efc2f005de258c3391f9b299626401b6b3f8042bd11be9e483e42add547a88",
+    "hardware/input2.kicad_sch": "0b8d3f340084ba78cddabcbb8aeed1a4dd517b84be5c33afdf0d2590450c86aa",
+    "hardware/input3.kicad_sch": "5e75c2c64e30a15bd6a584fae9b45486ec399a841e090370eb6eb6b3e4e8a5c6",
+    "hardware/power.kicad_sch": "c694a573c55f21fc266558dd05f6fd7c41552f5d7a944a496ce911bcca592e54",
+    "hardware/rail_sense.kicad_sch": "a6f2443563e33732e2ced9ad4afa187f4eea7f959449d6935a42c02e5f35f3fc",
+    "hardware/regulated_12v.kicad_sch": "bbec6fc9fb0604f0b3146ce5eb492a9980056257876507a704de8685270d9f36",
+    "hardware/sensor_power.kicad_sch": "f7808b7fc9a76a190dd9a59c856ae6c4f504e92caea8deb139067b307e0af3ce"
+  },
+  "preserved_critical_nets": [
+    "BOOST_12V",
+    "BOOST_COMP",
+    "BOOST_COMP_RC",
+    "BOOST_FB",
+    "BOOST_SW",
+    "BUCK_CB",
+    "BUCK_FB",
+    "BUCK_SW",
+    "HSE_IN",
+    "HSE_OUT",
+    "HSE_XTAL_OUT",
+    "V5_INTERNAL",
+    "VIN_FUSED",
+    "VIN_PROT",
+    "VIN_RAW"
+  ],
+  "preserved_critical_tracks_and_vias": 248,
+  "board_sha256": "102fc9d9801b6628781927c5ed5e05a98d0c7c0c52214b0afe3950f8ac40370c",
+  "limitations": "Checks nominal layout/electrical identity. Native DRC, routing style, independent exported copper checks and physical qualification are separate."
+}

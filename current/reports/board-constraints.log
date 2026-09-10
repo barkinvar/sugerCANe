@@ -1,6 +1,28 @@
 {
   "result": "PASS",
-  "fitted_top_parts": 140,
+  "fitted_top_parts": 125,
+  "fitted_bottom_parts": 15,
+  "bottom_references": [
+    "C101",
+    "Q101",
+    "Q102",
+    "Q201",
+    "Q202",
+    "Q301",
+    "Q302",
+    "R111",
+    "R112",
+    "R210",
+    "R211",
+    "R212",
+    "R311",
+    "R312",
+    "R52"
+  ],
+  "board_size_mm": [
+    52,
+    70
+  ],
   "resistors": 55,
   "capacitors": 40,
   "board_thickness_mm": 1.6,
@@ -101,21 +123,21 @@
     }
   },
   "inner_service_and_monitor_routes": {
-    "+3V3": 16.59726009489054,
+    "+3V3": 31.100347710415136,
     "ADC_5V": 6.1305086527633215,
-    "BIAS_DOWN1": 38.36203640574078,
-    "BIAS_DOWN2": 36.85525612106915,
-    "BIAS_UP2_N": 24.85245696254969,
+    "BIAS_DOWN1": 61.38394835755924,
+    "BIAS_DOWN2": 51.96646550232831,
+    "BIAS_UP2_N": 31.204877616422895,
     "POWER_12V_EN": 31.496960646232527,
-    "POWER_5V_EN": 23.178048327204937,
+    "POWER_5V_EN": 38.104543563283386,
     "UART_RX": 30.97752817795929,
     "UART_TX": 16.042993488107218
   },
   "power_net_geometry": {
     "SENSOR_12V": {
-      "total_track_length_mm": 120.225885238817,
+      "total_track_length_mm": 65.88757181964868,
       "minimum_width_mm": 0.5,
-      "via_count": 9
+      "via_count": 2
     },
     "BOOST_12V": {
       "total_track_length_mm": 55.680898977737726,
@@ -143,9 +165,9 @@
       "via_count": 7
     },
     "SENSOR_5V": {
-      "total_track_length_mm": 108.23502068077703,
+      "total_track_length_mm": 79.55541779484703,
       "minimum_width_mm": 0.35,
-      "via_count": 10
+      "via_count": 8
     },
     "VPORT1": {
       "total_track_length_mm": 11.807106781186548,
@@ -177,7 +199,7 @@
     "R31": 1.7
   },
   "board_corner_radius_mm": 1.5,
-  "input_bias_transistor_row_y_mm": 57.15,
+  "input_bias_transistor_row_y_mm": 64.5,
   "edge_scope": "Pad bounding boxes to finished edges. R1/R2 retain original 1.30 mm edge clearance and local buck feedback routing. Terminals/test pads/termination bridge have intentional exceptions.",
   "efuse_assembly": {
     "exposed_pad_mm": [
@@ -242,8 +264,8 @@
   "routing_inventory": {
     "layers": {
       "F.Cu": {
-        "segments": 963,
-        "length_mm": 1536.6112806581182,
+        "segments": 828,
+        "length_mm": 1300.6910116177164,
         "non_45_degree_segments": []
       },
       "In1.Cu": {
@@ -252,17 +274,17 @@
         "non_45_degree_segments": []
       },
       "In2.Cu": {
-        "segments": 92,
-        "length_mm": 305.61790159824653,
+        "segments": 329,
+        "length_mm": 620.353489579597,
         "non_45_degree_segments": []
       },
       "B.Cu": {
-        "segments": 475,
-        "length_mm": 1518.828654116009,
+        "segments": 519,
+        "length_mm": 1226.9131967687442,
         "non_45_degree_segments": []
       }
     },
-    "vias": 242,
+    "vias": 223,
     "scope": "Straight horizontal/vertical/45-degree centerlines enforced. The separate routing_rules.json gate also rejects redundant geometry, tiny free jogs and sharp free bends. Rounded copper end caps are normal. Native DRC and independent Gerber checks establish connectivity/clearance, not EMC qualification."
   }
 }

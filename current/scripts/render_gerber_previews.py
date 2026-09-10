@@ -1,5 +1,6 @@
 """Render actual exported copper and drill geometry for visual review."""
 from pathlib import Path
+from layout_contract import WIDTH, HEIGHT
 import json,hashlib
 import matplotlib
 matplotlib.use('Agg')
@@ -26,7 +27,7 @@ with PdfPages(ROOT/'output/assembly/gerber_copper_review.pdf') as pdf:
         for poly in g.islands[side]:ax.add_patch(patch(poly))
         for d in g.drills+list(g.stack.drill_npth.instance.objects):
             ax.add_patch(Circle((d.x,d.y),d.aperture.diameter/2,facecolor='white',edgecolor='#594b3d',linewidth=.12))
-        ax.set(xlim=(52,0) if side=='bottom' else (0,52),ylim=(-74,0),xlabel='Board X (mm)',ylabel='Gerber Y (mm)')
+        ax.set(xlim=(WIDTH,0) if side=='bottom' else (0,WIDTH),ylim=(-HEIGHT,0),xlabel='Board X (mm)',ylabel='Gerber Y (mm)')
         ax.tick_params(labelsize=8)
         label={'top':'TOP','inner_1':'INNER 1','inner_2':'INNER 2','bottom':'BOTTOM'}[side]
         fig.suptitle('FRC Sensor CAN · Rev H SC12 · '+label+' copper',fontsize=15,fontweight='bold',y=.98)

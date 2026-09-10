@@ -4,14 +4,31 @@
   "graphic_layers": 11,
   "board_outline_mm": [
     52,
-    74
+    70
   ],
   "corner_radius_mm": 1.5,
-  "plated_drills": 291,
+  "bottom_components_verified": [
+    "C101",
+    "Q101",
+    "Q102",
+    "Q201",
+    "Q202",
+    "Q301",
+    "Q302",
+    "R111",
+    "R112",
+    "R210",
+    "R211",
+    "R212",
+    "R311",
+    "R312",
+    "R52"
+  ],
+  "plated_drills": 272,
   "nonplated_drills": 2,
   "copper_pad_flashes_verified": {
-    "top": 406,
-    "bottom": 49
+    "top": 370,
+    "bottom": 85
   },
   "maximum_drill_coordinate_quantization_mm": 0.0005000000000023874,
   "maximum_drill_diameter_quantization_mm": 0.0,
@@ -19,8 +36,8 @@
   "purchased_references_verified": 140,
   "portable_models_verified": 140,
   "parser_warnings": [
-    "/home/neuro/candi-clone/current/output/fabrication/FRC_Sensor_CAN-NPTH.drl:12 \"G90\": G90 header statement found after end of header",
-    "/home/neuro/candi-clone/current/output/fabrication/FRC_Sensor_CAN-PTH.drl:18 \"G90\": G90 header statement found after end of header"
+    "/home/neuro/candi-compact-board/current/output/fabrication/FRC_Sensor_CAN-NPTH.drl:12 \"G90\": G90 header statement found after end of header",
+    "/home/neuro/candi-compact-board/current/output/fabrication/FRC_Sensor_CAN-PTH.drl:18 \"G90\": G90 header statement found after end of header"
   ],
   "limitations": "X2 pad/net/coordinate and drill/placement parity; not a copper connectivity solver or fabrication-house CAM review."
 }

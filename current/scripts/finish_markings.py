@@ -21,9 +21,9 @@ text('DEBUG',25.3,9.55,.8)
 text('SC12 REV H',25,.7,.8)
 text('RGB',48,41.3,.8)
 for ch,x in enumerate([5,21,37],1):
- # Above the header/cap envelope, between the input-stage pads.
- text('5V',x+1.3,58.8,.8);text('12V',x+4.1,58.8,.8)
- for xx,label in [(x+1.5,f'V{ch}'),(x+5,'GND'),(x+8.5,f'IN{ch}')]:text(label,xx+(.5 if ch==3 and label=='GND' else 0),62.95,.8)
+ # Below the shifted header/cap envelope; the bias components are underneath.
+ text('5V',x+1.3,58,.8);text('12V',x+4.1,58,.8)
+ for xx,label in [(x+1.5,f'V{ch}'),(x+5,'GND'),(x+8.5,f'IN{ch}')]:text(label,xx+(.5 if ch==3 and label=='GND' else 0),59.3,.8)
 from apply_bottom_artwork import apply_bottom_artwork
 apply_bottom_artwork(b)
 p.SaveBoard(str(fn),b)

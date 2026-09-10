@@ -1,6 +1,7 @@
 """Audit the dated public JLC snapshot; availability is not reserved inventory."""
 from pathlib import Path
-import csv, hashlib, json, re
+import csv, hashlib, json, re, subprocess
+from layout_contract import CONTRACT, BOTTOM_REFERENCES
 import sexpdata
 
 R=Path(__file__).resolve().parents[1]
@@ -46,7 +47,9 @@ for f,j in zip(factory,jlc):
  cash+=budget*price
 assert len(refs)==129
 assert len(cpl)==len({r['Designator'] for r in cpl})==129
-assert {r['Designator'] for r in cpl}==refs and all(r['Layer']=='Top' for r in cpl)
+assert {r['Designator'] for r in cpl}==refs
+assert {r['Designator'] for r in cpl if r['Layer']=='Bottom'}==BOTTOM_REFERENCES
+assert all(r['Layer'] in ('Top','Bottom') for r in cpl)
 manual=set(snapshot['hand_solder']['references'])
 assert len(manual)==11 and not refs&manual
 assert manual==set(plan['hand_solder_references']) and 'U5' in manual
@@ -88,11 +91,20 @@ for path,key in [('hardware/design/circuit.json','baseline_model_sha256')]:
 # preserve every object outside these explicitly reviewed changes.
 route_review=snapshot['routing_review']
 board_path=R/'hardware/FRC_Sensor_CAN.kicad_pcb'
-assert hashlib.sha256(board_path.read_bytes()).hexdigest()==route_review['board_sha256']
+# Validate the historical sourcing review against the frozen pre-compaction board.
+# The separate compact audit binds unchanged electrical sources and critical copper
+# to the live layout; do not rewrite historical sourcing hashes to bless new geometry.
+baseline_board=subprocess.check_output(['git','show',CONTRACT['baseline_commit']+':current/hardware/FRC_Sensor_CAN.kicad_pcb'],cwd=R)
+assert hashlib.sha256(baseline_board).hexdigest()==route_review['board_sha256']
+compact=json.loads((R/'reports/compact/layout_verification.json').read_text())
+assert compact['result']=='PASS' and compact['board_sha256']==hashlib.sha256(board_path.read_bytes()).hexdigest()
+assert compact['baseline_commit']==CONTRACT['baseline_commit']
+for path,digest in compact['unchanged_electrical_sources'].items():
+ assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest
 assert buck_review['board_sha256']==route_review['board_sha256'] and buck_review['unchanged_native_geometry']
 for via in route_review.get('removed_redundant_vias', []):
- assert via['id'] not in board_path.read_text()
-native=sexpdata.loads(board_path.read_text())
+ assert via['id'] not in baseline_board.decode()
+native=sexpdata.loads(baseline_board.decode())
 review=snapshot['equivalence_review']
 assert review['board_sha256']==route_review['board_sha256']
 assert len(review['substitutions'])==len(snapshot['substitutions'])==6
@@ -140,7 +152,7 @@ for constraint in assembly['reflow_constraints']:
 if assembly['factory_profile_confirmed']:
  evidence=assembly['factory_profile_evidence']
  assert evidence and hashlib.sha256((R/evidence['file']).read_bytes()).hexdigest()==evidence['sha256']
-holds=[]
+holds=['Compact board requires a new two-sided assembly quotation and reflow/process qualification']
 if shortages:holds.append('Insufficient orderable public stock: '+', '.join(r['mpn'] for r in shortages)+'; procurement unconfirmed')
 if ineligible:holds.append('Selected assembly service excludes BOM parts')
 if thermal_conflicts and not assembly['factory_profile_confirmed']:holds.append('Fitted component peak-temperature limits conflict with nominal Standard reflow')
@@ -152,16 +164,18 @@ report=dict(result='PASS sourcing-file consistency; HOLD manufacturing review' i
  smt_parts_with_conservative_attrition_per_board_usd=round(cash/10,2),manual_parts_per_board_usd=hand,
  combined_parts_budget_per_board_usd=round(cash/10+hand,2),
  selected_service=service,economic_eligible=not economic_blockers,economic_blockers=economic_blockers,
- standard_setup_stencil_loading_two_fixtures_per_order_usd=round(25.56+8.21+1.53*len(rows)+16.42,2),
+ historical_single_side_setup_estimate_usd=round(25.56+8.21+1.53*len(rows)+16.42,2),
+ two_sided_assembly_quote_confirmed=False,
  moisture_sensitive_parts=[dict(references=r['references'],msl=r['moisture_sensitivity_level']) for r in rows if r['moisture_sensitivity_level'] not in ('Not stated','MSL 1')],
  nominal_standard_reflow_conflicts=thermal_conflicts,manufacturing_holds=holds,
  quantity_method=snapshot['quantity_method'],factory_allocation_confirmed=False,
- electrical_model_changes_limited_to_documented_reviews=True,reviewed_routing=route_review,
+ electrical_model_changes_limited_to_documented_reviews=True,reviewed_routing=route_review,compact_layout=compact,
+ factory_top_placements=129-len(BOTTOM_REFERENCES),factory_bottom_placements=len(BOTTOM_REFERENCES),
  buck_margin_review=buck_review,
  capacitor_reflow_review=cap,mcu_procurement=snapshot['mcu_procurement'],
  substitution_review=review,alternative_stock_review=snapshot['alternative_stock_review'],hand_solder_availability=snapshot['hand_solder'],
  order_decision='HOLD: final simulation review and factory stack/process quotation pending. U5 is user-sourced from DigiKey; no factory MCU procurement required.',
  limitations='Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.',
- input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in ['bom/assembly_plan.json','bom/jlc_sourcing.json','bom/catalog_china.json','bom/Factory_BOM.csv','bom/BOM_JLCPCB.csv','output/assembly/CPL_JLCPCB.csv','hardware/design/circuit.json','hardware/FRC_Sensor_CAN.kicad_pcb','scripts/check_jlc_sourcing.py',*[d['file'] for d in snapshot['datasheets']]]})
+ input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in ['bom/assembly_plan.json','bom/jlc_sourcing.json','bom/catalog_china.json','bom/Factory_BOM.csv','bom/BOM_JLCPCB.csv','output/assembly/CPL_JLCPCB.csv','hardware/design/circuit.json','hardware/FRC_Sensor_CAN.kicad_pcb','scripts/check_jlc_sourcing.py','hardware/design/layout_contract.json','scripts/layout_contract.py','scripts/check_compact_layout.py','reports/compact/layout_verification.json',*[d['file'] for d in snapshot['datasheets']]]})
 (R/'reports/manufacturing/jlc_sourcing.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))

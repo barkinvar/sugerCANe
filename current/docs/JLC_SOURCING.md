@@ -1,6 +1,6 @@
 # JLCPCB sourcing and assembly plan
 
-The selected build uses **54 JLC SMT types / 129 top-side placements**. **U5 / STM32F042K6T6 is purchased from DigiKey and hand soldered by the user**, together with the existing ten through-hole parts. The BOM, CPL and factory stencil all omit U5. The MCU footprint is unchanged. C25/C26 use 20 pF clock-load capacitors; U1/L1 use LMR51430XDDCR and SRP7028A-8R2M. All four retain their footprints. [Complete ordering guide](FACTORY_ORDER.md).
+The selected build uses **54 JLC SMT types / 129 placements (114 top / 15 bottom)**. **U5 / STM32F042K6T6 is purchased from DigiKey and hand soldered by the user**, together with the existing ten through-hole parts. The BOM, CPL and factory stencil all omit U5. The MCU footprint is unchanged. C25/C26 use 20 pF clock-load capacitors; U1/L1 use LMR51430XDDCR and SRP7028A-8R2M. All four retain their footprints. [Complete ordering guide](FACTORY_ORDER.md).
 
 The September 10, 2026, 03:43–05:13 UTC public JLC checks found enough orderable stock for all **54 factory types at ten boards**, including displayed attrition/minimums. U9 has 25 available and L2 has 39. No inventory is reserved. Final electrical simulation review, factory stack/process/inspection confirmation and quotation remain pending; the package is REVIEW_ONLY. Older simulation evidence is not a fresh pass for the sourced BOM.
 
@@ -33,7 +33,7 @@ The exact JLC listings had 8,835 and 111 orderable pieces respectively in the Se
 
 ## Assembly scope and remaining availability
 
-Factory: 129 SMT placements, including high-reflow C1, D10, U7–U10 and all passives. User: U5 plus J1–J6, J8 and JP101/JP201/JP301, then three loose caps. [Assembly plan](../bom/assembly_plan.json) is the generator's source for this split. All 140 finished-board parts remain on top.
+Factory: 129 SMT placements, including high-reflow C1, D10, U7–U10 and all passives. User: U5 plus J1–J6, J8 and JP101/JP201/JP301, then three loose caps. [Assembly plan](../bom/assembly_plan.json) is the generator's source for this split. The finished board has 125 parts on top and 15 underneath.
 
 The exact MCU is DigiKey **497-14647-ND / STM32F042K6T6**, LQFP32. It is absent from JLC BOM/CPL and its 32 stencil apertures are omitted. JLC C69216 remains zero-stock history, not a factory shortage for the selected order. No Global Sourcing, My Parts or overseas MCU consignment is required. The QFN alternative was not implemented.
 

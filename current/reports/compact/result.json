@@ -1,0 +1,52 @@
+{
+  "result": "PASS compact CAD and trace checks; full release HOLD",
+  "branch": "codex/compact-board",
+  "worktree": "/home/neuro/candi-compact-board",
+  "board_sha256": "102fc9d9801b6628781927c5ed5e05a98d0c7c0c52214b0afe3950f8ac40370c",
+  "size_before_mm": [
+    52,
+    74
+  ],
+  "size_after_mm": [
+    52,
+    70
+  ],
+  "area_reduction_percent": 5.405405405405405,
+  "factory_top_parts": 114,
+  "factory_bottom_parts": 15,
+  "native_erc_violations": 0,
+  "native_drc_violations": 0,
+  "unconnected_items": 0,
+  "gerber_opens": {},
+  "gerber_shorts": {},
+  "routing_segments": 1676,
+  "routing_vias": 223,
+  "reports": [
+    "reports/release_checks.json",
+    "reports/compact/layout_verification.json",
+    "reports/routing_rules.json",
+    "reports/manufacturing/gerber_geometry.json",
+    "reports/manufacturing/gerber_connectivity.json",
+    "reports/manufacturing/order_package.json"
+  ],
+  "protected_original_simulations": [
+    {
+      "pid": 2517886,
+      "still_running": true,
+      "command": "/home/neuro/.local/share/candi-tools/sysroot/usr/bin/ngspice -b -o combined_low_input_capacitive_start.log -r combined_low_input_capacitive_start.raw combined_low_input_capacitive_start.cir"
+    },
+    {
+      "pid": 2518431,
+      "still_running": true,
+      "command": "/home/neuro/.local/share/candi-tools/sysroot/usr/bin/ngspice -b -o combined_low_input_capacitive_start_trtol7_25n.log -r combined_low_input_capacitive_start_trtol7_25n.raw combined_low_input_capacitive_start_trtol7_25n.cir"
+    },
+    {
+      "pid": 2520969,
+      "still_running": true,
+      "command": "/home/neuro/.local/share/candi-tools/ngspice47/bin/ngspice -b -o combined_low_input_capacitive_start.log -r combined_low_input_capacitive_start.raw combined_low_input_capacitive_start.cir"
+    }
+  ],
+  "original_branch": "main",
+  "checked_utc": "2026-09-10T06:44:43.633741+00:00",
+  "limitations": "Full combined power-startup evidence and two-sided factory/physical qualification remain pending. Existing original simulation processes were not stopped, restarted or modified."
+}

@@ -12,6 +12,7 @@ import cairosvg
 from gerbonara import LayerStack
 from gerbonara.graphic_objects import Flash
 from board_outline import verified_outline
+from layout_contract import WIDTH, HEIGHT, RADIUS, BOTTOM_REFERENCES
 
 ROOT = Path(__file__).resolve().parents[1]
 manifest = json.loads((ROOT / 'reports/manufacturing/board_manifest.json').read_text())
@@ -74,7 +75,7 @@ for side in ('top', 'bottom'):
     assert actual == expected, (side, actual - expected, expected - actual)
     pad_results[side] = sum(actual.values())
 
-placed = list(csv.DictReader((ROOT / 'output/assembly/positions_all_top.csv').open()))
+placed = list(csv.DictReader((ROOT / 'output/assembly/positions_all.csv').open()))
 by_ref = {c['reference']: c for c in manifest['components']}
 purchased = {r['reference'] for r in csv.DictReader((ROOT / 'bom/BOM_per_reference.csv').open())}
 assert purchased == {r for r, p in parts.items() if not p.get('exclude_bom')}
@@ -84,8 +85,10 @@ for row in placed:
     assert row['Val'] == c['value'] and row['Package'] == c['package']
     assert coord(row['PosX']) == coord(c['x_mm']) and coord(row['PosY']) == coord(c['y_mm'])
     assert abs((float(row['Rot']) - c['rotation_deg'] + 180) % 360 - 180) < 1e-5
-    assert row['Side'] == 'top'
-assert len(stack[('bottom', 'paste')].instance.objects) == 0
+    assert row['Side'] == c['side'] == ('bottom' if row['Ref'] in BOTTOM_REFERENCES else 'top')
+bottom_paste = stack[('bottom', 'paste')].instance.objects
+assert {o.attrs['.C'][0] for o in bottom_paste} == BOTTOM_REFERENCES
+assert len(bottom_paste) == sum(len({p['number'] for p in by_ref[r]['pads'] if p['number']}) for r in BOTTOM_REFERENCES)
 
 # Copper-only previews avoid ambiguous solder-mask polarity and unsupported SVG filters.
 for side in ('top', 'bottom'):
@@ -97,7 +100,8 @@ for side in ('top', 'bottom'):
     cairosvg.svg2png(bytestring=svg.encode(), write_to=str(dest.with_suffix('.png')),
                     output_width=1600, background_color='white')
 result = dict(result='PASS', parser='Gerbonara 1.6.3', graphic_layers=11,
-              board_outline_mm=[52, 74], corner_radius_mm=1.5,
+              board_outline_mm=[WIDTH, HEIGHT], corner_radius_mm=RADIUS,
+              bottom_components_verified=sorted(BOTTOM_REFERENCES),
               plated_drills=sum(n for k, n in actual_drills.items() if k[-1]),
               nonplated_drills=2, copper_pad_flashes_verified=pad_results,
               maximum_drill_coordinate_quantization_mm=drill_error,

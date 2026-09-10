@@ -30,7 +30,7 @@ External inputs remain digital: target LOW ≤1.2 V, HIGH ≥2.4 V, positive 0�
 
 ## Layout and assembly
 
-The board is 52 × 74 mm with four copper layers and all 140 fitted components on top. The factory places 129 SMT parts; the user hand solders the DigiKey STM32F042K6T6 MCU, six terminals, three voltage headers and one J8 service socket, then fits three loose caps. U9 uses a split-paste exposed pad and surrounding thermal vias. No blind/buried vias or second-side assembly is required.
+The board is 52 × 70 mm with four copper layers and 125 fitted components on top and 15 underneath. The factory places 129 SMT parts; the user hand solders the DigiKey STM32F042K6T6 MCU, six terminals, three voltage headers and one J8 service socket, then fits three loose caps. U9 uses a split-paste exposed pad and surrounding thermal vias. All vias are through vias. This compact variant requires factory assembly on both sides.
 
 One inner layer provides continuous ground; the other also carries a few slow control/service connections. Switching, feedback, compensation and crystal routes remain on top. Native and independently reconstructed fabrication geometry are checked separately.
 

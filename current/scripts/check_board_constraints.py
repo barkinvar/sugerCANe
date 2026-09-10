@@ -2,12 +2,14 @@
 from pathlib import Path
 import json,math,collections,hashlib,heapq
 import pcbnew as p
+from layout_contract import WIDTH, HEIGHT, CONTRACT, BOTTOM_REFERENCES
 R=Path(__file__).resolve().parents[1];b=p.LoadBoard(str(R/'hardware/FRC_Sensor_CAN.kicad_pcb'))
 parts=json.loads((R/'hardware/design/circuit.json').read_text())['parts']
 fps={f.GetReference():f for f in b.GetFootprints()}
 assert abs(p.ToMM(b.GetDesignSettings().GetBoardThickness())-1.6)<1e-6
 fitted=[r for r,c in parts.items() if not c.get('exclude_bom')]
-assert len(fitted)==140 and all(not fps[r].IsFlipped() for r in fitted)
+assert len(fitted)==140
+assert {r for r in fitted if fps[r].IsFlipped()} == BOTTOM_REFERENCES
 assert len([r for r in fitted if r.startswith('R')])==55
 assert len([r for r in fitted if r.startswith('C')])==40
 def pads(ref):return {d.GetNumber():d for d in fps[ref].Pads() if d.GetNumber()}
@@ -50,14 +52,14 @@ for ch in range(1,4):
  assert all(d.GetAttribute()==p.PAD_ATTRIB_PTH and abs(p.ToMM(d.GetDrillSize().x)-.85)<1e-6 for d in pp.values())
  assert all(min(p.ToMM(d.GetSize()))>=1.35 for d in pp.values())
  assert all(not d.IsOnLayer(p.F_Paste) for d in pp.values())
- assert all(abs(p.ToMM(d.GetPosition().y)-60.4)<1e-6 for d in pp.values())
+ assert all(abs(p.ToMM(d.GetPosition().y)-CONTRACT['selector_row_y_mm'])<1e-6 for d in pp.values())
  selectors.append(dict(reference=a,pads_left_to_right=list(nets(a).values()),drill_mm=.85,nominal_annulus_mm=.25))
  assert nets(f'Q{ch}01')=={'1':f'BIAS_UP{ch}_N','2':'+3V3','3':f'BIAS_SOURCE{ch}'}
  assert nets(f'Q{ch}02')=={'1':f'BIAS_DOWN{ch}','2':'GND','3':f'BIAS_SINK{ch}'}
  assert nets(f'R{ch}10')=={'1':f'BIAS_PORT{ch}','2':f'SIG{ch}'}
  assert nets(f'R{ch}09')=={'1':f'SIG{ch}','2':f'BIAS_SINK{ch}'}
  for ref in (f'Q{ch}01',f'Q{ch}02'):
-  assert abs(p.ToMM(fps[ref].GetPosition().y)-57.15)<1e-6
+  assert abs(p.ToMM(fps[ref].GetPosition().y)-CONTRACT['bias_transistor_row_y_mm'])<1e-6
 assert all(not d.IsOnLayer(p.F_Paste) for d in pads('JP2').values())
 service=pads('J8');mapping={'1':'NRST','2':'UART_RX','3':'UART_TX','4':'SWCLK','5':'SWDIO','6':'+3V3','7':'GND','8':'GND','9':'BOOT0','10':'GND'}
 assert nets('J8')==mapping
@@ -83,13 +85,13 @@ assert abs(p.ToMM(duct_courtyard[0].GetRadius())-3)<1e-6
 for ref,minimum in [('D10',3),('C75',2)]:
  for d in pads(ref).values():
   bb=d.GetBoundingBox()
-  edge=min(p.ToMM(bb.GetX()),p.ToMM(bb.GetY()),52-p.ToMM(bb.GetRight()),74-p.ToMM(bb.GetBottom()))
+  edge=min(p.ToMM(bb.GetX()),p.ToMM(bb.GetY()),WIDTH-p.ToMM(bb.GetRight()),HEIGHT-p.ToMM(bb.GetBottom()))
   assert edge>=minimum,(ref,'pad-to-board edge',edge)
 edge_clearances={}
 for ref,minimum in [('R101',2.19),('R103',2.04),('R203',2.04),('F1',2.06),('D102',2.09),('R22',2.07),('R109',2.02),('R104',1.97),('R30',1.69),('R31',1.69)]:
  distances=[]
  for d in pads(ref).values():
-  bb=d.GetBoundingBox();distances.append(min(p.ToMM(bb.GetX()),p.ToMM(bb.GetY()),52-p.ToMM(bb.GetRight()),74-p.ToMM(bb.GetBottom())))
+  bb=d.GetBoundingBox();distances.append(min(p.ToMM(bb.GetX()),p.ToMM(bb.GetY()),WIDTH-p.ToMM(bb.GetRight()),HEIGHT-p.ToMM(bb.GetBottom())))
  edge_clearances[ref]=min(distances)
  assert min(distances)>=minimum,(ref,'pad-to-board edge',min(distances))
 tracks=collections.defaultdict(list);vias=collections.Counter()
@@ -97,9 +99,11 @@ for t in b.GetTracks():
  if isinstance(t,p.PCB_VIA):vias[t.GetNetname()]+=1
  else:
   if t.GetLength()==0:continue
-  assert t.GetLayer() in (p.F_Cu,p.B_Cu) or (t.GetLayer()==p.In2_Cu and t.GetNetname() in {'+3V3','UART_RX','UART_TX','BIAS_UP2_N','ADC_5V','POWER_5V_EN','BIAS_DOWN2','POWER_12V_EN','BIAS_DOWN1','V5_INTERNAL','STATUS_DIN','INPUT1','SENSE1'}),'Unexpected inner-layer routing'
+  assert t.GetLayer() in (p.F_Cu,p.B_Cu) or (t.GetLayer()==p.In2_Cu and t.GetNetname() in {'+3V3','UART_RX','UART_TX','BIAS_UP2_N','ADC_5V','POWER_5V_EN','BIAS_DOWN2','POWER_12V_EN','BIAS_DOWN1','V5_INTERNAL','STATUS_DIN','INPUT1','SENSE1','BIAS_DOWN3','BIAS_SINK2','BIAS_SINK3','BIAS_SOURCE1','BIAS_UP3_N','SENSOR_12V','SENSOR_5V','SIG1','SIG2','SIG3','VPORT1','VPORT2','VPORT3'}),'Unexpected inner-layer routing'
   if t.GetLayer()==p.In2_Cu and t.GetNetname() in {'INPUT1','SENSE1'}:
-   assert min(t.GetStart().y,t.GetEnd().y)>=p.FromMM(50),'Input route entered power-stage region'
+   assert min(t.GetStart().y,t.GetEnd().y)>=p.FromMM(50) or (t.GetNetname()=='INPUT1' and min(t.GetStart().x,t.GetEnd().x)>=p.FromMM(30)), 'Input route entered power-stage region'
+  if t.GetLayer()==p.In2_Cu and t.GetNetname() in {'SENSOR_12V','SENSOR_5V','SIG1','SIG2','SIG3','VPORT1','VPORT2','VPORT3','BIAS_SINK2','BIAS_SINK3','BIAS_SOURCE1'}:
+   assert min(t.GetStart().y,t.GetEnd().y)>=p.FromMM(52), 'Connector route entered power-stage region'
   tracks[t.GetNetname()].append(t)
 critical={}
 for net in ['HSE_IN','HSE_OUT','HSE_XTAL_OUT','BUCK_SW','BUCK_CB','BUCK_FB','BOOST_SW','BOOST_FB','BOOST_COMP','BOOST_COMP_RC']:
@@ -114,7 +118,7 @@ for r in ['J1','J2','J3','J4','J5','J6']:
  assert all(abs(p.ToMM(d.GetDrillSize().x)-1.1)<1e-6 for d in f.Pads())
 for record in json.loads((R/'hardware/library/3d/vendor_connectors.json').read_text()):
  for path,sha in [('source_file','vendor_sha256'),('model_file','model_sha256')]:assert hashlib.sha256((R/record[path]).read_bytes()).hexdigest()==record[sha]
-report=dict(result='PASS',fitted_top_parts=140,resistors=55,capacitors=40,board_thickness_mm=1.6,selectors=selectors,service_mapping=mapping,critical_routes=critical,inner_service_and_monitor_routes={net:sum(p.ToMM(t.GetLength()) for t in tracks[net] if t.GetLayer()==p.In2_Cu) for net in sorted({'+3V3','UART_RX','UART_TX','BIAS_UP2_N','ADC_5V','POWER_5V_EN','BIAS_DOWN2','POWER_12V_EN','BIAS_DOWN1'})},power_net_geometry=widths,limitations='Track geometry inventory is not a thermal, impedance or trace-drop qualification. VIN_PROT includes narrow low-current enable branches; 3D and programming checks are nominal geometry, not physical fit.')
+report=dict(result='PASS',fitted_top_parts=len(fitted)-len(BOTTOM_REFERENCES),fitted_bottom_parts=len(BOTTOM_REFERENCES),bottom_references=sorted(BOTTOM_REFERENCES),board_size_mm=[WIDTH,HEIGHT],resistors=55,capacitors=40,board_thickness_mm=1.6,selectors=selectors,service_mapping=mapping,critical_routes=critical,inner_service_and_monitor_routes={net:sum(p.ToMM(t.GetLength()) for t in tracks[net] if t.GetLayer()==p.In2_Cu) for net in sorted({'+3V3','UART_RX','UART_TX','BIAS_UP2_N','ADC_5V','POWER_5V_EN','BIAS_DOWN2','POWER_12V_EN','BIAS_DOWN1'})},power_net_geometry=widths,limitations='Track geometry inventory is not a thermal, impedance or trace-drop qualification. VIN_PROT includes narrow low-current enable branches; 3D and programming checks are nominal geometry, not physical fit.')
 # At least six plated thermal vias outside the exposed-pad paste window.
 u9=pads('U9')['9'];center=u9.GetPosition()
 thermal=[t for t in b.GetTracks() if isinstance(t,p.PCB_VIA) and t.GetNetname()=='GND' and (t.GetPosition()-center).EuclideanNorm()<p.FromMM(3)]
@@ -131,7 +135,7 @@ coverage=area/(2.4*3.1)
 assert .50<coverage<.65
 report['improved_edge_clearances_mm']=edge_clearances
 report['board_corner_radius_mm']=1.5
-report['input_bias_transistor_row_y_mm']=57.15
+report['input_bias_transistor_row_y_mm']=CONTRACT['bias_transistor_row_y_mm']
 report['edge_scope']='Pad bounding boxes to finished edges. R1/R2 retain original 1.30 mm edge clearance and local buck feedback routing. Terminals/test pads/termination bridge have intentional exceptions.'
 report['efuse_assembly']=dict(exposed_pad_mm=[2.4,3.1],external_ground_thermal_vias=len(thermal),paste_windows=len(paste),paste_coverage_fraction=coverage)
 # These explicit local paths prevent a future placement change from leaving

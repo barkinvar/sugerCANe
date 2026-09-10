@@ -27,6 +27,7 @@ for fp in board.GetFootprints():
         assert name.startswith('${KIPRJMOD}/'), name
         assert (ROOT / 'hardware' / name.removeprefix('${KIPRJMOD}/')).is_file(), name
     components.append(dict(reference=fp.GetReference(), value=fp.GetValue(),
+                           side='bottom' if fp.IsFlipped() else 'top',
                            package=str(fp.GetFPID().GetLibItemName()),
                            x_mm=p.ToMM(pos.x), y_mm=-p.ToMM(pos.y),
                            rotation_deg=fp.GetOrientationDegrees(), pads=pads, models=models))

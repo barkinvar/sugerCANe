@@ -1,0 +1,1523 @@
+{
+  "result": "PASS sourcing-file consistency; HOLD manufacturing review",
+  "observed_utc": "2026-09-10T03:43:43.442617+00:00",
+  "stock_observation_window_utc": [
+    "2026-09-10T03:43:33.549459+00:00",
+    "2026-09-10T05:13:16.327380+00:00"
+  ],
+  "availability_definition": "max(0, canPresaleNumber) from JLC public component detail; stockCount is recorded separately and is not treated as free inventory. No cart allocation or reservation.",
+  "boards": 10,
+  "factory_placements": 129,
+  "matched_mpn_types": 54,
+  "stock_sufficient_types": 54,
+  "shortage_types": [],
+  "basic_types": 12,
+  "preferred_extended_types": 1,
+  "ordinary_extended_types": 41,
+  "smt_parts_with_conservative_attrition_per_board_usd": 15.98,
+  "manual_parts_per_board_usd": 11.98,
+  "combined_parts_budget_per_board_usd": 27.96,
+  "selected_service": "Standard",
+  "economic_eligible": false,
+  "economic_blockers": [
+    {
+      "mpn": "SK6805-EC15",
+      "references": [
+        "D10"
+      ],
+      "source_url": "https://jlcpcb.com/partdetail/C2890035"
+    }
+  ],
+  "historical_single_side_setup_estimate_usd": 132.81,
+  "two_sided_assembly_quote_confirmed": false,
+  "moisture_sensitive_parts": [
+    {
+      "references": [
+        "U7"
+      ],
+      "msl": "MSL 3"
+    },
+    {
+      "references": [
+        "D10"
+      ],
+      "msl": "MSL 4"
+    }
+  ],
+  "nominal_standard_reflow_conflicts": [],
+  "manufacturing_holds": [
+    "Compact board requires a new two-sided assembly quotation and reflow/process qualification",
+    "Factory qualification of all exact-part solder profiles and moisture handling is pending"
+  ],
+  "quantity_method": "Conservative budget: max(fitted quantity plus displayed lossNumber, leastPatchNumber, minPurchaseNum). Actual checkout attrition/minimums may differ.",
+  "factory_allocation_confirmed": false,
+  "electrical_model_changes_limited_to_documented_reviews": true,
+  "reviewed_routing": {
+    "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
+    "board_sha256": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
+    "nonrouting_objects_sha256": "1ba72c35249250bfe9c9587d7e0d7b06b77b8abafb45879373274266d7548dde",
+    "scope": "Current native geometry unchanged from 7047295; U1/L1 value and MPN update is separately recorded in buck_margin_review. Clock capacitors remain 20 pF. Final power verification is authorized and running.",
+    "previous_review": {
+      "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
+      "board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
+      "nonrouting_objects_sha256": "5ee31ac375e66db8dff45cad8ffefd5df5df0aed11ec677c58b56d84f7d306f2",
+      "scope": "Authorized 14-segment input widening from 0.5 to 0.7 mm and regenerated fills. Exact native comparison preserves every other object. Four-layer CAD/Gerber and expanded DC checks refreshed; transient simulations deferred.",
+      "previous_review": {
+        "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
+        "board_sha256": "f6e7be17328081b06241a03ec6a706204e40f90e1e63c5d6ff4bc82f96823d04",
+        "nonrouting_objects_sha256": "5ee31ac375e66db8dff45cad8ffefd5df5df0aed11ec677c58b56d84f7d306f2",
+        "scope": "Authorized ground-pour cleanup. Four minimum widths, outer SMT/through-hole connection modes, five local cutouts, J8.7 spoke angle and three redundant GND segments reviewed; exact comparison preserves all other native objects. CAD/DC/Gerber checks refreshed; transient simulations deferred.",
+        "previous_review": {
+          "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
+          "board_sha256": "11a7fe728a5c38fea9ccf797b009e49f00d5b57660013b24940de233ee9ede55",
+          "nonrouting_objects_sha256": "e4353dfdb994feff9097c45d8a58a25a327f040cb739ecaafbf8ad4652c24cb1",
+          "scope": "Authorized contact/branch cleanup. Exact native comparison preserves every other object; three redundant signal vias removed. Width policy unchanged. CAD/DC/Gerber checks refreshed; transient simulations deferred.",
+          "previous_review": {
+            "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
+            "board_sha256": "c6f6150f6a71395bcfd55faff9d0de88cd833f19438ebcd708ad3981c939c3d7",
+            "nonrouting_objects_sha256": "e3ed96947f37f53acd3aa32f98a84c30a9bda0128c8a1a3aae78a1b45b0c116e",
+            "scope": "Authorized branch and width cleanup; exact native nonrouting objects still match the sourcing candidate. All 77 routed nets reviewed; 68 segments widened, none narrowed; 40 unnecessary width-change junctions removed. CAD/DC/Gerber checks refreshed; new transient simulations remain deferred."
+          },
+          "removed_redundant_vias": [
+            {
+              "id": "98c3dadb-99ff-4b5b-902a-850bea21e86e",
+              "net": "+3V3",
+              "at": [
+                5.8232,
+                57.5491
+              ],
+              "width": 0.65,
+              "layers": [
+                0,
+                2,
+                4,
+                6
+              ],
+              "remaining_connected_track_layers": [
+                0
+              ],
+              "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+            },
+            {
+              "id": "1ea72085-26c6-4b4b-8cf5-6edde53809eb",
+              "net": "SENSE3",
+              "at": [
+                30.7255,
+                48.2871
+              ],
+              "width": 0.65,
+              "layers": [
+                0,
+                2,
+                4,
+                6
+              ],
+              "remaining_connected_track_layers": [
+                2
+              ],
+              "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+            },
+            {
+              "id": "cf5b937a-86d1-4507-a784-398b44681f80",
+              "net": "SIG3",
+              "at": [
+                43.1172,
+                59.349999
+              ],
+              "width": 0.65,
+              "layers": [
+                0,
+                2,
+                4,
+                6
+              ],
+              "remaining_connected_track_layers": [
+                2
+              ],
+              "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+            }
+          ]
+        },
+        "removed_redundant_vias": [
+          {
+            "id": "98c3dadb-99ff-4b5b-902a-850bea21e86e",
+            "net": "+3V3",
+            "at": [
+              5.8232,
+              57.5491
+            ],
+            "width": 0.65,
+            "layers": [
+              0,
+              2,
+              4,
+              6
+            ],
+            "remaining_connected_track_layers": [
+              0
+            ],
+            "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+          },
+          {
+            "id": "1ea72085-26c6-4b4b-8cf5-6edde53809eb",
+            "net": "SENSE3",
+            "at": [
+              30.7255,
+              48.2871
+            ],
+            "width": 0.65,
+            "layers": [
+              0,
+              2,
+              4,
+              6
+            ],
+            "remaining_connected_track_layers": [
+              2
+            ],
+            "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+          },
+          {
+            "id": "cf5b937a-86d1-4507-a784-398b44681f80",
+            "net": "SIG3",
+            "at": [
+              43.1172,
+              59.349999
+            ],
+            "width": 0.65,
+            "layers": [
+              0,
+              2,
+              4,
+              6
+            ],
+            "remaining_connected_track_layers": [
+              2
+            ],
+            "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+          }
+        ]
+      },
+      "removed_redundant_vias": [
+        {
+          "id": "98c3dadb-99ff-4b5b-902a-850bea21e86e",
+          "net": "+3V3",
+          "at": [
+            5.8232,
+            57.5491
+          ],
+          "width": 0.65,
+          "layers": [
+            0,
+            2,
+            4,
+            6
+          ],
+          "remaining_connected_track_layers": [
+            0
+          ],
+          "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+        },
+        {
+          "id": "1ea72085-26c6-4b4b-8cf5-6edde53809eb",
+          "net": "SENSE3",
+          "at": [
+            30.7255,
+            48.2871
+          ],
+          "width": 0.65,
+          "layers": [
+            0,
+            2,
+            4,
+            6
+          ],
+          "remaining_connected_track_layers": [
+            2
+          ],
+          "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+        },
+        {
+          "id": "cf5b937a-86d1-4507-a784-398b44681f80",
+          "net": "SIG3",
+          "at": [
+            43.1172,
+            59.349999
+          ],
+          "width": 0.65,
+          "layers": [
+            0,
+            2,
+            4,
+            6
+          ],
+          "remaining_connected_track_layers": [
+            2
+          ],
+          "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+        }
+      ]
+    },
+    "removed_redundant_vias": [
+      {
+        "id": "98c3dadb-99ff-4b5b-902a-850bea21e86e",
+        "net": "+3V3",
+        "at": [
+          5.8232,
+          57.5491
+        ],
+        "width": 0.65,
+        "layers": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "remaining_connected_track_layers": [
+          0
+        ],
+        "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+      },
+      {
+        "id": "1ea72085-26c6-4b4b-8cf5-6edde53809eb",
+        "net": "SENSE3",
+        "at": [
+          30.7255,
+          48.2871
+        ],
+        "width": 0.65,
+        "layers": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "remaining_connected_track_layers": [
+          2
+        ],
+        "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+      },
+      {
+        "id": "cf5b937a-86d1-4507-a784-398b44681f80",
+        "net": "SIG3",
+        "at": [
+          43.1172,
+          59.349999
+        ],
+        "width": 0.65,
+        "layers": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "remaining_connected_track_layers": [
+          2
+        ],
+        "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+      }
+    ]
+  },
+  "compact_layout": {
+    "result": "PASS",
+    "variant": "Rev H compact prototype",
+    "baseline_commit": "1c03fd1",
+    "baseline_size_mm": [
+      52,
+      74
+    ],
+    "size_mm": [
+      52,
+      70
+    ],
+    "saved_area_mm2": 208,
+    "bounding_area_reduction_percent": 5.405405405405405,
+    "bottom_references": [
+      "C101",
+      "Q101",
+      "Q102",
+      "Q201",
+      "Q202",
+      "Q301",
+      "Q302",
+      "R111",
+      "R112",
+      "R210",
+      "R211",
+      "R212",
+      "R311",
+      "R312",
+      "R52"
+    ],
+    "placement_changes": [
+      {
+        "reference": "R4",
+        "before_mm": [
+          12.5,
+          61.0
+        ],
+        "after_mm": [
+          12.5,
+          57.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "D301",
+        "before_mm": [
+          34.0,
+          66.5
+        ],
+        "after_mm": [
+          34.0,
+          62.5
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "D201",
+        "before_mm": [
+          18.0,
+          66.5
+        ],
+        "after_mm": [
+          18.0,
+          62.5
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R103",
+        "before_mm": [
+          49.25,
+          69.0
+        ],
+        "after_mm": [
+          49.25,
+          65.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "J4",
+        "before_mm": [
+          6.5,
+          65.0
+        ],
+        "after_mm": [
+          6.5,
+          61.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "J5",
+        "before_mm": [
+          22.5,
+          65.0
+        ],
+        "after_mm": [
+          22.5,
+          61.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "JP301",
+        "before_mm": [
+          37.0,
+          60.4
+        ],
+        "after_mm": [
+          37.0,
+          56.4
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R109",
+        "before_mm": [
+          2.9,
+          65.15
+        ],
+        "after_mm": [
+          2.9,
+          61.15
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "D202",
+        "before_mm": [
+          17.0,
+          61.0
+        ],
+        "after_mm": [
+          17.0,
+          57.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R209",
+        "before_mm": [
+          29.0,
+          61.0
+        ],
+        "after_mm": [
+          29.0,
+          57.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "JP101",
+        "before_mm": [
+          5.0,
+          60.4
+        ],
+        "after_mm": [
+          5.0,
+          56.4
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "JP201",
+        "before_mm": [
+          21.0,
+          60.4
+        ],
+        "after_mm": [
+          21.0,
+          56.4
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R203",
+        "before_mm": [
+          49.25,
+          64.5
+        ],
+        "after_mm": [
+          49.25,
+          60.5
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R309",
+        "before_mm": [
+          45.0,
+          61.0
+        ],
+        "after_mm": [
+          45.0,
+          57.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R101",
+        "before_mm": [
+          18.0,
+          71.1
+        ],
+        "after_mm": [
+          18.0,
+          67.1
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R104",
+        "before_mm": [
+          34.0,
+          71.32
+        ],
+        "after_mm": [
+          34.0,
+          67.32
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "J6",
+        "before_mm": [
+          38.5,
+          65.0
+        ],
+        "after_mm": [
+          38.5,
+          61.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "Q201",
+        "before_mm": [
+          20.0,
+          57.15
+        ],
+        "after_mm": [
+          20.0,
+          64.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R111",
+        "before_mm": [
+          7.9,
+          57.45
+        ],
+        "after_mm": [
+          7.9,
+          64.8
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R212",
+        "before_mm": [
+          31.9,
+          57.45
+        ],
+        "after_mm": [
+          31.9,
+          64.8
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R311",
+        "before_mm": [
+          39.9,
+          57.45
+        ],
+        "after_mm": [
+          39.9,
+          64.8
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "Q302",
+        "before_mm": [
+          44.0,
+          57.15
+        ],
+        "after_mm": [
+          44.0,
+          64.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R112",
+        "before_mm": [
+          15.9,
+          57.45
+        ],
+        "after_mm": [
+          15.9,
+          64.8
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "Q301",
+        "before_mm": [
+          36.0,
+          57.15
+        ],
+        "after_mm": [
+          36.0,
+          64.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "Q202",
+        "before_mm": [
+          28.0,
+          57.15
+        ],
+        "after_mm": [
+          28.0,
+          64.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R210",
+        "before_mm": [
+          32.5,
+          60.5
+        ],
+        "after_mm": [
+          32.0,
+          55.7
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R52",
+        "before_mm": [
+          48.5,
+          61.0
+        ],
+        "after_mm": [
+          48.5,
+          57.0
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R312",
+        "before_mm": [
+          47.9,
+          57.45
+        ],
+        "after_mm": [
+          47.9,
+          64.8
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C101",
+        "before_mm": [
+          40.0,
+          54.5
+        ],
+        "after_mm": [
+          43.0,
+          55.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "Q102",
+        "before_mm": [
+          12.0,
+          57.15
+        ],
+        "after_mm": [
+          12.0,
+          64.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "Q101",
+        "before_mm": [
+          4.0,
+          57.15
+        ],
+        "after_mm": [
+          4.0,
+          64.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R211",
+        "before_mm": [
+          23.9,
+          57.45
+        ],
+        "after_mm": [
+          23.9,
+          64.8
+        ],
+        "side": "bottom"
+      }
+    ],
+    "unchanged_electrical_sources": {
+      "hardware/design/circuit.json": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
+      "hardware/design/circuit.py": "5fd0e887ce7c06aca3b1828dd4c8b47f5d09f22404f4ac228c516dd693d3243b",
+      "firmware/src/power.c": "0e26e751b00961e6d86043e7a28429c86fb9178d3e0023c77d5db8a39b1a5b2b",
+      "hardware/FRC_Sensor_CAN.kicad_pro": "bc605bc1de9321ebce59bd9cd42a013de901d69073d204e90783d38577749f91",
+      "hardware/FRC_Sensor_CAN.kicad_dru": "421c76f90b944480db7977505b21af2907ea1699c15898f66b6e1bfccc97c56d",
+      "hardware/FRC_Sensor_CAN.kicad_sch": "d536746e8aea9ca88743493b2bd7c7d42fa3786f5bd90ebce42ce876038cdf36",
+      "hardware/can.kicad_sch": "731ce88665c283b6e6c71f94d28fcf3137dfc1af43014fe3c6a016ce82000322",
+      "hardware/controller.kicad_sch": "8560abd1260b5980a657a50dfca34b8a55274cf27a7d0e16155f1f325627c6a2",
+      "hardware/input1.kicad_sch": "70efc2f005de258c3391f9b299626401b6b3f8042bd11be9e483e42add547a88",
+      "hardware/input2.kicad_sch": "0b8d3f340084ba78cddabcbb8aeed1a4dd517b84be5c33afdf0d2590450c86aa",
+      "hardware/input3.kicad_sch": "5e75c2c64e30a15bd6a584fae9b45486ec399a841e090370eb6eb6b3e4e8a5c6",
+      "hardware/power.kicad_sch": "c694a573c55f21fc266558dd05f6fd7c41552f5d7a944a496ce911bcca592e54",
+      "hardware/rail_sense.kicad_sch": "a6f2443563e33732e2ced9ad4afa187f4eea7f959449d6935a42c02e5f35f3fc",
+      "hardware/regulated_12v.kicad_sch": "bbec6fc9fb0604f0b3146ce5eb492a9980056257876507a704de8685270d9f36",
+      "hardware/sensor_power.kicad_sch": "f7808b7fc9a76a190dd9a59c856ae6c4f504e92caea8deb139067b307e0af3ce"
+    },
+    "preserved_critical_nets": [
+      "BOOST_12V",
+      "BOOST_COMP",
+      "BOOST_COMP_RC",
+      "BOOST_FB",
+      "BOOST_SW",
+      "BUCK_CB",
+      "BUCK_FB",
+      "BUCK_SW",
+      "HSE_IN",
+      "HSE_OUT",
+      "HSE_XTAL_OUT",
+      "V5_INTERNAL",
+      "VIN_FUSED",
+      "VIN_PROT",
+      "VIN_RAW"
+    ],
+    "preserved_critical_tracks_and_vias": 248,
+    "board_sha256": "102fc9d9801b6628781927c5ed5e05a98d0c7c0c52214b0afe3950f8ac40370c",
+    "limitations": "Checks nominal layout/electrical identity. Native DRC, routing style, independent exported copper checks and physical qualification are separate."
+  },
+  "factory_top_placements": 114,
+  "factory_bottom_placements": 15,
+  "buck_margin_review": {
+    "baseline_commit": "7047295",
+    "board_sha256": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
+    "before": {
+      "U1": {
+        "ref": "U1",
+        "kind": "BUCK",
+        "value": "LMR51420XDDCR",
+        "pins": {
+          "1": "GND",
+          "2": "BUCK_SW",
+          "3": "VIN_PROT",
+          "4": "BUCK_FB",
+          "5": "VIN_PROT",
+          "6": "BUCK_CB"
+        },
+        "sheet": "power",
+        "footprint": "FRC_Sensor_CAN:TSOT-23-6",
+        "mpn": "LMR51420XDDCR",
+        "note": "",
+        "source_footprint": "Package_TO_SOT_SMD:TSOT-23-6"
+      },
+      "L1": {
+        "ref": "L1",
+        "kind": "L",
+        "value": "10uH",
+        "pins": {
+          "1": "BUCK_SW",
+          "2": "V5_INTERNAL"
+        },
+        "sheet": "power",
+        "footprint": "FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm",
+        "mpn": "SRP7028A-100M",
+        "note": "3.5A RMS, 6A saturation; use specified family, not NRND SRP7030.",
+        "source_footprint": "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm"
+      }
+    },
+    "after": {
+      "U1": {
+        "ref": "U1",
+        "kind": "BUCK",
+        "value": "LMR51430XDDCR",
+        "pins": {
+          "1": "GND",
+          "2": "BUCK_SW",
+          "3": "VIN_PROT",
+          "4": "BUCK_FB",
+          "5": "VIN_PROT",
+          "6": "BUCK_CB"
+        },
+        "sheet": "power",
+        "footprint": "FRC_Sensor_CAN:TSOT-23-6",
+        "mpn": "LMR51430XDDCR",
+        "note": "",
+        "source_footprint": "Package_TO_SOT_SMD:TSOT-23-6"
+      },
+      "L1": {
+        "ref": "L1",
+        "kind": "L",
+        "value": "8.2uH",
+        "pins": {
+          "1": "BUCK_SW",
+          "2": "V5_INTERNAL"
+        },
+        "sheet": "power",
+        "footprint": "FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm",
+        "mpn": "SRP7028A-8R2M",
+        "note": "4A RMS, 7.5A saturation; paired with 3A LMR51430. Use specified SRP7028A family.",
+        "source_footprint": "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm"
+      }
+    },
+    "changed_fields": {
+      "U1": [
+        "value",
+        "mpn"
+      ],
+      "L1": [
+        "value",
+        "mpn",
+        "note"
+      ]
+    },
+    "unchanged_native_geometry": true,
+    "only_native_changes": "U1 value/MPN and L1 value/MPN/note. Exact inverse text substitution restores the reviewed baseline board byte for byte.",
+    "sources": [
+      "sources/datasheets/ti_lmr51430.pdf",
+      "sources/datasheets/bourns_srp7028a.pdf"
+    ],
+    "engineering_basis": "3 A buck has 2.75 A minimum valley and 3.67 A minimum peak limits. Paired 8.2 uH inductor has 4 A RMS, 7.5 A saturation rating and 68 milliohm maximum DCR. External sensor limits remain 300 mA per shared rail.",
+    "limitations": "Current-limit and LC sizing screens only; upstream buck switching model, thermal, dropout and board qualification remain outstanding.",
+    "observed_utc": "2026-09-10T05:13:16.327380+00:00",
+    "previous_catalog": {
+      "U1": {
+        "mpn": "LMR51420XDDCR",
+        "manufacturer": "Texas Instruments",
+        "lcsc": "C5246146",
+        "references": [
+          "U1"
+        ],
+        "quantity_per_board": 1,
+        "source_url": "https://jlcpcb.com/partdetail/C5246146",
+        "observed_utc": "2026-09-10T03:43:38.093757+00:00",
+        "public_stock": 4159,
+        "available_to_order": 4040,
+        "minimum_purchase": 1,
+        "minimum_assembly": 2,
+        "attrition_allowance": 0,
+        "preorder_minimum": 9,
+        "library_class": "expand",
+        "preferred_extended": false,
+        "assembly_mode": "smtWeld",
+        "package": "SOT-23-6",
+        "description": "-40\u2103~+150\u2103@(TJ) 1 2A 4.5V~36V 500kHz 600mV~34.2V Adjustable Buck Buck Built-in Yes SOT-23-6 DC-DC Converters ROHS",
+        "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2309210104_Texas-Instruments-LMR51420XDDCR_C5246146.pdf",
+        "price_tiers_usd": [
+          [
+            1,
+            1.0221
+          ],
+          [
+            10,
+            0.8544
+          ],
+          [
+            30,
+            0.7698
+          ],
+          [
+            100,
+            0.6868
+          ],
+          [
+            500,
+            0.6364
+          ],
+          [
+            1000,
+            0.6103
+          ]
+        ],
+        "ten_board_budget_quantity": 10,
+        "ten_board_stock_sufficient": true,
+        "allocation_confirmed": false,
+        "catalog_mpn": "LMR51420XDDCR",
+        "catalog_status": "yes",
+        "catalog_product_type": 0,
+        "pcba_services": [
+          "Economic",
+          "Standard"
+        ],
+        "moisture_sensitivity_level": "MSL 1"
+      },
+      "L1": {
+        "mpn": "SRP7028A-100M",
+        "manufacturer": "BOURNS",
+        "lcsc": "C2687402",
+        "references": [
+          "L1"
+        ],
+        "quantity_per_board": 1,
+        "source_url": "https://jlcpcb.com/partdetail/C2687402",
+        "observed_utc": "2026-09-10T03:43:42.603048+00:00",
+        "public_stock": 5174,
+        "available_to_order": 5146,
+        "minimum_purchase": 1,
+        "minimum_assembly": 0,
+        "attrition_allowance": 0,
+        "preorder_minimum": 12,
+        "library_class": "expand",
+        "preferred_extended": false,
+        "assembly_mode": "smtWeld",
+        "package": "SMD,7.3x6.6mm",
+        "description": "10uH 3.5A 6A 75m\u03a9 \u00b120% SMD,7.3x6.6mm Power Inductors ROHS",
+        "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2106070105_BOURNS-SRP7028A-100M_C2687402.pdf",
+        "price_tiers_usd": [
+          [
+            1,
+            0.9358
+          ],
+          [
+            10,
+            0.7731
+          ],
+          [
+            30,
+            0.6917
+          ],
+          [
+            100,
+            0.612
+          ],
+          [
+            500,
+            0.5631
+          ],
+          [
+            1000,
+            0.5387
+          ]
+        ],
+        "ten_board_budget_quantity": 10,
+        "ten_board_stock_sufficient": true,
+        "allocation_confirmed": false,
+        "catalog_mpn": "SRP7028A-100M",
+        "catalog_status": "yes",
+        "catalog_product_type": 0,
+        "pcba_services": [
+          "Economic",
+          "Standard"
+        ],
+        "moisture_sensitivity_level": "MSL 1"
+      }
+    }
+  },
+  "capacitor_reflow_review": {
+    "reviewed_utc": "2026-09-10T02:40:05.217190+00:00",
+    "reference": "C1",
+    "before": {
+      "ref": "C1",
+      "kind": "CP",
+      "value": "47uF",
+      "pins": {
+        "1": "VIN_PROT",
+        "2": "GND"
+      },
+      "sheet": "power",
+      "footprint": "FRC_Sensor_CAN:CP_Elec_8x6.5",
+      "mpn": "EEE-FK1H470P",
+      "note": "",
+      "voltage": "50V",
+      "tolerance": "20%",
+      "source_footprint": "Capacitor_SMD:CP_Elec_8x6.5"
+    },
+    "after": {
+      "ref": "C1",
+      "kind": "CP",
+      "value": "47uF",
+      "pins": {
+        "1": "VIN_PROT",
+        "2": "GND"
+      },
+      "sheet": "power",
+      "footprint": "FRC_Sensor_CAN:CP_Panasonic_FT_6.3x5.8",
+      "mpn": "EEEFT1H470AP",
+      "note": "Factory fitted. 47uF 50V 20%; 195mA ripple, 0.68ohm max ESR. Panasonic profile (5); respect dwell limits.",
+      "voltage": "50V",
+      "tolerance": "20%",
+      "source_footprint": "Project:Panasonic_FT_D_manufacturer_lands"
+    },
+    "old_catalog": {
+      "mpn": "EEE-FK1H470P",
+      "manufacturer": "PANASONIC",
+      "lcsc": "C278400",
+      "references": [
+        "C1"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C278400",
+      "observed_utc": "2026-09-10T02:23:42.271184+00:00",
+      "public_stock": 4009,
+      "available_to_order": 3776,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 0,
+      "preorder_minimum": 31,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SMD,D8xL6.2mm",
+      "description": "-55\u2103~+105\u2103 146.3mA@120Hz 2000hrs@105\u2103 47uF 50V 6.5mm 8mm \u00b120% SMD,D8xL6.2mm Aluminum Electrolytic Capacitors - SMD ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1811141444_PANASONIC-EEEFK1H470P_C278400.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.2943
+        ],
+        [
+          50,
+          0.2381
+        ],
+        [
+          150,
+          0.2141
+        ],
+        [
+          1000,
+          0.1841
+        ],
+        [
+          2000,
+          0.1707
+        ],
+        [
+          5000,
+          0.1626
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false,
+      "catalog_mpn": "EEEFK1H470P",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
+    },
+    "board_sha256": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
+    "baseline_board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
+    "electrical": {
+      "capacitance_uF": 47,
+      "tolerance_percent": 20,
+      "rated_voltage_V": 50,
+      "temperature_range_C": [
+        -55,
+        105
+      ],
+      "rated_ripple_mA_at_100kHz_105C": 195,
+      "ESR_max_ohm_at_100kHz_20C": 0.68,
+      "tan_delta_max_at_120Hz_20C": 0.1,
+      "leakage_max_uA_after_2_minutes": 23.5,
+      "endurance_hours_at_105C": 2000
+    },
+    "footprint": {
+      "name": "FRC_Sensor_CAN:CP_Panasonic_FT_6.3x5.8",
+      "body_diameter_mm": 6.3,
+      "body_height_mm": 5.8,
+      "manufacturer_size_code": "D",
+      "pad_centers_x_mm": [
+        -2.5,
+        2.5
+      ],
+      "pad_size_mm": [
+        3.2,
+        1.6
+      ],
+      "gap_mm": 1.8,
+      "board_center_mm": [
+        5,
+        21
+      ],
+      "rotation_deg": 90,
+      "pin_1": "VIN_PROT",
+      "pin_2": "GND",
+      "source_hashes": {
+        "hardware/library/FRC_Sensor_CAN.pretty/CP_Panasonic_FT_6.3x5.8.kicad_mod": "78a5c2429be2874a1fd06bfb78f122f05d30a183d2a866df1e95cd9fca672f2e",
+        "hardware/library/3d/CP_Panasonic_FT_6.3x5.8.step": "826add3d9fc9cc7a113af5f8e6afbf0c9194d78cef78127ae24df8973c7dd2d6"
+      }
+    },
+    "native_comparison": "Every object except C1 footprint and regenerated zone fills compares exactly. C1 center/orientation/net polarity retained. All 1530 traces and 242 vias unchanged.",
+    "sources": [
+      "sources/datasheets/panasonic_fk.pdf",
+      "sources/datasheets/panasonic_ft.pdf",
+      "sources/datasheets/panasonic_reflow.pdf"
+    ],
+    "conclusion": "Same published capacitance/voltage/tolerance/ESR/ripple/lifetime limits; smaller 6.3 x 5.8 mm body and manufacturer land pattern. Panasonic reflow profile (5) removes the known peak-temperature conflict with Standard PCBA. Factory must still meet all dwell and moisture-handling limits; no measured board/ripple/thermal qualification."
+  },
+  "mcu_procurement": {
+    "mpn": "STM32F042K6T6",
+    "reference": "U5",
+    "assembly": "User hand solder, LQFP32",
+    "preferred_route": "Buy from DigiKey for delivery to user; do not send to JLC or use Global Sourcing",
+    "quantity_for_10": 10,
+    "recommended_quantity_for_10_with_spares": 12,
+    "external_candidate": {
+      "supplier": "DigiKey",
+      "supplier_part": "497-14647-ND",
+      "observed_date": "2026-09-10",
+      "available": 3071,
+      "price_10_usd": 3.277,
+      "source_url": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294",
+      "source_type": "Public supplier page, stock not reserved"
+    },
+    "factory_bom_included": false,
+    "factory_cpl_included": false,
+    "factory_paste": false,
+    "paid": false,
+    "delivery_confirmed": false
+  },
+  "substitution_review": {
+    "observed_utc": "2026-09-10T02:26:16.074445+00:00",
+    "board_sha256": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
+    "scope": "Six changed passive types at nine placements checked against original and replacement manufacturer specifications and actual native pad dimensions. The other 49 factory types retain exact manufacturer/MPN. No BOM or CAD change in this audit.",
+    "substitutions": [
+      {
+        "references": [
+          "C25",
+          "C26"
+        ],
+        "old_mpn": "C0805C300J5GACTU",
+        "new_mpn": "CC0805JRNPO9BN200",
+        "role": "8 MHz crystal load capacitors",
+        "result": "PASS footprint/rating and analytical gain-margin review; frequency and drive require prototype measurements",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:C_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1,
+          1.45
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.95,
+          0.95
+        ],
+        "value_pF": 20,
+        "tolerance_percent": 5,
+        "voltage_V": 50,
+        "dielectric": "C0G/NP0",
+        "tcc_ppm_C": 30,
+        "temperature_range_C": [
+          -55,
+          125
+        ],
+        "dissipation_factor_max_percent": 0.1,
+        "sources": [
+          "sources/datasheets/kemet_original.pdf",
+          "sources/datasheets/yageo_np0.pdf"
+        ],
+        "differences": "Intentional 30 pF to 20 pF clock loading change. At maximum 200 ohm ESR, 7 pF C0, 10 pF assumed stray and +5% capacitors, gain margin rises from 4.61 to 6.54. Crystal frequency pulling and drive level remain unmeasured. Insulation resistance and body height differ from the original KEMET part.",
+        "previous_value_pF": 30
+      },
+      {
+        "references": [
+          "R61"
+        ],
+        "old_mpn": "RC0805FR-0711K5L",
+        "new_mpn": "0805W8F1152T5E",
+        "role": "12 V boost feedback lower arm",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1.025,
+          1.4
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.9125,
+          0.9125
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.125,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 150,
+        "maximum_overload_V": 300,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      },
+      {
+        "references": [
+          "R101",
+          "R201",
+          "R301"
+        ],
+        "old_mpn": "RC0805FR-07220KL",
+        "new_mpn": "0805W8F2203T5E",
+        "role": "Digital sensor input divider series arm (all three channels)",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1.025,
+          1.4
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.9125,
+          0.9125
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.125,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 150,
+        "maximum_overload_V": 300,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      },
+      {
+        "references": [
+          "R10"
+        ],
+        "old_mpn": "RC0805FR-0759KL",
+        "new_mpn": "0805W8F5902T5E",
+        "role": "5 V sensor current-limit setting",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1.025,
+          1.4
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.9125,
+          0.9125
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.125,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 150,
+        "maximum_overload_V": 300,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      },
+      {
+        "references": [
+          "R51"
+        ],
+        "old_mpn": "RC0805FR-075K23L",
+        "new_mpn": "0805W8F5231T5E",
+        "role": "Comparator logic reference divider lower arm",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1.025,
+          1.4
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.9125,
+          0.9125
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.125,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 150,
+        "maximum_overload_V": 300,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      },
+      {
+        "references": [
+          "R42"
+        ],
+        "old_mpn": "RC1206FR-07120RL",
+        "new_mpn": "1206W4F1200T5E",
+        "role": "Switchable CAN termination",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_1206_3216Metric",
+        "nominal_pad_size_mm": [
+          1.125,
+          1.75
+        ],
+        "nominal_pad_centers_x_mm": [
+          -1.4625,
+          1.4625
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.25,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 200,
+        "maximum_overload_V": 400,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      }
+    ],
+    "layout_update_note": "Six earlier nonpolar substitutions retain identical pads and values. Separate capacitor_reflow_review covers C1 only."
+  },
+  "alternative_stock_review": [
+    {
+      "lcsc": "C529323",
+      "mpn": "STM32F042K6T6TR",
+      "manufacturer": "STMicroelectronics",
+      "observed_utc": "2026-09-10T02:24:48.190690+00:00",
+      "available_to_order": 0,
+      "public_stock": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C529323",
+      "decision": "STM32F042K6T6TR changes tray to tape-and-reel only; direct electrical/package alternative, but zero stock so not implemented.",
+      "implemented": false
+    },
+    {
+      "lcsc": "C1337340",
+      "mpn": "STM32F042K6T7",
+      "manufacturer": "STMicroelectronics",
+      "observed_utc": "2026-09-10T02:24:49.743033+00:00",
+      "available_to_order": 0,
+      "public_stock": 6,
+      "source_url": "https://jlcpcb.com/partdetail/C1337340",
+      "decision": "STM32F042K6T7 retains silicon/memory/LQFP32 pinout with higher maximum ambient grade; also zero orderable stock. Not implemented.",
+      "implemented": false
+    },
+    {
+      "lcsc": "C92059",
+      "mpn": "EEEFT1H470AP",
+      "manufacturer": "PANASONIC",
+      "observed_utc": "2026-09-10T02:38:10.452553+00:00",
+      "available_to_order": 1815,
+      "public_stock": 1886,
+      "source_url": "https://jlcpcb.com/partdetail/C92059",
+      "decision": "Implemented as C1 with manufacturer size-D land pattern, matched published electrical limits and profile (5) review.",
+      "implemented": true
+    }
+  ],
+  "hand_solder_availability": {
+    "references": [
+      "J1",
+      "J2",
+      "J3",
+      "J4",
+      "J5",
+      "J6",
+      "J8",
+      "JP101",
+      "JP201",
+      "JP301",
+      "U5"
+    ],
+    "reason": "User-approved manual STM32F042K6T6 from DigiKey plus the existing ten through-hole parts. All other SMT parts remain factory fitted.",
+    "live_jlc_check": [
+      {
+        "mpn": "1824420000",
+        "observed_utc": "2026-09-10T02:24:24.502492+00:00",
+        "source": "JLC public exact-MPN search",
+        "matches": [
+          {
+            "mpn": "1824420000",
+            "manufacturer": "WEIDMULLER",
+            "lcsc": "C5482136",
+            "available_to_order": 0,
+            "public_stock": 0
+          },
+          {
+            "mpn": "1824420000",
+            "manufacturer": "JLCPCB Assembly",
+            "lcsc": "C9900052667",
+            "available_to_order": 0,
+            "public_stock": 0
+          }
+        ]
+      },
+      {
+        "mpn": "1824430000",
+        "observed_utc": "2026-09-10T02:24:25.135392+00:00",
+        "source": "JLC public exact-MPN search",
+        "matches": []
+      },
+      {
+        "mpn": "M22-2010305",
+        "observed_utc": "2026-09-10T02:24:25.076432+00:00",
+        "source": "JLC public exact-MPN search",
+        "matches": [
+          {
+            "mpn": "M22-2010305",
+            "manufacturer": "Harwin",
+            "lcsc": "C7221766",
+            "available_to_order": 11,
+            "public_stock": 11
+          }
+        ]
+      },
+      {
+        "mpn": "SPN02SVEN-RC",
+        "observed_utc": "2026-09-10T02:25:27.117597+00:00",
+        "source": "JLC public exact-MPN search",
+        "matches": [
+          {
+            "mpn": "SPN02SVEN-RC",
+            "manufacturer": "Sullins Connector Solutions",
+            "lcsc": "C6495598",
+            "available_to_order": 0,
+            "public_stock": 0
+          }
+        ]
+      },
+      {
+        "mpn": "PM254V-12-10P-H85",
+        "manufacturer": "XFCN",
+        "lcsc": "C492399",
+        "observed_utc": "2026-09-10T02:25:26.552466+00:00",
+        "available_to_order": 36672,
+        "public_stock": 38916
+      }
+    ],
+    "external_supplier_status": "The six manual-purchase types were checked separately on DigiKey/LCSC product pages on 2026-09-10 UTC; current observations are in catalog_china.json. Stock and delivery are not allocated."
+  },
+  "order_decision": "HOLD: final simulation review and factory stack/process quotation pending. U5 is user-sourced from DigiKey; no factory MCU procurement required.",
+  "limitations": "Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.",
+  "input_hashes": {
+    "bom/assembly_plan.json": "3ddff6cab3d7df84938cd10b9cc9549515d288c65915f7252b9b6a726b85b627",
+    "bom/jlc_sourcing.json": "e505b96022a329033ddd7d9593011b5b22e8a1ab6b77356eeeeb9e5d3ae24680",
+    "bom/catalog_china.json": "3cb57c828b0e136939f46a2980a53b9117f78b965ad60712e424dc3599c3ddf7",
+    "bom/Factory_BOM.csv": "62a8c5ad0676564739a59d418e2586b3ad565db2b95ed4ec6a06a276838ae2ee",
+    "bom/BOM_JLCPCB.csv": "65d87b4314cb78a52060040566e124783331d796e4b4def95172a4edeb509ad4",
+    "output/assembly/CPL_JLCPCB.csv": "a0fcbc512fc1d86b6bccb6af2098f2331f22fffe10efa6814e670f66e3b2e2bf",
+    "hardware/design/circuit.json": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "102fc9d9801b6628781927c5ed5e05a98d0c7c0c52214b0afe3950f8ac40370c",
+    "scripts/check_jlc_sourcing.py": "917f4d03a356645a208abc173292a44350d201451a71ee860e0c96ebe6e8b9ee",
+    "hardware/design/layout_contract.json": "7937c3c262e16533ec1bbdf2bef60005d9fcdae744384866a2a462aed6efc483",
+    "scripts/layout_contract.py": "9598a57eebaece0e23c6472cbd3b3d61b3fe85ebb4e8065455d84972ea526596",
+    "scripts/check_compact_layout.py": "e0a26799a7a644ff1486dca675a8edf26751ea2dfc4c2e9c3bf851c93cf04965",
+    "reports/compact/layout_verification.json": "699b8a32e1394bd730dd3ea7c79c244f0e460f94c87c7bf779cd578dc7f2805e",
+    "sources/datasheets/yageo_np0.pdf": "495287fc811dc714366f2edd3bc974d98d2d80133266a0a73bb01ac01237e3eb",
+    "sources/datasheets/uniroyal_thick_film.pdf": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
+    "sources/datasheets/panasonic_fk.pdf": "b36857d089adaddf3042b33bf11d0f7d83bf70734e983f33b7827152e11854e3",
+    "sources/datasheets/panasonic_reflow.pdf": "5302db62f18432e9964c56852637c880569055ff5b962dba6d4b1a254ada8aac",
+    "sources/datasheets/yageo_rc_original.pdf": "7b6f0ae72708ca4b38126f84b5407a3e970a94cb60bc1a0afdaeb25a23d839bb",
+    "sources/datasheets/kemet_original.pdf": "948d3eb68896029f2248ae329805fd34aaab303141ed04c93631268f3e62f79b",
+    "sources/datasheets/panasonic_ft.pdf": "affbdbc3402d5d78e683944e78f5a641ae7f22906a4e77e24978388e491b41e2",
+    "sources/datasheets/ti_lmr51430.pdf": "f7d8053844fb07ae773844f023373c0c570507ca61603fe28dda15364987296c",
+    "sources/datasheets/bourns_srp7028a.pdf": "34d693b83229904a959efaa5bad0d294eae16c943244ee60cb27d842c713e512"
+  }
+}

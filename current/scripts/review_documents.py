@@ -11,7 +11,7 @@ for p in docs:
   if not target.exists() and not (target.parent==R/'release' and target.suffix=='.zip'):broken.append([str(p.relative_to(R)),link])
 assert not broken,broken
 pdfs=[]
-for path in [*R.glob('output/documentation/*.pdf'),R/'output/mechanical/mechanical_drawing.pdf',R/'output/assembly/top_assembly.pdf',R/'output/assembly/schematic.pdf',R/'output/assembly/gerber_copper_review.pdf']:
+for path in [*R.glob('output/documentation/*.pdf'),R/'output/mechanical/mechanical_drawing.pdf',R/'output/assembly/top_assembly.pdf',R/'output/assembly/bottom_assembly.pdf',R/'output/assembly/schematic.pdf',R/'output/assembly/gerber_copper_review.pdf']:
  with pdfplumber.open(path) as pdf:
   bad=[]
   for n,page in enumerate(pdf.pages,1):

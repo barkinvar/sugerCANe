@@ -23,7 +23,7 @@ def apply_bottom_artwork(board):
             for x,y in points:
                 # Artwork is drawn as viewed from the underside; native PCB
                 # coordinates are viewed from the top, so mirror exactly once.
-                poly.Append(p.FromMM(52-x),p.FromMM(y),0,hole)
+                poly.Append(p.FromMM(26+.85*((52-x)-26)),p.FromMM(10+.8*(y-10)),0,hole)
         # KiCad's native cut-contour representation preserves the letter and
         # stalk holes in one filled graphic, without raster seams or fonts.
         poly.Fracture()

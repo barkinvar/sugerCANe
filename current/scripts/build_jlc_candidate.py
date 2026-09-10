@@ -11,7 +11,7 @@ for path,digest in checks['input_hashes'].items():
 power_status=('Required downstream power/input/firmware engineering screens passed; upstream buck and physical qualification remain outside that transient evidence.'
               if checks.get('spice_result')=='PASS transient screening only' else
               'Full power-transient evidence is still incomplete or failing; read reports/release_checks.json.')
-status='REVIEW / QUOTATION ONLY. Factory fits 129 top SMT parts / 54 types, including C1 and D10. C25/C26 are 20 pF. U1 is LMR51430XDDCR; L1 is SRP7028A-8R2M (8.2 uH). U5 is omitted from BOM/CPL and stencil; user buys STM32F042K6T6 from DigiKey and hand solders it, plus ten THT parts and three loose caps. '+power_status+' Factory stack/process/inspection quotation remains pending. Not authorized for manufacture.'
+status='REVIEW / QUOTATION ONLY. Compact Rev H: 52 x 70 mm. Factory fits 114 top and 15 bottom SMT parts / 54 types, including C1 and D10. C25/C26 are 20 pF. U1 is LMR51430XDDCR; L1 is SRP7028A-8R2M (8.2 uH). U5 is omitted from BOM/CPL and stencil; user buys STM32F042K6T6 from DigiKey and hand solders it, plus ten THT parts and three loose caps. '+power_status+' Factory two-sided stack/process/inspection quotation remains pending. Not authorized for manufacture.'
 stencil=json.loads((R/'reports/manufacturing/factory_stencil.json').read_text())
 assert stencil['result']=='PASS' and stencil['removed_u5_apertures']==32
 for path,digest in stencil['input_hashes'].items():
@@ -26,13 +26,15 @@ with zipfile.ZipFile(gerber,'w',zipfile.ZIP_DEFLATED) as z:
  assert len(fabrication)==14 and sum(p.endswith('.drl') for p in fabrication)==2
  z.writestr('REVIEW_ONLY.txt',status+'\nSee the matching JLC review package for the required stack and BOM.\n')
 files=['bom/BOM_JLCPCB.csv','bom/Factory_BOM.csv','bom/Hand_solder_BOM.csv','bom/ACCESSORIES.csv','bom/assembly_plan.json','bom/DigiKey_5_boards.csv','bom/DigiKey_10_boards.csv',
- 'output/assembly/CPL_JLCPCB.csv','output/assembly/top_assembly.pdf','output/assembly/schematic.pdf',
+ 'output/assembly/CPL_JLCPCB.csv','output/assembly/top_assembly.pdf','output/assembly/bottom_assembly.pdf','output/assembly/schematic.pdf','docs/COMPACT_BOARD.md','hardware/design/layout_contract.json',
  'output/documentation/BOM_RevH_SC12.pdf','output/documentation/ORDER_GUIDE.pdf','output/documentation/MCU_hand_solder_map.pdf','docs/JLC_SOURCING.md','docs/FACTORY_ORDER.md','docs/ASSEMBLY.md','docs/STATUS_AND_PROGRAMMING.md','docs/WIRING.md','docs/FIXTURE.md','docs/VALIDATION.md','docs/CAN_SERVICE.md',
  'firmware/build/factory.hex','firmware/build/application.sc12','tools/program_factory.tcl',
  'reports/release_checks.json','reports/manufacturing/jlc_sourcing.json','reports/manufacturing/factory_files.json','reports/manufacturing/factory_stencil.json','output/assembly/factory_top_paste.gtp',
  'docs/ROUTING_RULES.md','reports/routing_rules.json','reports/routing_cleanup.json',
- 'reports/electrical/order_readiness.json','output/review/routing_junctions.png',
- 'hardware/design/routing_widths.json','output/review/routing_widths.png','output/review/routing_contacts.png','output/review/ground_pours.png',
+ 'reports/electrical/order_readiness.json',
+ 'hardware/design/routing_widths.json','reports/compact/layout_verification.json','reports/compact/source_snapshot.json',
+ 'reports/manufacturing/gerber_connectivity.json','reports/manufacturing/gerber_geometry.json','reports/manufacturing/verification.json',
+ 'output/review/board_top.png','output/review/board_bottom.png','output/review/board_3d_final.png',
  'bom/jlc_sourcing.json',str(gerber.relative_to(R))]
 preview=json.loads((R/'reports/manufacturing/preview_source.json').read_text())
 assert hashlib.sha256((R/'scripts/render_gerber_previews.py').read_bytes()).hexdigest()==preview['script_sha256']

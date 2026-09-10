@@ -11,6 +11,7 @@ from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import SimpleDocTemplate,Paragraph,Table,TableStyle,Spacer
 from reportlab.lib.units import mm
+from layout_contract import WIDTH, HEIGHT, RADIUS, BOTTOM_REFERENCES
 R=Path(__file__).resolve().parents[1]
 for d in ('output/documentation','output/mechanical','order'):(R/d).mkdir(parents=True,exist_ok=True)
 styles=getSampleStyleSheet();styles['Normal'].fontSize=8;styles['Normal'].leading=11
@@ -33,7 +34,7 @@ def heading(title,sub):
 heading('SC12 - nominal mechanical drawing','Rev H / component-side view / 1:1 at 100% print / dimensions in mm')
 ox,oy=180,660
 def xy(x,y):return ox+x*mm,oy-y*mm
-c.setLineWidth(.6);c.roundRect(*xy(0,74),52*mm,74*mm,1.5*mm)
+c.setLineWidth(.6);c.roundRect(*xy(0,HEIGHT),WIDTH*mm,HEIGHT*mm,RADIUS*mm)
 for ref in ['J1','J2','J3','J4','J5','J6']:
  f=fps[ref];n=2 if ref in ['J1','J2','J3'] else 3
  xs=[p['x_mm'] for p in f['pads']];ys=[-p['y_mm'] for p in f['pads']]
@@ -54,13 +55,14 @@ for ref in ('H1','H2'):
 for x in (0,52):
  c.line(*xy(x,0),*xy(x,-9))
 c.line(*xy(0,-7),*xy(52,-7));c.setFont('Helvetica',9);c.drawCentredString(*xy(26,-9),'52.00')
-c.line(*xy(52,0),*xy(61,0));c.line(*xy(52,74),*xy(61,74));c.line(*xy(59,0),*xy(59,74));c.drawString(*xy(61,29),'74.00')
-lines=['PCB: 52 x 74 x 1.6 mm; corner radius 1.5 mm. Four layers, 1 oz copper.',
+c.line(*xy(WIDTH,0),*xy(61,0));c.line(*xy(WIDTH,HEIGHT),*xy(61,HEIGHT));c.line(*xy(59,0),*xy(59,HEIGHT));c.drawString(*xy(61,29),f'{HEIGHT:.2f}')
+lines=[f'PCB: {WIDTH} x {HEIGHT} x 1.6 mm; corner radius {RADIUS} mm. Four layers, 1 oz copper.',
  'Mounts: H1 (3.5, 4.0), H2 (48.5, 46.5); diameter 3.2 NPTH.',
  'Keep hardware contact diameter <=6.4 mm; use insulating supports as needed.',
- 'Conservative terminal envelope: 52 x 82.1 mm, before wires/button clearance.',
+ f'Conservative terminal envelope: {WIDTH} x {HEIGHT+8.1:.1f} mm, before wires/button clearance.',
  'Terminal height: 8.5 above mounting face; pin tips 3.5 below that face.',
  'On a 1.6 mm PCB, pin tips project nominally 1.9 mm beyond the bottom.',
+ f'{len(BOTTOM_REFERENCES)} underside SMT parts: keep enclosure clear of both board faces.',
  f'D10: center ({led_x:g}, {led_y:g}), height 0.65; 6 mm circular area reserved.',
  'Printed duct starting size: outside diameter <=6; inside diameter 4.',
  'Duct lower face: 0.85-1.15 above PCB; no contact with LED or screw boss.',

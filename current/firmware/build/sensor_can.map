@@ -1073,26 +1073,26 @@ LOAD linker stubs
  .debug_line    0x000062f2      0x1e7 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
  .debug_line    0x000064d9      0x164 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
 
-.debug_str      0x00000000    0x59b5e
- .debug_str     0x00000000    0x59b5e build/power.o
-                               0x6954 (size before relaxing)
- .debug_str     0x00059b5e    0x5937e build/main.o
- .debug_str     0x00059b5e    0x5901f build/board.o
- .debug_str     0x00059b5e     0x38d1 build/status.o
- .debug_str     0x00059b5e     0x6b71 build/sensor_core.o
- .debug_str     0x00059b5e     0x6a4b build/input_mode.o
- .debug_str     0x00059b5e     0x6ef5 build/service.o
- .debug_str     0x00059b5e    0x58c98 build/board_service.o
- .debug_str     0x00059b5e       0xb9 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
- .debug_str     0x00059b5e       0xb9 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
- .debug_str     0x00059b5e       0xbe /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
- .debug_str     0x00059b5e       0xbf /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_str     0x00059b5e      0x1f3 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
- .debug_str     0x00059b5e      0x1a6 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
- .debug_str     0x00059b5e      0x194 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-strncmp.o)
- .debug_str     0x00059b5e       0xa8 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-strcmp.o)
- .debug_str     0x00059b5e      0x1c3 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
- .debug_str     0x00059b5e      0x192 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
+.debug_str      0x00000000    0x59b66
+ .debug_str     0x00000000    0x59b66 build/power.o
+                               0x695c (size before relaxing)
+ .debug_str     0x00059b66    0x59386 build/main.o
+ .debug_str     0x00059b66    0x59027 build/board.o
+ .debug_str     0x00059b66     0x38d9 build/status.o
+ .debug_str     0x00059b66     0x6b79 build/sensor_core.o
+ .debug_str     0x00059b66     0x6a53 build/input_mode.o
+ .debug_str     0x00059b66     0x6efd build/service.o
+ .debug_str     0x00059b66    0x58ca0 build/board_service.o
+ .debug_str     0x00059b66       0xb9 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uqi.o)
+ .debug_str     0x00059b66       0xb9 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+ .debug_str     0x00059b66       0xbe /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_str     0x00059b66       0xbf /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_str     0x00059b66      0x1f3 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-init.o)
+ .debug_str     0x00059b66      0x1a6 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memset.o)
+ .debug_str     0x00059b66      0x194 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-strncmp.o)
+ .debug_str     0x00059b66       0xa8 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-strcmp.o)
+ .debug_str     0x00059b66      0x1c3 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+ .debug_str     0x00059b66      0x192 /home/neuro/.local/share/candi-tools/sysroot/usr/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(libc_a-memcmp.o)
 
 .comment        0x00000000       0x26
  .comment       0x00000000       0x26 build/power.o

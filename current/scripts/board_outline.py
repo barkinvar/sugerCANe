@@ -1,22 +1,24 @@
-"""Reconstruct and verify the 52 x 74 mm, R1.5 exported board contour."""
+"""Reconstruct the exported contour and compare it with mechanical intent."""
 import math
 from gerbonara.graphic_objects import Arc, Line
 from shapely.geometry import LineString
 from shapely.ops import polygonize
+from layout_contract import WIDTH, HEIGHT, RADIUS
 
 
 def verified_outline(objects, tolerance=.001):
+    w, h, r = WIDTH, HEIGHT, RADIUS
     expected_lines = {
-        frozenset(((1.5, 0), (50.5, 0))),
-        frozenset(((52, -1.5), (52, -72.5))),
-        frozenset(((50.5, -74), (1.5, -74))),
-        frozenset(((0, -72.5), (0, -1.5))),
+        frozenset(((r, 0), (w-r, 0))),
+        frozenset(((w, -r), (w, -(h-r)))),
+        frozenset(((w-r, -h), (r, -h))),
+        frozenset(((0, -(h-r)), (0, -r))),
     }
     expected_arcs = {
-        frozenset(((50.5, 0), (52, -1.5))),
-        frozenset(((52, -72.5), (50.5, -74))),
-        frozenset(((1.5, -74), (0, -72.5))),
-        frozenset(((0, -1.5), (1.5, 0))),
+        frozenset(((w-r, 0), (w, -r))),
+        frozenset(((w, -(h-r)), (w-r, -h))),
+        frozenset(((r, -h), (0, -(h-r)))),
+        frozenset(((0, -r), (r, 0))),
     }
     assert len(objects) == 8, 'Expected four straight edges and four corner arcs'
     lines, arcs, segments = set(), set(), []
@@ -24,7 +26,7 @@ def verified_outline(objects, tolerance=.001):
         ends = frozenset(((round(obj.x1, 5), round(obj.y1, 5)),
                           (round(obj.x2, 5), round(obj.y2, 5))))
         if isinstance(obj, Arc):
-            assert abs(math.hypot(obj.cx, obj.cy) - 1.5) < 1e-5
+            assert abs(math.hypot(obj.cx, obj.cy) - r) < 1e-5
             arcs.add(ends)
             segments.extend(LineString(((s.x1, s.y1), (s.x2, s.y2)))
                             for s in obj.approximate(max_error=tolerance))
@@ -40,5 +42,5 @@ def verified_outline(objects, tolerance=.001):
     contours = list(polygonize(segments))
     assert len(contours) == 1 and contours[0].is_valid, 'Contour must close once'
     contour = contours[0]
-    assert abs(contour.area - (52 * 74 - (4 - math.pi) * 1.5 ** 2)) < .02
+    assert abs(contour.area - (w*h - (4 - math.pi)*r**2)) < .02
     return contour

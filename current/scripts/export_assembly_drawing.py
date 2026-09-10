@@ -12,19 +12,21 @@ b=sx.loads((ROOT/'hardware/FRC_Sensor_CAN.kicad_pcb').read_text())
 removed=0
 for fp in b:
     if not isinstance(fp,list) or not fp or str(fp[0])!='footprint':continue
+    back=any(isinstance(v,list) and str(v[0])=='layer' and v[1]=='B.Cu' for v in fp)
     for field in fp:
         if isinstance(field,list) and len(field)>2 and str(field[0])=='property' and field[1]=='Reference':
             field[:]=[e for e in field if not (isinstance(e,list) and e and str(e[0]) in ('hide','at','layer','effects'))]
             at='(at 0 0 0)'
             if field[2] in ('J1','J2','J3'):at='(at 1.75 3.5 0)'
             elif field[2] in ('J4','J5','J6'):at='(at 3.5 3.5 0)'
-            elif field[2] in ('JP101','JP201','JP301'):at='(at -1.4 2 0)'
-            field.extend([sx.loads(at),sx.loads('(layer "F.Fab")'),sx.loads('(effects (font (size 0.6 0.6) (thickness 0.1)))')])
+            elif field[2] in ('JP101','JP201','JP301'):at='(at 0.75 2 0)'
+            effects='(effects (font (size 0.5 0.5) (thickness 0.08))'+(' (justify mirror)' if back else '')+')'
+            field.extend([sx.loads(at),sx.loads('(layer "B.Fab")' if back else '(layer "F.Fab")'),sx.loads(effects)])
     kept=[]
     for item in fp:
         redundant=(isinstance(item,list) and len(item)>2 and str(item[0])=='fp_text'
                    and str(item[1])=='user' and item[2] in ('${REFERENCE}','%R')
-                   and any(isinstance(c,list) and len(c)>1 and str(c[0])=='layer' and c[1]=='F.Fab' for c in item))
+                   and any(isinstance(c,list) and len(c)>1 and str(c[0])=='layer' and c[1] in ('F.Fab','B.Fab') for c in item))
         if redundant:removed+=1
         else:kept.append(item)
     fp[:]=kept
@@ -32,4 +34,6 @@ with tempfile.TemporaryDirectory(prefix='sensor_can_assembly_') as folder:
     path=Path(folder)/'assembly.kicad_pcb';path.write_text(sx.dumps(b))
     subprocess.run(['kicad-cli','pcb','export','pdf','--mode-single','--layers','F.Fab,F.Silkscreen,Edge.Cuts',
                     '--exclude-value','--scale','2','--black-and-white','-o',str(ROOT/'output/assembly/top_assembly.pdf'),str(path)],check=True)
+    subprocess.run(['kicad-cli','pcb','export','pdf','--mode-single','--layers','B.Fab,B.Silkscreen,Edge.Cuts',
+                    '--mirror','--exclude-value','--scale','2','--black-and-white','-o',str(ROOT/'output/assembly/bottom_assembly.pdf'),str(path)],check=True)
 print('Assembly-only redundant labels removed:',removed)

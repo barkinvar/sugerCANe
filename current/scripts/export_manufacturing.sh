@@ -13,6 +13,8 @@ kicad-cli pcb export gerbers --layers F.Cu,In1.Cu,In2.Cu,B.Cu,F.Paste,B.Paste,F.
 kicad-cli pcb export drill --format excellon --excellon-units mm --excellon-zeros-format decimal --excellon-separate-th --generate-map --map-format pdf --generate-report --report-path output/fabrication/drill_report.txt -o output/fabrication/ "$board"
 kicad-cli pcb export pos --format csv --units mm --side front --exclude-dnp -o output/assembly/positions_all_top.csv "$board"
 kicad-cli pcb export pos --format csv --units mm --side front --smd-only --exclude-dnp -o output/assembly/positions_smd_top.csv "$board"
+kicad-cli pcb export pos --format csv --units mm --side both --exclude-dnp -o output/assembly/positions_all.csv "$board"
+kicad-cli pcb export pos --format csv --units mm --side both --smd-only --exclude-dnp -o output/assembly/positions_smd.csv "$board"
 python scripts/export_assembly_drawing.py
 kicad-cli pcb export pdf --mode-single --layers B.Silkscreen,Edge.Cuts --mirror --scale 2 --black-and-white -o output/assembly/bottom_markings.pdf "$board"
 kicad-cli pcb export svg --mode-single --layers F.Cu,F.Mask,F.Silkscreen,Edge.Cuts --fit-page-to-board --exclude-drawing-sheet -o output/assembly/top_copper.svg "$board"

@@ -1,0 +1,16 @@
+{
+  "variant": "Rev H compact prototype",
+  "width_mm": 52,
+  "height_mm": 70,
+  "corner_radius_mm": 1.5,
+  "baseline_width_mm": 52,
+  "baseline_height_mm": 74,
+  "baseline_commit": "1c03fd1",
+  "bottom_references": ["C101", "Q101", "Q102", "Q201", "Q202", "Q301", "Q302", "R111", "R112", "R210", "R211", "R212", "R311", "R312", "R52"],
+  "selector_row_y_mm": 56.4,
+  "bias_transistor_row_y_mm": 64.5,
+  "sensor_connector_front_row_y_mm": 61,
+  "sensor_connector_back_row_y_mm": 68,
+  "mounting_holes_top_left_mm": [[3.5, 4], [48.5, 46.5]],
+  "note": "Layout-only prototype. Electrical circuit, component values, pin mappings and firmware identity are unchanged from the branch snapshot. Factory assembly requires both sides."
+}
