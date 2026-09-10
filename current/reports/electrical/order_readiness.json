@@ -5,8 +5,8 @@
   "power_distribution_valid_for_current_layout": true,
   "full_power_transient_pass": false,
   "input_hashes": {
-    "hardware/design/circuit.json": "3f077ab74530cf41d072d848b7192e28bee21ccba3a22e8232b252556e57556c",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
+    "hardware/design/circuit.json": "fba0e0e4347605db774f2a3259a5a136d520aa48a52ddbee446a8f04cbbc61ae",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "4d00abd563bfa88924e25474253365773afd8d0fa6c0d622cb002c53a29b7d28",
     "reports/electrical/electrical_checks.json": "ad27f7e16f6cbff19cc68ec084b22389250dfca7802d8e8bf8d0f183b9c52f6f",
     "reports/electrical/boost_spice.json": "1569440df8c69b3db8e19c4b869508e76733b0c662a87ab44dec585ce2ef9abb",
     "reports/design_parity.json": "d79cbd2f9a9dd988ede7c9394aad08e31f1f18c110d687679477102b4768bee5",
@@ -104,14 +104,14 @@
       "branch_drop_V": {
         "VIN_RAW": 0.019026119686880467,
         "VIN_FUSED": 0.03090458019902227,
-        "VIN_PROT": 0.09143608119257328
+        "VIN_PROT": 0.09047407842566674
       },
-      "total_drop_V": 0.141366781078476,
-      "resistance_ohm": 0.070683390539238,
+      "total_drop_V": 0.14040477831156947,
+      "resistance_ohm": 0.07020238915578474,
       "analytical_normal_input_at_6V_A": 1.7259711902877457,
-      "drop_at_analytical_normal_input_V": 0.1219974957025822,
+      "drop_at_analytical_normal_input_V": 0.12116730117225331,
       "full_entry_resistance_planning_budget_ohm": 0.276,
-      "budget_remaining_for_excluded_items_ohm": 0.20531660946076202,
+      "budget_remaining_for_excluded_items_ohm": 0.20579761084421527,
       "scope": "Copper-only partition of the existing entry-resistance assumption, not verification of that full budget. Excludes fuse, MOSFET, contacts, cables and ground return. 2 A is a DC screening point, not a thermal/current rating or maximum fault current."
     },
     "results": {
@@ -164,8 +164,8 @@
         "('Q1', '5')": -0.03090458019902227
       },
       "VIN_PROT": {
-        "('Q1', '1')": -1.1934294165862926e-17,
-        "('U1', '3')": -0.09143608119257328
+        "('Q1', '1')": -5.169726884968738e-17,
+        "('U1', '3')": -0.09047407842566674
       },
       "VPORT1": {
         "('JP101', '2')": 0.0,
@@ -180,7 +180,7 @@
         "('J6', '1')": -0.0015212610480000006
       }
     },
-    "geometry_sha256": "b29c93ebb344fc5b9f51754905b9bc88a90bc65bfc0ba3b934313771c3ba8b0a",
+    "geometry_sha256": "5207a6120319dc089b954b7a3300abf0a54cbfc1568459b4fbd9189a2e6c406e",
     "scope": "Nominal etched dimensions, ideal pads/via annuli and finite transverse links between overlapping track centerlines. No current-crowding or temperature solution, ground return, connector contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json."
   },
   "protection_boundary": {

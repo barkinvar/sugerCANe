@@ -1,5 +1,5 @@
 reference,MPN,value,footprint,voltage,tolerance,rated_power_W,dielectric,note
-C1,EEE-FK1H470P,47uF,FRC_Sensor_CAN:CP_Elec_8x6.5,50V,20%,,,
+C1,EEEFT1H470AP,47uF,FRC_Sensor_CAN:CP_Panasonic_FT_6.3x5.8,50V,20%,,,"Factory fitted. 47uF 50V 20%; 195mA ripple, 0.68ohm max ESR. Panasonic profile (5); respect dwell limits."
 C101,CC0805JRNPO9BN102,1nF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,C0G,
 C11,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
 C12,CL31A226KAHNNNE,22uF,FRC_Sensor_CAN:C_1206_3216Metric,25V,10%,,X5R,

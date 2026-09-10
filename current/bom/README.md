@@ -18,3 +18,5 @@ Use **Factory_BOM + CPL** for top-side SMT assembly. The user buys and fits the 
 Pair the factory BOM with [CPL_JLCPCB.csv](../output/assembly/CPL_JLCPCB.csv) and the [Gerber ZIP](../order/README.md). Do not include the ten hand-fitted components in factory SMT placement. [Cost explanation](../docs/COST_REDUCTION.md) includes substitutions and exclusions; [factory instructions](../docs/FACTORY_ORDER.md) define the scope.
 
 This is a [JLC sourcing candidate](../docs/JLC_SOURCING.md), pending user approval and new simulations. The September 9, 2026 live recheck covers every factory type: 54 of 55 have enough orderable stock for ten boards; U5 needs exact-part sourcing. No inventory is reserved or delivery promised.
+
+C1 / EEEFT1H470AP remains in factory SMT assembly. All fine-pitch parts, passives and the RGB LED must arrive already soldered. U5 / STM32F042K6T6 stays in the BOM/CPL for factory assembly using JLC Global Sourcing / My Parts; do not omit it from the order or plan to hand solder it. Follow the [procurement steps](../docs/FACTORY_ORDER.md#ordering-sequence).

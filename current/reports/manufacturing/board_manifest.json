@@ -2067,7 +2067,7 @@
     {
       "reference": "C1",
       "value": "47uF",
-      "package": "CP_Elec_8x6.5",
+      "package": "CP_Panasonic_FT_6.3x5.8",
       "x_mm": 5.0,
       "y_mm": -21.0,
       "rotation_deg": 90.0,
@@ -2076,7 +2076,7 @@
           "number": "1",
           "net": "VIN_PROT",
           "x_mm": 5.0,
-          "y_mm": -24.05,
+          "y_mm": -23.5,
           "copper_top": true,
           "copper_bottom": false
         },
@@ -2084,13 +2084,13 @@
           "number": "2",
           "net": "GND",
           "x_mm": 5.0,
-          "y_mm": -17.95,
+          "y_mm": -18.5,
           "copper_top": true,
           "copper_bottom": false
         }
       ],
       "models": [
-        "${KIPRJMOD}/library/3d/CP_Elec_8x6.5.step"
+        "${KIPRJMOD}/library/3d/CP_Panasonic_FT_6.3x5.8.step"
       ]
     },
     {

@@ -1190,47 +1190,6 @@
     "digikey_url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL32B106KBJNNWE/3891474",
     "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
-  "EEE-FK1H470P": {
-    "mpn": "EEE-FK1H470P",
-    "manufacturer": "Panasonic",
-    "supplier": "JLCPCB",
-    "supplier_part": "C278400",
-    "url": "https://jlcpcb.com/partdetail/C278400",
-    "stock_observed": 3776,
-    "observed_date": "2026-09-10",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.2943
-      ],
-      [
-        50,
-        0.2381
-      ],
-      [
-        150,
-        0.2141
-      ],
-      [
-        1000,
-        0.1841
-      ],
-      [
-        2000,
-        0.1707
-      ],
-      [
-        5000,
-        0.1626
-      ]
-    ],
-    "lcsc": "C278400",
-    "digikey_sku": "PCE3815CT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/panasonic-industry/EEE-FK1H470P/765984",
-    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
-  },
   "ESD2CAN24DBZRQ1": {
     "mpn": "ESD2CAN24DBZRQ1",
     "manufacturer": "Texas Instruments",
@@ -2532,5 +2491,46 @@
     "digikey_sku": "",
     "digikey_url": "",
     "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "EEEFT1H470AP": {
+    "mpn": "EEEFT1H470AP",
+    "manufacturer": "Panasonic",
+    "supplier": "JLCPCB",
+    "supplier_part": "C92059",
+    "url": "https://jlcpcb.com/partdetail/C92059",
+    "stock_observed": 1815,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.3573
+      ],
+      [
+        50,
+        0.2896
+      ],
+      [
+        150,
+        0.2606
+      ],
+      [
+        1000,
+        0.2245
+      ],
+      [
+        2000,
+        0.2084
+      ],
+      [
+        5000,
+        0.1986
+      ]
+    ],
+    "lcsc": "C92059",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "JLC public stock sufficient for 10 boards; factory SMT with Panasonic profile (5) dwell limits; unallocated"
   }
 }

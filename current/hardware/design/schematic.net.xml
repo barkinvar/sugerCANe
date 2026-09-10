@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/neuro/candi-clone/current/hardware/FRC_Sensor_CAN.kicad_sch</source>
-    <date>2026-09-09T19:32:36</date>
+    <date>2026-09-09T19:40:32</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -188,17 +188,17 @@
   <components>
     <comp ref="C1">
       <value>47uF</value>
-      <footprint>FRC_Sensor_CAN:CP_Elec_8x6.5</footprint>
+      <footprint>FRC_Sensor_CAN:CP_Panasonic_FT_6.3x5.8</footprint>
       <fields>
-        <field name="MPN">EEE-FK1H470P</field>
-        <field name="Notes"/>
-        <field name="Footprint">FRC_Sensor_CAN:CP_Elec_8x6.5</field>
+        <field name="MPN">EEEFT1H470AP</field>
+        <field name="Notes">Factory fitted. 47uF 50V 20%; 195mA ripple, 0.68ohm max ESR. Panasonic profile (5); respect dwell limits.</field>
+        <field name="Footprint">FRC_Sensor_CAN:CP_Panasonic_FT_6.3x5.8</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="CP" description=""/>
-      <property name="MPN" value="EEE-FK1H470P"/>
-      <property name="Notes" value=""/>
+      <property name="MPN" value="EEEFT1H470AP"/>
+      <property name="Notes" value="Factory fitted. 47uF 50V 20%; 195mA ripple, 0.68ohm max ESR. Panasonic profile (5); respect dwell limits."/>
       <property name="Sheetname" value="Battery entry and internal supplies"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Battery entry and internal supplies/" tstamps="/fb3c0a9e-b322-5632-9eb0-a957beaadad4/"/>

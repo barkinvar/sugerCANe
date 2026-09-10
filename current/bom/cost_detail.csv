@@ -28,7 +28,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 1,CL21B475KAFNNNE,Factory SMT,2,2,0.0608,0.1216,0,JLCPCB,https://jlcpcb.com/partdetail/C98195
 1,CL31A226KAHNNNE,Factory SMT,8,8,0.1694,1.3552,0,JLCPCB,https://jlcpcb.com/partdetail/C12891
 1,CL32B106KBJNNWE,Factory SMT,1,1,0.7145,0.7145,0,JLCPCB,https://jlcpcb.com/partdetail/C3844168
-1,EEE-FK1H470P,Factory SMT,1,1,0.2943,0.2943,0,JLCPCB,https://jlcpcb.com/partdetail/C278400
+1,EEEFT1H470AP,Factory SMT,1,1,0.3573,0.3573,0,JLCPCB,https://jlcpcb.com/partdetail/C92059
 1,ESD2CAN24DBZRQ1,Factory SMT,1,1,0.3486,0.3486,0,JLCPCB,https://jlcpcb.com/partdetail/C5736151
 1,LM339LVDR,Factory SMT,1,1,0.5859,0.5859,0,JLCPCB,https://jlcpcb.com/partdetail/C22427665
 1,LMR51420XDDCR,Factory SMT,1,1,1.0221,1.0221,0,JLCPCB,https://jlcpcb.com/partdetail/C5246146
@@ -88,7 +88,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 5,CL21B475KAFNNNE,Factory SMT,10,10,0.0608,0.608,0,JLCPCB,https://jlcpcb.com/partdetail/C98195
 5,CL31A226KAHNNNE,Factory SMT,40,40,0.1694,6.776,0,JLCPCB,https://jlcpcb.com/partdetail/C12891
 5,CL32B106KBJNNWE,Factory SMT,5,5,0.7145,3.5725,0,JLCPCB,https://jlcpcb.com/partdetail/C3844168
-5,EEE-FK1H470P,Factory SMT,5,5,0.2943,1.4715,0,JLCPCB,https://jlcpcb.com/partdetail/C278400
+5,EEEFT1H470AP,Factory SMT,5,5,0.3573,1.7865,0,JLCPCB,https://jlcpcb.com/partdetail/C92059
 5,ESD2CAN24DBZRQ1,Factory SMT,5,5,0.3486,1.743,0,JLCPCB,https://jlcpcb.com/partdetail/C5736151
 5,LM339LVDR,Factory SMT,5,5,0.5859,2.9295,0,JLCPCB,https://jlcpcb.com/partdetail/C22427665
 5,LMR51420XDDCR,Factory SMT,5,5,1.0221,5.1105,0,JLCPCB,https://jlcpcb.com/partdetail/C5246146
@@ -148,7 +148,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 10,CL21B475KAFNNNE,Factory SMT,20,20,0.0608,1.216,0,JLCPCB,https://jlcpcb.com/partdetail/C98195
 10,CL31A226KAHNNNE,Factory SMT,80,80,0.1694,13.552,0,JLCPCB,https://jlcpcb.com/partdetail/C12891
 10,CL32B106KBJNNWE,Factory SMT,10,10,0.5989,5.989,0,JLCPCB,https://jlcpcb.com/partdetail/C3844168
-10,EEE-FK1H470P,Factory SMT,10,10,0.2943,2.943,0,JLCPCB,https://jlcpcb.com/partdetail/C278400
+10,EEEFT1H470AP,Factory SMT,10,10,0.3573,3.573,0,JLCPCB,https://jlcpcb.com/partdetail/C92059
 10,ESD2CAN24DBZRQ1,Factory SMT,10,10,0.3486,3.486,0,JLCPCB,https://jlcpcb.com/partdetail/C5736151
 10,LM339LVDR,Factory SMT,10,10,0.4655,4.655,0,JLCPCB,https://jlcpcb.com/partdetail/C22427665
 10,LMR51420XDDCR,Factory SMT,10,10,0.8544,8.544,0,JLCPCB,https://jlcpcb.com/partdetail/C5246146
@@ -208,7 +208,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 25,CL21B475KAFNNNE,Factory SMT,50,50,0.0608,3.04,0,JLCPCB,https://jlcpcb.com/partdetail/C98195
 25,CL31A226KAHNNNE,Factory SMT,200,200,0.1286,25.72,0,JLCPCB,https://jlcpcb.com/partdetail/C12891
 25,CL32B106KBJNNWE,Factory SMT,25,25,0.5989,14.9725,0,JLCPCB,https://jlcpcb.com/partdetail/C3844168
-25,EEE-FK1H470P,Factory SMT,25,25,0.2943,7.3575,0,JLCPCB,https://jlcpcb.com/partdetail/C278400
+25,EEEFT1H470AP,Factory SMT,25,25,0.3573,8.9325,0,JLCPCB,https://jlcpcb.com/partdetail/C92059
 25,ESD2CAN24DBZRQ1,Factory SMT,25,25,0.3486,8.715,0,JLCPCB,https://jlcpcb.com/partdetail/C5736151
 25,LM339LVDR,Factory SMT,25,25,0.4655,11.6375,0,JLCPCB,https://jlcpcb.com/partdetail/C22427665
 25,LMR51420XDDCR,Factory SMT,25,25,0.8544,21.36,0,JLCPCB,https://jlcpcb.com/partdetail/C5246146

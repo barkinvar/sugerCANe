@@ -8,7 +8,7 @@ assert checks['revision']=='H SC12' and checks['simulation_deferred_by_user'] is
 assert checks['status'].startswith('HOLD:')
 for path,digest in checks['input_hashes'].items():
  assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale candidate evidence',path)
-status='REVIEW / QUOTATION ONLY. Standard PCBA required by D10. MCU stock, C1 reflow and final factory stack are unresolved. Simulations await user approval. Not authorized for manufacture.'
+status='REVIEW / QUOTATION ONLY. All 130 SMT parts factory fitted, including high-reflow C1 and exact U5. User fits only ten THT parts and three loose shunts. MCU Global Sourcing allocation, factory stack/dwell profile and final simulations remain pending. Not authorized for manufacture.'
 gerber=R/'order/sugarCANe_RevH_Gerbers_REVIEW_ONLY.zip'
 with zipfile.ZipFile(gerber,'w',zipfile.ZIP_DEFLATED) as z:
  fabrication=[]

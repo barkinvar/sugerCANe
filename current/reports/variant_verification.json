@@ -11,6 +11,15 @@
   "removed_parts": [],
   "changed_parts": [
     {
+      "reference": "C1",
+      "fields": [
+        "footprint",
+        "mpn",
+        "note",
+        "source_footprint"
+      ]
+    },
+    {
       "reference": "C25",
       "fields": [
         "mpn"
@@ -180,7 +189,7 @@
       "ratings_verified": "-55\u2103~+155\u2103 120\u03a9 200V 250mW Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 1206 Chip Resistor - Surface Mount ROHS"
     }
   ],
-  "unchanged": "Sensor-power, protection, comparator/bias, CAN and clock topology/values retained. Six passive MPN types replaced with equal-rated JLC-listed parts. MCU part/pin assignments unchanged; PB3 now sends RGB data. J8 electrical pin numbers retained, physical pattern replaced.",
+  "unchanged": "Sensor-power, protection, comparator/bias, CAN and clock topology/values retained. Six earlier passive MPN types replaced with equal-rated JLC-listed parts; C1 now uses a high-reflow Panasonic FT capacitor and size-D lands with matching published electrical limits. MCU part/pin assignments unchanged; PB3 now sends RGB data. J8 electrical pin numbers retained, physical pattern replaced.",
   "board_mm": [
     52,
     74
@@ -190,8 +199,8 @@
   "area_change_from_rev_g_percent": -0.050192737251116566,
   "cost_10_board_purchase_USD": {
     "rev_g": 28.8123,
-    "rev_h": 25.6121,
-    "added_vs_rev_g": -3.200199999999999
+    "rev_h": 25.6751,
+    "added_vs_rev_g": -3.1372
   },
   "firmware": "Hardware 8 / app 0.9.0 / boot 1.1.0 / protocol 4. Rev H image tag prevents accidental cross-revision LED firmware.",
   "scope": "Circuit contract and procurement arithmetic; native CAD/copper verification and physical testing remain separate."

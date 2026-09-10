@@ -55,9 +55,16 @@ for s in snapshot['substitutions']:
   assert model[ref]['footprint']==s['footprint']
 for d in snapshot['datasheets']:
  assert hashlib.sha256((R/d['file']).read_bytes()).hexdigest()==d['sha256']
-# Electrical model changes are still limited to the reviewed MPN strings.
+# Restore the separately reviewed C1 record and the six earlier MPN strings.
 for path,key in [('hardware/design/circuit.json','baseline_model_sha256')]:
- restored=(R/path).read_text()
+ restored_model=json.loads((R/path).read_text())
+ cap_review=snapshot['capacitor_reflow_review']
+ assert restored_model['parts']['C1']==cap_review['after']
+ assert cap_review['before']['pins']==cap_review['after']['pins']=={'1':'VIN_PROT','2':'GND'}
+ for field in ('value','voltage','tolerance'):
+  assert cap_review['before'][field]==cap_review['after'][field]
+ restored_model['parts']['C1']=cap_review['before']
+ restored=json.dumps(restored_model,indent=2)+'\n'
  for s in snapshot['substitutions']:restored=restored.replace(s['new_mpn'],s['old_mpn'])
  assert hashlib.sha256(restored.encode()).hexdigest()==snapshot[key],('Change beyond sourcing metadata',path)
 # Subsequent user-authorized routing edits have their own exact board review.
@@ -77,6 +84,17 @@ assert len(review['substitutions'])==len(snapshot['substitutions'])==6
 def children(rows,name):
  return [v for v in rows if isinstance(v,list) and str(v[0])==name]
 footprints={next(v[2] for v in children(f,'property') if v[1]=='Reference'):f for f in children(native,'footprint')}
+cap=snapshot['capacitor_reflow_review'];cap_fp=footprints['C1']
+assert cap['board_sha256']==route_review['board_sha256']
+assert cap_fp[1]==cap['after']['footprint']
+assert children(cap_fp,'at')[0][1:]==[5,21,90]
+for pad,x in zip(sorted(children(cap_fp,'pad'),key=lambda p:p[1]),cap['footprint']['pad_centers_x_mm']):
+ assert children(pad,'size')[0][1:]==cap['footprint']['pad_size_mm']
+ assert children(pad,'at')[0][1:3]==[x,0]
+ assert children(pad,'net')[0][1]==cap['after']['pins'][pad[1]]
+assert set(cap['sources']) <= {d['file'] for d in snapshot['datasheets']}
+for path,digest in cap['footprint']['source_hashes'].items():
+ assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Changed C1 geometry source',path)
 for approved,checked in zip(snapshot['substitutions'],review['substitutions']):
  for key in ('references','old_mpn','new_mpn','footprint'):assert checked[key]==approved[key]
  assert checked['two_terminal_nonpolar']
@@ -110,7 +128,7 @@ if assembly['factory_profile_confirmed']:
 holds=[]
 if shortages:holds.append('Insufficient orderable public stock: '+', '.join(r['mpn'] for r in shortages)+'; procurement unconfirmed')
 if ineligible:holds.append('Selected assembly service excludes BOM parts')
-if thermal_conflicts and not assembly['factory_profile_confirmed']:holds.append('C1 profile (2) permits 235 C peak; nominal Standard process can reach 245 C')
+if thermal_conflicts and not assembly['factory_profile_confirmed']:holds.append('Fitted component peak-temperature limits conflict with nominal Standard reflow')
 if not assembly['all_component_reflow_profiles_qualified']:holds.append('Factory qualification of all exact-part solder profiles and moisture handling is pending')
 hand=float(next(r for r in csv.DictReader((R/'bom/cost_estimate.csv').open()) if r['boards']=='10')['hand_parts_cash_per_board_usd'])
 report=dict(result='PASS sourcing-file consistency; HOLD manufacturing review' if holds else 'PASS sourcing-file consistency; allocation unconfirmed',
@@ -123,9 +141,10 @@ report=dict(result='PASS sourcing-file consistency; HOLD manufacturing review' i
  moisture_sensitive_parts=[dict(references=r['references'],msl=r['moisture_sensitivity_level']) for r in rows if r['moisture_sensitivity_level'] not in ('Not stated','MSL 1')],
  nominal_standard_reflow_conflicts=thermal_conflicts,manufacturing_holds=holds,
  quantity_method=snapshot['quantity_method'],factory_allocation_confirmed=False,
- electrical_model_only_reviewed_mpn_metadata_changed=True,reviewed_routing=route_review,
+ electrical_model_only_reviewed_mpn_metadata_and_C1_footprint_changed=True,reviewed_routing=route_review,
+ capacitor_reflow_review=cap,mcu_procurement=snapshot['mcu_procurement'],
  substitution_review=review,alternative_stock_review=snapshot['alternative_stock_review'],hand_solder_availability=snapshot['hand_solder'],
- order_decision='HOLD: user approval and new simulations pending; MCU sourcing, C1 reflow and factory stack/quote unconfirmed',
+ order_decision='HOLD: final simulations pending; exact MCU Global Sourcing allocation and factory stack/process quotation unconfirmed. C1 peak-temperature conflict resolved.',
  limitations='Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.',
  input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in ['bom/jlc_sourcing.json','bom/catalog_china.json','bom/Factory_BOM.csv','bom/BOM_JLCPCB.csv','output/assembly/CPL_JLCPCB.csv','hardware/design/circuit.json','hardware/FRC_Sensor_CAN.kicad_pcb','scripts/check_jlc_sourcing.py',*[d['file'] for d in snapshot['datasheets']]]})
 (R/'reports/manufacturing/jlc_sourcing.json').write_text(json.dumps(report,indent=2)+'\n')

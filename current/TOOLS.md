@@ -46,7 +46,7 @@ Compiler objects, downloaded Java dependencies, test runners, caches and scratch
 
 ## JLC candidate before simulation approval
 
-`bom/jlc_sourcing.json` records the reviewed public catalog observation, manufacturer/MPN/code matches, six passive substitutions, price tiers and stock allowances. `check_jlc_sourcing.py` audits that snapshot against the actual BOM/model; it does not query or reserve live inventory. Recheck the linked JLC listings before purchase.
+`bom/jlc_sourcing.json` records the reviewed public catalog observation, manufacturer/MPN/code matches, six earlier passive substitutions, the C1 reflow/footprint review, MCU procurement instructions, price tiers and stock allowances. `check_jlc_sourcing.py` audits that snapshot against the actual BOM/model; it does not query or reserve live inventory. Recheck the linked JLC listings before purchase.
 
 ```sh
 python hardware/design/circuit.py

@@ -7,6 +7,6 @@
   "purchase_lines": 60,
   "factory_smt_types": 55,
   "shunts": 3,
-  "component_consumed_first_tier_usd": 31.52,
+  "component_consumed_first_tier_usd": 31.58,
   "note": "Consumed parts at first supplier tier, including hand-fit parts and three loose shunts; not quantity-one purchasing cash or a PCBA quote. See cost_estimate.csv for MOQ and batch pricing."
 }

@@ -13,7 +13,11 @@ procurement={r:s for s in substitutions for r in s['references']}
 for ref in sorted(old):
  fields=[k for k in set(old[ref])|set(new[ref]) if old[ref].get(k)!=new[ref].get(k)]
  if fields:changes.append(dict(reference=ref,fields=sorted(fields)))
- if ref in procurement:
+ if ref=='C1':
+  cap=json.loads((R/'bom/jlc_sourcing.json').read_text())['capacitor_reflow_review']
+  assert old[ref]==cap['before'] and new[ref]==cap['after']
+  assert set(fields)=={'mpn','footprint','source_footprint','note'},fields
+ elif ref in procurement:
   s=procurement[ref]
   assert old[ref]['mpn']==s['old_mpn'] and new[ref]['mpn']==s['new_mpn']
   assert fields==['mpn'],(ref,fields)
@@ -30,7 +34,7 @@ current=sum(float(r['purchase_usd'])/10 for r in csv.DictReader((R/'bom/cost_det
 report=dict(result='PASS',baseline_commit=base['source_commit'],baseline_sha256=hashlib.sha256(basefile.read_bytes()).hexdigest(),
  added_parts=sorted(added),removed_parts=[],changed_parts=changes,
  procurement_substitutions=substitutions,
- unchanged='Sensor-power, protection, comparator/bias, CAN and clock topology/values retained. Six passive MPN types replaced with equal-rated JLC-listed parts. MCU part/pin assignments unchanged; PB3 now sends RGB data. J8 electrical pin numbers retained, physical pattern replaced.',
+ unchanged='Sensor-power, protection, comparator/bias, CAN and clock topology/values retained. Six earlier passive MPN types replaced with equal-rated JLC-listed parts; C1 now uses a high-reflow Panasonic FT capacitor and size-D lands with matching published electrical limits. MCU part/pin assignments unchanged; PB3 now sends RGB data. J8 electrical pin numbers retained, physical pattern replaced.',
  board_mm=[52,74],corner_radius_mm=1.5,bounding_box_area_change_from_rev_g_percent=0,
  area_change_from_rev_g_percent=-(4-math.pi)*1.5**2/(52*74)*100,
  cost_10_board_purchase_USD=dict(rev_g=base['cost_10_board_purchase_usd'],rev_h=current,added_vs_rev_g=current-base['cost_10_board_purchase_usd']),

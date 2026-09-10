@@ -1,25 +1,25 @@
 # Rev H cost and assembly basis
 
-The [JLC sourcing candidate](JLC_SOURCING.md) lowers the ten-board parts estimate from $28.99 to **$25.61 per board before SMT attrition**. With a conservative allowance for displayed assembly losses/minimums, budget **$26.49 per board**. MCU sourcing is unresolved, so its quoted catalog price remains provisional. This is a supplier/pricing update with six equal-rated passive substitutions, not a reduction in power protection.
+The [JLC sourcing candidate](JLC_SOURCING.md) lowers the ten-board parts estimate from $28.99 to **$25.68 per board before SMT attrition**. With a conservative allowance for displayed assembly losses/minimums, budget **$26.55 per board**. MCU sourcing is unresolved, so its quoted catalog price remains provisional. This is a supplier/pricing update with six earlier passive substitutions and the C1 reflow replacement, not a reduction in power protection.
 
 | Ten-board basis | Parts per board |
 |---|---:|
 | Previous mixed-supplier H estimate, before SMT attrition | $28.99 |
-| JLC-matched H estimate, before SMT attrition | $25.61 |
-| JLC-matched SMT parts with conservative attrition | $17.79 |
+| JLC-matched H estimate, before SMT attrition | $25.68 |
+| JLC-matched SMT parts with conservative attrition | $17.85 |
 | Hand-fitted parts and three caps | $8.70 |
-| Combined candidate budget with conservative attrition | **$26.49** |
+| Combined candidate budget with conservative attrition | **$26.55** |
 
-JLC prices/stock were checked September 9 in California (September 10 UTC). Hand-purchased parts retain their September 8 supplier observations. Most savings come from direct catalog matching and purchase minimums. The $3.38 difference compares estimates before SMT attrition; it is not a guaranteed invoice saving. PCB fabrication, assembly, programming/testing, freight, tax and duty remain extra.
+JLC prices/stock were checked September 9 in California (September 10 UTC). Hand-purchased parts retain their September 8 supplier observations. Most savings come from direct catalog matching and purchase minimums. The $3.31 difference compares estimates before SMT attrition; it is not a guaranteed invoice saving. PCB fabrication, assembly, programming/testing, freight, tax and duty remain extra.
 
 | Boards | Parts purchasing per board, before SMT attrition | Lot parts purchasing |
 |---|---:|---:|
-| 1 | $40.73 | $40.73 |
-| 5 | $28.09 | $140.47 |
-| 10 | $25.61 | $256.12 |
-| 25 | $23.49 | $587.32 |
+| 1 | $40.80 | $40.80 |
+| 5 | $28.16 | $140.79 |
+| 10 | $25.68 | $256.75 |
+| 25 | $23.56 | $588.89 |
 
-These arithmetic scenarios do not establish supported assembly quantities or stock for that lot. The sourcing audit checks ten boards only, and currently identifies the MCU shortage. At one board, fitted consumption is $31.52 while purchase minimums raise cash outlay to $40.73; an actual PCBA order has its own minimum quantity.
+These arithmetic scenarios do not establish supported assembly quantities or stock for that lot. The sourcing audit checks ten boards only, and currently identifies the MCU shortage. At one board, fitted consumption is $31.58 while purchase minimums raise cash outlay to $40.80; an actual PCBA order has its own minimum quantity.
 
 [Cost CSV](../bom/cost_estimate.csv) · [per-MPN purchases](../bom/cost_detail.csv) · [public JLC evidence](../bom/jlc_sourcing.json) · [sourcing audit](../reports/manufacturing/jlc_sourcing.json).
 
@@ -41,8 +41,10 @@ At ten boards, budget **$3–6 extra per board** for assembly on both sides, ass
 
 ## Quotation and delivery
 
-Use the matched JLC BOM/CPL for **Standard PCBA** with top-side SMT. The exact OPSCO LED is Standard Only. Posted setup/stencil/loading fees total $134.34 including two fixtures at ten boards; placement, X-ray, PCB/panel rails, handling and shipping are additional. Standard charges loading for all 55 types, including basic/preferred parts; additional resistor swaps would save only pennies, so they were not implemented. C1's 235°C reflow limit also needs a qualified process or a reviewed capacitor replacement before ordering. [Assembly audit](JLC_SOURCING.md#solder-process-audit).
+Use the matched JLC BOM/CPL for **Standard PCBA** with top-side SMT. The exact OPSCO LED is Standard Only. Posted setup/stencil/loading fees total $134.34 including two fixtures at ten boards; placement, X-ray, PCB/panel rails, handling and shipping are additional. Standard charges loading for all 55 types, including basic/preferred parts; additional resistor swaps would save only pennies, so they were not implemented. The C1 replacement adds $0.063 per board at this quantity and removes the known peak-temperature conflict; factory dwell/profile confirmation remains required. [Assembly audit](JLC_SOURCING.md#solder-process-audit).
 
 The [assembly scenarios](../bom/assembly_scenarios.csv) are partial fee calculations, before attrition. No supplier has been contacted or order placed. The exact MCU must be sourced, while U9 and L2 have limited stock. No inventory is allocated.
 
 One-month delivery requires confirmed component arrival, an assembly slot and destination-specific freight/customs timing. No arrival date is confirmed. [Factory instructions](FACTORY_ORDER.md).
+
+The MCU Global Sourcing charge is not yet quoted. DigiKey’s observed ten-piece price is $3.277 each, but JLC’s procurement price/fees can differ; do not treat the retained provisional MCU catalog price as an accepted quote.

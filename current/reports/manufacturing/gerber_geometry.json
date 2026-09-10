@@ -63,7 +63,7 @@
     "top": {
       "openings": 406,
       "minimum_gap_between_separate_openings": 0.14999999999999858,
-      "total_open_area_mm2": 701.5745782566548
+      "total_open_area_mm2": 691.9279989046698
     },
     "bottom": {
       "openings": 49,
@@ -75,7 +75,7 @@
     "top": {
       "openings": 357,
       "minimum_gap_between_separate_openings": 0.14999999999999858,
-      "total_open_area_mm2": 539.556594091885,
+      "total_open_area_mm2": 529.9045255305667,
       "minimum_area_ratio_at_0_10mm_stencil": 1.374999999999993
     },
     "bottom": {
@@ -127,19 +127,19 @@
   "minimum_hole_to_hole_web": 0.2851392996543623,
   "minimum_hole_edge_distance": 0.7950000000000004,
   "sha256": {
-    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "29c5ed5d18d5a5c18d107d7ef3440d45f487192db5bd6af0268d944ed2da05f2",
-    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "e11fc1d8bf7353ff28858307abf92c6f2408f0c338d11e46e7446ce38a69d6ff",
-    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "9078af678d437453ffb575779e60630d1f00a704147e2bcb315cc6b7e9f30a79",
-    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "463746dbc807f2c3bef3f14f6b606e54f33fb33214a969a329bf6a450a7d7f90",
-    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "f5bec5e98c53b2c8118cf475a7be1674c6b3d94880ba45f64683c59c5d5de5c4",
-    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "3a1fa89e5a13fe6f71fc5140a5c1978b1108e8c6c41e4ddd1954db2b9a5fa4dd",
-    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "9d7932c36bdcda65267280a23d29b9c0a01d235175893e2571cbbf60c5c6b4c3",
-    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "4ea0903777eec828767b3387bd403f11e3b44e3c345d33512efb0ecce73acc12",
-    "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": "9cf9c9da01be10c9c2a50573e1cb63ddefa7a4cf9a29d2df61e6c75b4f976609",
-    "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": "9e72a08ab0f105d480f2b0adb00510a359756965449d78fc1083c91feb307553",
-    "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": "ef42b1296cbfcf67617affa797e2ada52f199e1b73a0d434d6ca6b2e1be77b82",
-    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "287f2972c6d9b2a4dbcf142cf29756f6b31df3ea8ff8a8500159c251544851b8",
-    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "8e69be119bde13d6c745e29ae3ef22d7d02e4bcfe11314a47ae94352d55c5d45"
+    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "6eaa0841ec558a17717318a6bfc745569f00dd3813c18acbf7e0237320ac69f2",
+    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "834bd6f266cb397a2cc38c01d63cf92ceb7128ce895320c24b698351892578df",
+    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "5def4cef7a409b0ea4253090182ef722b34c1ecc5dd2a604dd9e995571cfa62e",
+    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "87e17aa7a25f21d1e028e4f7ec1c36a7020b6ef8ae1e0a3eec60b72aeb9381b7",
+    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "59a145f6608d4dc1f8462c5d40b8461ce85bb4bdc7b9f2be4238752c79c90d5f",
+    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "a67ca76a012a28b1b3f426cf53a95b3194cdf8ffd6c3d6f1b1cbc5aeac070114",
+    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "062f154c255659f901ff714582e9253c04403407b60539b47ba82f2473c3c26c",
+    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "4c039c2d2daac84e061b6405f8cd28c48c456e45a1b2d03ae70f528f02b78c4f",
+    "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": "dd8dc07d70195fe7b22b54555229a3a923208637756c9aa1842d8593ea1f8037",
+    "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": "7db7a9135fd75a9560735d0b774cd3ea9125ab443f2bffb0afaeb2ef45a77692",
+    "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": "5a95870e8529818fd2a544d279b2bc4b0abc7b56909c15c6557fe0d4726bcd17",
+    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "1019b8f0d8d88a0c0302bf595e44604cc0ef59045f415c2db8a3b9ddb6acb1cc",
+    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "17964102d092f79a9d22a09f5332f506e893cc39648f1c90a5bfe059d7531025"
   },
   "source_hashes": {
     "scripts/verify_gerber_geometry.py": "0a1c14994b4cca5568a10a6fbf84fa3ae9b6babd12405764572b00d6c579bc86",

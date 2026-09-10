@@ -26,7 +26,7 @@ BSS138BK,"Q102, Q202, Q302, Q2, Q3",FRC_Sensor_CAN:SOT-23,5,Nexperia,"BSS138BK,2
 4.7uF,"C8, C24",FRC_Sensor_CAN:C_0805_2012Metric,2,Samsung Electro-Mechanics,CL21B475KAFNNNE,C98195,https://jlcpcb.com/partdetail/C98195
 22uF,"C4, C5, C13, C12, C60, C62, C63, C64",FRC_Sensor_CAN:C_1206_3216Metric,8,Samsung Electro-Mechanics,CL31A226KAHNNNE,C12891,https://jlcpcb.com/partdetail/C12891
 10uF,C2,FRC_Sensor_CAN:C_1210_3225Metric,1,Samsung Electro-Mechanics,CL32B106KBJNNWE,C3844168,https://jlcpcb.com/partdetail/C3844168
-47uF,C1,FRC_Sensor_CAN:CP_Elec_8x6.5,1,Panasonic,EEE-FK1H470P,C278400,https://jlcpcb.com/partdetail/C278400
+47uF,C1,FRC_Sensor_CAN:CP_Panasonic_FT_6.3x5.8,1,Panasonic,EEEFT1H470AP,C92059,https://jlcpcb.com/partdetail/C92059
 ESD2CAN24-Q1,D20,FRC_Sensor_CAN:SOT-23,1,Texas Instruments,ESD2CAN24DBZRQ1,C5736151,https://jlcpcb.com/partdetail/C5736151
 LM339LV,U7,FRC_Sensor_CAN:SOIC-14_3.9x8.7mm_P1.27mm,1,Texas Instruments,LM339LVDR,C22427665,https://jlcpcb.com/partdetail/C22427665
 LMR51420XDDCR,U1,FRC_Sensor_CAN:TSOT-23-6,1,Texas Instruments,LMR51420XDDCR,C5246146,https://jlcpcb.com/partdetail/C5246146

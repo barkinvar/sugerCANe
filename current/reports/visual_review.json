@@ -1,31 +1,31 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-10T02:34:33.339608+00:00",
+  "reviewed_utc": "2026-09-10T02:45:02.376811+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
       "file": "output/review/board_3d_final.png",
-      "sha256": "83c6716eb713acab51667a4b3969723067018c7b695cdaec6234be01512c0bd9",
-      "scope": "Fresh native-board render visually inspected. Input widening is present; component placement, connectors, recessed socket, voltage labels and right-side RGB light-duct area remain consistent. Underside artwork remains unobstructed.",
-      "reviewed_utc": "2026-09-10T02:34:33.339608+00:00"
+      "sha256": "c7034d7d93e795c45ffae83789ef40fb60380207dc2f8dcfcab3e861f1398770",
+      "scope": "Fresh native-board render visually inspected. C1 now uses the smaller 6.3 x 5.8 mm envelope at the same location; other components, connectors, service socket, selector labels, right-side RGB area and bottom artwork remain consistent.",
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00"
     },
     {
       "file": "output/review/board_top.png",
-      "sha256": "51e030eccf2b961c5d2e0b58e0e139ea60ced898a00ed10972daad2da83b19fd",
-      "scope": "Fresh native-board render visually inspected. Input widening is present; component placement, connectors, recessed socket, voltage labels and right-side RGB light-duct area remain consistent. Underside artwork remains unobstructed.",
-      "reviewed_utc": "2026-09-10T02:34:33.339608+00:00"
+      "sha256": "f68939214ea24af4132f2c8dee2906704c6929f88547e2a9de202986cd4d19eb",
+      "scope": "Fresh native-board render visually inspected. C1 now uses the smaller 6.3 x 5.8 mm envelope at the same location; other components, connectors, service socket, selector labels, right-side RGB area and bottom artwork remain consistent.",
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00"
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "55d32def7492f86e38e6d3600ec8918563b315e4252b6820de893bb119f24961",
-      "scope": "Fresh native-board render visually inspected. Input widening is present; component placement, connectors, recessed socket, voltage labels and right-side RGB light-duct area remain consistent. Underside artwork remains unobstructed.",
-      "reviewed_utc": "2026-09-10T02:34:33.339608+00:00"
+      "sha256": "14b9535feaafd9a5745b39afd1ef318ccf8f6a28ae95ab3497c3b16ca4cea577",
+      "scope": "Fresh native-board render visually inspected. C1 now uses the smaller 6.3 x 5.8 mm envelope at the same location; other components, connectors, service socket, selector labels, right-side RGB area and bottom artwork remain consistent.",
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00"
     },
     {
       "file": "output/review/board_connectors.png",
-      "sha256": "e2a1f0819f4af4129fee824222101ab093cad1ea9c6cc8f76259569da5a9a3aa",
-      "scope": "Fresh native-board render visually inspected. Input widening is present; component placement, connectors, recessed socket, voltage labels and right-side RGB light-duct area remain consistent. Underside artwork remains unobstructed.",
-      "reviewed_utc": "2026-09-10T02:34:33.339608+00:00"
+      "sha256": "ed6549f069bc71933e24745ef30ad438b32f9064762e4665a3e303ef60c16311",
+      "scope": "Fresh native-board render visually inspected. C1 now uses the smaller 6.3 x 5.8 mm envelope at the same location; other components, connectors, service socket, selector labels, right-side RGB area and bottom artwork remain consistent.",
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00"
     },
     {
       "file": "output/review/service_gui.png",
@@ -36,15 +36,15 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "6c02c3ced416f8ddcb3275f92d1ebbfc1b7f5ba5ff8e870225ec0f65b5bf844c",
-      "scope": "All 40 pages raster-compared with the 39-page baseline; page-number footer excluded for shifted-content matching. New/changed body pages 1, 2, 4, 5, 6 visually inspected: cover, contents, four-layer download table and input-power review. Remaining 35 body pages match the baseline at 1.5x. Section headings now stay with their small tables; text and tables fit the pages.",
-      "reviewed_utc": "2026-09-10T02:34:33.339608+00:00"
+      "sha256": "1b861fa01516d141ac74eab519793affa022b580fee6b37b783a96bb6bb73543",
+      "scope": "41 pages raster-compared with the 40-page baseline. Changed body pages 1, 2, 3, 5, 16, 25, 26, 27, 34, 35, 36, 38, 39 and 41 visually inspected; 27 remaining body pages match at 1.5x with the bottom 40-point footer excluded. Factory/manual scopes, C1 ratings/process/geometry, MCU procurement, updated DC figures, costs and sourcing holds are legible; no clipped text or tables.",
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
-      "sha256": "c20c1ea259999cf7a59e0f058b964b62a462cfbaaf02da3bf7fa021b01e23a80",
-      "scope": "All three pages visually inspected after live price refresh. Exact MPNs, references, values and footprints unchanged; first-tier prices updated. Table rows and manufacturing HOLD remain readable.",
-      "reviewed_utc": "2026-09-10T02:27:54.254694+00:00"
+      "sha256": "03c9bad88b71e91efcd0d2c627a13c34d24d87e7e1feead59110722f34c07b7f",
+      "scope": "Changed pages 1 and 2 visually inspected: 130 factory SMT plus 10 manual THT, revised cost and C1 MPN/footprint. Page 3 is raster-identical to the baseline. Table cells fit; factory procurement/simulation holds remain explicit.",
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00"
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
@@ -62,16 +62,15 @@
     },
     {
       "file": "output/assembly/top_assembly.pdf",
-      "sha256": "a2caf8c66a9d0b9e6aa5878c5c718c850d0abf30d107185a60cacb7d32790673",
-      "scope": "All 1 rendered pages are pixel-identical to reviewed ae55a5b. Existing visual review retained.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00",
-      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
+      "sha256": "a3254a067ce0bc8bbf697e3d4162c798bf752bb7d97b01ac6fbc5d61b0dd67b7",
+      "scope": "Fresh native-board assembly drawing visually inspected: C1 smaller body, polarity mark and same center/orientation; other parts and labels retained.",
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00"
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "sha256": "57b38956b721ceb25a4d05f5ff4e0528a84b22764c17f46b172792767dc6e92a",
-      "scope": "All four exported copper layers inspected in PNG and compared as PDF pages. Only top and bottom copper pages change; inner pages match the baseline. Correct outline, drill overlays, layer orientation and input-width changes reviewed.",
-      "reviewed_utc": "2026-09-10T02:34:33.339608+00:00"
+      "sha256": "c81de440074ba80702283ca9960e8a17f449cf720ae2e82deaed299ca5782a5a",
+      "scope": "Four-page exported-copper PDF raster-compared. Only top copper changes, at C1 pads/pour; reviewed visually with correct outline/drills. Both inner and bottom pages match the baseline.",
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00"
     },
     {
       "file": "reports/electrical/converter_loop.png",
@@ -117,15 +116,15 @@
     },
     {
       "file": "output/review/gerber_top_copper.png",
-      "sha256": "41f21f07a15c58648650c7194788d6c3720a9939a541665cc98ece413587bee2",
-      "scope": "All-four-layer exported-copper review: outline, drills, retained track paths and ground clearances inspected. Inner layers viewed from top; bottom mirrored for underside view. PNG and SVG generated from the same plotted geometry and bound to exact Gerber hashes in preview_source.json.",
-      "reviewed_utc": "2026-09-10T02:34:33.339608+00:00"
+      "sha256": "5c4110e89d5466c70a0b9001cf361cebd818458cb50c1f5ebdadfb67aced88d4",
+      "scope": "Top copper C1 pad/pour change visually inspected. PNG/SVG generated together and bound to current Gerber/output hashes in preview_source.json; inner views from top, bottom mirrored.",
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00"
     },
     {
       "file": "output/review/gerber_bottom_copper.png",
       "sha256": "6eb81f96c1847c3347b52ce679c78e29e1de662d5d6f3ed67fcfb61f8ff7c988",
-      "scope": "All-four-layer exported-copper review: outline, drills, retained track paths and ground clearances inspected. Inner layers viewed from top; bottom mirrored for underside view. PNG and SVG generated from the same plotted geometry and bound to exact Gerber hashes in preview_source.json.",
-      "reviewed_utc": "2026-09-10T02:34:33.339608+00:00"
+      "scope": "Exported copper/drill geometry exactly matches the previously reviewed baseline after generator timestamps are excluded; corresponding PDF page and PNG raster are unchanged. PNG/SVG generated together and bound to current Gerber/output hashes in preview_source.json; inner views from top, bottom mirrored.",
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00"
     },
     {
       "file": "output/fabrication/FRC_Sensor_CAN-NPTH-drl_map.pdf",
@@ -162,71 +161,53 @@
     },
     {
       "file": "output/review/gerber_top_copper.svg",
-      "sha256": "fe6b28d5fe86e81cdad103f7e166d3a164c52d3a235e6ec7039b8058cc9bbbff",
-      "reviewed_utc": "2026-09-10T02:34:33.339608+00:00",
-      "scope": "All-four-layer exported-copper review: outline, drills, retained track paths and ground clearances inspected. Inner layers viewed from top; bottom mirrored for underside view. PNG and SVG generated from the same plotted geometry and bound to exact Gerber hashes in preview_source.json."
+      "sha256": "c0d46e2e52af7c7be0ce341aec7cd4016fa21b0356783d06d601a815c9463817",
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00",
+      "scope": "Top copper C1 pad/pour change visually inspected. PNG/SVG generated together and bound to current Gerber/output hashes in preview_source.json; inner views from top, bottom mirrored."
     },
     {
       "file": "output/review/gerber_inner_1_copper.png",
       "sha256": "f0c9436a3e9819c83197957af7c39012d8607feeb272c4e5d5f6cf68a8e2a4d9",
-      "reviewed_utc": "2026-09-10T02:34:33.339608+00:00",
-      "scope": "All-four-layer exported-copper review: outline, drills, retained track paths and ground clearances inspected. Inner layers viewed from top; bottom mirrored for underside view. PNG and SVG generated from the same plotted geometry and bound to exact Gerber hashes in preview_source.json."
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00",
+      "scope": "Exported copper/drill geometry exactly matches the previously reviewed baseline after generator timestamps are excluded; corresponding PDF page and PNG raster are unchanged. PNG/SVG generated together and bound to current Gerber/output hashes in preview_source.json; inner views from top, bottom mirrored."
     },
     {
       "file": "output/review/gerber_inner_1_copper.svg",
-      "sha256": "f341dd8eb13b52dd0ad95837f6f74b01550a8b3435bb21204a7c9fc1f0af1297",
-      "reviewed_utc": "2026-09-10T02:34:33.339608+00:00",
-      "scope": "All-four-layer exported-copper review: outline, drills, retained track paths and ground clearances inspected. Inner layers viewed from top; bottom mirrored for underside view. PNG and SVG generated from the same plotted geometry and bound to exact Gerber hashes in preview_source.json."
+      "sha256": "252e367c8661483ba134035339eaa3bfa857ec89847f49b735634ab6caf2446e",
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00",
+      "scope": "Exported copper/drill geometry exactly matches the previously reviewed baseline after generator timestamps are excluded; corresponding PDF page and PNG raster are unchanged. PNG/SVG generated together and bound to current Gerber/output hashes in preview_source.json; inner views from top, bottom mirrored."
     },
     {
       "file": "output/review/gerber_inner_2_copper.png",
       "sha256": "a490a1bea1b086c21450bf512b7218ddbbc225122d8cd72e0e0b9e9de7b1d521",
-      "reviewed_utc": "2026-09-10T02:34:33.339608+00:00",
-      "scope": "All-four-layer exported-copper review: outline, drills, retained track paths and ground clearances inspected. Inner layers viewed from top; bottom mirrored for underside view. PNG and SVG generated from the same plotted geometry and bound to exact Gerber hashes in preview_source.json."
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00",
+      "scope": "Exported copper/drill geometry exactly matches the previously reviewed baseline after generator timestamps are excluded; corresponding PDF page and PNG raster are unchanged. PNG/SVG generated together and bound to current Gerber/output hashes in preview_source.json; inner views from top, bottom mirrored."
     },
     {
       "file": "output/review/gerber_inner_2_copper.svg",
-      "sha256": "92ca273428664ebb9f689459aea7b694d6644332d6dbb8dd796942aefb77f6db",
-      "reviewed_utc": "2026-09-10T02:34:33.339608+00:00",
-      "scope": "All-four-layer exported-copper review: outline, drills, retained track paths and ground clearances inspected. Inner layers viewed from top; bottom mirrored for underside view. PNG and SVG generated from the same plotted geometry and bound to exact Gerber hashes in preview_source.json."
+      "sha256": "f08e852e985328e7fe87d5d044e85c25e70a213c8c4c28c61e62a433c862a0b2",
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00",
+      "scope": "Exported copper/drill geometry exactly matches the previously reviewed baseline after generator timestamps are excluded; corresponding PDF page and PNG raster are unchanged. PNG/SVG generated together and bound to current Gerber/output hashes in preview_source.json; inner views from top, bottom mirrored."
     },
     {
       "file": "output/review/gerber_bottom_copper.svg",
-      "sha256": "a29e243ac60c2b1c3a1221f482d7cfbb8b54c76ac310a308a5876bbbdc36eea1",
-      "reviewed_utc": "2026-09-10T02:34:33.339608+00:00",
-      "scope": "All-four-layer exported-copper review: outline, drills, retained track paths and ground clearances inspected. Inner layers viewed from top; bottom mirrored for underside view. PNG and SVG generated from the same plotted geometry and bound to exact Gerber hashes in preview_source.json."
+      "sha256": "0d399c3bd5f1753f950dee3ddad84aa3d822b2f6f70687574b78213c92ebda56",
+      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00",
+      "scope": "Exported copper/drill geometry exactly matches the previously reviewed baseline after generator timestamps are excluded; corresponding PDF page and PNG raster are unchanged. PNG/SVG generated together and bound to current Gerber/output hashes in preview_source.json; inner views from top, bottom mirrored."
     }
   ],
-  "limitations": "Visual, native CAD, all-layer exported geometry and nominal DC checks only. No ground-return impedance, current crowding, thermal-rise or physical qualification. New converter/input transient simulations remain deferred; MCU sourcing, C1 reflow and final factory stack remain holds.",
-  "page_comparison_baseline_commit": "0315d9824df05e9c4c27744744a522d7b24f709c",
+  "limitations": "Visual, native CAD, all-layer exported geometry and nominal DC checks only. No ground-return impedance, current crowding, thermal-rise or physical qualification. Final power/input transient simulations remain deferred; exact MCU procurement, complete factory dwell/moisture profile and stack quotation remain pending.",
+  "page_comparison_baseline_commit": "3b45f5a1919b5fc703e21359285c547f7d7ffef3",
   "rendered_page_comparison": {
     "output/documentation/SC12_RevH_Handbook.pdf": {
-      "before_pages": 39,
-      "after_pages": 40,
+      "before_pages": 40,
+      "after_pages": 41,
       "changed_pages": [
         1,
         2,
-        4,
+        3,
         5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
         16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
         25,
         26,
         27,
@@ -242,13 +223,17 @@
         37,
         38,
         39,
-        40
+        40,
+        41
       ]
     },
     "output/documentation/BOM_RevH_SC12.pdf": {
       "before_pages": 3,
       "after_pages": 3,
-      "changed_pages": []
+      "changed_pages": [
+        1,
+        2
+      ]
     },
     "output/mechanical/mechanical_drawing.pdf": {
       "before_pages": 2,
@@ -263,14 +248,15 @@
     "output/assembly/top_assembly.pdf": {
       "before_pages": 1,
       "after_pages": 1,
-      "changed_pages": []
+      "changed_pages": [
+        1
+      ]
     },
     "output/assembly/gerber_copper_review.pdf": {
       "before_pages": 4,
       "after_pages": 4,
       "changed_pages": [
-        1,
-        4
+        1
       ]
     },
     "output/assembly/bottom_markings.pdf": {
@@ -304,26 +290,24 @@
       "scripts/apply_bottom_artwork.py": "aab47c1f93f2ed558e0d94d5b60c74ec531f583fd9cffa7cdd3ff4b60fca3307"
     },
     "native_bottom_artwork_unchanged_since": "e1e414610c446869f02546a1a50daa3a2530ad9b",
-    "silkscreen_mask_paste_outline_geometry_unchanged": true
+    "bottom_silkscreen_mask_paste_and_outline_geometry_unchanged": true
   },
   "unchanged_export_geometry": {
     "files": [
+      "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl",
       "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs",
       "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp",
       "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo",
       "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1",
-      "output/fabrication/FRC_Sensor_CAN-F_Mask.gts",
-      "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp",
-      "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto",
       "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1",
       "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2",
       "output/fabrication/FRC_Sensor_CAN-NPTH.drl",
       "output/fabrication/FRC_Sensor_CAN-PTH.drl"
     ],
     "method": "Exact text comparison excluding generator timestamp lines only.",
-    "baseline_commit": "0315d9824df05e9c4c27744744a522d7b24f709c"
+    "baseline_commit": "3b45f5a1919b5fc703e21359285c547f7d7ffef3"
   },
-  "sourcing_geometry_note": "The dated stock/substitution review remains valid for identical parts and pads; this later input-width update changes only 14 track widths and outer-layer ground fills. No stock reservation or new inventory claim.",
+  "sourcing_geometry_note": "C1 EEEFT1H470AP high-reflow replacement changes only its native footprint/metadata and regenerated pours. All 1530 traces, 242 vias, other parts and stack remain identical. U5 exact-part Global Sourcing candidate identified; no parts allocated or purchased.",
   "assembly_audit_document_comparison": {
     "baseline_commit": "26a31d8859a3b7bdf73beb16c652f51b8c65de3b",
     "documents": {
@@ -595,7 +579,55 @@
       "notch_review": "Five local pour cutouts retreat opposing tips, including two local gaps within a connected inner-plane island. Final morphological slit candidates above 0.005 mm\u00b2 are absent after excluding a 2 \u00b5m boundary band; sharp thermal-slot corners are intentional."
     }
   },
-  "routing_cleanup": {
+  "handbook_body_comparison": {
+    "scope": "1.5x raster comparison excluding the bottom 40-point page-number footer; shifted pages may match.",
+    "matching_pages": {
+      "4": 4,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10,
+      "11": 11,
+      "12": 12,
+      "13": 13,
+      "14": 14,
+      "15": 15,
+      "17": 17,
+      "18": 18,
+      "19": 19,
+      "20": 20,
+      "21": 21,
+      "22": 22,
+      "23": 23,
+      "24": 24,
+      "28": 27,
+      "29": 28,
+      "30": 29,
+      "31": 30,
+      "32": 31,
+      "33": 32,
+      "37": 36,
+      "40": 39
+    },
+    "changed_body_pages": [
+      1,
+      2,
+      3,
+      5,
+      16,
+      25,
+      26,
+      27,
+      34,
+      35,
+      36,
+      38,
+      39,
+      41
+    ]
+  },
+  "previous_input_width_review": {
     "result": "PASS",
     "baseline_commit": "0315d9824df05e9c4c27744744a522d7b24f709c",
     "board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
@@ -834,51 +866,168 @@
       "scope": "Native DRC and independent all-four-layer Gerber clearance/connectivity/ground checks pass; DC screening does not establish temperature rise or fault-current capacity."
     }
   },
-  "handbook_body_comparison": {
-    "scope": "Raster comparison at 1.5x, excluding bottom 40-point footer with page numbers; matches may move pages.",
-    "unchanged_body_pages_current_to_baseline": {
-      "3": 3,
-      "7": 6,
-      "8": 7,
-      "9": 8,
-      "10": 9,
-      "11": 10,
-      "12": 11,
-      "13": 12,
-      "14": 13,
-      "15": 14,
-      "16": 15,
-      "17": 16,
-      "18": 17,
-      "19": 18,
-      "20": 19,
-      "21": 20,
-      "22": 21,
-      "23": 22,
-      "24": 23,
-      "25": 24,
-      "26": 25,
-      "27": 26,
-      "28": 27,
-      "29": 28,
-      "30": 29,
-      "31": 30,
-      "32": 31,
-      "33": 32,
-      "34": 33,
-      "35": 34,
-      "36": 35,
-      "37": 36,
-      "38": 37,
-      "39": 38,
-      "40": 39
+  "routing_cleanup": {
+    "result": "PASS",
+    "baseline_commit": "3b45f5a1919b5fc703e21359285c547f7d7ffef3",
+    "board_sha256": "4d00abd563bfa88924e25474253365773afd8d0fa6c0d622cb002c53a29b7d28",
+    "before": {
+      "segments": 1530,
+      "vias": 242,
+      "total_centerline_length_mm": 3361.0578363723725,
+      "minimum_width_mm": 0.18
     },
-    "changed_body_pages": [
-      1,
-      2,
-      4,
-      5,
-      6
-    ]
+    "after": {
+      "segments": 1530,
+      "vias": 242,
+      "total_centerline_length_mm": 3361.0578363723725,
+      "minimum_width_mm": 0.18
+    },
+    "unchanged_native_objects": [
+      "All 1530 track segments and 242 vias",
+      "All footprints except C1",
+      "Outline, stackup, zone settings/cutouts, board text and bottom artwork"
+    ],
+    "comparison": "Every object except C1 footprint and regenerated zone fills compares exactly. C1 center/orientation/net polarity retained. All 1530 traces and 242 vias unchanged.",
+    "assembly_update": {
+      "reviewed_utc": "2026-09-10T02:40:05.217190+00:00",
+      "reference": "C1",
+      "before": {
+        "ref": "C1",
+        "kind": "CP",
+        "value": "47uF",
+        "pins": {
+          "1": "VIN_PROT",
+          "2": "GND"
+        },
+        "sheet": "power",
+        "footprint": "FRC_Sensor_CAN:CP_Elec_8x6.5",
+        "mpn": "EEE-FK1H470P",
+        "note": "",
+        "voltage": "50V",
+        "tolerance": "20%",
+        "source_footprint": "Capacitor_SMD:CP_Elec_8x6.5"
+      },
+      "after": {
+        "ref": "C1",
+        "kind": "CP",
+        "value": "47uF",
+        "pins": {
+          "1": "VIN_PROT",
+          "2": "GND"
+        },
+        "sheet": "power",
+        "footprint": "FRC_Sensor_CAN:CP_Panasonic_FT_6.3x5.8",
+        "mpn": "EEEFT1H470AP",
+        "note": "Factory fitted. 47uF 50V 20%; 195mA ripple, 0.68ohm max ESR. Panasonic profile (5); respect dwell limits.",
+        "voltage": "50V",
+        "tolerance": "20%",
+        "source_footprint": "Project:Panasonic_FT_D_manufacturer_lands"
+      },
+      "old_catalog": {
+        "mpn": "EEE-FK1H470P",
+        "manufacturer": "PANASONIC",
+        "lcsc": "C278400",
+        "references": [
+          "C1"
+        ],
+        "quantity_per_board": 1,
+        "source_url": "https://jlcpcb.com/partdetail/C278400",
+        "observed_utc": "2026-09-10T02:23:42.271184+00:00",
+        "public_stock": 4009,
+        "available_to_order": 3776,
+        "minimum_purchase": 1,
+        "minimum_assembly": 5,
+        "attrition_allowance": 0,
+        "preorder_minimum": 31,
+        "library_class": "expand",
+        "preferred_extended": false,
+        "assembly_mode": "smtWeld",
+        "package": "SMD,D8xL6.2mm",
+        "description": "-55\u2103~+105\u2103 146.3mA@120Hz 2000hrs@105\u2103 47uF 50V 6.5mm 8mm \u00b120% SMD,D8xL6.2mm Aluminum Electrolytic Capacitors - SMD ROHS",
+        "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1811141444_PANASONIC-EEEFK1H470P_C278400.pdf",
+        "price_tiers_usd": [
+          [
+            1,
+            0.2943
+          ],
+          [
+            50,
+            0.2381
+          ],
+          [
+            150,
+            0.2141
+          ],
+          [
+            1000,
+            0.1841
+          ],
+          [
+            2000,
+            0.1707
+          ],
+          [
+            5000,
+            0.1626
+          ]
+        ],
+        "ten_board_budget_quantity": 10,
+        "ten_board_stock_sufficient": true,
+        "allocation_confirmed": false,
+        "catalog_mpn": "EEEFK1H470P",
+        "catalog_status": "yes",
+        "catalog_product_type": 0,
+        "pcba_services": [
+          "Economic",
+          "Standard"
+        ],
+        "moisture_sensitivity_level": "MSL 1"
+      },
+      "board_sha256": "4d00abd563bfa88924e25474253365773afd8d0fa6c0d622cb002c53a29b7d28",
+      "baseline_board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
+      "electrical": {
+        "capacitance_uF": 47,
+        "tolerance_percent": 20,
+        "rated_voltage_V": 50,
+        "temperature_range_C": [
+          -55,
+          105
+        ],
+        "rated_ripple_mA_at_100kHz_105C": 195,
+        "ESR_max_ohm_at_100kHz_20C": 0.68,
+        "tan_delta_max_at_120Hz_20C": 0.1,
+        "leakage_max_uA_after_2_minutes": 23.5,
+        "endurance_hours_at_105C": 2000
+      },
+      "footprint": {
+        "name": "FRC_Sensor_CAN:CP_Panasonic_FT_6.3x5.8",
+        "body_diameter_mm": 6.3,
+        "body_height_mm": 5.8,
+        "manufacturer_size_code": "D",
+        "pad_centers_x_mm": [
+          -2.5,
+          2.5
+        ],
+        "pad_size_mm": [
+          3.2,
+          1.6
+        ],
+        "gap_mm": 1.8,
+        "board_center_mm": [
+          5,
+          21
+        ],
+        "rotation_deg": 90,
+        "pin_1": "VIN_PROT",
+        "pin_2": "GND"
+      },
+      "native_comparison": "Every object except C1 footprint and regenerated zone fills compares exactly. C1 center/orientation/net polarity retained. All 1530 traces and 242 vias unchanged.",
+      "sources": [
+        "sources/datasheets/panasonic_fk.pdf",
+        "sources/datasheets/panasonic_ft.pdf",
+        "sources/datasheets/panasonic_reflow.pdf"
+      ],
+      "conclusion": "Same published capacitance/voltage/tolerance/ESR/ripple/lifetime limits; smaller 6.3 x 5.8 mm body and manufacturer land pattern. Panasonic reflow profile (5) removes the known peak-temperature conflict with Standard PCBA. Factory must still meet all dwell and moisture-handling limits; no measured board/ripple/thermal qualification."
+    }
   }
 }

@@ -1,9 +1,9 @@
 {
   "result": "PASS sourcing-file consistency; HOLD manufacturing review",
-  "observed_utc": "2026-09-10T02:24:23.936594+00:00",
+  "observed_utc": "2026-09-10T02:38:28.197925+00:00",
   "stock_observation_window_utc": [
     "2026-09-10T02:23:39.448428+00:00",
-    "2026-09-10T02:24:23.936594+00:00"
+    "2026-09-10T02:38:28.197925+00:00"
   ],
   "availability_definition": "max(0, canPresaleNumber) from JLC public component detail; stockCount is recorded separately and is not treated as free inventory. No cart allocation or reservation.",
   "boards": 10,
@@ -25,9 +25,9 @@
   "basic_types": 12,
   "preferred_extended_types": 1,
   "ordinary_extended_types": 42,
-  "smt_parts_with_conservative_attrition_per_board_usd": 17.79,
+  "smt_parts_with_conservative_attrition_per_board_usd": 17.85,
   "manual_parts_per_board_usd": 8.7,
-  "combined_parts_budget_per_board_usd": 26.49,
+  "combined_parts_budget_per_board_usd": 26.55,
   "selected_service": "Standard",
   "economic_eligible": false,
   "economic_blockers": [
@@ -60,48 +60,99 @@
       "msl": "MSL 3"
     }
   ],
-  "nominal_standard_reflow_conflicts": [
-    {
-      "reference": "C1",
-      "mpn": "EEE-FK1H470P",
-      "profile": "Panasonic profile (2), diameter 8 mm",
-      "peak_C": 235,
-      "peak_duration_s": 5,
-      "time_at_or_above_200C_s": 60,
-      "maximum_cycles": 1,
-      "resolution": "HOLD: obtain a factory-qualified profile within these limits, or review a high-temperature capacitor and its footprint before changing the BOM.",
-      "series_datasheet": "sources/datasheets/panasonic_fk.pdf",
-      "soldering_datasheet": "sources/datasheets/panasonic_reflow.pdf"
-    }
-  ],
+  "nominal_standard_reflow_conflicts": [],
   "manufacturing_holds": [
     "Insufficient orderable public stock: STM32F042K6T6; procurement unconfirmed",
-    "C1 profile (2) permits 235 C peak; nominal Standard process can reach 245 C",
     "Factory qualification of all exact-part solder profiles and moisture handling is pending"
   ],
   "quantity_method": "Conservative budget: max(fitted quantity plus displayed lossNumber, leastPatchNumber, minPurchaseNum). Actual checkout attrition/minimums may differ.",
   "factory_allocation_confirmed": false,
-  "electrical_model_only_reviewed_mpn_metadata_changed": true,
+  "electrical_model_only_reviewed_mpn_metadata_and_C1_footprint_changed": true,
   "reviewed_routing": {
     "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
-    "board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
-    "nonrouting_objects_sha256": "5ee31ac375e66db8dff45cad8ffefd5df5df0aed11ec677c58b56d84f7d306f2",
-    "scope": "Authorized 14-segment input widening from 0.5 to 0.7 mm and regenerated fills. Exact native comparison preserves every other object. Four-layer CAD/Gerber and expanded DC checks refreshed; transient simulations deferred.",
+    "board_sha256": "4d00abd563bfa88924e25474253365773afd8d0fa6c0d622cb002c53a29b7d28",
+    "nonrouting_objects_sha256": "2be28c22c8cda498c55f036784c2adcb7e6f24ca5ab1df1bb0ee2dd90cc48818",
+    "scope": "C1 factory-reflow substitution and manufacturer lands only; all routing, vias and other footprints preserved exactly. CAD/Gerber/DC checks refreshed; simulations await approval.",
     "previous_review": {
       "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
-      "board_sha256": "f6e7be17328081b06241a03ec6a706204e40f90e1e63c5d6ff4bc82f96823d04",
+      "board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
       "nonrouting_objects_sha256": "5ee31ac375e66db8dff45cad8ffefd5df5df0aed11ec677c58b56d84f7d306f2",
-      "scope": "Authorized ground-pour cleanup. Four minimum widths, outer SMT/through-hole connection modes, five local cutouts, J8.7 spoke angle and three redundant GND segments reviewed; exact comparison preserves all other native objects. CAD/DC/Gerber checks refreshed; transient simulations deferred.",
+      "scope": "Authorized 14-segment input widening from 0.5 to 0.7 mm and regenerated fills. Exact native comparison preserves every other object. Four-layer CAD/Gerber and expanded DC checks refreshed; transient simulations deferred.",
       "previous_review": {
         "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
-        "board_sha256": "11a7fe728a5c38fea9ccf797b009e49f00d5b57660013b24940de233ee9ede55",
-        "nonrouting_objects_sha256": "e4353dfdb994feff9097c45d8a58a25a327f040cb739ecaafbf8ad4652c24cb1",
-        "scope": "Authorized contact/branch cleanup. Exact native comparison preserves every other object; three redundant signal vias removed. Width policy unchanged. CAD/DC/Gerber checks refreshed; transient simulations deferred.",
+        "board_sha256": "f6e7be17328081b06241a03ec6a706204e40f90e1e63c5d6ff4bc82f96823d04",
+        "nonrouting_objects_sha256": "5ee31ac375e66db8dff45cad8ffefd5df5df0aed11ec677c58b56d84f7d306f2",
+        "scope": "Authorized ground-pour cleanup. Four minimum widths, outer SMT/through-hole connection modes, five local cutouts, J8.7 spoke angle and three redundant GND segments reviewed; exact comparison preserves all other native objects. CAD/DC/Gerber checks refreshed; transient simulations deferred.",
         "previous_review": {
           "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
-          "board_sha256": "c6f6150f6a71395bcfd55faff9d0de88cd833f19438ebcd708ad3981c939c3d7",
-          "nonrouting_objects_sha256": "e3ed96947f37f53acd3aa32f98a84c30a9bda0128c8a1a3aae78a1b45b0c116e",
-          "scope": "Authorized branch and width cleanup; exact native nonrouting objects still match the sourcing candidate. All 77 routed nets reviewed; 68 segments widened, none narrowed; 40 unnecessary width-change junctions removed. CAD/DC/Gerber checks refreshed; new transient simulations remain deferred."
+          "board_sha256": "11a7fe728a5c38fea9ccf797b009e49f00d5b57660013b24940de233ee9ede55",
+          "nonrouting_objects_sha256": "e4353dfdb994feff9097c45d8a58a25a327f040cb739ecaafbf8ad4652c24cb1",
+          "scope": "Authorized contact/branch cleanup. Exact native comparison preserves every other object; three redundant signal vias removed. Width policy unchanged. CAD/DC/Gerber checks refreshed; transient simulations deferred.",
+          "previous_review": {
+            "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
+            "board_sha256": "c6f6150f6a71395bcfd55faff9d0de88cd833f19438ebcd708ad3981c939c3d7",
+            "nonrouting_objects_sha256": "e3ed96947f37f53acd3aa32f98a84c30a9bda0128c8a1a3aae78a1b45b0c116e",
+            "scope": "Authorized branch and width cleanup; exact native nonrouting objects still match the sourcing candidate. All 77 routed nets reviewed; 68 segments widened, none narrowed; 40 unnecessary width-change junctions removed. CAD/DC/Gerber checks refreshed; new transient simulations remain deferred."
+          },
+          "removed_redundant_vias": [
+            {
+              "id": "98c3dadb-99ff-4b5b-902a-850bea21e86e",
+              "net": "+3V3",
+              "at": [
+                5.8232,
+                57.5491
+              ],
+              "width": 0.65,
+              "layers": [
+                0,
+                2,
+                4,
+                6
+              ],
+              "remaining_connected_track_layers": [
+                0
+              ],
+              "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+            },
+            {
+              "id": "1ea72085-26c6-4b4b-8cf5-6edde53809eb",
+              "net": "SENSE3",
+              "at": [
+                30.7255,
+                48.2871
+              ],
+              "width": 0.65,
+              "layers": [
+                0,
+                2,
+                4,
+                6
+              ],
+              "remaining_connected_track_layers": [
+                2
+              ],
+              "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+            },
+            {
+              "id": "cf5b937a-86d1-4507-a784-398b44681f80",
+              "net": "SIG3",
+              "at": [
+                43.1172,
+                59.349999
+              ],
+              "width": 0.65,
+              "layers": [
+                0,
+                2,
+                4,
+                6
+              ],
+              "remaining_connected_track_layers": [
+                2
+              ],
+              "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+            }
+          ]
         },
         "removed_redundant_vias": [
           {
@@ -283,9 +334,181 @@
       }
     ]
   },
+  "capacitor_reflow_review": {
+    "reviewed_utc": "2026-09-10T02:40:05.217190+00:00",
+    "reference": "C1",
+    "before": {
+      "ref": "C1",
+      "kind": "CP",
+      "value": "47uF",
+      "pins": {
+        "1": "VIN_PROT",
+        "2": "GND"
+      },
+      "sheet": "power",
+      "footprint": "FRC_Sensor_CAN:CP_Elec_8x6.5",
+      "mpn": "EEE-FK1H470P",
+      "note": "",
+      "voltage": "50V",
+      "tolerance": "20%",
+      "source_footprint": "Capacitor_SMD:CP_Elec_8x6.5"
+    },
+    "after": {
+      "ref": "C1",
+      "kind": "CP",
+      "value": "47uF",
+      "pins": {
+        "1": "VIN_PROT",
+        "2": "GND"
+      },
+      "sheet": "power",
+      "footprint": "FRC_Sensor_CAN:CP_Panasonic_FT_6.3x5.8",
+      "mpn": "EEEFT1H470AP",
+      "note": "Factory fitted. 47uF 50V 20%; 195mA ripple, 0.68ohm max ESR. Panasonic profile (5); respect dwell limits.",
+      "voltage": "50V",
+      "tolerance": "20%",
+      "source_footprint": "Project:Panasonic_FT_D_manufacturer_lands"
+    },
+    "old_catalog": {
+      "mpn": "EEE-FK1H470P",
+      "manufacturer": "PANASONIC",
+      "lcsc": "C278400",
+      "references": [
+        "C1"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C278400",
+      "observed_utc": "2026-09-10T02:23:42.271184+00:00",
+      "public_stock": 4009,
+      "available_to_order": 3776,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 0,
+      "preorder_minimum": 31,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SMD,D8xL6.2mm",
+      "description": "-55\u2103~+105\u2103 146.3mA@120Hz 2000hrs@105\u2103 47uF 50V 6.5mm 8mm \u00b120% SMD,D8xL6.2mm Aluminum Electrolytic Capacitors - SMD ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1811141444_PANASONIC-EEEFK1H470P_C278400.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.2943
+        ],
+        [
+          50,
+          0.2381
+        ],
+        [
+          150,
+          0.2141
+        ],
+        [
+          1000,
+          0.1841
+        ],
+        [
+          2000,
+          0.1707
+        ],
+        [
+          5000,
+          0.1626
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false,
+      "catalog_mpn": "EEEFK1H470P",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
+    },
+    "board_sha256": "4d00abd563bfa88924e25474253365773afd8d0fa6c0d622cb002c53a29b7d28",
+    "baseline_board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
+    "electrical": {
+      "capacitance_uF": 47,
+      "tolerance_percent": 20,
+      "rated_voltage_V": 50,
+      "temperature_range_C": [
+        -55,
+        105
+      ],
+      "rated_ripple_mA_at_100kHz_105C": 195,
+      "ESR_max_ohm_at_100kHz_20C": 0.68,
+      "tan_delta_max_at_120Hz_20C": 0.1,
+      "leakage_max_uA_after_2_minutes": 23.5,
+      "endurance_hours_at_105C": 2000
+    },
+    "footprint": {
+      "name": "FRC_Sensor_CAN:CP_Panasonic_FT_6.3x5.8",
+      "body_diameter_mm": 6.3,
+      "body_height_mm": 5.8,
+      "manufacturer_size_code": "D",
+      "pad_centers_x_mm": [
+        -2.5,
+        2.5
+      ],
+      "pad_size_mm": [
+        3.2,
+        1.6
+      ],
+      "gap_mm": 1.8,
+      "board_center_mm": [
+        5,
+        21
+      ],
+      "rotation_deg": 90,
+      "pin_1": "VIN_PROT",
+      "pin_2": "GND",
+      "source_hashes": {
+        "hardware/library/FRC_Sensor_CAN.pretty/CP_Panasonic_FT_6.3x5.8.kicad_mod": "78a5c2429be2874a1fd06bfb78f122f05d30a183d2a866df1e95cd9fca672f2e",
+        "hardware/library/3d/CP_Panasonic_FT_6.3x5.8.step": "826add3d9fc9cc7a113af5f8e6afbf0c9194d78cef78127ae24df8973c7dd2d6"
+      }
+    },
+    "native_comparison": "Every object except C1 footprint and regenerated zone fills compares exactly. C1 center/orientation/net polarity retained. All 1530 traces and 242 vias unchanged.",
+    "sources": [
+      "sources/datasheets/panasonic_fk.pdf",
+      "sources/datasheets/panasonic_ft.pdf",
+      "sources/datasheets/panasonic_reflow.pdf"
+    ],
+    "conclusion": "Same published capacitance/voltage/tolerance/ESR/ripple/lifetime limits; smaller 6.3 x 5.8 mm body and manufacturer land pattern. Panasonic reflow profile (5) removes the known peak-temperature conflict with Standard PCBA. Factory must still meet all dwell and moisture-handling limits; no measured board/ripple/thermal qualification."
+  },
+  "mcu_procurement": {
+    "mpn": "STM32F042K6T6",
+    "reference": "U5",
+    "assembly": "Factory SMT; never assigned to user soldering",
+    "preferred_route": "JLC Parts Manager > Order Parts > Global Sourcing Parts; exact MPN, then select My Parts during PCBA checkout",
+    "public_jlc_available": 0,
+    "quantity_for_10": 10,
+    "quantity_instruction": "Use at least the final JLC minimum plus attrition; current displayed minimum/attrition permits ten. Twelve is an optional planning allowance, not a factory requirement.",
+    "external_candidate": {
+      "supplier": "DigiKey",
+      "supplier_part": "497-14647-ND",
+      "observed_utc": "2026-09-10T02:40:05.217190+00:00",
+      "available": 3071,
+      "price_10_usd": 3.277,
+      "source_url": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294",
+      "source_type": "Public supplier page; no JLC allocation or global-sourcing quote"
+    },
+    "jlc_procurement_confirmed": false,
+    "paid": false,
+    "arrived_in_my_parts": false,
+    "lead_time": "JLC help pages disagree: overview 9-15 days; detailed guide normally 9-20 business days plus review. Use the exact checkout/quotation date; under-one-month delivery is unconfirmed.",
+    "sources": [
+      "https://jlcpcb.com/help/article/pcba-parts-sourcing-instruction",
+      "https://jlcpcb.com/help/article/how-to-use-jlcpcb-global-sourcing-parts-service",
+      "https://jlcpcb.com/help/article/how-to-use-my-own-parts-for-pcb-assembly-order"
+    ]
+  },
   "substitution_review": {
     "observed_utc": "2026-09-10T02:26:16.074445+00:00",
-    "board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
+    "board_sha256": "4d00abd563bfa88924e25474253365773afd8d0fa6c0d622cb002c53a29b7d28",
     "scope": "Six changed passive types at nine placements checked against original and replacement manufacturer specifications and actual native pad dimensions. The other 49 factory types retain exact manufacturer/MPN. No BOM or CAD change in this audit.",
     "substitutions": [
       {
@@ -501,7 +724,7 @@
         "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
       }
     ],
-    "layout_update_note": "Only VIN_RAW/VIN_FUSED track widths and cached fills changed; all substitution footprints, pads, nets and parts remain identical to the dated equivalence review."
+    "layout_update_note": "Six earlier nonpolar substitutions retain identical pads and values. Separate capacitor_reflow_review covers C1 only."
   },
   "alternative_stock_review": [
     {
@@ -530,12 +753,12 @@
       "lcsc": "C92059",
       "mpn": "EEEFT1H470AP",
       "manufacturer": "PANASONIC",
-      "observed_utc": "2026-09-10T02:24:51.281218+00:00",
+      "observed_utc": "2026-09-10T02:38:10.452553+00:00",
       "available_to_order": 1815,
       "public_stock": 1886,
       "source_url": "https://jlcpcb.com/partdetail/C92059",
-      "decision": "EEEFT1H470AP is a 6.3 x 5.8 mm capacitor versus current 8 x 6.2 mm body. Do not substitute without land-pattern, ripple/ESR, stability and reflow review.",
-      "implemented": false
+      "decision": "Implemented as C1 with manufacturer size-D land pattern, matched published electrical limits and profile (5) review.",
+      "implemented": true
     }
   ],
   "hand_solder_availability": {
@@ -619,22 +842,23 @@
     ],
     "external_supplier_status": "Manual parts remain a separate purchase. Older distributor stock observations are not refreshed by this JLC audit; delivery and allocation unconfirmed."
   },
-  "order_decision": "HOLD: user approval and new simulations pending; MCU sourcing, C1 reflow and factory stack/quote unconfirmed",
+  "order_decision": "HOLD: final simulations pending; exact MCU Global Sourcing allocation and factory stack/process quotation unconfirmed. C1 peak-temperature conflict resolved.",
   "limitations": "Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.",
   "input_hashes": {
-    "bom/jlc_sourcing.json": "4e74af8a351cd8b1a46944fefb2d022fc1bf87909dcbe25fbded987aaabdb5ee",
-    "bom/catalog_china.json": "d8f8c2f38efb80a49c3079611d6c105d0b73f12eabf85eb4457c0269e1673448",
-    "bom/Factory_BOM.csv": "1bcd08b11bb784d48a6ee393300d054345cff93bd6e4d71e55e10136c156230f",
-    "bom/BOM_JLCPCB.csv": "10277d76b991fed2259d62a83f88b4f9f150c63aa82ec869b0895cd85abdcd5b",
+    "bom/jlc_sourcing.json": "042e8fe17e2cee14fe93ebea0e1329d4b6ff577c466f749216e248d051b2da40",
+    "bom/catalog_china.json": "f9c488aa978b87a3f6f5e43e86878accef86ce2a33e2bb4cfc2088022cf78eed",
+    "bom/Factory_BOM.csv": "5079efc8dd60da68c59371550d0a326d1d7b7d1efcafd8d4a57b1c40ad7e80bb",
+    "bom/BOM_JLCPCB.csv": "904fd6c38b340414ab006b93ef6182a22780e2f3f29032a752cfe37bccfa87f5",
     "output/assembly/CPL_JLCPCB.csv": "faff9a8477f2f79eb601effea500a8eaf37dd6f02ebab33591ff9f4e656fbb0e",
-    "hardware/design/circuit.json": "3f077ab74530cf41d072d848b7192e28bee21ccba3a22e8232b252556e57556c",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
-    "scripts/check_jlc_sourcing.py": "1ee07bdbe170f2c10cd61b9ce4667202ff4af3b4309271fcdd216c8d14f767ff",
+    "hardware/design/circuit.json": "fba0e0e4347605db774f2a3259a5a136d520aa48a52ddbee446a8f04cbbc61ae",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "4d00abd563bfa88924e25474253365773afd8d0fa6c0d622cb002c53a29b7d28",
+    "scripts/check_jlc_sourcing.py": "d57bbdb18b3115f73eee175774095930fb21d5f034f6b222ce5c9d94785e0884",
     "sources/datasheets/yageo_np0.pdf": "495287fc811dc714366f2edd3bc974d98d2d80133266a0a73bb01ac01237e3eb",
     "sources/datasheets/uniroyal_thick_film.pdf": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
     "sources/datasheets/panasonic_fk.pdf": "b36857d089adaddf3042b33bf11d0f7d83bf70734e983f33b7827152e11854e3",
     "sources/datasheets/panasonic_reflow.pdf": "5302db62f18432e9964c56852637c880569055ff5b962dba6d4b1a254ada8aac",
     "sources/datasheets/yageo_rc_original.pdf": "7b6f0ae72708ca4b38126f84b5407a3e970a94cb60bc1a0afdaeb25a23d839bb",
-    "sources/datasheets/kemet_original.pdf": "948d3eb68896029f2248ae329805fd34aaab303141ed04c93631268f3e62f79b"
+    "sources/datasheets/kemet_original.pdf": "948d3eb68896029f2248ae329805fd34aaab303141ed04c93631268f3e62f79b",
+    "sources/datasheets/panasonic_ft.pdf": "affbdbc3402d5d78e683944e78f5a641ae7f22906a4e77e24978388e491b41e2"
   }
 }
