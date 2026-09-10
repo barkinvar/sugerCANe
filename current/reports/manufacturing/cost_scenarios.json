@@ -25,25 +25,25 @@
       "boards": 5,
       "service": "Standard",
       "charged_feeder_types": 54,
-      "parts_per_board": 29.58,
+      "parts_per_board": 29.59,
       "setup_stencil_feeders_fixture_per_order": 132.81,
-      "partial_per_board": 56.14
+      "partial_per_board": 56.15
     },
     {
       "boards": 10,
       "service": "Standard",
       "charged_feeder_types": 54,
-      "parts_per_board": 26.45,
+      "parts_per_board": 26.46,
       "setup_stencil_feeders_fixture_per_order": 132.81,
-      "partial_per_board": 39.73
+      "partial_per_board": 39.74
     },
     {
       "boards": 25,
       "service": "Standard",
       "charged_feeder_types": 54,
-      "parts_per_board": 24.33,
+      "parts_per_board": 24.34,
       "setup_stencil_feeders_fixture_per_order": 132.81,
-      "partial_per_board": 29.64
+      "partial_per_board": 29.65
     }
   ]
 }

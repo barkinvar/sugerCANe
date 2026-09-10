@@ -1,0 +1,160 @@
+{
+  "result": "PASS normal-load buck and crystal gain screens; simultaneous-fault rail regulation is not guaranteed",
+  "sources": [
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/lmr51420.pdf",
+      "section": "SLUSEF6C tables 7.5, 9.1; sections 8.3.11 and 9.2.2"
+    },
+    {
+      "url": "https://www.st.com/resource/en/datasheet/stm32f042t6.pdf",
+      "section": "DS10009 Rev 5 table 36 and crystal loading guidance"
+    },
+    {
+      "url": "https://www.st.com/resource/en/application_note/cd00221665.pdf",
+      "section": "AN2867 critical transconductance and gain margin"
+    },
+    {
+      "url": "https://abracon.com/Resonators/abm3b.pdf",
+      "section": "ABM3B Rev U electrical specifications"
+    }
+  ],
+  "buck": {
+    "corners": [
+      {
+        "protected_input_V": 5.523631951480582,
+        "condition": "normal",
+        "output_load_A": 1.4604173114206689,
+        "worst_valley_A": 1.4392274430418903,
+        "worst_peak_A": 1.4999717323943886,
+        "valley_limit_min_A": 1.7,
+        "peak_limit_min_A": 2.7,
+        "below_both_minimum_limits": true
+      },
+      {
+        "protected_input_V": 5.523631951480582,
+        "condition": "both_limiters_max",
+        "output_load_A": 1.9502712894194163,
+        "worst_valley_A": 1.9290814210406377,
+        "worst_peak_A": 1.989825710393136,
+        "valley_limit_min_A": 1.7,
+        "peak_limit_min_A": 2.7,
+        "below_both_minimum_limits": false
+      },
+      {
+        "protected_input_V": 12.0,
+        "condition": "normal",
+        "output_load_A": 1.4604173114206689,
+        "worst_valley_A": 1.2409520343689422,
+        "worst_peak_A": 1.870085828583892,
+        "valley_limit_min_A": 1.7,
+        "peak_limit_min_A": 2.7,
+        "below_both_minimum_limits": true
+      },
+      {
+        "protected_input_V": 12.0,
+        "condition": "both_limiters_max",
+        "output_load_A": 1.9502712894194163,
+        "worst_valley_A": 1.7308060123676896,
+        "worst_peak_A": 2.3599398065826396,
+        "valley_limit_min_A": 1.7,
+        "peak_limit_min_A": 2.7,
+        "below_both_minimum_limits": false
+      },
+      {
+        "protected_input_V": 22.0,
+        "condition": "normal",
+        "output_load_A": 1.4604173114206689,
+        "worst_valley_A": 1.1640851311957592,
+        "worst_peak_A": 2.0135707145071673,
+        "valley_limit_min_A": 1.7,
+        "peak_limit_min_A": 2.7,
+        "below_both_minimum_limits": true
+      },
+      {
+        "protected_input_V": 22.0,
+        "condition": "both_limiters_max",
+        "output_load_A": 1.9502712894194163,
+        "worst_valley_A": 1.6539391091945066,
+        "worst_peak_A": 2.5034246925059147,
+        "valley_limit_min_A": 1.7,
+        "peak_limit_min_A": 2.7,
+        "below_both_minimum_limits": true
+      }
+    ],
+    "normal_load_pass": true,
+    "simultaneous_faults_regulation_guaranteed": false,
+    "interpretation": "Normal load stays below both guaranteed minimum current thresholds. At low input, the simultaneous maximum limiter budget can exceed the minimum valley limit. Shared-rail sag/current limiting is possible during simultaneous faults; the previous <2 A budget did not establish fault-regulation margin."
+  },
+  "oscillator": {
+    "corners": [
+      {
+        "assumed_stray_pF": 3.0,
+        "capacitor_tolerance": -0.05,
+        "effective_load_pF": 12.5,
+        "gmcrit_mA_per_V": 0.768597416655714,
+        "gm_min_mA_per_V": 10.0,
+        "gain_margin": 13.010712478727216,
+        "exceeds_ST_gain_margin_5": true
+      },
+      {
+        "assumed_stray_pF": 3.0,
+        "capacitor_tolerance": 0.05,
+        "effective_load_pF": 13.5,
+        "gmcrit_mA_per_V": 0.8494492159094381,
+        "gm_min_mA_per_V": 10.0,
+        "gain_margin": 11.772334134529505,
+        "exceeds_ST_gain_margin_5": true
+      },
+      {
+        "assumed_stray_pF": 5.0,
+        "capacitor_tolerance": -0.05,
+        "effective_load_pF": 14.5,
+        "gmcrit_mA_per_V": 0.9343436051258482,
+        "gm_min_mA_per_V": 10.0,
+        "gain_margin": 10.702700746427311,
+        "exceeds_ST_gain_margin_5": true
+      },
+      {
+        "assumed_stray_pF": 5.0,
+        "capacitor_tolerance": 0.05,
+        "effective_load_pF": 15.5,
+        "gmcrit_mA_per_V": 1.0232805843049446,
+        "gm_min_mA_per_V": 10.0,
+        "gain_margin": 9.772490706244,
+        "exceeds_ST_gain_margin_5": true
+      },
+      {
+        "assumed_stray_pF": 10.0,
+        "capacitor_tolerance": -0.05,
+        "effective_load_pF": 19.5,
+        "gmcrit_mA_per_V": 1.4194544006481922,
+        "gm_min_mA_per_V": 10.0,
+        "gain_margin": 7.044960370289818,
+        "exceeds_ST_gain_margin_5": true
+      },
+      {
+        "assumed_stray_pF": 10.0,
+        "capacitor_tolerance": 0.05,
+        "effective_load_pF": 20.5,
+        "gmcrit_mA_per_V": 1.5286043296407195,
+        "gm_min_mA_per_V": 10.0,
+        "gain_margin": 6.541915266163339,
+        "exceeds_ST_gain_margin_5": true
+      }
+    ],
+    "maximum_stray_pF_for_gain_margin_5": 13.955757565304395,
+    "fitted_capacitors_pF": 20,
+    "previous_capacitors_pF": 30,
+    "crystal_specified_load_pF": 18,
+    "all_gain_corners_pass": true,
+    "previous_gain_at_10pF_stray_and_max_caps": 4.612620169021409,
+    "interpretation": "20 pF capacitors exceed gain margin 5 at all stated stray/tolerance corners, including the former failing 10 pF stray corner. Actual stray capacitance, frequency pulling, drive and startup remain unmeasured. R20 permits drive adjustment on the prototype."
+  },
+  "input_hashes": {
+    "hardware/design/circuit.json": "c86045fb7c7640b5a57a6350eb52c042cfa7665a9ae73f909f96ae7354323569",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
+    "reports/electrical/electrical_checks.json": "ad27f7e16f6cbff19cc68ec084b22389250dfca7802d8e8bf8d0f183b9c52f6f",
+    "scripts/check_component_margins.py": "6e252db201a83d7906cf04a4f19624b11fc0e84c2dd643abe801728e3bacc452"
+  },
+  "limitations": "No switching simulation of the upstream buck: both TI public LMR51420X/XF models are encrypted. No extracted crystal parasitics, motional parameters, oscillator silicon model, drive-level or board thermal measurements. Calculations use the stated component and engineering bounds."
+}

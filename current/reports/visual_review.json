@@ -1,6 +1,6 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-10T03:52:29.608076+00:00",
+  "reviewed_utc": "2026-09-10T04:21:57.310072+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
@@ -36,41 +36,39 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "b2df595abfc419ab2ee990885a9967cfcee465bb962e4d8372f003b249a56525",
-      "scope": "All 40 pages raster-reviewed in contact sheets; changed assembly page 16 and ordering pages 25-27 also inspected individually. User-soldered MCU, factory scope, shopping list, process notes and costs are legible; no clipped text, tables or isolated-word pages. Final electrical simulation review remains pending.",
-      "reviewed_utc": "2026-09-10T03:52:29.608076+00:00"
+      "sha256": "79374f77ef504cbb4fa7938c81bd464e7a64ca1d86ab7603cf1e5fdf4d32422f",
+      "scope": "All 42 pages inspected in contact sheets; changed pre-order, component-margin and purchasing pages also inspected individually. Updated 20 pF clock-capacitor decision, gain calculation, simultaneous-fault limitation and incomplete coupled-startup status are legible. No clipping or overlapping tables observed.",
+      "reviewed_utc": "2026-09-10T04:21:57.310072+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
-      "sha256": "9a75f7608f525e36d38e44076bcf125c8b41124c1614999dca4e3d7954c3ef2c",
-      "scope": "All three rendered pages visually inspected: 129 factory SMT parts, one user-soldered MCU and ten user-soldered THT parts. Assembly assignments, supplier MPNs and costs are legible; no clipped table content.",
-      "reviewed_utc": "2026-09-10T03:52:29.608076+00:00"
+      "sha256": "bbd9e5b5e3571baa1228773f7661b9240b88439969fca15ba6eca24c9a41a18f",
+      "scope": "All three pages visually inspected; only page 1 differs from 7d08c29. C25/C26 show 20 pF, CC0805JRNPO9BN200 and C105173. Current costs and factory/manual assignments are legible.",
+      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
-      "sha256": "9768ff75073035cc20d1729501652b98f1263df04e1cdf499c70e0edf7b8b4ee",
-      "scope": "All 2 rendered pages are pixel-identical to reviewed 8d4deb4; MPN metadata changes do not alter visible drawing.",
-      "reviewed_utc": "2026-09-10T00:23:12.378655+00:00",
-      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
+      "sha256": "c5c6ef78289e4c9b54409e244efdcf285e947b2b44dd9141e795b1c6b71e44eb",
+      "scope": "All 2 pages raster-identical to reviewed 7d08c29 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
+      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
     },
     {
       "file": "output/assembly/schematic.pdf",
-      "sha256": "d1f8b1b2b7613c3eb7084de5f2750a309e1b09cc4c271f4940140bb0ccd52f39",
-      "scope": "All 10 rendered pages are pixel-identical to reviewed ae55a5b. Existing visual review retained.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00",
-      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
+      "sha256": "4ba0c92a37c835e5ad7dab220badb823557d38dbb61b71f642c07113c7a4736d",
+      "scope": "Controller page 6 visually inspected: C25/C26 now 20 pF, same connections and positions. Other nine pages are raster-identical to reviewed 7d08c29 at 1.5x scale.",
+      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
     },
     {
       "file": "output/assembly/top_assembly.pdf",
-      "sha256": "a3254a067ce0bc8bbf697e3d4162c798bf752bb7d97b01ac6fbc5d61b0dd67b7",
-      "scope": "Fresh native-board assembly drawing visually inspected: C1 smaller body, polarity mark and same center/orientation; other parts and labels retained.",
-      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00"
+      "sha256": "b5d48f4adf7aca04ea0524bfe5c52a5bf5d16a2a80691c0cdef0b7488c7eaa38",
+      "scope": "All 1 pages raster-identical to reviewed 7d08c29 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
+      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "sha256": "c81de440074ba80702283ca9960e8a17f449cf720ae2e82deaed299ca5782a5a",
-      "scope": "Four-page exported-copper PDF raster-compared. Only top copper changes, at C1 pads/pour; reviewed visually with correct outline/drills. Both inner and bottom pages match the baseline.",
-      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00"
+      "sha256": "db14a817358a4f530a4bc6d31e8a3ada66acf2c35cd04395e3fe658cab9d1019",
+      "scope": "All 4 pages raster-identical to reviewed 7d08c29 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
+      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
     },
     {
       "file": "reports/electrical/converter_loop.png",
@@ -81,10 +79,9 @@
     },
     {
       "file": "output/assembly/bottom_markings.pdf",
-      "sha256": "57884852cbd07e8a3cbbd3382acbb70220926a68e5ba3d2db65640335c9e3e84",
-      "scope": "All 1 rendered pages are pixel-identical to reviewed ae55a5b. Existing visual review retained.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00",
-      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
+      "sha256": "c015a78c7e02bdb0c29c2bd438f037f4075b57c768c7a01b69c4c5ed9285772e",
+      "scope": "All 1 pages raster-identical to reviewed 7d08c29 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
+      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
     },
     {
       "file": "reports/electrical/input_spice.png",
@@ -95,10 +92,9 @@
     },
     {
       "file": "reports/electrical/boost_spice_partial.png",
-      "sha256": "ba4326c66dd8925658695a8fabb7ab4e89f1eec06b35eeed62d27d219b19fa20",
-      "scope": "All eight standalone case panels reviewed with an explicit incomplete-full-startup caption: load steps, shorts, reset, thermal latch and capacitive startup. This is partial evidence only.",
-      "reviewed_utc": "2026-09-09T22:31:58.665214+00:00",
-      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
+      "sha256": "ec81c6b7550a7122c963e0df45b91eca5f42d551b35983688e5e4994f84308a7",
+      "scope": "Fresh eight-case standalone plot visually inspected, including explicit standalone-only header. Load-step, short/reset, thermal-latch and capacitance panels pass their defined screens. Coupled startup remains separate required evidence.",
+      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
     },
     {
       "file": "hardware/artwork/sugarCANe.svg",
@@ -128,16 +124,15 @@
     },
     {
       "file": "output/fabrication/FRC_Sensor_CAN-NPTH-drl_map.pdf",
-      "sha256": "5630d2173c9a787f2d1b5f17e525cf1cad5a3c997bad31cac8190c12a3a7c290",
-      "scope": "Rendered drill map is pixel-identical to reviewed ae55a5b.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00",
-      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
+      "sha256": "414073701305e986214524b06e4bf9b89792fe732355e3d6b56b79661762b6fc",
+      "scope": "All 1 pages raster-identical to reviewed 7d08c29 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
+      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
     },
     {
       "file": "output/fabrication/FRC_Sensor_CAN-PTH-drl_map.pdf",
-      "sha256": "4462ce32be01c7eb4fe7c9ec6abb11c9c2b36f13c864a8fca652d608be3056ee",
-      "scope": "Drill map raster-identical to baseline; all 242 vias and component holes retained.",
-      "reviewed_utc": "2026-09-10T02:20:48.611323+00:00"
+      "sha256": "37d1498b10f258024937f462f15a479af35bfa3b1cac8374faf129379888a49f",
+      "scope": "All 1 pages raster-identical to reviewed 7d08c29 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
+      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
     },
     {
       "file": "output/review/routing_widths.png",
@@ -161,9 +156,9 @@
     },
     {
       "file": "output/review/gerber_top_copper.svg",
-      "sha256": "c0d46e2e52af7c7be0ce341aec7cd4016fa21b0356783d06d601a815c9463817",
-      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00",
-      "scope": "Top copper C1 pad/pour change visually inspected. PNG/SVG generated together and bound to current Gerber/output hashes in preview_source.json; inner views from top, bottom mirrored."
+      "sha256": "d9a9606632db97b98d22462872363a486efc6acdf7b31f50c051a1aa720b9676",
+      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00",
+      "scope": "SVG differs from reviewed 7d08c29 only in timestamp and generated clip/marker IDs; matching regenerated PNG is byte-identical. Actual Gerber geometry unchanged, verified in final_native_recheck.json."
     },
     {
       "file": "output/review/gerber_inner_1_copper.png",
@@ -173,9 +168,9 @@
     },
     {
       "file": "output/review/gerber_inner_1_copper.svg",
-      "sha256": "252e367c8661483ba134035339eaa3bfa857ec89847f49b735634ab6caf2446e",
-      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00",
-      "scope": "Exported copper/drill geometry exactly matches the previously reviewed baseline after generator timestamps are excluded; corresponding PDF page and PNG raster are unchanged. PNG/SVG generated together and bound to current Gerber/output hashes in preview_source.json; inner views from top, bottom mirrored."
+      "sha256": "77cf0b7886cee4279bb89d46a74ae0af89ec58b7f9bae5f9df7e46e2aaee9626",
+      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00",
+      "scope": "SVG differs from reviewed 7d08c29 only in timestamp and generated clip/marker IDs; matching regenerated PNG is byte-identical. Actual Gerber geometry unchanged, verified in final_native_recheck.json."
     },
     {
       "file": "output/review/gerber_inner_2_copper.png",
@@ -185,30 +180,30 @@
     },
     {
       "file": "output/review/gerber_inner_2_copper.svg",
-      "sha256": "f08e852e985328e7fe87d5d044e85c25e70a213c8c4c28c61e62a433c862a0b2",
-      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00",
-      "scope": "Exported copper/drill geometry exactly matches the previously reviewed baseline after generator timestamps are excluded; corresponding PDF page and PNG raster are unchanged. PNG/SVG generated together and bound to current Gerber/output hashes in preview_source.json; inner views from top, bottom mirrored."
+      "sha256": "0c4988a9050e2da2faee5f83fbf4943a07fccf7d6a62b86b2b2a42a9d73ca98b",
+      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00",
+      "scope": "SVG differs from reviewed 7d08c29 only in timestamp and generated clip/marker IDs; matching regenerated PNG is byte-identical. Actual Gerber geometry unchanged, verified in final_native_recheck.json."
     },
     {
       "file": "output/review/gerber_bottom_copper.svg",
-      "sha256": "0d399c3bd5f1753f950dee3ddad84aa3d822b2f6f70687574b78213c92ebda56",
-      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00",
-      "scope": "Exported copper/drill geometry exactly matches the previously reviewed baseline after generator timestamps are excluded; corresponding PDF page and PNG raster are unchanged. PNG/SVG generated together and bound to current Gerber/output hashes in preview_source.json; inner views from top, bottom mirrored."
+      "sha256": "493a35b2950c3cd48c038d28fbb5df731220ef5c9a80d6d2bcb52d527f60cb9b",
+      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00",
+      "scope": "SVG differs from reviewed 7d08c29 only in timestamp and generated clip/marker IDs; matching regenerated PNG is byte-identical. Actual Gerber geometry unchanged, verified in final_native_recheck.json."
     },
     {
       "file": "output/documentation/ORDER_GUIDE.pdf",
-      "sha256": "528f842118ccdde35f8bc1b0ad07f6e64378ea02c54801cc3c3f239e289e0ed2",
-      "scope": "All three pages visually inspected at full rendered size; final raster matches the reviewed version pixel for pixel. Supplier links, 5/10-board shopping quantities, JLC upload files/settings, copyable factory notes, assembly/programming and pending simulation gate are legible.",
-      "reviewed_utc": "2026-09-10T03:52:29.608076+00:00"
+      "sha256": "03d8194dcb3a3b21b866c85aa806f7c2658cb5678e67d21908e43d5eca1c2385",
+      "scope": "All three pages visually inspected at full rendered size. 20 pF capacitor change, original user-soldered LQFP MCU, factory stencil omission, shopping quantities, costs and unresolved release gates are legible.",
+      "reviewed_utc": "2026-09-10T04:21:57.310072+00:00"
     },
     {
       "file": "output/documentation/MCU_hand_solder_map.pdf",
-      "sha256": "f313f3b8030516046bace959843bc2442372c5fb47f05bfc86a36bc1c9269da3",
-      "scope": "Single enlarged page visually inspected. Native U5 pad centers and numbers are shown from the component side, with pad 1 highlighted and board-top direction explicit; iron soldering steps are legible.",
-      "reviewed_utc": "2026-09-10T03:52:29.608076+00:00"
+      "sha256": "f2aa951fa1e234d562d8da73b4d943df9176df3d588795e2ebc72335b3988d9e",
+      "scope": "All 1 pages raster-identical to reviewed 7d08c29 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
+      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
     }
   ],
-  "limitations": "Visual and file-integrity review of the manual-MCU order plan; native CAD remains unchanged. No new transient simulation or physical qualification. Final power/input transient review, component allocation, factory dwell/moisture profile and stack/inspection quotation remain pending.",
+  "limitations": "Visual and file-integrity review of current 20 pF clock-capacitor correction and manual-MCU order plan. No physical board has been tested. Full coupled-startup simulation and supplier process/stack/inspection confirmation remain pending; visual review does not clear those gates.",
   "bottom_branding": {
     "extra_ink_mm2": 0.0,
     "unexplained_missing_ink_mm2": 0.0,
@@ -1052,5 +1047,115 @@
     "mcu_orientation_pages": 1,
     "native_board_unchanged": true,
     "scope": "Only the four listed PDFs changed; hashes preserve the preceding review of other artifacts."
+  },
+  "clock_load_document_review": {
+    "baseline_commit": "7d08c29",
+    "rendered_page_comparison": {
+      "output/documentation/SC12_RevH_Handbook.pdf": {
+        "before_pages": 40,
+        "after_pages": 42,
+        "changed_pages": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ]
+      },
+      "output/documentation/BOM_RevH_SC12.pdf": {
+        "before_pages": 3,
+        "after_pages": 3,
+        "changed_pages": [
+          1
+        ]
+      },
+      "output/mechanical/mechanical_drawing.pdf": {
+        "before_pages": 2,
+        "after_pages": 2,
+        "changed_pages": []
+      },
+      "output/assembly/schematic.pdf": {
+        "before_pages": 10,
+        "after_pages": 10,
+        "changed_pages": [
+          6
+        ]
+      },
+      "output/assembly/top_assembly.pdf": {
+        "before_pages": 1,
+        "after_pages": 1,
+        "changed_pages": []
+      },
+      "output/assembly/gerber_copper_review.pdf": {
+        "before_pages": 4,
+        "after_pages": 4,
+        "changed_pages": []
+      },
+      "output/assembly/bottom_markings.pdf": {
+        "before_pages": 1,
+        "after_pages": 1,
+        "changed_pages": []
+      },
+      "output/fabrication/FRC_Sensor_CAN-NPTH-drl_map.pdf": {
+        "before_pages": 1,
+        "after_pages": 1,
+        "changed_pages": []
+      },
+      "output/fabrication/FRC_Sensor_CAN-PTH-drl_map.pdf": {
+        "before_pages": 1,
+        "after_pages": 1,
+        "changed_pages": []
+      },
+      "output/documentation/ORDER_GUIDE.pdf": {
+        "before_pages": 3,
+        "after_pages": 3,
+        "changed_pages": [
+          1,
+          3
+        ]
+      },
+      "output/documentation/MCU_hand_solder_map.pdf": {
+        "before_pages": 1,
+        "after_pages": 1,
+        "changed_pages": []
+      }
+    },
+    "board_change_evidence": "reports/manufacturing/clock_load_change.json",
+    "scope": "Capacitor values/MPNs only; board geometry unchanged. Existing render reviews remain applicable through exact native/export comparison."
   }
 }

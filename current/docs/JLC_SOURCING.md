@@ -1,16 +1,16 @@
 # JLCPCB sourcing and assembly plan
 
-The selected build uses **54 JLC SMT types / 129 top-side placements**. **U5 / STM32F042K6T6 is purchased from DigiKey and hand soldered by the user**, together with the existing ten through-hole parts. The BOM, CPL and factory stencil all omit U5. The native circuit and footprint are unchanged. [Complete ordering guide](FACTORY_ORDER.md).
+The selected build uses **54 JLC SMT types / 129 top-side placements**. **U5 / STM32F042K6T6 is purchased from DigiKey and hand soldered by the user**, together with the existing ten through-hole parts. The BOM, CPL and factory stencil all omit U5. The MCU footprint is unchanged. C25/C26 now use 20 pF clock-load capacitors in their existing footprints. [Complete ordering guide](FACTORY_ORDER.md).
 
-The September 10, 2026, 03:43 UTC public JLC check found enough orderable stock for all **54 factory types at ten boards**, including displayed attrition/minimums. U9 has 25 available and L2 has 39. No inventory is reserved. Final electrical simulation review, factory stack/process/inspection confirmation and quotation remain pending; the package is REVIEW_ONLY. Older simulation evidence is not a fresh pass for the sourced BOM.
+The September 10, 2026, 03:43–04:05 UTC public JLC checks found enough orderable stock for all **54 factory types at ten boards**, including displayed attrition/minimums. U9 has 25 available and L2 has 39. No inventory is reserved. Final electrical simulation review, factory stack/process/inspection confirmation and quotation remain pending; the package is REVIEW_ONLY. Older simulation evidence is not a fresh pass for the sourced BOM.
 
 ## Implemented substitutions
 
-The following six earlier substitutions change only the MPN at nine placements; their values, tolerances, footprints and nets are retained. The separate C1 update below also changes its footprint. A subsequent user-requested [branch cleanup](ROUTING_RULES.md) changes routing only; fresh CAD/DC checks and renders accompany it. Rev H firmware, MCU, component positions and four-layer stack remain unchanged.
+The following six sourced types cover nine placements. Five retain their previous values; C25/C26 intentionally change from 30 pF to 20 pF after the final crystal startup review. Footprints and nets are retained. The separate C1 update below also changes its footprint. A subsequent user-requested [branch cleanup](ROUTING_RULES.md) changes routing only; fresh CAD/DC checks and renders accompany it. Rev H firmware, MCU, component positions and four-layer stack remain unchanged.
 
-| References | Original MPN | Replacement MPN / JLC code | Retained specification |
+| References | Original MPN | Replacement MPN / JLC code | Specification |
 |---|---|---|---|
-| C25, C26 | C0805C300J5GACTU | CC0805JRNPO9BN300 / [C107114](https://jlcpcb.com/partdetail/C107114) | 30 pF, 50 V, NP0/C0G, 5%, 0805 |
+| C25, C26 | C0805C300J5GACTU | CC0805JRNPO9BN200 / [C105173](https://jlcpcb.com/partdetail/C105173) | **20 pF, changed from 30 pF**, 50 V, NP0/C0G, 5%, 0805 |
 | R61 | RC0805FR-0711K5L | 0805W8F1152T5E / [C17418](https://jlcpcb.com/partdetail/C17418) | 11.5 kohm, 1%, 0.125 W, 0805 |
 | R101, R201, R301 | RC0805FR-07220KL | 0805W8F2203T5E / [C17556](https://jlcpcb.com/partdetail/C17556) | 220 kohm, 1%, 0.125 W, 0805 |
 | R10 | RC0805FR-0759KL | 0805W8F5902T5E / [C17763](https://jlcpcb.com/partdetail/C17763) | 59 kohm, 1%, 0.125 W, 0805 |
@@ -19,7 +19,7 @@ The following six earlier substitutions change only the MPN at nine placements; 
 
 These substitutions addressed earlier sourcing constraints. The fresh review compares original and replacement manufacturer specifications and the actual nine footprints in the native PCB. The five resistor types retain 1% tolerance, 100 ppm/degree C TCR, rated power and -55 to +155°C operation. Both families derate above 70°C; working voltage is limited by both power dissipation and the 150 V (0805) / 200 V (1206) ceiling. Their specified five-second overload test uses the same voltage limits; this does not qualify repetitive robot transients. Sources: [original Yageo RC family](../sources/datasheets/yageo_rc_original.pdf), [replacement Uniroyal family](../sources/datasheets/uniroyal_thick_film.pdf).
 
-C25/C26 retain 30 pF, 5%, 50 V, C0G/NP0, ±30 ppm/°C and -55 to +125°C. Both specify at most 0.1% dissipation factor at this capacitance. The specified insulation resistance changes from KEMET's 100 Gohm to Yageo's 10 Gohm minimum; that leakage is negligible against the roughly 663-ohm capacitive reactance at 8 MHz. Body thickness also differs. These are suitable replacements for this crystal-load application, with compatible existing pads; they are not identical in every manufacturer parameter. Oscillator startup remains a board-level qualification item. Sources: [original KEMET part](../sources/datasheets/kemet_original.pdf), [replacement Yageo NP0 family](../sources/datasheets/yageo_np0.pdf).
+C25/C26 now use **20 pF**, 5%, 50 V C0G/NP0 parts. The previous 30 pF loading reached a calculated oscillator gain margin of only 4.61 using the crystal maximum 200-ohm ESR and 7 pF shunt capacitance, ST's minimum 10 mA/V transconductance, 10 pF assumed board/pin stray capacitance and +5% capacitor tolerance. With 20 pF, that margin is 6.54, above ST's recommended minimum of 5. The exact JLC part is **CC0805JRNPO9BN200 / C105173**, with unchanged pads. This is an intentional loading change, not an equal-value substitution. Frequency pulling, actual stray capacitance, drive level and startup remain first-board measurements; R20 provides a drive-adjustment position. [Calculation](../reports/electrical/component_margins.json) · [ST oscillator guidance](https://www.st.com/resource/en/application_note/cd00221665.pdf) · [STM32F042 datasheet](https://www.st.com/resource/en/datasheet/stm32f042t6.pdf) · [Abracon ABM3B](https://abracon.com/Resonators/abm3b.pdf) · [Yageo NP0 family](../sources/datasheets/yageo_np0.pdf).
 
 All nine replacements are nonpolar two-terminal parts, so there is no active-device pinout conversion. Actual PCB pads are 1.025 × 1.4 mm for 0805 resistors, 1.125 × 1.75 mm for R42 and 1 × 1.45 mm for the two capacitors. The sourcing checker now verifies these reviewed dimensions and pad positions. Download provenance, hashes and the per-substitution review are in the [dated snapshot](../bom/jlc_sourcing.json).
 
@@ -47,7 +47,7 @@ Do not infer a reflow recipe from an LED's solder-heat reliability test. This au
 
 ## Cost and files
 
-With the user-fitted DigiKey MCU, ten-board parts are about **$26.45 per board before SMT attrition**, or **$27.33** with conservative JLC allowances. Two recommended spare MCUs add about $6.55 per batch, not per board. PCB, assembly, inspection, freight and taxes are additional. [Cost basis](COST_REDUCTION.md).
+With the user-fitted DigiKey MCU, ten-board parts are about **$26.46 per board before SMT attrition**, or **$27.34** with conservative JLC allowances. Two recommended spare MCUs add about $6.55 per batch, not per board. PCB, assembly, inspection, freight and taxes are additional. [Cost basis](COST_REDUCTION.md).
 
 Use Standard PCBA. Posted setup/stencil/loading plus two fixtures total **$132.81 per order** for 54 types; this is a partial fee estimate, not a quote. Confirm the panel/rails, 35 µm copper on every layer, reflow limits and U9 X-ray coverage before payment. [Review packet](../order/README.md).
 
@@ -69,7 +69,7 @@ Use Standard PCBA. Posted setup/stencil/loading plus two fixtures total **$132.8
 | B240A-13-F | [C92506](https://jlcpcb.com/partdetail/C92506) | 2 | 24 | 163,752 | Enough |
 | BAT46W-E3-18 | [C5557780](https://jlcpcb.com/partdetail/C5557780) | 3 | 34 | 4,733 | Enough |
 | BSS138BK,215 | [C282529](https://jlcpcb.com/partdetail/C282529) | 5 | 54 | 70,842 | Enough |
-| CC0805JRNPO9BN300 | [C107114](https://jlcpcb.com/partdetail/C107114) | 2 | 30 | 342,783 | Enough |
+| CC0805JRNPO9BN200 | [C105173](https://jlcpcb.com/partdetail/C105173) | 2 | 30 | 535,719 | Enough |
 | CC0805JRNPO9BN102 | [C62774](https://jlcpcb.com/partdetail/C62774) | 3 | 40 | 1,143,220 | Enough |
 | CC0805KRX7R9BB333 | [C107150](https://jlcpcb.com/partdetail/C107150) | 1 | 20 | 1,800,061 | Enough |
 | CL21B103KBANNNC | [C1710](https://jlcpcb.com/partdetail/C1710) | 2 | 30 | 2,671,459 | Enough |

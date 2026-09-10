@@ -819,48 +819,6 @@
     "digikey_url": "",
     "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
-  "CC0805JRNPO9BN300": {
-    "mpn": "CC0805JRNPO9BN300",
-    "manufacturer": "YAGEO",
-    "supplier": "JLCPCB",
-    "supplier_part": "C107114",
-    "url": "https://jlcpcb.com/partdetail/C107114",
-    "stock_observed": 342783,
-    "observed_date": "2026-09-10",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.0073
-      ],
-      [
-        1000,
-        0.0058
-      ],
-      [
-        4000,
-        0.0047
-      ],
-      [
-        8000,
-        0.0042
-      ],
-      [
-        48000,
-        0.0037
-      ],
-      [
-        100000,
-        0.0035
-      ]
-    ],
-    "lcsc": "C107114",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
-    "previous_mpn": "C0805C300J5GACTU"
-  },
   "CC0805KRX7R9BB333": {
     "mpn": "CC0805KRX7R9BB333",
     "manufacturer": "YAGEO",
@@ -2532,5 +2490,47 @@
     "digikey_sku": "",
     "digikey_url": "",
     "factory_stock_status": "JLC public stock sufficient for 10 boards; factory SMT with Panasonic profile (5) dwell limits; unallocated"
+  },
+  "CC0805JRNPO9BN200": {
+    "mpn": "CC0805JRNPO9BN200",
+    "manufacturer": "YAGEO",
+    "supplier": "JLCPCB",
+    "supplier_part": "C105173",
+    "url": "https://jlcpcb.com/partdetail/C105173",
+    "stock_observed": 535719,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0114
+      ],
+      [
+        1000,
+        0.0097
+      ],
+      [
+        4000,
+        0.0088
+      ],
+      [
+        8000,
+        0.0082
+      ],
+      [
+        48000,
+        0.0077
+      ],
+      [
+        100000,
+        0.0075
+      ]
+    ],
+    "lcsc": "C105173",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "previous_mpn": "CC0805JRNPO9BN300"
   }
 }

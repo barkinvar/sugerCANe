@@ -9,6 +9,7 @@ python scripts/build_bom.py
 python scripts/estimate_cost.py
 python scripts/compare_assembly_cost.py
 python scripts/check_electrical.py > reports/electrical/check.log
+python scripts/check_component_margins.py > reports/electrical/component-margins.log
 python scripts/check_converter_loop.py > reports/electrical/loop.log
 python scripts/check_input_spice.py > reports/electrical/input-spice.log
 python scripts/check_boost_spice.py --verify-report --require-pass

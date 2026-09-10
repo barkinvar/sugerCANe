@@ -11,8 +11,8 @@ C21,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
 C22,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
 C23,CL21B105KBFNNNE,1uF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,,X7R,"Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."
 C24,CL21B475KAFNNNE,4.7uF,FRC_Sensor_CAN:C_0805_2012Metric,25V,10%,,X7R,"Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."
-C25,CC0805JRNPO9BN300,30pF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,C0G,
-C26,CC0805JRNPO9BN300,30pF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,C0G,
+C25,CC0805JRNPO9BN200,20pF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,C0G,
+C26,CC0805JRNPO9BN200,20pF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,C0G,
 C27,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
 C3,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
 C301,CC0805JRNPO9BN102,1nF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,C0G,

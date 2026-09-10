@@ -4,11 +4,14 @@ import hashlib, json, zipfile
 
 R=Path(__file__).resolve().parents[1]
 checks=json.loads((R/'reports/release_checks.json').read_text())
-assert checks['revision']=='H SC12' and checks['simulation_deferred_by_user'] is True
-assert checks['status'].startswith('HOLD:')
+assert checks['revision']=='H SC12'
+assert checks['status'].startswith('HOLD')
 for path,digest in checks['input_hashes'].items():
  assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale candidate evidence',path)
-status='REVIEW / QUOTATION ONLY. Factory fits 129 top SMT parts / 54 types, including C1 and D10. U5 is omitted from BOM/CPL and stencil; user buys STM32F042K6T6 from DigiKey and hand solders it, plus ten THT parts and three loose caps. Final simulation review and factory stack/process/inspection quotation remain pending. Not authorized for manufacture.'
+power_status=('Full required power/input/firmware engineering screens passed; physical qualification remains pending.'
+              if checks.get('spice_result')=='PASS transient screening only' else
+              'Full power-transient evidence is still incomplete or failing; read reports/release_checks.json.')
+status='REVIEW / QUOTATION ONLY. Factory fits 129 top SMT parts / 54 types, including C1 and D10. C25/C26 are 20 pF. U5 is omitted from BOM/CPL and stencil; user buys STM32F042K6T6 from DigiKey and hand solders it, plus ten THT parts and three loose caps. '+power_status+' Factory stack/process/inspection quotation remains pending. Not authorized for manufacture.'
 stencil=json.loads((R/'reports/manufacturing/factory_stencil.json').read_text())
 assert stencil['result']=='PASS' and stencil['removed_u5_apertures']==32
 for path,digest in stencil['input_hashes'].items():
@@ -41,6 +44,9 @@ files += ['reports/manufacturing/preview_source.json',*preview['output_sha256']]
 files += [d['file'] for d in json.loads((R/'bom/jlc_sourcing.json').read_text())['datasheets']]
 files += [p.relative_to(R).as_posix() for p in sorted((R/'host').glob('*.py')) if not p.name.startswith('test_')]
 files += ['tools/fixture_measurements.template.json','tools-requirements.lock']
+files += ['reports/electrical/component_margins.json','reports/manufacturing/clock_load_change.json',
+          'docs/ORDER_READINESS.md','reports/electrical/boost_spice.json',
+          'reports/electrical/input_spice.json','reports/electrical/power_replay.json']
 manifest=dict(status=status,files={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in files})
 dest=R/'order/sugarCANe_RevH_JLC_REVIEW_ONLY.zip'
 with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED) as z:

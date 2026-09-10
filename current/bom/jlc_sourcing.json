@@ -13,12 +13,13 @@
         "C26"
       ],
       "old_mpn": "C0805C300J5GACTU",
-      "new_mpn": "CC0805JRNPO9BN300",
-      "lcsc": "C107114",
-      "value": "30pF",
+      "new_mpn": "CC0805JRNPO9BN200",
+      "lcsc": "C105173",
+      "value": "20pF",
       "footprint": "FRC_Sensor_CAN:C_0805_2012Metric",
-      "reason": "Original public stock is below the conservative ten-board need including attrition.",
-      "ratings_verified": "30pF 50V NP0 \u00b15% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+      "reason": "Final startup review: reduce oscillator loading to increase conservative gain margin; same footprint, dielectric, voltage rating and tolerance.",
+      "ratings_verified": "20pF 50V NP0 +/-5% 0805; intentional capacitance change, not an equal-value replacement",
+      "old_value": "30pF"
     },
     {
       "references": [
@@ -872,58 +873,58 @@
       "moisture_sensitivity_level": "MSL 1"
     },
     {
-      "mpn": "CC0805JRNPO9BN300",
+      "mpn": "CC0805JRNPO9BN200",
       "manufacturer": "YAGEO",
-      "lcsc": "C107114",
+      "lcsc": "C105173",
       "references": [
         "C25",
         "C26"
       ],
       "quantity_per_board": 2,
-      "source_url": "https://jlcpcb.com/partdetail/C107114",
-      "observed_utc": "2026-09-10T03:43:35.771513+00:00",
-      "public_stock": 366601,
-      "available_to_order": 342783,
+      "source_url": "https://jlcpcb.com/partdetail/C105173",
+      "observed_utc": "2026-09-10T04:05:06.248552+00:00",
+      "public_stock": 539374,
+      "available_to_order": 535719,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
-      "preorder_minimum": 1544,
+      "preorder_minimum": 0,
       "library_class": "expand",
       "preferred_extended": true,
       "assembly_mode": "smtWeld",
       "package": "0805",
-      "description": "30pF 50V NP0 \u00b15% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
-      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_YAGEO-CC0805JRNPO9BN300_C107114.pdf",
+      "description": "20pF 50V NP0 \u00b15% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "datasheet_url": "https://www.lcsc.com/product-detail/C105173.html",
       "price_tiers_usd": [
         [
           1,
-          0.0073
+          0.0114
         ],
         [
           1000,
-          0.0058
+          0.0097
         ],
         [
           4000,
-          0.0047
+          0.0088
         ],
         [
           8000,
-          0.0042
+          0.0082
         ],
         [
           48000,
-          0.0037
+          0.0077
         ],
         [
           100000,
-          0.0035
+          0.0075
         ]
       ],
       "ten_board_budget_quantity": 30,
       "ten_board_stock_sufficient": true,
       "allocation_confirmed": false,
-      "catalog_mpn": "CC0805JRNPO9BN300",
+      "catalog_mpn": "CC0805JRNPO9BN200",
       "catalog_status": "yes",
       "catalog_product_type": 0,
       "pcba_services": [
@@ -3606,8 +3607,8 @@
   },
   "routing_review": {
     "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
-    "board_sha256": "4d00abd563bfa88924e25474253365773afd8d0fa6c0d622cb002c53a29b7d28",
-    "nonrouting_objects_sha256": "2be28c22c8cda498c55f036784c2adcb7e6f24ca5ab1df1bb0ee2dd90cc48818",
+    "board_sha256": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
+    "nonrouting_objects_sha256": "ce4a48a67f7a6cd20066fa59d7704a49fb1b06f29475d1487a17d3451fa96344",
     "scope": "C1 factory-reflow substitution and manufacturer lands only; all routing, vias and other footprints preserved exactly. CAD/Gerber/DC checks refreshed; simulations await approval.",
     "previous_review": {
       "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
@@ -3872,13 +3873,13 @@
   },
   "stock_observation_window_utc": [
     "2026-09-10T03:43:33.549459+00:00",
-    "2026-09-10T03:43:43.442617+00:00"
+    "2026-09-10T04:05:06.248552+00:00"
   ],
   "availability_definition": "max(0, canPresaleNumber) from JLC public component detail; stockCount is recorded separately and is not treated as free inventory. No cart allocation or reservation.",
   "catalog_endpoint": "https://jlcpcb.com/api/overseas-pcb-order/v1/smtComponentShopCart/getComponentDetail?componentCode={lcsc}",
   "equivalence_review": {
     "observed_utc": "2026-09-10T02:26:16.074445+00:00",
-    "board_sha256": "4d00abd563bfa88924e25474253365773afd8d0fa6c0d622cb002c53a29b7d28",
+    "board_sha256": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
     "scope": "Six changed passive types at nine placements checked against original and replacement manufacturer specifications and actual native pad dimensions. The other 49 factory types retain exact manufacturer/MPN. No BOM or CAD change in this audit.",
     "substitutions": [
       {
@@ -3887,9 +3888,9 @@
           "C26"
         ],
         "old_mpn": "C0805C300J5GACTU",
-        "new_mpn": "CC0805JRNPO9BN300",
+        "new_mpn": "CC0805JRNPO9BN200",
         "role": "8 MHz crystal load capacitors",
-        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "result": "PASS footprint/rating and analytical gain-margin review; frequency and drive require prototype measurements",
         "two_terminal_nonpolar": true,
         "footprint": "FRC_Sensor_CAN:C_0805_2012Metric",
         "nominal_pad_size_mm": [
@@ -3900,7 +3901,7 @@
           -0.95,
           0.95
         ],
-        "value_pF": 30,
+        "value_pF": 20,
         "tolerance_percent": 5,
         "voltage_V": 50,
         "dielectric": "C0G/NP0",
@@ -3914,7 +3915,8 @@
           "sources/datasheets/kemet_original.pdf",
           "sources/datasheets/yageo_np0.pdf"
         ],
-        "differences": "Body thickness and insulation-resistance limits differ. KEMET specifies 100 Gohm; Yageo minimum is 10 Gohm. At 8 MHz and 30 pF the capacitive reactance is about 663 ohm, so this leakage difference is negligible for the intended load. No claim of identical parasitics or verified oscillator startup."
+        "differences": "Intentional 30 pF to 20 pF clock loading change. At maximum 200 ohm ESR, 7 pF C0, 10 pF assumed stray and +5% capacitors, gain margin rises from 4.61 to 6.54. Crystal frequency pulling and drive level remain unmeasured. Insulation resistance and body height differ from the original KEMET part.",
+        "previous_value_pF": 30
       },
       {
         "references": [
@@ -4230,7 +4232,7 @@
       ],
       "moisture_sensitivity_level": "MSL 1"
     },
-    "board_sha256": "4d00abd563bfa88924e25474253365773afd8d0fa6c0d622cb002c53a29b7d28",
+    "board_sha256": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
     "baseline_board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
     "electrical": {
       "capacitance_uF": 47,
@@ -4301,5 +4303,62 @@
     "factory_paste": false,
     "paid": false,
     "delivery_confirmed": false
+  },
+  "clock_load_review": {
+    "references": [
+      "C25",
+      "C26"
+    ],
+    "before_value": "30pF",
+    "after_value": "20pF",
+    "before_mpn": "CC0805JRNPO9BN300",
+    "after_mpn": "CC0805JRNPO9BN200",
+    "baseline_commit": "7d08c29",
+    "board_sha256": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
+    "only_value_and_mpn_changed": true,
+    "model_before": {
+      "C25": {
+        "ref": "C25",
+        "kind": "C",
+        "value": "30pF",
+        "pins": {
+          "1": "HSE_IN",
+          "2": "GND"
+        },
+        "sheet": "controller",
+        "footprint": "FRC_Sensor_CAN:C_0805_2012Metric",
+        "mpn": "CC0805JRNPO9BN300",
+        "note": "",
+        "voltage": "50V",
+        "dielectric": "C0G",
+        "tolerance": "5%",
+        "source_footprint": "Capacitor_SMD:C_0805_2012Metric"
+      },
+      "C26": {
+        "ref": "C26",
+        "kind": "C",
+        "value": "30pF",
+        "pins": {
+          "1": "HSE_XTAL_OUT",
+          "2": "GND"
+        },
+        "sheet": "controller",
+        "footprint": "FRC_Sensor_CAN:C_0805_2012Metric",
+        "mpn": "CC0805JRNPO9BN300",
+        "note": "",
+        "voltage": "50V",
+        "dielectric": "C0G",
+        "tolerance": "5%",
+        "source_footprint": "Capacitor_SMD:C_0805_2012Metric"
+      }
+    },
+    "sources": [
+      "https://www.st.com/resource/en/datasheet/stm32f042t6.pdf",
+      "https://www.st.com/resource/en/application_note/cd00221665.pdf",
+      "https://abracon.com/Resonators/abm3b.pdf"
+    ],
+    "report": "reports/electrical/component_margins.json",
+    "stock_observed_utc": "2026-09-10T04:05:06.248552+00:00",
+    "qualification": "Measure actual HSE frequency, startup margin and drive. No oscillator transistor model or extracted parasitics available."
   }
 }

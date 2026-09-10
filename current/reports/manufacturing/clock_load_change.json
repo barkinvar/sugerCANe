@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "baseline_commit": "7d08c29",
+  "board_sha256": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
+  "only_native_changes": [
+    "C25 value and MPN",
+    "C26 value and MPN"
+  ],
+  "all_copper_pads_vias_positions_zones_stack_unchanged": true,
+  "all_running_power_decks_identical_to_final_BOM": true,
+  "power_deck_sha256": {
+    "combined_low_input_capacitive_start": "1ce4fa2f0de84da74277814e369762cd96b8f41ca854478434749e93d459ce17",
+    "boost_load_steps": "270eebb3a9f7d9619e9c3f3c3e6e2f1e1d0cb8a9cc897ad12e12f54b302c42af",
+    "efuse_hot_short_and_reset": "356a2576003f8622ed7d733d03882544e9cd986168c1c91f1641375673777c16",
+    "efuse_cold_short_and_reset": "3440c0ce0fda593f607deae46e03cd43702afe7e9e4dbc9eb3c80de239ed8d8d",
+    "efuse_large_capacitance": "d6a4c32770c9eac931ead6b1e844c1424778976b717beb90b4ce200083a68891",
+    "efuse_thermal_latch": "c8712a82580dc2af8281946271a17c6a4ac011e9323e45bb7a820e965dd06eff",
+    "efuse_hot_short_half_step": "dd98de034f4148dfff375cbeac15a4582e785684ab520f245d7ffac602a9bc81",
+    "five_volt_start_short_and_reset": "ee3d8a4a91451df634cbdc4ba20f61394d0574af81f68b885958da545af729a1",
+    "efuse_min_limit_cap_tolerance": "40a97e2c6cfc3fdcca3f0cae81355b55e289cb6ac7b4189fda3b3c4b63e98710",
+    "combined_low_input_capacitive_start_trtol7_25n": "8f225f72b15bb46da713fd4a19da015e59c8958d1653d91f1b144bf286a3daba"
+  },
+  "scope": "Crystal capacitors are not present in the power-stage decks. Concurrent power traces remain applicable to unchanged power circuitry; their final report separately binds the final model and exact deck hashes."
+}

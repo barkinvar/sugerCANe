@@ -17,7 +17,7 @@ B240A,"D4, D5",FRC_Sensor_CAN:D_SMA,2,Diodes Incorporated,B240A-13-F,C92506,http
 BAT46W,"D102, D202, D302",FRC_Sensor_CAN:D_SOD-123,3,Vishay,BAT46W-E3-18,C5557780,https://jlcpcb.com/partdetail/C5557780
 BSS138BK,"Q102, Q202, Q302, Q2, Q3",FRC_Sensor_CAN:SOT-23,5,Nexperia,"BSS138BK,215",C282529,https://jlcpcb.com/partdetail/C282529
 1nF,"C101, C201, C301",FRC_Sensor_CAN:C_0805_2012Metric,3,YAGEO,CC0805JRNPO9BN102,C62774,https://jlcpcb.com/partdetail/C62774
-30pF,"C25, C26",FRC_Sensor_CAN:C_0805_2012Metric,2,YAGEO,CC0805JRNPO9BN300,C107114,https://jlcpcb.com/partdetail/C107114
+20pF,"C25, C26",FRC_Sensor_CAN:C_0805_2012Metric,2,YAGEO,CC0805JRNPO9BN200,C105173,https://jlcpcb.com/partdetail/C105173
 33nF,C69,FRC_Sensor_CAN:C_0805_2012Metric,1,YAGEO,CC0805KRX7R9BB333,C107150,https://jlcpcb.com/partdetail/C107150
 10nF,"C72, C73",FRC_Sensor_CAN:C_0805_2012Metric,2,Samsung Electro-Mechanics,CL21B103KBANNNC,C1710,https://jlcpcb.com/partdetail/C1710
 100nF,"C3, C6, C11, C20, C21, C22, C27, C40, C41, C50, C51, C66, C74, C75",FRC_Sensor_CAN:C_0805_2012Metric,14,Samsung Electro-Mechanics,CL21B104KCFNNNE,C28233,https://jlcpcb.com/partdetail/C28233

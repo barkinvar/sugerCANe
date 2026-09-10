@@ -20,6 +20,11 @@ with zipfile.ZipFile(packet) as z:
     manual=Counter(ref.strip() for row in hand for ref in row['References'].split(','))
     all_parts={r['reference'] for r in csv.DictReader((R/'bom/BOM_per_reference.csv').open())}
     assert len(bom)==54 and len(factory)==len(cpl)==129
+    clock_caps=[row for row in bom if 'C25' in {ref.strip() for ref in row['Designator'].split(',')}]
+    assert len(clock_caps)==1
+    clock_caps=clock_caps[0]
+    assert {ref.strip() for ref in clock_caps['Designator'].split(',')}=={'C25','C26'}
+    assert clock_caps['LCSC Part #']=='C105173' and clock_caps['Comment']=='CC0805JRNPO9BN200'
     assert factory==Counter(r['Designator'] for r in cpl)
     assert 'U5' not in factory and manual['U5']==1
     assert set(factory).isdisjoint(manual) and set(factory)|set(manual)==all_parts
@@ -62,6 +67,7 @@ report=dict(result='PASS assembly-package integrity; manufacturing release remai
     u5_bom_cpl_and_paste_omitted=True,u5_copper_pads_preserved=32,u9_paste_apertures_preserved=12,
     other_fabrication_files_byte_identical=13,all_package_hashes_verified=True,
     shopping_imports_verified=True,packet_sha256=sha(packet.read_bytes()),
+    clock_capacitors=dict(references=['C25','C26'],value='20pF',jlc_part='C105173'),
     board_sha256=sha((R/'hardware/FRC_Sensor_CAN.kicad_pcb').read_bytes()),
     limitations='File integrity and assembly scope only; no new simulation, physical qualification or supplier allocation.')
 (R/'reports/manufacturing/order_package.json').write_text(json.dumps(report,indent=2)+'\n')

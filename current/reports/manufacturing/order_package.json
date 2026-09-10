@@ -10,7 +10,15 @@
   "other_fabrication_files_byte_identical": 13,
   "all_package_hashes_verified": true,
   "shopping_imports_verified": true,
-  "packet_sha256": "a515146ac5e314a77c295a91674365a6c05ccbe738ed0896bf97843d45931365",
-  "board_sha256": "4d00abd563bfa88924e25474253365773afd8d0fa6c0d622cb002c53a29b7d28",
+  "packet_sha256": "e0403cf01935da67123295cab9d382ef581c2d5b949f1d214730bda8e2d7dbda",
+  "clock_capacitors": {
+    "references": [
+      "C25",
+      "C26"
+    ],
+    "value": "20pF",
+    "jlc_part": "C105173"
+  },
+  "board_sha256": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
   "limitations": "File integrity and assembly scope only; no new simulation, physical qualification or supplier allocation."
 }

@@ -1,6 +1,6 @@
 # Order and build sugarCANe Rev H
 
-**Selected build: JLCPCB assembles 129 top-side SMT parts. You buy the original STM32F042K6T6 from DigiKey and solder U5, then fit the ten through-hole parts and three jumper caps.** The MCU footprint, circuit, four-layer PCB and firmware stay the same.
+**Selected build: JLCPCB assembles 129 top-side SMT parts. You buy the original STM32F042K6T6 from DigiKey and solder U5, then fit the ten through-hole parts and three jumper caps.** The MCU footprint, four-layer layout and firmware stay the same. The final component review changed only C25/C26 from 30 pF to **20 pF / C105173** to improve calculated crystal startup margin.
 
 **Before paying for PCBA:** finish our final simulation review. The saved full startup simulation is incomplete; the available ZIPs remain marked REVIEW_ONLY. The assembly choice is finalized, but this is not an electrical release. Use the files now to obtain and review a quotation. [Current evidence](ORDER_READINESS.md).
 
@@ -71,10 +71,10 @@ Inspect the placement preview against [top_assembly.pdf](../output/assembly/top_
 1. Finish the final electrical simulation review and issue the approved manufacturing package; do not pay against the current REVIEW_ONLY release.
 2. Verify quantities, all 54 selected types, U5/stencil omission, stack and component orientations. Files do not reserve inventory.
 3. Obtain confirmation of reflow handling, panelization and U9/D10 inspection. Review any CAM changes before acceptance.
-4. Check the **complete** price: PCB, parts, assembly/setup/stencil, panel/rails, X-ray, packing, express freight and tax/duty. Ten-board parts are about **$27.33 per board** with conservative JLC attrition and your MCU, before two optional spare MCUs and those additional charges. This is not a final assembled-board price.
+4. Check the **complete** price: PCB, parts, assembly/setup/stencil, panel/rails, X-ray, packing, express freight and tax/duty. Ten-board parts are about **$27.34 per board** with conservative JLC attrition and your MCU, before two optional spare MCUs and those additional charges. This is not a final assembled-board price.
 5. Your last arrival date is **October 10, 2026, USA**. Use October 9 as the practical delivery target. Request a dispatch estimate and destination-specific tracked express quote; allow time for soldering/testing. Chinese holiday closures and customs can affect timing. Displayed production duration is not the arrival date. Order the separate DigiKey/LCSC parts in time too.
 
-JLC public stock covers all **54 factory types for ten boards**, including displayed allowances, as of September 10, 2026, 03:43 UTC. U9 has 25 available and L2 has 39, so recheck at checkout. Allocation and delivery are unconfirmed. [Full audit](../reports/manufacturing/jlc_sourcing.json).
+JLC public stock covers all **54 factory types for ten boards**, including displayed allowances, in the September 10, 2026, 03:43–04:05 UTC checks. U9 has 25 available and L2 has 39, so recheck at checkout. Allocation and delivery are unconfirmed. [Full audit](../reports/manufacturing/jlc_sourcing.json).
 
 ## 6. Finish the delivered boards
 

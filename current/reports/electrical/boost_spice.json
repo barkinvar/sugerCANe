@@ -1,10 +1,10 @@
 {
   "result": "INCOMPLETE",
-  "scope": "Rev H: eight freshly completed standalone power cases pass; both required 0-40 ms combined-startup traces remain incomplete. No full-suite pass or physical qualification.",
+  "scope": "Final BOM: eight fresh standalone cases pass. Two full coupled-startup traces are running; no whole-suite pass yet.",
   "source_assumptions": "Boost cases: ideal upstream 5 V source, 120 milliohm series resistance, 25.92 uF internal capacitance, 0.45 A concurrent logic/RGB/5 V load. The standalone 5 V switch case instead has 1.3 A concurrent internal load. Standalone eFuse cases use an ideal 12.003 V source with 120 milliohm series resistance and 66 uF reservoir. Upstream buck control loop/current limit and PCB/cable inductance are not modeled.",
   "passive_assumptions": "Boost C60 and reservoir use explicit derated/nameplate case values; C61/C65/C71 1uF nominal. Inductor 3.3uH and 32mOhm DCR, linear below its 8A/20%-inductance-drop domain. External capacitor ESR .1ohm. One explicitly identified current-limit surrogate uses a 2.92k test resistor instead of fitted R62=2.61k, giving typical-model current below the calculated 314.699mA minimum, with 120uF external capacitance. This tests reduced charging headroom, not all silicon corners. D5 uses the B240A vendor model; D6 behavioral clamp approximates static conduction only. Q2 enable uses 2ohm final shunt resistance; standalone fault tests apply a finite 1us conductance ramp to avoid a discontinuous behavioral-device transition. No transistor timing claim. eFuse thermal timing is manufacturer-model-only, not temperature qualification.",
   "numerical_notes": "Gear integration, 1fF numerical node shunt, relative tolerance .003. Combined startup uses KLU/xtrtol=2 with maximum step 50 ns and a complete KLU/xtrtol=7 repeat at maximum step 25 ns; both must pass the same electrical criteria and the voltage/peak-current comparison. Original xtrtol=1 stopped numerically near 28.971 ms and is retained as an incomplete diagnostic. Vendor helper names prefixed; duplicate PARAMS removed and Boolean XOR syntax translated. No semiconductor parameters tuned. Standalone zero-supply operating-point warnings are accepted only after successful transient OP fallback and complete transient output. Other warnings/errors fail. Extreme values use all adaptive timesteps; plots decimated.",
-  "circuit_sha256": "cf9e272fb1d32b9ad6e04e69c37d37f8c2610410835bd46e6231c3692547903e",
+  "circuit_sha256": "c86045fb7c7640b5a57a6350eb52c042cfa7665a9ae73f909f96ae7354323569",
   "script_sha256": "44d4c0f4d6fd7944d2dda0f4b9387391c9e35fdd984e57e5e4b8072c41089209",
   "simulator": "******\n** ngspice-42 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2023, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Sun Mar 31 20:15:14 UTC 2024\n******",
   "sources": [
@@ -63,7 +63,7 @@
       "pass": true,
       "deck_and_model_hash": "22a1e27b800e00d296acf486ccb58d39580cd6a8e5b0a58635fe2bc6b72df019",
       "simulated_netlist": "boost_load_steps\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 100u 0 200u 5.067153284671533)\nRsource SOURCE V5_INTERNAL .12\nCinternal V5_INTERNAL 0 25.92u\nBother V5_INTERNAL 0 I={.45*limit(v(V5_INTERNAL),0,1)}\nXu8 V5_INTERNAL BOOST_FB V5_INTERNAL BOOST_SS 0 BOOST_SW BOOST_COMP V5_INTERNAL BST_TPS61085\nL2 V5_INTERNAL LX 3.3u\nRdcr LX BOOST_SW .032\nD4 BOOST_SW BOOST_12V DI_B240A\nRcin V5_INTERNAL CI .01\nCin CI 0 8.64u\nRcout BOOST_12V CO .01\nCout CO 0 10.8238u\nC61 V5_INTERNAL 0 1u\nC66 BOOST_SS 0 100n\nR60 BOOST_12V BOOST_FB 100k\nR61 BOOST_FB 0 11.5k\nR63 BOOST_COMP BOOST_COMP_RC 13k\nC69 BOOST_COMP_RC 0 33n\nVload LOAD 0 PWL(0 .03 4m .03 4.01m .31 6m .31 6.01m .41 8m .41 8.01m 0)\nBload BOOST_12V 0 I={v(LOAD)*limit(v(BOOST_12V),0,1)}\n.save v(V5_INTERNAL) v(BOOST_12V) v(FAULT_12V_N) i(Vsrc) i(L2)\n.options method=gear reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 10m 0 50n\n.end\n",
-      "raw_trace_sha256": "2e3b1b4206772493b0bfbf90c95769585b3d89a9e64b4086006156ab71de23db",
+      "raw_trace_sha256": "1b57a508e5b0a6516e7539bce544cf1f8e164fd3c0c43b158eb7e9daca0b5490",
       "initial_transient_OP_fallback": false
     },
     {
@@ -95,7 +95,7 @@
       "pass": true,
       "deck_and_model_hash": "db8a814c5002fd6720651ce326c54c1084e2192147ca0861e6ec33371376c7d6",
       "simulated_netlist": "efuse_hot_short_and_reset\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 1u 12.003)\nRsource SOURCE BOOST_12V .12\nCin BOOST_12V 0 66u\nXef 0 EFUSE_SS EFUSE_EN BOOST_12V SENSOR_12V FAULT_12V_N EFUSE_ILM OVC EF_TPS259620_TRANS PARAMS: Cdvdt=47n\nR62 EFUSE_ILM 0 2.61k\nR68 BOOST_12V EFUSE_EN 100k\nR69 EFUSE_EN 0 12.1k\nC65 BOOST_12V 0 1u\nC70 EFUSE_SS 0 47n\nC71 SENSOR_12V 0 1u\nVdisable DISABLE 0 PWL(0 3.3 2m 3.3 2.001m 0 90m 0 90.001m 3.3 95m 3.3 95.001m 0)\nBdisable EFUSE_EN 0 I={v(EFUSE_EN)*limit(v(DISABLE)/3.3,0,1)/2}\n.model DISABLE_MODEL VSWITCH(Ron=2 Roff=1e9 Von=2 Voff=.5)\nRext SENSOR_12V EC .1\nCext EC 0 100u\nBload SENSOR_12V 0 I={.3*limit(v(SENSOR_12V),0,1)}\nD5 0 SENSOR_12V DI_B240A\nBTVS BOOST_12V 0 I={max(0,(v(BOOST_12V)-14.4)/.382)}\nRADC SENSOR_12V 0 220k\nVshort SHORT 0 PWL(0 0 45m 0 45.001m 1 85m 1 85.001m 0)\nSshort SENSOR_12V 0 SHORT 0 SHORTMODEL\n.model SHORTMODEL SW(Ron=.05 Roff=1e12 Vt=.5 Vh=.1)\n.save v(BOOST_12V) v(SENSOR_12V) v(EFUSE_EN) v(FAULT_12V_N) i(Vsrc)\n.options method=gear reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 130m 0 1u\n.end\n",
-      "raw_trace_sha256": "07b970c4e8b7bb76618a012afa4d6b182853247d7219b67511825e012686ad03",
+      "raw_trace_sha256": "6db823bb95fbaf9fc60867b53a4fcabf3f44ae38a6be407c2edff8e887ac65b9",
       "initial_transient_OP_fallback": true
     },
     {
@@ -125,7 +125,7 @@
       "pass": true,
       "deck_and_model_hash": "93f297153154b8a07aad6c52d4c19a71e7163b209f5ac52a6219534ec9f2c023",
       "simulated_netlist": "efuse_cold_short_and_reset\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 1u 12.003)\nRsource SOURCE BOOST_12V .12\nCin BOOST_12V 0 66u\nXef 0 EFUSE_SS EFUSE_EN BOOST_12V SENSOR_12V FAULT_12V_N EFUSE_ILM OVC EF_TPS259620_TRANS PARAMS: Cdvdt=47n\nR62 EFUSE_ILM 0 2.61k\nR68 BOOST_12V EFUSE_EN 100k\nR69 EFUSE_EN 0 12.1k\nC65 BOOST_12V 0 1u\nC70 EFUSE_SS 0 47n\nC71 SENSOR_12V 0 1u\nVdisable DISABLE 0 PWL(0 3.3 2m 3.3 2.001m 0 90m 0 90.001m 3.3 95m 3.3 95.001m 0)\nBdisable EFUSE_EN 0 I={v(EFUSE_EN)*limit(v(DISABLE)/3.3,0,1)/2}\n.model DISABLE_MODEL VSWITCH(Ron=2 Roff=1e9 Von=2 Voff=.5)\nRext SENSOR_12V EC .1\nCext EC 0 100u\nBload SENSOR_12V 0 I={.3*limit(v(SENSOR_12V),0,1)}\nD5 0 SENSOR_12V DI_B240A\nBTVS BOOST_12V 0 I={max(0,(v(BOOST_12V)-14.4)/.382)}\nRADC SENSOR_12V 0 220k\nVshort SHORT 0 PWL(0 1 85m 1 85.001m 0)\nSshort SENSOR_12V 0 SHORT 0 SHORTMODEL\n.model SHORTMODEL SW(Ron=.05 Roff=1e12 Vt=.5 Vh=.1)\n.save v(BOOST_12V) v(SENSOR_12V) v(EFUSE_EN) v(FAULT_12V_N) i(Vsrc)\n.options method=gear reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 130m 0 1u\n.end\n",
-      "raw_trace_sha256": "6c4bc85e82197af020286b851e84d9a7aa26c703aa66f869dc86b4cc3abe15f2",
+      "raw_trace_sha256": "318f496b90ff8ff2e99d6911a260e5092875c1ff944b5a1446f2b106856c5820",
       "initial_transient_OP_fallback": true
     },
     {
@@ -149,7 +149,7 @@
       "pass": true,
       "deck_and_model_hash": "b05f7022b9a21085663a8eedbfb774b02cb5ede3646da1d95682386d17384e7d",
       "simulated_netlist": "efuse_large_capacitance\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 1u 12.003)\nRsource SOURCE BOOST_12V .12\nCin BOOST_12V 0 66u\nXef 0 EFUSE_SS EFUSE_EN BOOST_12V SENSOR_12V FAULT_12V_N EFUSE_ILM OVC EF_TPS259620_TRANS PARAMS: Cdvdt=47n\nR62 EFUSE_ILM 0 2.61k\nR68 BOOST_12V EFUSE_EN 100k\nR69 EFUSE_EN 0 12.1k\nC65 BOOST_12V 0 1u\nC70 EFUSE_SS 0 47n\nC71 SENSOR_12V 0 1u\nVdisable DISABLE 0 PWL(0 0)\nBdisable EFUSE_EN 0 I={v(EFUSE_EN)*limit(v(DISABLE)/3.3,0,1)/2}\n.model DISABLE_MODEL VSWITCH(Ron=2 Roff=1e9 Von=2 Voff=.5)\nRext SENSOR_12V EC .1\nCext EC 0 470u\nBload SENSOR_12V 0 I={.3*limit(v(SENSOR_12V),0,1)}\nD5 0 SENSOR_12V DI_B240A\nBTVS BOOST_12V 0 I={max(0,(v(BOOST_12V)-14.4)/.382)}\nRADC SENSOR_12V 0 220k\nVshort SHORT 0 PWL(0 0)\nSshort SENSOR_12V 0 SHORT 0 SHORTMODEL\n.model SHORTMODEL SW(Ron=.05 Roff=1e12 Vt=.5 Vh=.1)\n.save v(BOOST_12V) v(SENSOR_12V) v(EFUSE_EN) v(FAULT_12V_N) i(Vsrc)\n.options method=gear reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 150m 0 1u\n.end\n",
-      "raw_trace_sha256": "9a4b144c660f8a58f803322a9e13bf40d3a26cb5588325c398b1c95ea01ac719",
+      "raw_trace_sha256": "72e7504b16d99283464cd331288355286920e667de7ca475116c7f9153c85d87",
       "initial_transient_OP_fallback": true
     },
     {
@@ -182,7 +182,7 @@
       "pass": true,
       "deck_and_model_hash": "df6cac9aea7ef428cb948eb734eba221d3f0f4af49d88baf71617bfd5c753e2a",
       "simulated_netlist": "efuse_thermal_latch\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 1u 12.003)\nRsource SOURCE BOOST_12V .12\nCin BOOST_12V 0 66u\nXef 0 EFUSE_SS EFUSE_EN BOOST_12V SENSOR_12V FAULT_12V_N EFUSE_ILM OVC EF_TPS259620_TRANS PARAMS: Cdvdt=47n\nR62 EFUSE_ILM 0 2.61k\nR68 BOOST_12V EFUSE_EN 100k\nR69 EFUSE_EN 0 12.1k\nC65 BOOST_12V 0 1u\nC70 EFUSE_SS 0 47n\nC71 SENSOR_12V 0 1u\nVdisable DISABLE 0 PWL(0 3.3 2m 3.3 2.001m 0 1100m 0 1100.001m 3.3 1110m 3.3 1110.001m 0)\nBdisable EFUSE_EN 0 I={v(EFUSE_EN)*limit(v(DISABLE)/3.3,0,1)/2}\n.model DISABLE_MODEL VSWITCH(Ron=2 Roff=1e9 Von=2 Voff=.5)\nRext SENSOR_12V EC .1\nCext EC 0 100u\nBload SENSOR_12V 0 I={.3*limit(v(SENSOR_12V),0,1)}\nD5 0 SENSOR_12V DI_B240A\nBTVS BOOST_12V 0 I={max(0,(v(BOOST_12V)-14.4)/.382)}\nRADC SENSOR_12V 0 220k\nVshort SHORT 0 PWL(0 0 45m 0 45.001m 1 1000m 1 1000.001m 0)\nSshort SENSOR_12V 0 SHORT 0 SHORTMODEL\n.model SHORTMODEL SW(Ron=.05 Roff=1e12 Vt=.5 Vh=.1)\n.save v(BOOST_12V) v(SENSOR_12V) v(EFUSE_EN) v(FAULT_12V_N) i(Vsrc)\n.options method=gear reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 1200m 0 5u\n.end\n",
-      "raw_trace_sha256": "1437df6100ad4705526e859963cbcc81780bac26088364de59d1a1a575112afb",
+      "raw_trace_sha256": "9451d6c42298318288decba2b2a1ffbdba311787b68af457feb367150b5b7361",
       "initial_transient_OP_fallback": true
     },
     {
@@ -214,7 +214,7 @@
       "pass": true,
       "deck_and_model_hash": "0a4a8d2cf612957c4bb90f5be62628b0c27b96e19ffbb39cfc998327da6d425e",
       "simulated_netlist": "efuse_hot_short_half_step\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 1u 12.003)\nRsource SOURCE BOOST_12V .12\nCin BOOST_12V 0 66u\nXef 0 EFUSE_SS EFUSE_EN BOOST_12V SENSOR_12V FAULT_12V_N EFUSE_ILM OVC EF_TPS259620_TRANS PARAMS: Cdvdt=47n\nR62 EFUSE_ILM 0 2.61k\nR68 BOOST_12V EFUSE_EN 100k\nR69 EFUSE_EN 0 12.1k\nC65 BOOST_12V 0 1u\nC70 EFUSE_SS 0 47n\nC71 SENSOR_12V 0 1u\nVdisable DISABLE 0 PWL(0 3.3 2m 3.3 2.001m 0 90m 0 90.001m 3.3 95m 3.3 95.001m 0)\nBdisable EFUSE_EN 0 I={v(EFUSE_EN)*limit(v(DISABLE)/3.3,0,1)/2}\n.model DISABLE_MODEL VSWITCH(Ron=2 Roff=1e9 Von=2 Voff=.5)\nRext SENSOR_12V EC .1\nCext EC 0 100u\nBload SENSOR_12V 0 I={.3*limit(v(SENSOR_12V),0,1)}\nD5 0 SENSOR_12V DI_B240A\nBTVS BOOST_12V 0 I={max(0,(v(BOOST_12V)-14.4)/.382)}\nRADC SENSOR_12V 0 220k\nVshort SHORT 0 PWL(0 0 45m 0 45.001m 1 85m 1 85.001m 0)\nSshort SENSOR_12V 0 SHORT 0 SHORTMODEL\n.model SHORTMODEL SW(Ron=.05 Roff=1e12 Vt=.5 Vh=.1)\n.save v(BOOST_12V) v(SENSOR_12V) v(EFUSE_EN) v(FAULT_12V_N) i(Vsrc)\n.options method=gear reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 130m 0 500n\n.end\n",
-      "raw_trace_sha256": "13ad3b1b4883f97dbbd5900d77baa2ff7664749a69a4f35b9128ec65c53708cc",
+      "raw_trace_sha256": "c08d460fda86f732b7f6d63bc2bbe5ab5f34050fb7a4af9ce2efc99ece4eceb9",
       "initial_transient_OP_fallback": true
     },
     {
@@ -239,7 +239,7 @@
       "pass": true,
       "deck_and_model_hash": "f16ab5cd434588a2623ea5bfe7331388b9a4fdb76509cf233e7a99c4c35778eb",
       "simulated_netlist": "five_volt_start_short_and_reset\n.include tps2553-1.lib\nVsrc SOURCE 0 PWL(0 0 4m 5.067153284671533)\nRsource SOURCE V5_INTERNAL .12\nCinternal V5_INTERNAL 0 25.92u\nBother V5_INTERNAL 0 I={1.3*limit(v(V5_INTERNAL),0,1)}\nXu4 V5_INTERNAL 0 POWER_5V_EN 0 FAULT_5V_N V5_ILIM SENSOR_5V SW_TPS2553-1_TRANS\nR10 V5_ILIM 0 59k\nC11 V5_INTERNAL 0 100n\nC12 SENSOR_5V 0 22u\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_5V_N 40k\nVen POWER_5V_EN 0 PWL(0 0 10m 0 10.001m 3.3 45m 3.3 45.001m 0 55m 0 55.001m 3.3)\nRext SENSOR_5V EC .1\nCext EC 0 22u\nBload SENSOR_5V 0 I={.3*limit(v(SENSOR_5V),0,1)}\nVshort SHORT 0 PWL(0 0 25m 0 25.001m 1 35m 1 35.001m 0)\nSshort SENSOR_5V 0 SHORT 0 SHORTMODEL\n.model SHORTMODEL SW(Ron=.05 Roff=1e12 Vt=.5 Vh=.1)\n.save v(V5_INTERNAL) v(SENSOR_5V) v(FAULT_5V_N) i(Vsrc)\n.options method=gear reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 75m 0 500n\n.end\n",
-      "raw_trace_sha256": "07bd15d7bf19cfb5442468b3d87d4376e04cdf7b80c3f636134e2aba85a9abd7",
+      "raw_trace_sha256": "a5becc65292ba4be58b7d1fe0bb4cd214993b8472c8736d3089c5c72d89797e6",
       "initial_transient_OP_fallback": false
     },
     {
@@ -271,20 +271,18 @@
       "pass": true,
       "deck_and_model_hash": "cc7a501b6f74a4226d69ae6708fd0a0e2c5a0f1e3e522b5f8efdb6fe7762836b",
       "simulated_netlist": "efuse_min_limit_cap_tolerance\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 1u 12.003)\nRsource SOURCE BOOST_12V .12\nCin BOOST_12V 0 66u\nXef 0 EFUSE_SS EFUSE_EN BOOST_12V SENSOR_12V FAULT_12V_N EFUSE_ILM OVC EF_TPS259620_TRANS PARAMS: Cdvdt=47n\nR62 EFUSE_ILM 0 2.92k\nR68 BOOST_12V EFUSE_EN 100k\nR69 EFUSE_EN 0 12.1k\nC65 BOOST_12V 0 1u\nC70 EFUSE_SS 0 47n\nC71 SENSOR_12V 0 1u\n* Current-limit surrogate: 2.92k test resistor; fitted R62 is 2.61k\nVdisable DISABLE 0 PWL(0 0)\nBdisable EFUSE_EN 0 I={v(EFUSE_EN)*limit(v(DISABLE)/3.3,0,1)/2}\n.model DISABLE_MODEL VSWITCH(Ron=2 Roff=1e9 Von=2 Voff=.5)\nRext SENSOR_12V EC .1\nCext EC 0 120u\nBload SENSOR_12V 0 I={.3*limit(v(SENSOR_12V),0,1)}\nD5 0 SENSOR_12V DI_B240A\nBTVS BOOST_12V 0 I={max(0,(v(BOOST_12V)-14.4)/.382)}\nRADC SENSOR_12V 0 220k\nVshort SHORT 0 PWL(0 0)\nSshort SENSOR_12V 0 SHORT 0 SHORTMODEL\n.model SHORTMODEL SW(Ron=.05 Roff=1e12 Vt=.5 Vh=.1)\n.save v(BOOST_12V) v(SENSOR_12V) v(EFUSE_EN) v(FAULT_12V_N) i(Vsrc)\n.options method=gear reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 200m 0 1u\n.end\n",
-      "raw_trace_sha256": "eda61cc5bdd836aa5917722ff08821ab42749901fa352bf0dac265070a8d759d",
+      "raw_trace_sha256": "c01273a2b1b977d5bdc44770df6a423c243e704d422220f4561b356f39678b4d",
       "initial_transient_OP_fallback": true
     }
   ],
-  "fresh_run_utc": "2026-09-09",
-  "reused_traces": false,
   "timestep_repeat": {
     "pass": true,
     "output_difference_V": 0.000770717448548397,
     "source_current_difference_A": 0.0003857031251037202,
-    "scope": "3-130 ms at 10 us intervals, excluding +/-10 us around imposed 45/85/90/95 ms switching edges; raw extrema independently checked."
+    "scope": "Complete fresh 130ms traces, 10us sample grid; exclude +/-10us at imposed switch edges. Raw extrema separately pass."
   },
-  "reported_utc": "2026-09-09T22:46:45.631360+00:00",
-  "reason": "The user requested a 45-minute simulation and cross-check window. Coupled vendor switching models did not finish in that window; no incomplete trace is counted as passing.",
+  "reported_utc": "2026-09-10T04:09:53.973536+00:00",
+  "fresh_run": true,
   "requested_cases": [
     {
       "name": "combined_low_input_capacitive_start",
@@ -354,6 +352,11 @@
       "end": 200
     }
   ],
+  "combined_solver_repeat": {
+    "pass": false,
+    "status": "RUNNING"
+  },
+  "reason": "User-authorized final pre-order validation in progress; incomplete traces are not passes.",
   "pending_cases": [
     {
       "case": {
@@ -366,13 +369,9 @@
         "source": "0 0 4m 4.913149",
         "xtrtol": 2
       },
-      "status": "INCOMPLETE: stopped within the user-requested 45-minute work window",
-      "log_findings": [],
-      "requested_end_s": 0.04,
-      "last_simulated_time_s": 0.010584581287600588,
-      "saved_samples": 2456704,
-      "simulated_netlist": "combined_low_input_capacitive_start\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 4m 4.913149)\nRsource SOURCE V5_INTERNAL .12\nCinternal V5_INTERNAL 0 25.92u\nBother V5_INTERNAL 0 I={.45*limit(v(V5_INTERNAL),0,1)}\nXu8 V5_INTERNAL BOOST_FB V5_INTERNAL BOOST_SS 0 BOOST_SW BOOST_COMP V5_INTERNAL BST_TPS61085\nL2 V5_INTERNAL LX 3.3u\nRdcr LX BOOST_SW .032\nD4 BOOST_SW BOOST_12V DI_B240A\nRcin V5_INTERNAL CI .01\nCin CI 0 22u\nRcout BOOST_12V CO .01\nCout CO 0 66u\nC61 V5_INTERNAL 0 1u\nC66 BOOST_SS 0 100n\nR60 BOOST_12V BOOST_FB 100k\nR61 BOOST_FB 0 11.5k\nR63 BOOST_COMP BOOST_COMP_RC 13k\nC69 BOOST_COMP_RC 0 33n\nXef 0 EFUSE_SS EFUSE_EN BOOST_12V SENSOR_12V FAULT_12V_N EFUSE_ILM OVC EF_TPS259620_TRANS PARAMS: Cdvdt=47n\nR62 EFUSE_ILM 0 2.61k\nR68 BOOST_12V EFUSE_EN 100k\nR69 EFUSE_EN 0 12.1k\nC65 BOOST_12V 0 1u\nC70 EFUSE_SS 0 47n\nC71 SENSOR_12V 0 1u\nVdisable DISABLE 0 PWL(0 0)\nSdisable EFUSE_EN 0 DISABLE 0 DISABLE_MODEL\n.model DISABLE_MODEL VSWITCH(Ron=2 Roff=1e9 Von=2 Voff=.5)\nRext SENSOR_12V EC .1\nCext EC 0 100u\nBload SENSOR_12V 0 I={.3*limit(v(SENSOR_12V),0,1)}\nD5 0 SENSOR_12V DI_B240A\nBTVS BOOST_12V 0 I={max(0,(v(BOOST_12V)-14.4)/.382)}\nRADC SENSOR_12V 0 220k\nVshort SHORT 0 PWL(0 0)\nSshort SENSOR_12V 0 SHORT 0 SHORTMODEL\n.model SHORTMODEL VSWITCH(Ron=.05 Roff=1e12 Von=.9 Voff=.1)\n.save v(V5_INTERNAL) v(BOOST_12V) v(SENSOR_12V) v(EFUSE_EN) v(FAULT_12V_N) i(Vsrc) i(L2)\n.options klu method=gear xtrtol=2 reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 40m 0 50n\n.end\n",
-      "partial_raw_sha256": "a873482e69f0c5010268a8ae22d5b3ab332217e7182a7edc17c0461328597225"
+      "status": "RUNNING",
+      "last_simulated_time_s": 0.004564700624171817,
+      "requested_end_s": 0.04
     },
     {
       "case": {
@@ -387,26 +386,9 @@
         "step": "25n",
         "trace_name": "combined_low_input_capacitive_start_trtol7_25n"
       },
-      "status": "INCOMPLETE: stopped within the user-requested 45-minute work window",
-      "log_findings": [],
-      "requested_end_s": 0.04,
-      "last_simulated_time_s": 0.011590015502998725,
-      "saved_samples": 1633856,
-      "simulated_netlist": "combined_low_input_capacitive_start\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 4m 4.913149)\nRsource SOURCE V5_INTERNAL .12\nCinternal V5_INTERNAL 0 25.92u\nBother V5_INTERNAL 0 I={.45*limit(v(V5_INTERNAL),0,1)}\nXu8 V5_INTERNAL BOOST_FB V5_INTERNAL BOOST_SS 0 BOOST_SW BOOST_COMP V5_INTERNAL BST_TPS61085\nL2 V5_INTERNAL LX 3.3u\nRdcr LX BOOST_SW .032\nD4 BOOST_SW BOOST_12V DI_B240A\nRcin V5_INTERNAL CI .01\nCin CI 0 22u\nRcout BOOST_12V CO .01\nCout CO 0 66u\nC61 V5_INTERNAL 0 1u\nC66 BOOST_SS 0 100n\nR60 BOOST_12V BOOST_FB 100k\nR61 BOOST_FB 0 11.5k\nR63 BOOST_COMP BOOST_COMP_RC 13k\nC69 BOOST_COMP_RC 0 33n\nXef 0 EFUSE_SS EFUSE_EN BOOST_12V SENSOR_12V FAULT_12V_N EFUSE_ILM OVC EF_TPS259620_TRANS PARAMS: Cdvdt=47n\nR62 EFUSE_ILM 0 2.61k\nR68 BOOST_12V EFUSE_EN 100k\nR69 EFUSE_EN 0 12.1k\nC65 BOOST_12V 0 1u\nC70 EFUSE_SS 0 47n\nC71 SENSOR_12V 0 1u\nVdisable DISABLE 0 PWL(0 0)\nSdisable EFUSE_EN 0 DISABLE 0 DISABLE_MODEL\n.model DISABLE_MODEL VSWITCH(Ron=2 Roff=1e9 Von=2 Voff=.5)\nRext SENSOR_12V EC .1\nCext EC 0 100u\nBload SENSOR_12V 0 I={.3*limit(v(SENSOR_12V),0,1)}\nD5 0 SENSOR_12V DI_B240A\nBTVS BOOST_12V 0 I={max(0,(v(BOOST_12V)-14.4)/.382)}\nRADC SENSOR_12V 0 220k\nVshort SHORT 0 PWL(0 0)\nSshort SENSOR_12V 0 SHORT 0 SHORTMODEL\n.model SHORTMODEL VSWITCH(Ron=.05 Roff=1e12 Von=.9 Voff=.1)\n.save v(V5_INTERNAL) v(BOOST_12V) v(SENSOR_12V) v(EFUSE_EN) v(FAULT_12V_N) i(Vsrc) i(L2)\n.options klu method=gear xtrtol=7 reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 40m 0 25n\n.end\n",
-      "partial_raw_sha256": "3fcb38bda9b1f4b2a893610edb2fdeb5bd4cc77d8dd645709f665b4bd31deb55"
+      "status": "RUNNING",
+      "last_simulated_time_s": 0.006856100580270393,
+      "requested_end_s": 0.04
     }
-  ],
-  "combined_solver_repeat": {
-    "pass": false,
-    "status": "INCOMPLETE",
-    "partial_overlap_only": {
-      "end_s": 0.010584581287600588,
-      "voltage_difference_V": {
-        "v(v5_internal)": 0.004142508192395589,
-        "v(boost_12v)": 0.014225681523880596,
-        "v(sensor_12v)": 0.0023640316963420283
-      },
-      "scope": "Diagnostic over the shared initial interval only; not the required 0-40 ms comparison."
-    }
-  }
+  ]
 }

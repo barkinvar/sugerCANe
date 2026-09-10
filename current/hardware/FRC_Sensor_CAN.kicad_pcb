@@ -10652,7 +10652,7 @@
 				)
 			)
 		)
-		(property "Value" "30pF"
+		(property "Value" "20pF"
 			(at 0 1.68 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10698,7 +10698,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0805JRNPO9BN300"
+		(property "MPN" "CC0805JRNPO9BN200"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -24769,7 +24769,7 @@
 				)
 			)
 		)
-		(property "Value" "30pF"
+		(property "Value" "20pF"
 			(at 0 1.68 270)
 			(layer "F.Fab")
 			(hide yes)
@@ -24815,7 +24815,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0805JRNPO9BN300"
+		(property "MPN" "CC0805JRNPO9BN200"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)

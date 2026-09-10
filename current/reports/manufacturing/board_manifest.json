@@ -1586,7 +1586,7 @@
     },
     {
       "reference": "C25",
-      "value": "30pF",
+      "value": "20pF",
       "package": "C_0805_2012Metric",
       "x_mm": 34.0,
       "y_mm": -17.5,
@@ -3660,7 +3660,7 @@
     },
     {
       "reference": "C26",
-      "value": "30pF",
+      "value": "20pF",
       "package": "C_0805_2012Metric",
       "x_mm": 28.0,
       "y_mm": -27.2,

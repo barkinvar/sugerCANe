@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/neuro/candi-clone/current/hardware/FRC_Sensor_CAN.kicad_sch</source>
-    <date>2026-09-09T19:40:32</date>
+    <date>2026-09-09T21:05:30</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -1991,17 +1991,17 @@
       </units>
     </comp>
     <comp ref="C25">
-      <value>30pF</value>
+      <value>20pF</value>
       <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
       <fields>
-        <field name="MPN">CC0805JRNPO9BN300</field>
+        <field name="MPN">CC0805JRNPO9BN200</field>
         <field name="Notes"/>
         <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
-      <property name="MPN" value="CC0805JRNPO9BN300"/>
+      <property name="MPN" value="CC0805JRNPO9BN200"/>
       <property name="Notes" value=""/>
       <property name="Sheetname" value="Controller, clock, debug and status"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
@@ -2017,17 +2017,17 @@
       </units>
     </comp>
     <comp ref="C26">
-      <value>30pF</value>
+      <value>20pF</value>
       <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
       <fields>
-        <field name="MPN">CC0805JRNPO9BN300</field>
+        <field name="MPN">CC0805JRNPO9BN200</field>
         <field name="Notes"/>
         <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
-      <property name="MPN" value="CC0805JRNPO9BN300"/>
+      <property name="MPN" value="CC0805JRNPO9BN200"/>
       <property name="Notes" value=""/>
       <property name="Sheetname" value="Controller, clock, debug and status"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>

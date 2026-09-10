@@ -5,10 +5,10 @@
   "power_distribution_valid_for_current_layout": true,
   "full_power_transient_pass": false,
   "input_hashes": {
-    "hardware/design/circuit.json": "fba0e0e4347605db774f2a3259a5a136d520aa48a52ddbee446a8f04cbbc61ae",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "4d00abd563bfa88924e25474253365773afd8d0fa6c0d622cb002c53a29b7d28",
+    "hardware/design/circuit.json": "c86045fb7c7640b5a57a6350eb52c042cfa7665a9ae73f909f96ae7354323569",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
     "reports/electrical/electrical_checks.json": "ad27f7e16f6cbff19cc68ec084b22389250dfca7802d8e8bf8d0f183b9c52f6f",
-    "reports/electrical/boost_spice.json": "1569440df8c69b3db8e19c4b869508e76733b0c662a87ab44dec585ce2ef9abb",
+    "reports/electrical/boost_spice.json": "7313d87d5101139cddcf9d558df5d521aed7a7994baeaa3391aa5965b2c45775",
     "reports/design_parity.json": "d79cbd2f9a9dd988ede7c9394aad08e31f1f18c110d687679477102b4768bee5",
     "reports/board_constraints.json": "5d5c66a155e81ab44e3365e04a14a44cbb54871dfc73563557208875b731422b",
     "scripts/check_boost_spice.py": "44d4c0f4d6fd7944d2dda0f4b9387391c9e35fdd984e57e5e4b8072c41089209",

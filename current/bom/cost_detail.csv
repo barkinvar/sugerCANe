@@ -19,7 +19,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 1,BAT46W-E3-18,Factory SMT,3,3,0.1309,0.3927,0,JLCPCB,https://jlcpcb.com/partdetail/C5557780
 1,"BSS138BK,215",Factory SMT,5,5,0.0669,0.3345,0,JLCPCB,https://jlcpcb.com/partdetail/C282529
 1,CC0805JRNPO9BN102,Factory SMT,3,3,0.0137,0.0411,0,JLCPCB,https://jlcpcb.com/partdetail/C62774
-1,CC0805JRNPO9BN300,Factory SMT,2,2,0.0073,0.0146,0,JLCPCB,https://jlcpcb.com/partdetail/C107114
+1,CC0805JRNPO9BN200,Factory SMT,2,2,0.0114,0.0228,0,JLCPCB,https://jlcpcb.com/partdetail/C105173
 1,CC0805KRX7R9BB333,Factory SMT,1,1,0.012,0.012,0,JLCPCB,https://jlcpcb.com/partdetail/C107150
 1,CL21B103KBANNNC,Factory SMT,2,2,0.013,0.026,0,JLCPCB,https://jlcpcb.com/partdetail/C1710
 1,CL21B104KCFNNNE,Factory SMT,14,14,0.0407,0.5698,0,JLCPCB,https://jlcpcb.com/partdetail/C28233
@@ -79,7 +79,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 5,BAT46W-E3-18,Factory SMT,15,15,0.1309,1.9635,0,JLCPCB,https://jlcpcb.com/partdetail/C5557780
 5,"BSS138BK,215",Factory SMT,25,25,0.0669,1.6725,0,JLCPCB,https://jlcpcb.com/partdetail/C282529
 5,CC0805JRNPO9BN102,Factory SMT,15,15,0.0137,0.2055,0,JLCPCB,https://jlcpcb.com/partdetail/C62774
-5,CC0805JRNPO9BN300,Factory SMT,10,10,0.0073,0.073,0,JLCPCB,https://jlcpcb.com/partdetail/C107114
+5,CC0805JRNPO9BN200,Factory SMT,10,10,0.0114,0.114,0,JLCPCB,https://jlcpcb.com/partdetail/C105173
 5,CC0805KRX7R9BB333,Factory SMT,5,5,0.012,0.06,0,JLCPCB,https://jlcpcb.com/partdetail/C107150
 5,CL21B103KBANNNC,Factory SMT,10,10,0.013,0.13,0,JLCPCB,https://jlcpcb.com/partdetail/C1710
 5,CL21B104KCFNNNE,Factory SMT,70,70,0.0407,2.849,0,JLCPCB,https://jlcpcb.com/partdetail/C28233
@@ -139,7 +139,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 10,BAT46W-E3-18,Factory SMT,30,30,0.1309,3.927,0,JLCPCB,https://jlcpcb.com/partdetail/C5557780
 10,"BSS138BK,215",Factory SMT,50,50,0.0669,3.345,0,JLCPCB,https://jlcpcb.com/partdetail/C282529
 10,CC0805JRNPO9BN102,Factory SMT,30,30,0.0137,0.411,0,JLCPCB,https://jlcpcb.com/partdetail/C62774
-10,CC0805JRNPO9BN300,Factory SMT,20,20,0.0073,0.146,0,JLCPCB,https://jlcpcb.com/partdetail/C107114
+10,CC0805JRNPO9BN200,Factory SMT,20,20,0.0114,0.228,0,JLCPCB,https://jlcpcb.com/partdetail/C105173
 10,CC0805KRX7R9BB333,Factory SMT,10,10,0.012,0.12,0,JLCPCB,https://jlcpcb.com/partdetail/C107150
 10,CL21B103KBANNNC,Factory SMT,20,20,0.013,0.26,0,JLCPCB,https://jlcpcb.com/partdetail/C1710
 10,CL21B104KCFNNNE,Factory SMT,140,140,0.0407,5.698,0,JLCPCB,https://jlcpcb.com/partdetail/C28233
@@ -199,7 +199,7 @@ boards,MPN,assembly,needed,purchase_quantity,unit_usd,purchase_usd,leftover,supp
 25,BAT46W-E3-18,Factory SMT,75,75,0.1086,8.145,0,JLCPCB,https://jlcpcb.com/partdetail/C5557780
 25,"BSS138BK,215",Factory SMT,125,125,0.0529,6.6125,0,JLCPCB,https://jlcpcb.com/partdetail/C282529
 25,CC0805JRNPO9BN102,Factory SMT,75,75,0.0137,1.0275,0,JLCPCB,https://jlcpcb.com/partdetail/C62774
-25,CC0805JRNPO9BN300,Factory SMT,50,50,0.0073,0.365,0,JLCPCB,https://jlcpcb.com/partdetail/C107114
+25,CC0805JRNPO9BN200,Factory SMT,50,50,0.0114,0.57,0,JLCPCB,https://jlcpcb.com/partdetail/C105173
 25,CC0805KRX7R9BB333,Factory SMT,25,25,0.012,0.3,0,JLCPCB,https://jlcpcb.com/partdetail/C107150
 25,CL21B103KBANNNC,Factory SMT,50,50,0.013,0.65,0,JLCPCB,https://jlcpcb.com/partdetail/C1710
 25,CL21B104KCFNNNE,Factory SMT,350,350,0.0407,14.245,0,JLCPCB,https://jlcpcb.com/partdetail/C28233

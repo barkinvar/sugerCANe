@@ -68,6 +68,10 @@ for path,key in [('hardware/design/circuit.json','baseline_model_sha256')]:
  for field in ('value','voltage','tolerance'):
   assert cap_review['before'][field]==cap_review['after'][field]
  restored_model['parts']['C1']=cap_review['before']
+ for s in snapshot['substitutions']:
+  if 'old_value' in s:
+   assert s['references']==['C25','C26'] and s['old_value']=='30pF' and s['value']=='20pF'
+   for ref in s['references']:restored_model['parts'][ref]['value']=s['old_value']
  restored=json.dumps(restored_model,indent=2)+'\n'
  for s in snapshot['substitutions']:restored=restored.replace(s['new_mpn'],s['old_mpn'])
  assert hashlib.sha256(restored.encode()).hexdigest()==snapshot[key],('Change beyond sourcing metadata',path)

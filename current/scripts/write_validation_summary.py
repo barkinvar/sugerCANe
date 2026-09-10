@@ -56,6 +56,10 @@ java=int(re.search(r'PASS: (\d+) 12 V Java assertions',drivers)[1]);assert 'Ran 
 assert 'PASS: WPILib 2027.0.0-alpha-7' in (R/'reports/bridge2027-tests.log').read_text()
 assert read('reports/firmware-images.json')['result']=='PASS'
 loop=read('reports/electrical/converter_loop.json');assert loop['result']=='PASS analytical screening only'
+margins=read('reports/electrical/component_margins.json')
+assert margins['buck']['normal_load_pass'] and margins['oscillator']['all_gain_corners_pass']
+for path,digest in margins['input_hashes'].items():
+ assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale component margin review',path)
 subprocess.run([sys.executable,str(R/'scripts/check_input_spice.py'),'--verify-report'],check=True)
 input_spice=read('reports/electrical/input_spice.json')
 spice=read('reports/electrical/boost_spice.json')
@@ -94,6 +98,8 @@ tracked += ['hardware/FRC_Sensor_CAN.kicad_pro','hardware/FRC_Sensor_CAN.kicad_d
             'scripts/test_routing.py','reports/routing-tests.log','reports/routing_rules.json','reports/routing_cleanup.json',
             'hardware/design/routing_widths.json']
 tracked += ['scripts/ground_geometry.py','scripts/verify_gerber_geometry.py']
+tracked += ['scripts/check_component_margins.py','reports/electrical/component_margins.json',
+            'reports/manufacturing/clock_load_change.json']
 tracked += ['reports/erc/final.json','reports/drc/final.json','reports/design_parity.json','reports/board_constraints.json',
             'reports/variant_verification.json','reports/firmware-tests.log','reports/power-tests.log','reports/firmware-images.json',
             'reports/firmware-arm-registers.json','reports/driver/tests.log','reports/bridge2027-tests.log',
@@ -102,7 +108,16 @@ tracked += ['reports/erc/final.json','reports/drc/final.json','reports/design_pa
             'reports/document_review.json','reports/visual_review.json','output/documentation/SC12_RevH_Handbook.pdf']
 if not complete:tracked += ['reports/electrical/boost_spice_partial.json','reports/electrical/boost_spice_partial.png']
 tracked += ['bom/jlc_sourcing.json','reports/manufacturing/jlc_sourcing.json',*sourcing['input_hashes']]
-factory=read('reports/manufacturing/factory_files.json');assert factory['result']=='PASS' and factory['factory_smt_placements']==130 and factory['hand_solder_parts']==10
+factory=read('reports/manufacturing/factory_files.json');plan=read('bom/assembly_plan.json')
+assert factory['result']=='PASS' and factory['factory_smt_placements']==plan['factory_placements']==129
+assert factory['hand_solder_parts']==len(plan['hand_solder_references'])==11
+assert factory['hand_solder_mcu_joints']==32 and factory['hand_solder_through_hole_joints']==49
+stencil=read('reports/manufacturing/factory_stencil.json')
+assert stencil['result']=='PASS' and stencil['removed_u5_apertures']==32
+for path,digest in stencil['input_hashes'].items():
+ assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale factory stencil evidence',path)
+assert hashlib.sha256((R/stencil['output']).read_bytes()).hexdigest()==stencil['output_sha256']
+tracked += ['bom/assembly_plan.json','reports/manufacturing/factory_stencil.json',stencil['output']]
 tracked += [p.relative_to(R).as_posix() for p in sorted((R/'hardware').glob('*.kicad_sch')) if p.name!='FRC_Sensor_CAN.kicad_sch']
 out=dict(revision='H SC12',status='PASS engineering checks; physical qualification pending',physical_tests_performed=False,erc_violations=0,drc_violations=0,unconnected_items=0,model_schematic_pcb_parity=True,fitted_parts=140,portable_models=assembly['portable_models_verified'],manufacturing_layers=assembly['graphic_layers'],copper_layers=4,gerber_shorts=copper['shorts'],gerber_opens=copper['opens'],net_tie_isolation=copper['intentional_net_tie_isolation']['extra_shorts'],firmware_core_tests='PASS under ASan/UBSan',firmware_application_scenarios=scenarios,java_assertions=java,python_test_methods=13,can_service_tests="8 host methods plus 2148 simulated flash boundaries",arm_register_tests=read("reports/firmware-arm-registers.json")["result"],bridge_tests="Real TCP with mock CAN; 2026 and 2027 adapters compile",cpp_tests='PASS under ASan/UBSan; WPILib example compiled',analytical_CCM_loop_corners=loop['corners'],input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in tracked},limitations='No measured efficiency, thermal, surge, EMC, sensor startup, actual MCU/CAN, solder yield or enclosure fit qualification. See docs/VALIDATION.md.')
 out['vendor_model_transient_cases']=[r['case']['name'] for r in (spice if complete else partial)['cases']]
@@ -126,6 +141,12 @@ if diagnostics and diagnostics['circuit_sha256']==out['input_hashes']['hardware/
   'low_supply_cases':{c['case']['name']:c['pass'] for c in diagnostics.get('low_supply_cases',[])},
   'scope':'Additional diagnostics, separate from the required full-suite gates; pointwise waveform differences are retained in solver_diagnostics.json and are not an equivalence claim.'}
 out['simulation_deferred_by_user']=False
+out['component_margin_review']={
+ 'normal_load_buck_pass':margins['buck']['normal_load_pass'],
+ 'crystal_gain_corners_pass':margins['oscillator']['all_gain_corners_pass'],
+ 'fitted_crystal_capacitors_pF':margins['oscillator']['fitted_capacitors_pF'],
+ 'simultaneous_fault_regulation_guaranteed':False,
+ 'limitations':margins['limitations']}
 out['power_distribution_valid_for_current_layout']=True
 if not complete:
  out['status']='HOLD full release: completed CAD, firmware, input and standalone power screens pass; full power evidence remains unresolved'
@@ -136,6 +157,7 @@ if not complete:
   out['combined_solver_repeat_pass']=spice.get('combined_solver_repeat',{}).get('pass',False)
 out['manufacturing_holds']=sourcing['manufacturing_holds']
 if sourcing['manufacturing_holds']:
- out['status']='HOLD full release: unresolved sourcing or factory process qualification'
- out['order_decision']='HOLD: '+'; '.join(sourcing['manufacturing_holds'])
+ out['status']=('HOLD full release: unresolved sourcing or factory process qualification' if complete else
+                'HOLD full release: full power screening unresolved and factory process qualification pending')
+ out['order_decision']='HOLD: '+('full power screening unresolved; ' if not complete else '')+'; '.join(sourcing['manufacturing_holds'])
 (R/'reports/release_checks.json').write_text(json.dumps(out,indent=2)+'\n');print(out['status'])
