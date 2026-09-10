@@ -52,7 +52,7 @@ def branch_junctions(data):
     return result
 
 
-def inspect(data):
+def inspect(data, width_policy=None):
     tracks = data['tracks']
     issues = collections.defaultdict(list)
     contacts = collections.defaultdict(list)
@@ -139,12 +139,54 @@ def inspect(data):
         sectors=sorted(junction['sectors_deg'])
         if sectors not in ([90,135,135],[90,90,90,90]):
             record('unchamfered_free_branches',*ids,at_mm=junction['at_mm'],sectors_deg=junction['sectors_deg'])
+    # Widths are checked per segment, and free width-change junctions need a
+    # location-specific engineering reason. Pad/via contact changes are normal.
+    widths = collections.defaultdict(lambda: collections.defaultdict(lambda: [0, 0.0]))
+    transitions = []
+    approvals = (width_policy or {}).get('free_transitions', [])
+    used_approvals = set()
+    for i, t in enumerate(tracks):
+        row = widths[t['net']][t['width']]
+        row[0] += 1
+        row[1] += lines[i].length
+        if width_policy is not None:
+            spec = width_policy['nets'].get(t['net'], width_policy['default'])
+            allowed = spec.get('layers', {}).get(str(t['layer']), spec['widths_mm'])
+            if not any(abs(t['width']-w) <= TOL for w in allowed):
+                record('unreviewed_track_width', i, width_mm=t['width'], allowed_mm=allowed)
+    for key, group in sorted(adjacency.items()):
+        ids = sorted({i for i, _ in group})
+        ww = sorted({tracks[i]['width'] for i in ids})
+        if len(ww) < 2:
+            continue
+        node = Point(key[2:]); contact = contacts.get(key[:2])
+        local = contact is not None and contact.buffer(max(ww)/2+TOL).covers(node)
+        reason = 'Pad/via contact between separately sized branches.' if local else None
+        for number, approval in enumerate(approvals):
+            if (approval['net'], approval['layer']) == key[:2] and math.dist(approval['at_mm'], key[2:]) <= TOL and approval['widths_mm'] == ww:
+                reason = approval['reason']; used_approvals.add(number)
+        if width_policy is not None and not local and not reason:
+            record('unreviewed_width_transition', *ids, at_mm=list(key[2:]), widths_mm=ww)
+        transitions.append(dict(net=key[0], layer=key[1], at_mm=list(key[2:]), widths_mm=ww,
+                                tracks=[tracks[i]['id'] for i in ids], at_contact=local, reason=reason))
+    for number, approval in enumerate(approvals):
+        if number not in used_approvals:
+            issues['stale_width_approval'].append(approval)
+    inventory = []
+    for net, rows in sorted(widths.items()):
+        spec = (width_policy or {}).get('nets', {}).get(net, (width_policy or {}).get('default', {}))
+        inventory.append(dict(net=net, widths=[dict(width_mm=w, segments=v[0], length_mm=v[1]) for w,v in sorted(rows.items())],
+                              reason=spec.get('reason', 'Width policy not supplied.')))
     return dict(result='FAIL' if issues else 'PASS', segments=len(tracks), vias=len(data['vias']),
                 rules=dict(direction_tolerance_mm=TOL, minimum_free_segment_mm=MIN_FREE_SEGMENT,
                            minimum_free_bend_included_angle_deg=135, curved_tracks_allowed=False,
                            free_three_way_branch_sectors_deg=[90,135,135],explicit_free_junction_endpoints=True),
                 free_branch_junctions=len(branches),
                 short_contact_segments=contact_segments, findings=dict(issues),
+                width_audit=dict(policy_enforced=width_policy is not None, routed_nets=len(widths),
+                                 segments_checked=len(tracks), nets=inventory, transitions=transitions,
+                                 free_transitions=sum(not t['at_contact'] for t in transitions),
+                                 scope='All segment widths and shared-endpoint width transitions. Different widths at pad/via contacts are intentional branch sizing; net reasons cover routes on different layers. Electrical load and copper-drop limits are checked separately.'),
                 scope='Routing geometry only. Copper round end caps are normal; no curved centerlines. '
                       'Pad/via contacts allow local transitions; free branches require explicit nodes and chamfered geometry. '
                       'Native DRC and independent Gerber connectivity/clearance must also pass.')
@@ -156,10 +198,12 @@ def main():
     parser.add_argument('--output', type=Path, default=R/'reports/routing_rules.json')
     args = parser.parse_args()
     raw = subprocess.check_output(['kicad-python', str(R/'scripts/export_routing_geometry.py'), str(args.board)], text=True)
-    report = inspect(json.loads(raw))
+    policy_path = R/'hardware/design/routing_widths.json'
+    report = inspect(json.loads(raw), json.loads(policy_path.read_text()))
     report['board_sha256'] = hashlib.sha256(args.board.read_bytes()).hexdigest()
     report['source_hashes'] = {p: hashlib.sha256((R/p).read_bytes()).hexdigest()
-                              for p in ['scripts/check_routing.py', 'scripts/export_routing_geometry.py']}
+                              for p in ['scripts/check_routing.py', 'scripts/export_routing_geometry.py',
+                                        'hardware/design/routing_widths.json']}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2)+'\n')
     print(report['result'], 'routing rules:', {k:len(v) for k,v in report['findings'].items()},

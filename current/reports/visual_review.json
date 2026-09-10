@@ -1,140 +1,156 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-10T01:03:51.507953+00:00",
+  "reviewed_utc": "2026-09-10T01:47:47.659337+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
       "file": "output/review/board_3d_final.png",
-      "sha256": "aefab7684e74d258df40994c95f6d885ad0ed1fc7f5989189e4e49d73ccd6abc",
-      "scope": "Oblique CAD inspected after final enforced routing cleanup. Component arrangement, right-side RGB duct area, connectors, socket and markings retained. Refreshed after the branch cleanup and inspected alongside actual-copper previews.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00"
+      "sha256": "cc9e40bd3a7a3132a77ce9414d948b59ed7f880b2579b1541620945bd5583f33",
+      "scope": "Refreshed oblique CAD inspected after width cleanup. Component arrangement, optical courtyard, connectors, service socket and markings retained.",
+      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
     },
     {
       "file": "output/review/board_top.png",
-      "sha256": "0f282fc75aa069c27dd1d5aebf85232a383f0cd5c9f9dc7b9498ced8ca33240d",
-      "scope": "Top CAD and separate centerline view inspected. Straight horizontal/vertical/45-degree routes; local pad escapes remain. Component and jumper-label placement unchanged. Refreshed after the branch cleanup and inspected alongside actual-copper previews.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00"
+      "sha256": "df90ea235e29014292b8d33d1828610979f7be5304d6245afd58db54b8a91921",
+      "scope": "Refreshed top CAD inspected with actual-copper previews and width close-ups. Same component/selector arrangement; unnecessary signal and power width changes removed.",
+      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "9b8b563795e92529f82cf340d37a8f3367fd784d2ffc03549227296347911ff7",
-      "scope": "Underside CAD inspected after routing cleanup. Readable pixel sugarCANe lettering and stepped island/cane artwork unchanged; copper routes simplified. All vias and holes retained. Refreshed after the branch cleanup and inspected alongside actual-copper previews.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00"
+      "sha256": "c52219e03f2bc4173ac1887383a7f0171202e158f1e0645936152e97f7b2e40c",
+      "scope": "Refreshed underside CAD inspected. SugarCANe artwork, vias and holes retained; wider sensor-power routes visible.",
+      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
     },
     {
       "file": "output/review/board_connectors.png",
-      "sha256": "9065df789b1aaa775a975d6fa0cb40846c39492f7b08344ce32201e8d83d3419",
-      "scope": "Connector-angle CAD inspected: terminal entries, voltage jumpers and recessed socket retain their previous arrangement and access. Refreshed after the branch cleanup and inspected alongside actual-copper previews.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00"
+      "sha256": "dc8942c32e32b99d7bff0bc0a2d839b7995c15bf9294162f51bb0ed34fe6a86e",
+      "scope": "Refreshed connector-angle CAD inspected; wire entries, recessed debug socket and selector access retained.",
+      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
     },
     {
       "file": "output/review/service_gui.png",
       "sha256": "e4cf0a7e3011c206410cccc592cd689df534eb19928cbc9ddcd41c88576e381d",
       "scope": "Simulated app0.9.0: three independent input modes and active levels, identify and Reset power fault controls; no physical CAN connection.",
       "reviewed_utc": "2026-09-09T19:59:05.532967+00:00",
-      "evidence": "Unchanged artifact; preceding documented visual review retained."
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "385fbccdcdd7bf3ddd441086d9af1ea699dad0daeeb8335943b47400fbada7ab",
-      "scope": "All 39 pages compared against ae55a5b; changed cover and pages 3-4 visually inspected. Current routing count, branch rules, refreshed copper DC result and retained order holds are readable without clipping.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00"
+      "sha256": "2b711e24c0f92f1ab4af257369162a8360d8e0edf60dd019bb608efbe00451a6",
+      "scope": "All 39 pages raster-compared against baseline. Changed pages 1, 3-5 and 35-37 inspected. Width-audit results and retained HOLD are readable; no orphan overview page remains.",
+      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
       "sha256": "21bd517fd4b55f6f7cf781b0e09b3eaec7d70976d9d49200fe71da6df0ac76c9",
       "scope": "All 3 pages compared against 26a31d8 at 1x; changed pages 1, 2 visually inspected. Standard-only assembly, C1 reflow hold, status and cost text remain readable without clipping or overlap.",
-      "reviewed_utc": "2026-09-10T00:39:18.296684+00:00"
+      "reviewed_utc": "2026-09-10T00:39:18.296684+00:00",
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
       "sha256": "9768ff75073035cc20d1729501652b98f1263df04e1cdf499c70e0edf7b8b4ee",
       "scope": "All 2 rendered pages are pixel-identical to reviewed 8d4deb4; MPN metadata changes do not alter visible drawing.",
       "reviewed_utc": "2026-09-10T00:23:12.378655+00:00",
-      "evidence": "Raster comparison of every page; preceding visual review retained."
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
     },
     {
       "file": "output/assembly/schematic.pdf",
       "sha256": "d1f8b1b2b7613c3eb7084de5f2750a309e1b09cc4c271f4940140bb0ccd52f39",
       "scope": "All 10 rendered pages are pixel-identical to reviewed ae55a5b. Existing visual review retained.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00"
+      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00",
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
     },
     {
       "file": "output/assembly/top_assembly.pdf",
       "sha256": "a2caf8c66a9d0b9e6aa5878c5c718c850d0abf30d107185a60cacb7d32790673",
       "scope": "All 1 rendered pages are pixel-identical to reviewed ae55a5b. Existing visual review retained.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00"
+      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00",
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "sha256": "6fe5a2a9533d955ae25169890ef9d1694dcdb52b526ba8e7217f9e4d14402347",
-      "scope": "All four copper pages rendered and inspected: top, continuous inner ground, inner service routing and mirrored bottom. Straight cleaned paths, nominal outline and actual drills inspected alongside independent geometry/connectivity checks.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00"
+      "sha256": "03f00bbad4e4a5e41609594658b7f690b7b56f63e890c87ac84d8a0879328fd6",
+      "scope": "All four pages raster-compared. Changed top and bottom copper pages inspected; both inner-layer pages pixel-identical. Compared with native width close-ups and independent geometry/connectivity checks.",
+      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
     },
     {
       "file": "reports/electrical/converter_loop.png",
       "sha256": "7795275a91cd9821e5ece2957a948549299dc94b29e0a7abc14d64fa0f897a28",
       "scope": "Rev H caption, nominal averaged-loop gain/phase curves and explicit analytical-model limitation inspected; 768-corner results retained in JSON.",
       "reviewed_utc": "2026-09-09T19:59:05.532967+00:00",
-      "evidence": "Unchanged artifact; preceding documented visual review retained."
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
     },
     {
       "file": "output/assembly/bottom_markings.pdf",
       "sha256": "57884852cbd07e8a3cbbd3382acbb70220926a68e5ba3d2db65640335c9e3e84",
       "scope": "All 1 rendered pages are pixel-identical to reviewed ae55a5b. Existing visual review retained.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00"
+      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00",
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
     },
     {
       "file": "reports/electrical/input_spice.png",
       "sha256": "032ceebee50896b347a7755a5c43a10e2cd94ff87ca77de90ceabaca3ab39d69",
       "scope": "Eight input scenario panels reviewed: nominal/limit logic, NPN/PNP, floating probes, hysteresis and supply cycle; two repeat cases are reported separately in JSON.",
-      "reviewed_utc": "2026-09-09T22:23:19.364952+00:00"
+      "reviewed_utc": "2026-09-09T22:23:19.364952+00:00",
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
     },
     {
       "file": "reports/electrical/boost_spice_partial.png",
       "sha256": "ba4326c66dd8925658695a8fabb7ab4e89f1eec06b35eeed62d27d219b19fa20",
       "scope": "All eight standalone case panels reviewed with an explicit incomplete-full-startup caption: load steps, shorts, reset, thermal latch and capacitive startup. This is partial evidence only.",
-      "reviewed_utc": "2026-09-09T22:31:58.665214+00:00"
+      "reviewed_utc": "2026-09-09T22:31:58.665214+00:00",
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
     },
     {
       "file": "hardware/artwork/sugarCANe.svg",
       "sha256": "48b18c5d6fe39791e7021fb1c20e127e6f972da14bf723b56888ec58194194cb",
       "scope": "Final SVG render reviewed: bold original letter grids, separated characters, taller CAN, g descender and distinct lowercase e; original pixel cane, convex ground and restored stepped underside. No borders or extra text. Ordered Gerber dark/clear compositing matches without unexplained missing or extra ink at 1 um tolerance.",
-      "reviewed_utc": "2026-09-09T23:35:29.145933+00:00"
+      "reviewed_utc": "2026-09-09T23:35:29.145933+00:00",
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
     },
     {
       "file": "output/review/routing_junctions.png",
       "sha256": "4945e9fadac813fc3da90f44f430155533c0b0c1ccd55efe2a56a4d6ea1bf746",
       "scope": "Four before/after close-ups inspected: perpendicular supply tap, REF_LOGIC side junction, redundant SIG3 loop and overlapping 5 V run. Actual native segment widths, endpoints and contacts are shown; other-net copper is grey.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00"
+      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00",
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
     },
     {
       "file": "output/review/gerber_top_copper.png",
-      "sha256": "5020a3bc885398fd86a95f2401a13563c8d48a721daaeda15f8199a526d0119f",
-      "scope": "Actual exported top copper and drill preview inspected with the four-page copper PDF and junction close-ups.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00"
+      "sha256": "a651b241e27c501a3545411df82fe5d469c53bf52a7b70c14c5b7cee2e8bed32",
+      "scope": "Actual final exported top copper inspected with the copper PDF and native width before/after details.",
+      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
     },
     {
       "file": "output/review/gerber_bottom_copper.png",
-      "sha256": "cd5cba999cd45c9189502f4afa14ebbe550e3f7198b46f9079c4e81bbe70b0d9",
-      "scope": "Actual exported bottom copper and drill preview inspected with the four-page copper PDF and junction close-ups.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00"
+      "sha256": "a52f07f8079c0d54bb0aeeebec4185c07b0586fbd34c6085c962b001253eaab3",
+      "scope": "Actual final exported bottom copper inspected with the copper PDF; selector-power sections widened and inner planes unchanged.",
+      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
     },
     {
       "file": "output/fabrication/FRC_Sensor_CAN-NPTH-drl_map.pdf",
       "sha256": "5630d2173c9a787f2d1b5f17e525cf1cad5a3c997bad31cac8190c12a3a7c290",
       "scope": "Rendered drill map is pixel-identical to reviewed ae55a5b.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00"
+      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00",
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
     },
     {
       "file": "output/fabrication/FRC_Sensor_CAN-PTH-drl_map.pdf",
       "sha256": "81719d3922f878fd1bc9da213611d389627c11d59b6cf97a63f480fa81196459",
       "scope": "Rendered drill map is pixel-identical to reviewed ae55a5b.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00"
+      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00",
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
+    },
+    {
+      "file": "output/review/routing_widths.png",
+      "sha256": "07bd8bb20b977d7c2d2483642322686cf8192c7e160b188ea8eedc59422df743",
+      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00",
+      "scope": "Four paired native-copper close-ups inspected: CAN routes, 3.3 V route, reverse-protection gate and internal 5 V power. All 12 remaining shared-endpoint width transitions also individually inspected in the scratch review sheet."
     }
   ],
-  "limitations": "Nominal CAD/PDF inspection and routed-copper DC screening only. No new transient simulations or firmware waveform replay were run in this cleanup. Full combined startup remains incomplete. No physical board, optical, vibration, assembly-yield or EMC qualification.",
-  "page_comparison_baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
+  "limitations": "Native CAD, exported copper, document inspection and nominal routed-copper DC screening only. No new transient simulation, firmware replay or physical prototype qualification. Existing manufacturing HOLD retained.",
+  "page_comparison_baseline_commit": "864224979e039a5e20e001a418f7801962904e61",
   "rendered_page_comparison": {
     "output/documentation/SC12_RevH_Handbook.pdf": {
       "before_pages": 39,
@@ -142,7 +158,11 @@
       "changed_pages": [
         1,
         3,
-        4
+        4,
+        5,
+        35,
+        36,
+        37
       ]
     },
     "output/documentation/BOM_RevH_SC12.pdf": {
@@ -170,7 +190,6 @@
       "after_pages": 4,
       "changed_pages": [
         1,
-        3,
         4
       ]
     },
@@ -216,22 +235,23 @@
       "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp",
       "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp",
       "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1",
-      "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1"
+      "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1",
+      "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2"
     ],
     "method": "Exact text comparison excluding generator timestamps only.",
-    "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b"
+    "baseline_commit": "864224979e039a5e20e001a418f7801962904e61"
   },
   "routing_cleanup": {
     "result": "PASS",
-    "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
+    "baseline_commit": "864224979e039a5e20e001a418f7801962904e61",
     "before": {
-      "segments": 1993,
+      "segments": 2040,
       "vias": 245,
-      "total_centerline_length_mm": 3418.299491757235,
+      "total_centerline_length_mm": 3404.0661424158584,
       "minimum_width_mm": 0.18
     },
     "after": {
-      "segments": 2040,
+      "segments": 2030,
       "vias": 245,
       "total_centerline_length_mm": 3404.0661424158584,
       "minimum_width_mm": 0.18
@@ -245,47 +265,21 @@
       "top and bottom artwork/markings",
       "zone definitions and keepouts"
     ],
-    "comparison": "Parsed native objects compared exactly, excluding tracks and regenerated zone-fill caches.",
-    "baseline_board_sha256": "85f74e465e756b93e1b06f61adb20a1a58a1414991ad05d22cc8444673235f61",
-    "board_sha256": "1c946915a6149a831df1b5bcf4a19b8002a61e76d39a7b6f56c37613475185f0",
-    "nonrouting_objects_sha256": "e3ed96947f37f53acd3aa32f98a84c30a9bda0128c8a1a3aae78a1b45b0c116e",
-    "previous_cleanup": {
-      "result": "PASS",
-      "baseline_commit": "e1e414610c446869f02546a1a50daa3a2530ad9b",
-      "before": {
-        "segments": 4113,
-        "vias": 245,
-        "total_centerline_length_mm": 3533.2358497275845,
-        "minimum_width_mm": 0.18
-      },
-      "after": {
-        "segments": 1993,
-        "vias": 245,
-        "total_centerline_length_mm": 3418.299491757235,
-        "minimum_width_mm": 0.18
-      },
-      "unchanged_native_objects": [
-        "footprints and pads",
-        "vias",
-        "board outline",
-        "stackup",
-        "net names",
-        "top and bottom artwork/markings",
-        "zone definitions and keepouts"
-      ],
-      "comparison": "Parsed native objects compared exactly, excluding tracks and regenerated zone-fill caches.",
-      "baseline_board_sha256": "4dbc9208492c918116b7ac64fa8dd2f690e22194182b16fcd156fdfab12a3d91",
-      "board_sha256": "fd0300a03fefe04b3450b189a5eaf8c5ebc6f14a9a142200d0e18a809b69be98",
-      "scope": "Routing cleanup only; no component, electrical-function, BOM or firmware changes. Final routing, DRC, parity, local bypass, exported Gerber and DC-drop reports are separate gates."
-    },
-    "branch_rules_before": {
-      "unchamfered_free_branches": 22,
-      "implicit_free_junctions": 7
-    },
-    "branch_rules_after": {},
-    "scope": "Junction routing cleanup only. All electrical parts, component positions, vias, four-layer stack and artwork retained. A SIG3 loop and short 3.3 V overhang removed. Overlapping internal-5 V trunk consolidated to 0.9895 mm with 0.8 mm approaches; remaining track widths retained. Fresh CAD/DC, independent Gerber and render checks are separate evidence."
+    "board_sha256": "c6f6150f6a71395bcfd55faff9d0de88cd833f19438ebcd708ad3981c939c3d7",
+    "scope": "Width cleanup only. No centerline rerouting, component, via, electrical-function, BOM, firmware, stackup or marking changes. All original width-change junctions individually reviewed; remaining exceptions recorded in the enforced width policy. Separate fresh CAD/DC/Gerber checks remain required.",
+    "width_summary": {
+      "routed_nets_reviewed": 77,
+      "original_segments_reviewed": 2040,
+      "segments_widened": 68,
+      "segments_narrowed": 0,
+      "redundant_collinear_joins_merged": 10,
+      "width_junctions_before": 52,
+      "width_junctions_after": 12,
+      "free_width_junctions_after": 6,
+      "all_original_track_copper_preserved": true
+    }
   },
-  "sourcing_geometry_note": "The electrical model retains only the reviewed MPN substitutions. The current PCB contains the separately authorized branch cleanup; all nonrouting native objects exactly match ae55a5b. Renders and CAD/DC/Gerber reports were refreshed.",
+  "sourcing_geometry_note": "Native nonrouting objects remain exactly equal to the sourcing candidate. 68 segments widened, ten collinear joins merged; no path moved or trace narrowed. Updated CAD/DC/Gerber evidence and renders reviewed.",
   "assembly_audit_document_comparison": {
     "baseline_commit": "26a31d8859a3b7bdf73beb16c652f51b8c65de3b",
     "documents": {

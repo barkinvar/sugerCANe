@@ -10,9 +10,9 @@ def track(a, b, *, net='SIG', layer=0, width=.25, kind='line'):
     return dict(a=a, b=b, net=net, layer=layer, width=width, kind=kind)
 
 
-def audit(*tracks, pads=(), vias=()):
+def audit(*tracks, pads=(), vias=(), width_policy=None):
     return inspect(dict(tracks=[dict(t, id=str(i)) for i,t in enumerate(tracks)],
-                        pads=list(pads), vias=list(vias)))
+                        pads=list(pads), vias=list(vias)), width_policy)
 
 
 class RoutingRules(unittest.TestCase):
@@ -78,6 +78,27 @@ class RoutingRules(unittest.TestCase):
     def test_merge_only_equal_width_collinear_pieces(self):
         self.assertIn('redundant_collinear_joint', audit(track((0,0),(1,0)),track((1,0),(2,0)))['findings'])
         self.assertEqual(audit(track((0,0),(1,0)),track((1,0),(2,0),width=.5))['result'], 'PASS')
+
+    def test_unreviewed_width_and_new_neck(self):
+        policy=dict(default=dict(widths_mm=[.25]),nets={},free_transitions=[])
+        self.assertIn('unreviewed_track_width',audit(track((0,0),(1,0),width=.1874),width_policy=policy)['findings'])
+        policy['default']['widths_mm']=[.25,.5]
+        result=audit(track((0,0),(1,0)),track((1,0),(2,0),width=.5),width_policy=policy)
+        self.assertIn('unreviewed_width_transition',result['findings'])
+
+    def test_justified_width_transition_and_stale_approval(self):
+        approval=dict(net='SIG',layer=0,at_mm=[1,0],widths_mm=[.25,.5],reason='Low-current branch.')
+        policy=dict(default=dict(widths_mm=[.25,.5]),nets={},free_transitions=[approval])
+        self.assertEqual(audit(track((0,0),(1,0)),track((1,0),(2,0),width=.5),width_policy=policy)['result'],'PASS')
+        self.assertIn('stale_width_approval',audit(track((0,0),(2,0)),width_policy=policy)['findings'])
+        policy['free_transitions']=[]
+        pad=dict(net='SIG',layer=0,polygons=[[(.8,-.2),(1.2,-.2),(1.2,.2),(.8,.2)]])
+        self.assertEqual(audit(track((0,0),(1,0)),track((1,0),(2,0),width=.5),pads=[pad],width_policy=policy)['result'],'PASS')
+
+    def test_width_policy_is_layer_specific(self):
+        policy=dict(default=dict(widths_mm=[.25]),nets={'SIG':dict(widths_mm=[.18,.25],layers={'0':[.25],'2':[.18]})},free_transitions=[])
+        self.assertIn('unreviewed_track_width',audit(track((0,0),(1,0),width=.18),width_policy=policy)['findings'])
+        self.assertEqual(audit(track((0,0),(1,0),width=.18,layer=2),width_policy=policy)['result'],'PASS')
 
 
 class CopperNetwork(unittest.TestCase):

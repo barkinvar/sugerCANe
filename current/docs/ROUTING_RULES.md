@@ -10,6 +10,7 @@ The saved Rev H PCB uses straight horizontal, vertical and 45° track centerline
 | Consistent bends | Free bends have an included angle of at least 135°: a 45° change of direction. Transitions within pad/via contact copper are permitted. |
 | Explicit branch connections | Free-space branches must meet at shared segment endpoints. The checker also finds taps and crossings inside a segment, so subdivision cannot hide a junction. |
 | Chamfered branches | Three-way free-space junctions use 90°/135°/135° sectors; four-way junctions use four 90° sectors. Perpendicular T shapes and acute side taps are rejected outside pad/via contacts. |
+| Reviewed track widths | Check every segment against the [width policy](../hardware/design/routing_widths.json). Free-space width changes require an explicit location and engineering reason; stale approvals fail. Contact transitions retain separately sized branches. |
 | No disconnected ends | Native `track_dangling` and `via_dangling` checks are errors. Exports require zero DRC violations and zero unconnected items. |
 | Preserve electrical requirements | Native net classes, local converter/decoupling path limits, layer restrictions, edge clearances and routed-copper DC-drop limits remain mandatory. |
 
@@ -27,13 +28,17 @@ kicad-python scripts/check_board_constraints.py
 bash scripts/export_manufacturing.sh
 ```
 
-Both `validate_release.sh` and `export_manufacturing.sh` enforce the routing gate. The validation summary rejects a routing report with an outdated PCB or checker hash. Fourteen routing fixtures cover invalid curves, angles, duplicates, overlaps, tiny jogs, sharp bends, implicit side taps and acute/perpendicular branches, plus valid contacts, chamfered branches and width transitions. The checks report failures without modifying the board.
+Both `validate_release.sh` and `export_manufacturing.sh` enforce the routing gate. The validation summary rejects a routing report with an outdated PCB, checker or width-policy hash. Seventeen routing fixtures cover invalid curves, angles, duplicates, overlaps, tiny jogs, sharp bends, implicit side taps and acute/perpendicular branches, plus valid contacts, chamfered branches, unreviewed widths, layer-specific widths and stale transition approvals. The checks report failures without modifying the board.
 
 The same test command runs six DC-network fixtures. Pad/via contacts and overlaps must remain electrically connected after redundant centerline pieces are removed; real gaps and isolated layers must remain open. The local bypass check counts distance through pad copper without relaxing its path-length limits.
 
 In KiCad, use the straight 45° routing posture. `Ctrl+W` switches straight 45°/90° postures; avoid the curved posture. See the [KiCad PCB Editor manual](https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html).
 
-The initial cleanup reduced 4,113 segments to 1,993. The subsequent branch cleanup uses **2,040 segments**, retaining all 245 vias and the 0.18 mm minimum track width. Angled branch approaches require additional segments. It resolves the 22 previously exempt free junctions, removes a redundant SIG3 loop and a short 3.3 V overhang, and consolidates an overlapping internal-5 V run into a 0.9895 mm straight section with 0.8 mm approaches. Fresh routed-copper DC screening remains within the existing limits.
+The current board uses **2,030 segments**, retaining all 245 vias and the 0.18 mm minimum track width. The original 4,113 segments became 1,993 after redundant geometry was removed, then 2,040 after branch approaches were chamfered. The width review widened 68 segments and merged ten newly redundant straight joins. No segment was narrowed and no path was rerouted.
+
+All 77 routed nets and all 52 original shared-endpoint width changes were reviewed. Forty changes were unnecessary and removed, including every 0.1874 mm section. Twelve intentional junctions remain: six inside pad/via contacts and six specifically documented free-space transitions. The [before/after details](../output/review/routing_widths.png), full per-net inventory in [routing results](../reports/routing_rules.json), and individual decisions in the [cleanup report](../reports/routing_cleanup.json) show the evidence.
+
+Intentional narrow sections include the 3.3 V programming-reference branch around J8, the boost IC pin approach, constrained 5 V sensor-power sections, and the LED data routes on inner/bottom copper. Low-current feedback/enable branches can be narrower than their supply trunks. The internal 5 V route retains a 0.81 mm-long, 0.48 mm-wide clearance neck and the previously consolidated 0.9895 mm bottom section. Widening the constrained paths without moving them would violate the existing 0.2 mm clearance rule. Fresh routed-copper DC screening remains within the existing limits.
 
 The [native comparison](../reports/routing_cleanup.json) confirms unchanged footprints, pads, vias, outline, stackup, nets, markings and zone definitions relative to the sourcing candidate. Copper fills and renders were regenerated. Segment count measures geometric representation; it is not a measure of electrical performance.
 

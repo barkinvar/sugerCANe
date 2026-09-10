@@ -31,7 +31,8 @@ if args.defer_simulation:
   'reports/manufacturing/gerber_connectivity.json','reports/manufacturing/gerber_geometry.json',
   'reports/manufacturing/jlc_sourcing.json','reports/manufacturing/factory_files.json',
   'reports/electrical/order_readiness.json','reports/routing_cleanup.json','reports/routing-tests.log',
-  'scripts/test_routing.py','scripts/check_routing.py','scripts/write_validation_summary.py']
+  'scripts/test_routing.py','scripts/check_routing.py','scripts/export_routing_geometry.py',
+  'hardware/design/routing_widths.json','scripts/write_validation_summary.py']
  paths += [p.relative_to(R).as_posix() for p in sorted((R/'hardware').glob('*.kicad_sch'))]
  out=dict(revision='H SC12',status='HOLD: JLC sourcing candidate; simulations deferred until user approval',
   order_decision=sourcing['order_decision'],manufacturing_holds=sourcing['manufacturing_holds'],simulation_deferred_by_user=True,physical_tests_performed=False,
@@ -86,7 +87,8 @@ tracked += ['scripts/check_power_replay.py','reports/electrical/power_replay.jso
 tracked += ['reports/electrical/solver_diagnostics.json']
 tracked += ['hardware/FRC_Sensor_CAN.kicad_pro','hardware/FRC_Sensor_CAN.kicad_dru',
             'scripts/check_board_constraints.py','scripts/check_routing.py','scripts/export_routing_geometry.py',
-            'scripts/test_routing.py','reports/routing-tests.log','reports/routing_rules.json','reports/routing_cleanup.json']
+            'scripts/test_routing.py','reports/routing-tests.log','reports/routing_rules.json','reports/routing_cleanup.json',
+            'hardware/design/routing_widths.json']
 tracked += ['reports/erc/final.json','reports/drc/final.json','reports/design_parity.json','reports/board_constraints.json',
             'reports/variant_verification.json','reports/firmware-tests.log','reports/power-tests.log','reports/firmware-images.json',
             'reports/firmware-arm-registers.json','reports/driver/tests.log','reports/bridge2027-tests.log',

@@ -3522,8 +3522,8 @@
   },
   "routing_review": {
     "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
-    "board_sha256": "1c946915a6149a831df1b5bcf4a19b8002a61e76d39a7b6f56c37613475185f0",
+    "board_sha256": "c6f6150f6a71395bcfd55faff9d0de88cd833f19438ebcd708ad3981c939c3d7",
     "nonrouting_objects_sha256": "e3ed96947f37f53acd3aa32f98a84c30a9bda0128c8a1a3aae78a1b45b0c116e",
-    "scope": "User-authorized junction cleanup after sourcing audit. Exact native footprints, vias, nets, stackup, outline, artwork and zone definitions retained. Track geometry and cached fills changed; fresh CAD/DC and render checks required."
+    "scope": "Authorized branch and width cleanup; exact native nonrouting objects still match the sourcing candidate. All 77 routed nets reviewed; 68 segments widened, none narrowed; 40 unnecessary width-change junctions removed. CAD/DC/Gerber checks refreshed; new transient simulations remain deferred."
   }
 }

@@ -79,20 +79,20 @@
   "electrical_model_only_reviewed_mpn_metadata_changed": true,
   "reviewed_routing": {
     "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
-    "board_sha256": "1c946915a6149a831df1b5bcf4a19b8002a61e76d39a7b6f56c37613475185f0",
+    "board_sha256": "c6f6150f6a71395bcfd55faff9d0de88cd833f19438ebcd708ad3981c939c3d7",
     "nonrouting_objects_sha256": "e3ed96947f37f53acd3aa32f98a84c30a9bda0128c8a1a3aae78a1b45b0c116e",
-    "scope": "User-authorized junction cleanup after sourcing audit. Exact native footprints, vias, nets, stackup, outline, artwork and zone definitions retained. Track geometry and cached fills changed; fresh CAD/DC and render checks required."
+    "scope": "Authorized branch and width cleanup; exact native nonrouting objects still match the sourcing candidate. All 77 routed nets reviewed; 68 segments widened, none narrowed; 40 unnecessary width-change junctions removed. CAD/DC/Gerber checks refreshed; new transient simulations remain deferred."
   },
   "order_decision": "HOLD: user approval and new simulations pending; MCU sourcing, C1 reflow and factory stack/quote unconfirmed",
   "limitations": "Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.",
   "input_hashes": {
-    "bom/jlc_sourcing.json": "071cff12465678b0629471d88acc7efce8f56ae8a0cef98be6a68a317857f988",
+    "bom/jlc_sourcing.json": "14eede29dc094dea89fcdcaeed281b89dc7dcf0a6ffc94e4393168f7b14b0e37",
     "bom/catalog_china.json": "2f6c5aa94e4fa244699916afbd5e3491fccada22058eac77c01d8ce95f949f41",
     "bom/Factory_BOM.csv": "1bcd08b11bb784d48a6ee393300d054345cff93bd6e4d71e55e10136c156230f",
     "bom/BOM_JLCPCB.csv": "10277d76b991fed2259d62a83f88b4f9f150c63aa82ec869b0895cd85abdcd5b",
     "output/assembly/CPL_JLCPCB.csv": "faff9a8477f2f79eb601effea500a8eaf37dd6f02ebab33591ff9f4e656fbb0e",
     "hardware/design/circuit.json": "3f077ab74530cf41d072d848b7192e28bee21ccba3a22e8232b252556e57556c",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "1c946915a6149a831df1b5bcf4a19b8002a61e76d39a7b6f56c37613475185f0",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "c6f6150f6a71395bcfd55faff9d0de88cd833f19438ebcd708ad3981c939c3d7",
     "scripts/check_jlc_sourcing.py": "2384e34a43c5f5450a44c9f342854bfafe2336377bbce8c7bf5a587828294ece",
     "sources/datasheets/yageo_np0.pdf": "495287fc811dc714366f2edd3bc974d98d2d80133266a0a73bb01ac01237e3eb",
     "sources/datasheets/uniroyal_thick_film.pdf": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
