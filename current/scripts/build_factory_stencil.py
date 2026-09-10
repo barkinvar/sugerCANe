@@ -49,7 +49,7 @@ dest.write_text(''.join(lines))
 actual = GerberFile.open(dest)
 assert Counter(signature(o) for o in actual.objects)==expected
 assert all(o.attrs.get('.C', ('',))[0] not in omit for o in actual.objects)
-assert sum(o.attrs.get('.C')==('U9',) for o in actual.objects)==12, 'Preserve eight leads and four exposed-pad windows'
+assert sum(o.attrs.get('.C')==('U9',) for o in [*actual.objects,*bottom.objects])==12, 'Preserve eight leads and four exposed-pad windows'
 report = dict(result='PASS',purpose='Factory stencil only; U5 hand soldered by user',
     omitted_references=sorted(omit),removed_u5_apertures=32,retained_apertures=len(kept),
     bottom_apertures=len(bottom.objects),bottom_references=sorted(BOTTOM_REFERENCES),

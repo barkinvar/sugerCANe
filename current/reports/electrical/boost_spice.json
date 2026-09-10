@@ -1,5 +1,5 @@
 {
-  "result": "INCOMPLETE",
+  "result": "PASS transient screening only",
   "scope": "Rev H vendor TPS61085/TPS259620/TPS2553-1 models, 27C typical silicon. Syntax-only ngspice ports; no PSpice/board correlation. Combined startup with a 4ms source ramp plus separate boost load/fault-limit steps, eFuse fault/reset cases and 5V-switch fault/reset. Not physical qualification.",
   "source_assumptions": "Boost cases: ideal upstream 5 V source, 120 milliohm series resistance, 25.92 uF internal capacitance, 0.45 A concurrent logic/RGB/5 V load. The standalone 5 V switch case instead has 1.3 A concurrent internal load. Standalone eFuse cases use an ideal 12.003 V source with 120 milliohm series resistance and 66 uF reservoir. Upstream buck control loop/current limit and PCB/cable inductance are not modeled.",
   "passive_assumptions": "Boost C60 and reservoir use explicit derated/nameplate case values; C61/C65/C71 1uF nominal. Inductor 3.3uH and 32mOhm DCR, linear below its 8A/20%-inductance-drop domain. External capacitor ESR .1ohm. One explicitly identified current-limit surrogate uses a 2.92k test resistor instead of fitted R62=2.61k, giving typical-model current below the calculated 314.699mA minimum, with 120uF external capacitance. This tests reduced charging headroom, not all silicon corners. D5 uses the B240A vendor model; D6 behavioral clamp approximates static conduction only. Q2 enable uses 2ohm final shunt resistance; standalone fault tests apply a finite 1us conductance ramp to avoid a discontinuous behavioral-device transition. No transistor timing claim. eFuse thermal timing is manufacturer-model-only, not temperature qualification.",
@@ -38,6 +38,37 @@
     }
   ],
   "cases": [
+    {
+      "case": {
+        "name": "combined_low_input_capacitive_start",
+        "vin": 4.913149,
+        "cin": 22,
+        "cout": 66,
+        "extra_cap": 100,
+        "end": 40,
+        "source": "0 0 4m 4.913149",
+        "xtrtol": 2
+      },
+      "checks": {
+        "final_regulation": true,
+        "output_below_13V": true,
+        "inductor_linear_domain": true,
+        "below_minimum_switch_current_limit": true,
+        "boost_input_above_uvlo_after_start": true,
+        "no_false_startup_fault": true
+      },
+      "final_output_range_V": [
+        11.974817373201367,
+        11.979830134847576
+      ],
+      "peak_output_V": 12.053622888469047,
+      "peak_inductor_A": 1.5439382092726777,
+      "pass": true,
+      "deck_and_model_hash": "36c391f70f82c1b1d50a240a23dbb55cf8f6a321213938d569023de3e446c07f",
+      "simulated_netlist": "combined_low_input_capacitive_start\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 4m 4.913149)\nRsource SOURCE V5_INTERNAL .12\nCinternal V5_INTERNAL 0 25.92u\nBother V5_INTERNAL 0 I={.45*limit(v(V5_INTERNAL),0,1)}\nXu8 V5_INTERNAL BOOST_FB V5_INTERNAL BOOST_SS 0 BOOST_SW BOOST_COMP V5_INTERNAL BST_TPS61085\nL2 V5_INTERNAL LX 3.3u\nRdcr LX BOOST_SW .032\nD4 BOOST_SW BOOST_12V DI_B240A\nRcin V5_INTERNAL CI .01\nCin CI 0 22u\nRcout BOOST_12V CO .01\nCout CO 0 66u\nC61 V5_INTERNAL 0 1u\nC66 BOOST_SS 0 100n\nR60 BOOST_12V BOOST_FB 100k\nR61 BOOST_FB 0 11.5k\nR63 BOOST_COMP BOOST_COMP_RC 13k\nC69 BOOST_COMP_RC 0 33n\nXef 0 EFUSE_SS EFUSE_EN BOOST_12V SENSOR_12V FAULT_12V_N EFUSE_ILM OVC EF_TPS259620_TRANS PARAMS: Cdvdt=47n\nR62 EFUSE_ILM 0 2.61k\nR68 BOOST_12V EFUSE_EN 100k\nR69 EFUSE_EN 0 12.1k\nC65 BOOST_12V 0 1u\nC70 EFUSE_SS 0 47n\nC71 SENSOR_12V 0 1u\nVdisable DISABLE 0 PWL(0 0)\nSdisable EFUSE_EN 0 DISABLE 0 DISABLE_MODEL\n.model DISABLE_MODEL VSWITCH(Ron=2 Roff=1e9 Von=2 Voff=.5)\nRext SENSOR_12V EC .1\nCext EC 0 100u\nBload SENSOR_12V 0 I={.3*limit(v(SENSOR_12V),0,1)}\nD5 0 SENSOR_12V DI_B240A\nBTVS BOOST_12V 0 I={max(0,(v(BOOST_12V)-14.4)/.382)}\nRADC SENSOR_12V 0 220k\nVshort SHORT 0 PWL(0 0)\nSshort SENSOR_12V 0 SHORT 0 SHORTMODEL\n.model SHORTMODEL VSWITCH(Ron=.05 Roff=1e12 Von=.9 Voff=.1)\n.save v(V5_INTERNAL) v(BOOST_12V) v(SENSOR_12V) v(EFUSE_EN) v(FAULT_12V_N) i(Vsrc) i(L2)\n.options klu method=gear xtrtol=2 reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 40m 0 50n\n.end\n",
+      "raw_trace_sha256": "4486f33cd8060f73f652a1187ca92d8b9df05203e3f16911f6f481269d8d1744",
+      "initial_transient_OP_fallback": true
+    },
     {
       "case": {
         "name": "boost_load_steps",
@@ -277,103 +308,23 @@
   ],
   "timestep_repeat": {
     "pass": true,
+    "max_step_s": [
+      1e-06,
+      5e-07
+    ],
     "output_difference_V": 0.000770717448548397,
     "source_current_difference_A": 0.0003857031251037202,
-    "scope": "Complete fresh 130ms traces, 10us sample grid; exclude +/-10us at imposed switch edges. Raw extrema separately pass."
+    "scope": "3-130ms at 10us sample intervals, excluding +/-10us around ideal test-switch edges; raw extrema separately checked in both cases."
   },
-  "reported_utc": "2026-09-10T04:09:53.973536+00:00",
-  "fresh_run": true,
-  "requested_cases": [
-    {
-      "name": "combined_low_input_capacitive_start",
-      "vin": 4.913149,
-      "cin": 22,
-      "cout": 66,
-      "extra_cap": 100,
-      "end": 40,
-      "source": "0 0 4m 4.913149",
-      "xtrtol": 2
-    },
-    {
-      "name": "boost_load_steps",
-      "boost_only": true,
-      "end": 10
-    },
-    {
-      "name": "efuse_hot_short_and_reset",
-      "efuse_only": true,
-      "step": "1u",
-      "end": 130,
-      "disable": "0 3.3 2m 3.3 2.001m 0 90m 0 90.001m 3.3 95m 3.3 95.001m 0",
-      "short": "0 0 45m 0 45.001m 1 85m 1 85.001m 0"
-    },
-    {
-      "name": "efuse_cold_short_and_reset",
-      "efuse_only": true,
-      "step": "1u",
-      "end": 130,
-      "disable": "0 3.3 2m 3.3 2.001m 0 90m 0 90.001m 3.3 95m 3.3 95.001m 0",
-      "short": "0 1 85m 1 85.001m 0"
-    },
-    {
-      "name": "efuse_large_capacitance",
-      "efuse_only": true,
-      "extra_cap": 470,
-      "step": "1u",
-      "end": 150
-    },
-    {
-      "name": "efuse_thermal_latch",
-      "efuse_only": true,
-      "step": "5u",
-      "end": 1200,
-      "disable": "0 3.3 2m 3.3 2.001m 0 1100m 0 1100.001m 3.3 1110m 3.3 1110.001m 0",
-      "short": "0 0 45m 0 45.001m 1 1000m 1 1000.001m 0"
-    },
-    {
-      "name": "efuse_hot_short_half_step",
-      "efuse_only": true,
-      "step": "500n",
-      "end": 130,
-      "disable": "0 3.3 2m 3.3 2.001m 0 90m 0 90.001m 3.3 95m 3.3 95.001m 0",
-      "short": "0 0 45m 0 45.001m 1 85m 1 85.001m 0"
-    },
-    {
-      "name": "five_volt_start_short_and_reset",
-      "five_only": true,
-      "end": 75
-    },
-    {
-      "name": "efuse_min_limit_cap_tolerance",
-      "efuse_only": true,
-      "limit_surrogate": true,
-      "extra_cap": 120,
-      "step": "1u",
-      "end": 200
-    }
-  ],
   "combined_solver_repeat": {
-    "pass": false,
-    "status": "RUNNING"
-  },
-  "reason": "User-authorized final pre-order validation in progress; incomplete traces are not passes.",
-  "pending_cases": [
-    {
-      "case": {
-        "name": "combined_low_input_capacitive_start",
-        "vin": 4.913149,
-        "cin": 22,
-        "cout": 66,
-        "extra_cap": 100,
-        "end": 40,
-        "source": "0 0 4m 4.913149",
-        "xtrtol": 2
-      },
-      "status": "RUNNING",
-      "last_simulated_time_s": 0.004564700624171817,
-      "requested_end_s": 0.04
+    "pass": true,
+    "voltage_difference_V": {
+      "v(v5_internal)": 0.004142508192395589,
+      "v(boost_12v)": 0.014225681523880596,
+      "v(sensor_12v)": 0.010364161026714669
     },
-    {
+    "peak_inductor_difference_A": 0.0005230368590440904,
+    "secondary": {
       "case": {
         "name": "combined_low_input_capacitive_start",
         "vin": 4.913149,
@@ -386,11 +337,26 @@
         "step": "25n",
         "trace_name": "combined_low_input_capacitive_start_trtol7_25n"
       },
-      "status": "RUNNING",
-      "last_simulated_time_s": 0.006856100580270393,
-      "requested_end_s": 0.04
-    }
-  ],
-  "checkpoint_utc": "2026-09-10T05:16:10.570724+00:00",
-  "note": "Eight unchanged downstream decks complete. Both full combined traces still running. New upstream U1/L1 is not included in the idealized-source SPICE model."
+      "checks": {
+        "final_regulation": true,
+        "output_below_13V": true,
+        "inductor_linear_domain": true,
+        "below_minimum_switch_current_limit": true,
+        "boost_input_above_uvlo_after_start": true,
+        "no_false_startup_fault": true
+      },
+      "final_output_range_V": [
+        11.974784950210692,
+        11.979873901153375
+      ],
+      "peak_output_V": 12.054057423634536,
+      "peak_inductor_A": 1.5444612461317218,
+      "pass": true,
+      "deck_and_model_hash": "be1183f43fec5ee9c03238e6fc1a5a9f90ad2006a7853283b60e7f41dc86b25f",
+      "simulated_netlist": "combined_low_input_capacitive_start\n.include tps61085.lib\n.include tps2553-1.lib\n.include tps259620.lib\n.include B240A.lib\nVlogic LOGIC 0 3.3\nRfault LOGIC FAULT_12V_N 40k\nVsrc SOURCE 0 PWL(0 0 4m 4.913149)\nRsource SOURCE V5_INTERNAL .12\nCinternal V5_INTERNAL 0 25.92u\nBother V5_INTERNAL 0 I={.45*limit(v(V5_INTERNAL),0,1)}\nXu8 V5_INTERNAL BOOST_FB V5_INTERNAL BOOST_SS 0 BOOST_SW BOOST_COMP V5_INTERNAL BST_TPS61085\nL2 V5_INTERNAL LX 3.3u\nRdcr LX BOOST_SW .032\nD4 BOOST_SW BOOST_12V DI_B240A\nRcin V5_INTERNAL CI .01\nCin CI 0 22u\nRcout BOOST_12V CO .01\nCout CO 0 66u\nC61 V5_INTERNAL 0 1u\nC66 BOOST_SS 0 100n\nR60 BOOST_12V BOOST_FB 100k\nR61 BOOST_FB 0 11.5k\nR63 BOOST_COMP BOOST_COMP_RC 13k\nC69 BOOST_COMP_RC 0 33n\nXef 0 EFUSE_SS EFUSE_EN BOOST_12V SENSOR_12V FAULT_12V_N EFUSE_ILM OVC EF_TPS259620_TRANS PARAMS: Cdvdt=47n\nR62 EFUSE_ILM 0 2.61k\nR68 BOOST_12V EFUSE_EN 100k\nR69 EFUSE_EN 0 12.1k\nC65 BOOST_12V 0 1u\nC70 EFUSE_SS 0 47n\nC71 SENSOR_12V 0 1u\nVdisable DISABLE 0 PWL(0 0)\nSdisable EFUSE_EN 0 DISABLE 0 DISABLE_MODEL\n.model DISABLE_MODEL VSWITCH(Ron=2 Roff=1e9 Von=2 Voff=.5)\nRext SENSOR_12V EC .1\nCext EC 0 100u\nBload SENSOR_12V 0 I={.3*limit(v(SENSOR_12V),0,1)}\nD5 0 SENSOR_12V DI_B240A\nBTVS BOOST_12V 0 I={max(0,(v(BOOST_12V)-14.4)/.382)}\nRADC SENSOR_12V 0 220k\nVshort SHORT 0 PWL(0 0)\nSshort SENSOR_12V 0 SHORT 0 SHORTMODEL\n.model SHORTMODEL VSWITCH(Ron=.05 Roff=1e12 Von=.9 Voff=.1)\n.save v(V5_INTERNAL) v(BOOST_12V) v(SENSOR_12V) v(EFUSE_EN) v(FAULT_12V_N) i(Vsrc) i(L2)\n.options klu method=gear xtrtol=7 reltol=.003 abstol=10n vntol=10u itl1=1000 itl4=1000 cshunt=1e-15\n.tran 100n 40m 0 25n\n.end\n",
+      "raw_trace_sha256": "4fba764c2992971c102150cb78636f04fda5248a0882192e1eb6403c534cfb18",
+      "initial_transient_OP_fallback": true
+    },
+    "scope": "Complete 0-40 ms comparison at 0.5 us intervals: KLU/Gear xtrtol=2, maximum step 50 ns, versus xtrtol=7, maximum step 25 ns, both with reltol=.003 and identical circuit/models. Each full adaptive trace independently passes all electrical criteria. Voltage differences must stay below 50 mV and peak-inductor difference below 20 mA. Numerical sensitivity, not physical correlation."
+  }
 }

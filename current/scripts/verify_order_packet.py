@@ -62,7 +62,8 @@ with zipfile.ZipFile(packet) as z:
             assert not [o for o in paste.objects if o.attrs.get('.C')==('U5',)]
             u5=[o for o in copper.objects if isinstance(o,Flash) and o.attrs.get('.P',('',))[0]=='U5']
             assert {o.attrs['.P'][1] for o in u5}=={str(i) for i in range(1,33)}
-            assert sum(o.attrs.get('.C')==('U9',) for o in paste.objects)==12
+            assert sum(o.attrs.get('.C')==('U9',) for o in bottom.objects)==12
+            assert not any(o.attrs.get('.C')==('U9',) for o in paste.objects)
     for count,qty in [(5,7),(10,12)]:
         purchase=readcsv(f'bom/DigiKey_{count}_boards.csv')
         assert len(purchase)==5

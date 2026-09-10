@@ -139,16 +139,17 @@ def dc_solver(geo,depths):
     return solve
 
 
-def power_distribution_screen():
+def power_distribution_screen(board_path=None):
     """DC track/via network, 85 C, nominal 35 um copper, ideal conducting pads.
 
     Ignore power/ground plane resistance, connector/header/contact resistance and
     IC on-resistance here. The model checks the PCB-drop planning allowance only.
     """
+    board_path = Path(board_path) if board_path is not None else ROOT/'hardware/FRC_Sensor_CAN.kicad_pcb'
     geometry = subprocess.check_output(['kicad-python', '-c', GEOMETRY_EXPORT,
-        str(ROOT/'hardware/FRC_Sensor_CAN.kicad_pcb')], text=True)
+        str(board_path.resolve())], text=True)
     report = json.loads(geometry)
-    depths=copper_depths(ROOT/'hardware/FRC_Sensor_CAN.kicad_pcb')
+    depths=copper_depths(board_path)
     electrical=json.loads((ROOT/'reports/electrical/electrical_checks.json').read_text())
     input_paths={'VIN_RAW':(('J1','1'),('F1','1')),
                  'VIN_FUSED':(('F1','2'),('Q1','5')),

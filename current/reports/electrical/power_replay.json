@@ -5,15 +5,15 @@
     "firmware/include/power.h": "bee9d528589bfb0ad4377715fdbb5ea19bc1337d91a0b230a1c8d15fbc38492c",
     "scripts/check_power_replay.py": "74e70691150ded834917c00a8c1fe81667455eb6b8c68cb506b5000b9775302c",
     "reports/electrical/electrical_checks.json": "8875e81607c1f1e6f8048b847b20cfb0e09b9fd53edc5eb51d696a563bd6568c",
-    "reports/electrical/boost_spice_partial.json": "2c3536c63473e67f001c0f08c10da566270f6965f02b445b362d275588532bca",
-    "reports/electrical/order_readiness.json": "c5793e516029b1b0616196f8387a24cce340393f416313cdc128ede1615dd64e"
+    "reports/electrical/boost_spice.json": "255e2ee5605ecd3690d006c201c7430930f48add0bedd8d04d862a38e2ec9cbb",
+    "reports/electrical/order_readiness.json": "f81688814750ffb656c0a5ba93c8b5876decd5fc98819654961e5eee00265197"
   },
   "cases": [
     {
       "name": "efuse_large_capacitance",
       "gain_error": -0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.013200172134000735,
+      "PCB_drop_V": 0.01117857625421794,
       "raw_sha256": "72e7504b16d99283464cd331288355286920e667de7ca475116c7f9153c85d87",
       "first_trip_ms": null,
       "checks": {
@@ -28,7 +28,7 @@
       "name": "efuse_large_capacitance",
       "gain_error": -0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.013200172134000735,
+      "PCB_drop_V": 0.01117857625421794,
       "raw_sha256": "72e7504b16d99283464cd331288355286920e667de7ca475116c7f9153c85d87",
       "first_trip_ms": null,
       "checks": {
@@ -43,7 +43,7 @@
       "name": "efuse_large_capacitance",
       "gain_error": 0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.013200172134000735,
+      "PCB_drop_V": 0.01117857625421794,
       "raw_sha256": "72e7504b16d99283464cd331288355286920e667de7ca475116c7f9153c85d87",
       "first_trip_ms": null,
       "checks": {
@@ -58,7 +58,7 @@
       "name": "efuse_large_capacitance",
       "gain_error": 0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.013200172134000735,
+      "PCB_drop_V": 0.01117857625421794,
       "raw_sha256": "72e7504b16d99283464cd331288355286920e667de7ca475116c7f9153c85d87",
       "first_trip_ms": null,
       "checks": {
@@ -73,7 +73,7 @@
       "name": "efuse_min_limit_cap_tolerance",
       "gain_error": -0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.013200172134000735,
+      "PCB_drop_V": 0.01117857625421794,
       "raw_sha256": "c01273a2b1b977d5bdc44770df6a423c243e704d422220f4561b356f39678b4d",
       "first_trip_ms": null,
       "checks": {
@@ -88,7 +88,7 @@
       "name": "efuse_min_limit_cap_tolerance",
       "gain_error": -0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.013200172134000735,
+      "PCB_drop_V": 0.01117857625421794,
       "raw_sha256": "c01273a2b1b977d5bdc44770df6a423c243e704d422220f4561b356f39678b4d",
       "first_trip_ms": null,
       "checks": {
@@ -103,7 +103,7 @@
       "name": "efuse_min_limit_cap_tolerance",
       "gain_error": 0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.013200172134000735,
+      "PCB_drop_V": 0.01117857625421794,
       "raw_sha256": "c01273a2b1b977d5bdc44770df6a423c243e704d422220f4561b356f39678b4d",
       "first_trip_ms": null,
       "checks": {
@@ -118,7 +118,7 @@
       "name": "efuse_min_limit_cap_tolerance",
       "gain_error": 0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.013200172134000735,
+      "PCB_drop_V": 0.01117857625421794,
       "raw_sha256": "c01273a2b1b977d5bdc44770df6a423c243e704d422220f4561b356f39678b4d",
       "first_trip_ms": null,
       "checks": {
@@ -133,7 +133,7 @@
       "name": "efuse_hot_short_and_reset",
       "gain_error": -0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.013200172134000735,
+      "PCB_drop_V": 0.01117857625421794,
       "raw_sha256": "6db823bb95fbaf9fc60867b53a4fcabf3f44ae38a6be407c2edff8e887ac65b9",
       "first_trip_ms": 375,
       "checks": {
@@ -148,7 +148,7 @@
       "name": "efuse_hot_short_and_reset",
       "gain_error": -0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.013200172134000735,
+      "PCB_drop_V": 0.01117857625421794,
       "raw_sha256": "6db823bb95fbaf9fc60867b53a4fcabf3f44ae38a6be407c2edff8e887ac65b9",
       "first_trip_ms": 375,
       "checks": {
@@ -163,7 +163,7 @@
       "name": "efuse_hot_short_and_reset",
       "gain_error": 0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.013200172134000735,
+      "PCB_drop_V": 0.01117857625421794,
       "raw_sha256": "6db823bb95fbaf9fc60867b53a4fcabf3f44ae38a6be407c2edff8e887ac65b9",
       "first_trip_ms": 375,
       "checks": {
@@ -178,7 +178,7 @@
       "name": "efuse_hot_short_and_reset",
       "gain_error": 0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.013200172134000735,
+      "PCB_drop_V": 0.01117857625421794,
       "raw_sha256": "6db823bb95fbaf9fc60867b53a4fcabf3f44ae38a6be407c2edff8e887ac65b9",
       "first_trip_ms": 375,
       "checks": {
@@ -193,7 +193,7 @@
       "name": "five_volt_start_short_and_reset",
       "gain_error": -0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.025284371101487152,
+      "PCB_drop_V": 0.01287817162918646,
       "raw_sha256": "a5becc65292ba4be58b7d1fe0bb4cd214993b8472c8736d3089c5c72d89797e6",
       "first_trip_ms": 33,
       "checks": {
@@ -208,7 +208,7 @@
       "name": "five_volt_start_short_and_reset",
       "gain_error": -0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.025284371101487152,
+      "PCB_drop_V": 0.01287817162918646,
       "raw_sha256": "a5becc65292ba4be58b7d1fe0bb4cd214993b8472c8736d3089c5c72d89797e6",
       "first_trip_ms": 33,
       "checks": {
@@ -223,7 +223,7 @@
       "name": "five_volt_start_short_and_reset",
       "gain_error": 0.025,
       "offset_error_V": -0.09,
-      "PCB_drop_V": 0.025284371101487152,
+      "PCB_drop_V": 0.01287817162918646,
       "raw_sha256": "a5becc65292ba4be58b7d1fe0bb4cd214993b8472c8736d3089c5c72d89797e6",
       "first_trip_ms": 33,
       "checks": {
@@ -238,7 +238,7 @@
       "name": "five_volt_start_short_and_reset",
       "gain_error": 0.025,
       "offset_error_V": 0.09,
-      "PCB_drop_V": 0.025284371101487152,
+      "PCB_drop_V": 0.01287817162918646,
       "raw_sha256": "a5becc65292ba4be58b7d1fe0bb4cd214993b8472c8736d3089c5c72d89797e6",
       "first_trip_ms": 33,
       "checks": {

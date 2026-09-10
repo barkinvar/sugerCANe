@@ -1,6 +1,7 @@
 """Package a CAD-checked JLC quotation candidate, explicitly without release approval."""
 from pathlib import Path
 import hashlib, json, zipfile
+from layout_contract import WIDTH, HEIGHT, BOTTOM_REFERENCES
 
 R=Path(__file__).resolve().parents[1]
 checks=json.loads((R/'reports/release_checks.json').read_text())
@@ -11,7 +12,7 @@ for path,digest in checks['input_hashes'].items():
 power_status=('Required downstream power/input/firmware engineering screens passed; upstream buck and physical qualification remain outside that transient evidence.'
               if checks.get('spice_result')=='PASS transient screening only' else
               'Full power-transient evidence is still incomplete or failing; read reports/release_checks.json.')
-status='REVIEW / QUOTATION ONLY. Compact Rev H: 52 x 70 mm. Factory fits 114 top and 15 bottom SMT parts / 54 types, including C1 and D10. C25/C26 are 20 pF. U1 is LMR51430XDDCR; L1 is SRP7028A-8R2M (8.2 uH). U5 is omitted from BOM/CPL and stencil; user buys STM32F042K6T6 from DigiKey and hand solders it, plus ten THT parts and three loose caps. '+power_status+' Factory two-sided stack/process/inspection quotation remains pending. Not authorized for manufacture.'
+status=f'REVIEW / QUOTATION ONLY. Compact Rev H: {WIDTH} x {HEIGHT} mm. Factory fits {129-len(BOTTOM_REFERENCES)} top and {len(BOTTOM_REFERENCES)} bottom SMT parts / 54 types, including C1 and D10. C25/C26 are 20 pF. U1 is LMR51430XDDCR; L1 is SRP7028A-8R2M (8.2 uH). U5 is omitted from BOM/CPL and stencil; user buys STM32F042K6T6 from DigiKey and hand solders it, plus ten THT parts and three loose caps. '+power_status+' Factory two-sided stack/process/inspection quotation remains pending. Not authorized for manufacture.'
 stencil=json.loads((R/'reports/manufacturing/factory_stencil.json').read_text())
 assert stencil['result']=='PASS' and stencil['removed_u5_apertures']==32
 for path,digest in stencil['input_hashes'].items():
@@ -34,7 +35,8 @@ files=['bom/BOM_JLCPCB.csv','bom/Factory_BOM.csv','bom/Hand_solder_BOM.csv','bom
  'reports/electrical/order_readiness.json',
  'hardware/design/routing_widths.json','reports/compact/layout_verification.json','reports/compact/source_snapshot.json',
  'reports/manufacturing/gerber_connectivity.json','reports/manufacturing/gerber_geometry.json','reports/manufacturing/verification.json',
- 'output/review/board_top.png','output/review/board_bottom.png','output/review/board_3d_final.png',
+ 'output/review/board_top.png','output/review/board_bottom.png','output/review/board_3d_final.png','output/review/board_connectors.png','output/review/size_comparison.png',
+ 'reports/compact/completed_simulation_sources.json',
  'bom/jlc_sourcing.json',str(gerber.relative_to(R))]
 preview=json.loads((R/'reports/manufacturing/preview_source.json').read_text())
 assert hashlib.sha256((R/'scripts/render_gerber_previews.py').read_bytes()).hexdigest()==preview['script_sha256']

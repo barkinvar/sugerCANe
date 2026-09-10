@@ -1,26 +1,30 @@
 {
-  "result": "PASS compact CAD and trace checks; full release HOLD",
+  "result": "PASS compact CAD, trace, exported copper and engineering checks; manufacturing release HOLD",
   "branch": "codex/compact-board",
   "worktree": "/home/neuro/candi-compact-board",
-  "board_sha256": "102fc9d9801b6628781927c5ed5e05a98d0c7c0c52214b0afe3950f8ac40370c",
+  "board_sha256": "5e43a87482b98fb8de0b105626381735209c22386c14bbe29e93f3bb7c3696dc",
   "size_before_mm": [
     52,
     74
   ],
   "size_after_mm": [
-    52,
-    70
+    44,
+    48
   ],
-  "area_reduction_percent": 5.405405405405405,
-  "factory_top_parts": 114,
-  "factory_bottom_parts": 15,
+  "area_reduction_percent": 45.11434511434511,
+  "factory_top_parts": 50,
+  "factory_bottom_parts": 79,
+  "fitted_top_parts": 61,
+  "fitted_bottom_parts": 79,
   "native_erc_violations": 0,
   "native_drc_violations": 0,
   "unconnected_items": 0,
   "gerber_opens": {},
   "gerber_shorts": {},
-  "routing_segments": 1676,
-  "routing_vias": 223,
+  "routing_segments": 1302,
+  "routing_vias": 245,
+  "power_transient_cases": 9,
+  "firmware_waveform_replay_cases": 16,
   "reports": [
     "reports/release_checks.json",
     "reports/compact/layout_verification.json",
@@ -29,24 +33,12 @@
     "reports/manufacturing/gerber_connectivity.json",
     "reports/manufacturing/order_package.json"
   ],
-  "protected_original_simulations": [
-    {
-      "pid": 2517886,
-      "still_running": true,
-      "command": "/home/neuro/.local/share/candi-tools/sysroot/usr/bin/ngspice -b -o combined_low_input_capacitive_start.log -r combined_low_input_capacitive_start.raw combined_low_input_capacitive_start.cir"
-    },
-    {
-      "pid": 2518431,
-      "still_running": true,
-      "command": "/home/neuro/.local/share/candi-tools/sysroot/usr/bin/ngspice -b -o combined_low_input_capacitive_start_trtol7_25n.log -r combined_low_input_capacitive_start_trtol7_25n.raw combined_low_input_capacitive_start_trtol7_25n.cir"
-    },
-    {
-      "pid": 2520969,
-      "still_running": true,
-      "command": "/home/neuro/.local/share/candi-tools/ngspice47/bin/ngspice -b -o combined_low_input_capacitive_start.log -r combined_low_input_capacitive_start.raw combined_low_input_capacitive_start.cir"
-    }
-  ],
+  "protected_original_simulations": {
+    "source_processes_signaled": false,
+    "completion": "Original long-running jobs completed naturally; reports verified against unchanged circuit, model and simulator-script hashes.",
+    "provenance": "reports/compact/completed_simulation_sources.json"
+  },
   "original_branch": "main",
-  "checked_utc": "2026-09-10T06:44:43.633741+00:00",
-  "limitations": "Full combined power-startup evidence and two-sided factory/physical qualification remain pending. Existing original simulation processes were not stopped, restarted or modified."
+  "checked_utc": "2026-09-10T10:29:50.825045+00:00",
+  "limitations": "Engineering screens do not establish physical perfection. Factory two-sided assembly/reflow quotation, allocation and physical thermal/EMC/fit qualification remain pending; package is review-only."
 }

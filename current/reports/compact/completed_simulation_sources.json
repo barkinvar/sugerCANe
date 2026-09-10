@@ -1,0 +1,9 @@
+{
+  "source_checkout": "/home/neuro/candi-clone/current",
+  "source_processes_signaled": false,
+  "copied_completed_evidence": {
+    "reports/electrical/boost_spice.json": "255e2ee5605ecd3690d006c201c7430930f48add0bedd8d04d862a38e2ec9cbb",
+    "reports/electrical/boost_spice.png": "ffa0698632502cb58e33fd170f2a5e995718419bb24cbc33e0de3542c44bfd67",
+    "reports/electrical/solver_diagnostics.json": "7710366d996a0a40a4f367b1f0f22e3af62dae5cac9d56a78e4ea84892f63d1c"
+  }
+}

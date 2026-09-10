@@ -1,28 +1,29 @@
 {
   "result": "PASS",
-  "variant": "Rev H compact prototype",
-  "board_sha256": "102fc9d9801b6628781927c5ed5e05a98d0c7c0c52214b0afe3950f8ac40370c",
+  "variant": "Rev H compact 44 x 48 mm prototype",
+  "board_sha256": "5e43a87482b98fb8de0b105626381735209c22386c14bbe29e93f3bb7c3696dc",
   "baseline_commit": "1c03fd1",
   "baseline_segments": 1530,
   "baseline_vias": 242,
-  "segments": 1676,
-  "vias": 223,
+  "segments": 1302,
+  "vias": 245,
   "native_drc_violations": 0,
   "native_unconnected_items": 0,
   "routing_findings": {},
   "preservation_report": "reports/compact/layout_verification.json",
   "historical_cleanup": "reports/compact/pre_compaction_routing_cleanup.json",
   "changes": [
-    "Board shortened 4 mm; sensor connector and selector rows shifted 4 mm",
-    "15 small SMT parts moved to bottom; affected signal, power and ground paths rerouted",
-    "Ground stitches added to underside devices and local comparator pour",
-    "Redundant copper/stubs removed; branch shapes and small jogs corrected"
+    "44 x 48 mm outline, 45.1% less bounding area than original 52 x 74 mm",
+    "79 fitted SMT parts on bottom, 61 fitted parts on top; connector and selector access retained",
+    "Power interconnects rerouted with original current and clearance requirements; independent DC screen required",
+    "Signal jogs, redundant tracks and unused vias removed; all free bends and branches pass strict routing checks",
+    "Ground stitching and minimum pour features verified on all four layers"
   ],
   "unchanged": [
     "Circuit, schematics, firmware, parts and pin mappings",
-    "Native DRC/width/clearance limits and four-layer stack",
-    "Mounts, power stages and clock placement",
-    "248 copper objects on 15 critical clock/converter/input-power nets"
+    "Copper clearance, drill separation, trace width and thermal-spoke requirements",
+    "Four-layer nominal 1.6 mm stack; In1 reserved for continuous ground",
+    "54 critical copper objects on 11 clock/converter nets preserved by declared rigid transforms"
   ],
-  "scope": "Native DRC plus strict routing and independent exported copper geometry/connectivity pass. Full power simulations and physical qualification remain pending."
+  "scope": "Native DRC and strict trace geometry pass. Independent exported copper checks, DC screens, completed transient evidence and physical qualification are separate."
 }

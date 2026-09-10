@@ -209,12 +209,12 @@
   ],
   "unchanged": "Sensor-output current limits, protection, comparator/bias and CAN topology retained. Internal buck now uses LMR51430XDDCR with SRP7028A-8R2M, in unchanged footprints. Five passive MPN types use equal-value JLC parts; C25/C26 are 20 pF for crystal startup gain margin. C1 uses the high-reflow Panasonic FT capacitor and size-D lands. MCU remains STM32F042K6T6; PB3 sends RGB data. J8 electrical pin numbers retained, physical pattern replaced.",
   "board_mm": [
-    52,
-    70
+    44,
+    48
   ],
   "corner_radius_mm": 1.5,
-  "bounding_box_area_change_from_rev_g_percent": -5.405405405405405,
-  "area_change_from_rev_g_percent": -5.455598142656526,
+  "bounding_box_area_change_from_rev_g_percent": -45.11434511434511,
+  "area_change_from_rev_g_percent": -45.16453785159623,
   "cost_10_board_purchase_USD": {
     "rev_g": 28.8123,
     "rev_h": 27.0823,

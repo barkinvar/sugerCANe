@@ -5,6 +5,7 @@ measured material property. Native thickness includes nominal solder masks.
 """
 from pathlib import Path
 import sexpdata as sx
+from layout_contract import WIDTH, HEIGHT
 R=Path(__file__).resolve().parents[1];p=R/'hardware/FRC_Sensor_CAN.kicad_pcb';tree=sx.loads(p.read_text())
 def tag(x):return str(x[0]) if isinstance(x,list) and x else ''
 setup=next(x for x in tree if tag(x)=='setup');setup[:]=[x for x in setup if tag(x)!='stackup']
@@ -24,9 +25,9 @@ setup.insert(1,sx.loads('''(stackup
  (layer "B.Silkscreen" (type "Bottom Silk Screen") (color "White"))
  (copper_finish "ENIG") (dielectric_constraints no))'''))
 tree[:]=[x for x in tree if tag(x)!='title_block']
-tree.insert(5,sx.loads('''(title_block (title "SC12 regulated sensor-to-CAN")
+tree.insert(5,sx.loads(f'''(title_block (title "SC12 regulated sensor-to-CAN")
  (date "2026-09-09") (rev "H") (company "FRC Sensor CAN project")
  (comment 1 "Engineering prototype - physical qualification pending")
- (comment 2 "52 x 74 mm; 4-layer; nominal 1.6 mm; supplier stackup review required"))'''))
+ (comment 2 "{WIDTH:g} x {HEIGHT:g} mm; 4-layer; nominal 1.6 mm; supplier stackup review required"))'''))
 p.write_text(sx.dumps(tree)+'\n')
 print('Nominal 4-layer 1.6 mm ENIG stack and Rev H identity saved.')

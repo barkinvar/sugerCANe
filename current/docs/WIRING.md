@@ -22,7 +22,7 @@ Protection covers sensor-supply shorts to **ground**. A direct **12 V-to-5 V cro
 
 The factory leaves JP101/JP201/JP301 unpopulated for hand soldering. Fit the specified 2 mm headers, then leave caps off for initial bring-up. With power disconnected, fit ONE cap across 1–2 for 5 V or 2–3 for 12 V. No cap disconnects port power. Connecting all three power pins shorts the rails.
 
-The headers are centered at X=7, 23 and 39 mm, Y=56.4 mm. Pins 1–2–3 run left to right from the component side; pin 1 is square. Below each header, the front labels show 5V on the left and 12V on the right. V1/V2/V3 are the selected sensor-power outputs, GND is the return, and IN1/IN2/IN3 are signal inputs. There are no physical input-bias selectors. Set each channel to NPN, PNP, push-pull, float detection or keeper in software; see [input modes](INPUT_MODES.md).
+The headers are centered at X=7, 20 and 33 mm, Y=34.4 mm. Pins 1–2–3 run left to right from the component side; pin 1 is square. Below each header, the front labels show 5V on the left and 12V on the right. V1/V2/V3 are the selected sensor-power outputs, GND is the return, and IN1/IN2/IN3 are signal inputs. There are no physical input-bias selectors. Set each channel to NPN, PNP, push-pull, float detection or keeper in software; see [input modes](INPUT_MODES.md).
 
 Use Harwin M22-2010305 headers and Sullins SPN02SVEN-RC closed-top caps (2 mm pitch; not 2.54 mm). Caps are friction-retained, not mechanically latched. After voltage/functional verification, support retention with a small removable bead of electronics-grade neutral-cure silicone between the cap exterior and header body, clear of the contacts. This is a proposed retention method; qualify it for your robot vibration/impact environment and enclosure. Allow full cure before use and inspect seating during service. Do not claim these are vibration-qualified merely because there is no slider. Bridge JP2 only at a CAN bus end that needs a 120 Ω termination. Leave it open at intermediate nodes; normally there are two terminations on the entire bus.
 
@@ -46,7 +46,7 @@ Sources: [Omron E3Z specifications](https://www.ia.omron.com/products/family/407
 
 ## Programming header
 
-J8 is a recessed female **2×5, 2.54 mm through-hole socket**, centered at (24, 6.30) mm. Its electrical mapping is custom, not an ARM/STDC ribbon pinout. Use male-ended mapped leads or a correctly wired 2×5 male plug. In the component-side view, the upper row is **2, 4, 6, 8, 10** left to right at Y=5.03 mm; the lower row is **1, 3, 5, 7, 9** at Y=7.57 mm. Pin 1 is square at (18.92, 7.57) mm. Hole diameter is 1.10 mm. The ten electrical pin assignments and hole positions are unchanged from the previous male header.
+J8 is a recessed female **2×5, 2.54 mm through-hole socket**, centered at (18.07,7.58) mm. Its electrical mapping is custom, not an ARM/STDC ribbon pinout. Use male-ended mapped leads or a correctly wired 2×5 male plug. In the component-side view, the left column is **1, 3, 5, 7, 9** from top to bottom at X=16.8 mm; the right column is **2, 4, 6, 8, 10** at X=19.34 mm. Pin 1 is square at (16.8,2.5) mm; rows are 2.54 mm apart. Hole diameter is 1.10 mm. Electrical assignments are unchanged; the socket orientation and location have changed.
 
 | J8 pin | Signal | Connection |
 |---|---|---|

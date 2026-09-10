@@ -30,7 +30,7 @@ External inputs remain digital: target LOW ≤1.2 V, HIGH ≥2.4 V, positive 0�
 
 ## Layout and assembly
 
-The board is 52 × 70 mm with four copper layers and 125 fitted components on top and 15 underneath. The factory places 129 SMT parts; the user hand solders the DigiKey STM32F042K6T6 MCU, six terminals, three voltage headers and one J8 service socket, then fits three loose caps. U9 uses a split-paste exposed pad and surrounding thermal vias. All vias are through vias. This compact variant requires factory assembly on both sides.
+The board is 44 × 48 mm with four copper layers and 61 fitted components on top and 79 underneath. The factory places 129 SMT parts; the user hand solders the DigiKey STM32F042K6T6 MCU, six terminals, three voltage headers and one J8 service socket, then fits three loose caps. U9 uses a split-paste exposed pad and surrounding thermal vias. All vias are through vias. This compact variant requires factory assembly on both sides.
 
 One inner layer provides continuous ground; the other also carries a few slow control/service connections. Switching, feedback, compensation and crystal routes remain on top. Native and independently reconstructed fabrication geometry are checked separately.
 
@@ -40,4 +40,4 @@ Rev H design envelope: at most 100 µF total external capacitance on the shared 
 
 ## RGB diagnostics and low-volume programming
 
-H replaces the single green LED with one SK6805-EC15, a 5 V AHCT buffer, data pulldown, series resistor and local bypass capacitors. PB3 remains the status pin and uses timer/DMA serialization. J8 is a hand-fitted recessed female 2×5 2.54 mm socket with the same electrical pin numbers and odd/even physical pattern as the preceding Rev H header. [Status, case opening and inexpensive programmer](docs/STATUS_AND_PROGRAMMING.md).
+H replaces the single green LED with one SK6805-EC15, a 5 V AHCT buffer, data pulldown, series resistor and local bypass capacitors. PB3 remains the status pin and uses timer/DMA serialization. J8 is a hand-fitted recessed female 2×5 2.54 mm socket with the same electrical pin numbers, now oriented vertically with odd pins on the left. [Status, case opening and inexpensive programmer](docs/STATUS_AND_PROGRAMMING.md).

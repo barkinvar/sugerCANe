@@ -2,13 +2,13 @@
 
 [Repository: barkinvar/sugerCANe](https://github.com/barkinvar/sugerCANe) · [Folder map](../README.md#folder-map)
 
-Three digital sensor inputs over CAN, with regulated **5 V / 12 V sensor power** and software-selectable **NPN, PNP, push-pull, floating detection and keeper**. Removable 2 mm jumpers select each port's power voltage. All components mount on the top.
+Three digital sensor inputs over CAN, with regulated **5 V / 12 V sensor power** and software-selectable **NPN, PNP, push-pull, floating detection and keeper**. Removable 2 mm jumpers select each port's power voltage. Components populate both PCB surfaces.
 
-The bold pixel **sugarCANe** wordmark and original pixel-cane illustration on a raised island with a stepped underside share the underside with 15 SMT parts; there is no additional bottom text. Connector and voltage labels remain on top, with the full programming map in the wiring guide. [Bottom render](output/review/board_bottom.png) · [Vector artwork and lettering source](hardware/artwork/README.md).
+The underside carries 79 fitted SMT parts, a compact sugarCANe wordmark, and labels for the termination bridge and ground test pad. Connector and voltage labels remain on top; the programming map is in the wiring guide. [Bottom render](output/review/board_bottom.png).
 
 Rev H adds one enclosure-facing RGB status LED and a hand-soldered recessed female programming socket for a ten-board batch. The LED is on the right, above the mounting hole, with a 6 mm circular area reserved for a printed light duct; see the [enclosure dimensions](docs/STATUS_AND_PROGRAMMING.md#enclosure-location). It retains Rev G's power protection and physical voltage jumpers. The 12 V reservoir is upstream of a controlled output eFuse; both rails have default-off enables and CAN fault reset. Two ADC channels measure the protected rails. [Engineering review](docs/ORDER_READINESS.md) · [verification and bench procedure](docs/VALIDATION.md). This design uses its own CAN protocol; it is not CTRE Phoenix or GrappleHook compatible.
 
-**Selected assembly plan:** JLC fits **129 SMT parts (114 top / 15 bottom)**. You buy **STM32F042K6T6 from DigiKey** and solder U5, then fit ten through-hole parts and three jumper caps. U5 is omitted from the factory BOM, CPL and stencil. The retained dated sourcing snapshot lists stock for ten boards for all 54 factory types; final simulation review and factory quotation remain pending. **[Start here: where to buy and how to order](docs/FACTORY_ORDER.md).**
+**Selected assembly plan:** JLC fits **129 SMT parts (50 top / 79 bottom)**. You buy **STM32F042K6T6 from DigiKey** and solder U5, then fit ten through-hole parts and three jumper caps. U5 is omitted from the factory BOM, CPL and stencil. The retained dated sourcing snapshot lists stock for ten boards for all 54 factory types; power transient screening passes; factory quotation remains pending. **[Start here: where to buy and how to order](docs/FACTORY_ORDER.md).**
 
 ![Rev H board](output/review/board_3d_final.png)
 
@@ -23,7 +23,7 @@ Rev H adds one enclosure-facing RGB status LED and a hand-soldered recessed fema
 | Controller | STM32F042K6T6, TCAN3413; 1 Mbit/s classic CAN |
 | Software | App 0.9.0, bootloader 1.1.0, hardware 8, protocol 4 |
 | Servicing | CAN discovery, ID/settings and recoverable firmware upload; initial installation through a 2.54 mm SWD service socket |
-| PCB / assembly | **52 × 70 mm**, four copper layers, 129 factory SMT + user-fitted MCU + ten through-hole parts + three caps |
+| PCB / assembly | **44 × 48 mm**, four copper layers, 129 factory SMT + user-fitted MCU + ten through-hole parts + three caps |
 
 Parts purchasing is about **$27.08 per board at ten boards before SMT attrition**, or **$27.96** including a conservative allowance. These include the user-fitted DigiKey MCU, through-hole parts and caps; two optional spare MCUs are extra. PCB, assembly, freight and tax are extra. [Cost calculation](docs/COST_REDUCTION.md).
 
@@ -42,7 +42,7 @@ Parts purchasing is about **$27.08 per board at ten boards before SMT attrition*
 
 Change voltage jumpers only with power disconnected. A missing cap disconnects port power, not its signal wire. Input mode changes use CAN software. Rail voltage readback uses the MCU ADC and factory voltage-reference calibration. External signal inputs remain digital; rail measurement does not add user analog-input or encoder support.
 
-The compact variant is 52 × 70 mm, 4 mm shorter than the 52 × 74 mm snapshot. Fifteen small SMT parts move underneath; mounts, power stages, clock and firmware are preserved. Its 1,676 straight track segments and 223 vias pass the [routing rules](docs/ROUTING_RULES.md), native DRC and independent Gerber connectivity/geometry checks. See the [compact layout review](docs/COMPACT_BOARD.md), [all four copper layers](output/assembly/gerber_copper_review.pdf) and [connector details](docs/CONNECTORS.md).
+The compact variant is **44 × 48 mm**, using **45.1% less area** than the original 52 × 74 mm board. It retains all 140 fitted parts and electrical functions, with 79 parts underneath. Mounting holes, connectors and the LED move to suit the smaller outline. See the [compact layout review](docs/COMPACT_BOARD.md), [routing checks](reports/routing_rules.json), [all four copper layers](output/assembly/gerber_copper_review.pdf) and [connector details](docs/CONNECTORS.md). [Size comparison](output/review/size_comparison.png).
 
 The input connector-to-fuse and fuse-to-MOSFET routes are now **0.7 mm wide** (14 segments widened from 0.5 mm). The protected input and converter paths retain their reviewed clearance necks. Width, clearance, connectivity and ground-pour checks cover **all four layers**; see the [power-path review](docs/ORDER_READINESS.md).
 

@@ -1,27 +1,91 @@
 {
   "result": "PASS",
-  "fitted_top_parts": 125,
-  "fitted_bottom_parts": 15,
+  "fitted_top_parts": 61,
+  "fitted_bottom_parts": 79,
   "bottom_references": [
-    "C101",
+    "C11",
+    "C12",
+    "C13",
+    "C2",
+    "C201",
+    "C3",
+    "C4",
+    "C40",
+    "C41",
+    "C5",
+    "C6",
+    "C60",
+    "C61",
+    "C62",
+    "C63",
+    "C64",
+    "C65",
+    "C66",
+    "C69",
+    "C7",
+    "C70",
+    "C71",
+    "C73",
+    "C8",
+    "D101",
+    "D2",
+    "D3",
+    "D301",
+    "D4",
+    "D5",
+    "D6",
+    "F1",
+    "L1",
+    "L2",
+    "Q1",
     "Q101",
     "Q102",
-    "Q201",
+    "Q2",
     "Q202",
+    "Q3",
     "Q301",
     "Q302",
+    "R1",
+    "R10",
+    "R101",
+    "R103",
+    "R110",
     "R111",
     "R112",
+    "R2",
+    "R209",
     "R210",
     "R211",
     "R212",
+    "R3",
+    "R30",
+    "R301",
+    "R31",
+    "R310",
     "R311",
-    "R312",
-    "R52"
+    "R4",
+    "R40",
+    "R41",
+    "R51",
+    "R60",
+    "R61",
+    "R62",
+    "R63",
+    "R66",
+    "R68",
+    "R69",
+    "R70",
+    "R73",
+    "R75",
+    "U1",
+    "U2",
+    "U4",
+    "U8",
+    "U9"
   ],
   "board_size_mm": [
-    52,
-    70
+    44,
+    48
   ],
   "resistors": 55,
   "capacitors": 40,
@@ -74,132 +138,162 @@
     "HSE_IN": {
       "total_track_length_mm": 6.58626983722081,
       "vias": 0,
-      "all_top": true
+      "layer": "F.Cu"
     },
     "HSE_OUT": {
       "total_track_length_mm": 5.1480339059327385,
       "vias": 0,
-      "all_top": true
+      "layer": "F.Cu"
     },
     "HSE_XTAL_OUT": {
       "total_track_length_mm": 5.714670811453836,
       "vias": 0,
-      "all_top": true
+      "layer": "F.Cu"
     },
     "BUCK_SW": {
       "total_track_length_mm": 8.233084412271571,
       "vias": 0,
-      "all_top": true
+      "layer": "B.Cu"
     },
     "BUCK_CB": {
       "total_track_length_mm": 3.127665042944955,
       "vias": 0,
-      "all_top": true
+      "layer": "B.Cu"
     },
     "BUCK_FB": {
       "total_track_length_mm": 4.687652416360247,
       "vias": 0,
-      "all_top": true
+      "layer": "B.Cu"
     },
     "BOOST_SW": {
       "total_track_length_mm": 14.812515318615947,
       "vias": 0,
-      "all_top": true
+      "layer": "B.Cu"
     },
     "BOOST_FB": {
       "total_track_length_mm": 10.804646455628166,
       "vias": 0,
-      "all_top": true
+      "layer": "B.Cu"
     },
     "BOOST_COMP": {
       "total_track_length_mm": 2.4853553390593275,
       "vias": 0,
-      "all_top": true
+      "layer": "B.Cu"
     },
     "BOOST_COMP_RC": {
       "total_track_length_mm": 10.729834440185229,
       "vias": 0,
-      "all_top": true
+      "layer": "B.Cu"
+    },
+    "BOOST_SS": {
+      "total_track_length_mm": 14.630839635996978,
+      "vias": 0,
+      "layer": "B.Cu"
     }
   },
   "inner_service_and_monitor_routes": {
-    "+3V3": 31.100347710415136,
-    "ADC_5V": 6.1305086527633215,
-    "BIAS_DOWN1": 61.38394835755924,
-    "BIAS_DOWN2": 51.96646550232831,
-    "BIAS_UP2_N": 31.204877616422895,
-    "POWER_12V_EN": 31.496960646232527,
-    "POWER_5V_EN": 38.104543563283386,
-    "UART_RX": 30.97752817795929,
-    "UART_TX": 16.042993488107218
+    "+3V3": 22.734949474748323,
+    "ADC_5V": 51.57404585432499,
+    "BIAS_DOWN1": 24.084296207039085,
+    "BIAS_DOWN2": 51.56307716974934,
+    "BIAS_UP2_N": 7.806121613987066,
+    "POWER_12V_EN": 12.12376814872029,
+    "POWER_5V_EN": 65.63585545457454,
+    "UART_RX": 28.98840337337125,
+    "UART_TX": 33.77350647362942
   },
   "power_net_geometry": {
-    "SENSOR_12V": {
-      "total_track_length_mm": 65.88757181964868,
-      "minimum_width_mm": 0.5,
-      "via_count": 2
-    },
-    "BOOST_12V": {
-      "total_track_length_mm": 55.680898977737726,
-      "minimum_width_mm": 0.25,
-      "via_count": 2
+    "VIN_RAW": {
+      "total_track_length_mm": 4.869848480983499,
+      "minimum_width_mm": 0.7,
+      "via_count": 0
     },
     "V5_INTERNAL": {
-      "total_track_length_mm": 172.38047958998902,
+      "total_track_length_mm": 106.97446944829161,
       "minimum_width_mm": 0.25,
-      "via_count": 14
-    },
-    "VIN_RAW": {
-      "total_track_length_mm": 18.818961030678928,
-      "minimum_width_mm": 0.7,
-      "via_count": 1
-    },
-    "VIN_FUSED": {
-      "total_track_length_mm": 19.46927777466002,
-      "minimum_width_mm": 0.7,
-      "via_count": 2
+      "via_count": 13
     },
     "VIN_PROT": {
-      "total_track_length_mm": 89.8188401078988,
+      "total_track_length_mm": 60.65432518921588,
       "minimum_width_mm": 0.25,
-      "via_count": 7
-    },
-    "SENSOR_5V": {
-      "total_track_length_mm": 79.55541779484703,
-      "minimum_width_mm": 0.35,
       "via_count": 8
     },
     "VPORT1": {
-      "total_track_length_mm": 11.807106781186548,
+      "total_track_length_mm": 8.327817459305201,
       "minimum_width_mm": 0.5,
       "via_count": 0
     },
     "VPORT2": {
-      "total_track_length_mm": 11.807106781186548,
+      "total_track_length_mm": 8.265685424949238,
       "minimum_width_mm": 0.5,
       "via_count": 0
     },
+    "SENSOR_5V": {
+      "total_track_length_mm": 34.732590180780456,
+      "minimum_width_mm": 0.5,
+      "via_count": 1
+    },
     "VPORT3": {
-      "total_track_length_mm": 11.807106781186548,
+      "total_track_length_mm": 8.124263361605736,
       "minimum_width_mm": 0.5,
       "via_count": 0
+    },
+    "SENSOR_12V": {
+      "total_track_length_mm": 52.432085117392106,
+      "minimum_width_mm": 0.5,
+      "via_count": 2
+    },
+    "BOOST_12V": {
+      "total_track_length_mm": 51.56902174431582,
+      "minimum_width_mm": 0.25,
+      "via_count": 4
+    },
+    "VIN_FUSED": {
+      "total_track_length_mm": 28.70573952066306,
+      "minimum_width_mm": 0.7,
+      "via_count": 2
     }
   },
   "limitations": "Track geometry inventory is not a thermal, impedance or trace-drop qualification. VIN_PROT includes narrow low-current enable branches; 3D and programming checks are nominal geometry, not physical fit.",
   "improved_edge_clearances_mm": {
-    "R101": 2.200000000000003,
-    "R103": 2.049999999999997,
-    "R203": 2.049999999999997,
-    "F1": 2.065,
-    "D102": 2.1,
-    "R22": 2.075,
-    "R109": 2.025,
-    "R104": 1.980000000000004,
-    "R30": 1.7,
-    "R31": 1.7
+    "R101": 6.475,
+    "R103": 4.5,
+    "R203": 14.775,
+    "F1": 3.925,
+    "D102": 10.9,
+    "R22": 11.475,
+    "R109": 11.274999999999999,
+    "R104": 3.399999,
+    "R30": 2.174999999999997,
+    "R31": 4.375
   },
   "board_corner_radius_mm": 1.5,
-  "input_bias_transistor_row_y_mm": 64.5,
+  "input_bias_transistor_positions_mm": {
+    "Q101": [
+      12.1,
+      31.4
+    ],
+    "Q102": [
+      18.5,
+      26.2
+    ],
+    "Q201": [
+      18.4,
+      29.0
+    ],
+    "Q202": [
+      21.3,
+      42.3
+    ],
+    "Q301": [
+      22.0,
+      19.8
+    ],
+    "Q302": [
+      41.5,
+      45.5
+    ]
+  },
   "edge_scope": "Pad bounding boxes to finished edges. R1/R2 retain original 1.30 mm edge clearance and local buck feedback routing. Terminals/test pads/termination bridge have intentional exceptions.",
   "efuse_assembly": {
     "exposed_pad_mm": [
@@ -212,18 +306,18 @@
   },
   "buck_local_bypass": {
     "C2": {
-      "vin_top_path_mm": 4.93802,
-      "ground_top_path_mm": 8.4712572106361
+      "vin_bottom_path_mm": 4.93802,
+      "ground_bottom_path_mm": 8.552236244992065
     },
     "C3": {
-      "vin_top_path_mm": 1.9276650000000002,
-      "ground_top_path_mm": 5.046688309203678
+      "vin_bottom_path_mm": 1.9276650000000002,
+      "ground_bottom_path_mm": 5.127667343559644
     }
   },
   "status_optical_access": {
     "center_top_left_mm": [
-      48,
-      39.5
+      40,
+      18.5
     ],
     "reserved_diameter_mm": 6,
     "suggested_duct_bore_mm": 4,
@@ -233,39 +327,40 @@
       1.15
     ],
     "board_edge_clearance_mm": 1,
-    "mount_H2_center_distance_mm": 7.0178344238090995,
+    "mount_H2_center_distance_mm": 14.508618128546908,
     "scope": "6 mm circular component courtyard reserved for a non-contact printed duct; native DRC checks adjacent courtyards. Nominal dimensions; enclosure tolerances, viewing angle and brightness require physical qualification."
   },
   "status_routes": {
     "STATUS_5V_DATA": {
-      "track_length_mm": 15.995978821322533,
-      "vias": 0,
+      "track_length_mm": 14.899275309870408,
+      "vias": 1,
       "layers": [
+        "B.Cu",
         "F.Cu"
       ]
     },
     "STATUS_DIN": {
-      "track_length_mm": 53.56674599429248,
-      "vias": 2,
+      "track_length_mm": 4.0542289408717815,
+      "vias": 1,
       "layers": [
-        "F.Cu",
-        "In2.Cu"
+        "B.Cu",
+        "F.Cu"
       ]
     }
   },
   "rgb_local_bypass": {
     "C74": {
-      "supply_top_path_mm": 2.6015958498984766
+      "supply_top_path_mm": 2.1037058069535206
     },
     "C75": {
-      "supply_top_path_mm": 3.725
+      "supply_top_path_mm": 3.8617009357883867
     }
   },
   "routing_inventory": {
     "layers": {
       "F.Cu": {
-        "segments": 828,
-        "length_mm": 1300.6910116177164,
+        "segments": 472,
+        "length_mm": 792.8301793423968,
         "non_45_degree_segments": []
       },
       "In1.Cu": {
@@ -274,17 +369,17 @@
         "non_45_degree_segments": []
       },
       "In2.Cu": {
-        "segments": 329,
-        "length_mm": 620.353489579597,
+        "segments": 315,
+        "length_mm": 807.793567128431,
         "non_45_degree_segments": []
       },
       "B.Cu": {
-        "segments": 519,
-        "length_mm": 1226.9131967687442,
+        "segments": 515,
+        "length_mm": 739.8385648402927,
         "non_45_degree_segments": []
       }
     },
-    "vias": 223,
+    "vias": 245,
     "scope": "Straight horizontal/vertical/45-degree centerlines enforced. The separate routing_rules.json gate also rejects redundant geometry, tiny free jogs and sharp free bends. Rounded copper end caps are normal. Native DRC and independent Gerber checks establish connectivity/clearance, not EMC qualification."
   }
 }

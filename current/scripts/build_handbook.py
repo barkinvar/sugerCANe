@@ -59,7 +59,7 @@ def convert(path):
         if not re.match(r'^[a-z]+:|^#',href):
             filename,sep,fragment=href.partition('#')
             local=(path.parent/filename).resolve().relative_to(ROOT.parent)
-            link['href']='https://github.com/barkinvar/sugerCANe/blob/main/'+local.as_posix()+(sep+fragment if sep else '')
+            link['href']='https://github.com/barkinvar/sugerCANe/blob/'+args.source_ref+'/'+local.as_posix()+(sep+fragment if sep else '')
     blocks = list(soup.children)
     # Each source document starts with its own title; the book has a chapter title.
     for n, block in enumerate(blocks):
@@ -158,6 +158,7 @@ def page(canvas, doc):
 
 ap=argparse.ArgumentParser(description=__doc__)
 ap.add_argument('--order-guide',action='store_true',help='Build only the concise ordering guide')
+ap.add_argument('--source-ref',default='main',help='Git branch or commit used for source links in the PDF')
 args=ap.parse_args()
 if args.order_guide:
     styles['body'].spaceAfter=4.0
@@ -166,7 +167,7 @@ if args.order_guide:
     story=[Paragraph('sugarCANe / Rev H',styles['cover']),
            Paragraph('Order and build guide',styles['heading']),
            Paragraph('JLCPCB assembly + user-soldered DigiKey MCU',styles['body']),
-           Paragraph('Selected assembly plan. Final simulation review required before paying for fabrication.',styles['small']),
+           Paragraph('Selected assembly plan. Factory process confirmation and physical qualification remain required before manufacturing release.',styles['small']),
            Spacer(1,12),*convert(ROOT/'docs/FACTORY_ORDER.md')]
     doc=Guide(str(OUT/'ORDER_GUIDE.pdf'),pagesize=A4,leftMargin=42,rightMargin=42,topMargin=48,bottomMargin=43,
               title='sugarCANe Rev H ordering guide',author='sugarCANe project')
@@ -194,6 +195,7 @@ chapters = [('1  Product overview', 'README.md'), ('2  Power and input circuit',
 
 chapters.insert(4, ('Status and programming', 'docs/STATUS_AND_PROGRAMMING.md'))
 chapters.insert(1, ('Pre-order decision', 'docs/ORDER_READINESS.md'))
+chapters.insert(1, ('Compact layout', 'docs/COMPACT_BOARD.md'))
 chapters = [(str(i) + '  ' + re.sub(r'^\d+\s+', '', title), path)
             for i, (title, path) in enumerate(chapters, 1)]
 

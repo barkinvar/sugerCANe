@@ -11,7 +11,7 @@ from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import SimpleDocTemplate,Paragraph,Table,TableStyle,Spacer
 from reportlab.lib.units import mm
-from layout_contract import WIDTH, HEIGHT, RADIUS, BOTTOM_REFERENCES
+from layout_contract import WIDTH, HEIGHT, RADIUS, BOTTOM_REFERENCES, CONTRACT
 R=Path(__file__).resolve().parents[1]
 for d in ('output/documentation','output/mechanical','order'):(R/d).mkdir(parents=True,exist_ok=True)
 styles=getSampleStyleSheet();styles['Normal'].fontSize=8;styles['Normal'].leading=11
@@ -19,7 +19,7 @@ P=lambda s:Paragraph(escape(str(s)),styles['Normal'])
 rows=list(csv.DictReader((R/'bom/BOM_grouped.csv').open()))
 estimate=next(r for r in csv.DictReader((R/'bom/cost_estimate.csv').open()) if r['boards']=='10')
 candidate=json.loads((R/'reports/release_checks.json').read_text()).get('simulation_deferred_by_user',False)
-status='JLC Standard PCBA candidate: U5 purchased from DigiKey and hand soldered by user; final simulations and factory quote pending. See docs/FACTORY_ORDER.md.' if candidate else 'Unbuilt prototype; check current sourcing and release status before ordering.'
+status='JLC Standard PCBA candidate: U5 purchased from DigiKey and hand soldered by user; power transient screening passes; factory quote and qualification pending. See docs/FACTORY_ORDER.md.' if candidate else 'Unbuilt prototype; check current sourcing and release status before ordering.'
 story=[Paragraph('SC12 - Revision H purchasing BOM',styles['Title']),P(f"140 fitted parts: 129 factory SMT + one user-soldered MCU + 10 user-fitted through-hole parts. Three loose caps extra. Parts estimate: ${estimate['all_parts_cash_per_board_usd']}/board at 10 boards before SMT attrition and spare MCUs; PCB, assembly, freight and tax extra. {status}"),Spacer(1,12)]
 data=[[P(t) for t in ['Qty','MPN / supplier part','References','Value / package','Extended USD first tier']]]
 for row in rows:data.append([P(row['Quantity']),P(row['MPN']+' / '+row['Supplier_part']),P(row['References']+' ('+row['Assembly']+')'),P(row['Value']+' / '+row['Footprint'].split(':')[-1]),P(row['Extended_USD_first_tier'])])
@@ -48,16 +48,17 @@ c.circle(*xy(led_x,led_y),2*mm)
 c.rect(*xy(led_x-.75,led_y+.75),1.5*mm,1.5*mm)
 c.line(*xy(led_x-8,led_y),*xy(led_x-3.2,led_y))
 c.setFont('Helvetica',7);c.drawRightString(*xy(led_x-8.5,led_y-.5),'D10 RGB')
-c.setStrokeColor(colors.black);c.rect(*xy(17.45,8.8),13.1*mm,5*mm)
-c.setFont('Helvetica',7);c.drawCentredString(*xy(24,7),'J8')
+sx,sy=CONTRACT['service_origin_mm']
+c.setStrokeColor(colors.black);c.rect(*xy(sx-1.23,sy+11.71),5*mm,13.1*mm)
+c.setFont('Helvetica',7);c.drawCentredString(*xy(sx+1.27,sy+5),'J8')
 for ref in ('H1','H2'):
  f=fps[ref];x,y=f['x_mm'],-f['y_mm'];c.circle(*xy(x,y),1.6*mm);c.setFont('Helvetica',7);c.drawString(*xy(1.5,9) if ref=='H1' else xy(x+4,y),ref)
-for x in (0,52):
+for x in (0,WIDTH):
  c.line(*xy(x,0),*xy(x,-9))
-c.line(*xy(0,-7),*xy(52,-7));c.setFont('Helvetica',9);c.drawCentredString(*xy(26,-9),'52.00')
+c.line(*xy(0,-7),*xy(WIDTH,-7));c.setFont('Helvetica',9);c.drawCentredString(*xy(WIDTH/2,-9),f'{WIDTH:.2f}')
 c.line(*xy(WIDTH,0),*xy(61,0));c.line(*xy(WIDTH,HEIGHT),*xy(61,HEIGHT));c.line(*xy(59,0),*xy(59,HEIGHT));c.drawString(*xy(61,29),f'{HEIGHT:.2f}')
 lines=[f'PCB: {WIDTH} x {HEIGHT} x 1.6 mm; corner radius {RADIUS} mm. Four layers, 1 oz copper.',
- 'Mounts: H1 (3.5, 4.0), H2 (48.5, 46.5); diameter 3.2 NPTH.',
+ 'Mounts: '+', '.join(f'H{i+1} ({x:g}, {y:g})' for i,(x,y) in enumerate(CONTRACT['mounting_holes_top_left_mm']))+'; diameter 3.2 NPTH.',
  'Keep hardware contact diameter <=6.4 mm; use insulating supports as needed.',
  f'Conservative terminal envelope: {WIDTH} x {HEIGHT+8.1:.1f} mm, before wires/button clearance.',
  'Terminal height: 8.5 above mounting face; pin tips 3.5 below that face.',
@@ -75,7 +76,7 @@ ox,oy=95,640;scale=18
 f=fps['J8'];c.setFont('Helvetica-Bold',11);c.drawString(40,730,'J8: recessed 2x5 / 2.54 mm socket; custom mapping')
 for p in f['pads']:
  if not p['number']:continue
- x=65+(p['x_mm']-18.92)*scale;y=665-(-p['y_mm']-5.03)*scale
+ x=95+(p['x_mm']-sx)*scale;y=690-(-p['y_mm']-sy)*scale
  c.setFillColor(colors.HexColor('#dbad34'))
  if p['number']=='1':c.rect(x-.85*scale,y-.85*scale,1.7*scale,1.7*scale,stroke=1,fill=1)
  else:c.circle(x,y,.85*scale,stroke=1,fill=1)
@@ -83,7 +84,7 @@ for p in f['pads']:
  c.setFillColor(colors.black);c.setFont('Helvetica',7);c.drawCentredString(x,y-2,p['number'])
 mapping=['1 NRST','2 UART RX','3 UART TX','4 SWCLK','5 SWDIO','6 +3V3 VTref sense only','7 GND','8 GND','9 BOOT0','10 GND']
 for i,s in enumerate(mapping):c.setFont('Helvetica',10);c.drawString(310,692-i*17,s)
-c.setFont('Helvetica',9);c.drawString(40,495,'Power through J1; adapter/probe power disconnected. Lower row 1/3/5/7/9; upper 2/4/6/8/10.')
+c.setFont('Helvetica',9);c.drawString(40,475,'Power through J1; probe power disconnected. Left column: odd pins; right column: even pins.')
 for ch in range(1,4):
  y=435-(ch-1)*75
  for x,ref in [(110,f'JP{ch}01')]:

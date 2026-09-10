@@ -88,7 +88,10 @@ for row in placed:
     assert row['Side'] == c['side'] == ('bottom' if row['Ref'] in BOTTOM_REFERENCES else 'top')
 bottom_paste = stack[('bottom', 'paste')].instance.objects
 assert {o.attrs['.C'][0] for o in bottom_paste} == BOTTOM_REFERENCES
-assert len(bottom_paste) == sum(len({p['number'] for p in by_ref[r]['pads'] if p['number']}) for r in BOTTOM_REFERENCES)
+assert len(bottom_paste) == sum(p['paste_bottom'] for r in BOTTOM_REFERENCES for p in by_ref[r]['pads'])
+assert Counter((o.attrs['.C'][0],coord(o.x),coord(o.y)) for o in bottom_paste) == Counter(
+    (r,coord(p['x_mm']),coord(p['y_mm'])) for r in BOTTOM_REFERENCES
+    for p in by_ref[r]['pads'] if p['paste_bottom'])
 
 # Copper-only previews avoid ambiguous solder-mask polarity and unsupported SVG filters.
 for side in ('top', 'bottom'):

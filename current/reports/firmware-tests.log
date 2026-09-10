@@ -30,7 +30,7 @@ test_update_retries_and_running_version (test_service.Service.test_update_retrie
 test_wrong_file_rejected_without_writes (test_service.Service.test_wrong_file_rejected_without_writes) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 3.626s
+Ran 8 tests in 3.641s
 
 OK
 PASS Only first two 4 KiB protection blocks locked; application/config must remain writable
@@ -52,7 +52,7 @@ PASS 34 compiled flash halfword power-cut cases and programming-error rejection
 PASS UART RX overflow ordering and bounded TX buffer under flooding
 {
   "result": "PASS",
-  "elapsed_seconds": 0.5328228999860585,
+  "elapsed_seconds": 0.7849176449817605,
   "emulator": "Unicorn2.1.4 Cortex-M0",
   "elf_sha256": "1d412f7cf96540185eccd46a711f28cf3b73be03966c39ce8a59760658a3c940",
   "binary_sha256": "c8e68ff7857d7a12299a846599a4fd11e875bf50a71f7348c17f29ecc29f008f",

@@ -1,8 +1,8 @@
 # Order and build sugarCANe Rev H
 
-**Selected build: JLCPCB assembles 129 SMT parts (114 top / 15 bottom). You buy the original STM32F042K6T6 from DigiKey and solder U5, then fit the ten through-hole parts and three jumper caps.** The MCU footprint, four-layer stack and firmware stay the same; the compact layout is 4 mm shorter. The final component review changed C25/C26 to **20 pF / C105173** for crystal startup margin, and U1/L1 to **LMR51430XDDCR / C5185863** plus **SRP7028A-8R2M / C2041815** for buck current headroom. All four use the existing footprints.
+**Selected build: JLCPCB assembles 129 SMT parts (50 top / 79 bottom). You buy the original STM32F042K6T6 from DigiKey and solder U5, then fit the ten through-hole parts and three jumper caps.** The MCU footprint, four-layer stack and firmware stay the same; the compact layout uses 45.1% less board area. The final component review changed C25/C26 to **20 pF / C105173** for crystal startup margin, and U1/L1 to **LMR51430XDDCR / C5185863** plus **SRP7028A-8R2M / C2041815** for buck current headroom. All four use the existing footprints.
 
-**Before paying for PCBA:** finish our final simulation review. The saved full startup simulation is incomplete; the available ZIPs remain marked REVIEW_ONLY. The assembly choice is finalized, but this is not an electrical release. Use the files now to obtain and review a quotation. [Current evidence](ORDER_READINESS.md).
+**Before paying for PCBA:** obtain factory stack/process/inspection confirmation and an approved manufacturing package. The completed power-startup report passes transient screening; the available ZIPs remain marked REVIEW_ONLY pending factory and physical qualification. Use the files now to obtain and review a quotation. [Current evidence](ORDER_READINESS.md).
 
 ## 1. Buy the parts you will fit
 
@@ -33,7 +33,7 @@ Extract [sugarCANe_RevH_JLC_REVIEW_ONLY.zip](../order/sugarCANe_RevH_JLC_REVIEW_
 | BOM | `bom/BOM_JLCPCB.csv` |
 | CPL / pick-and-place | `output/assembly/CPL_JLCPCB.csv` |
 
-The BOM contains **54 types / 129 placements**; the CPL contains **129 rows**. **U5 is absent from both.** The Gerber ZIP has a factory-specific top paste layer with all **32 U5 apertures removed**. The other 325 apertures (289 top / 36 bottom), including U9's exposed-pad windows, are preserved. Copper, solder mask and drills remain the checked native design. Ask CAM to use the supplied stencil geometry without recreating U5 openings.
+The BOM contains **54 types / 129 placements**; the CPL contains **129 rows**. **U5 is absent from both.** The Gerber ZIP has a factory-specific top paste layer with all **32 U5 apertures removed**. The other 325 apertures (127 top / 198 bottom), including U9's exposed-pad windows, are preserved. Copper, solder mask and drills remain the checked native design. Ask CAM to use the supplied stencil geometry without recreating U5 openings.
 
 The complete BOM, assembly drawing and 3D renders show the **finished board, including your MCU and connectors**. They are reference material, not instructions to add factory placements. Do not upload `BOM_grouped.csv`, `positions_all_top.csv` or `positions_smd_top.csv` as the JLC assembly selection.
 
@@ -44,14 +44,15 @@ Start at [JLCPCB PCB quotation](https://jlcpcb.com/quote), upload the Gerber ZIP
 | Setting | Select / require |
 |---|---|
 | Finished quantity | Your chosen **5 or 10 assembled boards**; match PCB and assembly quantities |
-| PCB | **52 × 70 mm**, **four layers**, FR-4, **1.6 mm** |
+| PCB | **44 × 48 mm**, **four layers**, FR-4, **1.6 mm** |
 | Copper | **1 oz / 35 µm nominal on all four layers**, including both inner layers |
+| Smallest via | **0.20 mm drill / 0.50 mm copper diameter**, through vias; use the supplied drill files |
 | Finish | **ENIG** |
 | Mask / silk | Green mask, white silkscreen on both sides; retain bottom artwork |
-| Assembly | **Standard PCBA, both sides**, 114 top + 15 bottom placements |
-| Panel / rails | Factory adds rails/fiducials and returns separated 52 × 70 mm boards |
+| Assembly | **Standard PCBA, both sides**, 50 top + 79 bottom placements |
+| Panel / rails | Factory adds rails/fiducials and returns separated 44 × 48 mm boards |
 | Electrical test | Confirm bare-PCB open/short electrical test |
-| Stencil | Both sides: 114 top / 15 bottom, nominal **0.10 mm**, supplied apertures; **no paste at U5** |
+| Stencil | Both sides: 50 top / 79 bottom, nominal **0.10 mm**, supplied apertures; **no paste at U5** |
 | Programming / functional test | You perform these after installing U5 |
 
 D10's exact RGB LED requires Standard PCBA. Do not select Economic. The board is narrower than the published Standard minimum; have JLC confirm its panel/rail arrangement. Default rails alone must not be assumed to satisfy it. Request a symmetric four-layer stack with outer-to-inner dielectric ≤0.25 mm and 35 µm copper on every layer; do not accept 0.5 oz inner copper without another electrical review.
@@ -62,13 +63,13 @@ Inspect both placement previews against [top_assembly.pdf](../output/assembly/to
 
 ## 4. Copy these notes into the PCBA order
 
-> sugarCANe SC12 Rev H. TWO-SIDED assembly: 114 top + 15 bottom = 129 placements / 54 exact MPN types from the supplied BOM/CPL. Leave U5 (STM32F042K6T6) unpopulated and unpasted; customer hand solders it. Use the supplied F_Paste Gerber with U5 apertures removed and the supplied B_Paste Gerber for all 15 underside parts. Leave J1–J6, J8 and JP101/JP201/JP301 unpopulated; leave JP2 termination bridge open. No part substitutions or added placements. Fit C1, D10 and every other BOM/CPL reference. U1 is LMR51430XDDCR; L1 is SRP7028A-8R2M (8.2 uH). X-ray U9 TPS259620DDAR's exposed ground/thermal pad on every board and provide the report; confirm D10 underside-joint inspection coverage. Confirm 35 µm copper on ALL FOUR layers, symmetric 1.6 mm stack, outer-to-inner dielectric ≤0.25 mm, Standard-PCBA panel/rails and depanelization to 52 × 70 mm. Confirm both reflow passes and bottom-side component retention, with component-compatible reflow/moisture handling, including D10 MSL 4 and C1 limits below. No firmware programming or powered functional test requested; U5 is absent. Confirm production and tracked express delivery timing to the USA before payment.
+> sugarCANe SC12 Rev H. TWO-SIDED assembly: 50 top + 79 bottom = 129 placements / 54 exact MPN types from the supplied BOM/CPL. Leave U5 (STM32F042K6T6) unpopulated and unpasted; customer hand solders it. Use the supplied F_Paste Gerber with U5 apertures removed and the supplied B_Paste Gerber for all 79 underside parts. Leave J1–J6, J8 and JP101/JP201/JP301 unpopulated; leave JP2 termination bridge open. No part substitutions or added placements. Fit C1, D10 and every other BOM/CPL reference. U1 is LMR51430XDDCR; L1 is SRP7028A-8R2M (8.2 uH). X-ray U9 TPS259620DDAR's exposed ground/thermal pad on every board and provide the report; confirm D10 underside-joint inspection coverage. Confirm 35 µm copper on ALL FOUR layers, symmetric 1.6 mm stack, outer-to-inner dielectric ≤0.25 mm, Standard-PCBA panel/rails and depanelization to 44 × 48 mm. Confirm both reflow passes and bottom-side component retention, with component-compatible reflow/moisture handling, including D10 MSL 4 and C1 limits below. No firmware programming or powered functional test requested; U5 is absent. Confirm production and tracked express delivery timing to the USA before payment.
 
 **C1 reflow limits:** Panasonic EEEFT1H470AP, profile (5): case-top peak ≤260°C; at/above 250°C ≤5 s, 230°C ≤30 s, 217°C ≤40 s and 200°C ≤70 s; at most two cycles. D10 is exact OPSCO SK6805-EC15; U8 is TPS61085DGKR; U4 is **TPS2553DBVR-1**; U9 is TPS259620DDAR. The `-1` latch-off suffix is required. Confirm the factory process and any X-ray charges in the quotation. [Process evidence](JLC_SOURCING.md#solder-process-audit) · [JLC targeted X-ray requests](https://jlcpcb.com/help/article/x-ray-inspection-report-interpretation-guide).
 
 ## 5. Review the quote and delivery before paying
 
-1. Finish the final electrical simulation review and issue the approved manufacturing package; do not pay against the current REVIEW_ONLY release.
+1. Complete factory stack/process/inspection review and issue the approved manufacturing package; do not pay against the current REVIEW_ONLY release.
 2. Verify quantities, all 54 selected types, U5/stencil omission, stack and component orientations. Files do not reserve inventory.
 3. Obtain confirmation of reflow handling, panelization and U9/D10 inspection. Review any CAM changes before acceptance.
 4. Check the **complete** price: PCB, parts, assembly/setup/stencil, panel/rails, X-ray, packing, express freight and tax/duty. Ten-board parts are about **$27.96 per board** with conservative JLC attrition and your MCU, before two optional spare MCUs and those additional charges. This is not a final assembled-board price.

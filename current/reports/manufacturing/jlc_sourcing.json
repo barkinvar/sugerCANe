@@ -320,57 +320,349 @@
   },
   "compact_layout": {
     "result": "PASS",
-    "variant": "Rev H compact prototype",
+    "variant": "Rev H half-area compact prototype",
     "baseline_commit": "1c03fd1",
     "baseline_size_mm": [
       52,
       74
     ],
     "size_mm": [
-      52,
-      70
+      44,
+      48
     ],
-    "saved_area_mm2": 208,
-    "bounding_area_reduction_percent": 5.405405405405405,
+    "saved_area_mm2": 1736,
+    "bounding_area_reduction_percent": 45.11434511434511,
     "bottom_references": [
-      "C101",
+      "C11",
+      "C12",
+      "C13",
+      "C2",
+      "C201",
+      "C3",
+      "C4",
+      "C40",
+      "C41",
+      "C5",
+      "C6",
+      "C60",
+      "C61",
+      "C62",
+      "C63",
+      "C64",
+      "C65",
+      "C66",
+      "C69",
+      "C7",
+      "C70",
+      "C71",
+      "C73",
+      "C8",
+      "D101",
+      "D2",
+      "D3",
+      "D301",
+      "D4",
+      "D5",
+      "D6",
+      "F1",
+      "L1",
+      "L2",
+      "Q1",
       "Q101",
       "Q102",
-      "Q201",
+      "Q2",
       "Q202",
+      "Q3",
       "Q301",
       "Q302",
+      "R1",
+      "R10",
+      "R101",
+      "R103",
+      "R110",
       "R111",
       "R112",
+      "R2",
+      "R209",
       "R210",
       "R211",
       "R212",
+      "R3",
+      "R30",
+      "R301",
+      "R31",
+      "R310",
       "R311",
-      "R312",
-      "R52"
+      "R4",
+      "R40",
+      "R41",
+      "R51",
+      "R60",
+      "R61",
+      "R62",
+      "R63",
+      "R66",
+      "R68",
+      "R69",
+      "R70",
+      "R73",
+      "R75",
+      "U1",
+      "U2",
+      "U4",
+      "U8",
+      "U9"
     ],
     "placement_changes": [
       {
-        "reference": "R4",
+        "reference": "U7",
         "before_mm": [
-          12.5,
-          61.0
+          35.0,
+          48.2
         ],
         "after_mm": [
-          12.5,
-          57.0
+          9.8,
+          25.0
         ],
         "side": "top"
       },
       {
-        "reference": "D301",
+        "reference": "C51",
         "before_mm": [
-          34.0,
-          66.5
+          41.0,
+          46.0
         ],
         "after_mm": [
+          15.5,
+          22.7
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "Q201",
+        "before_mm": [
+          20.0,
+          57.15
+        ],
+        "after_mm": [
+          18.4,
+          29.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "D102",
+        "before_mm": [
+          4.2,
+          54.0
+        ],
+        "after_mm": [
+          11.5,
+          33.2
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R67",
+        "before_mm": [
+          40.0,
+          32.5
+        ],
+        "after_mm": [
+          36.25,
+          13.2
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R304",
+        "before_mm": [
+          43.5,
+          46.0
+        ],
+        "after_mm": [
+          11.3,
+          16.1
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R22",
+        "before_mm": [
+          32.0,
+          3.5
+        ],
+        "after_mm": [
+          14.2,
+          12.9
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "U6",
+        "before_mm": [
+          43.5,
+          14.5
+        ],
+        "after_mm": [
+          32.2,
+          12.15
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "J1",
+        "before_mm": [
+          13.0,
+          9.0
+        ],
+        "after_mm": [
+          12.7,
+          9.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "H2",
+        "before_mm": [
+          48.5,
+          46.5
+        ],
+        "after_mm": [
+          40.5,
+          33.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R71",
+        "before_mm": [
+          38.0,
+          41.5
+        ],
+        "after_mm": [
+          38.35,
+          13.2
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "C22",
+        "before_mm": [
+          46.0,
+          29.0
+        ],
+        "after_mm": [
+          37.0,
+          25.2
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "J3",
+        "before_mm": [
+          48.5,
+          9.0
+        ],
+        "after_mm": [
+          40.9,
+          9.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "H1",
+        "before_mm": [
+          3.5,
+          4.0
+        ],
+        "after_mm": [
+          3.5,
+          4.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "C21",
+        "before_mm": [
+          33.0,
+          30.0
+        ],
+        "after_mm": [
+          24.0,
+          28.2
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "C301",
+        "before_mm": [
+          31.5,
+          33.0
+        ],
+        "after_mm": [
+          12.7,
+          20.2
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "C27",
+        "before_mm": [
+          30.5,
+          17.0
+        ],
+        "after_mm": [
+          21.9,
+          16.1
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "C25",
+        "before_mm": [
           34.0,
-          62.5
+          17.5
+        ],
+        "after_mm": [
+          25.0,
+          15.7
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "C74",
+        "before_mm": [
+          13.0,
+          17.0
+        ],
+        "after_mm": [
+          41.0,
+          22.65
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "U5",
+        "before_mm": [
+          39.5,
+          25.0
+        ],
+        "after_mm": [
+          30.5,
+          23.2
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "C1",
+        "before_mm": [
+          5.0,
+          21.0
+        ],
+        "after_mm": [
+          6.0,
+          16.1
         ],
         "side": "top"
       },
@@ -381,20 +673,68 @@
           66.5
         ],
         "after_mm": [
-          18.0,
-          62.5
+          25.1,
+          33.5
         ],
         "side": "top"
       },
       {
-        "reference": "R103",
+        "reference": "D302",
         "before_mm": [
-          49.25,
-          69.0
+          36.5,
+          53.5
         ],
         "after_mm": [
-          49.25,
-          65.0
+          30.3,
+          31.9
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R50",
+        "before_mm": [
+          44.0,
+          32.5
+        ],
+        "after_mm": [
+          2.1,
+          29.1
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "Y1",
+        "before_mm": [
+          31.0,
+          23.0
+        ],
+        "after_mm": [
+          22.0,
+          21.2
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R205",
+        "before_mm": [
+          48.0,
+          25.5
+        ],
+        "after_mm": [
+          14.4,
+          17.2
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "C24",
+        "before_mm": [
+          49.0,
+          29.0
+        ],
+        "after_mm": [
+          34.5,
+          30.3
         ],
         "side": "top"
       },
@@ -405,8 +745,20 @@
           65.0
         ],
         "after_mm": [
-          6.5,
-          61.0
+          5.5,
+          39.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "C50",
+        "before_mm": [
+          33.0,
+          54.0
+        ],
+        "after_mm": [
+          5.1,
+          31.8
         ],
         "side": "top"
       },
@@ -417,8 +769,56 @@
           65.0
         ],
         "after_mm": [
-          22.5,
-          61.0
+          18.5,
+          39.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "D10",
+        "before_mm": [
+          48.0,
+          39.5
+        ],
+        "after_mm": [
+          40.0,
+          18.5
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R303",
+        "before_mm": [
+          47.0,
+          32.0
+        ],
+        "after_mm": [
+          11.7,
+          18.1
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "C20",
+        "before_mm": [
+          37.5,
+          18.5
+        ],
+        "after_mm": [
+          28.0,
+          14.15
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "C75",
+        "before_mm": [
+          48.475,
+          35.3
+        ],
+        "after_mm": [
+          40.7,
+          13.7
         ],
         "side": "top"
       },
@@ -429,8 +829,32 @@
           60.4
         ],
         "after_mm": [
-          37.0,
-          56.4
+          31.0,
+          34.4
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R105",
+        "before_mm": [
+          41.0,
+          18.5
+        ],
+        "after_mm": [
+          3.4,
+          24.4
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "D20",
+        "before_mm": [
+          35.5,
+          13.0
+        ],
+        "after_mm": [
+          32.2,
+          6.7
         ],
         "side": "top"
       },
@@ -441,8 +865,20 @@
           65.15
         ],
         "after_mm": [
-          2.9,
-          61.15
+          15.2,
+          34.7
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R52",
+        "before_mm": [
+          48.5,
+          61.0
+        ],
+        "after_mm": [
+          3.4,
+          22.4
         ],
         "side": "top"
       },
@@ -453,20 +889,152 @@
           61.0
         ],
         "after_mm": [
-          17.0,
-          57.0
+          20.9,
+          31.9
         ],
         "side": "top"
       },
       {
-        "reference": "R209",
+        "reference": "C23",
         "before_mm": [
-          29.0,
-          61.0
+          30.5,
+          30.0
         ],
         "after_mm": [
-          29.0,
-          57.0
+          21.5,
+          28.2
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "C26",
+        "before_mm": [
+          28.0,
+          27.2
+        ],
+        "after_mm": [
+          19.0,
+          25.4
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "J2",
+        "before_mm": [
+          39.0,
+          9.0
+        ],
+        "after_mm": [
+          27.0,
+          9.0
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R72",
+        "before_mm": [
+          35.5,
+          35.5
+        ],
+        "after_mm": [
+          2.7,
+          34.5
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R21",
+        "before_mm": [
+          28.0,
+          17.0
+        ],
+        "after_mm": [
+          22.0,
+          13.4
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R312",
+        "before_mm": [
+          47.9,
+          57.45
+        ],
+        "after_mm": [
+          42.4,
+          45.9
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R65",
+        "before_mm": [
+          35.0,
+          33.0
+        ],
+        "after_mm": [
+          18.4,
+          15.9
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R20",
+        "before_mm": [
+          31.0,
+          27.0
+        ],
+        "after_mm": [
+          22.0,
+          25.2
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "J8",
+        "before_mm": [
+          18.92,
+          7.57
+        ],
+        "after_mm": [
+          16.8,
+          2.5
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "C72",
+        "before_mm": [
+          43.0,
+          38.5
+        ],
+        "after_mm": [
+          37.2,
+          28.8
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R305",
+        "before_mm": [
+          46.0,
+          25.5
+        ],
+        "after_mm": [
+          11.3,
+          14.1
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R204",
+        "before_mm": [
+          48.5,
+          51.5
+        ],
+        "after_mm": [
+          17.1,
+          17.9
         ],
         "side": "top"
       },
@@ -478,7 +1046,19 @@
         ],
         "after_mm": [
           5.0,
-          56.4
+          34.4
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "C101",
+        "before_mm": [
+          40.0,
+          54.5
+        ],
+        "after_mm": [
+          8.6,
+          31.8
         ],
         "side": "top"
       },
@@ -489,8 +1069,20 @@
           60.4
         ],
         "after_mm": [
-          21.0,
-          56.4
+          18.0,
+          34.4
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R201",
+        "before_mm": [
+          48.0,
+          54.5
+        ],
+        "after_mm": [
+          27.9,
+          34.799999
         ],
         "side": "top"
       },
@@ -501,8 +1093,8 @@
           64.5
         ],
         "after_mm": [
-          49.25,
-          60.5
+          16.2,
+          19.9
         ],
         "side": "top"
       },
@@ -513,20 +1105,44 @@
           61.0
         ],
         "after_mm": [
-          45.0,
-          57.0
+          42.1,
+          41.8
         ],
         "side": "top"
       },
       {
-        "reference": "R101",
+        "reference": "R74",
         "before_mm": [
-          18.0,
-          71.1
+          44.0,
+          35.5
         ],
         "after_mm": [
-          18.0,
-          67.1
+          2.1,
+          37.9
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "U10",
+        "before_mm": [
+          16.9,
+          17.0
+        ],
+        "after_mm": [
+          40.2,
+          25.45
+        ],
+        "side": "top"
+      },
+      {
+        "reference": "R42",
+        "before_mm": [
+          31.95,
+          7.5
+        ],
+        "after_mm": [
+          31.7,
+          3.7
         ],
         "side": "top"
       },
@@ -537,8 +1153,8 @@
           71.32
         ],
         "after_mm": [
-          34.0,
-          67.32
+          4.099999,
+          29.1
         ],
         "side": "top"
       },
@@ -549,20 +1165,128 @@
           65.0
         ],
         "after_mm": [
-          38.5,
-          61.0
+          31.5,
+          39.0
         ],
         "side": "top"
       },
       {
-        "reference": "Q201",
+        "reference": "C71",
         "before_mm": [
-          20.0,
-          57.15
+          26.5,
+          40.5
         ],
         "after_mm": [
-          20.0,
-          64.5
+          23.5,
+          32.2
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R110",
+        "before_mm": [
+          4.0,
+          51.5
+        ],
+        "after_mm": [
+          8.1,
+          36.3
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R70",
+        "before_mm": [
+          9.5,
+          40.5
+        ],
+        "after_mm": [
+          15.0,
+          42.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C40",
+        "before_mm": [
+          38.5,
+          13.5
+        ],
+        "after_mm": [
+          35.2,
+          10.8
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C5",
+        "before_mm": [
+          12.0,
+          51.7
+        ],
+        "after_mm": [
+          5.5,
+          23.9
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "F1",
+        "before_mm": [
+          5.5,
+          13.5
+        ],
+        "after_mm": [
+          11.3,
+          5.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R4",
+        "before_mm": [
+          12.5,
+          61.0
+        ],
+        "after_mm": [
+          18.2,
+          18.4
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "U2",
+        "before_mm": [
+          27.0,
+          46.5
+        ],
+        "after_mm": [
+          12.3,
+          24.3
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C11",
+        "before_mm": [
+          19.5,
+          50.0
+        ],
+        "after_mm": [
+          2.5,
+          45.8
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "D301",
+        "before_mm": [
+          34.0,
+          66.5
+        ],
+        "after_mm": [
+          41.6,
+          39.9
         ],
         "side": "bottom"
       },
@@ -573,8 +1297,44 @@
           57.45
         ],
         "after_mm": [
-          7.9,
-          64.8
+          15.5,
+          38.7
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R73",
+        "before_mm": [
+          39.5,
+          35.5
+        ],
+        "after_mm": [
+          3.1,
+          35.299999
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C63",
+        "before_mm": [
+          24.0,
+          32.0
+        ],
+        "after_mm": [
+          26.0,
+          26.0
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R51",
+        "before_mm": [
+          42.0,
+          32.5
+        ],
+        "after_mm": [
+          2.1,
+          30.0
         ],
         "side": "bottom"
       },
@@ -585,8 +1345,176 @@
           57.45
         ],
         "after_mm": [
-          31.9,
-          64.8
+          24.8,
+          43.7
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C64",
+        "before_mm": [
+          27.5,
+          32.0
+        ],
+        "after_mm": [
+          22.5,
+          26.0
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R69",
+        "before_mm": [
+          8.5,
+          37.5
+        ],
+        "after_mm": [
+          13.0,
+          42.6
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C13",
+        "before_mm": [
+          15.5,
+          51.7
+        ],
+        "after_mm": [
+          2.0,
+          23.9
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "U1",
+        "before_mm": [
+          5.5,
+          45.3
+        ],
+        "after_mm": [
+          12.0,
+          17.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "Q3",
+        "before_mm": [
+          5.0,
+          29.3
+        ],
+        "after_mm": [
+          18.5,
+          22.4
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R1",
+        "before_mm": [
+          2.0,
+          43.8
+        ],
+        "after_mm": [
+          15.5,
+          16.0
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "Q1",
+        "before_mm": [
+          19.5,
+          12.0
+        ],
+        "after_mm": [
+          29.2,
+          5.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C8",
+        "before_mm": [
+          26.5,
+          49.5
+        ],
+        "after_mm": [
+          8.6,
+          29.3
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C70",
+        "before_mm": [
+          15.5,
+          35.5
+        ],
+        "after_mm": [
+          29.7,
+          42.8
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C65",
+        "before_mm": [
+          15.5,
+          40.5
+        ],
+        "after_mm": [
+          24.2,
+          35.0
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R10",
+        "before_mm": [
+          25.0,
+          28.5
+        ],
+        "after_mm": [
+          2.5,
+          38.7
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "U4",
+        "before_mm": [
+          20.0,
+          47.0
+        ],
+        "after_mm": [
+          3.0,
+          42.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R2",
+        "before_mm": [
+          2.0,
+          47.8
+        ],
+        "after_mm": [
+          15.5,
+          20.0
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R40",
+        "before_mm": [
+          48.5,
+          21.0
+        ],
+        "after_mm": [
+          34.0,
+          7.3
         ],
         "side": "bottom"
       },
@@ -597,8 +1525,8 @@
           57.45
         ],
         "after_mm": [
-          39.9,
-          64.8
+          22.7,
+          16.1
         ],
         "side": "bottom"
       },
@@ -609,8 +1537,20 @@
           57.15
         ],
         "after_mm": [
-          44.0,
-          64.5
+          41.5,
+          45.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C6",
+        "before_mm": [
+          5.5,
+          49.3
+        ],
+        "after_mm": [
+          12.0,
+          21.5
         ],
         "side": "bottom"
       },
@@ -621,8 +1561,32 @@
           57.45
         ],
         "after_mm": [
-          15.9,
-          64.8
+          18.7,
+          36.3
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R103",
+        "before_mm": [
+          49.25,
+          69.0
+        ],
+        "after_mm": [
+          5.2,
+          31.8
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R63",
+        "before_mm": [
+          11.5,
+          24.0
+        ],
+        "after_mm": [
+          38.5,
+          18.0
         ],
         "side": "bottom"
       },
@@ -633,8 +1597,140 @@
           57.15
         ],
         "after_mm": [
-          36.0,
-          64.5
+          22.0,
+          19.8
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "D6",
+        "before_mm": [
+          11.5,
+          35.5
+        ],
+        "after_mm": [
+          27.0,
+          34.0
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "JP2",
+        "before_mm": [
+          17.1,
+          2.0
+        ],
+        "after_mm": [
+          34.4,
+          1.8
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "L2",
+        "before_mm": [
+          23.0,
+          19.0
+        ],
+        "after_mm": [
+          27.0,
+          13.0
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R41",
+        "before_mm": [
+          48.5,
+          18.0
+        ],
+        "after_mm": [
+          22.4,
+          12.7
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "U8",
+        "before_mm": [
+          17.0,
+          25.0
+        ],
+        "after_mm": [
+          33.0,
+          19.0
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "D5",
+        "before_mm": [
+          31.5,
+          38.0
+        ],
+        "after_mm": [
+          17.8,
+          31.7
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "TP1",
+        "before_mm": [
+          2.0,
+          9.5
+        ],
+        "after_mm": [
+          7.8,
+          12.6
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R75",
+        "before_mm": [
+          15.5,
+          38.25
+        ],
+        "after_mm": [
+          19.6,
+          15.7
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "L1",
+        "before_mm": [
+          13.0,
+          45.5
+        ],
+        "after_mm": [
+          4.5,
+          17.7
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "U9",
+        "before_mm": [
+          21.5,
+          38.5
+        ],
+        "after_mm": [
+          34.5,
+          42.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "Q2",
+        "before_mm": [
+          5.0,
+          35.5
+        ],
+        "after_mm": [
+          17.8,
+          42.3
         ],
         "side": "bottom"
       },
@@ -645,8 +1741,44 @@
           57.15
         ],
         "after_mm": [
-          28.0,
-          64.5
+          21.3,
+          42.3
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R3",
+        "before_mm": [
+          14.5,
+          13.0
+        ],
+        "after_mm": [
+          23.7,
+          6.7
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C41",
+        "before_mm": [
+          48.5,
+          14.0
+        ],
+        "after_mm": [
+          32.799999,
+          11.0
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "D3",
+        "before_mm": [
+          12.0,
+          13.5
+        ],
+        "after_mm": [
+          23.0,
+          4.5
         ],
         "side": "bottom"
       },
@@ -657,44 +1789,296 @@
           60.5
         ],
         "after_mm": [
-          32.0,
-          55.7
+          28.5,
+          38.7
         ],
         "side": "bottom"
       },
       {
-        "reference": "R52",
+        "reference": "R66",
         "before_mm": [
-          48.5,
+          38.0,
+          32.0
+        ],
+        "after_mm": [
+          41.7,
+          20.1
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C3",
+        "before_mm": [
+          5.5,
+          42.5
+        ],
+        "after_mm": [
+          12.0,
+          14.7
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C62",
+        "before_mm": [
+          15.5,
+          30.5
+        ],
+        "after_mm": [
+          32.375,
+          31.25
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R310",
+        "before_mm": [
+          43.0,
+          53.5
+        ],
+        "after_mm": [
+          38.2,
+          26.2
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C201",
+        "before_mm": [
+          42.0,
+          51.0
+        ],
+        "after_mm": [
+          15.4,
+          26.2
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C60",
+        "before_mm": [
+          24.0,
+          24.5
+        ],
+        "after_mm": [
+          26.0,
+          18.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "D101",
+        "before_mm": [
+          26.5,
+          52.5
+        ],
+        "after_mm": [
+          13.4,
+          35.9
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C12",
+        "before_mm": [
+          20.0,
+          52.5
+        ],
+        "after_mm": [
+          8.5,
+          42.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C66",
+        "before_mm": [
+          17.0,
+          20.5
+        ],
+        "after_mm": [
+          33.0,
+          14.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R30",
+        "before_mm": [
+          20.8,
+          2.4
+        ],
+        "after_mm": [
+          40.4,
+          14.1
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R301",
+        "before_mm": [
+          45.5,
+          51.0
+        ],
+        "after_mm": [
+          35.2,
+          36.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C61",
+        "before_mm": [
+          21.5,
+          25.0
+        ],
+        "after_mm": [
+          28.5,
+          19.0
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R31",
+        "before_mm": [
+          26.0,
+          2.4
+        ],
+        "after_mm": [
+          38.2,
+          11.9
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R209",
+        "before_mm": [
+          29.0,
           61.0
         ],
         "after_mm": [
-          48.5,
-          57.0
+          25.3,
+          41.5
         ],
         "side": "bottom"
       },
       {
-        "reference": "R312",
+        "reference": "C73",
         "before_mm": [
-          47.9,
-          57.45
+          39.5,
+          38.5
         ],
         "after_mm": [
-          47.9,
-          64.8
+          28.325,
+          29.5
         ],
         "side": "bottom"
       },
       {
-        "reference": "C101",
+        "reference": "C69",
         "before_mm": [
-          40.0,
-          54.5
+          14.5,
+          28.0
         ],
         "after_mm": [
-          43.0,
-          55.5
+          35.5,
+          22.0
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R60",
+        "before_mm": [
+          11.5,
+          27.0
+        ],
+        "after_mm": [
+          38.5,
+          21.0
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R61",
+        "before_mm": [
+          9.5,
+          30.0
+        ],
+        "after_mm": [
+          40.5,
+          24.0
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "D2",
+        "before_mm": [
+          27.0,
+          12.5
+        ],
+        "after_mm": [
+          39.0,
+          5.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C7",
+        "before_mm": [
+          23.5,
+          46.5
+        ],
+        "after_mm": [
+          17.5,
+          15.5
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R62",
+        "before_mm": [
+          27.5,
+          37.5
+        ],
+        "after_mm": [
+          28.5,
+          45.6
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C4",
+        "before_mm": [
+          8.5,
+          51.7
+        ],
+        "after_mm": [
+          9.0,
+          23.9
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R68",
+        "before_mm": [
+          8.5,
+          34.0
+        ],
+        "after_mm": [
+          15.5,
+          45.3
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "R101",
+        "before_mm": [
+          18.0,
+          71.1
+        ],
+        "after_mm": [
+          7.9,
+          32.1
         ],
         "side": "bottom"
       },
@@ -705,8 +2089,20 @@
           57.15
         ],
         "after_mm": [
-          12.0,
-          64.5
+          18.5,
+          26.2
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "C2",
+        "before_mm": [
+          5.0,
+          39.5
+        ],
+        "after_mm": [
+          12.5,
+          11.7
         ],
         "side": "bottom"
       },
@@ -717,8 +2113,20 @@
           57.15
         ],
         "after_mm": [
-          4.0,
-          64.5
+          12.1,
+          31.4
+        ],
+        "side": "bottom"
+      },
+      {
+        "reference": "D4",
+        "before_mm": [
+          21.0,
+          30.5
+        ],
+        "after_mm": [
+          29.0,
+          24.5
         ],
         "side": "bottom"
       },
@@ -729,8 +2137,8 @@
           57.45
         ],
         "after_mm": [
-          23.9,
-          64.8
+          36.2,
+          29.4
         ],
         "side": "bottom"
       }
@@ -739,7 +2147,6 @@
       "hardware/design/circuit.json": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
       "hardware/design/circuit.py": "5fd0e887ce7c06aca3b1828dd4c8b47f5d09f22404f4ac228c516dd693d3243b",
       "firmware/src/power.c": "0e26e751b00961e6d86043e7a28429c86fb9178d3e0023c77d5db8a39b1a5b2b",
-      "hardware/FRC_Sensor_CAN.kicad_pro": "bc605bc1de9321ebce59bd9cd42a013de901d69073d204e90783d38577749f91",
       "hardware/FRC_Sensor_CAN.kicad_dru": "421c76f90b944480db7977505b21af2907ea1699c15898f66b6e1bfccc97c56d",
       "hardware/FRC_Sensor_CAN.kicad_sch": "d536746e8aea9ca88743493b2bd7c7d42fa3786f5bd90ebce42ce876038cdf36",
       "hardware/can.kicad_sch": "731ce88665c283b6e6c71f94d28fcf3137dfc1af43014fe3c6a016ce82000322",
@@ -752,29 +2159,72 @@
       "hardware/regulated_12v.kicad_sch": "bbec6fc9fb0604f0b3146ce5eb492a9980056257876507a704de8685270d9f36",
       "hardware/sensor_power.kicad_sch": "f7808b7fc9a76a190dd9a59c856ae6c4f504e92caea8deb139067b307e0af3ce"
     },
+    "fabrication_rule_changes": {
+      "min_through_hole_diameter": {
+        "baseline_mm": 0.3,
+        "value_mm": 0.2,
+        "reason": "Use 0.50 mm copper / 0.20 mm drilled through vias for dense low-current routing, retaining at least 0.15 mm annulus. Copper clearances, hole separation, power copper and critical converter/clock routes remain independently checked.",
+        "manufacturer_capability": "https://jlcpcb.com/capabilities/Capabilities"
+      }
+    },
+    "minimum_via_annulus_mm": 0.15,
+    "project_sha256": "75af8bc8025b51a9eb8aadb84dd345280d4d4dac023baa555db7fbec5a66cff4",
     "preserved_critical_nets": [
-      "BOOST_12V",
       "BOOST_COMP",
       "BOOST_COMP_RC",
       "BOOST_FB",
+      "BOOST_SS",
       "BOOST_SW",
       "BUCK_CB",
       "BUCK_FB",
       "BUCK_SW",
       "HSE_IN",
       "HSE_OUT",
-      "HSE_XTAL_OUT",
-      "V5_INTERNAL",
-      "VIN_FUSED",
-      "VIN_PROT",
-      "VIN_RAW"
+      "HSE_XTAL_OUT"
     ],
-    "preserved_critical_tracks_and_vias": 248,
-    "board_sha256": "102fc9d9801b6628781927c5ed5e05a98d0c7c0c52214b0afe3950f8ac40370c",
-    "limitations": "Checks nominal layout/electrical identity. Native DRC, routing style, independent exported copper checks and physical qualification are separate."
+    "preserved_critical_tracks_and_vias": 54,
+    "critical_route_transforms": [
+      {
+        "nets": [
+          "BUCK_SW",
+          "BUCK_CB",
+          "BUCK_FB"
+        ],
+        "x_scale": -1,
+        "x_offset_mm": 17.5,
+        "y_offset_mm": -27.8,
+        "side": "bottom"
+      },
+      {
+        "nets": [
+          "BOOST_SW",
+          "BOOST_FB",
+          "BOOST_COMP",
+          "BOOST_COMP_RC",
+          "BOOST_SS"
+        ],
+        "x_scale": -1,
+        "x_offset_mm": 50,
+        "y_offset_mm": -6,
+        "side": "bottom"
+      },
+      {
+        "nets": [
+          "HSE_IN",
+          "HSE_OUT",
+          "HSE_XTAL_OUT"
+        ],
+        "x_scale": 1,
+        "x_offset_mm": -9,
+        "y_offset_mm": -1.8,
+        "side": "top"
+      }
+    ],
+    "board_sha256": "5e43a87482b98fb8de0b105626381735209c22386c14bbe29e93f3bb7c3696dc",
+    "limitations": "Checks nominal layout/electrical identity and rigidly transformed critical copper. Supply interconnects are rerouted and independently DC-screened. Native DRC, routing style, exported copper checks and physical qualification remain separate."
   },
-  "factory_top_placements": 114,
-  "factory_bottom_placements": 15,
+  "factory_top_placements": 50,
+  "factory_bottom_placements": 79,
   "buck_margin_review": {
     "baseline_commit": "7047295",
     "board_sha256": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
@@ -1494,7 +2944,7 @@
     ],
     "external_supplier_status": "The six manual-purchase types were checked separately on DigiKey/LCSC product pages on 2026-09-10 UTC; current observations are in catalog_china.json. Stock and delivery are not allocated."
   },
-  "order_decision": "HOLD: final simulation review and factory stack/process quotation pending. U5 is user-sourced from DigiKey; no factory MCU procurement required.",
+  "order_decision": "HOLD: factory stack/process quotation and qualification pending; see release checks for separate electrical evidence. U5 is user-sourced from DigiKey; no factory MCU procurement required.",
   "limitations": "Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.",
   "input_hashes": {
     "bom/assembly_plan.json": "3ddff6cab3d7df84938cd10b9cc9549515d288c65915f7252b9b6a726b85b627",
@@ -1502,14 +2952,14 @@
     "bom/catalog_china.json": "3cb57c828b0e136939f46a2980a53b9117f78b965ad60712e424dc3599c3ddf7",
     "bom/Factory_BOM.csv": "62a8c5ad0676564739a59d418e2586b3ad565db2b95ed4ec6a06a276838ae2ee",
     "bom/BOM_JLCPCB.csv": "65d87b4314cb78a52060040566e124783331d796e4b4def95172a4edeb509ad4",
-    "output/assembly/CPL_JLCPCB.csv": "a0fcbc512fc1d86b6bccb6af2098f2331f22fffe10efa6814e670f66e3b2e2bf",
+    "output/assembly/CPL_JLCPCB.csv": "542da3cf1f5e684c6d71b1dcf05a518cb22b74ac9ae09e722e1a39a8745ef1d6",
     "hardware/design/circuit.json": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "102fc9d9801b6628781927c5ed5e05a98d0c7c0c52214b0afe3950f8ac40370c",
-    "scripts/check_jlc_sourcing.py": "917f4d03a356645a208abc173292a44350d201451a71ee860e0c96ebe6e8b9ee",
-    "hardware/design/layout_contract.json": "7937c3c262e16533ec1bbdf2bef60005d9fcdae744384866a2a462aed6efc483",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "5e43a87482b98fb8de0b105626381735209c22386c14bbe29e93f3bb7c3696dc",
+    "scripts/check_jlc_sourcing.py": "921834560aeaafc96faabed5180a66401f749eca6582ae7990cc40190fdfdbe0",
+    "hardware/design/layout_contract.json": "d136743e80b48d2a17108d35ee42f73a0af821d2faf8bbf3e622fa64cde03135",
     "scripts/layout_contract.py": "9598a57eebaece0e23c6472cbd3b3d61b3fe85ebb4e8065455d84972ea526596",
-    "scripts/check_compact_layout.py": "e0a26799a7a644ff1486dca675a8edf26751ea2dfc4c2e9c3bf851c93cf04965",
-    "reports/compact/layout_verification.json": "699b8a32e1394bd730dd3ea7c79c244f0e460f94c87c7bf779cd578dc7f2805e",
+    "scripts/check_compact_layout.py": "4bd376e251131e1b00bdab7cc49ba81379d69e3205a76eca25a053f8341fa505",
+    "reports/compact/layout_verification.json": "ad1312a424f56e553615a525875c7f45e192a41ada16cd88ebd99535f8cbff36",
     "sources/datasheets/yageo_np0.pdf": "495287fc811dc714366f2edd3bc974d98d2d80133266a0a73bb01ac01237e3eb",
     "sources/datasheets/uniroyal_thick_film.pdf": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
     "sources/datasheets/panasonic_fk.pdf": "b36857d089adaddf3042b33bf11d0f7d83bf70734e983f33b7827152e11854e3",

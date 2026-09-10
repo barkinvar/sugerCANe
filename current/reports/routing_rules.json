@@ -1,7 +1,7 @@
 {
   "result": "PASS",
-  "segments": 1676,
-  "vias": 223,
+  "segments": 1302,
+  "vias": 245,
   "rules": {
     "direction_tolerance_mm": 2e-05,
     "minimum_free_segment_mm": 0.1,
@@ -14,253 +14,248 @@
     ],
     "explicit_free_junction_endpoints": true
   },
-  "free_branch_junctions": 36,
+  "free_branch_junctions": 10,
   "endpoint_gate_enforced": true,
-  "filled_zone_entries": 13,
-  "short_contact_segments": 49,
+  "filled_zone_entries": 5,
+  "short_contact_segments": 21,
   "findings": {},
   "width_audit": {
     "policy_enforced": true,
     "routed_nets": 77,
-    "segments_checked": 1676,
+    "segments_checked": 1302,
     "nets": [
       {
         "net": "+3V3",
         "widths": [
           {
-            "width_mm": 0.18,
-            "segments": 5,
-            "length_mm": 6.061295090390225
-          },
-          {
             "width_mm": 0.25,
-            "segments": 122,
-            "length_mm": 230.97237244893907
+            "segments": 120,
+            "length_mm": 199.62049982599845
           }
         ],
-        "reason": "0.25 mm distribution; 0.18 mm J8 sense/reference branch clears J8.7 ground pad on In2.Cu. Widening its existing path to 0.25 mm leaves only 0.180 mm clearance."
+        "reason": "Uniform 0.25 mm logic supply and reference distribution."
       },
       {
         "net": "ADC12_DIV",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 2,
-            "length_mm": 2.123743686707644
+            "width_mm": 0.18,
+            "segments": 25,
+            "length_mm": 40.03856595777918
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "ADC5_DIV",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 1,
-            "length_mm": 2.174999999999997
+            "width_mm": 0.18,
+            "segments": 2,
+            "length_mm": 3.1004098895127736
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "ADC_12V",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 10,
-            "length_mm": 15.112838927887879
+            "width_mm": 0.18,
+            "segments": 17,
+            "length_mm": 26.897848087518344
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "ADC_5V",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 19,
-            "length_mm": 38.24163519406258
+            "width_mm": 0.18,
+            "segments": 34,
+            "length_mm": 69.58999184178602
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_DOWN1",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 19,
-            "length_mm": 65.98076639987374
+            "width_mm": 0.18,
+            "segments": 38,
+            "length_mm": 56.67382559054063
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_DOWN2",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 15,
-            "length_mm": 56.854850030990434
+            "width_mm": 0.18,
+            "segments": 26,
+            "length_mm": 89.16173793211419
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_DOWN3",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 142,
-            "length_mm": 68.20042074112845
+            "width_mm": 0.18,
+            "segments": 17,
+            "length_mm": 47.970172167326
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_PORT1",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 2,
-            "length_mm": 3.7980339059327375
+            "width_mm": 0.18,
+            "segments": 4,
+            "length_mm": 6.52066373185712
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_PORT2",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 6,
-            "length_mm": 17.147170467384015
+            "width_mm": 0.18,
+            "segments": 8,
+            "length_mm": 14.974054513065424
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_PORT3",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 4,
-            "length_mm": 7.177363133980162
+            "width_mm": 0.18,
+            "segments": 5,
+            "length_mm": 8.634924240491747
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_SINK1",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 9,
-            "length_mm": 13.762866404356556
+            "width_mm": 0.18,
+            "segments": 8,
+            "length_mm": 9.503546354466188
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_SINK2",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 4,
-            "length_mm": 9.767699201912311
+            "width_mm": 0.18,
+            "segments": 1,
+            "length_mm": 2.3999999999999986
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_SINK3",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 4,
-            "length_mm": 6.754073772597556
+            "width_mm": 0.18,
+            "segments": 3,
+            "length_mm": 5.8233672944852986
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_SOURCE1",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 6,
-            "length_mm": 11.877159744662329
+            "width_mm": 0.18,
+            "segments": 2,
+            "length_mm": 3.0186281374238595
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_SOURCE2",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 5,
-            "length_mm": 7.121746887847443
+            "width_mm": 0.18,
+            "segments": 1,
+            "length_mm": 4.101219330881976
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_SOURCE3",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 4,
-            "length_mm": 10.855801814656957
+            "width_mm": 0.18,
+            "segments": 11,
+            "length_mm": 21.236664512810332
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_UP1_N",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 17,
-            "length_mm": 65.40549053683827
+            "width_mm": 0.18,
+            "segments": 26,
+            "length_mm": 59.38819949861989
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_UP2_N",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 55,
-            "length_mm": 69.23682611644634
+            "width_mm": 0.18,
+            "segments": 15,
+            "length_mm": 22.559222099080998
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BIAS_UP3_N",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 15,
-            "length_mm": 45.12118798530748
+            "width_mm": 0.18,
+            "segments": 28,
+            "length_mm": 60.55077988599934
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "BOOST_12V",
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 6,
-            "length_mm": 12.51951539550523
+            "segments": 11,
+            "length_mm": 27.01848151335352
           },
           {
             "width_mm": 0.8,
-            "segments": 25,
-            "length_mm": 43.16138358223248
+            "segments": 23,
+            "length_mm": 24.550540230962284
           }
         ],
         "reason": "0.8 mm reservoir/eFuse power path; 0.25 mm feedback, inhibit and enable-resistor branches (R60, R68, R70)."
@@ -271,7 +266,7 @@
           {
             "width_mm": 0.2,
             "segments": 2,
-            "length_mm": 2.4853553390593257
+            "length_mm": 2.4853553390593284
           }
         ],
         "reason": "Uniform short, low-current converter compensation route."
@@ -304,7 +299,7 @@
           {
             "width_mm": 0.2,
             "segments": 7,
-            "length_mm": 14.630839635996978
+            "length_mm": 14.630839635996972
           }
         ],
         "reason": "Uniform low-current converter soft-start route."
@@ -320,7 +315,7 @@
           {
             "width_mm": 0.5,
             "segments": 5,
-            "length_mm": 11.505687219636734
+            "length_mm": 11.505687219636728
           }
         ],
         "reason": "0.3 mm approach from U8.5 to the 0.5 mm inductor/diode path. A 0.5 mm approach would leave only 0.150 mm to U8.6; required track-to-pad clearance is 0.2 mm."
@@ -330,8 +325,8 @@
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 9,
-            "length_mm": 21.24880607624729
+            "segments": 18,
+            "length_mm": 23.294229299397255
           }
         ],
         "reason": "Uniform MCU/service route through the dense programming area."
@@ -342,10 +337,10 @@
           {
             "width_mm": 0.25,
             "segments": 2,
-            "length_mm": 3.1276650429449524
+            "length_mm": 3.127665042944956
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Preserved local buck bootstrap copper width."
       },
       {
         "net": "BUCK_FB",
@@ -353,7 +348,7 @@
           {
             "width_mm": 0.2,
             "segments": 3,
-            "length_mm": 4.687652416360249
+            "length_mm": 4.687652416360245
           }
         ],
         "reason": "Uniform short, low-current buck feedback route."
@@ -364,7 +359,7 @@
           {
             "width_mm": 0.4,
             "segments": 7,
-            "length_mm": 8.233084412271577
+            "length_mm": 8.233084412271571
           }
         ],
         "reason": "Uniform 0.4 mm local buck switching route after unnecessary narrowing was removed."
@@ -374,155 +369,150 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 15,
-            "length_mm": 45.413939607318234
+            "segments": 13,
+            "length_mm": 33.363400146692726
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Preserved 0.25 mm CAN bus width."
       },
       {
         "net": "CANL",
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 15,
-            "length_mm": 55.70256573214122
+            "segments": 12,
+            "length_mm": 37.633795145119905
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Preserved 0.25 mm CAN bus width."
       },
       {
         "net": "CAN_RX",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 7,
-            "length_mm": 11.849289983893135
+            "width_mm": 0.18,
+            "segments": 13,
+            "length_mm": 10.087664233185416
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "CAN_STB",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 23,
-            "length_mm": 43.34756135604878
+            "width_mm": 0.18,
+            "segments": 28,
+            "length_mm": 38.91906241331475
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "CAN_TERM",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 6,
-            "length_mm": 22.672601393151595
+            "width_mm": 0.18,
+            "segments": 3,
+            "length_mm": 3.259220239846772
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "CAN_TX",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 11,
-            "length_mm": 21.497964908698187
+            "width_mm": 0.18,
+            "segments": 25,
+            "length_mm": 29.38043468794256
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "EFUSE_EN",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 14,
-            "length_mm": 22.275256044179873
+            "width_mm": 0.18,
+            "segments": 17,
+            "length_mm": 29.04522209265653
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "EFUSE_ILM",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 2,
-            "length_mm": 2.7636879502661786
+            "width_mm": 0.18,
+            "segments": 6,
+            "length_mm": 14.457286740701194
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "EFUSE_INHIBIT",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 11,
-            "length_mm": 18.625624691163807
+            "width_mm": 0.18,
+            "segments": 16,
+            "length_mm": 31.41909009987151
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "EFUSE_SS",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 4,
-            "length_mm": 4.328321801829986
+            "width_mm": 0.18,
+            "segments": 1,
+            "length_mm": 0.7899999999999991
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "FAULT_12V_N",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 12,
-            "length_mm": 18.833434265926844
+            "width_mm": 0.18,
+            "segments": 14,
+            "length_mm": 25.05596824003958
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "FAULT_5V_N",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 12,
-            "length_mm": 38.51366903480386
+            "width_mm": 0.18,
+            "segments": 28,
+            "length_mm": 41.61234995252469
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "GND",
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 231,
-            "length_mm": 403.0344664656329
+            "segments": 31,
+            "length_mm": 18.38317630804115
           },
           {
             "width_mm": 0.3,
-            "segments": 4,
-            "length_mm": 4.882259197546792
+            "segments": 8,
+            "length_mm": 5.828427124746191
           },
           {
             "width_mm": 0.4,
-            "segments": 9,
-            "length_mm": 9.253211575462402
-          },
-          {
-            "width_mm": 0.5,
             "segments": 6,
-            "length_mm": 5.3999999999999915
+            "length_mm": 7.945889244992067
           }
         ],
         "reason": "Ground pours carry distributed return current; local signal returns use 0.25 mm, converter return paths use 0.3-0.5 mm. Remaining shared-endpoint changes are within contact copper."
@@ -533,7 +523,7 @@
           {
             "width_mm": 0.2,
             "segments": 4,
-            "length_mm": 6.5862698372208115
+            "length_mm": 6.58626983722081
           }
         ],
         "reason": "Uniform short crystal input route."
@@ -544,7 +534,7 @@
           {
             "width_mm": 0.18,
             "segments": 5,
-            "length_mm": 5.1480339059327385
+            "length_mm": 5.148033905932735
           }
         ],
         "reason": "Uniform short crystal output pin escape."
@@ -564,42 +554,42 @@
         "net": "INPUT1",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 94,
-            "length_mm": 99.34156393549932
+            "width_mm": 0.18,
+            "segments": 23,
+            "length_mm": 37.67885668162806
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "INPUT2",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 26,
-            "length_mm": 70.38275152535617
+            "width_mm": 0.18,
+            "segments": 28,
+            "length_mm": 39.6715844879688
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "INPUT3",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 29,
-            "length_mm": 72.57140424226253
+            "width_mm": 0.18,
+            "segments": 17,
+            "length_mm": 42.742158141245795
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "NRST",
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 13,
-            "length_mm": 28.171620100137346
+            "segments": 25,
+            "length_mm": 28.88468966077247
           }
         ],
         "reason": "Uniform MCU/service route through the dense programming area."
@@ -608,189 +598,174 @@
         "net": "POWER_12V_EN",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 27,
-            "length_mm": 70.08787635329506
+            "width_mm": 0.18,
+            "segments": 11,
+            "length_mm": 17.74520326403146
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "POWER_5V_EN",
         "widths": [
           {
-            "width_mm": 0.25,
+            "width_mm": 0.18,
             "segments": 25,
-            "length_mm": 51.19575172945852
+            "length_mm": 88.4709822844923
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "REF_LOGIC",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 22,
-            "length_mm": 30.087219018660726
+            "width_mm": 0.18,
+            "segments": 15,
+            "length_mm": 20.264205181454432
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "REV_GATE",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 7,
-            "length_mm": 9.26717926011483
+            "width_mm": 0.18,
+            "segments": 3,
+            "length_mm": 4.448090031047056
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "SENSE1",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 18,
-            "length_mm": 57.964184081726295
+            "width_mm": 0.18,
+            "segments": 12,
+            "length_mm": 18.23809255115666
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "SENSE2",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 18,
-            "length_mm": 32.527508729214944
+            "width_mm": 0.18,
+            "segments": 55,
+            "length_mm": 80.06513940334455
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "SENSE3",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 26,
-            "length_mm": 67.6523450708435
+            "width_mm": 0.18,
+            "segments": 41,
+            "length_mm": 78.9113558351797
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "SENSOR_12V",
         "widths": [
           {
             "width_mm": 0.5,
-            "segments": 57,
-            "length_mm": 65.88757181964866
+            "segments": 26,
+            "length_mm": 52.43208511739212
           }
         ],
-        "reason": "Uniform protected sensor-power distribution; 300 mA routed-copper drop checked separately."
+        "reason": "Uniform 0.5 mm protected 12 V distribution, with full output copper drop checked at 300 mA."
       },
       {
         "net": "SENSOR_5V",
         "widths": [
           {
-            "width_mm": 0.35,
-            "segments": 10,
-            "length_mm": 20.349190103891175
-          },
-          {
             "width_mm": 0.5,
-            "segments": 31,
-            "length_mm": 59.206227690955856
+            "segments": 11,
+            "length_mm": 34.732590180780434
           }
         ],
-        "reason": "0.5 mm main distribution; 0.35 mm sections clear C4/C5/C13 and neighboring ground tracks. Widening constrained sections on their existing paths would reduce clearance to about 0.15 mm. Full 300 mA output-path drop is independently checked."
+        "reason": "Uniform 0.5 mm protected 5 V distribution, including the revised U4 output escape. Full output copper drop is checked at 300 mA."
       },
       {
         "net": "SIG1",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 24,
-            "length_mm": 60.566930645449574
+            "width_mm": 0.18,
+            "segments": 9,
+            "length_mm": 23.88751320619044
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "SIG2",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 17,
-            "length_mm": 53.646586825424436
+            "width_mm": 0.18,
+            "segments": 5,
+            "length_mm": 16.706000000000003
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "SIG3",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 18,
-            "length_mm": 48.244975506320046
+            "width_mm": 0.18,
+            "segments": 19,
+            "length_mm": 30.292100969221877
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "STATUS_5V_DATA",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 7,
-            "length_mm": 15.995978821322536
+            "width_mm": 0.18,
+            "segments": 4,
+            "length_mm": 14.899275309870411
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "STATUS_DATA",
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 5,
-            "length_mm": 18.670027047856912
-          },
-          {
-            "width_mm": 0.25,
-            "segments": 19,
-            "length_mm": 26.09823862331931
+            "segments": 23,
+            "length_mm": 32.211195341850846
           }
         ],
-        "reason": "0.25 mm top routes; uniform 0.18 mm bottom run clears BOOT0/SWDIO. A 0.25 mm bottom run would leave about 0.175 mm clearance."
+        "reason": "Uniform 0.18 mm low-current status data connection."
       },
       {
         "net": "STATUS_DIN",
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 7,
-            "length_mm": 42.04622471494445
-          },
-          {
-            "width_mm": 0.25,
-            "segments": 10,
-            "length_mm": 11.520521279348031
+            "segments": 4,
+            "length_mm": 4.054228940871779
           }
         ],
-        "reason": "0.25 mm top routes; 0.18 mm inner route passes through dense signal-via/track clearances. Widening the existing inner run would leave 0.168-0.190 mm clearance."
+        "reason": "Uniform 0.18 mm low-current status data connection."
       },
       {
         "net": "SWCLK",
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 15,
-            "length_mm": 38.63542631531821
+            "segments": 17,
+            "length_mm": 44.72541324461241
           }
         ],
         "reason": "Uniform MCU/service route through the dense programming area."
@@ -800,8 +775,8 @@
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 12,
-            "length_mm": 27.387263684265523
+            "segments": 25,
+            "length_mm": 59.14665581351203
           }
         ],
         "reason": "Uniform MCU/service route through the dense programming area."
@@ -811,8 +786,8 @@
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 15,
-            "length_mm": 34.81808733706143
+            "segments": 30,
+            "length_mm": 54.545005384062826
           }
         ],
         "reason": "Uniform MCU/service route through the dense programming area."
@@ -822,8 +797,8 @@
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 11,
-            "length_mm": 30.848554441896866
+            "segments": 19,
+            "length_mm": 41.196908345206204
           }
         ],
         "reason": "Uniform MCU/service route through the dense programming area."
@@ -832,51 +807,36 @@
         "net": "V5_ILIM",
         "widths": [
           {
-            "width_mm": 0.25,
-            "segments": 15,
-            "length_mm": 22.845141046056778
+            "width_mm": 0.18,
+            "segments": 5,
+            "length_mm": 7.821706829397078
           }
         ],
-        "reason": "Uniform 0.25 mm signal or local low-current route."
+        "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
       },
       {
         "net": "V5_INTERNAL",
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 5,
-            "length_mm": 4.954531021678295
-          },
-          {
-            "width_mm": 0.3,
-            "segments": 20,
-            "length_mm": 47.2530266634105
-          },
-          {
-            "width_mm": 0.48,
-            "segments": 2,
-            "length_mm": 0.8146775680068068
+            "segments": 10,
+            "length_mm": 13.215585309615324
           },
           {
             "width_mm": 0.8,
-            "segments": 60,
-            "length_mm": 112.27594433689339
-          },
-          {
-            "width_mm": 0.9895,
-            "segments": 1,
-            "length_mm": 7.0823
+            "segments": 59,
+            "length_mm": 93.75888413867625
           }
         ],
-        "reason": "0.8 mm power distribution; one 0.9895 mm bottom section preserves the consolidated parallel-route copper. A 0.81 mm-long 0.48 mm neck clears adjacent ground; 0.25/0.3 mm branches feed U8 control pins and the LED/level shifter. Full buck-to-boost current/drop is independently checked."
+        "reason": "0.8 mm power distribution; 0.25/0.3 mm local control and bypass branches. Full buck-to-boost current/drop is independently checked. Historical 0.48/0.9895 mm widths remain recognized; the width inventory reports actual use."
       },
       {
         "net": "VIN_FUSED",
         "widths": [
           {
             "width_mm": 0.7,
-            "segments": 8,
-            "length_mm": 19.46927777466002
+            "segments": 13,
+            "length_mm": 28.705739520663062
           }
         ],
         "reason": "Uniform widened input-power route; nominal 2 A copper-only drop screened with finite via resistance. Adjacent pads constrain further widening."
@@ -887,17 +847,12 @@
           {
             "width_mm": 0.25,
             "segments": 8,
-            "length_mm": 27.78669010389117
-          },
-          {
-            "width_mm": 0.5,
-            "segments": 21,
-            "length_mm": 39.31435690052809
+            "length_mm": 14.878174593052027
           },
           {
             "width_mm": 0.8,
-            "segments": 13,
-            "length_mm": 22.717793103479533
+            "segments": 27,
+            "length_mm": 45.776150596163866
           }
         ],
         "reason": "0.5 mm protected input trunk expands to 0.8 mm at the local buck input bypass; separate 0.25 mm branch feeds the high-impedance U1.5 enable input."
@@ -907,8 +862,8 @@
         "widths": [
           {
             "width_mm": 0.7,
-            "segments": 6,
-            "length_mm": 18.818961030678928
+            "segments": 4,
+            "length_mm": 4.869848480983499
           }
         ],
         "reason": "Uniform widened input-power route; nominal 2 A copper-only drop screened with finite via resistance. Adjacent pads constrain further widening."
@@ -918,8 +873,8 @@
         "widths": [
           {
             "width_mm": 0.5,
-            "segments": 4,
-            "length_mm": 11.80710678118655
+            "segments": 3,
+            "length_mm": 8.327817459305198
           }
         ],
         "reason": "Uniform selector-to-sensor power route."
@@ -929,8 +884,8 @@
         "widths": [
           {
             "width_mm": 0.5,
-            "segments": 4,
-            "length_mm": 11.80710678118655
+            "segments": 5,
+            "length_mm": 8.265685424949236
           }
         ],
         "reason": "Uniform selector-to-sensor power route."
@@ -940,8 +895,8 @@
         "widths": [
           {
             "width_mm": 0.5,
-            "segments": 4,
-            "length_mm": 11.80710678118655
+            "segments": 3,
+            "length_mm": 8.124263361605738
           }
         ],
         "reason": "Uniform selector-to-sensor power route."
@@ -949,175 +904,11 @@
     ],
     "transitions": [
       {
-        "net": "+3V3",
-        "layer": 6,
-        "at_mm": [
-          27.15,
-          9.025
-        ],
-        "widths_mm": [
-          0.18,
-          0.25
-        ],
-        "tracks": [
-          "52127de1-d27b-4545-8a16-71e8e709cef9",
-          "cff5b6eb-412d-4925-bfed-af2da5ff03af"
-        ],
-        "at_contact": false,
-        "reason": "End of the 0.18 mm J8 reference branch, after clearing the J8.7 ground pad."
-      },
-      {
-        "net": "BOOST_12V",
-        "layer": 0,
-        "at_mm": [
-          11.5,
-          37.5
-        ],
-        "widths_mm": [
-          0.25,
-          0.8
-        ],
-        "tracks": [
-          "bdda956c-540e-4036-b9da-a8e50b8a52b3",
-          "f53f8832-0b74-4816-846b-73debfee0f92",
-          "ffae83f7-97cf-4c05-b2ae-453a0145f7f6"
-        ],
-        "at_contact": true,
-        "reason": "Pad/via contact between separately sized branches."
-      },
-      {
-        "net": "BOOST_12V",
-        "layer": 0,
-        "at_mm": [
-          13.5764,
-          34.05
-        ],
-        "widths_mm": [
-          0.25,
-          0.8
-        ],
-        "tracks": [
-          "23b2e8e3-2c45-4834-a86b-8766a332d5d5",
-          "6e5109d9-3189-4a38-9170-5cb23e3b4bb2",
-          "8f6d782d-fe09-4112-9dc0-61f90219b25f"
-        ],
-        "at_contact": false,
-        "reason": "Low-current 0.25 mm R70 inhibit-resistor branch leaves the 0.8 mm reservoir/eFuse supply."
-      },
-      {
-        "net": "BOOST_12V",
-        "layer": 0,
-        "at_mm": [
-          16.45,
-          40.5
-        ],
-        "widths_mm": [
-          0.25,
-          0.8
-        ],
-        "tracks": [
-          "29fdf892-e335-47ee-b726-5c049e54e991",
-          "8352b43c-3e07-41d3-88e1-785975432432"
-        ],
-        "at_contact": true,
-        "reason": "Pad/via contact between separately sized branches."
-      },
-      {
-        "net": "GND",
-        "layer": 0,
-        "at_mm": [
-          6.6375,
-          46.25
-        ],
-        "widths_mm": [
-          0.25,
-          0.4
-        ],
-        "tracks": [
-          "2d650d1f-c451-46b3-8c6a-5de2c99d952b",
-          "9b75098e-b1fc-4cb6-98d2-d31af75e9bfd"
-        ],
-        "at_contact": true,
-        "reason": "Pad/via contact between separately sized branches."
-      },
-      {
-        "net": "GND",
-        "layer": 0,
-        "at_mm": [
-          14.025,
-          30.5
-        ],
-        "widths_mm": [
-          0.25,
-          0.3
-        ],
-        "tracks": [
-          "7a9335e3-60c3-4648-ac56-9669a56ae866",
-          "a0070529-42a0-4387-9c90-eca03298c408"
-        ],
-        "at_contact": true,
-        "reason": "Pad/via contact between separately sized branches."
-      },
-      {
         "net": "V5_INTERNAL",
-        "layer": 0,
+        "layer": 2,
         "at_mm": [
-          9.2753,
-          52.0585
-        ],
-        "widths_mm": [
-          0.48,
-          0.8
-        ],
-        "tracks": [
-          "230753a3-9de6-4130-a8a0-2f102665dc7a",
-          "8b04d8ed-9150-416a-9bfb-3df22dd6aa15"
-        ],
-        "at_contact": false,
-        "reason": "Start of the 0.81 mm-long clearance neck beside the C4 ground return. Widening to even 0.6 mm leaves 0.191 mm clearance."
-      },
-      {
-        "net": "V5_INTERNAL",
-        "layer": 0,
-        "at_mm": [
-          9.5664,
-          51.3644
-        ],
-        "widths_mm": [
-          0.48,
-          0.8
-        ],
-        "tracks": [
-          "2a52f706-ac26-4fb0-8293-798383f10843",
-          "cdf0c87e-7acf-47ba-851f-5bc3e9d8a0b4"
-        ],
-        "at_contact": false,
-        "reason": "End of the same short C4 ground-clearance neck; route returns to full 0.8 mm."
-      },
-      {
-        "net": "V5_INTERNAL",
-        "layer": 0,
-        "at_mm": [
-          13.55,
-          25.725
-        ],
-        "widths_mm": [
-          0.25,
-          0.3
-        ],
-        "tracks": [
-          "2de4b9a6-9627-4b1e-bcd2-237972edb6c8",
-          "de50d8c9-5e24-4955-98f8-7709d303cdbd"
-        ],
-        "at_contact": true,
-        "reason": "Pad/via contact between separately sized branches."
-      },
-      {
-        "net": "V5_INTERNAL",
-        "layer": 0,
-        "at_mm": [
-          21.5,
-          25.95
+          28.5,
+          19.95
         ],
         "widths_mm": [
           0.25,
@@ -1129,71 +920,16 @@
         ],
         "at_contact": true,
         "reason": "Pad/via contact between separately sized branches."
-      },
-      {
-        "net": "V5_INTERNAL",
-        "layer": 2,
-        "at_mm": [
-          5.61975,
-          27.25525
-        ],
-        "widths_mm": [
-          0.8,
-          0.9895
-        ],
-        "tracks": [
-          "118b0095-3a9a-4705-8265-058b8eb23360",
-          "d4f4f208-d711-46f6-ab03-fba44aab09d3"
-        ],
-        "at_contact": false,
-        "reason": "Transition into the earlier consolidated parallel-route copper. Wider section retained to preserve copper cross-section and power-drop margin."
-      },
-      {
-        "net": "VIN_PROT",
-        "layer": 0,
-        "at_mm": [
-          5.0,
-          24.05
-        ],
-        "widths_mm": [
-          0.5,
-          0.8
-        ],
-        "tracks": [
-          "9a7c2322-3169-4c8e-8b47-eebfb49ea0c2",
-          "ae3c6719-e507-4eae-8853-ba59a3b02133"
-        ],
-        "at_contact": true,
-        "reason": "Pad/via contact between separately sized branches."
-      },
-      {
-        "net": "VIN_PROT",
-        "layer": 2,
-        "at_mm": [
-          5.475,
-          34.025
-        ],
-        "widths_mm": [
-          0.25,
-          0.8
-        ],
-        "tracks": [
-          "354918d7-31c6-4e6a-84ba-db09417a6d1d",
-          "39234fd0-78a1-4d3f-af88-f31fe190f693",
-          "4675e377-8f6d-47d9-9b83-834aed5d3fce"
-        ],
-        "at_contact": false,
-        "reason": "Low-current 0.25 mm U1.5 enable branch leaves the 0.8 mm input supply; it is not the buck power-current path."
       }
     ],
-    "free_transitions": 6,
+    "free_transitions": 0,
     "scope": "All segment widths and shared-endpoint width transitions. Different widths at pad/via contacts are intentional branch sizing; net reasons cover routes on different layers. Electrical load and copper-drop limits are checked separately."
   },
   "scope": "Routing geometry only. Copper round end caps are normal; no curved centerlines. Pad/via contacts allow local transitions; free branches require explicit nodes and chamfered geometry. Native DRC and independent Gerber connectivity/clearance must also pass.",
-  "board_sha256": "102fc9d9801b6628781927c5ed5e05a98d0c7c0c52214b0afe3950f8ac40370c",
+  "board_sha256": "5e43a87482b98fb8de0b105626381735209c22386c14bbe29e93f3bb7c3696dc",
   "source_hashes": {
     "scripts/check_routing.py": "51daa946f018decc954554b24d4d282ee3bc62a9b46c177a70d6dcfdd799c374",
-    "scripts/export_routing_geometry.py": "dbd0c86081b323dc9087e42e8af8707e50d23a419b298d87d4013c3096904e52",
-    "hardware/design/routing_widths.json": "c0a795d14543d6d9650814c90707b814f8e1b366f6dc5ad3553afd2e028c77e1"
+    "scripts/export_routing_geometry.py": "184ae2226e3b37849ae200420e333a554e60ba3c86afb542729f1c7de62b7224",
+    "hardware/design/routing_widths.json": "10d0a0c67ea103a86354da86e20ce2c42607985a93cb6a9282c109b052584cc6"
   }
 }

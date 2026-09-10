@@ -174,7 +174,7 @@ report=dict(result='PASS sourcing-file consistency; HOLD manufacturing review' i
  buck_margin_review=buck_review,
  capacitor_reflow_review=cap,mcu_procurement=snapshot['mcu_procurement'],
  substitution_review=review,alternative_stock_review=snapshot['alternative_stock_review'],hand_solder_availability=snapshot['hand_solder'],
- order_decision='HOLD: final simulation review and factory stack/process quotation pending. U5 is user-sourced from DigiKey; no factory MCU procurement required.',
+ order_decision='HOLD: factory stack/process quotation and qualification pending; see release checks for separate electrical evidence. U5 is user-sourced from DigiKey; no factory MCU procurement required.',
  limitations='Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.',
  input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in ['bom/assembly_plan.json','bom/jlc_sourcing.json','bom/catalog_china.json','bom/Factory_BOM.csv','bom/BOM_JLCPCB.csv','output/assembly/CPL_JLCPCB.csv','hardware/design/circuit.json','hardware/FRC_Sensor_CAN.kicad_pcb','scripts/check_jlc_sourcing.py','hardware/design/layout_contract.json','scripts/layout_contract.py','scripts/check_compact_layout.py','reports/compact/layout_verification.json',*[d['file'] for d in snapshot['datasheets']]]})
 (R/'reports/manufacturing/jlc_sourcing.json').write_text(json.dumps(report,indent=2)+'\n')

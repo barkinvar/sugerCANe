@@ -19,4 +19,4 @@
 
 Pair JLC BOM with [CPL_JLCPCB.csv](../output/assembly/CPL_JLCPCB.csv) and the matched [Gerber ZIP](../order/README.md). Do not upload the complete finished-board BOM as factory placement instructions. C1, the RGB LED and all SMT parts other than U5 remain factory fitted.
 
-All 54 factory types had sufficient public stock for ten boards in the September 10, 2026, 03:43 UTC check. Stock is not reserved. Final simulations and factory quotation/stack/process/inspection review remain pending.
+All 54 factory types had sufficient public stock for ten boards in the September 10, 2026, 03:43 UTC check. Stock is not reserved. Power transient screening is complete; factory quotation/stack/process/inspection review remains pending.

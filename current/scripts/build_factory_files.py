@@ -1,7 +1,7 @@
 """Derive SMT-only CPL and validate it against the native-board manifest."""
 from pathlib import Path
 import csv,json,hashlib
-from layout_contract import HEIGHT, BOTTOM_REFERENCES
+from layout_contract import WIDTH, HEIGHT, BOTTOM_REFERENCES
 R=Path(__file__).resolve().parents[1]
 parts=json.loads((R/'hardware/design/circuit.json').read_text())['parts']
 plan=json.loads((R/'bom/assembly_plan.json').read_text())
@@ -31,6 +31,6 @@ joints=sum(len({p['number'] for p in physical[r]['pads'] if p['number']}) for r 
 report=dict(result='PASS',factory_smt_placements=129,factory_smt_types=len(bom),hand_solder_parts=11,hand_solder_through_hole_parts=10,hand_solder_through_hole_joints=49,hand_solder_mcu_joints=32,hand_solder_joints=81,loose_shunts=3,estimated_smt_joints_per_board=joints,position_origin='PCB lower-left, X right / Y up, mm; native footprint rotation counterclockwise. Factory must reconcile part-library pin 1.',matched_to='Native manifest and model/BOM exact reference sets',sha256=hashlib.sha256(dest.read_bytes()).hexdigest(),assembly_plan_sha256=hashlib.sha256((R/'bom/assembly_plan.json').read_bytes()).hexdigest(),factory_part_allocation_confirmed=False)
 report['factory_top_placements']=sum(r['Layer']=='Top' for r in rows)
 report['factory_bottom_placements']=sum(r['Layer']=='Bottom' for r in rows)
-report['board_size_mm']=[52,HEIGHT]
+report['board_size_mm']=[WIDTH,HEIGHT]
 (R/'reports/manufacturing/factory_files.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))

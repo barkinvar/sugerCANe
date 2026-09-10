@@ -13,12 +13,13 @@ from gerbonara.graphic_objects import Flash
 import verify_gerber_connectivity as g
 from board_outline import verified_outline
 from ground_geometry import inspect_ground
+from layout_contract import CONTRACT
 
 ROOT=Path(__file__).resolve().parents[1]
 outline=verified_outline(g.stack.outline.instance.objects, g.ERROR)
 manifest=json.loads((ROOT/'reports/manufacturing/board_manifest.json').read_text())
 mounts=[(c['x_mm'],c['y_mm']) for c in manifest['components'] if c['reference'].startswith('H')]
-assert sorted(mounts)==[(3.5,-4.0),(48.5,-46.5)]
+assert sorted(mounts)==sorted((x,-y) for x,y in CONTRACT['mounting_holes_top_left_mm'])
 report={'units':'mm','arc_approximation_tolerance_mm':g.ERROR,'copper':{},'mask':{},'paste':{}}
 report['ground_pours'] = {}
 for side,polys in g.islands.items():
@@ -41,13 +42,13 @@ for side,polys in g.islands.items():
     # Allow the local 0.15 mm exception only on actual U8 pad copper,
     # independent of package rotation. Other net copper keeps 0.20 mm.
     u8pads=[union_all([g.shape(p) for p in obj.to_primitives()])
-            for obj in g.stack[('top','copper')].instance.objects
+            for obj in g.stack[(side,'copper')].instance.objects
             if isinstance(obj,Flash) and obj.attrs.get('.P',('',))[0]=='U8']
     for gap,a,b in candidates:
         if gap>=.2-2*g.ERROR:continue
         p1,p2=nearest_points(polys[a],polys[b])
         on_pad=lambda point:any(pad.buffer(g.ERROR).covers(point) for pad in u8pads)
-        assert side=='top' and on_pad(p1) and on_pad(p2) and gap>=.15-2*g.ERROR,(side,gap,p1,p2)
+        assert side==next(c['side'] for c in manifest['components'] if c['reference']=='U8') and on_pad(p1) and on_pad(p2) and gap>=.15-2*g.ERROR,(side,gap,p1,p2)
     names=lambda n:sorted(g.root_nets[g.root(g.offset[side]+n)])
     assert edge>=.3-2*g.ERROR,(side,edge)
     assert mounting>=3.3-2*g.ERROR,(side,mounting)
@@ -98,7 +99,7 @@ report['source_hashes'] = {name: hashlib.sha256((ROOT/name).read_bytes()).hexdig
                                       'scripts/verify_gerber_connectivity.py', 'scripts/board_outline.py']}
 report['source_hashes'].update({name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
                                for name in ['scripts/layout_contract.py','hardware/design/layout_contract.json']})
-report['ground_scope'] = 'Same-layer ground islands require 0.25 mm separation. A 0.24 mm erosion screen rejects necks splitting substantial ground areas (cores over 0.025 mm²); native zone minimum and pad-connection rules also require 0.25 mm. Sharp concave corners and intended thermal slots are not minimum-gap measurements. No current-crowding, ground-return impedance or fabrication-tolerance qualification.'
+report['ground_scope'] = 'Same-layer ground islands require 0.25 mm separation. A 0.24 mm erosion screen rejects necks splitting substantial ground areas (cores over 0.025 mm²); native zone minima are 0.30 mm on F.Cu, B.Cu and In1.Cu and 0.25 mm on In2.Cu; native ground pad connections require 0.25 mm. Sharp concave corners and intended thermal slots are not minimum-gap measurements. No current-crowding, ground-return impedance or fabrication-tolerance qualification.'
 report['result']='PASS'
 report['limits']='Etch geometry only, with1um arc approximation. Annular rings use filled pad copper and drill center/diameter, not drill wander or plated thickness tolerance. Mask and paste figures do not establish stencil release, registration or assembly yield. Nominal holes and copper are not fabricated measurements.'
 (ROOT/'reports/manufacturing/gerber_geometry.json').write_text(json.dumps(report,indent=2)+'\n')

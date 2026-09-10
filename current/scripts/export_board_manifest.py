@@ -14,6 +14,7 @@ for fp in board.GetFootprints():
         drill = pad.GetDrillSize()
         record = dict(number=pad.GetNumber(), net=pad.GetNetname(),
                       x_mm=p.ToMM(pos.x), y_mm=-p.ToMM(pos.y),
+                      paste_top=pad.IsOnLayer(p.F_Paste), paste_bottom=pad.IsOnLayer(p.B_Paste),
                       copper_top=pad.IsOnLayer(p.F_Cu) and pad.GetAttribute()!=p.PAD_ATTRIB_NPTH, copper_bottom=pad.IsOnLayer(p.B_Cu) and pad.GetAttribute()!=p.PAD_ATTRIB_NPTH)
         pads.append(record)
         if drill.x:

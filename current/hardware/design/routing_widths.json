@@ -1,43 +1,220 @@
 {
-  "default": {"widths_mm": [0.25], "reason": "Uniform 0.25 mm signal or local low-current route."},
-  "nets": {
-    "+3V3": {"widths_mm": [0.18, 0.25], "layers": {"0": [0.25]}, "reason": "0.25 mm distribution; 0.18 mm J8 sense/reference branch clears J8.7 ground pad on In2.Cu. Widening its existing path to 0.25 mm leaves only 0.180 mm clearance."},
-    "BOOST_12V": {"widths_mm": [0.25, 0.8], "reason": "0.8 mm reservoir/eFuse power path; 0.25 mm feedback, inhibit and enable-resistor branches (R60, R68, R70)."},
-    "BOOST_SW": {"widths_mm": [0.3, 0.5], "reason": "0.3 mm approach from U8.5 to the 0.5 mm inductor/diode path. A 0.5 mm approach would leave only 0.150 mm to U8.6; required track-to-pad clearance is 0.2 mm."},
-    "BOOST_COMP": {"widths_mm": [0.2], "reason": "Uniform short, low-current converter compensation route."},
-    "BOOST_COMP_RC": {"widths_mm": [0.2], "reason": "Uniform low-current converter compensation route."},
-    "BOOST_FB": {"widths_mm": [0.2], "reason": "Uniform low-current converter feedback route."},
-    "BOOST_SS": {"widths_mm": [0.2], "reason": "Uniform low-current converter soft-start route."},
-    "BOOT0": {"widths_mm": [0.18], "reason": "Uniform MCU/service route through the dense programming area."},
-    "BUCK_FB": {"widths_mm": [0.2], "reason": "Uniform short, low-current buck feedback route."},
-    "BUCK_SW": {"widths_mm": [0.4], "reason": "Uniform 0.4 mm local buck switching route after unnecessary narrowing was removed."},
-    "GND": {"widths_mm": [0.25, 0.3, 0.4, 0.5], "reason": "Ground pours carry distributed return current; local signal returns use 0.25 mm, converter return paths use 0.3-0.5 mm. Remaining shared-endpoint changes are within contact copper."},
-    "HSE_IN": {"widths_mm": [0.2], "reason": "Uniform short crystal input route."},
-    "HSE_OUT": {"widths_mm": [0.18], "reason": "Uniform short crystal output pin escape."},
-    "HSE_XTAL_OUT": {"widths_mm": [0.2], "reason": "Uniform short crystal/load-capacitor route."},
-    "NRST": {"widths_mm": [0.18], "reason": "Uniform MCU/service route through the dense programming area."},
-    "SENSOR_5V": {"widths_mm": [0.35, 0.5], "reason": "0.5 mm main distribution; 0.35 mm sections clear C4/C5/C13 and neighboring ground tracks. Widening constrained sections on their existing paths would reduce clearance to about 0.15 mm. Full 300 mA output-path drop is independently checked."},
-    "SENSOR_12V": {"widths_mm": [0.5], "reason": "Uniform protected sensor-power distribution; 300 mA routed-copper drop checked separately."},
-    "STATUS_DATA": {"widths_mm": [0.18, 0.25], "layers": {"0": [0.25], "2": [0.18]}, "reason": "0.25 mm top routes; uniform 0.18 mm bottom run clears BOOT0/SWDIO. A 0.25 mm bottom run would leave about 0.175 mm clearance."},
-    "STATUS_DIN": {"widths_mm": [0.18, 0.25], "layers": {"0": [0.25], "6": [0.18]}, "reason": "0.25 mm top routes; 0.18 mm inner route passes through dense signal-via/track clearances. Widening the existing inner run would leave 0.168-0.190 mm clearance."},
-    "SWCLK": {"widths_mm": [0.18], "reason": "Uniform MCU/service route through the dense programming area."},
-    "SWDIO": {"widths_mm": [0.18], "reason": "Uniform MCU/service route through the dense programming area."},
-    "UART_RX": {"widths_mm": [0.18], "reason": "Uniform MCU/service route through the dense programming area."},
-    "UART_TX": {"widths_mm": [0.18], "reason": "Uniform MCU/service route through the dense programming area."},
-    "V5_INTERNAL": {"widths_mm": [0.25, 0.3, 0.48, 0.8, 0.9895], "reason": "0.8 mm power distribution; one 0.9895 mm bottom section preserves the consolidated parallel-route copper. A 0.81 mm-long 0.48 mm neck clears adjacent ground; 0.25/0.3 mm branches feed U8 control pins and the LED/level shifter. Full buck-to-boost current/drop is independently checked."},
-    "VIN_FUSED": {"widths_mm": [0.7], "reason": "Uniform widened input-power route; nominal 2 A copper-only drop screened with finite via resistance. Adjacent pads constrain further widening."},
-    "VIN_PROT": {"widths_mm": [0.25, 0.5, 0.8], "reason": "0.5 mm protected input trunk expands to 0.8 mm at the local buck input bypass; separate 0.25 mm branch feeds the high-impedance U1.5 enable input."},
-    "VIN_RAW": {"widths_mm": [0.7], "reason": "Uniform widened input-power route; nominal 2 A copper-only drop screened with finite via resistance. Adjacent pads constrain further widening."},
-    "VPORT1": {"widths_mm": [0.5], "reason": "Uniform selector-to-sensor power route."},
-    "VPORT2": {"widths_mm": [0.5], "reason": "Uniform selector-to-sensor power route."},
-    "VPORT3": {"widths_mm": [0.5], "reason": "Uniform selector-to-sensor power route."}
+  "default": {
+    "widths_mm": [
+      0.18
+    ],
+    "reason": "Uniform 0.18 mm low-current logic, monitor, bias and control interconnects on the compact board. This retains the native 0.18 mm fabrication minimum; power, ground, CAN bus and converter/clock widths are specified separately."
   },
-  "free_transitions": [
-    {"net": "+3V3", "layer": 6, "at_mm": [27.15, 9.025], "widths_mm": [0.18, 0.25], "reason": "End of the 0.18 mm J8 reference branch, after clearing the J8.7 ground pad."},
-    {"net": "BOOST_12V", "layer": 0, "at_mm": [13.5764, 34.05], "widths_mm": [0.25, 0.8], "reason": "Low-current 0.25 mm R70 inhibit-resistor branch leaves the 0.8 mm reservoir/eFuse supply."},
-    {"net": "V5_INTERNAL", "layer": 0, "at_mm": [9.2753, 52.0585], "widths_mm": [0.48, 0.8], "reason": "Start of the 0.81 mm-long clearance neck beside the C4 ground return. Widening to even 0.6 mm leaves 0.191 mm clearance."},
-    {"net": "V5_INTERNAL", "layer": 0, "at_mm": [9.5664, 51.3644], "widths_mm": [0.48, 0.8], "reason": "End of the same short C4 ground-clearance neck; route returns to full 0.8 mm."},
-    {"net": "V5_INTERNAL", "layer": 2, "at_mm": [5.61975, 27.25525], "widths_mm": [0.8, 0.9895], "reason": "Transition into the earlier consolidated parallel-route copper. Wider section retained to preserve copper cross-section and power-drop margin."},
-    {"net": "VIN_PROT", "layer": 2, "at_mm": [5.475, 34.025], "widths_mm": [0.25, 0.8], "reason": "Low-current 0.25 mm U1.5 enable branch leaves the 0.8 mm input supply; it is not the buck power-current path."}
-  ]
+  "nets": {
+    "+3V3": {
+      "widths_mm": [
+        0.25
+      ],
+      "reason": "Uniform 0.25 mm logic supply and reference distribution."
+    },
+    "BOOST_12V": {
+      "widths_mm": [
+        0.25,
+        0.8
+      ],
+      "reason": "0.8 mm reservoir/eFuse power path; 0.25 mm feedback, inhibit and enable-resistor branches (R60, R68, R70)."
+    },
+    "BOOST_SW": {
+      "widths_mm": [
+        0.3,
+        0.5
+      ],
+      "reason": "0.3 mm approach from U8.5 to the 0.5 mm inductor/diode path. A 0.5 mm approach would leave only 0.150 mm to U8.6; required track-to-pad clearance is 0.2 mm."
+    },
+    "BOOST_COMP": {
+      "widths_mm": [
+        0.2
+      ],
+      "reason": "Uniform short, low-current converter compensation route."
+    },
+    "BOOST_COMP_RC": {
+      "widths_mm": [
+        0.2
+      ],
+      "reason": "Uniform low-current converter compensation route."
+    },
+    "BOOST_FB": {
+      "widths_mm": [
+        0.2
+      ],
+      "reason": "Uniform low-current converter feedback route."
+    },
+    "BOOST_SS": {
+      "widths_mm": [
+        0.2
+      ],
+      "reason": "Uniform low-current converter soft-start route."
+    },
+    "BOOT0": {
+      "widths_mm": [
+        0.18
+      ],
+      "reason": "Uniform MCU/service route through the dense programming area."
+    },
+    "BUCK_FB": {
+      "widths_mm": [
+        0.2
+      ],
+      "reason": "Uniform short, low-current buck feedback route."
+    },
+    "BUCK_SW": {
+      "widths_mm": [
+        0.4
+      ],
+      "reason": "Uniform 0.4 mm local buck switching route after unnecessary narrowing was removed."
+    },
+    "GND": {
+      "widths_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5
+      ],
+      "reason": "Ground pours carry distributed return current; local signal returns use 0.25 mm, converter return paths use 0.3-0.5 mm. Remaining shared-endpoint changes are within contact copper."
+    },
+    "HSE_IN": {
+      "widths_mm": [
+        0.2
+      ],
+      "reason": "Uniform short crystal input route."
+    },
+    "HSE_OUT": {
+      "widths_mm": [
+        0.18
+      ],
+      "reason": "Uniform short crystal output pin escape."
+    },
+    "HSE_XTAL_OUT": {
+      "widths_mm": [
+        0.2
+      ],
+      "reason": "Uniform short crystal/load-capacitor route."
+    },
+    "NRST": {
+      "widths_mm": [
+        0.18
+      ],
+      "reason": "Uniform MCU/service route through the dense programming area."
+    },
+    "SENSOR_5V": {
+      "widths_mm": [
+        0.5
+      ],
+      "reason": "Uniform 0.5 mm protected 5 V distribution, including the revised U4 output escape. Full output copper drop is checked at 300 mA."
+    },
+    "SENSOR_12V": {
+      "widths_mm": [
+        0.5
+      ],
+      "reason": "Uniform 0.5 mm protected 12 V distribution, with full output copper drop checked at 300 mA."
+    },
+    "STATUS_DATA": {
+      "widths_mm": [
+        0.18
+      ],
+      "reason": "Uniform 0.18 mm low-current status data connection."
+    },
+    "STATUS_DIN": {
+      "widths_mm": [
+        0.18
+      ],
+      "reason": "Uniform 0.18 mm low-current status data connection."
+    },
+    "SWCLK": {
+      "widths_mm": [
+        0.18
+      ],
+      "reason": "Uniform MCU/service route through the dense programming area."
+    },
+    "SWDIO": {
+      "widths_mm": [
+        0.18
+      ],
+      "reason": "Uniform MCU/service route through the dense programming area."
+    },
+    "UART_RX": {
+      "widths_mm": [
+        0.18
+      ],
+      "reason": "Uniform MCU/service route through the dense programming area."
+    },
+    "UART_TX": {
+      "widths_mm": [
+        0.18
+      ],
+      "reason": "Uniform MCU/service route through the dense programming area."
+    },
+    "V5_INTERNAL": {
+      "widths_mm": [
+        0.25,
+        0.3,
+        0.48,
+        0.8,
+        0.9895
+      ],
+      "reason": "0.8 mm power distribution; 0.25/0.3 mm local control and bypass branches. Full buck-to-boost current/drop is independently checked. Historical 0.48/0.9895 mm widths remain recognized; the width inventory reports actual use."
+    },
+    "VIN_FUSED": {
+      "widths_mm": [
+        0.7
+      ],
+      "reason": "Uniform widened input-power route; nominal 2 A copper-only drop screened with finite via resistance. Adjacent pads constrain further widening."
+    },
+    "VIN_PROT": {
+      "widths_mm": [
+        0.25,
+        0.5,
+        0.8
+      ],
+      "reason": "0.5 mm protected input trunk expands to 0.8 mm at the local buck input bypass; separate 0.25 mm branch feeds the high-impedance U1.5 enable input."
+    },
+    "VIN_RAW": {
+      "widths_mm": [
+        0.7
+      ],
+      "reason": "Uniform widened input-power route; nominal 2 A copper-only drop screened with finite via resistance. Adjacent pads constrain further widening."
+    },
+    "VPORT1": {
+      "widths_mm": [
+        0.5
+      ],
+      "reason": "Uniform selector-to-sensor power route."
+    },
+    "VPORT2": {
+      "widths_mm": [
+        0.5
+      ],
+      "reason": "Uniform selector-to-sensor power route."
+    },
+    "VPORT3": {
+      "widths_mm": [
+        0.5
+      ],
+      "reason": "Uniform selector-to-sensor power route."
+    },
+    "CANH": {
+      "widths_mm": [
+        0.25
+      ],
+      "reason": "Preserved 0.25 mm CAN bus width."
+    },
+    "CANL": {
+      "widths_mm": [
+        0.25
+      ],
+      "reason": "Preserved 0.25 mm CAN bus width."
+    },
+    "BUCK_CB": {
+      "widths_mm": [
+        0.25
+      ],
+      "reason": "Preserved local buck bootstrap copper width."
+    }
+  },
+  "free_transitions": []
 }

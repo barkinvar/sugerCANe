@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "local_links_checked": 259,
+  "local_links_checked": 263,
   "broken_links": [],
   "pdfs": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "pages": 43,
+      "pages": 45,
       "text_within_page": true
     },
     {

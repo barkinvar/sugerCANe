@@ -1,193 +1,124 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-10T06:44:18.854842+00:00",
+  "reviewed_utc": "2026-09-10T10:30:28.651481+00:00",
   "reviewer": "Codex visual inspection",
-  "variant": "Rev H compact prototype",
-  "board_sha256": "102fc9d9801b6628781927c5ed5e05a98d0c7c0c52214b0afe3950f8ac40370c",
+  "variant": "Rev H compact 44 x 48 mm prototype",
+  "board_sha256": "5e43a87482b98fb8de0b105626381735209c22386c14bbe29e93f3bb7c3696dc",
   "artifacts": [
     {
       "file": "output/review/board_top.png",
-      "sha256": "4a17b3211ebb1845d035885217887a186600440d4d10ef5634fa12a04550deb3",
-      "scope": "Fresh compact native-board render visually reviewed: both-side placement, connector pins, selector labels, artwork, mounts and optical access. Nominal geometry only.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
+      "sha256": "38606e049ba9fb81c6f5cdf5ac0dc199cd74fa250a2cc3ade149c754b3ea6a62",
+      "scope": "Fresh final 44 x 48 mm board render or true-scale outline comparison. Inspected for placement, connector access, labels, underside population and mechanical envelope; nominal geometry only.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "fb265edcd7b602e150941ad0ba56a38855d8842d0000ceb475db223bbce5e8f2",
-      "scope": "Fresh compact native-board render visually reviewed: both-side placement, connector pins, selector labels, artwork, mounts and optical access. Nominal geometry only.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
+      "sha256": "abe8c4df7ffcc1b1da0e40a4813857de16ab065e9e6358982d1157a682f9c7cc",
+      "scope": "Fresh final 44 x 48 mm board render or true-scale outline comparison. Inspected for placement, connector access, labels, underside population and mechanical envelope; nominal geometry only.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
     },
     {
       "file": "output/review/board_3d_final.png",
-      "sha256": "e3022cc238ae73b0d3b86979e29f98fc267c3bd0254bc6be4833688cdcc1ae9d",
-      "scope": "Fresh compact native-board render visually reviewed: both-side placement, connector pins, selector labels, artwork, mounts and optical access. Nominal geometry only.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
+      "sha256": "5f4c1cabdf72915827b2df7137aae92704097bc984d87b96736ab40934e332ad",
+      "scope": "Fresh final 44 x 48 mm board render or true-scale outline comparison. Inspected for placement, connector access, labels, underside population and mechanical envelope; nominal geometry only.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
     },
     {
       "file": "output/review/board_connectors.png",
-      "sha256": "daab3b84738a79b29c4fa89faeda06617397dc5dadd0b6e2eb7fc27cd77a5d70",
-      "scope": "Fresh compact native-board render visually reviewed: both-side placement, connector pins, selector labels, artwork, mounts and optical access. Nominal geometry only.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
+      "sha256": "ee5cef02cf852e83593d8dc24644c7584b59f31f2b5c961ca10a699f1528f0f8",
+      "scope": "Fresh final 44 x 48 mm board render or true-scale outline comparison. Inspected for placement, connector access, labels, underside population and mechanical envelope; nominal geometry only.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
     },
     {
-      "file": "output/review/gerber_top_copper.png",
-      "sha256": "183b84c303aa1fcda1e5b1b3d3d665641c837ff6cbbb383b0d9dd96f11e85036",
-      "scope": "Current exported copper/drill geometry reviewed in the PNG and matching four-page PDF; SVG shares that plotted geometry. All-layer numerical clearance/connectivity gates are separate.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
-    },
-    {
-      "file": "output/review/gerber_top_copper.svg",
-      "sha256": "dfd7ff22ebd25507ed49efb28a0b2690fb6312f7ad8e5efc4862c9e4c5bffc2e",
-      "scope": "Current exported copper/drill geometry reviewed in the PNG and matching four-page PDF; SVG shares that plotted geometry. All-layer numerical clearance/connectivity gates are separate.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
-    },
-    {
-      "file": "output/review/gerber_inner_1_copper.png",
-      "sha256": "d08494ec15a36a0c0fa1fd99040ee899ec42d5fc583c369d92f62928e623f2e1",
-      "scope": "Current exported copper/drill geometry reviewed in the PNG and matching four-page PDF; SVG shares that plotted geometry. All-layer numerical clearance/connectivity gates are separate.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
-    },
-    {
-      "file": "output/review/gerber_inner_1_copper.svg",
-      "sha256": "04f683f573736774056c4062215238513d7bd4aa34e7d77c3b1ddbf061f16395",
-      "scope": "Current exported copper/drill geometry reviewed in the PNG and matching four-page PDF; SVG shares that plotted geometry. All-layer numerical clearance/connectivity gates are separate.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
-    },
-    {
-      "file": "output/review/gerber_inner_2_copper.png",
-      "sha256": "023eca3f503b61421491f5c5b2017b0bab8404489385ce91e150bc1083843bed",
-      "scope": "Current exported copper/drill geometry reviewed in the PNG and matching four-page PDF; SVG shares that plotted geometry. All-layer numerical clearance/connectivity gates are separate.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
-    },
-    {
-      "file": "output/review/gerber_inner_2_copper.svg",
-      "sha256": "63665456581ff5cc79d3452ac7efeb65573d94708d8d8652f89f10da9c33eaaa",
-      "scope": "Current exported copper/drill geometry reviewed in the PNG and matching four-page PDF; SVG shares that plotted geometry. All-layer numerical clearance/connectivity gates are separate.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
-    },
-    {
-      "file": "output/review/gerber_bottom_copper.png",
-      "sha256": "a7cba5af2d6ef6b6a0c51afea5b13fc3392f4765184735b243f1d080be736d37",
-      "scope": "Current exported copper/drill geometry reviewed in the PNG and matching four-page PDF; SVG shares that plotted geometry. All-layer numerical clearance/connectivity gates are separate.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
-    },
-    {
-      "file": "output/review/gerber_bottom_copper.svg",
-      "sha256": "5b9211e1fbced07da15a31ab9b157960b2e5c2187773fdb8134c39ebefb100e6",
-      "scope": "Current exported copper/drill geometry reviewed in the PNG and matching four-page PDF; SVG shares that plotted geometry. All-layer numerical clearance/connectivity gates are separate.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
-    },
-    {
-      "file": "output/assembly/top_assembly.pdf",
-      "sha256": "6b8decc8434944104cb9d5a0525542186d53621cda2d292946b67f8a41f9bcc6",
-      "scope": "Rendered and inspected after fitting selector reference labels inside the header outlines.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
-    },
-    {
-      "file": "output/assembly/bottom_assembly.pdf",
-      "sha256": "6fed02a2fb0e599571e047839779a24c934c3acad20b1a663482ee35cc81b11b",
-      "scope": "Rendered and inspected: 15 underside references, mirrored underside view and artwork.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
+      "file": "output/review/size_comparison.png",
+      "sha256": "215f401cffc4f6b2977927244dc0bd7d3964a52f7acc62de8b2808600538fbf2",
+      "scope": "Fresh final 44 x 48 mm board render or true-scale outline comparison. Inspected for placement, connector access, labels, underside population and mechanical envelope; nominal geometry only.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "sha256": "98fd2513828e7064b4faf78cbf30886e46628c2adf9914209794cad74c134e5e",
-      "scope": "All four copper-layer views inspected with actual drill overlays.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
+      "sha256": "ee655fb6c88bf584ead59873071c739a23e0ded3b4d2dda78c9583d50848f306",
+      "scope": "Four-layer exported copper review inspected in rendered PDF pages; PNG/SVG views share the same plotted source geometry. Numerical geometry/connectivity checks remain separate.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
+    },
+    {
+      "file": "output/review/gerber_bottom_copper.png",
+      "sha256": "e0c4506fcdbcdb385a0066ca09c5ec68297cb641a45ccef7d6fafbf5e2da82a0",
+      "scope": "Four-layer exported copper review inspected in rendered PDF pages; PNG/SVG views share the same plotted source geometry. Numerical geometry/connectivity checks remain separate.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
+    },
+    {
+      "file": "output/review/gerber_bottom_copper.svg",
+      "sha256": "34a23aade05a80f995a537f5b2dd9f765c1556f6a41d9f75cfaedbcea8df1568",
+      "scope": "Four-layer exported copper review inspected in rendered PDF pages; PNG/SVG views share the same plotted source geometry. Numerical geometry/connectivity checks remain separate.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
+    },
+    {
+      "file": "output/review/gerber_inner_1_copper.png",
+      "sha256": "40a5d079f653dc2fb66141e983c7772b1e220d163ec6adc4c47ddf7426fdbb94",
+      "scope": "Four-layer exported copper review inspected in rendered PDF pages; PNG/SVG views share the same plotted source geometry. Numerical geometry/connectivity checks remain separate.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
+    },
+    {
+      "file": "output/review/gerber_inner_1_copper.svg",
+      "sha256": "ffc3a2569349ffe42f1bbc562dfa0ccda78fbcd11618b4e94a505240b2e17642",
+      "scope": "Four-layer exported copper review inspected in rendered PDF pages; PNG/SVG views share the same plotted source geometry. Numerical geometry/connectivity checks remain separate.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
+    },
+    {
+      "file": "output/review/gerber_inner_2_copper.png",
+      "sha256": "c67c8f29c84d2da082e7240bf3d55cbd0a1f5cc6e7b56a33b7f53a21d8ee984e",
+      "scope": "Four-layer exported copper review inspected in rendered PDF pages; PNG/SVG views share the same plotted source geometry. Numerical geometry/connectivity checks remain separate.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
+    },
+    {
+      "file": "output/review/gerber_inner_2_copper.svg",
+      "sha256": "fd356ebba48577efc0d968ab7acdcfea30e345986fa1af1080862b524818cb1b",
+      "scope": "Four-layer exported copper review inspected in rendered PDF pages; PNG/SVG views share the same plotted source geometry. Numerical geometry/connectivity checks remain separate.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
+    },
+    {
+      "file": "output/review/gerber_top_copper.png",
+      "sha256": "1a6f2dccbbf894ac9471133a984a4762f8ec9ff02db54f416e0758f7e986e9b8",
+      "scope": "Four-layer exported copper review inspected in rendered PDF pages; PNG/SVG views share the same plotted source geometry. Numerical geometry/connectivity checks remain separate.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
+    },
+    {
+      "file": "output/review/gerber_top_copper.svg",
+      "sha256": "e617e1a75f023dc5ff081ea62a28331001bfb30903529c2c0bedf690cc5f29a2",
+      "scope": "Four-layer exported copper review inspected in rendered PDF pages; PNG/SVG views share the same plotted source geometry. Numerical geometry/connectivity checks remain separate.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
+    },
+    {
+      "file": "output/assembly/top_assembly.pdf",
+      "sha256": "a29173f7e5958e87f4e1ac6e50afb6cbcf0a46d9d7b5d957debdc864746d5a06",
+      "scope": "Rendered mechanical/assembly/order pages and changed handbook sections inspected for readable layout, current dimensions, part counts and header mapping; all PDF text bounds checked separately.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
+    },
+    {
+      "file": "output/assembly/bottom_assembly.pdf",
+      "sha256": "a749edf74cc525994ab3f555b69918eec786c71c50a75d8a5217886da2ede13b",
+      "scope": "Rendered mechanical/assembly/order pages and changed handbook sections inspected for readable layout, current dimensions, part counts and header mapping; all PDF text bounds checked separately.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
-      "sha256": "0399e301563349649a0b1b19cd8d121e3e92cf7cf3cc061f71d29270dce4a675",
-      "scope": "Both pages rendered and inspected: 52 x 70 mm, 78.1 mm terminal envelope, unchanged mounts/service map and underside clearance note.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
+      "sha256": "92fa56fa0164906c0a8094af0bf5cbfb2eac0966f7476009ee3dda44961fec01",
+      "scope": "Rendered mechanical/assembly/order pages and changed handbook sections inspected for readable layout, current dimensions, part counts and header mapping; all PDF text bounds checked separately.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
     },
     {
       "file": "output/documentation/ORDER_GUIDE.pdf",
-      "sha256": "462a19b9dedfb64ef35c92cba7aca7090cbdd8ccec3984128464cb76aa77c538",
-      "scope": "All three final pages rendered and inspected; 114 top/15 bottom, both stencils and review-only status; no orphan footer page.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
-    },
-    {
-      "file": "output/documentation/BOM_RevH_SC12.pdf",
-      "sha256": "5385538cb462047e499d6dcf04da06c6cf210470420c2ecccaadd15457bb3b2c",
-      "scope": "Three pages rendered and inspected; quantities and supplier grouping retained.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
-    },
-    {
-      "file": "output/documentation/MCU_hand_solder_map.pdf",
-      "sha256": "a35842a89d3a5f33788f60b04e038fb1067f495b04f5be5664fcdf481c37a602",
-      "scope": "Rendered and inspected; unchanged native MCU position, pin 1 and hand-solder instructions.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
+      "sha256": "be07b9212a9aed9798fbc2682c5b33f91e76553ac03f90631a5aa4adf9c6600e",
+      "scope": "Rendered mechanical/assembly/order pages and changed handbook sections inspected for readable layout, current dimensions, part counts and header mapping; all PDF text bounds checked separately.",
+      "reviewed_utc": "2026-09-10T10:29:57.844280+00:00"
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "d8d265a7a0f30f8b70d5cd86ff31302292216f8608d8dac748623092a1255f71",
-      "scope": "Rendered page overview inspected; current board render and updated compact dimensions, two-sided assembly and connector text. Text-page bounds and local links checked separately.",
-      "reviewed_utc": "2026-09-10T06:44:18.854842+00:00"
-    },
-    {
-      "file": "output/review/service_gui.png",
-      "sha256": "e4cf0a7e3011c206410cccc592cd689df534eb19928cbc9ddcd41c88576e381d",
-      "scope": "Simulated app0.9.0: three independent input modes and active levels, identify and Reset power fault controls; no physical CAN connection.",
-      "reviewed_utc": "2026-09-09T19:59:05.532967+00:00",
-      "evidence": "Unchanged artifact hash; preceding visual review retained."
-    },
-    {
-      "file": "reports/electrical/converter_loop.png",
-      "sha256": "7795275a91cd9821e5ece2957a948549299dc94b29e0a7abc14d64fa0f897a28",
-      "scope": "Rev H caption, nominal averaged-loop gain/phase curves and explicit analytical-model limitation inspected; 768-corner results retained in JSON.",
-      "reviewed_utc": "2026-09-09T19:59:05.532967+00:00",
-      "evidence": "Unchanged artifact hash; preceding visual review retained."
-    },
-    {
-      "file": "reports/electrical/input_spice.png",
-      "sha256": "032ceebee50896b347a7755a5c43a10e2cd94ff87ca77de90ceabaca3ab39d69",
-      "scope": "Eight input scenario panels reviewed: nominal/limit logic, NPN/PNP, floating probes, hysteresis and supply cycle; two repeat cases are reported separately in JSON.",
-      "reviewed_utc": "2026-09-09T22:23:19.364952+00:00",
-      "evidence": "Unchanged artifact hash; preceding visual review retained."
-    },
-    {
-      "file": "reports/electrical/boost_spice_partial.png",
-      "sha256": "ec81c6b7550a7122c963e0df45b91eca5f42d551b35983688e5e4994f84308a7",
-      "scope": "Fresh eight-case standalone plot visually inspected, including explicit standalone-only header. Load-step, short/reset, thermal-latch and capacitance panels pass their defined screens. Coupled startup remains separate required evidence.",
-      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00",
-      "evidence": "Unchanged artifact hash; preceding visual review retained."
-    },
-    {
-      "file": "hardware/artwork/sugarCANe.svg",
-      "sha256": "48b18c5d6fe39791e7021fb1c20e127e6f972da14bf723b56888ec58194194cb",
-      "scope": "Final SVG render reviewed: bold original letter grids, separated characters, taller CAN, g descender and distinct lowercase e; original pixel cane, convex ground and restored stepped underside. No borders or extra text. Ordered Gerber dark/clear compositing matches without unexplained missing or extra ink at 1 um tolerance.",
-      "reviewed_utc": "2026-09-09T23:35:29.145933+00:00",
-      "evidence": "Unchanged artifact hash; preceding visual review retained."
-    },
-    {
-      "file": "output/review/routing_junctions.png",
-      "sha256": "4945e9fadac813fc3da90f44f430155533c0b0c1ccd55efe2a56a4d6ea1bf746",
-      "scope": "Four before/after close-ups inspected: perpendicular supply tap, REF_LOGIC side junction, redundant SIG3 loop and overlapping 5 V run. Actual native segment widths, endpoints and contacts are shown; other-net copper is grey.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00",
-      "evidence": "Unchanged artifact hash; preceding visual review retained."
-    },
-    {
-      "file": "output/review/routing_widths.png",
-      "sha256": "07bd8bb20b977d7c2d2483642322686cf8192c7e160b188ea8eedc59422df743",
-      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00",
-      "scope": "Four paired native-copper close-ups inspected: CAN routes, 3.3 V route, reverse-protection gate and internal 5 V power. All 12 remaining shared-endpoint width transitions also individually inspected in the scratch review sheet.",
-      "evidence": "Unchanged artifact hash; preceding visual review retained."
-    },
-    {
-      "file": "output/review/routing_contacts.png",
-      "sha256": "5ecb04042f7a6c918123eede5b157e8a34d7da945d085280a7c1c4b22f4f58de",
-      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00",
-      "scope": "Paired native-copper details inspected: lower-left bottom loop/supply junction, lower-right bottom selector hook, top redundant paths, retained inner service-connector clearance. Pours omitted for trace visibility.",
-      "evidence": "Unchanged artifact hash; preceding visual review retained."
-    },
-    {
-      "file": "output/review/ground_pours.png",
-      "sha256": "a0cf36639a594baf2acdb745c4971815412428f3e40680cabd10760c8cf4462b",
-      "reviewed_utc": "2026-09-10T02:20:48.611323+00:00",
-      "scope": "Six paired exported-copper details inspected: opposing ground tips, solid SMT ground, inner-layer narrow connection and local gap, J8.7 thermal spokes, and J6.2 thermal slot freed of a redundant track.",
-      "evidence": "Unchanged artifact hash; preceding visual review retained."
+      "sha256": "b09f79dbf8a96ac2b5338dbeba99d6369c0c3d71ff9ed7e4b3f2f03df29a5a37",
+      "scope": "Rendered mechanical/assembly/order pages and changed handbook sections inspected for readable layout, current dimensions, part counts and header mapping; all PDF text bounds checked separately.",
+      "reviewed_utc": "2026-09-10T10:30:28.651481+00:00"
     }
   ],
-  "limitations": "Visual and nominal CAD review only. Physical assembly, enclosure, thermal, EMC and optical qualification remain pending. Older contact/ground-detail figures are historical."
+  "limitations": "Visual inspection is not electrical, tolerance, assembly-yield or physical qualification. Unchanged historical routing-detail pictures and original artwork are not current-board evidence. Full engineering, factory and physical release decisions remain separate."
 }

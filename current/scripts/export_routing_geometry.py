@@ -8,7 +8,13 @@ R = Path(__file__).resolve().parents[1]
 
 def export(board_path):
     board = p.LoadBoard(str(board_path))
-    result = {'tracks': [], 'pads': [], 'vias': [], 'endpoint_zone_contacts': {}}
+    edge_points = [p.ToMM(point) for shape in board.GetDrawings()
+                   if shape.GetLayer() == p.Edge_Cuts
+                   for point in (shape.GetStart(), shape.GetEnd())]
+    # Centerline bounds avoid adding the plotted Edge.Cuts stroke to board size.
+    result = {'tracks': [], 'pads': [], 'vias': [], 'endpoint_zone_contacts': {},
+              'board_bounds_mm': [min(x for x,y in edge_points), min(y for x,y in edge_points),
+                                  max(x for x,y in edge_points), max(y for x,y in edge_points)]}
     for item in board.GetTracks():
         common = dict(id=item.m_Uuid.AsString(), net=item.GetNetname())
         if isinstance(item, p.PCB_VIA):
