@@ -4,9 +4,9 @@
     "firmware/src/power.c": "0e26e751b00961e6d86043e7a28429c86fb9178d3e0023c77d5db8a39b1a5b2b",
     "firmware/include/power.h": "bee9d528589bfb0ad4377715fdbb5ea19bc1337d91a0b230a1c8d15fbc38492c",
     "scripts/check_power_replay.py": "74e70691150ded834917c00a8c1fe81667455eb6b8c68cb506b5000b9775302c",
-    "reports/electrical/electrical_checks.json": "ad27f7e16f6cbff19cc68ec084b22389250dfca7802d8e8bf8d0f183b9c52f6f",
-    "reports/electrical/boost_spice_partial.json": "d1153c9150a4c50cc563f2d1b871ce1e3586ac689d356416b87c1357b7f88042",
-    "reports/electrical/order_readiness.json": "86a88524bf98a90f1c22f9d8e8d6b66639dddf50b855fb04bdfb990b390cdf42"
+    "reports/electrical/electrical_checks.json": "8875e81607c1f1e6f8048b847b20cfb0e09b9fd53edc5eb51d696a563bd6568c",
+    "reports/electrical/boost_spice_partial.json": "2c3536c63473e67f001c0f08c10da566270f6965f02b445b362d275588532bca",
+    "reports/electrical/order_readiness.json": "2b2667e4b1fa530fa4011e8e5c331c636c4764191281522862158ace8859e44c"
   },
   "cases": [
     {

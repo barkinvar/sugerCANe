@@ -22,7 +22,7 @@ Rev H adds one RGB status LED on the right, with space for a printed light duct,
 | Signals | Positive 0–30 V targets; NPN / PNP / push-pull / floating detection / keeper |
 | Size and assembly | 52 × 74 mm, four copper layers; **all components on top** |
 | User assembly | DigiKey MCU, six terminals, three voltage headers, service socket and three caps |
-| Parts estimate | **$26.46 per board at 10 boards** before SMT attrition; **$27.34** with conservative allowance |
+| Parts estimate | **$27.08 per board at 10 boards** before SMT attrition; **$27.96** with conservative allowance |
 | Cost exclusions | PCB, assembly, freight, tax and testing; no factory quotation yet |
 
 The selected purchasing estimate is $2.54 lower per board than the preceding $28.99 estimate, before SMT attrition. It includes the DigiKey MCU; optional spares are extra. Assembly and the reusable programmer are separate. [Cost basis](current/docs/COST_REDUCTION.md).

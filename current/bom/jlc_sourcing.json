@@ -119,6 +119,16 @@
       "file": "sources/datasheets/panasonic_ft.pdf",
       "sha256": "affbdbc3402d5d78e683944e78f5a641ae7f22906a4e77e24978388e491b41e2",
       "source_url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1240.pdf"
+    },
+    {
+      "file": "sources/datasheets/ti_lmr51430.pdf",
+      "sha256": "f7d8053844fb07ae773844f023373c0c570507ca61603fe28dda15364987296c",
+      "source_url": "https://www.ti.com/lit/ds/symlink/lmr51430.pdf"
+    },
+    {
+      "file": "sources/datasheets/bourns_srp7028a.pdf",
+      "sha256": "34d693b83229904a959efaa5bad0d294eae16c943244ee60cb27d842c713e512",
+      "source_url": "https://www.bourns.com/docs/product-datasheets/srp7028a.pdf"
     }
   ],
   "parts": [
@@ -1682,57 +1692,57 @@
       "moisture_sensitivity_level": "MSL 3"
     },
     {
-      "mpn": "LMR51420XDDCR",
+      "mpn": "LMR51430XDDCR",
       "manufacturer": "Texas Instruments",
-      "lcsc": "C5246146",
+      "lcsc": "C5185863",
       "references": [
         "U1"
       ],
       "quantity_per_board": 1,
-      "source_url": "https://jlcpcb.com/partdetail/C5246146",
-      "observed_utc": "2026-09-10T03:43:38.093757+00:00",
-      "public_stock": 4159,
-      "available_to_order": 4040,
+      "source_url": "https://jlcpcb.com/partdetail/C5185863",
+      "observed_utc": "2026-09-10T05:13:16.327380+00:00",
+      "public_stock": 9046,
+      "available_to_order": 8835,
       "minimum_purchase": 1,
-      "minimum_assembly": 2,
+      "minimum_assembly": 1,
       "attrition_allowance": 0,
-      "preorder_minimum": 9,
+      "preorder_minimum": 13,
       "library_class": "expand",
       "preferred_extended": false,
       "assembly_mode": "smtWeld",
       "package": "SOT-23-6",
-      "description": "-40\u2103~+150\u2103@(TJ) 1 2A 4.5V~36V 500kHz 600mV~34.2V Adjustable Buck Buck Built-in Yes SOT-23-6 DC-DC Converters ROHS",
-      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2309210104_Texas-Instruments-LMR51420XDDCR_C5246146.pdf",
+      "description": "-40\u2103~+150\u2103@(TJ) 1 3A 4.5V~36V 40uA 500kHz 600mV~34.2V Adjustable Buck Built-in Overcurrent Protection\u3001Light load efficient mode\u3001Cycle-by-cycle current limiting\u3001Hiccup current limiting Step-down type Yes SOT-23-6 DC-DC Converters ROHS",
+      "datasheet_url": "https://www.ti.com/lit/ds/symlink/lmr51430.pdf",
       "price_tiers_usd": [
         [
           1,
-          1.0221
+          0.8479
         ],
         [
           10,
-          0.8544
+          0.6901
         ],
         [
           30,
-          0.7698
+          0.612
         ],
         [
           100,
-          0.6868
+          0.5322
         ],
         [
           500,
-          0.6364
+          0.4866
         ],
         [
           1000,
-          0.6103
+          0.4622
         ]
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
       "allocation_confirmed": false,
-      "catalog_mpn": "LMR51420XDDCR",
+      "catalog_mpn": "LMR51430XDDCR",
       "catalog_status": "yes",
       "catalog_product_type": 0,
       "pcba_services": [
@@ -3137,57 +3147,57 @@
       "moisture_sensitivity_level": "MSL 1"
     },
     {
-      "mpn": "SRP7028A-100M",
+      "mpn": "SRP7028A-8R2M",
       "manufacturer": "BOURNS",
-      "lcsc": "C2687402",
+      "lcsc": "C2041815",
       "references": [
         "L1"
       ],
       "quantity_per_board": 1,
-      "source_url": "https://jlcpcb.com/partdetail/C2687402",
-      "observed_utc": "2026-09-10T03:43:42.603048+00:00",
-      "public_stock": 5174,
-      "available_to_order": 5146,
+      "source_url": "https://jlcpcb.com/partdetail/C2041815",
+      "observed_utc": "2026-09-10T05:13:16.327380+00:00",
+      "public_stock": 116,
+      "available_to_order": 111,
       "minimum_purchase": 1,
-      "minimum_assembly": 0,
+      "minimum_assembly": 1,
       "attrition_allowance": 0,
-      "preorder_minimum": 12,
+      "preorder_minimum": 5,
       "library_class": "expand",
       "preferred_extended": false,
       "assembly_mode": "smtWeld",
       "package": "SMD,7.3x6.6mm",
-      "description": "10uH 3.5A 6A 75m\u03a9 \u00b120% SMD,7.3x6.6mm Power Inductors ROHS",
-      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2106070105_BOURNS-SRP7028A-100M_C2687402.pdf",
+      "description": "4A 64m\u03a9 7.5A 8.2uH \u00b120% SMD,7.3x6.6mm Power Inductors ROHS",
+      "datasheet_url": "https://www.bourns.com/docs/product-datasheets/srp7028a.pdf",
       "price_tiers_usd": [
         [
           1,
-          0.9358
+          1.8407
         ],
         [
           10,
-          0.7731
+          1.5575
         ],
         [
           30,
-          0.6917
+          1.4013
         ],
         [
           100,
-          0.612
+          1.2255
         ],
         [
           500,
-          0.5631
+          1.1474
         ],
         [
           1000,
-          0.5387
+          1.1132
         ]
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
       "allocation_confirmed": false,
-      "catalog_mpn": "SRP7028A-100M",
+      "catalog_mpn": "SRP7028A-8R2M",
       "catalog_status": "yes",
       "catalog_product_type": 0,
       "pcba_services": [
@@ -3607,9 +3617,9 @@
   },
   "routing_review": {
     "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
-    "board_sha256": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
-    "nonrouting_objects_sha256": "ce4a48a67f7a6cd20066fa59d7704a49fb1b06f29475d1487a17d3451fa96344",
-    "scope": "C1 factory-reflow substitution and manufacturer lands only; all routing, vias and other footprints preserved exactly. CAD/Gerber/DC checks refreshed; simulations await approval.",
+    "board_sha256": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
+    "nonrouting_objects_sha256": "1ba72c35249250bfe9c9587d7e0d7b06b77b8abafb45879373274266d7548dde",
+    "scope": "Current native geometry unchanged from 7047295; U1/L1 value and MPN update is separately recorded in buck_margin_review. Clock capacitors remain 20 pF. Final power verification is authorized and running.",
     "previous_review": {
       "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
       "board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
@@ -3873,13 +3883,13 @@
   },
   "stock_observation_window_utc": [
     "2026-09-10T03:43:33.549459+00:00",
-    "2026-09-10T04:05:06.248552+00:00"
+    "2026-09-10T05:13:16.327380+00:00"
   ],
   "availability_definition": "max(0, canPresaleNumber) from JLC public component detail; stockCount is recorded separately and is not treated as free inventory. No cart allocation or reservation.",
   "catalog_endpoint": "https://jlcpcb.com/api/overseas-pcb-order/v1/smtComponentShopCart/getComponentDetail?componentCode={lcsc}",
   "equivalence_review": {
     "observed_utc": "2026-09-10T02:26:16.074445+00:00",
-    "board_sha256": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
+    "board_sha256": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
     "scope": "Six changed passive types at nine placements checked against original and replacement manufacturer specifications and actual native pad dimensions. The other 49 factory types retain exact manufacturer/MPN. No BOM or CAD change in this audit.",
     "substitutions": [
       {
@@ -4232,7 +4242,7 @@
       ],
       "moisture_sensitivity_level": "MSL 1"
     },
-    "board_sha256": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
+    "board_sha256": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
     "baseline_board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
     "electrical": {
       "capacitance_uF": 47,
@@ -4360,5 +4370,219 @@
     "report": "reports/electrical/component_margins.json",
     "stock_observed_utc": "2026-09-10T04:05:06.248552+00:00",
     "qualification": "Measure actual HSE frequency, startup margin and drive. No oscillator transistor model or extracted parasitics available."
+  },
+  "buck_margin_review": {
+    "baseline_commit": "7047295",
+    "board_sha256": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
+    "before": {
+      "U1": {
+        "ref": "U1",
+        "kind": "BUCK",
+        "value": "LMR51420XDDCR",
+        "pins": {
+          "1": "GND",
+          "2": "BUCK_SW",
+          "3": "VIN_PROT",
+          "4": "BUCK_FB",
+          "5": "VIN_PROT",
+          "6": "BUCK_CB"
+        },
+        "sheet": "power",
+        "footprint": "FRC_Sensor_CAN:TSOT-23-6",
+        "mpn": "LMR51420XDDCR",
+        "note": "",
+        "source_footprint": "Package_TO_SOT_SMD:TSOT-23-6"
+      },
+      "L1": {
+        "ref": "L1",
+        "kind": "L",
+        "value": "10uH",
+        "pins": {
+          "1": "BUCK_SW",
+          "2": "V5_INTERNAL"
+        },
+        "sheet": "power",
+        "footprint": "FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm",
+        "mpn": "SRP7028A-100M",
+        "note": "3.5A RMS, 6A saturation; use specified family, not NRND SRP7030.",
+        "source_footprint": "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm"
+      }
+    },
+    "after": {
+      "U1": {
+        "ref": "U1",
+        "kind": "BUCK",
+        "value": "LMR51430XDDCR",
+        "pins": {
+          "1": "GND",
+          "2": "BUCK_SW",
+          "3": "VIN_PROT",
+          "4": "BUCK_FB",
+          "5": "VIN_PROT",
+          "6": "BUCK_CB"
+        },
+        "sheet": "power",
+        "footprint": "FRC_Sensor_CAN:TSOT-23-6",
+        "mpn": "LMR51430XDDCR",
+        "note": "",
+        "source_footprint": "Package_TO_SOT_SMD:TSOT-23-6"
+      },
+      "L1": {
+        "ref": "L1",
+        "kind": "L",
+        "value": "8.2uH",
+        "pins": {
+          "1": "BUCK_SW",
+          "2": "V5_INTERNAL"
+        },
+        "sheet": "power",
+        "footprint": "FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm",
+        "mpn": "SRP7028A-8R2M",
+        "note": "4A RMS, 7.5A saturation; paired with 3A LMR51430. Use specified SRP7028A family.",
+        "source_footprint": "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm"
+      }
+    },
+    "changed_fields": {
+      "U1": [
+        "value",
+        "mpn"
+      ],
+      "L1": [
+        "value",
+        "mpn",
+        "note"
+      ]
+    },
+    "unchanged_native_geometry": true,
+    "only_native_changes": "U1 value/MPN and L1 value/MPN/note. Exact inverse text substitution restores the reviewed baseline board byte for byte.",
+    "sources": [
+      "sources/datasheets/ti_lmr51430.pdf",
+      "sources/datasheets/bourns_srp7028a.pdf"
+    ],
+    "engineering_basis": "3 A buck has 2.75 A minimum valley and 3.67 A minimum peak limits. Paired 8.2 uH inductor has 4 A RMS, 7.5 A saturation rating and 68 milliohm maximum DCR. External sensor limits remain 300 mA per shared rail.",
+    "limitations": "Current-limit and LC sizing screens only; upstream buck switching model, thermal, dropout and board qualification remain outstanding.",
+    "observed_utc": "2026-09-10T05:13:16.327380+00:00",
+    "previous_catalog": {
+      "U1": {
+        "mpn": "LMR51420XDDCR",
+        "manufacturer": "Texas Instruments",
+        "lcsc": "C5246146",
+        "references": [
+          "U1"
+        ],
+        "quantity_per_board": 1,
+        "source_url": "https://jlcpcb.com/partdetail/C5246146",
+        "observed_utc": "2026-09-10T03:43:38.093757+00:00",
+        "public_stock": 4159,
+        "available_to_order": 4040,
+        "minimum_purchase": 1,
+        "minimum_assembly": 2,
+        "attrition_allowance": 0,
+        "preorder_minimum": 9,
+        "library_class": "expand",
+        "preferred_extended": false,
+        "assembly_mode": "smtWeld",
+        "package": "SOT-23-6",
+        "description": "-40\u2103~+150\u2103@(TJ) 1 2A 4.5V~36V 500kHz 600mV~34.2V Adjustable Buck Buck Built-in Yes SOT-23-6 DC-DC Converters ROHS",
+        "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2309210104_Texas-Instruments-LMR51420XDDCR_C5246146.pdf",
+        "price_tiers_usd": [
+          [
+            1,
+            1.0221
+          ],
+          [
+            10,
+            0.8544
+          ],
+          [
+            30,
+            0.7698
+          ],
+          [
+            100,
+            0.6868
+          ],
+          [
+            500,
+            0.6364
+          ],
+          [
+            1000,
+            0.6103
+          ]
+        ],
+        "ten_board_budget_quantity": 10,
+        "ten_board_stock_sufficient": true,
+        "allocation_confirmed": false,
+        "catalog_mpn": "LMR51420XDDCR",
+        "catalog_status": "yes",
+        "catalog_product_type": 0,
+        "pcba_services": [
+          "Economic",
+          "Standard"
+        ],
+        "moisture_sensitivity_level": "MSL 1"
+      },
+      "L1": {
+        "mpn": "SRP7028A-100M",
+        "manufacturer": "BOURNS",
+        "lcsc": "C2687402",
+        "references": [
+          "L1"
+        ],
+        "quantity_per_board": 1,
+        "source_url": "https://jlcpcb.com/partdetail/C2687402",
+        "observed_utc": "2026-09-10T03:43:42.603048+00:00",
+        "public_stock": 5174,
+        "available_to_order": 5146,
+        "minimum_purchase": 1,
+        "minimum_assembly": 0,
+        "attrition_allowance": 0,
+        "preorder_minimum": 12,
+        "library_class": "expand",
+        "preferred_extended": false,
+        "assembly_mode": "smtWeld",
+        "package": "SMD,7.3x6.6mm",
+        "description": "10uH 3.5A 6A 75m\u03a9 \u00b120% SMD,7.3x6.6mm Power Inductors ROHS",
+        "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2106070105_BOURNS-SRP7028A-100M_C2687402.pdf",
+        "price_tiers_usd": [
+          [
+            1,
+            0.9358
+          ],
+          [
+            10,
+            0.7731
+          ],
+          [
+            30,
+            0.6917
+          ],
+          [
+            100,
+            0.612
+          ],
+          [
+            500,
+            0.5631
+          ],
+          [
+            1000,
+            0.5387
+          ]
+        ],
+        "ten_board_budget_quantity": 10,
+        "ten_board_stock_sufficient": true,
+        "allocation_confirmed": false,
+        "catalog_mpn": "SRP7028A-100M",
+        "catalog_status": "yes",
+        "catalog_product_type": 0,
+        "pcba_services": [
+          "Economic",
+          "Standard"
+        ],
+        "moisture_sensitivity_level": "MSL 1"
+      }
+    }
   }
 }

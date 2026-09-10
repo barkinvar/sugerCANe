@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/neuro/candi-clone/current/hardware/FRC_Sensor_CAN.kicad_sch</source>
-    <date>2026-09-09T21:05:30</date>
+    <date>2026-09-09T22:14:38</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -525,18 +525,18 @@
       </units>
     </comp>
     <comp ref="L1">
-      <value>10uH</value>
+      <value>8.2uH</value>
       <footprint>FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm</footprint>
       <fields>
-        <field name="MPN">SRP7028A-100M</field>
-        <field name="Notes">3.5A RMS, 6A saturation; use specified family, not NRND SRP7030.</field>
+        <field name="MPN">SRP7028A-8R2M</field>
+        <field name="Notes">4A RMS, 7.5A saturation; paired with 3A LMR51430. Use specified SRP7028A family.</field>
         <field name="Footprint">FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="L" description=""/>
-      <property name="MPN" value="SRP7028A-100M"/>
-      <property name="Notes" value="3.5A RMS, 6A saturation; use specified family, not NRND SRP7030."/>
+      <property name="MPN" value="SRP7028A-8R2M"/>
+      <property name="Notes" value="4A RMS, 7.5A saturation; paired with 3A LMR51430. Use specified SRP7028A family."/>
       <property name="Sheetname" value="Battery entry and internal supplies"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Battery entry and internal supplies/" tstamps="/fb3c0a9e-b322-5632-9eb0-a957beaadad4/"/>
@@ -713,17 +713,17 @@
       </units>
     </comp>
     <comp ref="U1">
-      <value>LMR51420XDDCR</value>
+      <value>LMR51430XDDCR</value>
       <footprint>FRC_Sensor_CAN:TSOT-23-6</footprint>
       <fields>
-        <field name="MPN">LMR51420XDDCR</field>
+        <field name="MPN">LMR51430XDDCR</field>
         <field name="Notes"/>
         <field name="Footprint">FRC_Sensor_CAN:TSOT-23-6</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="BUCK" description=""/>
-      <property name="MPN" value="LMR51420XDDCR"/>
+      <property name="MPN" value="LMR51430XDDCR"/>
       <property name="Notes" value=""/>
       <property name="Sheetname" value="Battery entry and internal supplies"/>
       <property name="Sheetfile" value="power.kicad_sch"/>

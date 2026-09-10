@@ -25,7 +25,7 @@ Rev H adds one enclosure-facing RGB status LED and a hand-soldered recessed fema
 | Servicing | CAN discovery, ID/settings and recoverable firmware upload; initial installation through a 2.54 mm SWD service socket |
 | PCB / assembly | **52 × 74 mm**, four copper layers, 129 factory SMT + user-fitted MCU + ten through-hole parts + three caps |
 
-Parts purchasing is about **$26.46 per board at ten boards before SMT attrition**, or **$27.34** including a conservative allowance. These include the user-fitted DigiKey MCU, through-hole parts and caps; two optional spare MCUs are extra. PCB, assembly, freight and tax are extra. [Cost calculation](docs/COST_REDUCTION.md).
+Parts purchasing is about **$27.08 per board at ten boards before SMT attrition**, or **$27.96** including a conservative allowance. These include the user-fitted DigiKey MCU, through-hole parts and caps; two optional spare MCUs are extra. PCB, assembly, freight and tax are extra. [Cost calculation](docs/COST_REDUCTION.md).
 
 | What you want to do | Start here |
 |---|---|

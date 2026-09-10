@@ -68,6 +68,12 @@ for path,key in [('hardware/design/circuit.json','baseline_model_sha256')]:
  for field in ('value','voltage','tolerance'):
   assert cap_review['before'][field]==cap_review['after'][field]
  restored_model['parts']['C1']=cap_review['before']
+ buck_review=snapshot['buck_margin_review']
+ for ref in ('U1','L1'):
+  assert restored_model['parts'][ref]==buck_review['after'][ref]
+  assert buck_review['before'][ref]['pins']==buck_review['after'][ref]['pins']
+  assert buck_review['before'][ref]['footprint']==buck_review['after'][ref]['footprint']
+  restored_model['parts'][ref]=buck_review['before'][ref]
  for s in snapshot['substitutions']:
   if 'old_value' in s:
    assert s['references']==['C25','C26'] and s['old_value']=='30pF' and s['value']=='20pF'
@@ -83,6 +89,7 @@ for path,key in [('hardware/design/circuit.json','baseline_model_sha256')]:
 route_review=snapshot['routing_review']
 board_path=R/'hardware/FRC_Sensor_CAN.kicad_pcb'
 assert hashlib.sha256(board_path.read_bytes()).hexdigest()==route_review['board_sha256']
+assert buck_review['board_sha256']==route_review['board_sha256'] and buck_review['unchanged_native_geometry']
 for via in route_review.get('removed_redundant_vias', []):
  assert via['id'] not in board_path.read_text()
 native=sexpdata.loads(board_path.read_text())
@@ -149,7 +156,8 @@ report=dict(result='PASS sourcing-file consistency; HOLD manufacturing review' i
  moisture_sensitive_parts=[dict(references=r['references'],msl=r['moisture_sensitivity_level']) for r in rows if r['moisture_sensitivity_level'] not in ('Not stated','MSL 1')],
  nominal_standard_reflow_conflicts=thermal_conflicts,manufacturing_holds=holds,
  quantity_method=snapshot['quantity_method'],factory_allocation_confirmed=False,
- electrical_model_only_reviewed_mpn_metadata_and_C1_footprint_changed=True,reviewed_routing=route_review,
+ electrical_model_changes_limited_to_documented_reviews=True,reviewed_routing=route_review,
+ buck_margin_review=buck_review,
  capacitor_reflow_review=cap,mcu_procurement=snapshot['mcu_procurement'],
  substitution_review=review,alternative_stock_review=snapshot['alternative_stock_review'],hand_solder_availability=snapshot['hand_solder'],
  order_decision='HOLD: final simulation review and factory stack/process quotation pending. U5 is user-sourced from DigiKey; no factory MCU procurement required.',

@@ -3,7 +3,7 @@
   "observed_utc": "2026-09-10T03:43:43.442617+00:00",
   "stock_observation_window_utc": [
     "2026-09-10T03:43:33.549459+00:00",
-    "2026-09-10T04:05:06.248552+00:00"
+    "2026-09-10T05:13:16.327380+00:00"
   ],
   "availability_definition": "max(0, canPresaleNumber) from JLC public component detail; stockCount is recorded separately and is not treated as free inventory. No cart allocation or reservation.",
   "boards": 10,
@@ -14,9 +14,9 @@
   "basic_types": 12,
   "preferred_extended_types": 1,
   "ordinary_extended_types": 41,
-  "smt_parts_with_conservative_attrition_per_board_usd": 15.36,
+  "smt_parts_with_conservative_attrition_per_board_usd": 15.98,
   "manual_parts_per_board_usd": 11.98,
-  "combined_parts_budget_per_board_usd": 27.34,
+  "combined_parts_budget_per_board_usd": 27.96,
   "selected_service": "Standard",
   "economic_eligible": false,
   "economic_blockers": [
@@ -49,12 +49,12 @@
   ],
   "quantity_method": "Conservative budget: max(fitted quantity plus displayed lossNumber, leastPatchNumber, minPurchaseNum). Actual checkout attrition/minimums may differ.",
   "factory_allocation_confirmed": false,
-  "electrical_model_only_reviewed_mpn_metadata_and_C1_footprint_changed": true,
+  "electrical_model_changes_limited_to_documented_reviews": true,
   "reviewed_routing": {
     "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
-    "board_sha256": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
-    "nonrouting_objects_sha256": "ce4a48a67f7a6cd20066fa59d7704a49fb1b06f29475d1487a17d3451fa96344",
-    "scope": "C1 factory-reflow substitution and manufacturer lands only; all routing, vias and other footprints preserved exactly. CAD/Gerber/DC checks refreshed; simulations await approval.",
+    "board_sha256": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
+    "nonrouting_objects_sha256": "1ba72c35249250bfe9c9587d7e0d7b06b77b8abafb45879373274266d7548dde",
+    "scope": "Current native geometry unchanged from 7047295; U1/L1 value and MPN update is separately recorded in buck_margin_review. Clock capacitors remain 20 pF. Final power verification is authorized and running.",
     "previous_review": {
       "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
       "board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
@@ -316,6 +316,220 @@
       }
     ]
   },
+  "buck_margin_review": {
+    "baseline_commit": "7047295",
+    "board_sha256": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
+    "before": {
+      "U1": {
+        "ref": "U1",
+        "kind": "BUCK",
+        "value": "LMR51420XDDCR",
+        "pins": {
+          "1": "GND",
+          "2": "BUCK_SW",
+          "3": "VIN_PROT",
+          "4": "BUCK_FB",
+          "5": "VIN_PROT",
+          "6": "BUCK_CB"
+        },
+        "sheet": "power",
+        "footprint": "FRC_Sensor_CAN:TSOT-23-6",
+        "mpn": "LMR51420XDDCR",
+        "note": "",
+        "source_footprint": "Package_TO_SOT_SMD:TSOT-23-6"
+      },
+      "L1": {
+        "ref": "L1",
+        "kind": "L",
+        "value": "10uH",
+        "pins": {
+          "1": "BUCK_SW",
+          "2": "V5_INTERNAL"
+        },
+        "sheet": "power",
+        "footprint": "FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm",
+        "mpn": "SRP7028A-100M",
+        "note": "3.5A RMS, 6A saturation; use specified family, not NRND SRP7030.",
+        "source_footprint": "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm"
+      }
+    },
+    "after": {
+      "U1": {
+        "ref": "U1",
+        "kind": "BUCK",
+        "value": "LMR51430XDDCR",
+        "pins": {
+          "1": "GND",
+          "2": "BUCK_SW",
+          "3": "VIN_PROT",
+          "4": "BUCK_FB",
+          "5": "VIN_PROT",
+          "6": "BUCK_CB"
+        },
+        "sheet": "power",
+        "footprint": "FRC_Sensor_CAN:TSOT-23-6",
+        "mpn": "LMR51430XDDCR",
+        "note": "",
+        "source_footprint": "Package_TO_SOT_SMD:TSOT-23-6"
+      },
+      "L1": {
+        "ref": "L1",
+        "kind": "L",
+        "value": "8.2uH",
+        "pins": {
+          "1": "BUCK_SW",
+          "2": "V5_INTERNAL"
+        },
+        "sheet": "power",
+        "footprint": "FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm",
+        "mpn": "SRP7028A-8R2M",
+        "note": "4A RMS, 7.5A saturation; paired with 3A LMR51430. Use specified SRP7028A family.",
+        "source_footprint": "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm"
+      }
+    },
+    "changed_fields": {
+      "U1": [
+        "value",
+        "mpn"
+      ],
+      "L1": [
+        "value",
+        "mpn",
+        "note"
+      ]
+    },
+    "unchanged_native_geometry": true,
+    "only_native_changes": "U1 value/MPN and L1 value/MPN/note. Exact inverse text substitution restores the reviewed baseline board byte for byte.",
+    "sources": [
+      "sources/datasheets/ti_lmr51430.pdf",
+      "sources/datasheets/bourns_srp7028a.pdf"
+    ],
+    "engineering_basis": "3 A buck has 2.75 A minimum valley and 3.67 A minimum peak limits. Paired 8.2 uH inductor has 4 A RMS, 7.5 A saturation rating and 68 milliohm maximum DCR. External sensor limits remain 300 mA per shared rail.",
+    "limitations": "Current-limit and LC sizing screens only; upstream buck switching model, thermal, dropout and board qualification remain outstanding.",
+    "observed_utc": "2026-09-10T05:13:16.327380+00:00",
+    "previous_catalog": {
+      "U1": {
+        "mpn": "LMR51420XDDCR",
+        "manufacturer": "Texas Instruments",
+        "lcsc": "C5246146",
+        "references": [
+          "U1"
+        ],
+        "quantity_per_board": 1,
+        "source_url": "https://jlcpcb.com/partdetail/C5246146",
+        "observed_utc": "2026-09-10T03:43:38.093757+00:00",
+        "public_stock": 4159,
+        "available_to_order": 4040,
+        "minimum_purchase": 1,
+        "minimum_assembly": 2,
+        "attrition_allowance": 0,
+        "preorder_minimum": 9,
+        "library_class": "expand",
+        "preferred_extended": false,
+        "assembly_mode": "smtWeld",
+        "package": "SOT-23-6",
+        "description": "-40\u2103~+150\u2103@(TJ) 1 2A 4.5V~36V 500kHz 600mV~34.2V Adjustable Buck Buck Built-in Yes SOT-23-6 DC-DC Converters ROHS",
+        "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2309210104_Texas-Instruments-LMR51420XDDCR_C5246146.pdf",
+        "price_tiers_usd": [
+          [
+            1,
+            1.0221
+          ],
+          [
+            10,
+            0.8544
+          ],
+          [
+            30,
+            0.7698
+          ],
+          [
+            100,
+            0.6868
+          ],
+          [
+            500,
+            0.6364
+          ],
+          [
+            1000,
+            0.6103
+          ]
+        ],
+        "ten_board_budget_quantity": 10,
+        "ten_board_stock_sufficient": true,
+        "allocation_confirmed": false,
+        "catalog_mpn": "LMR51420XDDCR",
+        "catalog_status": "yes",
+        "catalog_product_type": 0,
+        "pcba_services": [
+          "Economic",
+          "Standard"
+        ],
+        "moisture_sensitivity_level": "MSL 1"
+      },
+      "L1": {
+        "mpn": "SRP7028A-100M",
+        "manufacturer": "BOURNS",
+        "lcsc": "C2687402",
+        "references": [
+          "L1"
+        ],
+        "quantity_per_board": 1,
+        "source_url": "https://jlcpcb.com/partdetail/C2687402",
+        "observed_utc": "2026-09-10T03:43:42.603048+00:00",
+        "public_stock": 5174,
+        "available_to_order": 5146,
+        "minimum_purchase": 1,
+        "minimum_assembly": 0,
+        "attrition_allowance": 0,
+        "preorder_minimum": 12,
+        "library_class": "expand",
+        "preferred_extended": false,
+        "assembly_mode": "smtWeld",
+        "package": "SMD,7.3x6.6mm",
+        "description": "10uH 3.5A 6A 75m\u03a9 \u00b120% SMD,7.3x6.6mm Power Inductors ROHS",
+        "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2106070105_BOURNS-SRP7028A-100M_C2687402.pdf",
+        "price_tiers_usd": [
+          [
+            1,
+            0.9358
+          ],
+          [
+            10,
+            0.7731
+          ],
+          [
+            30,
+            0.6917
+          ],
+          [
+            100,
+            0.612
+          ],
+          [
+            500,
+            0.5631
+          ],
+          [
+            1000,
+            0.5387
+          ]
+        ],
+        "ten_board_budget_quantity": 10,
+        "ten_board_stock_sufficient": true,
+        "allocation_confirmed": false,
+        "catalog_mpn": "SRP7028A-100M",
+        "catalog_status": "yes",
+        "catalog_product_type": 0,
+        "pcba_services": [
+          "Economic",
+          "Standard"
+        ],
+        "moisture_sensitivity_level": "MSL 1"
+      }
+    }
+  },
   "capacitor_reflow_review": {
     "reviewed_utc": "2026-09-10T02:40:05.217190+00:00",
     "reference": "C1",
@@ -411,7 +625,7 @@
       ],
       "moisture_sensitivity_level": "MSL 1"
     },
-    "board_sha256": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
+    "board_sha256": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
     "baseline_board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
     "electrical": {
       "capacitance_uF": 47,
@@ -485,7 +699,7 @@
   },
   "substitution_review": {
     "observed_utc": "2026-09-10T02:26:16.074445+00:00",
-    "board_sha256": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
+    "board_sha256": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
     "scope": "Six changed passive types at nine placements checked against original and replacement manufacturer specifications and actual native pad dimensions. The other 49 factory types retain exact manufacturer/MPN. No BOM or CAD change in this audit.",
     "substitutions": [
       {
@@ -825,20 +1039,22 @@
   "limitations": "Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.",
   "input_hashes": {
     "bom/assembly_plan.json": "3ddff6cab3d7df84938cd10b9cc9549515d288c65915f7252b9b6a726b85b627",
-    "bom/jlc_sourcing.json": "358d7933825cb814988c989fce487feda8880eb88f55ca3e2705b05d9692c4a0",
-    "bom/catalog_china.json": "4232a836499328b6c83803d8f23a4ed5c1b847a43be720092aeb04253a329a2f",
-    "bom/Factory_BOM.csv": "b0fca29c0b3ca71beb7eea544c042382b7cc7022f75e9083e5b82dabcfd729f6",
-    "bom/BOM_JLCPCB.csv": "49737629c06d5c974f7b209aad2b0386cc23cb388f012a7557a3b30bf6245b57",
+    "bom/jlc_sourcing.json": "e505b96022a329033ddd7d9593011b5b22e8a1ab6b77356eeeeb9e5d3ae24680",
+    "bom/catalog_china.json": "3cb57c828b0e136939f46a2980a53b9117f78b965ad60712e424dc3599c3ddf7",
+    "bom/Factory_BOM.csv": "62a8c5ad0676564739a59d418e2586b3ad565db2b95ed4ec6a06a276838ae2ee",
+    "bom/BOM_JLCPCB.csv": "65d87b4314cb78a52060040566e124783331d796e4b4def95172a4edeb509ad4",
     "output/assembly/CPL_JLCPCB.csv": "bf3fe4f92da1cb717e37371cb9cbb463be90f40a46f722a4533beede392f9fe4",
-    "hardware/design/circuit.json": "c86045fb7c7640b5a57a6350eb52c042cfa7665a9ae73f909f96ae7354323569",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
-    "scripts/check_jlc_sourcing.py": "184b1b5cd559328b0fe3ed7781c9332077a42c48421707c8126b74a56457fc14",
+    "hardware/design/circuit.json": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
+    "scripts/check_jlc_sourcing.py": "1de075fc9e45fcd25223f5bd297f25f80eb53a672fcac9cb958780e566e028f8",
     "sources/datasheets/yageo_np0.pdf": "495287fc811dc714366f2edd3bc974d98d2d80133266a0a73bb01ac01237e3eb",
     "sources/datasheets/uniroyal_thick_film.pdf": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
     "sources/datasheets/panasonic_fk.pdf": "b36857d089adaddf3042b33bf11d0f7d83bf70734e983f33b7827152e11854e3",
     "sources/datasheets/panasonic_reflow.pdf": "5302db62f18432e9964c56852637c880569055ff5b962dba6d4b1a254ada8aac",
     "sources/datasheets/yageo_rc_original.pdf": "7b6f0ae72708ca4b38126f84b5407a3e970a94cb60bc1a0afdaeb25a23d839bb",
     "sources/datasheets/kemet_original.pdf": "948d3eb68896029f2248ae329805fd34aaab303141ed04c93631268f3e62f79b",
-    "sources/datasheets/panasonic_ft.pdf": "affbdbc3402d5d78e683944e78f5a641ae7f22906a4e77e24978388e491b41e2"
+    "sources/datasheets/panasonic_ft.pdf": "affbdbc3402d5d78e683944e78f5a641ae7f22906a4e77e24978388e491b41e2",
+    "sources/datasheets/ti_lmr51430.pdf": "f7d8053844fb07ae773844f023373c0c570507ca61603fe28dda15364987296c",
+    "sources/datasheets/bourns_srp7028a.pdf": "34d693b83229904a959efaa5bad0d294eae16c943244ee60cb27d842c713e512"
   }
 }

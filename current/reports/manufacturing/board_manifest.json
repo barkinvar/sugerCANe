@@ -1118,7 +1118,7 @@
     },
     {
       "reference": "U1",
-      "value": "LMR51420XDDCR",
+      "value": "LMR51430XDDCR",
       "package": "TSOT-23-6",
       "x_mm": 5.5,
       "y_mm": -45.3,
@@ -2828,7 +2828,7 @@
     },
     {
       "reference": "L1",
-      "value": "10uH",
+      "value": "8.2uH",
       "package": "L_Bourns_SRP7028A_7.3x6.6mm",
       "x_mm": 13.0,
       "y_mm": -45.5,

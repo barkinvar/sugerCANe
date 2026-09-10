@@ -1,6 +1,6 @@
 # Rev H pre-fabrication review
 
-**Current order decision: HOLD.** Final pre-order verification is authorized and running against the selected DigiKey-MCU/JLC assembly BOM. C25/C26 now use 20 pF clock-load capacitors; the C1 high-reflow replacement is retained. Native CAD, all-layer connectivity, BOM matching, input simulations and firmware checks pass. Full coupled startup and factory process/stack confirmation remain open. No physical board has been tested.
+**Current order decision: HOLD.** Final pre-order verification is authorized and running against the selected DigiKey-MCU/JLC assembly BOM. C25/C26 use 20 pF clock-load capacitors; U1/L1 now use a 3 A LMR51430XDDCR and 8.2 µH SRP7028A-8R2M in unchanged footprints. The C1 high-reflow replacement is retained. Native CAD, all-layer connectivity, BOM matching, input simulations and firmware checks pass. Full coupled startup and factory process/stack confirmation remain open. No physical board has been tested.
 
 The current BOM has **eight freshly completed standalone power cases, ten input cases and sixteen firmware waveform replays passing**. Both required complete coupled-startup traces are still running; partial traces are not counted as passes. [Current power report](../reports/electrical/boost_spice.json). The earlier `8d4deb4` results are historical, and are no longer used as a substitute for current standalone evidence.
 
@@ -27,12 +27,15 @@ All four layers retain nominal **35 µm (1 oz) copper**, now explicitly enforced
 
 C25/C26 changed from 30 pF to **20 pF C0G / Yageo CC0805JRNPO9BN200** without moving pads or traces. The conservative crystal gain calculation improves from 4.61 to **6.54** at 10 pF assumed stray capacitance and the published worst component bounds. All six modeled loading corners exceed ST's gain-margin recommendation. Frequency pulling, oscillator drive, actual stray capacitance and startup must still be measured on the first board. [Calculation and assumptions](../reports/electrical/component_margins.json).
 
-The same review checks the buck's minimum **1.7 A valley** and **2.7 A peak** current thresholds, rather than relying only on its nominal 2 A rating. The 1.46 A normal load passes at all three tested input points. The maximum simultaneous-fault budget is 1.95 A; at low input this can enter current limiting and disturb the shared 5 V rail. Do not promise uninterrupted MCU/CAN operation during simultaneous rail faults. This is a fault-regulation limitation, not a simulated normal-load failure. Both public TI LMR51420X/XF models are encrypted; the upstream control loop has not been simulated in ngspice.
+The buck review found a second margin issue: the former 2 A LMR51420's minimum 1.7 A valley limit can be exceeded by maximum 12 V charging current plus a normal 5 V load near minimum input, as well as by some simultaneous-fault corners. **U1 is now LMR51430XDDCR and L1 is SRP7028A-8R2M, 8.2 µH**, in the same footprints. The new minimum limits are 2.75 A valley and 3.67 A peak. All nine normal/charging/fault current-limit corners pass; the maximum calculated peak is 2.625 A. L1's published 4 A RMS and 7.5 A saturation ratings exceed the modeled load and the regulator's 6.68 A maximum peak limit. This improves current headroom; dropout, supply impedance, thermal behavior and uninterrupted MCU/CAN operation still require bench testing. [Calculation](../reports/electrical/component_margins.json) · [Exact change scope](../reports/manufacturing/buck_margin_change.json).
+
+The public TI LMR51430 product page does not provide a compatible switching model. Its upstream control loop is **not simulated** here. All ten running/completed downstream power decks match final-BOM generation byte for byte because U1/L1 lie upstream of their idealized source. That preserves the downstream evidence, without treating it as a simulation of the new buck.
 
 ## Changes that address the earlier failures
 
 | Rev F finding | Retained power implementation | Verification |
 |---|---|---|
+| Low-input charging current exceeds former buck minimum current-limit headroom | 3 A LMR51430 with 8.2 µH / 7.5 A-saturation L1 | All nine current-limit corners pass; upstream loop/dropout/thermal qualification remains physical |
 | Input-side limiter interrupts loaded boost startup | U8 connects to internal 5 V; TPS259620 output eFuse connects the sensor load after the raw boost reservoir | Completed Rev G baseline; Rev H combined startup with 66 µF raw reservoir, 100 µF external load and 300 mA remains incomplete |
 | Reservoir discharge passes through the boost short-current path | U9 limits the protected output; C62–C64 remain upstream; D5 clamps negative output excursions | Running short, cold short, sustained fault and restart scenarios |
 | Firmware cannot reset power protection | PA15 controls U4; PB7 controls Q3/Q2 and U9 enable | Register-level pin tests, application sequencing and addressed CAN reset tests |
@@ -53,7 +56,7 @@ Pin expectations are checked independently against manufacturer functions for th
 
 ## Limits and first-article acceptance
 
-The vendor transient model uses an idealized upstream 5 V source; it does not simulate the LMR51420 loop, robot wiring, all silicon corners or an assembled board. The eFuse's floating OVCSEL setting is a roughly 13.8 V fault clamp, not a precision 13 V trip. Software rail monitoring supplements the independent hardware current limits. It does not make a fault-proof or reverse-powered output.
+The vendor transient model uses an idealized upstream 5 V source; it does not simulate the LMR51430 loop, robot wiring, all silicon corners or an assembled board. The eFuse's floating OVCSEL setting is a roughly 13.8 V fault clamp, not a precision 13 V trip. Software rail monitoring supplements the independent hardware current limits. It does not make a fault-proof or reverse-powered output.
 
 The passing short cases are **shorts to ground**. Directly joining the 5 V and 12 V rails is unsupported and can damage the 5 V switch or sensors: U4's OUT absolute maximum is 7 V. Its reverse-voltage blocking and software overvoltage detection do not guarantee survival of a 12 V cross-connection. See the [wiring limits](WIRING.md).
 

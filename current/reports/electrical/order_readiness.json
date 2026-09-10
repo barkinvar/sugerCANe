@@ -5,14 +5,14 @@
   "power_distribution_valid_for_current_layout": true,
   "full_power_transient_pass": false,
   "input_hashes": {
-    "hardware/design/circuit.json": "c86045fb7c7640b5a57a6350eb52c042cfa7665a9ae73f909f96ae7354323569",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
-    "reports/electrical/electrical_checks.json": "ad27f7e16f6cbff19cc68ec084b22389250dfca7802d8e8bf8d0f183b9c52f6f",
-    "reports/electrical/boost_spice.json": "7313d87d5101139cddcf9d558df5d521aed7a7994baeaa3391aa5965b2c45775",
+    "hardware/design/circuit.json": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
+    "reports/electrical/electrical_checks.json": "8875e81607c1f1e6f8048b847b20cfb0e09b9fd53edc5eb51d696a563bd6568c",
+    "reports/electrical/boost_spice.json": "581cc16c9d7cb0c9aa2edd5920851461f4a78d55378de4e09c47c003aef2af7a",
     "reports/design_parity.json": "d79cbd2f9a9dd988ede7c9394aad08e31f1f18c110d687679477102b4768bee5",
     "reports/board_constraints.json": "5d5c66a155e81ab44e3365e04a14a44cbb54871dfc73563557208875b731422b",
     "scripts/check_boost_spice.py": "44d4c0f4d6fd7944d2dda0f4b9387391c9e35fdd984e57e5e4b8072c41089209",
-    "scripts/check_electrical.py": "354526a2887a31aa5174141dfb0059f18d7fb59bf551eacd1fdd0249bc4b1561",
+    "scripts/check_electrical.py": "808407b9e13e16d28488a49adef050845fe51026a1ba0ad2cc45157fd63957a0",
     "scripts/check_order_readiness.py": "6e450c7803b2dfc1c9b8a7637eda631283d21a6933c5c07bc794b7d03064355d"
   },
   "pin_review": {

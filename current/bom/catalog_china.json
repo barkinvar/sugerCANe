@@ -1230,47 +1230,6 @@
     "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/LM339LVDR/21598795",
     "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
-  "LMR51420XDDCR": {
-    "mpn": "LMR51420XDDCR",
-    "manufacturer": "Texas Instruments",
-    "supplier": "JLCPCB",
-    "supplier_part": "C5246146",
-    "url": "https://jlcpcb.com/partdetail/C5246146",
-    "stock_observed": 4040,
-    "observed_date": "2026-09-10",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        1.0221
-      ],
-      [
-        10,
-        0.8544
-      ],
-      [
-        30,
-        0.7698
-      ],
-      [
-        100,
-        0.6868
-      ],
-      [
-        500,
-        0.6364
-      ],
-      [
-        1000,
-        0.6103
-      ]
-    ],
-    "lcsc": "C5246146",
-    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
-    "digikey_sku": "296-LMR51420XDDCRCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/LMR51420XDDCR/16705125"
-  },
   "LTST-C170KGKT": {
     "mpn": "LTST-C170KGKT",
     "manufacturer": "Lite-On",
@@ -2203,47 +2162,6 @@
     "digikey_url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP5030TA-3R3M/5429672",
     "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
-  "SRP7028A-100M": {
-    "mpn": "SRP7028A-100M",
-    "manufacturer": "Bourns",
-    "supplier": "JLCPCB",
-    "supplier_part": "C2687402",
-    "url": "https://jlcpcb.com/partdetail/C2687402",
-    "stock_observed": 5146,
-    "observed_date": "2026-09-10",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.9358
-      ],
-      [
-        10,
-        0.7731
-      ],
-      [
-        30,
-        0.6917
-      ],
-      [
-        100,
-        0.612
-      ],
-      [
-        500,
-        0.5631
-      ],
-      [
-        1000,
-        0.5387
-      ]
-    ],
-    "lcsc": "C2687402",
-    "digikey_sku": "SRP7028A-100MCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP7028A-100M/4876733",
-    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
-  },
   "STM32F042K6T6": {
     "mpn": "STM32F042K6T6",
     "manufacturer": "STMicroelectronics",
@@ -2532,5 +2450,89 @@
     "digikey_url": "",
     "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
     "previous_mpn": "CC0805JRNPO9BN300"
+  },
+  "LMR51430XDDCR": {
+    "mpn": "LMR51430XDDCR",
+    "manufacturer": "Texas Instruments",
+    "supplier": "JLCPCB",
+    "supplier_part": "C5185863",
+    "url": "https://jlcpcb.com/partdetail/C5185863",
+    "stock_observed": 8835,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.8479
+      ],
+      [
+        10,
+        0.6901
+      ],
+      [
+        30,
+        0.612
+      ],
+      [
+        100,
+        0.5322
+      ],
+      [
+        500,
+        0.4866
+      ],
+      [
+        1000,
+        0.4622
+      ]
+    ],
+    "lcsc": "C5185863",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "previous_mpn": "LMR51420XDDCR"
+  },
+  "SRP7028A-8R2M": {
+    "mpn": "SRP7028A-8R2M",
+    "manufacturer": "BOURNS",
+    "supplier": "JLCPCB",
+    "supplier_part": "C2041815",
+    "url": "https://jlcpcb.com/partdetail/C2041815",
+    "stock_observed": 111,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        1.8407
+      ],
+      [
+        10,
+        1.5575
+      ],
+      [
+        30,
+        1.4013
+      ],
+      [
+        100,
+        1.2255
+      ],
+      [
+        500,
+        1.1474
+      ],
+      [
+        1000,
+        1.1132
+      ]
+    ],
+    "lcsc": "C2041815",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "previous_mpn": "SRP7028A-100M"
   }
 }

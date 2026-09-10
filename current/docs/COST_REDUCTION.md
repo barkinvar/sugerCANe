@@ -1,23 +1,23 @@
 # Rev H cost and assembly basis
 
-The selected build uses **JLCPCB for 129 SMT placements** and **DigiKey for the user-soldered STM32F042K6T6**. The ten-board parts estimate is **$26.46 per board before SMT attrition**, or about **$27.34** with conservative JLC allowances. Two optional spare MCUs add about **$6.55 per batch**. PCB, factory assembly, inspection, shipping and taxes are additional.
+The selected build uses **JLCPCB for 129 SMT placements** and **DigiKey for the user-soldered STM32F042K6T6**. The ten-board parts estimate is **$27.08 per board before SMT attrition**, or about **$27.96** with conservative JLC allowances. Two optional spare MCUs add about **$6.55 per batch**. PCB, factory assembly, inspection, shipping and taxes are additional.
 
 | Ten-board basis | Parts per board |
 |---|---:|
-| JLC factory parts before attrition | $14.48 |
+| JLC factory parts before attrition | $15.10 |
 | User-fitted MCU, ten through-hole parts and three caps | $11.98 |
-| Combined before attrition | **$26.46** |
-| JLC factory parts including conservative allowance | $15.36 |
-| Combined including conservative allowance | **$27.34** |
+| Combined before attrition | **$27.08** |
+| JLC factory parts including conservative allowance | $15.98 |
+| Combined including conservative allowance | **$27.96** |
 
 The earlier all-factory plan used a provisional $2.4981 MCU price despite zero JLC stock. DigiKey's observed ten-piece price is $3.277. Moving U5 to user assembly raises the parts estimate about $0.78 per board, and removes one factory feeder ($1.53 per order at the posted Standard rate). It avoids the separate JLC MCU procurement step. Actual savings in procurement fees or lead time require a quote.
 
 | Boards | Parts purchasing per board before attrition | Lot parts purchasing |
 |---|---:|---:|
-| 1 | $33.48 | $33.48 |
-| 5 | $29.59 | $147.95 |
-| 10 | $26.46 | $264.62 |
-| 25 | $24.34 | $608.57 |
+| 1 | $34.21 | $34.21 |
+| 5 | $30.32 | $151.60 |
+| 10 | $27.08 | $270.82 |
+| 25 | $24.96 | $624.07 |
 
 These figures exclude optional spares and factory charges, and do not establish supported assembly quantities or available stock for every lot. The JLC check covers ten boards. The five/ten-board DigiKey import files include two extra MCUs, so their cart totals differ from the bare BOM arithmetic. Other parts may have minimum packs; see [cost_detail.csv](../bom/cost_detail.csv).
 

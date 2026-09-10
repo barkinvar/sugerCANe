@@ -57,6 +57,14 @@
       ]
     },
     {
+      "reference": "L1",
+      "fields": [
+        "mpn",
+        "note",
+        "value"
+      ]
+    },
+    {
       "reference": "R10",
       "fields": [
         "mpn"
@@ -105,6 +113,13 @@
       "reference": "R61",
       "fields": [
         "mpn"
+      ]
+    },
+    {
+      "reference": "U1",
+      "fields": [
+        "mpn",
+        "value"
       ]
     },
     {
@@ -192,7 +207,7 @@
       "ratings_verified": "-55\u2103~+155\u2103 120\u03a9 200V 250mW Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 1206 Chip Resistor - Surface Mount ROHS"
     }
   ],
-  "unchanged": "Sensor-power, protection, comparator/bias and CAN topology/values retained. Five passive MPN types use equal-value JLC parts; C25/C26 intentionally change from 30 pF to 20 pF for improved crystal startup gain margin. C1 uses the high-reflow Panasonic FT capacitor and size-D lands. MCU remains STM32F042K6T6; PB3 sends RGB data. J8 electrical pin numbers retained, physical pattern replaced.",
+  "unchanged": "Sensor-output current limits, protection, comparator/bias and CAN topology retained. Internal buck now uses LMR51430XDDCR with SRP7028A-8R2M, in unchanged footprints. Five passive MPN types use equal-value JLC parts; C25/C26 are 20 pF for crystal startup gain margin. C1 uses the high-reflow Panasonic FT capacitor and size-D lands. MCU remains STM32F042K6T6; PB3 sends RGB data. J8 electrical pin numbers retained, physical pattern replaced.",
   "board_mm": [
     52,
     74
@@ -202,8 +217,8 @@
   "area_change_from_rev_g_percent": -0.050192737251116566,
   "cost_10_board_purchase_USD": {
     "rev_g": 28.8123,
-    "rev_h": 26.462200000000003,
-    "added_vs_rev_g": -2.3500999999999976
+    "rev_h": 27.0823,
+    "added_vs_rev_g": -1.7300000000000004
   },
   "firmware": "Hardware 8 / app 0.9.0 / boot 1.1.0 / protocol 4. Rev H image tag prevents accidental cross-revision LED firmware.",
   "scope": "Circuit contract and procurement arithmetic; native CAD/copper verification and physical testing remain separate."

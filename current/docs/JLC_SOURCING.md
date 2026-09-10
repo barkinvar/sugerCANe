@@ -1,12 +1,12 @@
 # JLCPCB sourcing and assembly plan
 
-The selected build uses **54 JLC SMT types / 129 top-side placements**. **U5 / STM32F042K6T6 is purchased from DigiKey and hand soldered by the user**, together with the existing ten through-hole parts. The BOM, CPL and factory stencil all omit U5. The MCU footprint is unchanged. C25/C26 now use 20 pF clock-load capacitors in their existing footprints. [Complete ordering guide](FACTORY_ORDER.md).
+The selected build uses **54 JLC SMT types / 129 top-side placements**. **U5 / STM32F042K6T6 is purchased from DigiKey and hand soldered by the user**, together with the existing ten through-hole parts. The BOM, CPL and factory stencil all omit U5. The MCU footprint is unchanged. C25/C26 use 20 pF clock-load capacitors; U1/L1 use LMR51430XDDCR and SRP7028A-8R2M. All four retain their footprints. [Complete ordering guide](FACTORY_ORDER.md).
 
-The September 10, 2026, 03:43–04:05 UTC public JLC checks found enough orderable stock for all **54 factory types at ten boards**, including displayed attrition/minimums. U9 has 25 available and L2 has 39. No inventory is reserved. Final electrical simulation review, factory stack/process/inspection confirmation and quotation remain pending; the package is REVIEW_ONLY. Older simulation evidence is not a fresh pass for the sourced BOM.
+The September 10, 2026, 03:43–05:13 UTC public JLC checks found enough orderable stock for all **54 factory types at ten boards**, including displayed attrition/minimums. U9 has 25 available and L2 has 39. No inventory is reserved. Final electrical simulation review, factory stack/process/inspection confirmation and quotation remain pending; the package is REVIEW_ONLY. Older simulation evidence is not a fresh pass for the sourced BOM.
 
 ## Implemented substitutions
 
-The following six sourced types cover nine placements. Five retain their previous values; C25/C26 intentionally change from 30 pF to 20 pF after the final crystal startup review. Footprints and nets are retained. The separate C1 update below also changes its footprint. A subsequent user-requested [branch cleanup](ROUTING_RULES.md) changes routing only; fresh CAD/DC checks and renders accompany it. Rev H firmware, MCU, component positions and four-layer stack remain unchanged.
+The following six sourced types cover nine placements. Five retain their previous values; C25/C26 intentionally change from 30 pF to 20 pF after the final crystal startup review. Footprints and nets are retained. The separate C1 update below changes its footprint; the U1/L1 margin correction below retains its footprints. A subsequent user-requested [branch cleanup](ROUTING_RULES.md) changes routing only; fresh CAD/DC checks and renders accompany it. Rev H firmware, MCU, component positions and four-layer stack remain unchanged.
 
 | References | Original MPN | Replacement MPN / JLC code | Specification |
 |---|---|---|---|
@@ -23,7 +23,13 @@ C25/C26 now use **20 pF**, 5%, 50 V C0G/NP0 parts. The previous 30 pF loading re
 
 All nine replacements are nonpolar two-terminal parts, so there is no active-device pinout conversion. Actual PCB pads are 1.025 × 1.4 mm for 0805 resistors, 1.125 × 1.75 mm for R42 and 1 × 1.45 mm for the two capacitors. The sourcing checker now verifies these reviewed dimensions and pad positions. Download provenance, hashes and the per-substitution review are in the [dated snapshot](../bom/jlc_sourcing.json).
 
-The remaining previously blank SMT codes now point to the existing exact manufacturer/MPN. The MCU, comparators, power switches, inductors and protection devices are retained; C1 is the separately reviewed exception among the capacitors. Matching is by manufacturer as well as MPN; listings from a different maker with the same short part name are not substitutes.
+The remaining previously blank SMT codes now point to the existing exact manufacturer/MPN. The MCU, comparators, sensor power switches, boost inductor and protection devices are retained. U1/L1 and C1 are the separately reviewed active/inductive/capacitor exceptions. Matching is by manufacturer as well as MPN; listings from a different maker with the same short part name are not substitutes.
+
+## Internal buck margin correction
+
+The final review replaces **U1 with LMR51430XDDCR / [C5185863](https://jlcpcb.com/partdetail/C5185863)** and **L1 with SRP7028A-8R2M / [C2041815](https://jlcpcb.com/partdetail/C2041815)**. The former 2 A buck lacked guaranteed current-limit headroom at the lowest-input maximum-charging corner. The 3 A replacement and 8.2 µH inductor pass all nine normal/charging/fault current-limit screens. L1 has 4 A RMS, 7.5 A saturation and 68 milliohm maximum DCR ratings. Pins, footprints, copper and placement are unchanged. Sensor output limits remain 300 mA per shared rail.
+
+The exact JLC listings had 8,835 and 111 orderable pieces respectively in the September 10, 05:13 UTC check. This pair adds **$0.62 per board** at ten boards. Current-limit calculations and downstream SPICE do not establish the upstream control-loop, dropout or thermal response. [Calculation](../reports/electrical/component_margins.json) · [Native change proof](../reports/manufacturing/buck_margin_change.json) · [TI datasheet](../sources/datasheets/ti_lmr51430.pdf) · [Bourns datasheet](../sources/datasheets/bourns_srp7028a.pdf).
 
 ## Assembly scope and remaining availability
 
@@ -47,7 +53,7 @@ Do not infer a reflow recipe from an LED's solder-heat reliability test. This au
 
 ## Cost and files
 
-With the user-fitted DigiKey MCU, ten-board parts are about **$26.46 per board before SMT attrition**, or **$27.34** with conservative JLC allowances. Two recommended spare MCUs add about $6.55 per batch, not per board. PCB, assembly, inspection, freight and taxes are additional. [Cost basis](COST_REDUCTION.md).
+With the user-fitted DigiKey MCU, ten-board parts are about **$27.08 per board before SMT attrition**, or **$27.96** with conservative JLC allowances. Two recommended spare MCUs add about $6.55 per batch, not per board. PCB, assembly, inspection, freight and taxes are additional. [Cost basis](COST_REDUCTION.md).
 
 Use Standard PCBA. Posted setup/stencil/loading plus two fixtures total **$132.81 per order** for 54 types; this is a partial fee estimate, not a quote. Confirm the panel/rails, 35 µm copper on every layer, reflow limits and U9 X-ray coverage before payment. [Review packet](../order/README.md).
 
@@ -82,7 +88,7 @@ Use Standard PCBA. Posted setup/stencil/loading plus two fixtures total **$132.8
 | EEEFT1H470AP | [C92059](https://jlcpcb.com/partdetail/C92059) | 1 | 10 | 1,695 | Enough |
 | ESD2CAN24DBZRQ1 | [C5736151](https://jlcpcb.com/partdetail/C5736151) | 1 | 10 | 2,427 | Enough |
 | LM339LVDR | [C22427665](https://jlcpcb.com/partdetail/C22427665) | 1 | 10 | 110 | Enough |
-| LMR51420XDDCR | [C5246146](https://jlcpcb.com/partdetail/C5246146) | 1 | 10 | 4,040 | Enough |
+| LMR51430XDDCR | [C5185863](https://jlcpcb.com/partdetail/C5185863) | 1 | 10 | 8,835 | Enough |
 | MMSZ12T1G | [C72599](https://jlcpcb.com/partdetail/C72599) | 1 | 14 | 6,517 | Enough |
 | 0805W8F1152T5E | [C17418](https://jlcpcb.com/partdetail/C17418) | 1 | 20 | 3,238 | Enough |
 | RC0805FR-0713KL | [C137592](https://jlcpcb.com/partdetail/C137592) | 1 | 20 | 13,578 | Enough |
@@ -106,7 +112,7 @@ Use Standard PCBA. Posted setup/stencil/loading plus two fixtures total **$132.8
 | SMBJ22A-E3/52 | [C3698580](https://jlcpcb.com/partdetail/C3698580) | 1 | 12 | 177 | Enough |
 | SN74AHCT1G125DBVR | [C7484](https://jlcpcb.com/partdetail/C7484) | 1 | 12 | 16,214 | Enough |
 | SRP5030TA-3R3M | [C2042118](https://jlcpcb.com/partdetail/C2042118) | 1 | 10 | 39 | Enough |
-| SRP7028A-100M | [C2687402](https://jlcpcb.com/partdetail/C2687402) | 1 | 10 | 5,146 | Enough |
+| SRP7028A-8R2M | [C2041815](https://jlcpcb.com/partdetail/C2041815) | 1 | 10 | 111 | Enough |
 | TCAN3413DR | [C22433320](https://jlcpcb.com/partdetail/C22433320) | 1 | 10 | 2,422 | Enough |
 | TPS2553DBVR-1 | [C111738](https://jlcpcb.com/partdetail/C111738) | 1 | 10 | 13,065 | Enough |
 | TPS259620DDAR | [C2155773](https://jlcpcb.com/partdetail/C2155773) | 1 | 10 | 25 | Enough |

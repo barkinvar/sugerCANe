@@ -1,9 +1,17 @@
 {
-  "result": "PASS normal-load buck and crystal gain screens; simultaneous-fault rail regulation is not guaranteed",
+  "result": "PASS buck current-limit, inductor and crystal gain screens; physical qualification pending",
   "sources": [
     {
+      "url": "https://www.ti.com/lit/ds/symlink/lmr51430.pdf",
+      "section": "SLUSEF4A tables 7.5, 9.1; sections 8.3.6 and 9.2.2"
+    },
+    {
       "url": "https://www.ti.com/lit/ds/symlink/lmr51420.pdf",
-      "section": "SLUSEF6C tables 7.5, 9.1; sections 8.3.11 and 9.2.2"
+      "section": "SLUSEF6C table 7.5; previous-part comparison only"
+    },
+    {
+      "url": "https://www.bourns.com/docs/product-datasheets/srp7028a.pdf",
+      "section": "June 2024 electrical table and inductance/current curves"
     },
     {
       "url": "https://www.st.com/resource/en/datasheet/stm32f042t6.pdf",
@@ -24,66 +32,223 @@
         "protected_input_V": 5.523631951480582,
         "condition": "normal",
         "output_load_A": 1.4604173114206689,
-        "worst_valley_A": 1.4392274430418903,
-        "worst_peak_A": 1.4999717323943886,
-        "valley_limit_min_A": 1.7,
-        "peak_limit_min_A": 2.7,
+        "worst_valley_A": 1.4345760085197194,
+        "worst_peak_A": 1.5086544101691077,
+        "valley_limit_min_A": 2.75,
+        "peak_limit_min_A": 3.67,
+        "inductor_rms_A": 1.4606828298421703,
+        "below_both_minimum_limits": true
+      },
+      {
+        "protected_input_V": 5.523631951480582,
+        "condition": "12V_max_charging_5V_normal",
+        "output_load_A": 1.7444972570205424,
+        "worst_valley_A": 1.718655954119593,
+        "worst_peak_A": 1.7927343557689812,
+        "valley_limit_min_A": 2.75,
+        "peak_limit_min_A": 3.67,
+        "inductor_rms_A": 1.7447195435515566,
         "below_both_minimum_limits": true
       },
       {
         "protected_input_V": 5.523631951480582,
         "condition": "both_limiters_max",
         "output_load_A": 1.9502712894194163,
-        "worst_valley_A": 1.9290814210406377,
-        "worst_peak_A": 1.989825710393136,
-        "valley_limit_min_A": 1.7,
-        "peak_limit_min_A": 2.7,
-        "below_both_minimum_limits": false
+        "worst_valley_A": 1.9244299865184669,
+        "worst_peak_A": 1.9985083881678551,
+        "valley_limit_min_A": 2.75,
+        "peak_limit_min_A": 3.67,
+        "inductor_rms_A": 1.9504701249268672,
+        "below_both_minimum_limits": true
       },
       {
         "protected_input_V": 12.0,
         "condition": "normal",
         "output_load_A": 1.4604173114206689,
-        "worst_valley_A": 1.2409520343689422,
-        "worst_peak_A": 1.870085828583892,
-        "valley_limit_min_A": 1.7,
-        "peak_limit_min_A": 2.7,
+        "worst_valley_A": 1.1927767296502705,
+        "worst_peak_A": 1.9600130640587459,
+        "valley_limit_min_A": 2.75,
+        "peak_limit_min_A": 3.67,
+        "inductor_rms_A": 1.48862935688567,
+        "below_both_minimum_limits": true
+      },
+      {
+        "protected_input_V": 12.0,
+        "condition": "12V_max_charging_5V_normal",
+        "output_load_A": 1.7444972570205424,
+        "worst_valley_A": 1.476856675250144,
+        "worst_peak_A": 2.244093009658619,
+        "valley_limit_min_A": 2.75,
+        "peak_limit_min_A": 3.67,
+        "inductor_rms_A": 1.7681824901397665,
         "below_both_minimum_limits": true
       },
       {
         "protected_input_V": 12.0,
         "condition": "both_limiters_max",
         "output_load_A": 1.9502712894194163,
-        "worst_valley_A": 1.7308060123676896,
-        "worst_peak_A": 2.3599398065826396,
-        "valley_limit_min_A": 1.7,
-        "peak_limit_min_A": 2.7,
-        "below_both_minimum_limits": false
+        "worst_valley_A": 1.682630707649018,
+        "worst_peak_A": 2.4498670420574933,
+        "valley_limit_min_A": 2.75,
+        "peak_limit_min_A": 3.67,
+        "inductor_rms_A": 1.9714859220948908,
+        "below_both_minimum_limits": true
       },
       {
         "protected_input_V": 22.0,
         "condition": "normal",
         "output_load_A": 1.4604173114206689,
-        "worst_valley_A": 1.1640851311957592,
-        "worst_peak_A": 2.0135707145071673,
-        "valley_limit_min_A": 1.7,
-        "peak_limit_min_A": 2.7,
+        "worst_valley_A": 1.0990366038293156,
+        "worst_peak_A": 2.134994632257862,
+        "valley_limit_min_A": 2.75,
+        "peak_limit_min_A": 3.67,
+        "inductor_rms_A": 1.5114574348708831,
+        "below_both_minimum_limits": true
+      },
+      {
+        "protected_input_V": 22.0,
+        "condition": "12V_max_charging_5V_normal",
+        "output_load_A": 1.7444972570205424,
+        "worst_valley_A": 1.383116549429189,
+        "worst_peak_A": 2.419074577857735,
+        "valley_limit_min_A": 2.75,
+        "peak_limit_min_A": 3.67,
+        "inductor_rms_A": 1.7874438546934814,
         "below_both_minimum_limits": true
       },
       {
         "protected_input_V": 22.0,
         "condition": "both_limiters_max",
         "output_load_A": 1.9502712894194163,
-        "worst_valley_A": 1.6539391091945066,
-        "worst_peak_A": 2.5034246925059147,
-        "valley_limit_min_A": 1.7,
-        "peak_limit_min_A": 2.7,
+        "worst_valley_A": 1.588890581828063,
+        "worst_peak_A": 2.6248486102566093,
+        "valley_limit_min_A": 2.75,
+        "peak_limit_min_A": 3.67,
+        "inductor_rms_A": 1.9887792628300829,
         "below_both_minimum_limits": true
       }
     ],
     "normal_load_pass": true,
+    "all_current_limit_corners_pass": true,
+    "previous_design": {
+      "mpn": "LMR51420XDDCR",
+      "inductor_mpn": "SRP7028A-100M",
+      "corners": [
+        {
+          "protected_input_V": 5.523631951480582,
+          "condition": "normal",
+          "output_load_A": 1.4604173114206689,
+          "worst_valley_A": 1.4392274430418903,
+          "worst_peak_A": 1.4999717323943886,
+          "valley_limit_min_A": 1.7,
+          "peak_limit_min_A": 2.7,
+          "inductor_rms_A": 1.4605958513234807,
+          "below_both_minimum_limits": true
+        },
+        {
+          "protected_input_V": 5.523631951480582,
+          "condition": "12V_max_charging_5V_normal",
+          "output_load_A": 1.7444972570205424,
+          "worst_valley_A": 1.7233073886417638,
+          "worst_peak_A": 1.7840516779942621,
+          "valley_limit_min_A": 1.7,
+          "peak_limit_min_A": 2.7,
+          "inductor_rms_A": 1.7446467256033196,
+          "below_both_minimum_limits": false
+        },
+        {
+          "protected_input_V": 5.523631951480582,
+          "condition": "both_limiters_max",
+          "output_load_A": 1.9502712894194163,
+          "worst_valley_A": 1.9290814210406377,
+          "worst_peak_A": 1.989825710393136,
+          "valley_limit_min_A": 1.7,
+          "peak_limit_min_A": 2.7,
+          "inductor_rms_A": 1.9504049886471941,
+          "below_both_minimum_limits": false
+        },
+        {
+          "protected_input_V": 12.0,
+          "condition": "normal",
+          "output_load_A": 1.4604173114206689,
+          "worst_valley_A": 1.2409520343689422,
+          "worst_peak_A": 1.870085828583892,
+          "valley_limit_min_A": 1.7,
+          "peak_limit_min_A": 2.7,
+          "inductor_rms_A": 1.4794463451402171,
+          "below_both_minimum_limits": true
+        },
+        {
+          "protected_input_V": 12.0,
+          "condition": "12V_max_charging_5V_normal",
+          "output_load_A": 1.7444972570205424,
+          "worst_valley_A": 1.5250319799688157,
+          "worst_peak_A": 2.1541657741837654,
+          "valley_limit_min_A": 1.7,
+          "peak_limit_min_A": 2.7,
+          "inductor_rms_A": 1.7604583052159366,
+          "below_both_minimum_limits": true
+        },
+        {
+          "protected_input_V": 12.0,
+          "condition": "both_limiters_max",
+          "output_load_A": 1.9502712894194163,
+          "worst_valley_A": 1.7308060123676896,
+          "worst_peak_A": 2.359939806582639,
+          "valley_limit_min_A": 1.7,
+          "peak_limit_min_A": 2.7,
+          "inductor_rms_A": 1.964561240324476,
+          "below_both_minimum_limits": false
+        },
+        {
+          "protected_input_V": 22.0,
+          "condition": "normal",
+          "output_load_A": 1.4604173114206689,
+          "worst_valley_A": 1.1640851311957592,
+          "worst_peak_A": 2.013570714507167,
+          "valley_limit_min_A": 1.7,
+          "peak_limit_min_A": 2.7,
+          "inductor_rms_A": 1.4949286335070424,
+          "below_both_minimum_limits": true
+        },
+        {
+          "protected_input_V": 22.0,
+          "condition": "12V_max_charging_5V_normal",
+          "output_load_A": 1.7444972570205424,
+          "worst_valley_A": 1.4481650767956324,
+          "worst_peak_A": 2.2976506601070406,
+          "valley_limit_min_A": 1.7,
+          "peak_limit_min_A": 2.7,
+          "inductor_rms_A": 1.7734890965366137,
+          "below_both_minimum_limits": true
+        },
+        {
+          "protected_input_V": 22.0,
+          "condition": "both_limiters_max",
+          "output_load_A": 1.9502712894194163,
+          "worst_valley_A": 1.6539391091945066,
+          "worst_peak_A": 2.5034246925059147,
+          "valley_limit_min_A": 1.7,
+          "peak_limit_min_A": 2.7,
+          "inductor_rms_A": 1.9762466946501722,
+          "below_both_minimum_limits": true
+        }
+      ]
+    },
+    "inductor": {
+      "mpn": "SRP7028A-8R2M",
+      "inductance_uH": 8.2,
+      "tolerance_fraction": 0.2,
+      "RMS_rating_A": 4.0,
+      "saturation_rating_A": 7.5,
+      "maximum_DCR_ohm": 0.068,
+      "buck_maximum_peak_limit_A": 6.68,
+      "nominal_ripple_ratio_at22V": 0.31707808519000824,
+      "worst_capacitive_ripple_V": 0.01445845833338117,
+      "scope": "Published ratings; saturation is the specified inductance-drop point, not a hot guarantee. Ripple calculation excludes capacitor ESR/ESL and control-loop transients."
+    },
     "simultaneous_faults_regulation_guaranteed": false,
-    "interpretation": "Normal load stays below both guaranteed minimum current thresholds. At low input, the simultaneous maximum limiter budget can exceed the minimum valley limit. Shared-rail sag/current limiting is possible during simultaneous faults; the previous <2 A budget did not establish fault-regulation margin."
+    "interpretation": "The original 2 A buck failed minimum-current-limit headroom at the low-input maximum-charging corner and some simultaneous-fault corners. The 3 A buck with 8.2 uH L1 passes all nine current-limit corners. This does not establish dropout, source-impedance, closed-loop or thermal behavior; fault-free MCU/CAN operation still requires bench qualification."
   },
   "oscillator": {
     "corners": [
@@ -151,10 +316,10 @@
     "interpretation": "20 pF capacitors exceed gain margin 5 at all stated stray/tolerance corners, including the former failing 10 pF stray corner. Actual stray capacitance, frequency pulling, drive and startup remain unmeasured. R20 permits drive adjustment on the prototype."
   },
   "input_hashes": {
-    "hardware/design/circuit.json": "c86045fb7c7640b5a57a6350eb52c042cfa7665a9ae73f909f96ae7354323569",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
-    "reports/electrical/electrical_checks.json": "ad27f7e16f6cbff19cc68ec084b22389250dfca7802d8e8bf8d0f183b9c52f6f",
-    "scripts/check_component_margins.py": "6e252db201a83d7906cf04a4f19624b11fc0e84c2dd643abe801728e3bacc452"
+    "hardware/design/circuit.json": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
+    "reports/electrical/electrical_checks.json": "8875e81607c1f1e6f8048b847b20cfb0e09b9fd53edc5eb51d696a563bd6568c",
+    "scripts/check_component_margins.py": "b22e5cd608fe72794a2f6b511fdff67210027de332add8ff80f2befa8b9d35ef"
   },
-  "limitations": "No switching simulation of the upstream buck: both TI public LMR51420X/XF models are encrypted. No extracted crystal parasitics, motional parameters, oscillator silicon model, drive-level or board thermal measurements. Calculations use the stated component and engineering bounds."
+  "limitations": "No switching simulation of the upstream buck; the downstream simulations retain an idealized upstream source. No extracted crystal parasitics, motional parameters, oscillator silicon model, drive-level or board thermal measurements. Calculations use the stated component and engineering bounds; current-limit headroom alone is not a transient/dropout guarantee."
 }

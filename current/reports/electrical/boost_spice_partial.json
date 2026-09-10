@@ -1,10 +1,10 @@
 {
   "result": "PASS transient screening only",
-  "scope": "Eight completed standalone power cases for the final BOM. Separate coupled-startup traces are still running; this partial report cannot approve a full release.",
+  "scope": "Rev H vendor TPS61085/TPS259620/TPS2553-1 models, 27C typical silicon. Syntax-only ngspice ports; no PSpice/board correlation. Combined startup with a 4ms source ramp plus separate boost load/fault-limit steps, eFuse fault/reset cases and 5V-switch fault/reset. Not physical qualification.",
   "source_assumptions": "Boost cases: ideal upstream 5 V source, 120 milliohm series resistance, 25.92 uF internal capacitance, 0.45 A concurrent logic/RGB/5 V load. The standalone 5 V switch case instead has 1.3 A concurrent internal load. Standalone eFuse cases use an ideal 12.003 V source with 120 milliohm series resistance and 66 uF reservoir. Upstream buck control loop/current limit and PCB/cable inductance are not modeled.",
   "passive_assumptions": "Boost C60 and reservoir use explicit derated/nameplate case values; C61/C65/C71 1uF nominal. Inductor 3.3uH and 32mOhm DCR, linear below its 8A/20%-inductance-drop domain. External capacitor ESR .1ohm. One explicitly identified current-limit surrogate uses a 2.92k test resistor instead of fitted R62=2.61k, giving typical-model current below the calculated 314.699mA minimum, with 120uF external capacitance. This tests reduced charging headroom, not all silicon corners. D5 uses the B240A vendor model; D6 behavioral clamp approximates static conduction only. Q2 enable uses 2ohm final shunt resistance; standalone fault tests apply a finite 1us conductance ramp to avoid a discontinuous behavioral-device transition. No transistor timing claim. eFuse thermal timing is manufacturer-model-only, not temperature qualification.",
   "numerical_notes": "Gear integration, 1fF numerical node shunt, relative tolerance .003. Combined startup uses KLU/xtrtol=2 with maximum step 50 ns and a complete KLU/xtrtol=7 repeat at maximum step 25 ns; both must pass the same electrical criteria and the voltage/peak-current comparison. Original xtrtol=1 stopped numerically near 28.971 ms and is retained as an incomplete diagnostic. Vendor helper names prefixed; duplicate PARAMS removed and Boolean XOR syntax translated. No semiconductor parameters tuned. Standalone zero-supply operating-point warnings are accepted only after successful transient OP fallback and complete transient output. Other warnings/errors fail. Extreme values use all adaptive timesteps; plots decimated.",
-  "circuit_sha256": "c86045fb7c7640b5a57a6350eb52c042cfa7665a9ae73f909f96ae7354323569",
+  "circuit_sha256": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
   "script_sha256": "44d4c0f4d6fd7944d2dda0f4b9387391c9e35fdd984e57e5e4b8072c41089209",
   "simulator": "******\n** ngspice-42 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2023, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Sun Mar 31 20:15:14 UTC 2024\n******",
   "sources": [
@@ -280,7 +280,5 @@
     "output_difference_V": 0.000770717448548397,
     "source_current_difference_A": 0.0003857031251037202,
     "scope": "Complete fresh 130ms traces, 10us sample grid; exclude +/-10us at imposed switch edges. Raw extrema separately pass."
-  },
-  "reported_utc": "2026-09-10T04:09:53.973536+00:00",
-  "fresh_run": true
+  }
 }

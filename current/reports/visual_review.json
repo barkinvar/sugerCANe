@@ -1,6 +1,6 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-10T04:21:57.310072+00:00",
+  "reviewed_utc": "2026-09-10T05:19:56.624988+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
@@ -36,39 +36,39 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "79374f77ef504cbb4fa7938c81bd464e7a64ca1d86ab7603cf1e5fdf4d32422f",
-      "scope": "All 42 pages inspected in contact sheets; changed pre-order, component-margin and purchasing pages also inspected individually. Updated 20 pF clock-capacitor decision, gain calculation, simultaneous-fault limitation and incomplete coupled-startup status are legible. No clipping or overlapping tables observed.",
-      "reviewed_utc": "2026-09-10T04:21:57.310072+00:00"
+      "sha256": "9e71086dfb0556f21c2c338390aba56613bc327d0f857584d3ec2618ee002263",
+      "scope": "All 42 pages inspected in contact sheets; component-margin, purchasing and cost pages also inspected individually. Updated 3 A LMR51430, 8.2 uH L1, current-limit margin, costs and incomplete coupled-startup status are legible. No clipping or overlapping tables observed.",
+      "reviewed_utc": "2026-09-10T05:19:56.624988+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
-      "sha256": "bbd9e5b5e3571baa1228773f7661b9240b88439969fca15ba6eca24c9a41a18f",
-      "scope": "All three pages visually inspected; only page 1 differs from 7d08c29. C25/C26 show 20 pF, CC0805JRNPO9BN200 and C105173. Current costs and factory/manual assignments are legible.",
-      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
+      "sha256": "be8724eedb8ed1873a0cfa6a7a7c6f4e9cfde6f2095ceab36755b03543e9a18f",
+      "scope": "All three pages visually inspected. U1 is LMR51430XDDCR / C5185863; L1 is SRP7028A-8R2M / C2041815; C25/C26 retain 20 pF / C105173. Current costs and factory/manual assignments are legible.",
+      "reviewed_utc": "2026-09-10T05:19:56.624988+00:00"
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
-      "sha256": "c5c6ef78289e4c9b54409e244efdcf285e947b2b44dd9141e795b1c6b71e44eb",
-      "scope": "All 2 pages raster-identical to reviewed 7d08c29 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
-      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
+      "sha256": "e7dc21c8d7a6062516a350c82182b058824ce9b62762ed0a089518554b752786",
+      "scope": "All 2 pages raster-identical to reviewed 7047295 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
+      "reviewed_utc": "2026-09-10T05:19:56.624988+00:00"
     },
     {
       "file": "output/assembly/schematic.pdf",
-      "sha256": "4ba0c92a37c835e5ad7dab220badb823557d38dbb61b71f642c07113c7a4736d",
-      "scope": "Controller page 6 visually inspected: C25/C26 now 20 pF, same connections and positions. Other nine pages are raster-identical to reviewed 7d08c29 at 1.5x scale.",
-      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
+      "sha256": "92f8108bbe3ad4a52e05a452e32e9272d3b3fad64c1a3b470fd44fba52f44133",
+      "scope": "Power page 2 visually inspected: U1 now LMR51430XDDCR and L1 8.2 uH, same connections and positions. Other nine pages raster-identical to reviewed 7047295 at 1.5x scale.",
+      "reviewed_utc": "2026-09-10T05:19:56.624988+00:00"
     },
     {
       "file": "output/assembly/top_assembly.pdf",
-      "sha256": "b5d48f4adf7aca04ea0524bfe5c52a5bf5d16a2a80691c0cdef0b7488c7eaa38",
-      "scope": "All 1 pages raster-identical to reviewed 7d08c29 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
-      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
+      "sha256": "5f248267550b580ca672f2f530571885dd73741fa8954d31f9621193d4e97844",
+      "scope": "All 1 pages raster-identical to reviewed 7047295 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
+      "reviewed_utc": "2026-09-10T05:19:56.624988+00:00"
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "sha256": "db14a817358a4f530a4bc6d31e8a3ada66acf2c35cd04395e3fe658cab9d1019",
-      "scope": "All 4 pages raster-identical to reviewed 7d08c29 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
-      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
+      "sha256": "912d3eeee3133c22737a8ec255db525bbd9efd803c1d349aba1267d957e400bd",
+      "scope": "All 4 pages raster-identical to reviewed 7047295 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
+      "reviewed_utc": "2026-09-10T05:19:56.624988+00:00"
     },
     {
       "file": "reports/electrical/converter_loop.png",
@@ -79,9 +79,9 @@
     },
     {
       "file": "output/assembly/bottom_markings.pdf",
-      "sha256": "c015a78c7e02bdb0c29c2bd438f037f4075b57c768c7a01b69c4c5ed9285772e",
-      "scope": "All 1 pages raster-identical to reviewed 7d08c29 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
-      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
+      "sha256": "ec2949750f60c1eca02a5bb58139d82f767b0d358d1d55303179184246b18ad2",
+      "scope": "All 1 pages raster-identical to reviewed 7047295 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
+      "reviewed_utc": "2026-09-10T05:19:56.624988+00:00"
     },
     {
       "file": "reports/electrical/input_spice.png",
@@ -124,15 +124,15 @@
     },
     {
       "file": "output/fabrication/FRC_Sensor_CAN-NPTH-drl_map.pdf",
-      "sha256": "414073701305e986214524b06e4bf9b89792fe732355e3d6b56b79661762b6fc",
-      "scope": "All 1 pages raster-identical to reviewed 7d08c29 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
-      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
+      "sha256": "d1af411fbdcb90f7516c02deca6976dbc094528a0904fc976ee3e001c1abe516",
+      "scope": "All 1 pages raster-identical to reviewed 7047295 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
+      "reviewed_utc": "2026-09-10T05:19:56.624988+00:00"
     },
     {
       "file": "output/fabrication/FRC_Sensor_CAN-PTH-drl_map.pdf",
-      "sha256": "37d1498b10f258024937f462f15a479af35bfa3b1cac8374faf129379888a49f",
-      "scope": "All 1 pages raster-identical to reviewed 7d08c29 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
-      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
+      "sha256": "a13d20446533b6e6238f238407d6d57f930a5b2b7314ab68cffd95e5324126d1",
+      "scope": "All 1 pages raster-identical to reviewed 7047295 at 1.5x scale; only PDF export metadata changed. Preceding visual review retained.",
+      "reviewed_utc": "2026-09-10T05:19:56.624988+00:00"
     },
     {
       "file": "output/review/routing_widths.png",
@@ -156,9 +156,9 @@
     },
     {
       "file": "output/review/gerber_top_copper.svg",
-      "sha256": "d9a9606632db97b98d22462872363a486efc6acdf7b31f50c051a1aa720b9676",
-      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00",
-      "scope": "SVG differs from reviewed 7d08c29 only in timestamp and generated clip/marker IDs; matching regenerated PNG is byte-identical. Actual Gerber geometry unchanged, verified in final_native_recheck.json."
+      "sha256": "bc58066cfabc08e1dd530f01bbb0b88c37c22715d5bf68234cf46ffc89826470",
+      "reviewed_utc": "2026-09-10T05:19:56.624988+00:00",
+      "scope": "SVG differs from reviewed 7047295 only in timestamp and generated clip/marker IDs; matching regenerated PNG is byte-identical. Actual Gerber geometry unchanged, verified in final_native_recheck.json."
     },
     {
       "file": "output/review/gerber_inner_1_copper.png",
@@ -168,9 +168,9 @@
     },
     {
       "file": "output/review/gerber_inner_1_copper.svg",
-      "sha256": "77cf0b7886cee4279bb89d46a74ae0af89ec58b7f9bae5f9df7e46e2aaee9626",
-      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00",
-      "scope": "SVG differs from reviewed 7d08c29 only in timestamp and generated clip/marker IDs; matching regenerated PNG is byte-identical. Actual Gerber geometry unchanged, verified in final_native_recheck.json."
+      "sha256": "c38388460d7893cc8e6d551a8f3fd6176597040b24dcfa8d90605d7a8ce990e9",
+      "reviewed_utc": "2026-09-10T05:19:56.624988+00:00",
+      "scope": "SVG differs from reviewed 7047295 only in timestamp and generated clip/marker IDs; matching regenerated PNG is byte-identical. Actual Gerber geometry unchanged, verified in final_native_recheck.json."
     },
     {
       "file": "output/review/gerber_inner_2_copper.png",
@@ -180,21 +180,21 @@
     },
     {
       "file": "output/review/gerber_inner_2_copper.svg",
-      "sha256": "0c4988a9050e2da2faee5f83fbf4943a07fccf7d6a62b86b2b2a42a9d73ca98b",
-      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00",
-      "scope": "SVG differs from reviewed 7d08c29 only in timestamp and generated clip/marker IDs; matching regenerated PNG is byte-identical. Actual Gerber geometry unchanged, verified in final_native_recheck.json."
+      "sha256": "3faee5832555befabf376b50434931fabac277a17bc4862d7b0405717bf45795",
+      "reviewed_utc": "2026-09-10T05:19:56.624988+00:00",
+      "scope": "SVG differs from reviewed 7047295 only in timestamp and generated clip/marker IDs; matching regenerated PNG is byte-identical. Actual Gerber geometry unchanged, verified in final_native_recheck.json."
     },
     {
       "file": "output/review/gerber_bottom_copper.svg",
-      "sha256": "493a35b2950c3cd48c038d28fbb5df731220ef5c9a80d6d2bcb52d527f60cb9b",
-      "reviewed_utc": "2026-09-10T04:17:41.201677+00:00",
-      "scope": "SVG differs from reviewed 7d08c29 only in timestamp and generated clip/marker IDs; matching regenerated PNG is byte-identical. Actual Gerber geometry unchanged, verified in final_native_recheck.json."
+      "sha256": "e70fa556075d932a9df40f473cdd732567ec8292c3e27a221245f77824157d37",
+      "reviewed_utc": "2026-09-10T05:19:56.624988+00:00",
+      "scope": "SVG differs from reviewed 7047295 only in timestamp and generated clip/marker IDs; matching regenerated PNG is byte-identical. Actual Gerber geometry unchanged, verified in final_native_recheck.json."
     },
     {
       "file": "output/documentation/ORDER_GUIDE.pdf",
-      "sha256": "03d8194dcb3a3b21b866c85aa806f7c2658cb5678e67d21908e43d5eca1c2385",
-      "scope": "All three pages visually inspected at full rendered size. 20 pF capacitor change, original user-soldered LQFP MCU, factory stencil omission, shopping quantities, costs and unresolved release gates are legible.",
-      "reviewed_utc": "2026-09-10T04:21:57.310072+00:00"
+      "sha256": "5d86e0410a00bfd7f12b9a9810b9bdaaadfb03b82dc7a4e3045f47165dd0f636",
+      "scope": "Changed pages 1 and 3 visually inspected at full rendered size; page 2 raster-identical to reviewed 7047295. Exact buck/inductor and clock parts, original user-soldered LQFP MCU, factory stencil omission, shopping quantities, costs and unresolved release gates are legible.",
+      "reviewed_utc": "2026-09-10T05:19:56.624988+00:00"
     },
     {
       "file": "output/documentation/MCU_hand_solder_map.pdf",
@@ -203,7 +203,7 @@
       "reviewed_utc": "2026-09-10T04:17:41.201677+00:00"
     }
   ],
-  "limitations": "Visual and file-integrity review of current 20 pF clock-capacitor correction and manual-MCU order plan. No physical board has been tested. Full coupled-startup simulation and supplier process/stack/inspection confirmation remain pending; visual review does not clear those gates.",
+  "limitations": "Visual and file-integrity review of current buck/inductor and clock-capacitor corrections and manual-MCU order plan. No physical board has been tested. Full coupled-startup simulation and supplier process/stack/inspection confirmation remain pending. The upstream buck control loop is outside the available SPICE evidence; visual review does not clear these gates.",
   "bottom_branding": {
     "extra_ink_mm2": 0.0,
     "unexplained_missing_ink_mm2": 0.0,
@@ -1157,5 +1157,90 @@
     },
     "board_change_evidence": "reports/manufacturing/clock_load_change.json",
     "scope": "Capacitor values/MPNs only; board geometry unchanged. Existing render reviews remain applicable through exact native/export comparison."
+  },
+  "buck_margin_document_review": {
+    "baseline_commit": "7047295",
+    "rendered_page_comparison": {
+      "output/documentation/SC12_RevH_Handbook.pdf": {
+        "before_pages": 42,
+        "after_pages": 42,
+        "changed_pages": [
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          26,
+          27,
+          28,
+          30,
+          32,
+          37,
+          41
+        ]
+      },
+      "output/documentation/BOM_RevH_SC12.pdf": {
+        "before_pages": 3,
+        "after_pages": 3,
+        "changed_pages": [
+          1,
+          2,
+          3
+        ]
+      },
+      "output/mechanical/mechanical_drawing.pdf": {
+        "before_pages": 2,
+        "after_pages": 2,
+        "changed_pages": []
+      },
+      "output/assembly/schematic.pdf": {
+        "before_pages": 10,
+        "after_pages": 10,
+        "changed_pages": [
+          2
+        ]
+      },
+      "output/assembly/top_assembly.pdf": {
+        "before_pages": 1,
+        "after_pages": 1,
+        "changed_pages": []
+      },
+      "output/assembly/gerber_copper_review.pdf": {
+        "before_pages": 4,
+        "after_pages": 4,
+        "changed_pages": []
+      },
+      "output/assembly/bottom_markings.pdf": {
+        "before_pages": 1,
+        "after_pages": 1,
+        "changed_pages": []
+      },
+      "output/fabrication/FRC_Sensor_CAN-NPTH-drl_map.pdf": {
+        "before_pages": 1,
+        "after_pages": 1,
+        "changed_pages": []
+      },
+      "output/fabrication/FRC_Sensor_CAN-PTH-drl_map.pdf": {
+        "before_pages": 1,
+        "after_pages": 1,
+        "changed_pages": []
+      },
+      "output/documentation/ORDER_GUIDE.pdf": {
+        "before_pages": 3,
+        "after_pages": 3,
+        "changed_pages": [
+          1,
+          3
+        ]
+      },
+      "output/documentation/MCU_hand_solder_map.pdf": {
+        "before_pages": 1,
+        "after_pages": 1,
+        "changed_pages": []
+      }
+    },
+    "board_change_evidence": "reports/manufacturing/buck_margin_change.json",
+    "scope": "U1/L1 values and MPNs only, same bodies and footprints; native geometry unchanged. Existing board render reviews remain applicable through exact native/export comparison. No new 3D render claimed."
   }
 }

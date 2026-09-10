@@ -46,7 +46,8 @@ iboost=v12max*.31/(vin_boost_min*.80)
 fault_boost=v12max*efuse_max/(vin_boost_min*.80)
 max_buck_load=fault_boost+switch['5V_limit_A'][1]+logic
 normal_buck_load=iboost+.31+logic
-assert max_buck_load<2.0 and normal_buck_load<2.0
+assert M['U1']['mpn']=='LMR51430XDDCR' and M['L1']['mpn']=='SRP7028A-8R2M' and M['L1']['value']=='8.2uH'
+assert max_buck_load<2.0 and normal_buck_load<2.0 # Retained load budget, below the new 3 A device rating.
 # Worst normal load, minimum input, cascaded efficiency and connector/fuse budget.
 iin=1
 for _ in range(100):
@@ -55,7 +56,7 @@ for _ in range(100):
 assert vregmax/vprot<.95 and iin<1.9
 assert vregmin>=4.75 and vregmax<=5.5 and v12min>11.5 and v12max<12.5
 assert M['F1']['mpn']=='0451003.MRL'
-power={'input_range_V':[6,22],'sensor_load_A_per_rail_shared':.3,'logic_allowance_A':logic,'converter_efficiency_assumptions':[.8,.8],'entry_resistance_assumption_ohm':.276,'input_current_at_6V_A':iin,'protected_input_at_6V_V':vprot,'max_duty_budget':vregmax/vprot,'input_fuse_A':3,'input_fuse_normal_current_fraction':iin/3,'LDO_loss_budget_W':(vregmax-3.3)*logic,'buck_peak_ripple_at22V_A':vregmax*(1-vregmax/22)/(8e-6*450e3),'sensor5_min_before_distribution_loss_V':vregmin-.31*.135,'sensor5_max_DC_budget_V':vregmax,'sensor12_DC_budget_V':[v12min-.31*.131,v12max],'boost_PCB_drop_allowance_V':.12,'boost_min_input_V':vin_boost_min,'boost_normal_input_A':iboost,'buck_normal_output_A':normal_buck_load,'buck_both_limiters_max_plus_logic_A':max_buck_load,'boost_fault_input_budget_A':fault_boost,'buck_continuous_rating_A':2.,'note':'Efficiency, wiring resistance and PCB drops are explicit planning allowances. Current sharing, inrush and both simultaneous faults need scope/thermal tests. Below 6V is brownout territory.'}
+power={'input_range_V':[6,22],'sensor_load_A_per_rail_shared':.3,'logic_allowance_A':logic,'converter_efficiency_assumptions':[.8,.8],'entry_resistance_assumption_ohm':.276,'input_current_at_6V_A':iin,'protected_input_at_6V_V':vprot,'max_duty_budget':vregmax/vprot,'input_fuse_A':3,'input_fuse_normal_current_fraction':iin/3,'LDO_loss_budget_W':(vregmax-3.3)*logic,'buck_peak_ripple_at22V_A':vregmax*(1-vregmax/22)/(8.2e-6*.8*450e3),'sensor5_min_before_distribution_loss_V':vregmin-.31*.135,'sensor5_max_DC_budget_V':vregmax,'sensor12_DC_budget_V':[v12min-.31*.131,v12max],'boost_PCB_drop_allowance_V':.12,'boost_min_input_V':vin_boost_min,'boost_normal_input_A':iboost,'buck_normal_output_A':normal_buck_load,'buck_both_limiters_max_plus_logic_A':max_buck_load,'boost_fault_input_budget_A':fault_boost,'buck_continuous_rating_A':3.,'note':'Efficiency, wiring resistance and PCB drops are explicit planning allowances. Current sharing, inrush and both simultaneous faults need scope/thermal tests. Below 6V is brownout territory.'}
 # Effective output bank from Samsung typical DC-bias curve plus explicit derating factors.
 source=R/'sources/datasheets/samsung_CL31A226_characteristics.json'
 data=json.loads(source.read_text());points=next(x for x in data if x['graphType']=='DCBias')['selectPartsList'][0]['chartList'][0]['data'];points=sorted((float(p['x']),float(p['y'])) for p in points)

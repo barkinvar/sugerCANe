@@ -1,66 +1,67 @@
 {
   "result": "PASS",
-  "board_sha256": "c952852c40a31c822243454b4e582ebd6ec874605cd13d7cc48c5f6edaebb7c9",
+  "board_sha256": "d602e5e695dbcb4d593324f623fb78ef1320d2919ea743ff8b019f09fb034d15",
   "erc_violations": 0,
   "drc_violations": 0,
   "unconnected_items": 0,
   "fabrication_files": {
     "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": {
       "geometry_matches_previous_order": true,
-      "export_sha256": "b2dd3f3ee0364d8c8cc225f1c938a0875beb253993b63fc305929e1ed49b2bf2"
+      "export_sha256": "d3232e8c05fbbc220a5f08f0046a87c04846f0ca4636e4df7d99dc75af8f6aeb"
     },
     "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": {
       "geometry_matches_previous_order": true,
-      "export_sha256": "63b9d1de6051baf9a06fca4cd0b9644155710348c252880a532b1669b874973c"
+      "export_sha256": "2f99d75d9a2124ad811e532582c7c0391d1b26f0c1e0e37f9f1c48cf875af4d2"
     },
     "output/fabrication/FRC_Sensor_CAN-job.gbrjob": {
       "geometry_matches_previous_order": true,
-      "export_sha256": "ef19e0c0430717098621cca171aceed8aebdc631422efc547b7b5c788ddee77e"
+      "export_sha256": "dee8a955e8d43c1e8fe277d49f9884799ea9261736ec0379956b0f72e94907d4"
     },
     "output/fabrication/FRC_Sensor_CAN-PTH.drl": {
       "geometry_matches_previous_order": true,
-      "export_sha256": "8fe0f1652f2fefbce329190e781acd8cc608fd2df1917662e4cfd0c65b2b3adc"
+      "export_sha256": "b75dc3b2dcc881fcd90daac258e565a44cf0caea6f3cdd5d01189471e6c23a7e"
     },
     "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": {
       "geometry_matches_previous_order": true,
-      "export_sha256": "50d10b74a54443687cfe97029a5b6c8bbf6d2ad286432baa5944e454b0533622"
+      "export_sha256": "e6f0fb4bad8dcf803f81841ae145e9e995c6cd20cde1de7a78b2c393ef51db24"
     },
     "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": {
       "geometry_matches_previous_order": true,
-      "export_sha256": "772ec46d9444baf37c203e5ce1fac18d358830968d7c27be25c6665b08a06474"
+      "export_sha256": "36d3090360a22954e2a3c44d59f6972887700932327e5ae78aaf55f37f24a446"
     },
     "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": {
       "geometry_matches_previous_order": true,
-      "export_sha256": "1d4ba24eb3d62d872bd171752a6fb011590593d013cac7993edf3a4ec189e5cd"
+      "export_sha256": "778ffbd0b77d45e3f3bf9c6901372a59a44d5d8255c0efef6b918d67241ce1e8"
     },
     "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": {
       "geometry_matches_previous_order": true,
-      "export_sha256": "8a4ab0a5ce60d23deee6bdb77c732cbecf61b0cb9901e14d27143ede8769e2cb"
+      "export_sha256": "424a318e07878cf9e2bf173b84a2938c132284b84254ea532b5e3c1424008b50"
     },
     "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": {
       "geometry_matches_previous_order": true,
-      "export_sha256": "2fb68a621d987978c9ecad361edcdf1ffd0e1083292a2502d764e848270dba61"
+      "export_sha256": "995d8dab1edf5c0ed193b1e7b2bf3864e14abde1fa7118673ef9abcf451ab589"
     },
     "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": {
       "geometry_matches_previous_order": true,
-      "export_sha256": "acf0bf401ebbfb2e9cae82fa6bab1dd5358156413fcbb315cc089ceab6520db4"
+      "export_sha256": "675665a9971349c90a6e68b16a624fd81302608c385ccee79d8f1aaa9764280b"
     },
     "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": {
       "geometry_matches_previous_order": true,
-      "export_sha256": "8fe8ed01bb743bf65867a5031a3b550b468e1187ec79d3238a8a158508c47af2"
+      "export_sha256": "2f8fa24997afa618dd6e2f205ee438108ca17af321df3a5234e522dbbc59dbe3"
     },
     "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": {
       "geometry_matches_previous_order": true,
-      "export_sha256": "00db56bcf92f63e8e8f20954d28f10c8e74e2eea6222e876cbd9e5bcbf32e892"
+      "export_sha256": "78845260a7e3957dc5ac909ffb0ffc318c64259c2451f02c21b25d0c0b1b4f8f"
     },
     "output/fabrication/FRC_Sensor_CAN-NPTH.drl": {
       "geometry_matches_previous_order": true,
-      "export_sha256": "4b4207e4d431f34e7a9a3283e5941d6ec1c277294f07a5367f45dbfcfb0bc908"
+      "export_sha256": "6ceae18d6d5bbf811876e44c6f664b5e4f5b8939b1d3f60b78eb20982ff9c13e"
     },
     "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": {
       "geometry_matches_previous_order": true,
-      "export_sha256": "4523912300fc747ca6adf017beb5de2fcad8d76787e191cfe7c52a2f16489394"
+      "export_sha256": "41b6c5a74135c29e4e789e06843d4a9664fda2c5d0c055b47ccf5a727da4e3b9"
     }
   },
-  "scope": "Fresh final-BOM native ERC/DRC and manufacturing checks pass. All 14 fabrication exports preserve the previous order geometry after excluding timestamps and the two reviewed capacitor value/MPN attributes. Exact native change proof is in clock_load_change.json."
+  "scope": "All 14 fabrication files compare exactly after removing creation timestamps and restoring U1/L1 value/MPN Gerber attributes. Native board restoration is separately recorded in buck_margin_change.json. Fresh ERC/DRC have zero violations and zero unconnected items.",
+  "baseline_commit": "7047295"
 }

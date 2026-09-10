@@ -25,6 +25,9 @@ with zipfile.ZipFile(packet) as z:
     clock_caps=clock_caps[0]
     assert {ref.strip() for ref in clock_caps['Designator'].split(',')}=={'C25','C26'}
     assert clock_caps['LCSC Part #']=='C105173' and clock_caps['Comment']=='CC0805JRNPO9BN200'
+    for ref,mpn,code in [('U1','LMR51430XDDCR','C5185863'),('L1','SRP7028A-8R2M','C2041815')]:
+        row=next(r for r in bom if r['Designator']==ref)
+        assert row['Comment']==mpn and row['LCSC Part #']==code
     assert factory==Counter(r['Designator'] for r in cpl)
     assert 'U5' not in factory and manual['U5']==1
     assert set(factory).isdisjoint(manual) and set(factory)|set(manual)==all_parts
@@ -68,6 +71,7 @@ report=dict(result='PASS assembly-package integrity; manufacturing release remai
     other_fabrication_files_byte_identical=13,all_package_hashes_verified=True,
     shopping_imports_verified=True,packet_sha256=sha(packet.read_bytes()),
     clock_capacitors=dict(references=['C25','C26'],value='20pF',jlc_part='C105173'),
+    upstream_buck='LMR51430XDDCR with SRP7028A-8R2M',
     board_sha256=sha((R/'hardware/FRC_Sensor_CAN.kicad_pcb').read_bytes()),
     limitations='File integrity and assembly scope only; no new simulation, physical qualification or supplier allocation.')
 (R/'reports/manufacturing/order_package.json').write_text(json.dumps(report,indent=2)+'\n')

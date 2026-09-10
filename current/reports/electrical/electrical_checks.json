@@ -61,7 +61,7 @@
     "input_fuse_A": 3,
     "input_fuse_normal_current_fraction": 0.5753237300959152,
     "LDO_loss_budget_W": 0.28836208748998293,
-    "buck_peak_ripple_at22V_A": 1.1063068061729966,
+    "buck_peak_ripple_at22V_A": 1.349154641674386,
     "sensor5_min_before_distribution_loss_V": 4.871299057272681,
     "sensor5_max_DC_budget_V": 5.222413916599886,
     "sensor12_DC_budget_V": [
@@ -74,7 +74,7 @@
     "buck_normal_output_A": 1.4604173114206689,
     "buck_both_limiters_max_plus_logic_A": 1.9502712894194163,
     "boost_fault_input_budget_A": 1.2944972570205424,
-    "buck_continuous_rating_A": 2.0,
+    "buck_continuous_rating_A": 3.0,
     "note": "Efficiency, wiring resistance and PCB drops are explicit planning allowances. Current sharing, inrush and both simultaneous faults need scope/thermal tests. Below 6V is brownout territory."
   },
   "current_limiters": {
