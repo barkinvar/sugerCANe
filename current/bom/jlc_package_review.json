@@ -1,6 +1,6 @@
 {
   "checked_utc": "2026-09-10T21:13:23.968315+00:00",
-  "board_sha256": "859fb2086981529432f13e17f79136d3fe0666b081be5559e058b1ec7fb04586",
+  "board_sha256": "ab3a65634b4c6ac7060d4e9328e048e01889160c2ea81d1b36b56be4f89f1d6b",
   "catalog_endpoint": "https://jlcpcb.com/api/overseas-pcb-order/v1/smtComponentShopCart/getComponentDetail?componentCode={lcsc}",
   "scope": "54 factory MPNs / 129 SMT placements on compact branch. Manufacturer drawings reviewed for case size, lead pitch, terminal positions and selected polarity/pin-1 details. Generic KiCad lands are accepted on dimensional overlap, not asserted identical to all vendor recommendations. No factory placement preview or process qualification has been received.",
   "drawing_bundle": "sources/datasheets/jlc_package_drawings.pdf",
@@ -3456,7 +3456,7 @@
   "limitations": "Package fit and file consistency only. Does not establish solder-joint yield, nozzle/fixture clearance, thermal qualification, electrical function or factory part allocation. Body envelope screen includes lead span and conservative family bounds; fuse envelope is nominal.",
   "artwork_only_update": {
     "proof": "reports/compact/easteregg.json",
-    "previous_board_sha256": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
-    "scope": "Only board-level front-silkscreen rectangles and locked artwork group added. All original native content byte-identical; package and placement checks rerun."
+    "previous_board_sha256": "859fb2086981529432f13e17f79136d3fe0666b081be5559e058b1ec7fb04586",
+    "scope": "Front pixel illustration and 90-degree sugarCANe wordmark beside C1 only. Removing both locked artwork groups and their rectangles reproduces the audited 69d38a0 PCB byte for byte. All packages, placements and electrical geometry unchanged; checks rerun."
   }
 }

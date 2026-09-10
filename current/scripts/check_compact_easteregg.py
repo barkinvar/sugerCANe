@@ -5,7 +5,7 @@ import json
 import math
 import subprocess
 import pcbnew as p
-from apply_compact_easteregg import ROOT, PIXEL, payload, rectangles
+from apply_compact_easteregg import ROOT, PIXEL, WORD_PIXEL, payload, rectangles, wordmark_rectangles
 
 BASELINE = '69d38a0'
 board_path = ROOT / 'hardware/FRC_Sensor_CAN.kicad_pcb'
@@ -31,6 +31,13 @@ def distance(a, b):
 
 
 obstacles = []
+for via in board.GetTracks():
+    if isinstance(via, p.PCB_VIA):
+        # Keep ink off via annuli too, even when mask-tented. A tent is not a
+        # filled/planarized hole and can leave a visible pit in the wordmark.
+        x, y = p.ToMM(via.GetPosition())
+        radius = p.ToMM(via.GetWidth(p.F_Cu))/2
+        obstacles.append(('via ' + via.m_Uuid.AsString(), (x-radius, y-radius, x+radius, y+radius)))
 for fp in board.GetFootprints():
     ref = fp.GetReference()
     for pad in fp.Pads():
@@ -54,7 +61,10 @@ for g in board.GetDrawings():
         obstacles.append(('existing front marking', bounds(g)))
     elif g.GetLayer() == p.Edge_Cuts:
         obstacles.append(('board edge', bounds(g)))
-nearest = sorted((min(distance(rect, bb) for rect in rectangles()), label)
+all_rectangles = rectangles() + wordmark_rectangles()
+art_to_wordmark = min(distance(a, b) for a in rectangles() for b in wordmark_rectangles())
+assert art_to_wordmark >= .20, 'Wordmark overlaps the cane illustration'
+nearest = sorted((min(distance(rect, bb) for rect in all_rectangles), label)
                  for label, bb in obstacles)
 assert nearest[0][0] >= .20, ('Artwork clearance below 0.20 mm', nearest[0])
 unchanged_fabrication = {}
@@ -71,12 +81,17 @@ report = dict(result='PASS', baseline_commit=BASELINE,
               baseline_board_sha256=hashlib.sha256(before).hexdigest(),
               non_artwork_native_content_byte_identical=True,
               layer='F.Silkscreen', pixel_mm=PIXEL, rectangles=len(rectangles()),
+              wordmark=dict(text='sugarCANe', rotation_degrees=90, pixel_mm=WORD_PIXEL,
+                            location='Left of C1; reads bottom to top', rectangles=len(wordmark_rectangles()),
+                            bounds_mm=[min(a[0] for a in wordmark_rectangles()), min(a[1] for a in wordmark_rectangles()),
+                                       max(a[2] for a in wordmark_rectangles()), max(a[3] for a in wordmark_rectangles())]),
               artwork_bounds_mm=[min(a[0] for a in rectangles()), min(a[1] for a in rectangles()),
                                  max(a[2] for a in rectangles()), max(a[3] for a in rectangles())],
               minimum_required_clearance_mm=.20,
+              illustration_to_wordmark_clearance_mm=art_to_wordmark,
               unchanged_fabrication_files=unchanged_fabrication,
               closest_obstacles=[dict(clearance_mm=d, item=label) for d, label in nearest[:12]],
-              scope='Conservative native bounding-box clearance to front courtyards, pad mask openings, holes, existing silk and edges. Only added front silk and its locked group; all original native content is byte-identical, including all four copper layers, zones, pads, vias, net assignments and stack.',
+              scope='Conservative native bounding-box clearance to front courtyards, pad mask openings, holes, via annuli, existing silk and edges. Only added front silk and its locked groups; all original native content is byte-identical, including all four copper layers, zones, pads, vias, net assignments and stack.',
               input_hashes={str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
                             for path in [Path(__file__), ROOT/'scripts/apply_compact_easteregg.py',
                                          ROOT/'hardware/artwork/compact-pixel-cane.svg']})

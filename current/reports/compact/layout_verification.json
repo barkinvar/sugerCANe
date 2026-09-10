@@ -2065,6 +2065,6 @@
     ],
     "scope": "Same filled bottom-copper polygon and adjacent In2 GND plane; nominal geometry only, not return-path impedance qualification."
   },
-  "board_sha256": "859fb2086981529432f13e17f79136d3fe0666b081be5559e058b1ec7fb04586",
+  "board_sha256": "ab3a65634b4c6ac7060d4e9328e048e01889160c2ea81d1b36b56be4f89f1d6b",
   "limitations": "Checks nominal layout/electrical identity, rigidly transformed critical copper and exact reviewed local repairs. Supply interconnects are rerouted and independently DC-screened. Native DRC, routing style, exported copper checks and physical qualification remain separate."
 }

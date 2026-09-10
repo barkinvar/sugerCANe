@@ -1247,7 +1247,7 @@
     "scope": "All segment widths and shared-endpoint width transitions. Different widths at pad/via contacts are intentional branch sizing; net reasons cover routes on different layers. Electrical load and copper-drop limits are checked separately."
   },
   "scope": "Routing geometry only. Copper round end caps are normal; no curved centerlines. Pad/via contacts allow local transitions; free branches require explicit nodes and chamfered geometry. Native DRC and independent Gerber connectivity/clearance must also pass.",
-  "board_sha256": "859fb2086981529432f13e17f79136d3fe0666b081be5559e058b1ec7fb04586",
+  "board_sha256": "ab3a65634b4c6ac7060d4e9328e048e01889160c2ea81d1b36b56be4f89f1d6b",
   "source_hashes": {
     "scripts/check_routing.py": "127b56c0e23b1f476f1b77167850893426dc27652ffa3714d57d1c37742bcce8",
     "scripts/export_routing_geometry.py": "184ae2226e3b37849ae200420e333a554e60ba3c86afb542729f1c7de62b7224",

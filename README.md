@@ -4,7 +4,7 @@
 
 A compact interface for **three NPN, PNP or logic sensors** on an FRC robot. Each port has a removable **5 V / 12 V power jumper**; input type is configured in software. CAN provides sensor readings, device-ID changes and recoverable firmware updates.
 
-**sugarCANe** is the product name; SC12 Rev H remains the hardware identity. A tiny pixel-cane island sits on the front, below the upper-left mounting hole and above the large capacitor. The underside has 79 SMT parts, a small wordmark and TERM/GND service labels. [Front render](current/output/review/board_top.png) · [bottom render](current/output/review/board_bottom.png).
+**sugarCANe** is the product name; SC12 Rev H remains the hardware identity. A tiny pixel-cane island sits on the front, below the upper-left mounting hole and above the large capacitor. A vertical pixel wordmark reads bottom to top beside C1. The underside has 79 SMT parts, a small wordmark and TERM/GND service labels. [Front render](current/output/review/board_top.png) · [bottom render](current/output/review/board_bottom.png).
 
 **Isolated compact layout branch (`codex/compact-board`); power transient screening passes; factory qualification remains pending.**
 

@@ -1,33 +1,33 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-10T21:29:14.705415+00:00",
+  "reviewed_utc": "2026-09-10T21:38:12.846765+00:00",
   "reviewer": "Codex visual inspection",
   "variant": "Rev H compact 44 x 48 mm prototype",
-  "board_sha256": "859fb2086981529432f13e17f79136d3fe0666b081be5559e058b1ec7fb04586",
+  "board_sha256": "ab3a65634b4c6ac7060d4e9328e048e01889160c2ea81d1b36b56be4f89f1d6b",
   "artifacts": [
     {
       "file": "output/review/board_top.png",
-      "sha256": "50668b218ed9a85835868ca1d9c5c521ccc63d918ed11ce62b6bf2d0dedb48b2",
-      "scope": "Refreshed board renders, top assembly drawing and handbook pages 1-8 visually inspected. Front pixel-cane island is visible below H1 and above C1; existing labels remain readable. Bottom appearance retained. Original non-artwork native content and all non-front-silkscreen fabrication files are byte-identical, checked separately in reports/compact/easteregg.json.",
-      "reviewed_utc": "2026-09-10T21:29:14.705415+00:00"
+      "sha256": "79cce82ec2c6f6aace5308cce50bd725c7b890aac27ac96437eca40a26312e59",
+      "scope": "Final board renders, a close C1 crop, top assembly drawing and handbook pages 1-8 visually inspected. The 90-degree sugarCANe wordmark reads bottom to top left of C1; all letters clear the via hole below the s. Pixel-cane island and existing labels retained. Separate artwork check verifies unchanged native electrical content and non-front-silkscreen fabrication files.",
+      "reviewed_utc": "2026-09-10T21:38:12.846765+00:00"
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "0aed1c4860b123975efb11ed884d1876552343bda2310c5b1260cf357b388436",
-      "scope": "Refreshed board renders, top assembly drawing and handbook pages 1-8 visually inspected. Front pixel-cane island is visible below H1 and above C1; existing labels remain readable. Bottom appearance retained. Original non-artwork native content and all non-front-silkscreen fabrication files are byte-identical, checked separately in reports/compact/easteregg.json.",
-      "reviewed_utc": "2026-09-10T21:29:14.705415+00:00"
+      "sha256": "f947216939e699ba6e9d38e9459f9374bfe5a5e9a36d2ecedf2665500c384d17",
+      "scope": "Final board renders, a close C1 crop, top assembly drawing and handbook pages 1-8 visually inspected. The 90-degree sugarCANe wordmark reads bottom to top left of C1; all letters clear the via hole below the s. Pixel-cane island and existing labels retained. Separate artwork check verifies unchanged native electrical content and non-front-silkscreen fabrication files.",
+      "reviewed_utc": "2026-09-10T21:38:12.846765+00:00"
     },
     {
       "file": "output/review/board_3d_final.png",
-      "sha256": "483e0ea9fb2377ec10225caada3dbada4ee1a60538abaa3270d12eba138e85b8",
-      "scope": "Refreshed board renders, top assembly drawing and handbook pages 1-8 visually inspected. Front pixel-cane island is visible below H1 and above C1; existing labels remain readable. Bottom appearance retained. Original non-artwork native content and all non-front-silkscreen fabrication files are byte-identical, checked separately in reports/compact/easteregg.json.",
-      "reviewed_utc": "2026-09-10T21:29:14.705415+00:00"
+      "sha256": "eb590d308fdbdd1527ea310dc6bdc1d19992a3635233cd9385f9b1890139e3b8",
+      "scope": "Final board renders, a close C1 crop, top assembly drawing and handbook pages 1-8 visually inspected. The 90-degree sugarCANe wordmark reads bottom to top left of C1; all letters clear the via hole below the s. Pixel-cane island and existing labels retained. Separate artwork check verifies unchanged native electrical content and non-front-silkscreen fabrication files.",
+      "reviewed_utc": "2026-09-10T21:38:12.846765+00:00"
     },
     {
       "file": "output/review/board_connectors.png",
-      "sha256": "508cf1f7f401a22b7ecfd0fe6a10098d8648dd93948b92a341443c809ad561e5",
-      "scope": "Refreshed board renders, top assembly drawing and handbook pages 1-8 visually inspected. Front pixel-cane island is visible below H1 and above C1; existing labels remain readable. Bottom appearance retained. Original non-artwork native content and all non-front-silkscreen fabrication files are byte-identical, checked separately in reports/compact/easteregg.json.",
-      "reviewed_utc": "2026-09-10T21:29:14.705415+00:00"
+      "sha256": "c60ae8cf1b96e90c23fadc256d3ce6dfb6f470a813ca8c731d3bc8415bf257cc",
+      "scope": "Final board renders, a close C1 crop, top assembly drawing and handbook pages 1-8 visually inspected. The 90-degree sugarCANe wordmark reads bottom to top left of C1; all letters clear the via hole below the s. Pixel-cane island and existing labels retained. Separate artwork check verifies unchanged native electrical content and non-front-silkscreen fabrication files.",
+      "reviewed_utc": "2026-09-10T21:38:12.846765+00:00"
     },
     {
       "file": "output/review/size_comparison.png",
@@ -91,9 +91,9 @@
     },
     {
       "file": "output/assembly/top_assembly.pdf",
-      "sha256": "d4184f2dd2761e359bd46e7e4551facf2ef4e9c7a27719feaa7da4c58627f91a",
-      "scope": "Refreshed board renders, top assembly drawing and handbook pages 1-8 visually inspected. Front pixel-cane island is visible below H1 and above C1; existing labels remain readable. Bottom appearance retained. Original non-artwork native content and all non-front-silkscreen fabrication files are byte-identical, checked separately in reports/compact/easteregg.json.",
-      "reviewed_utc": "2026-09-10T21:29:14.705415+00:00"
+      "sha256": "45bffe938c1797ef5caa167edf1df08bfe25e1ab02bfe9fc3dd04091ba2df63e",
+      "scope": "Final board renders, a close C1 crop, top assembly drawing and handbook pages 1-8 visually inspected. The 90-degree sugarCANe wordmark reads bottom to top left of C1; all letters clear the via hole below the s. Pixel-cane island and existing labels retained. Separate artwork check verifies unchanged native electrical content and non-front-silkscreen fabrication files.",
+      "reviewed_utc": "2026-09-10T21:38:12.846765+00:00"
     },
     {
       "file": "output/assembly/bottom_assembly.pdf",
@@ -115,9 +115,9 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "ae3a269e41d721e92a204dfb8e8637f2afa48fdafeca6c82193b81ce387140aa",
-      "scope": "Refreshed board renders, top assembly drawing and handbook pages 1-8 visually inspected. Front pixel-cane island is visible below H1 and above C1; existing labels remain readable. Bottom appearance retained. Original non-artwork native content and all non-front-silkscreen fabrication files are byte-identical, checked separately in reports/compact/easteregg.json.",
-      "reviewed_utc": "2026-09-10T21:29:14.705415+00:00"
+      "sha256": "fb98f7c34cb0762564cb0e30ef406250df63afa65c6411d2211e5f6a13b844c0",
+      "scope": "Final board renders, a close C1 crop, top assembly drawing and handbook pages 1-8 visually inspected. The 90-degree sugarCANe wordmark reads bottom to top left of C1; all letters clear the via hole below the s. Pixel-cane island and existing labels retained. Separate artwork check verifies unchanged native electrical content and non-front-silkscreen fabrication files.",
+      "reviewed_utc": "2026-09-10T21:38:12.846765+00:00"
     },
     {
       "file": "output/review/u8_switch_route_fix.png",
