@@ -20,6 +20,7 @@ kicad-python scripts/check_variant.py > reports/variant.log
 bash scripts/export_manufacturing.sh > reports/manufacturing-export.log 2>&1
 kicad-python scripts/export_board_manifest.py
 python scripts/build_factory_files.py
+python scripts/build_factory_stencil.py
 python scripts/verify_manufacturing.py > reports/manufacturing/export-parity.log
 python scripts/verify_gerber_geometry.py > reports/manufacturing/geometry.log
 python scripts/verify_gerber_connectivity.py > reports/manufacturing/connectivity.log

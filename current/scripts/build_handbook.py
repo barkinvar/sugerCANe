@@ -2,6 +2,7 @@
 from pathlib import Path
 from html import escape
 import re
+import argparse
 import markdown
 from bs4 import BeautifulSoup, NavigableString
 from reportlab.lib import colors
@@ -25,7 +26,7 @@ pdfmetrics.registerFontFamily('Guide', normal='Guide', bold='Guide-Bold', italic
 INK = colors.HexColor('#162c3d')
 BLUE = colors.HexColor('#116c8a')
 styles = {
-    'body': ParagraphStyle('Body', fontName='Guide', fontSize=9, leading=12, spaceAfter=6, textColor=INK),
+    'body': ParagraphStyle('Body', fontName='Guide', fontSize=9, leading=11.5, spaceAfter=5, textColor=INK, allowWidows=0, allowOrphans=0),
     'chapter': ParagraphStyle('Chapter', fontName='Guide-Bold', fontSize=21, leading=27, spaceAfter=16, textColor=INK, keepWithNext=True),
     'heading': ParagraphStyle('Heading', fontName='Guide-Bold', fontSize=12, leading=16, spaceBefore=10, spaceAfter=7, textColor=BLUE, keepWithNext=True),
     'small': ParagraphStyle('Small', fontName='Guide', fontSize=7.4, leading=10, spaceAfter=4, textColor=INK),
@@ -53,6 +54,12 @@ def inline(node):
 def convert(path):
     html = markdown.markdown(path.read_text().replace('—','-').replace('–','-').replace('‑','-'), extensions=['tables', 'fenced_code'])
     soup = BeautifulSoup(html, 'html.parser')
+    for link in soup.find_all('a', href=True):
+        href=link['href']
+        if not re.match(r'^[a-z]+:|^#',href):
+            filename,sep,fragment=href.partition('#')
+            local=(path.parent/filename).resolve().relative_to(ROOT.parent)
+            link['href']='https://github.com/barkinvar/sugerCANe/blob/main/'+local.as_posix()+(sep+fragment if sep else '')
     blocks = list(soup.children)
     # Each source document starts with its own title; the book has a chapter title.
     for n, block in enumerate(blocks):
@@ -82,6 +89,9 @@ def convert(path):
             for i, item in enumerate(block.find_all('li', recursive=False), 1):
                 label = f'{i}. ' if name == 'ol' else '• '
                 flow.append(Paragraph(escape(label) + inline(item), styles['body']))
+        elif name == 'blockquote':
+            for para in block.find_all('p', recursive=False):
+                flow.append(Paragraph(inline(para), styles['small']))
         elif name == 'pre':
             lines = block.get_text().rstrip().splitlines()
             # Paragraph wraps long literal lines, unlike an overflowing Preformatted.
@@ -145,6 +155,24 @@ def page(canvas, doc):
     canvas.drawString(42, 24, 'Unbuilt design — qualification measurements remain pending')
     canvas.drawRightString(553, 24, str(doc.page))
     canvas.restoreState()
+
+ap=argparse.ArgumentParser(description=__doc__)
+ap.add_argument('--order-guide',action='store_true',help='Build only the concise ordering guide')
+args=ap.parse_args()
+if args.order_guide:
+    styles['body'].spaceAfter=4.5
+    styles['body'].leading=11.5
+    styles['small'].spaceAfter=3
+    story=[Paragraph('sugarCANe / Rev H',styles['cover']),
+           Paragraph('Order and build guide',styles['heading']),
+           Paragraph('JLCPCB assembly + user-soldered DigiKey MCU',styles['body']),
+           Paragraph('Selected assembly plan. Final simulation review required before paying for fabrication.',styles['small']),
+           Spacer(1,12),*convert(ROOT/'docs/FACTORY_ORDER.md')]
+    doc=Guide(str(OUT/'ORDER_GUIDE.pdf'),pagesize=A4,leftMargin=42,rightMargin=42,topMargin=48,bottomMargin=43,
+              title='sugarCANe Rev H ordering guide',author='sugarCANe project')
+    doc.build(story,onFirstPage=page,onLaterPages=page)
+    print(OUT/'ORDER_GUIDE.pdf')
+    raise SystemExit(0)
 
 story = [Spacer(1, 33), Paragraph('sugarCANe', styles['cover']),
          Paragraph('Revision H SC12 · Prototype engineering and assembly guide', styles['heading']),

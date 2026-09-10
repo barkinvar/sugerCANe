@@ -1,0 +1,16 @@
+{
+  "result": "PASS assembly-package integrity; manufacturing release remains HOLD",
+  "factory_placements": 129,
+  "factory_mpn_types": 54,
+  "manual_parts": 11,
+  "finished_parts": 140,
+  "u5_bom_cpl_and_paste_omitted": true,
+  "u5_copper_pads_preserved": 32,
+  "u9_paste_apertures_preserved": 12,
+  "other_fabrication_files_byte_identical": 13,
+  "all_package_hashes_verified": true,
+  "shopping_imports_verified": true,
+  "packet_sha256": "a515146ac5e314a77c295a91674365a6c05ccbe738ed0896bf97843d45931365",
+  "board_sha256": "4d00abd563bfa88924e25474253365773afd8d0fa6c0d622cb002c53a29b7d28",
+  "limitations": "File integrity and assembly scope only; no new simulation, physical qualification or supplier allocation."
+}

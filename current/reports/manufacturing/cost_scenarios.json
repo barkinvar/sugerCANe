@@ -1,7 +1,7 @@
 {
   "date": "2026-09-09",
   "source": "https://jlcpcb.com/help/article/pcb-assembly-price",
-  "smt_mpn_types": 55,
+  "smt_mpn_types": 54,
   "economic_eligible": false,
   "economic_blockers": [
     [
@@ -24,26 +24,26 @@
     {
       "boards": 5,
       "service": "Standard",
-      "charged_feeder_types": 55,
-      "parts_per_board": 28.16,
-      "setup_stencil_feeders_fixture_per_order": 134.34,
-      "partial_per_board": 55.03
+      "charged_feeder_types": 54,
+      "parts_per_board": 29.58,
+      "setup_stencil_feeders_fixture_per_order": 132.81,
+      "partial_per_board": 56.14
     },
     {
       "boards": 10,
       "service": "Standard",
-      "charged_feeder_types": 55,
-      "parts_per_board": 25.68,
-      "setup_stencil_feeders_fixture_per_order": 134.34,
-      "partial_per_board": 39.11
+      "charged_feeder_types": 54,
+      "parts_per_board": 26.45,
+      "setup_stencil_feeders_fixture_per_order": 132.81,
+      "partial_per_board": 39.73
     },
     {
       "boards": 25,
       "service": "Standard",
-      "charged_feeder_types": 55,
-      "parts_per_board": 23.56,
-      "setup_stencil_feeders_fixture_per_order": 134.34,
-      "partial_per_board": 28.93
+      "charged_feeder_types": 54,
+      "parts_per_board": 24.33,
+      "setup_stencil_feeders_fixture_per_order": 132.81,
+      "partial_per_board": 29.64
     }
   ]
 }

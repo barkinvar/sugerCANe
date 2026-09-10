@@ -1,6 +1,6 @@
 # Rev H pre-fabrication review
 
-**Current order decision: HOLD.** The [JLC sourcing candidate](JLC_SOURCING.md) includes six earlier passive MPN substitutions and the C1 high-reflow capacitor/footprint replacement. Published electrical ratings and all track/via geometry are retained. C1’s previous peak-temperature conflict is resolved; factory dwell/profile confirmation remains required. Native CAD/manufacturing and BOM consistency are checked. New power/input simulations are deferred until user approval, and U5 still needs exact-part sourcing. No physical board has been tested.
+**Current order decision: HOLD.** The [JLC sourcing candidate](JLC_SOURCING.md) includes six earlier passive MPN substitutions and the C1 high-reflow capacitor/footprint replacement. Published electrical ratings and all track/via geometry are retained. C1’s previous peak-temperature conflict is resolved; factory dwell/profile confirmation remains required. Native CAD/manufacturing and BOM consistency are checked. New power/input simulations are deferred until user approval, and U5 is now assigned to user purchase/hand soldering from DigiKey. No physical board has been tested.
 
 The electrical results below describe the preceding BOM at commit `8d4deb4`. Eight standalone power cases, ten input cases and sixteen firmware waveform replays passed there; both full coupled-startup traces remained incomplete. Retained reports are baseline evidence and have not been revalidated against the substituted BOM.
 
@@ -35,7 +35,7 @@ All four layers retain nominal **35 µm (1 oz) copper**, now explicitly enforced
 | Local boost bypass below recommended value | C61 increased to 1 µF; 22 µF bulk C60 retained | Exact-MPN BOM/model/parity checks |
 | Buck input bypass left remote from U1 | C2/C3 moved beside VIN; explicit local top-side ground return, with bootstrap routing clear of it | Native path checks require C3→VIN below 2.2 mm and C2→VIN below 5.5 mm; fresh DRC and Gerber connectivity |
 
-The 5 V/12 V selection remains a removable 2 mm cap on each three-pin header. All 140 fitted parts remain on top: 130 SMT factory placements plus ten user-fitted through-hole parts. The PCB is 52 × 74 mm, four copper layers.
+The 5 V/12 V selection remains a removable 2 mm cap on each three-pin header. All 140 fitted parts remain on top: 129 factory SMT placements plus the user-fitted MCU and ten through-hole parts. The PCB is 52 × 74 mm, four copper layers.
 
 ## Evidence to read
 

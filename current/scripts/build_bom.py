@@ -4,6 +4,8 @@ import collections,csv,json
 R=Path(__file__).resolve().parents[1]
 parts=json.loads((R/'hardware/design/circuit.json').read_text())['parts']
 catalog=json.loads((R/'bom/catalog_china.json').read_text())
+plan=json.loads((R/'bom/assembly_plan.json').read_text())
+manual_refs=set(plan['hand_solder_references'])
 groups=collections.defaultdict(list)
 for ref,c in parts.items():
  if not c.get('exclude_bom'):groups[c['mpn']].append(ref)
@@ -12,7 +14,8 @@ def write(name,rows):
   w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
 rows=[]
 for mpn,refs in sorted(groups.items()):
- c,s=parts[refs[0]],catalog[mpn];manual=all(ref.startswith('J') for ref in refs);price=s['tiers'][0][1]
+ c,s=parts[refs[0]],catalog[mpn];manual=all(ref in manual_refs for ref in refs);price=s['tiers'][0][1]
+ assert manual or not manual_refs.intersection(refs), 'Split mixed factory/manual MPN groups explicitly'
  rows.append(dict(MPN=mpn,Manufacturer=s['manufacturer'],Quantity=len(refs),References=', '.join(refs),Value=c['value'],Footprint=c['footprint'],Voltage=c.get('voltage',''),Tolerance=c.get('tolerance',''),Power_W=c.get('rated_power_W',''),Dielectric=c.get('dielectric',''),Assembly='Hand solder' if manual else 'Factory SMT',Supplier=s['supplier'],Supplier_part=s['supplier_part'],LCSC_part=s.get('lcsc',''),MOQ=s['moq'],Multiple=s['multiple'],Unit_USD_first_tier=price,Extended_USD_first_tier=round(len(refs)*price,6),Observed_stock=s['stock_observed'],Checked_date=s['observed_date'],Supplier_URL=s['url'],DigiKey_SKU=s.get('digikey_sku',''),Factory_stock_status=s['factory_stock_status'],Component_notes=c.get('note','')))
 write('bom/BOM_grouped.csv',rows)
 manual=[r for r in rows if r['Assembly']=='Hand solder'];s=catalog['SPN02SVEN-RC']
@@ -23,8 +26,14 @@ write('bom/Factory_BOM.csv',factory)
 write('bom/BOM_JLCPCB.csv',[dict(Comment=r['MPN'],Designator=r['Designator'],Footprint=r['Footprint'],**{'LCSC Part #':r['LCSC_Part']}) for r in factory])
 write('bom/BOM_per_reference.csv',[dict(reference=ref,MPN=c['mpn'],value=c['value'],footprint=c['footprint'],voltage=c.get('voltage',''),tolerance=c.get('tolerance',''),rated_power_W=c.get('rated_power_W',''),dielectric=c.get('dielectric',''),note=c.get('note','')) for ref,c in sorted(parts.items()) if not c.get('exclude_bom')])
 write('bom/DigiKey_hand_solder_import.csv',[dict(Part=r['DigiKey_SKU'],Quantity=r['Quantity'],Reference=r['References']) for r in manual if r['DigiKey_SKU']]+[dict(Part=s['digikey_sku'],Quantity=3,Reference='Loose closed-top voltage caps')])
+for boards in (5,10):
+ purchase=[dict(Part=r['DigiKey_SKU'],Quantity=boards*r['Quantity']+(2 if r['References']=='U5' else 0),Reference=r['References']+(' + 2 spare MCUs' if r['References']=='U5' else '')) for r in manual if r['DigiKey_SKU']]
+ purchase.append(dict(Part=s['digikey_sku'],Quantity=3*boards,Reference='Loose closed-top voltage caps'))
+ write(f'bom/DigiKey_{boards}_boards.csv',purchase)
 fitted=sum(r['Quantity'] for r in rows)
 summary=dict(revision='H RGB status / solderable service header',modeled_parts=len(parts),fitted_parts=fitted,factory_smt_parts=sum(r['Quantity'] for r in rows if r['Assembly']=='Factory SMT'),hand_solder_parts=sum(r['Quantity'] for r in manual),purchase_lines=len(rows)+1,factory_smt_types=len(factory),shunts=3,component_consumed_first_tier_usd=round(sum(r['Extended_USD_first_tier'] for r in rows)+3*s['tiers'][0][1],2),note='Consumed parts at first supplier tier, including hand-fit parts and three loose shunts; not quantity-one purchasing cash or a PCBA quote. See cost_estimate.csv for MOQ and batch pricing.')
-assert fitted==140 and summary['factory_smt_parts']==130 and summary['hand_solder_parts']==10
+assert fitted==140 and summary['factory_smt_parts']==129 and summary['hand_solder_parts']==11
+assert {ref.strip() for r in manual for ref in r['References'].split(',')}==manual_refs
+summary.update(hand_solder_smt_parts=1,hand_solder_through_hole_parts=10)
 (R/'bom/summary.json').write_text(json.dumps(summary,indent=2)+'\n')
 print(json.dumps(summary,indent=2))

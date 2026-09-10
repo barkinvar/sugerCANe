@@ -1,0 +1,24 @@
+{
+  "revision": "H",
+  "decision": "User keeps STM32F042K6T6, buys it from DigiKey and hand solders U5 after factory assembly",
+  "factory_service": "JLCPCB Standard PCBA, top side only",
+  "hand_solder_references": ["J1", "J2", "J3", "J4", "J5", "J6", "J8", "JP101", "JP201", "JP301", "U5"],
+  "hand_solder_smt_references": ["U5"],
+  "factory_placements": 129,
+  "factory_mpn_types": 54,
+  "through_hole_parts": 10,
+  "through_hole_joints": 49,
+  "mcu_lead_joints": 32,
+  "loose_caps": 3,
+  "u5": {
+    "mpn": "STM32F042K6T6",
+    "package": "LQFP32, 7 x 7 mm, 0.8 mm pitch, no exposed center pad",
+    "supplier": "DigiKey",
+    "supplier_part": "497-14647-ND",
+    "url": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294",
+    "factory_place": false,
+    "factory_paste": false,
+    "recommended_spares_for_5_or_10_boards": 2
+  },
+  "engineering_release": "Pending final simulation review; assembly-scope approval is not an electrical validation pass"
+}

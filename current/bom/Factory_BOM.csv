@@ -49,7 +49,6 @@ SMBJ22A,D2,FRC_Sensor_CAN:D_SMB,1,Vishay,SMBJ22A-E3/52,C3698580,https://jlcpcb.c
 SN74AHCT1G125,U10,FRC_Sensor_CAN:SOT-23-5,1,Texas Instruments,SN74AHCT1G125DBVR,C7484,https://jlcpcb.com/partdetail/C7484
 3.3uH,L2,FRC_Sensor_CAN:L_Bourns_SRP5030T,1,Bourns,SRP5030TA-3R3M,C2042118,https://jlcpcb.com/partdetail/C2042118
 10uH,L1,FRC_Sensor_CAN:L_Bourns_SRP7028A_7.3x6.6mm,1,Bourns,SRP7028A-100M,C2687402,https://jlcpcb.com/partdetail/C2687402
-STM32F042K6T6,U5,FRC_Sensor_CAN:LQFP-32_7x7mm_P0.8mm,1,STMicroelectronics,STM32F042K6T6,C69216,https://jlcpcb.com/partdetail/C69216
 TCAN3413DR,U6,FRC_Sensor_CAN:SOIC-8_3.9x4.9mm_P1.27mm,1,Texas Instruments,TCAN3413DR,C22433320,https://jlcpcb.com/partdetail/C22433320
 TPS2553DBVR-1,U4,FRC_Sensor_CAN:SOT-23-6,1,Texas Instruments,TPS2553DBVR-1,C111738,https://jlcpcb.com/partdetail/C111738
 TPS259620DDAR,U9,FRC_Sensor_CAN:TPS2596_DDA8,1,Texas Instruments,TPS259620DDAR,C2155773,https://jlcpcb.com/partdetail/C2155773

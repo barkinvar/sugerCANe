@@ -10,7 +10,7 @@ A compact interface for **three NPN, PNP or logic sensors** on an FRC robot. Eac
 
 Rev H adds one RGB status LED on the right, with space for a printed light duct, and a recessed female programming socket for small batches. It retains G's protected sensor supplies, CAN fault reset and rail measurements. See [the engineering review](current/docs/ORDER_READINESS.md) for the evidence and remaining physical tests.
 
-**Assembly plan:** JLC fits all 130 SMT parts, including the MCU, RGB LED and C1. You solder only six terminal blocks, three voltage headers and the service socket. C1 now uses a reviewed high-reflow capacitor and smaller footprint; its previous peak-temperature conflict is resolved. The exact MCU is available from DigiKey but must be procured into JLC’s parts library before assembly. Final simulation approval and factory quotation remain pending. [Ordering steps](current/docs/FACTORY_ORDER.md) · [check summary](current/reports/release_checks.json).
+**Selected assembly plan:** JLC fits **129 top-side SMT parts**. You buy **STM32F042K6T6 from DigiKey** and solder U5, then fit ten through-hole parts and three jumper caps. U5 is omitted from the factory BOM, CPL and stencil. All 54 factory types currently have stock for ten boards; final simulation review and factory quotation remain pending. **[Start here: where to buy and how to order](current/docs/FACTORY_ORDER.md).**
 
 ![SC12 Rev H](current/output/review/board_3d_final.png)
 
@@ -21,11 +21,11 @@ Rev H adds one RGB status LED on the right, with space for a printed light duct,
 | Supply protection | Current limiting for shorts to ground; **5 V-to-12 V cross-connections are unsupported** |
 | Signals | Positive 0–30 V targets; NPN / PNP / push-pull / floating detection / keeper |
 | Size and assembly | 52 × 74 mm, four copper layers; **all components on top** |
-| User assembly | Six terminals, three voltage headers, one service socket and three removable caps |
-| Parts estimate | **$25.68 per board at 10 boards** before SMT attrition; **$26.55** with conservative allowance |
+| User assembly | DigiKey MCU, six terminals, three voltage headers, service socket and three caps |
+| Parts estimate | **$26.45 per board at 10 boards** before SMT attrition; **$27.33** with conservative allowance |
 | Cost exclusions | PCB, assembly, freight, tax and testing; no factory quotation yet |
 
-The updated supplier estimate is $3.31 lower per board than the preceding $28.99 estimate, before SMT attrition. MCU price remains provisional until sourced. Assembly and the reusable programmer are separate. [Cost basis](current/docs/COST_REDUCTION.md).
+The selected purchasing estimate is $2.54 lower per board than the preceding $28.99 estimate, before SMT attrition. It includes the DigiKey MCU; optional spares are extra. Assembly and the reusable programmer are separate. [Cost basis](current/docs/COST_REDUCTION.md).
 
 ## Find what you need
 

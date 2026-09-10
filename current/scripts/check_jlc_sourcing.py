@@ -10,13 +10,14 @@ factory=list(csv.DictReader((R/'bom/Factory_BOM.csv').open()))
 jlc=list(csv.DictReader((R/'bom/BOM_JLCPCB.csv').open()))
 cpl=list(csv.DictReader((R/'output/assembly/CPL_JLCPCB.csv').open()))
 catalog=json.loads((R/'bom/catalog_china.json').read_text())
-rows=snapshot['parts'];by_mpn={r['mpn']:r for r in rows}
+plan=json.loads((R/'bom/assembly_plan.json').read_text())
+rows=[r for r in snapshot['parts'] if set(r['references']).isdisjoint(plan['hand_solder_references'])];by_mpn={r['mpn']:r for r in rows}
 def normalized(value):return re.sub(r'[^A-Z0-9]','',value.upper())
 manufacturer_aliases={normalized(k):normalized(v) for k,v in {
  'Abracon LLC':'Abracon','Alpha & Omega Semicon':'Alpha & Omega Semiconductor',
  'UNI-ROYAL(Uniroyal Elec)':'UNI-ROYAL','Vishay Intertech':'Vishay'}.items()}
 def manufacturer(value):return manufacturer_aliases.get(normalized(value),normalized(value))
-assert len(rows)==len(by_mpn)==len(factory)==len(jlc)==55
+assert len(rows)==len(by_mpn)==len(factory)==len(jlc)==54
 assert {r['MPN'] for r in factory}==set(by_mpn)
 assert all(r['LCSC Part #'] for r in jlc)
 refs=set();shortages=[];cash=0
@@ -43,11 +44,14 @@ for f,j in zip(factory,jlc):
  if not sufficient:shortages.append(dict(mpn=r['mpn'],lcsc=r['lcsc'],references=r['references'],required=budget,available=r['available_to_order'],source_url=r['source_url']))
  price=max((t for t in r['price_tiers_usd'] if t[0]<=budget),key=lambda t:t[0])[1]
  cash+=budget*price
-assert len(refs)==130
-assert len(cpl)==len({r['Designator'] for r in cpl})==130
+assert len(refs)==129
+assert len(cpl)==len({r['Designator'] for r in cpl})==129
 assert {r['Designator'] for r in cpl}==refs and all(r['Layer']=='Top' for r in cpl)
 manual=set(snapshot['hand_solder']['references'])
-assert len(manual)==10 and not refs&manual
+assert len(manual)==11 and not refs&manual
+assert manual==set(plan['hand_solder_references']) and 'U5' in manual
+assert model['U5']['mpn']==plan['u5']['mpn']=='STM32F042K6T6'
+assert catalog['STM32F042K6T6']['supplier']=='DigiKey'
 assert refs|manual=={r for r,c in model.items() if not c.get('exclude_bom')}
 for s in snapshot['substitutions']:
  for ref in s['references']:
@@ -132,7 +136,7 @@ if thermal_conflicts and not assembly['factory_profile_confirmed']:holds.append(
 if not assembly['all_component_reflow_profiles_qualified']:holds.append('Factory qualification of all exact-part solder profiles and moisture handling is pending')
 hand=float(next(r for r in csv.DictReader((R/'bom/cost_estimate.csv').open()) if r['boards']=='10')['hand_parts_cash_per_board_usd'])
 report=dict(result='PASS sourcing-file consistency; HOLD manufacturing review' if holds else 'PASS sourcing-file consistency; allocation unconfirmed',
- observed_utc=snapshot['observed_utc'],stock_observation_window_utc=snapshot['stock_observation_window_utc'],availability_definition=snapshot['availability_definition'],boards=10,factory_placements=130,matched_mpn_types=len(rows),stock_sufficient_types=len(rows)-len(shortages),
+ observed_utc=snapshot['observed_utc'],stock_observation_window_utc=snapshot['stock_observation_window_utc'],availability_definition=snapshot['availability_definition'],boards=10,factory_placements=129,matched_mpn_types=len(rows),stock_sufficient_types=len(rows)-len(shortages),
  shortage_types=shortages,basic_types=basic,preferred_extended_types=preferred,ordinary_extended_types=fees,
  smt_parts_with_conservative_attrition_per_board_usd=round(cash/10,2),manual_parts_per_board_usd=hand,
  combined_parts_budget_per_board_usd=round(cash/10+hand,2),
@@ -144,8 +148,8 @@ report=dict(result='PASS sourcing-file consistency; HOLD manufacturing review' i
  electrical_model_only_reviewed_mpn_metadata_and_C1_footprint_changed=True,reviewed_routing=route_review,
  capacitor_reflow_review=cap,mcu_procurement=snapshot['mcu_procurement'],
  substitution_review=review,alternative_stock_review=snapshot['alternative_stock_review'],hand_solder_availability=snapshot['hand_solder'],
- order_decision='HOLD: final simulations pending; exact MCU Global Sourcing allocation and factory stack/process quotation unconfirmed. C1 peak-temperature conflict resolved.',
+ order_decision='HOLD: final simulation review and factory stack/process quotation pending. U5 is user-sourced from DigiKey; no factory MCU procurement required.',
  limitations='Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.',
- input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in ['bom/jlc_sourcing.json','bom/catalog_china.json','bom/Factory_BOM.csv','bom/BOM_JLCPCB.csv','output/assembly/CPL_JLCPCB.csv','hardware/design/circuit.json','hardware/FRC_Sensor_CAN.kicad_pcb','scripts/check_jlc_sourcing.py',*[d['file'] for d in snapshot['datasheets']]]})
+ input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in ['bom/assembly_plan.json','bom/jlc_sourcing.json','bom/catalog_china.json','bom/Factory_BOM.csv','bom/BOM_JLCPCB.csv','output/assembly/CPL_JLCPCB.csv','hardware/design/circuit.json','hardware/FRC_Sensor_CAN.kicad_pcb','scripts/check_jlc_sourcing.py',*[d['file'] for d in snapshot['datasheets']]]})
 (R/'reports/manufacturing/jlc_sourcing.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))

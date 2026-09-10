@@ -424,7 +424,7 @@
     "supplier_part": "281-2020-ND",
     "url": "https://www.digikey.com/en/products/detail/weidm%C3%BCller/1824420000/1094358",
     "stock_observed": 12775,
-    "observed_date": "2026-09-08",
+    "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
@@ -461,7 +461,7 @@
     "supplier_part": "281-2021-ND",
     "url": "https://www.digikey.com/en/products/detail/weidm%C3%BCller/1824430000/1094359",
     "stock_observed": 1698,
-    "observed_date": "2026-09-08",
+    "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
@@ -1341,7 +1341,7 @@
     "supplier_part": "952-2274-ND",
     "url": "https://www.digikey.com/en/products/detail/harwin-inc/M22-2010305/3728238",
     "stock_observed": 35632,
-    "observed_date": "2026-09-08",
+    "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
@@ -1407,7 +1407,7 @@
     "supplier_part": "C492399",
     "url": "https://www.lcsc.com/product-detail/C492399.html",
     "stock_observed": 34965,
-    "observed_date": "2026-09-09",
+    "observed_date": "2026-09-10",
     "moq": 5,
     "multiple": 5,
     "tiers": [
@@ -2173,8 +2173,8 @@
     "supplier": "DigiKey",
     "supplier_part": "S9340-ND",
     "url": "https://www.digikey.com/en/products/detail/sullins-connector-solutions/SPN02SVEN-RC/2618265",
-    "stock_observed": 175712,
-    "observed_date": "2026-09-08",
+    "stock_observed": 175640,
+    "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
@@ -2289,43 +2289,43 @@
   "STM32F042K6T6": {
     "mpn": "STM32F042K6T6",
     "manufacturer": "STMicroelectronics",
-    "supplier": "JLCPCB",
-    "supplier_part": "C69216",
-    "url": "https://jlcpcb.com/partdetail/C69216",
-    "stock_observed": 0,
+    "supplier": "DigiKey",
+    "supplier_part": "497-14647-ND",
+    "url": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294",
+    "stock_observed": 3071,
     "observed_date": "2026-09-10",
-    "moq": 4,
+    "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        2.9164
+        4.34
       ],
       [
         10,
-        2.4981
+        3.277
       ],
       [
-        30,
-        2.2361
+        50,
+        2.8492
+      ],
+      [
+        100,
+        2.7169
       ],
       [
         250,
-        1.9041
+        2.57712
       ],
       [
         500,
-        1.7821
-      ],
-      [
-        1000,
-        1.73
+        2.4929
       ]
     ],
     "lcsc": "C69216",
     "digikey_sku": "497-14647-ND",
     "digikey_url": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294",
-    "factory_stock_status": "HOLD: insufficient public JLC stock; exact-part sourcing and arrival unconfirmed",
+    "factory_stock_status": "User buys from DigiKey and hand solders U5; excluded from factory BOM, CPL and paste. Stock is not reserved.",
     "jlcpcb_url": "https://jlcpcb.com/partdetail/STMicroelectronics-STM32F042K6T6/C69216"
   },
   "TCAN3413DR": {

@@ -18,10 +18,10 @@ P=lambda s:Paragraph(escape(str(s)),styles['Normal'])
 rows=list(csv.DictReader((R/'bom/BOM_grouped.csv').open()))
 estimate=next(r for r in csv.DictReader((R/'bom/cost_estimate.csv').open()) if r['boards']=='10')
 candidate=json.loads((R/'reports/release_checks.json').read_text()).get('simulation_deferred_by_user',False)
-status='JLC Standard PCBA candidate: high-reflow C1 fitted by factory; exact MCU procurement, final simulations and factory quote pending. See docs/FACTORY_ORDER.md.' if candidate else 'Unbuilt prototype; check current sourcing and release status before ordering.'
-story=[Paragraph('SC12 - Revision H purchasing BOM',styles['Title']),P(f"140 fitted parts: 130 factory SMT + 10 user-fitted through-hole parts. Three loose caps extra. Parts estimate: ${estimate['all_parts_cash_per_board_usd']}/board at 10 boards before SMT attrition; PCB, assembly, freight and tax extra. {status}"),Spacer(1,12)]
+status='JLC Standard PCBA candidate: U5 purchased from DigiKey and hand soldered by user; final simulations and factory quote pending. See docs/FACTORY_ORDER.md.' if candidate else 'Unbuilt prototype; check current sourcing and release status before ordering.'
+story=[Paragraph('SC12 - Revision H purchasing BOM',styles['Title']),P(f"140 fitted parts: 129 factory SMT + one user-soldered MCU + 10 user-fitted through-hole parts. Three loose caps extra. Parts estimate: ${estimate['all_parts_cash_per_board_usd']}/board at 10 boards before SMT attrition and spare MCUs; PCB, assembly, freight and tax extra. {status}"),Spacer(1,12)]
 data=[[P(t) for t in ['Qty','MPN / supplier part','References','Value / package','Extended USD first tier']]]
-for row in rows:data.append([P(row['Quantity']),P(row['MPN']+' / '+row['Supplier_part']),P(row['References']),P(row['Value']+' / '+row['Footprint'].split(':')[-1]),P(row['Extended_USD_first_tier'])])
+for row in rows:data.append([P(row['Quantity']),P(row['MPN']+' / '+row['Supplier_part']),P(row['References']+' ('+row['Assembly']+')'),P(row['Value']+' / '+row['Footprint'].split(':')[-1]),P(row['Extended_USD_first_tier'])])
 t=Table(data,colWidths=[28,145,175,165,52],repeatRows=1)
 t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#dcebf0')),('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.white,colors.HexColor('#f4f6f7')]),('VALIGN',(0,0),(-1,-1),'TOP'),('BOTTOMPADDING',(0,0),(-1,-1),6)]));story.append(t)
 SimpleDocTemplate(str(R/'output/documentation/BOM_RevH_SC12.pdf'),pagesize=A4,leftMargin=15,rightMargin=15).build(story)
@@ -108,17 +108,25 @@ assert readiness['revision']=='H' and readiness['order_decision']=='PASS pre-fab
 for path,digest in readiness['input_hashes'].items():
  assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale power review',path)
 files=[]
+stencil=json.loads((R/'reports/manufacturing/factory_stencil.json').read_text())
+assert stencil['result']=='PASS' and stencil['removed_u5_apertures']==32
+for path,digest in stencil['input_hashes'].items():
+ assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale stencil evidence',path)
+assert hashlib.sha256((R/stencil['output']).read_bytes()).hexdigest()==stencil['output_sha256']
+files.extend(R/p for p in ['bom/assembly_plan.json','bom/DigiKey_5_boards.csv','bom/DigiKey_10_boards.csv','reports/manufacturing/factory_stencil.json'])
 files.extend(R / p for p in ['docs/STATUS_AND_PROGRAMMING.md', 'docs/ORDER_READINESS.md', 'reports/electrical/order_readiness.json', 'reports/electrical/solver_diagnostics.json'])
 files.extend(p for p in (R/'reports/electrical').glob('boost_spice*.json') if '_partial' not in p.name)
 files.extend(p for p in (R/'reports/electrical').glob('boost_spice*.png') if '_partial' not in p.name)
 for pat in ['output/fabrication/*','output/assembly/*','output/mechanical/*','output/documentation/BOM_RevH_SC12.pdf','bom/Factory_BOM.csv','bom/BOM_JLCPCB.csv','bom/BOM_per_reference.csv','bom/Hand_solder_BOM.csv','bom/ACCESSORIES.csv','bom/cost_estimate.csv','docs/COST_REDUCTION.md','docs/FACTORY_ORDER.md','docs/ASSEMBLY.md','docs/WIRING.md','docs/VALIDATION.md','firmware/build/factory.hex','firmware/build/application.sc12','host/input_settings.py','host/service_gui.py','docs/INPUT_MODES.md','host/can_service.py','host/firmware_image.py','host/fixture_record.py','tools/program_factory.tcl','tools/fixture_measurements.template.json','docs/CAN_SERVICE.md','docs/FIXTURE.md']:
  files.extend(p for p in R.glob(pat) if p.is_file())
 with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED) as z:
- for p in sorted(set(files)):z.write(p,p.relative_to(R))
+ for p in sorted(set(files)):
+  z.write(R/stencil['output'] if p.relative_to(R).as_posix()==stencil['source'] else p,p.relative_to(R))
 (dest.with_suffix('.zip.sha256')).write_text(hashlib.sha256(dest.read_bytes()).hexdigest()+'  '+dest.name+'\n')
 gerbers=R/'order/RevH_SC12_Gerbers.zip'
 with zipfile.ZipFile(gerbers,'w',zipfile.ZIP_DEFLATED) as z:
  for p in sorted((R/'output/fabrication').iterdir()):
-  if p.is_file() and p.suffix not in ('.pdf','.txt'):z.write(p,p.name)
+  if p.is_file() and p.suffix not in ('.pdf','.txt'):
+   z.write(R/stencil['output'] if p.relative_to(R).as_posix()==stencil['source'] else p,p.name)
 gerbers.with_suffix('.zip.sha256').write_text(hashlib.sha256(gerbers.read_bytes()).hexdigest()+'  '+gerbers.name+'\n')
 print('Built BOM PDF, mechanical/service drawing, fabrication-only ZIP and complete factory packet.')

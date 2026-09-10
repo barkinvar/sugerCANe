@@ -8,20 +8,25 @@ assert checks['revision']=='H SC12' and checks['simulation_deferred_by_user'] is
 assert checks['status'].startswith('HOLD:')
 for path,digest in checks['input_hashes'].items():
  assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale candidate evidence',path)
-status='REVIEW / QUOTATION ONLY. All 130 SMT parts factory fitted, including high-reflow C1 and exact U5. User fits only ten THT parts and three loose shunts. MCU Global Sourcing allocation, factory stack/dwell profile and final simulations remain pending. Not authorized for manufacture.'
+status='REVIEW / QUOTATION ONLY. Factory fits 129 top SMT parts / 54 types, including C1 and D10. U5 is omitted from BOM/CPL and stencil; user buys STM32F042K6T6 from DigiKey and hand solders it, plus ten THT parts and three loose caps. Final simulation review and factory stack/process/inspection quotation remain pending. Not authorized for manufacture.'
+stencil=json.loads((R/'reports/manufacturing/factory_stencil.json').read_text())
+assert stencil['result']=='PASS' and stencil['removed_u5_apertures']==32
+for path,digest in stencil['input_hashes'].items():
+ assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale stencil evidence',path)
+assert hashlib.sha256((R/stencil['output']).read_bytes()).hexdigest()==stencil['output_sha256']
 gerber=R/'order/sugarCANe_RevH_Gerbers_REVIEW_ONLY.zip'
 with zipfile.ZipFile(gerber,'w',zipfile.ZIP_DEFLATED) as z:
  fabrication=[]
  for p in sorted((R/'output/fabrication').iterdir()):
   if p.suffix in ('.gtl','.gbl','.g1','.g2','.gts','.gbs','.gtp','.gbp','.gto','.gbo','.gm1','.gbrjob','.drl'):
-   z.write(p,p.name);fabrication.append(p.name)
+   z.write(R/stencil['output'] if p.relative_to(R).as_posix()==stencil['source'] else p,p.name);fabrication.append(p.name)
  assert len(fabrication)==14 and sum(p.endswith('.drl') for p in fabrication)==2
  z.writestr('REVIEW_ONLY.txt',status+'\nSee the matching JLC review package for the required stack and BOM.\n')
-files=['bom/BOM_JLCPCB.csv','bom/Factory_BOM.csv','bom/Hand_solder_BOM.csv','bom/ACCESSORIES.csv',
+files=['bom/BOM_JLCPCB.csv','bom/Factory_BOM.csv','bom/Hand_solder_BOM.csv','bom/ACCESSORIES.csv','bom/assembly_plan.json','bom/DigiKey_5_boards.csv','bom/DigiKey_10_boards.csv',
  'output/assembly/CPL_JLCPCB.csv','output/assembly/top_assembly.pdf','output/assembly/schematic.pdf',
- 'output/documentation/BOM_RevH_SC12.pdf','docs/JLC_SOURCING.md','docs/FACTORY_ORDER.md',
+ 'output/documentation/BOM_RevH_SC12.pdf','output/documentation/ORDER_GUIDE.pdf','output/documentation/MCU_hand_solder_map.pdf','docs/JLC_SOURCING.md','docs/FACTORY_ORDER.md','docs/ASSEMBLY.md','docs/STATUS_AND_PROGRAMMING.md','docs/WIRING.md','docs/FIXTURE.md','docs/VALIDATION.md','docs/CAN_SERVICE.md',
  'firmware/build/factory.hex','firmware/build/application.sc12','tools/program_factory.tcl',
- 'reports/release_checks.json','reports/manufacturing/jlc_sourcing.json',
+ 'reports/release_checks.json','reports/manufacturing/jlc_sourcing.json','reports/manufacturing/factory_files.json','reports/manufacturing/factory_stencil.json','output/assembly/factory_top_paste.gtp',
  'docs/ROUTING_RULES.md','reports/routing_rules.json','reports/routing_cleanup.json',
  'reports/electrical/order_readiness.json','output/review/routing_junctions.png',
  'hardware/design/routing_widths.json','output/review/routing_widths.png','output/review/routing_contacts.png','output/review/ground_pours.png',
@@ -34,11 +39,13 @@ for name,digest in preview['output_sha256'].items():
  assert hashlib.sha256((R/name).read_bytes()).hexdigest()==digest,('Changed copper preview',name)
 files += ['reports/manufacturing/preview_source.json',*preview['output_sha256']]
 files += [d['file'] for d in json.loads((R/'bom/jlc_sourcing.json').read_text())['datasheets']]
+files += [p.relative_to(R).as_posix() for p in sorted((R/'host').glob('*.py')) if not p.name.startswith('test_')]
+files += ['tools/fixture_measurements.template.json','tools-requirements.lock']
 manifest=dict(status=status,files={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in files})
 dest=R/'order/sugarCANe_RevH_JLC_REVIEW_ONLY.zip'
 with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED) as z:
  for p in files:z.write(R/p,p)
- z.writestr('REVIEW_ONLY.txt',status+'\nFactory scope: 130 top SMT placements. Ten THT parts and three caps are hand fitted.\n')
+ z.writestr('REVIEW_ONLY.txt',status+'\nRead docs/FACTORY_ORDER.md first. Do not upload this whole documentation archive as the Gerber ZIP.\n')
  z.writestr('manifest.json',json.dumps(manifest,indent=2)+'\n')
 with zipfile.ZipFile(dest) as z:
  assert z.testzip() is None

@@ -1,64 +1,98 @@
-# Rev H prototype fabrication and assembly order
+# Order and build sugarCANe Rev H
 
-Rev H now has a [JLC sourcing candidate](JLC_SOURCING.md): all 55 SMT types have JLC codes; 54 have sufficient public stock for ten boards. The exact MCU needs Global Sourcing into My Parts, D10 requires Standard PCBA, and the C1 high-reflow replacement is implemented. New simulations are paused until user approval of the final sourced BOM. Review/quotation files are available; the full-release order package remains on HOLD. Previous Rev G ZIPs are historical and must not be ordered as Rev H.
+**Selected build: JLCPCB assembles 129 top-side SMT parts. You buy the original STM32F042K6T6 from DigiKey and solder U5, then fit the ten through-hole parts and three jumper caps.** The MCU footprint, circuit, four-layer PCB and firmware stay the same.
 
-For quotation, use [BOM_JLCPCB.csv](../bom/BOM_JLCPCB.csv), [CPL_JLCPCB.csv](../output/assembly/CPL_JLCPCB.csv), the [fabrication exports](../output/fabrication/) and [Factory_BOM.csv](../bom/Factory_BOM.csv) for exact-MPN matching. Read the [engineering review](ORDER_READINESS.md) and [physical acceptance procedure](VALIDATION.md). No factory quotation or order is included.
+**Before paying for PCBA:** finish our final simulation review. The saved full startup simulation is incomplete; the available ZIPs remain marked REVIEW_ONLY. The assembly choice is finalized, but this is not an electrical release. Use the files now to obtain and review a quotation. [Current evidence](ORDER_READINESS.md).
 
-## Ordering sequence
+## 1. Buy the parts you will fit
 
-1. **Arrange the exact MCU first.** In JLC Parts Manager → Order Parts → Global Sourcing Parts, search `STM32F042K6T6`. There is no public JLC stock; DigiKey currently lists the exact part. For ten boards, buy enough for ten fitted U5s plus the final quoted attrition requirement. Confirm the quoted supplier, price and arrival date before payment. This step needs the user’s JLC account; no parts are reserved by the repository.
-2. **Obtain the Standard PCBA quote** using the review Gerber ZIP, `BOM_JLCPCB.csv` and `CPL_JLCPCB.csv`. Request ten finished boards, all 130 SMT placements on top, 35 µm copper on every layer, ENIG, and factory rails/fiducials with depanelization. Confirm the C1 profile dwell limits below. Do not pay for fabrication from a package still marked review-only.
-3. **Review the final simulations**, including the incomplete coupled startup, before authorizing the PCB run. Retained baseline reports do not establish a final simulation pass.
-4. Once the MCU is in **My Parts**, match U5 to that inventory and check the complete placement preview against the assembly drawing. Confirm no SMT reference is omitted, including C1, U5 and D10. Then the user places the approved order.
-5. Buy the manual parts in parallel once the final BOM is accepted: for ten boards, **30 × 1824420000 two-pole terminals, 30 × 1824430000 three-pole terminals, 30 × M22-2010305 headers, 10 × PM254V-12-10P-H85 sockets and 30 × SPN02SVEN-RC caps**. The [manual BOM](../bom/Hand_solder_BOM.csv) and [accessory list](../bom/ACCESSORIES.csv) contain supplier links.
+Order the MCU, terminals, voltage headers and caps from **DigiKey**. Order the recessed programming socket from **LCSC**. Ship both orders to yourself in the USA. Do not send the MCU to JLC or start a JLC Global Sourcing order.
 
-The only user soldering is ten through-hole parts per board (49 joints). No MCU, LED, tiny IC, resistor/capacitor or surface-mount reservoir installation is assigned to the user. JLC cannot use a Global Sourcing part until it reaches its warehouse; overview and detailed help pages give differing procurement estimates, so a one-month arrival is not yet promised. [Exact procurement guidance](JLC_SOURCING.md#exact-mcu-procurement).
+| Part / supplier link | Where it goes | For 5 boards | For 10 boards |
+|---|---|---:|---:|
+| [STM32F042K6T6, DigiKey 497-14647-ND](https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294) | U5 MCU | **7 recommended** | **12 recommended** |
+| [Weidmüller 1824420000, 281-2020-ND](https://www.digikey.com/en/products/detail/weidm%C3%BCller/1824420000/1094358) | J1–J3, two-pole terminals | 15 | 30 |
+| [Weidmüller 1824430000, 281-2021-ND](https://www.digikey.com/en/products/detail/weidm%C3%BCller/1824430000/1094359) | J4–J6, three-pole terminals | 15 | 30 |
+| [Harwin M22-2010305, 952-2274-ND](https://www.digikey.com/en/products/detail/harwin-inc/M22-2010305/3728238) | Three 2 mm voltage headers | 15 | 30 |
+| [Sullins SPN02SVEN-RC, S9340-ND](https://www.digikey.com/en/products/detail/sullins-connector-solutions/SPN02SVEN-RC/2618265) | Three 2 mm jumper caps | 15 | 30 |
+| [XFCN PM254V-12-10P-H85, LCSC C492399](https://www.lcsc.com/product-detail/C492399.html) | J8 recessed 2×5 / 2.54 mm socket | 5 | 10 |
 
-## Fabrication
+MCU quantities include **two spare chips**; each board needs one. Other quantities are exact requirements before spares. Use the [five-board DigiKey import](../bom/DigiKey_5_boards.csv) or [ten-board import](../bom/DigiKey_10_boards.csv); both include two spare MCUs. J8 is a separate LCSC purchase. Check each cart's quantity, manufacturer and delivery date.
 
-| Setting | Requirement |
+Buy **K6T6 / LQFP32**, 7 × 7 mm body with visible 0.8 mm-pitch legs. **K6U6TR / QFN does not fit this PCB.** DigiKey displayed 3,071 K6T6 in stock and $3.277 each at 10+ on September 10, 2026 UTC; twelve cost about $39.32 before shipping, tax and cart charges. Its 40-week manufacturer replenishment field is separate from stocked inventory. Stock is not reserved.
+
+Reuse one compatible ST-Link and a mapped five-wire harness. If you need a probe, see the [STLINK-V3MINIE and adapter instructions](STATUS_AND_PROGRAMMING.md#one-programmer-for-the-ten-board-batch). J8 has a custom pinout; an ordinary ARM ribbon cannot plug in directly. Have a temperature-controlled iron, fine solder, flux, tweezers, wick, magnification, multimeter and current-limited bench supply.
+
+## 2. Download the matching JLC files
+
+Extract [sugarCANe_RevH_JLC_REVIEW_ONLY.zip](../order/sugarCANe_RevH_JLC_REVIEW_ONLY.zip). Do not upload the whole documentation packet as the Gerber file. Use these three files from that same packet:
+
+| JLC upload field | File |
 |---|---|
-| Board | 52 × 74 mm, four copper layers, FR-4, 1.6 mm nominal |
-| Layer order | F.Cu signal/power, In1.Cu GND, In2.Cu GND with short/slow control and service routes, B.Cu signal/power |
-| Copper | 35 µm nominal each layer; verify finished copper with supplier |
-| Dielectric | Symmetric four-layer stack; target outer-to-inner dielectric ≤0.25 mm; supplier must confirm final stack |
-| Finish | ENIG retained for fine-pitch IC assembly |
-| Minimum trace | 0.18 mm |
-| Clearance | 0.20 mm general; U8 package pad-to-pad 0.15 mm local minimum |
-| Vias | Through vias, minimum 0.30 mm drill / 0.60 mm pad; no blind/buried vias |
-| Drills | Separate PTH and NPTH Excellon; mounting holes remain nonplated |
-| Solder mask | Both sides; preserve fine-pitch openings; review U8 mask webs with CAM |
-| Stencil | Top only, nominal 0.10 mm laser-cut; use supplied paste apertures |
-| Panels | Factory rails/fiducials may be added outside the delivered outline; preserve connector overhang |
+| PCB Gerber upload | `order/sugarCANe_RevH_Gerbers_REVIEW_ONLY.zip` |
+| BOM | `bom/BOM_JLCPCB.csv` |
+| CPL / pick-and-place | `output/assembly/CPL_JLCPCB.csv` |
 
-Native nominal stack: 0.035 mm copper on all four layers, 0.20 / 1.04 / 0.20 mm dielectric and 0.01 mm solder mask per side, totaling 1.60 mm. These are planning thicknesses; final fabrication tolerances and material selection belong to the approved supplier stack.
+The BOM contains **54 types / 129 placements**; the CPL contains **129 rows**. **U5 is absent from both.** The Gerber ZIP has a factory-specific top paste layer with all **32 U5 apertures removed**. The other 325 apertures, including U9's exposed-pad windows, are preserved. Copper, solder mask and drills remain the checked native design. Ask CAM to use the supplied stencil geometry without recreating U5 openings.
 
-This stack is an order requirement, not a confirmed laminate/impedance quotation. CAN is short board-level routing; no fabricated impedance coupon has been qualified. Get the supplier's CAM/stackup review before fabrication.
+The complete BOM, assembly drawing and 3D renders show the **finished board, including your MCU and connectors**. They are reference material, not instructions to add factory placements. Do not upload `BOM_grouped.csv`, `positions_all_top.csv` or `positions_smd_top.csv` as the JLC assembly selection.
 
-## Assembly
+## 3. Configure JLCPCB
 
-**Factory scope: 130 SMT components on the top side only.** Use `bom/Factory_BOM.csv` (exact MPNs) and `output/assembly/CPL_JLCPCB.csv`. `bom/BOM_JLCPCB.csv` contains an exact JLC code for every SMT type. Check the manufacturer/MPN against Factory_BOM; an assigned code does not mean stock is allocated. Do not accept automatic substitutions.
+Start at [JLCPCB PCB quotation](https://jlcpcb.com/quote), upload the Gerber ZIP, and choose PCB assembly. Interface labels can change; use these requirements:
 
-**User scope: six terminal blocks, three voltage headers and one J8 service header (ten through-hole parts), then three loose caps.** The factory must leave J1–J6, J8 and JP101/JP201/JP301 empty. `positions_all_top.csv`, the complete BOM and drawings describe the finished board, not additional factory placements.
+| Setting | Select / require |
+|---|---|
+| Finished quantity | Your chosen **5 or 10 assembled boards**; match PCB and assembly quantities |
+| PCB | **52 × 74 mm**, **four layers**, FR-4, **1.6 mm** |
+| Copper | **1 oz / 35 µm nominal on all four layers**, including both inner layers |
+| Finish | **ENIG** |
+| Mask / silk | Green mask, white silkscreen on both sides; retain bottom artwork |
+| Assembly | **Standard PCBA, top side only**, 129 placements |
+| Panel / rails | Factory adds rails/fiducials and returns separated 52 × 74 mm boards |
+| Electrical test | Confirm bare-PCB open/short electrical test |
+| Stencil | Top only, nominal **0.10 mm**, supplied apertures; **no paste at U5** |
+| Programming / functional test | You perform these after installing U5 |
 
-CPL coordinates are mm from the PCB lower-left, positive X right and Y up, with native KiCad counterclockwise rotation. Match the uploaded preview to the assembly drawing and check IC/diode pin 1; machine-library rotation conventions can differ.
+D10's exact RGB LED requires Standard PCBA. Do not select Economic. The board is narrower than the published Standard minimum; have JLC confirm its panel/rail arrangement. Default rails alone must not be assumed to satisfy it. Request a symmetric four-layer stack with outer-to-inner dielectric ≤0.25 mm and 35 µm copper on every layer; do not accept 0.5 oz inner copper without another electrical review.
 
-Power headers are unpopulated; JP2 remains **open with no solder bridge**, and all through-hole connector holes remain unpopulated/unpasted. The factory must not add solder across JP2 unless a separate reviewed port-configuration work instruction is supplied. The user will hand solder all through-hole parts after delivery. The family name “LSF-SMT” does not make these exact connectors ordinary two-pad SMT parts.
+Upload and process BOM/CPL. **All 54 listed MPNs must be selected**, with no unexpected shortfall or unmatched parts. U5 and the ten through-hole parts are intentionally omitted; every other SMT part must be present, including C1, D10 and U9. Advancing past an unmatched part can omit it from assembly. [Official matching guidance](https://jlcpcb.com/help/article/component-matching-guidelines-for-pcba-orders).
 
-Use exact TPS61085DGKR for U8, latch-off TPS2553DBVR-1 for U4 and TPS259620DDAR for U9. U9 has an exposed ground pad with supplied segmented paste apertures and six adjacent thermal vias. Inspect its solder attachment. Do not substitute auto-retry TPS2553, a lower-saturation inductor, or nominally equal small MLCCs without electrical review. Preserve capacitor voltage/dielectric/DC-bias behavior, the precision resistors and the 13 kΩ / 33 nF compensation network.
+Inspect the placement preview against [top_assembly.pdf](../output/assembly/top_assembly.pdf), particularly IC pin 1 and diode/capacitor polarity. CPL coordinates are millimetres from PCB lower-left, X right and Y up, with native KiCad counterclockwise rotation. The factory must reconcile its part-library orientations; do not guess a blanket 90° correction.
 
-D10 is OPSCO SK6805-EC15 (C2890035), with the exact supplied A/1 pin layout; U10 is SN74AHCT1G125DBVR. Inspect VSSOP/MCU lead joints, diode polarity and all passive values. Perform unpowered shorts/selector checks, staged current-limited bring-up, firmware programming/readback and rail/input/CAN tests. Track every component substitution and lot.
+## 4. Copy these notes into the PCBA order
 
-**Use Standard PCBA: D10 is catalogued Standard Only and MSL 4.** U5 and U7 are MSL 3. The factory controls exact-part moisture exposure and baking. C1 is now **EEEFT1H470AP / C92059**, factory fitted, with Panasonic profile (5): case-top peak ≤260°C; at/above 250°C ≤5 s, 230°C ≤30 s, 217°C ≤40 s and 200°C ≤70 s; at most two cycles. This removes the previous 235°C peak conflict. Confirm the actual dwell profile for C1 and all other BOM parts with the factory. [Review and specifications](JLC_SOURCING.md#solder-process-audit).
+> sugarCANe SC12 Rev H. TOP assembly only: 129 placements / 54 exact MPN types from the supplied BOM/CPL. Leave U5 (STM32F042K6T6) unpopulated and unpasted; customer hand solders it. Use the supplied F_Paste Gerber with U5 apertures removed. Leave J1–J6, J8 and JP101/JP201/JP301 unpopulated; leave JP2 termination bridge open. No part substitutions or added placements. Fit C1, D10 and every other BOM/CPL reference. X-ray U9 TPS259620DDAR's exposed ground/thermal pad on every board and provide the report; confirm D10 underside-joint inspection coverage. Confirm 35 µm copper on ALL FOUR layers, symmetric 1.6 mm stack, outer-to-inner dielectric ≤0.25 mm, Standard-PCBA panel/rails and depanelization to 52 × 74 mm. Confirm component-compatible reflow/moisture handling, including D10 MSL 4 and C1 limits below. No firmware programming or powered functional test requested; U5 is absent. Confirm production and tracked express delivery timing to the USA before payment.
 
-## Sourcing, cost and delivery
+**C1 reflow limits:** Panasonic EEEFT1H470AP, profile (5): case-top peak ≤260°C; at/above 250°C ≤5 s, 230°C ≤30 s, 217°C ≤40 s and 200°C ≤70 s; at most two cycles. D10 is exact OPSCO SK6805-EC15; U8 is TPS61085DGKR; U4 is **TPS2553DBVR-1**; U9 is TPS259620DDAR. The `-1` latch-off suffix is required. Confirm the factory process and any X-ray charges in the quotation. [Process evidence](JLC_SOURCING.md#solder-process-audit) · [JLC targeted X-ray requests](https://jlcpcb.com/help/article/x-ray-inspection-report-interpretation-guide).
 
-[Cost reduction and batch estimates](COST_REDUCTION.md) separate parts from assembly. The [public JLC snapshot](../bom/jlc_sourcing.json) covers all SMT MPNs, but it does not reserve inventory. U5 / STM32F042K6T6 / C69216 has no available public stock. Arrange exact-part JLC sourcing and confirm arrival before assembly; changing MCU silicon or package requires a separate design review.
+## 5. Review the quote and delivery before paying
 
-Request Standard PCBA with the SMT-only scope. Economic is unavailable for the current D10. Posted fixed fees total $134.34 including two fixtures at ten boards; other charges are extra. Factory rails/panelization must meet the 70 × 70 mm Standard minimum while preserving the delivered outline and connector access. Confirm the final four-layer stack, nominal 35 um copper on every layer and component-compatible dwell profile. No programming or functional-test service is included unless separately quoted; the user performs bring-up and programming.
+1. Finish the final electrical simulation review and issue the approved manufacturing package; do not pay against the current REVIEW_ONLY release.
+2. Verify quantities, all 54 selected types, U5/stencil omission, stack and component orientations. Files do not reserve inventory.
+3. Obtain confirmation of reflow handling, panelization and U9/D10 inspection. Review any CAM changes before acceptance.
+4. Check the **complete** price: PCB, parts, assembly/setup/stencil, panel/rails, X-ray, packing, express freight and tax/duty. Ten-board parts are about **$27.33 per board** with conservative JLC attrition and your MCU, before two optional spare MCUs and those additional charges. This is not a final assembled-board price.
+5. Your last arrival date is **October 10, 2026, USA**. Use October 9 as the practical delivery target. Request a dispatch estimate and destination-specific tracked express quote; allow time for soldering/testing. Chinese holiday closures and customs can affect timing. Displayed production duration is not the arrival date. Order the separate DigiKey/LCSC parts in time too.
 
-One-month delivery is unconfirmed. Obtain allocated-part dates, CAM/assembly timing and a destination-specific tracked express quote before scheduling the robot build. Procurement holds and customs may exceed the target. Order hand-fitted parts in parallel once the BOM is finalized.
+JLC public stock covers all **54 factory types for ten boards**, including displayed allowances, as of September 10, 2026, 03:43 UTC. U9 has 25 available and L2 has 39, so recheck at checkout. Allocation and delivery are unconfirmed. [Full audit](../reports/manufacturing/jlc_sourcing.json).
 
-## Programming deliverables
+## 6. Finish the delivered boards
 
-The packet includes combined `firmware/build/factory.hex` and `tools/program_factory.tcl` for initial SWD programming/protection. Power cycle and verify protection, then use CAN for setup and later `application.sc12` updates. User programming is the default quoted scope; see [fixture procedure](FIXTURE.md). Do not substitute an application-only ELF/HEX.
+Start with one board. Inspect it unpowered, then solder **U5 before the tall connectors** so you can access its legs. Use the [MCU orientation map](../output/documentation/MCU_hand_solder_map.pdf) and [assembly procedure](ASSEMBLY.md).
+
+Use **flux and a soldering iron**: align pin 1, tack opposite corner leads, recheck alignment, solder the remaining leads, and wick any bridges. This LQFP has no hidden central joint. Avoid prolonged repeated heating; clean and inspect all 32 leads under magnification. A full-board stencil cannot sit over fitted components. Your hot plate is optional rework equipment; this plan does not require reheating the factory-fitted LED and capacitor.
+
+Fit terminals, service socket and voltage headers. Keep all caps removed and JP2 open. Check for bridges and supply shorts, then follow the [current-limited fixture procedure](FIXTURE.md). A blank MCU will not provide normal status or sensor-power operation yet.
+
+Program the matching combined `firmware/build/factory.hex` over SWD; it includes bootloader and application. From `current/`, with OpenOCD installed and the [verified J8 wiring](STATUS_AND_PROGRAMMING.md#one-programmer-for-the-ten-board-batch):
+
+```sh
+openocd -f interface/stlink.cfg -f target/stm32f0x.cfg \
+  -c 'adapter speed 1000' -f tools/program_factory.tcl
+```
+
+Power through J1. J8.6 is **target-voltage sense only**; never feed power from the probe into it. Verify programming/protection, power-cycle and set a unique CAN ID. With power disconnected, select each port's voltage: **pins 1–2 = 5 V; pins 2–3 = 12 V; no cap = disconnected sensor supply**. The middle pin is sensor-power output, not ground. Bridge JP2 only at a CAN bus end to connect the existing 120 Ω resistor; do not add a second resistor there.
+
+Complete [first-board acceptance](VALIDATION.md) with a known load before connecting sensors or a robot harness, then repeat recorded checks for the batch. Initial programming needs SWD; later application updates and settings can use CAN.
+
+[Printable guide](../output/documentation/ORDER_GUIDE.pdf) · [Factory package](../order/README.md) · [Hand-solder BOM](../bom/Hand_solder_BOM.csv)

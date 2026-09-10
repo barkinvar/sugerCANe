@@ -32,6 +32,8 @@ bash scripts/render_board.sh
 python scripts/compare_assembly_cost.py
 python scripts/build_documents.py
 python scripts/build_handbook.py
+python scripts/build_handbook.py --order-guide
+python scripts/build_mcu_map.py
 python scripts/review_documents.py
 # Inspect final renders/PDFs and update reports/visual_review.json with their hashes.
 python scripts/build_release.py
@@ -58,17 +60,20 @@ kicad-python scripts/check_board_constraints.py
 bash scripts/export_manufacturing.sh
 kicad-python scripts/export_board_manifest.py
 python scripts/build_factory_files.py
+python scripts/build_factory_stencil.py
 python scripts/verify_manufacturing.py
 python scripts/verify_gerber_geometry.py
 python scripts/verify_gerber_connectivity.py
 python scripts/write_validation_summary.py --defer-simulation
 python scripts/build_documents.py --drawings-only
 python scripts/build_handbook.py
+python scripts/build_handbook.py --order-guide
+python scripts/build_mcu_map.py
 python scripts/review_documents.py
 python scripts/build_jlc_candidate.py
 ```
 
-`--defer-simulation` publishes only the CAD/sourcing evidence with an explicit HOLD. It does not certify the existing power/input reports against a changed BOM. The separate review ZIP builder labels its outputs REVIEW_ONLY; it cannot satisfy the full-release gates. After user approval, resume full electrical validation and resolve MCU sourcing before issuing the order package.
+`--defer-simulation` publishes only the CAD/sourcing evidence with an explicit HOLD. It does not certify the existing power/input reports against a changed BOM. The separate review ZIP builder labels its outputs REVIEW_ONLY; it cannot satisfy the full-release gates. After user approval, resume full electrical validation and verify the user-purchased MCU and factory quote before issuing the order package.
 
 ## Sensor-input transient simulation
 

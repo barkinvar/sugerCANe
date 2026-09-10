@@ -1,14 +1,15 @@
-# Rev H JLC review package
+# Rev H manual-MCU order package
 
-**Review/quotation only. Do not authorize manufacture from this candidate.** Six passive types have been replaced with equal-rated JLC-listed parts. All 55 SMT types have codes; U5 still needs sourcing. D10 requires Standard PCBA. C1 now uses the reviewed high-reflow capacitor and footprint, resolving the earlier peak conflict. New simulations wait for user approval. [Substitutions and plan](../docs/JLC_SOURCING.md) · [current check summary](../reports/release_checks.json).
+**Read [where to buy and how to order](../docs/FACTORY_ORDER.md) first.** The assembly plan is fixed: JLC fits 129 top SMT parts / 54 types; you buy STM32F042K6T6 from DigiKey and hand solder U5, ten through-hole parts and three caps. U5 is omitted from BOM, CPL and factory stencil.
+
+**Review/quotation only until final simulation review.** The existing coupled-startup evidence is incomplete. Assembly-scope approval does not establish an electrical pass. Factory stack/process/inspection and quote remain unconfirmed.
 
 | Download | Use |
 |---|---|
-| [sugarCANe_RevH_JLC_REVIEW_ONLY.zip](sugarCANe_RevH_JLC_REVIEW_ONLY.zip) | Matched BOM/CPL, fabrication ZIP, assembly drawing and review instructions |
-| [sugarCANe_RevH_Gerbers_REVIEW_ONLY.zip](sugarCANe_RevH_Gerbers_REVIEW_ONLY.zip) | Four-layer fabrication upload for quotation |
+| [sugarCANe_RevH_JLC_REVIEW_ONLY.zip](sugarCANe_RevH_JLC_REVIEW_ONLY.zip) | Extract this: matched BOM/CPL, Gerber ZIP, guide, manual shopping lists and drawings |
+| [sugarCANe_RevH_Gerbers_REVIEW_ONLY.zip](sugarCANe_RevH_Gerbers_REVIEW_ONLY.zip) | JLC Gerber upload for quotation; factory top paste omits U5 |
+| [Printable ordering guide](../output/documentation/ORDER_GUIDE.pdf) | Settings, buying links, order notes and first-board procedure |
 
-JLC fits 130 top SMT parts. The ten through-hole parts and three loose caps remain user-fitted. The package includes file hashes; it does not reserve parts, confirm a quotation or constitute an engineering release.
+Do not upload the whole documentation package into the Gerber field. Complete-board CAD, drawings and renders include U5 because the finished product needs it; factory scope comes from the supplied BOM/CPL. Other paste geometry and all copper/drills/mask are unchanged. [Stencil verification](../reports/manufacturing/factory_stencil.json).
 
-C1 is updated; use the [ordering sequence](../docs/FACTORY_ORDER.md#ordering-sequence) to arrange factory-installed U5 through Global Sourcing. After approval, rerun the simulations, resolve the incomplete combined startup and confirm MCU allocation, factory dwell/profile limits and the stack. Issue the final order package only after reviewing those results. The user then orders. Full-release packaging also rejects unresolved sourcing or factory-process holds.
-
-[Factory instructions](../docs/FACTORY_ORDER.md) · [Historical packages](../../archive/README.md). Archived G packages do not contain H's LED/header and must not be mixed with H firmware.
+All 54 factory types had stock for ten boards at the latest check; nothing is reserved. No manufacture order has been placed. The user reviews the final electrical results and factory quote before paying. [Evidence](../reports/release_checks.json) · [Historical packages](../../archive/README.md).

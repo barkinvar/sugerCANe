@@ -1,22 +1,22 @@
 # Rev H purchasing files
 
-Use **Factory_BOM + CPL** for top-side SMT assembly. The user buys and fits the terminals, power headers and J8 service header separately.
+**Start with the [ordering guide](../docs/FACTORY_ORDER.md).** JLC fits 129 SMT parts; you fit STM32F042K6T6 / U5 and ten through-hole parts, then three caps.
 
 | File | Purpose |
 |---|---|
-| [Factory_BOM.csv](Factory_BOM.csv) | 130 SMT placements, 55 exact MPN types |
-| [BOM_JLCPCB.csv](BOM_JLCPCB.csv) | All 55 SMT types have exact JLC codes; MCU stock remains unresolved |
-| [jlc_sourcing.json](jlc_sourcing.json) | Dated public JLC stock, price tiers, substitution and datasheet evidence |
-| [Hand_solder_BOM.csv](Hand_solder_BOM.csv) | Six terminals, three 2 mm voltage headers and one 2.54 mm J8 header |
-| [ACCESSORIES.csv](ACCESSORIES.csv) | Three loose closed-top 2 mm caps |
-| [DigiKey_hand_solder_import.csv](DigiKey_hand_solder_import.csv) | DigiKey subset for one board; J8 is purchased separately from LCSC; scale to the lot |
-| [BOM_grouped.csv](BOM_grouped.csv), [BOM_per_reference.csv](BOM_per_reference.csv) | Complete finished-board purchasing and reference lists |
-| [catalog_china.json](catalog_china.json) | Exact supplier codes, dated observations, price tiers and URLs |
-| [cost_estimate.csv](cost_estimate.csv), [cost_detail.csv](cost_detail.csv) | Minimum-pack/tier purchasing arithmetic for 1, 5, 10 and 25 boards |
-| [assembly_scenarios.csv](assembly_scenarios.csv) | Partial fee comparison, not a quotation |
+| [BOM_JLCPCB.csv](BOM_JLCPCB.csv) | JLC upload: 54 types / 129 placements, U5 excluded |
+| [Factory_BOM.csv](Factory_BOM.csv) | Exact manufacturer/MPN cross-check for those 129 placements |
+| [assembly_plan.json](assembly_plan.json) | Selected factory/manual split; MCU and stencil omission |
+| [Hand_solder_BOM.csv](Hand_solder_BOM.csv) | U5 plus six terminals, three voltage headers and J8 |
+| [ACCESSORIES.csv](ACCESSORIES.csv) | Three loose 2 mm caps per board |
+| [DigiKey_5_boards.csv](DigiKey_5_boards.csv), [DigiKey_10_boards.csv](DigiKey_10_boards.csv) | Cart imports including two spare MCUs; J8 ordered separately from LCSC |
+| [DigiKey_hand_solder_import.csv](DigiKey_hand_solder_import.csv) | Exact one-board DigiKey subset, without spare MCU |
+| [BOM_grouped.csv](BOM_grouped.csv), [BOM_per_reference.csv](BOM_per_reference.csv) | Complete finished-board lists, including manual parts |
+| [jlc_sourcing.json](jlc_sourcing.json) | Dated supplier evidence; excluded U5 JLC record is historical |
+| [catalog_china.json](catalog_china.json) | Supplier codes, observations, tiers and links |
+| [cost_estimate.csv](cost_estimate.csv), [cost_detail.csv](cost_detail.csv) | Batch arithmetic before JLC attrition and optional spares |
+| [assembly_scenarios.csv](assembly_scenarios.csv) | Partial assembly fee estimates, not quotes |
 
-Pair the factory BOM with [CPL_JLCPCB.csv](../output/assembly/CPL_JLCPCB.csv) and the [Gerber ZIP](../order/README.md). Do not include the ten hand-fitted components in factory SMT placement. [Cost explanation](../docs/COST_REDUCTION.md) includes substitutions and exclusions; [factory instructions](../docs/FACTORY_ORDER.md) define the scope.
+Pair JLC BOM with [CPL_JLCPCB.csv](../output/assembly/CPL_JLCPCB.csv) and the matched [Gerber ZIP](../order/README.md). Do not upload the complete finished-board BOM as factory placement instructions. C1, the RGB LED and all SMT parts other than U5 remain factory fitted.
 
-This is a [JLC sourcing candidate](../docs/JLC_SOURCING.md), pending user approval and new simulations. The September 9, 2026 live recheck covers every factory type: 54 of 55 have enough orderable stock for ten boards; U5 needs exact-part sourcing. No inventory is reserved or delivery promised.
-
-C1 / EEEFT1H470AP remains in factory SMT assembly. All fine-pitch parts, passives and the RGB LED must arrive already soldered. U5 / STM32F042K6T6 stays in the BOM/CPL for factory assembly using JLC Global Sourcing / My Parts; do not omit it from the order or plan to hand solder it. Follow the [procurement steps](../docs/FACTORY_ORDER.md#ordering-sequence).
+All 54 factory types had sufficient public stock for ten boards in the September 10, 2026, 03:43 UTC check. Stock is not reserved. Final simulations and factory quotation/stack/process/inspection review remain pending.

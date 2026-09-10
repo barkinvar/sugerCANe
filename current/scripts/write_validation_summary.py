@@ -27,18 +27,18 @@ if args.defer_simulation:
  for path,digest in order_review['input_hashes'].items():
   assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale DC review',path)
  paths=['hardware/FRC_Sensor_CAN.kicad_pcb','hardware/design/circuit.json','bom/BOM_grouped.csv',
-  'bom/BOM_JLCPCB.csv','bom/Factory_BOM.csv','bom/jlc_sourcing.json','output/assembly/CPL_JLCPCB.csv',
+  'bom/assembly_plan.json','bom/BOM_JLCPCB.csv','bom/Factory_BOM.csv','bom/jlc_sourcing.json','output/assembly/CPL_JLCPCB.csv',
   'reports/erc/final.json','reports/drc/final.json','reports/design_parity.json','reports/routing_rules.json',
   'reports/board_constraints.json','reports/variant_verification.json','reports/manufacturing/verification.json',
   'reports/manufacturing/gerber_connectivity.json','reports/manufacturing/gerber_geometry.json',
-  'reports/manufacturing/jlc_sourcing.json','reports/manufacturing/factory_files.json',
+  'reports/manufacturing/jlc_sourcing.json','reports/manufacturing/factory_files.json','reports/manufacturing/factory_stencil.json','output/assembly/factory_top_paste.gtp',
   'reports/electrical/order_readiness.json','reports/routing_cleanup.json','reports/routing-tests.log',
   'scripts/test_routing.py','scripts/check_routing.py','scripts/export_routing_geometry.py',
   'hardware/design/routing_widths.json','scripts/write_validation_summary.py']
  paths += ['scripts/ground_geometry.py','scripts/verify_gerber_geometry.py',
            'scripts/check_board_constraints.py','hardware/FRC_Sensor_CAN.kicad_dru']
  paths += [p.relative_to(R).as_posix() for p in sorted((R/'hardware').glob('*.kicad_sch'))]
- out=dict(revision='H SC12',status='HOLD: JLC sourcing candidate; simulations deferred until user approval',
+ out=dict(revision='H SC12',status='HOLD: manual-MCU assembly package prepared; final simulation review pending',
   order_decision=sourcing['order_decision'],manufacturing_holds=sourcing['manufacturing_holds'],simulation_deferred_by_user=True,physical_tests_performed=False,
   erc_violations=0,drc_violations=0,unconnected_items=0,model_schematic_pcb_parity=True,
   fitted_parts=140,manufacturing_layers=11,copper_layers=4,gerber_shorts=copper['shorts'],gerber_opens=copper['opens'],

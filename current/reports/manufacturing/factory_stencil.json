@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "purpose": "Factory stencil only; U5 hand soldered by user",
+  "omitted_references": [
+    "U5"
+  ],
+  "removed_u5_apertures": 32,
+  "retained_apertures": 325,
+  "all_other_paste_geometry_unchanged": true,
+  "native_board_unchanged": true,
+  "source": "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp",
+  "output": "output/assembly/factory_top_paste.gtp",
+  "input_hashes": {
+    "bom/assembly_plan.json": "3ddff6cab3d7df84938cd10b9cc9549515d288c65915f7252b9b6a726b85b627",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "4d00abd563bfa88924e25474253365773afd8d0fa6c0d622cb002c53a29b7d28",
+    "reports/manufacturing/board_manifest.json": "27eedf7e734ef5964c2feef6257ef3955136c5f1a07ddefbcaa944be8af3f5ef",
+    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "4c039c2d2daac84e061b6405f8cd28c48c456e45a1b2d03ae70f528f02b78c4f",
+    "scripts/build_factory_stencil.py": "1b0049cd5a99010b7aeae209b3cd5f41bd91d3ced428c9f3ca49741771ff0aa9"
+  },
+  "output_sha256": "0936978906b95afa71c635dbfd8ff6d143bcfb4c2ff7f850ea1ed63588eb4d4c"
+}

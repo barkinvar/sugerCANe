@@ -1,6 +1,6 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-10T02:45:02.376811+00:00",
+  "reviewed_utc": "2026-09-10T03:52:29.608076+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
@@ -36,15 +36,15 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "1b861fa01516d141ac74eab519793affa022b580fee6b37b783a96bb6bb73543",
-      "scope": "41 pages raster-compared with the 40-page baseline. Changed body pages 1, 2, 3, 5, 16, 25, 26, 27, 34, 35, 36, 38, 39 and 41 visually inspected; 27 remaining body pages match at 1.5x with the bottom 40-point footer excluded. Factory/manual scopes, C1 ratings/process/geometry, MCU procurement, updated DC figures, costs and sourcing holds are legible; no clipped text or tables.",
-      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00"
+      "sha256": "b2df595abfc419ab2ee990885a9967cfcee465bb962e4d8372f003b249a56525",
+      "scope": "All 40 pages raster-reviewed in contact sheets; changed assembly page 16 and ordering pages 25-27 also inspected individually. User-soldered MCU, factory scope, shopping list, process notes and costs are legible; no clipped text, tables or isolated-word pages. Final electrical simulation review remains pending.",
+      "reviewed_utc": "2026-09-10T03:52:29.608076+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
-      "sha256": "03c9bad88b71e91efcd0d2c627a13c34d24d87e7e1feead59110722f34c07b7f",
-      "scope": "Changed pages 1 and 2 visually inspected: 130 factory SMT plus 10 manual THT, revised cost and C1 MPN/footprint. Page 3 is raster-identical to the baseline. Table cells fit; factory procurement/simulation holds remain explicit.",
-      "reviewed_utc": "2026-09-10T02:45:02.376811+00:00"
+      "sha256": "9a75f7608f525e36d38e44076bcf125c8b41124c1614999dca4e3d7954c3ef2c",
+      "scope": "All three rendered pages visually inspected: 129 factory SMT parts, one user-soldered MCU and ten user-soldered THT parts. Assembly assignments, supplier MPNs and costs are legible; no clipped table content.",
+      "reviewed_utc": "2026-09-10T03:52:29.608076+00:00"
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
@@ -194,87 +194,21 @@
       "sha256": "0d399c3bd5f1753f950dee3ddad84aa3d822b2f6f70687574b78213c92ebda56",
       "reviewed_utc": "2026-09-10T02:45:02.376811+00:00",
       "scope": "Exported copper/drill geometry exactly matches the previously reviewed baseline after generator timestamps are excluded; corresponding PDF page and PNG raster are unchanged. PNG/SVG generated together and bound to current Gerber/output hashes in preview_source.json; inner views from top, bottom mirrored."
+    },
+    {
+      "file": "output/documentation/ORDER_GUIDE.pdf",
+      "sha256": "528f842118ccdde35f8bc1b0ad07f6e64378ea02c54801cc3c3f239e289e0ed2",
+      "scope": "All three pages visually inspected at full rendered size; final raster matches the reviewed version pixel for pixel. Supplier links, 5/10-board shopping quantities, JLC upload files/settings, copyable factory notes, assembly/programming and pending simulation gate are legible.",
+      "reviewed_utc": "2026-09-10T03:52:29.608076+00:00"
+    },
+    {
+      "file": "output/documentation/MCU_hand_solder_map.pdf",
+      "sha256": "f313f3b8030516046bace959843bc2442372c5fb47f05bfc86a36bc1c9269da3",
+      "scope": "Single enlarged page visually inspected. Native U5 pad centers and numbers are shown from the component side, with pad 1 highlighted and board-top direction explicit; iron soldering steps are legible.",
+      "reviewed_utc": "2026-09-10T03:52:29.608076+00:00"
     }
   ],
-  "limitations": "Visual, native CAD, all-layer exported geometry and nominal DC checks only. No ground-return impedance, current crowding, thermal-rise or physical qualification. Final power/input transient simulations remain deferred; exact MCU procurement, complete factory dwell/moisture profile and stack quotation remain pending.",
-  "page_comparison_baseline_commit": "3b45f5a1919b5fc703e21359285c547f7d7ffef3",
-  "rendered_page_comparison": {
-    "output/documentation/SC12_RevH_Handbook.pdf": {
-      "before_pages": 40,
-      "after_pages": 41,
-      "changed_pages": [
-        1,
-        2,
-        3,
-        5,
-        16,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41
-      ]
-    },
-    "output/documentation/BOM_RevH_SC12.pdf": {
-      "before_pages": 3,
-      "after_pages": 3,
-      "changed_pages": [
-        1,
-        2
-      ]
-    },
-    "output/mechanical/mechanical_drawing.pdf": {
-      "before_pages": 2,
-      "after_pages": 2,
-      "changed_pages": []
-    },
-    "output/assembly/schematic.pdf": {
-      "before_pages": 10,
-      "after_pages": 10,
-      "changed_pages": []
-    },
-    "output/assembly/top_assembly.pdf": {
-      "before_pages": 1,
-      "after_pages": 1,
-      "changed_pages": [
-        1
-      ]
-    },
-    "output/assembly/gerber_copper_review.pdf": {
-      "before_pages": 4,
-      "after_pages": 4,
-      "changed_pages": [
-        1
-      ]
-    },
-    "output/assembly/bottom_markings.pdf": {
-      "before_pages": 1,
-      "after_pages": 1,
-      "changed_pages": []
-    },
-    "output/fabrication/FRC_Sensor_CAN-NPTH-drl_map.pdf": {
-      "before_pages": 1,
-      "after_pages": 1,
-      "changed_pages": []
-    },
-    "output/fabrication/FRC_Sensor_CAN-PTH-drl_map.pdf": {
-      "before_pages": 1,
-      "after_pages": 1,
-      "changed_pages": []
-    }
-  },
+  "limitations": "Visual and file-integrity review of the manual-MCU order plan; native CAD remains unchanged. No new transient simulation or physical qualification. Final power/input transient review, component allocation, factory dwell/moisture profile and stack/inspection quotation remain pending.",
   "bottom_branding": {
     "extra_ink_mm2": 0.0,
     "unexplained_missing_ink_mm2": 0.0,
@@ -307,7 +241,7 @@
     "method": "Exact text comparison excluding generator timestamp lines only.",
     "baseline_commit": "3b45f5a1919b5fc703e21359285c547f7d7ffef3"
   },
-  "sourcing_geometry_note": "C1 EEEFT1H470AP high-reflow replacement changes only its native footprint/metadata and regenerated pours. All 1530 traces, 242 vias, other parts and stack remain identical. U5 exact-part Global Sourcing candidate identified; no parts allocated or purchased.",
+  "sourcing_geometry_note": "C1 high-reflow replacement and all native geometry remain unchanged from the preceding review. U5 remains STM32F042K6T6 LQFP32, assigned to user purchase from DigiKey and manual soldering. Factory BOM/CPL omit U5; factory-only paste deletes its 32 apertures while preserving all other paste geometry and all copper/mask/drills.",
   "assembly_audit_document_comparison": {
     "baseline_commit": "26a31d8859a3b7bdf73beb16c652f51b8c65de3b",
     "documents": {
@@ -578,54 +512,6 @@
       },
       "notch_review": "Five local pour cutouts retreat opposing tips, including two local gaps within a connected inner-plane island. Final morphological slit candidates above 0.005 mm\u00b2 are absent after excluding a 2 \u00b5m boundary band; sharp thermal-slot corners are intentional."
     }
-  },
-  "handbook_body_comparison": {
-    "scope": "1.5x raster comparison excluding the bottom 40-point page-number footer; shifted pages may match.",
-    "matching_pages": {
-      "4": 4,
-      "6": 6,
-      "7": 7,
-      "8": 8,
-      "9": 9,
-      "10": 10,
-      "11": 11,
-      "12": 12,
-      "13": 13,
-      "14": 14,
-      "15": 15,
-      "17": 17,
-      "18": 18,
-      "19": 19,
-      "20": 20,
-      "21": 21,
-      "22": 22,
-      "23": 23,
-      "24": 24,
-      "28": 27,
-      "29": 28,
-      "30": 29,
-      "31": 30,
-      "32": 31,
-      "33": 32,
-      "37": 36,
-      "40": 39
-    },
-    "changed_body_pages": [
-      1,
-      2,
-      3,
-      5,
-      16,
-      25,
-      26,
-      27,
-      34,
-      35,
-      36,
-      38,
-      39,
-      41
-    ]
   },
   "previous_input_width_review": {
     "result": "PASS",
@@ -1029,5 +915,142 @@
       ],
       "conclusion": "Same published capacitance/voltage/tolerance/ESR/ripple/lifetime limits; smaller 6.3 x 5.8 mm body and manufacturer land pattern. Panasonic reflow profile (5) removes the known peak-temperature conflict with Standard PCBA. Factory must still meet all dwell and moisture-handling limits; no measured board/ripple/thermal qualification."
     }
+  },
+  "previous_document_comparison": {
+    "page_comparison_baseline_commit": "3b45f5a1919b5fc703e21359285c547f7d7ffef3",
+    "rendered_page_comparison": {
+      "output/documentation/SC12_RevH_Handbook.pdf": {
+        "before_pages": 40,
+        "after_pages": 41,
+        "changed_pages": [
+          1,
+          2,
+          3,
+          5,
+          16,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      },
+      "output/documentation/BOM_RevH_SC12.pdf": {
+        "before_pages": 3,
+        "after_pages": 3,
+        "changed_pages": [
+          1,
+          2
+        ]
+      },
+      "output/mechanical/mechanical_drawing.pdf": {
+        "before_pages": 2,
+        "after_pages": 2,
+        "changed_pages": []
+      },
+      "output/assembly/schematic.pdf": {
+        "before_pages": 10,
+        "after_pages": 10,
+        "changed_pages": []
+      },
+      "output/assembly/top_assembly.pdf": {
+        "before_pages": 1,
+        "after_pages": 1,
+        "changed_pages": [
+          1
+        ]
+      },
+      "output/assembly/gerber_copper_review.pdf": {
+        "before_pages": 4,
+        "after_pages": 4,
+        "changed_pages": [
+          1
+        ]
+      },
+      "output/assembly/bottom_markings.pdf": {
+        "before_pages": 1,
+        "after_pages": 1,
+        "changed_pages": []
+      },
+      "output/fabrication/FRC_Sensor_CAN-NPTH-drl_map.pdf": {
+        "before_pages": 1,
+        "after_pages": 1,
+        "changed_pages": []
+      },
+      "output/fabrication/FRC_Sensor_CAN-PTH-drl_map.pdf": {
+        "before_pages": 1,
+        "after_pages": 1,
+        "changed_pages": []
+      }
+    },
+    "handbook_body_comparison": {
+      "scope": "1.5x raster comparison excluding the bottom 40-point page-number footer; shifted pages may match.",
+      "matching_pages": {
+        "4": 4,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15,
+        "17": 17,
+        "18": 18,
+        "19": 19,
+        "20": 20,
+        "21": 21,
+        "22": 22,
+        "23": 23,
+        "24": 24,
+        "28": 27,
+        "29": 28,
+        "30": 29,
+        "31": 30,
+        "32": 31,
+        "33": 32,
+        "37": 36,
+        "40": 39
+      },
+      "changed_body_pages": [
+        1,
+        2,
+        3,
+        5,
+        16,
+        25,
+        26,
+        27,
+        34,
+        35,
+        36,
+        38,
+        39,
+        41
+      ]
+    }
+  },
+  "manual_mcu_document_review": {
+    "baseline_commit": "249c865aef271b20c24c215f8458181a424fc9aa",
+    "handbook_pages": 40,
+    "order_guide_pages": 3,
+    "bom_pages": 3,
+    "mcu_orientation_pages": 1,
+    "native_board_unchanged": true,
+    "scope": "Only the four listed PDFs changed; hashes preserve the preceding review of other artifacts."
   }
 }
