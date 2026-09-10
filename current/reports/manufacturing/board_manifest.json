@@ -6080,13 +6080,6 @@
       "source": "via"
     },
     {
-      "x_mm": 5.8232,
-      "y_mm": -57.5491,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
       "x_mm": 40.3764,
       "y_mm": -58.6792,
       "diameter_mm": 0.3,
@@ -6229,13 +6222,6 @@
     {
       "x_mm": 41.3765,
       "y_mm": -48.9493,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 30.7255,
-      "y_mm": -48.2871,
       "diameter_mm": 0.3,
       "plated": true,
       "source": "via"
@@ -6565,13 +6551,6 @@
     {
       "x_mm": 45.9306,
       "y_mm": -57.1113,
-      "diameter_mm": 0.3,
-      "plated": true,
-      "source": "via"
-    },
-    {
-      "x_mm": 43.1172,
-      "y_mm": -59.349999,
       "diameter_mm": 0.3,
       "plated": true,
       "source": "via"

@@ -61,11 +61,14 @@ for path,key in [('hardware/design/circuit.json','baseline_model_sha256')]:
  for s in snapshot['substitutions']:restored=restored.replace(s['new_mpn'],s['old_mpn'])
  assert hashlib.sha256(restored.encode()).hexdigest()==snapshot[key],('Change beyond sourcing metadata',path)
 # Subsequent user-authorized routing edits have their own exact board review.
-# All other native objects, including footprints, vias, stack and zone rules,
-# must match the sourcing candidate; only tracks and cached zone fill may differ.
+# The exact nonrouting hash pins footprints, retained vias, stack and zone rules.
+# The routing review separately records three redundant signal-via removals;
+# every other nonrouting object was compared with the preceding reviewed board.
 route_review=snapshot['routing_review']
 board_path=R/'hardware/FRC_Sensor_CAN.kicad_pcb'
 assert hashlib.sha256(board_path.read_bytes()).hexdigest()==route_review['board_sha256']
+for via in route_review.get('removed_redundant_vias', []):
+ assert via['id'] not in board_path.read_text()
 fixed=[]
 for row in sexpdata.loads(board_path.read_text()):
  if isinstance(row,list):

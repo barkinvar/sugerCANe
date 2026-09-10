@@ -64,9 +64,11 @@ def inspect(data, width_policy=None):
     contacts = {key: union_all(shapes) for key, shapes in contacts.items()}
     lines = [LineString([t['a'], t['b']]) for t in tracks]
     tree = STRtree(lines)
+    max_width = max((v['width'] for v in tracks), default=0)
     adjacency = collections.defaultdict(list)
     seen = {}
     contact_segments = 0
+    zone_entries = 0
 
     def record(kind, *indices, **detail):
         issues[kind].append(dict(tracks=[tracks[i]['id'] for i in indices],
@@ -89,22 +91,49 @@ def inspect(data, width_policy=None):
         for end, other in [('a', 'b'), ('b', 'a')]:
             adjacency[(t['net'], t['layer'], *[round(v, 5) for v in t[end]])].append((i, t[other]))
         contact = contacts.get((t['net'], t['layer']))
-        # A short endpoint may extend half its trace width beyond the pad/via:
-        # its copper still intersects the contact. This is a geometric contact
-        # allowance, not an exemption for an entire footprint or power net.
-        at_contact = contact is not None and contact.buffer(t['width']/2+TOL).covers(lines[i])
+        # Only centerlines actually inside contact copper get an exception.
+        # Growing contacts by half the track width hid pad overshoots and hooks.
+        at_contact = contact is not None and contact.buffer(TOL).covers(lines[i])
         if lines[i].length < MIN_FREE_SEGMENT-TOL:
             if at_contact:
                 contact_segments += 1
             else:
                 record('short_free_segments', i, length_mm=lines[i].length, start_mm=t['a'], end_mm=t['b'])
-        for j in tree.query(lines[i].buffer(TOL)):
+        for j in tree.query(lines[i].buffer(t['width']/2 + max_width/2)):
             j = int(j)
             if j <= i or (t['net'], t['layer']) != (tracks[j]['net'], tracks[j]['layer']):
                 continue
             overlap = lines[i].intersection(lines[j])
             if overlap.length > TOL and (contact is None or not contact.buffer(TOL).covers(overlap)):
                 record('collinear_overlap', i, j, overlap_mm=overlap.length)
+            elif lines[i].length > TOL and lines[j].length > TOL:
+                # Offset parallel tracks may overlap in copper without their
+                # centerlines intersecting. Ignore ordinary short junction caps.
+                unit = [(t['b'][k]-t['a'][k])/lines[i].length for k in (0,1)]
+                other = [(tracks[j]['b'][k]-tracks[j]['a'][k])/lines[j].length for k in (0,1)]
+                offset = abs((tracks[j]['a'][0]-t['a'][0])*unit[1] -
+                             (tracks[j]['a'][1]-t['a'][1])*unit[0])
+                if abs(unit[0]*other[1]-unit[1]*other[0]) <= .0001 and offset < (t['width']+tracks[j]['width'])/2-TOL:
+                    projection = sorted(sum((tracks[j][e][k]-t['a'][k])*unit[k] for k in (0,1)) for e in ('a','b'))
+                    lo, hi = max(0, projection[0]), min(lines[i].length, projection[1])
+                    if hi-lo > max(t['width'], tracks[j]['width'], MIN_FREE_SEGMENT):
+                        run = LineString([[t['a'][k]+s*unit[k] for k in (0,1)] for s in (lo,hi)])
+                        if contact is None or not contact.buffer(TOL).covers(run):
+                            record('parallel_copper_overlap', i, j, overlap_mm=hi-lo, offset_mm=offset)
+        # Full-board exports include native filled-zone endpoint evidence.
+        # Partial geometry fixtures can omit it when testing individual bends.
+        if 'endpoint_zone_contacts' in data:
+            for end in ('a', 'b'):
+                node = Point(t[end])
+                if contact is not None and contact.buffer(TOL).covers(node):
+                    continue
+                if any(int(j) != i and (tracks[int(j)]['net'], tracks[int(j)]['layer']) == (t['net'], t['layer'])
+                       and lines[int(j)].distance(node) <= TOL for j in tree.query(node.buffer(TOL))):
+                    continue
+                if end in data['endpoint_zone_contacts'].get(t['id'], []):
+                    zone_entries += 1
+                else:
+                    record('unjoined_endpoints', i, at_mm=t[end])
 
     for key, pair in adjacency.items():
         if len(pair) != 2:
@@ -112,7 +141,7 @@ def inspect(data, width_policy=None):
         (i, a), (j, b) = pair
         node = Point(key[2:])
         contact = contacts.get(key[:2])
-        if contact is not None and contact.buffer(max(tracks[i]['width'], tracks[j]['width'])/2+TOL).covers(node):
+        if contact is not None and contact.buffer(TOL).covers(node):
             continue
         # Count a branch that joins the interior of a segment, not just endpoints.
         if any(int(k) not in (i, j) and (tracks[int(k)]['net'], tracks[int(k)]['layer']) == key[:2]
@@ -132,7 +161,7 @@ def inspect(data, width_policy=None):
     for junction in branch_junctions(data):
         ids=junction['indices'];contact=contacts.get((junction['net'],junction['layer']))
         w=max(tracks[i]['width'] for i in ids)
-        if contact is not None and contact.buffer(w/2+TOL).covers(Point(junction['at_mm'])):continue
+        if contact is not None and contact.buffer(TOL).covers(Point(junction['at_mm'])):continue
         branches.append(junction)
         if junction['interior_indices']:
             record('implicit_free_junctions',*ids,at_mm=junction['at_mm'])
@@ -182,6 +211,8 @@ def inspect(data, width_policy=None):
                            minimum_free_bend_included_angle_deg=135, curved_tracks_allowed=False,
                            free_three_way_branch_sectors_deg=[90,135,135],explicit_free_junction_endpoints=True),
                 free_branch_junctions=len(branches),
+                endpoint_gate_enforced='endpoint_zone_contacts' in data,
+                filled_zone_entries=zone_entries,
                 short_contact_segments=contact_segments, findings=dict(issues),
                 width_audit=dict(policy_enforced=width_policy is not None, routed_nets=len(widths),
                                  segments_checked=len(tracks), nets=inventory, transitions=transitions,

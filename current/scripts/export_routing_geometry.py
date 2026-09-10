@@ -8,7 +8,7 @@ R = Path(__file__).resolve().parents[1]
 
 def export(board_path):
     board = p.LoadBoard(str(board_path))
-    result = {'tracks': [], 'pads': [], 'vias': []}
+    result = {'tracks': [], 'pads': [], 'vias': [], 'endpoint_zone_contacts': {}}
     for item in board.GetTracks():
         common = dict(id=item.m_Uuid.AsString(), net=item.GetNetname())
         if isinstance(item, p.PCB_VIA):
@@ -18,6 +18,13 @@ def export(board_path):
             result['tracks'].append(dict(**common, kind='arc' if isinstance(item, p.PCB_ARC) else 'line',
                 a=list(p.ToMM(item.GetStart())), b=list(p.ToMM(item.GetEnd())),
                 width=p.ToMM(item.GetWidth()), layer=item.GetLayer()))
+            # A ground-pour entry can intentionally end away from pads/tracks.
+            # Use saved filled copper, not the zone outline or a net-name exemption.
+            ends = [end for end, point in [('a', item.GetStart()), ('b', item.GetEnd())]
+                    if any(z.GetNetCode() == item.GetNetCode() and z.IsOnLayer(item.GetLayer())
+                           and z.HitTestFilledArea(item.GetLayer(), point) for z in board.Zones())]
+            if ends:
+                result['endpoint_zone_contacts'][common['id']] = ends
     for footprint in board.GetFootprints():
         for pad in footprint.Pads():
             for layer in (p.F_Cu, p.In1_Cu, p.In2_Cu, p.B_Cu):

@@ -55,12 +55,12 @@
       "all_top": true
     },
     "HSE_OUT": {
-      "total_track_length_mm": 4.96053419884717,
+      "total_track_length_mm": 5.1480339059327385,
       "vias": 0,
       "all_top": true
     },
     "HSE_XTAL_OUT": {
-      "total_track_length_mm": 5.7146708114538365,
+      "total_track_length_mm": 5.714670811453836,
       "vias": 0,
       "all_top": true
     },
@@ -80,12 +80,12 @@
       "all_top": true
     },
     "BOOST_SW": {
-      "total_track_length_mm": 15.053936674853258,
+      "total_track_length_mm": 14.812515318615947,
       "vias": 0,
       "all_top": true
     },
     "BOOST_FB": {
-      "total_track_length_mm": 10.796435777509512,
+      "total_track_length_mm": 10.804646455628166,
       "vias": 0,
       "all_top": true
     },
@@ -95,35 +95,35 @@
       "all_top": true
     },
     "BOOST_COMP_RC": {
-      "total_track_length_mm": 10.429834440186898,
+      "total_track_length_mm": 10.729834440185229,
       "vias": 0,
       "all_top": true
     }
   },
   "inner_service_and_monitor_routes": {
-    "+3V3": 16.431550416774837,
+    "+3V3": 16.59726009489054,
     "ADC_5V": 6.1305086527633215,
-    "BIAS_DOWN1": 38.287036405740785,
-    "BIAS_DOWN2": 36.830256121072814,
-    "BIAS_UP2_N": 24.856654018824543,
-    "POWER_12V_EN": 31.49696064623253,
-    "POWER_5V_EN": 23.042692988145618,
-    "UART_RX": 30.806817792733888,
-    "UART_TX": 15.828496427644797
+    "BIAS_DOWN1": 38.36203640574078,
+    "BIAS_DOWN2": 36.85525612106915,
+    "BIAS_UP2_N": 24.85245696254969,
+    "POWER_12V_EN": 31.496960646232527,
+    "POWER_5V_EN": 23.178048327204937,
+    "UART_RX": 30.97752817795929,
+    "UART_TX": 16.042993488107218
   },
   "power_net_geometry": {
     "SENSOR_12V": {
-      "total_track_length_mm": 123.7541340895831,
+      "total_track_length_mm": 120.225885238817,
       "minimum_width_mm": 0.5,
       "via_count": 9
     },
     "BOOST_12V": {
-      "total_track_length_mm": 57.25421875315577,
+      "total_track_length_mm": 55.680898977737726,
       "minimum_width_mm": 0.25,
       "via_count": 2
     },
     "V5_INTERNAL": {
-      "total_track_length_mm": 180.67969841869046,
+      "total_track_length_mm": 172.38047958998902,
       "minimum_width_mm": 0.25,
       "via_count": 14
     },
@@ -138,12 +138,12 @@
       "via_count": 2
     },
     "VIN_PROT": {
-      "total_track_length_mm": 90.01465976947722,
+      "total_track_length_mm": 89.8188401078988,
       "minimum_width_mm": 0.25,
       "via_count": 7
     },
     "SENSOR_5V": {
-      "total_track_length_mm": 113.2192562962363,
+      "total_track_length_mm": 108.23502068077703,
       "minimum_width_mm": 0.35,
       "via_count": 10
     },
@@ -216,14 +216,14 @@
   },
   "status_routes": {
     "STATUS_5V_DATA": {
-      "track_length_mm": 15.780445812754213,
+      "track_length_mm": 15.995978821322533,
       "vias": 0,
       "layers": [
         "F.Cu"
       ]
     },
     "STATUS_DIN": {
-      "track_length_mm": 53.43353531617383,
+      "track_length_mm": 53.56674599429248,
       "vias": 2,
       "layers": [
         "F.Cu",
@@ -233,7 +233,7 @@
   },
   "rgb_local_bypass": {
     "C74": {
-      "supply_top_path_mm": 2.2060028842544406
+      "supply_top_path_mm": 2.6015958498984766
     },
     "C75": {
       "supply_top_path_mm": 3.725
@@ -242,8 +242,8 @@
   "routing_inventory": {
     "layers": {
       "F.Cu": {
-        "segments": 1258,
-        "length_mm": 1563.4075068876205,
+        "segments": 966,
+        "length_mm": 1539.5458540365257,
         "non_45_degree_segments": []
       },
       "In1.Cu": {
@@ -252,17 +252,17 @@
         "non_45_degree_segments": []
       },
       "In2.Cu": {
-        "segments": 169,
-        "length_mm": 304.6030660589684,
+        "segments": 92,
+        "length_mm": 305.61790159824653,
         "non_45_degree_segments": []
       },
       "B.Cu": {
-        "segments": 603,
-        "length_mm": 1536.0555694692764,
+        "segments": 475,
+        "length_mm": 1518.828654116009,
         "non_45_degree_segments": []
       }
     },
-    "vias": 245,
+    "vias": 242,
     "scope": "Straight horizontal/vertical/45-degree centerlines enforced. The separate routing_rules.json gate also rejects redundant geometry, tiny free jogs and sharp free bends. Rounded copper end caps are normal. Native DRC and independent Gerber checks establish connectivity/clearance, not EMC qualification."
   }
 }

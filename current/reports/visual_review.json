@@ -1,31 +1,31 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-10T01:47:47.659337+00:00",
+  "reviewed_utc": "2026-09-10T02:08:41.743541+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
       "file": "output/review/board_3d_final.png",
-      "sha256": "cc9e40bd3a7a3132a77ce9414d948b59ed7f880b2579b1541620945bd5583f33",
-      "scope": "Refreshed oblique CAD inspected after width cleanup. Component arrangement, optical courtyard, connectors, service socket and markings retained.",
-      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
+      "sha256": "b924bd01cb1b7449a41df0411e2c687601154fe5f62ec0210f6cac7ff4f7cdd7",
+      "scope": "Refreshed oblique CAD inspected after contact/branch cleanup; component arrangement, connectors, optical courtyard, service socket and markings retained.",
+      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
     },
     {
       "file": "output/review/board_top.png",
-      "sha256": "df90ea235e29014292b8d33d1828610979f7be5304d6245afd58db54b8a91921",
-      "scope": "Refreshed top CAD inspected with actual-copper previews and width close-ups. Same component/selector arrangement; unnecessary signal and power width changes removed.",
-      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
+      "sha256": "a8fcfdf93be6ae45207070c471b2c482cb0031a6cb272a94e9dda0b476630efa",
+      "scope": "Refreshed top CAD inspected with native contact close-ups and exported copper. Pad overshoots and redundant approaches removed.",
+      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "c52219e03f2bc4173ac1887383a7f0171202e158f1e0645936152e97f7b2e40c",
-      "scope": "Refreshed underside CAD inspected. SugarCANe artwork, vias and holes retained; wider sensor-power routes visible.",
-      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
+      "sha256": "f026693046aa23fca0d8f2b63cbca10a15538e86b003d093f9ce9db6282dbc5a",
+      "scope": "Refreshed underside CAD inspected with lower-side native close-ups. Selector overshoot and redundant loop removed; artwork retained.",
+      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
     },
     {
       "file": "output/review/board_connectors.png",
-      "sha256": "dc8942c32e32b99d7bff0bc0a2d839b7995c15bf9294162f51bb0ed34fe6a86e",
-      "scope": "Refreshed connector-angle CAD inspected; wire entries, recessed debug socket and selector access retained.",
-      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
+      "sha256": "20fd04d324c9598dc274781605619b36070ff22240351b27cf2be3fc132e475d",
+      "scope": "Refreshed connector-angle CAD inspected; connector entries and selector access retained.",
+      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
     },
     {
       "file": "output/review/service_gui.png",
@@ -36,9 +36,9 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "2b711e24c0f92f1ab4af257369162a8360d8e0edf60dd019bb608efbe00451a6",
-      "scope": "All 39 pages raster-compared against baseline. Changed pages 1, 3-5 and 35-37 inspected. Width-audit results and retained HOLD are readable; no orphan overview page remains.",
-      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
+      "sha256": "26ea04056857a2ba86674630726abec3640a861fe204510c95c3eb9c9e5c6be4",
+      "scope": "All 39 pages raster-compared with baseline; changed pages 1, 3-5 and 35-37 inspected. Current routing and DC results and unchanged HOLD are readable.",
+      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
@@ -70,9 +70,9 @@
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "sha256": "03f00bbad4e4a5e41609594658b7f690b7b56f63e890c87ac84d8a0879328fd6",
-      "scope": "All four pages raster-compared. Changed top and bottom copper pages inspected; both inner-layer pages pixel-identical. Compared with native width close-ups and independent geometry/connectivity checks.",
-      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
+      "sha256": "a497ca3099e64f2484f67458f35466223c88a3c90b77a7a06a0097564b83bec6",
+      "scope": "All four updated copper pages inspected after native DRC and independent copper clearance/connectivity passes. Changed signal routing, refill and three removed via holes reflected on all four layers.",
+      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
     },
     {
       "file": "reports/electrical/converter_loop.png",
@@ -118,15 +118,15 @@
     },
     {
       "file": "output/review/gerber_top_copper.png",
-      "sha256": "a651b241e27c501a3545411df82fe5d469c53bf52a7b70c14c5b7cee2e8bed32",
-      "scope": "Actual final exported top copper inspected with the copper PDF and native width before/after details.",
-      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
+      "sha256": "cae34a9cc0dbc329f8f22a36c86a28d1c7810e59209fbbe728b433c44dc5fb4e",
+      "scope": "Actual exported top copper inspected with four-layer PDF and native contact before/after details.",
+      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
     },
     {
       "file": "output/review/gerber_bottom_copper.png",
-      "sha256": "a52f07f8079c0d54bb0aeeebec4185c07b0586fbd34c6085c962b001253eaab3",
-      "scope": "Actual final exported bottom copper inspected with the copper PDF; selector-power sections widened and inner planes unchanged.",
-      "reviewed_utc": "2026-09-10T01:47:47.659337+00:00"
+      "sha256": "f131b495f2bd9c4fe6a6ff37b84374b27cc269ee87c8e848db9ed3ec20d3b7fd",
+      "scope": "Actual exported bottom copper inspected with four-layer PDF and lower-side native close-ups.",
+      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
     },
     {
       "file": "output/fabrication/FRC_Sensor_CAN-NPTH-drl_map.pdf",
@@ -137,20 +137,26 @@
     },
     {
       "file": "output/fabrication/FRC_Sensor_CAN-PTH-drl_map.pdf",
-      "sha256": "81719d3922f878fd1bc9da213611d389627c11d59b6cf97a63f480fa81196459",
-      "scope": "Rendered drill map is pixel-identical to reviewed ae55a5b.",
-      "reviewed_utc": "2026-09-10T01:03:51.507953+00:00",
-      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
+      "sha256": "4462ce32be01c7eb4fe7c9ec6abb11c9c2b36f13c864a8fca652d608be3056ee",
+      "scope": "Updated plated-drill map inspected; three redundant signal-via drills removed, other drill geometry retained.",
+      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
     },
     {
       "file": "output/review/routing_widths.png",
       "sha256": "07bd8bb20b977d7c2d2483642322686cf8192c7e160b188ea8eedc59422df743",
       "reviewed_utc": "2026-09-10T01:47:47.659337+00:00",
-      "scope": "Four paired native-copper close-ups inspected: CAN routes, 3.3 V route, reverse-protection gate and internal 5 V power. All 12 remaining shared-endpoint width transitions also individually inspected in the scratch review sheet."
+      "scope": "Four paired native-copper close-ups inspected: CAN routes, 3.3 V route, reverse-protection gate and internal 5 V power. All 12 remaining shared-endpoint width transitions also individually inspected in the scratch review sheet.",
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
+    },
+    {
+      "file": "output/review/routing_contacts.png",
+      "sha256": "5ecb04042f7a6c918123eede5b157e8a34d7da945d085280a7c1c4b22f4f58de",
+      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00",
+      "scope": "Paired native-copper details inspected: lower-left bottom loop/supply junction, lower-right bottom selector hook, top redundant paths, retained inner service-connector clearance. Pours omitted for trace visibility."
     }
   ],
   "limitations": "Native CAD, exported copper, document inspection and nominal routed-copper DC screening only. No new transient simulation, firmware replay or physical prototype qualification. Existing manufacturing HOLD retained.",
-  "page_comparison_baseline_commit": "864224979e039a5e20e001a418f7801962904e61",
+  "page_comparison_baseline_commit": "61192b617bb36d81272f7f307956e48c4cadfdc2",
   "rendered_page_comparison": {
     "output/documentation/SC12_RevH_Handbook.pdf": {
       "before_pages": 39,
@@ -190,6 +196,8 @@
       "after_pages": 4,
       "changed_pages": [
         1,
+        2,
+        3,
         4
       ]
     },
@@ -206,7 +214,9 @@
     "output/fabrication/FRC_Sensor_CAN-PTH-drl_map.pdf": {
       "before_pages": 1,
       "after_pages": 1,
-      "changed_pages": []
+      "changed_pages": [
+        1
+      ]
     }
   },
   "bottom_branding": {
@@ -230,56 +240,132 @@
     "files": [
       "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo",
       "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto",
-      "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs",
-      "output/fabrication/FRC_Sensor_CAN-F_Mask.gts",
       "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp",
       "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp",
-      "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1",
-      "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1",
-      "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2"
+      "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1"
     ],
     "method": "Exact text comparison excluding generator timestamps only.",
-    "baseline_commit": "864224979e039a5e20e001a418f7801962904e61"
+    "baseline_commit": "61192b617bb36d81272f7f307956e48c4cadfdc2"
   },
   "routing_cleanup": {
     "result": "PASS",
-    "baseline_commit": "864224979e039a5e20e001a418f7801962904e61",
+    "baseline_commit": "61192b617bb36d81272f7f307956e48c4cadfdc2",
     "before": {
-      "segments": 2040,
-      "vias": 245,
-      "total_centerline_length_mm": 3404.0661424158584,
-      "minimum_width_mm": 0.18
-    },
-    "after": {
       "segments": 2030,
       "vias": 245,
       "total_centerline_length_mm": 3404.0661424158584,
       "minimum_width_mm": 0.18
     },
+    "after": {
+      "segments": 1533,
+      "vias": 242,
+      "total_centerline_length_mm": 3363.9924097507806,
+      "minimum_width_mm": 0.18
+    },
     "unchanged_native_objects": [
-      "footprints and pads",
-      "vias",
-      "board outline",
-      "stackup",
-      "net names",
-      "top and bottom artwork/markings",
-      "zone definitions and keepouts"
+      "All footprints and pads, their positions and net assignments",
+      "Remaining 242 vias including thermal/ground stitching",
+      "Board outline, layer stack, keepouts, zone definitions, markings and models"
     ],
-    "board_sha256": "c6f6150f6a71395bcfd55faff9d0de88cd833f19438ebcd708ad3981c939c3d7",
-    "scope": "Width cleanup only. No centerline rerouting, component, via, electrical-function, BOM, firmware, stackup or marking changes. All original width-change junctions individually reviewed; remaining exceptions recorded in the enforced width policy. Separate fresh CAD/DC/Gerber checks remain required.",
-    "width_summary": {
-      "routed_nets_reviewed": 77,
-      "original_segments_reviewed": 2040,
-      "segments_widened": 68,
-      "segments_narrowed": 0,
-      "redundant_collinear_joins_merged": 10,
-      "width_junctions_before": 52,
-      "width_junctions_after": 12,
-      "free_width_junctions_after": 6,
-      "all_original_track_copper_preserved": true
+    "board_sha256": "11a7fe728a5c38fea9ccf797b009e49f00d5b57660013b24940de233ee9ede55",
+    "scope": "All-layer contact and branch cleanup. No component, circuit, BOM, firmware, layer-stack or marking changes. Three redundant signal vias removed; no additional routing vias. Separate fresh native CAD, copper DC and exported-Gerber checks required. Transient simulations remain deferred; no physical qualification claimed.",
+    "removed_redundant_vias": [
+      {
+        "id": "98c3dadb-99ff-4b5b-902a-850bea21e86e",
+        "net": "+3V3",
+        "at": [
+          5.8232,
+          57.5491
+        ],
+        "width": 0.65,
+        "layers": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "remaining_connected_track_layers": [
+          0
+        ],
+        "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+      },
+      {
+        "id": "1ea72085-26c6-4b4b-8cf5-6edde53809eb",
+        "net": "SENSE3",
+        "at": [
+          30.7255,
+          48.2871
+        ],
+        "width": 0.65,
+        "layers": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "remaining_connected_track_layers": [
+          2
+        ],
+        "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+      },
+      {
+        "id": "cf5b937a-86d1-4507-a784-398b44681f80",
+        "net": "SIG3",
+        "at": [
+          43.1172,
+          59.349999
+        ],
+        "width": 0.65,
+        "layers": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "remaining_connected_track_layers": [
+          2
+        ],
+        "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+      }
+    ],
+    "contact_cleanup": {
+      "segments_removed_net": 497,
+      "fixes": [
+        "Pad/via approaches shortened to remove overshoots and tiny stair steps on all routed layers.",
+        "Lower-left bottom BIAS_UP1_N loop and top BIAS_UP3_N duplicate paths removed.",
+        "SENSOR_5V, SENSOR_12V and V5_INTERNAL overlapping routes merged into shared endpoints and chamfered branches.",
+        "End-cap-only track and pad joins extended into real contacts; redundant C66 ground stub removed.",
+        "Local converter, crystal, power widths and ground-via stitching retained under existing constraints."
+      ],
+      "routing_rules": {
+        "direction_tolerance_mm": 2e-05,
+        "minimum_free_segment_mm": 0.1,
+        "minimum_free_bend_included_angle_deg": 135,
+        "curved_tracks_allowed": false,
+        "free_three_way_branch_sectors_deg": [
+          90,
+          135,
+          135
+        ],
+        "explicit_free_junction_endpoints": true
+      },
+      "filled_zone_entries_retained": 11,
+      "endpoint_gate_enforced": true,
+      "routed_nets": 77,
+      "width_transitions": 13,
+      "free_width_transitions": 6,
+      "strengthened_gate_before_findings": {
+        "unjoined_endpoints": 110,
+        "parallel_copper_overlap": 14,
+        "short_free_segments": 48,
+        "redundant_collinear_joint": 2,
+        "unchamfered_free_branches": 2
+      },
+      "strengthened_gate_after_findings": {},
+      "closed_same_layer_centerline_cycles_after": 0
     }
   },
-  "sourcing_geometry_note": "Native nonrouting objects remain exactly equal to the sourcing candidate. 68 segments widened, ten collinear joins merged; no path moved or trace narrowed. Updated CAD/DC/Gerber evidence and renders reviewed.",
+  "sourcing_geometry_note": "Exact native comparison preserves every nonrouting object except three individually reviewed redundant signal vias. Components, stack, remaining vias and markings unchanged. Fresh CAD/DC/Gerber checks and renders reviewed.",
   "assembly_audit_document_comparison": {
     "baseline_commit": "26a31d8859a3b7bdf73beb16c652f51b8c65de3b",
     "documents": {

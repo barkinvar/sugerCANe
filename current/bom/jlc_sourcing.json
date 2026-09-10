@@ -3522,8 +3522,73 @@
   },
   "routing_review": {
     "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
-    "board_sha256": "c6f6150f6a71395bcfd55faff9d0de88cd833f19438ebcd708ad3981c939c3d7",
-    "nonrouting_objects_sha256": "e3ed96947f37f53acd3aa32f98a84c30a9bda0128c8a1a3aae78a1b45b0c116e",
-    "scope": "Authorized branch and width cleanup; exact native nonrouting objects still match the sourcing candidate. All 77 routed nets reviewed; 68 segments widened, none narrowed; 40 unnecessary width-change junctions removed. CAD/DC/Gerber checks refreshed; new transient simulations remain deferred."
+    "board_sha256": "11a7fe728a5c38fea9ccf797b009e49f00d5b57660013b24940de233ee9ede55",
+    "nonrouting_objects_sha256": "e4353dfdb994feff9097c45d8a58a25a327f040cb739ecaafbf8ad4652c24cb1",
+    "scope": "Authorized contact/branch cleanup. Exact native comparison preserves every other object; three redundant signal vias removed. Width policy unchanged. CAD/DC/Gerber checks refreshed; transient simulations deferred.",
+    "previous_review": {
+      "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
+      "board_sha256": "c6f6150f6a71395bcfd55faff9d0de88cd833f19438ebcd708ad3981c939c3d7",
+      "nonrouting_objects_sha256": "e3ed96947f37f53acd3aa32f98a84c30a9bda0128c8a1a3aae78a1b45b0c116e",
+      "scope": "Authorized branch and width cleanup; exact native nonrouting objects still match the sourcing candidate. All 77 routed nets reviewed; 68 segments widened, none narrowed; 40 unnecessary width-change junctions removed. CAD/DC/Gerber checks refreshed; new transient simulations remain deferred."
+    },
+    "removed_redundant_vias": [
+      {
+        "id": "98c3dadb-99ff-4b5b-902a-850bea21e86e",
+        "net": "+3V3",
+        "at": [
+          5.8232,
+          57.5491
+        ],
+        "width": 0.65,
+        "layers": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "remaining_connected_track_layers": [
+          0
+        ],
+        "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+      },
+      {
+        "id": "1ea72085-26c6-4b4b-8cf5-6edde53809eb",
+        "net": "SENSE3",
+        "at": [
+          30.7255,
+          48.2871
+        ],
+        "width": 0.65,
+        "layers": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "remaining_connected_track_layers": [
+          2
+        ],
+        "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+      },
+      {
+        "id": "cf5b937a-86d1-4507-a784-398b44681f80",
+        "net": "SIG3",
+        "at": [
+          43.1172,
+          59.349999
+        ],
+        "width": 0.65,
+        "layers": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "remaining_connected_track_layers": [
+          2
+        ],
+        "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+      }
+    ]
   }
 }

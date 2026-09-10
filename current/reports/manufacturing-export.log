@@ -1,4 +1,4 @@
-PASS routing rules: {} (2030 segments, 245 vias)
+PASS routing rules: {} (1533 segments, 242 vias)
 Found 0 violations
 Found 0 unconnected items
 Saved DRC Report to reports/drc/final.json
@@ -42,26 +42,26 @@ Plotted to 'output/assembly/bottom_copper.svg'.
 Done.
 Plotted to 'output/assembly/schematic.pdf'.
 Done.
-18:45:40: Debug: Adding duplicate image handler for 'PNG file'
-18:45:40: Debug: Adding duplicate image handler for 'JPEG file'
-18:45:40: Debug: Adding duplicate image handler for 'TIFF file'
-18:45:40: Debug: Adding duplicate image handler for 'GIF file'
-18:45:40: Debug: Adding duplicate image handler for 'PNM file'
-18:45:40: Debug: Adding duplicate image handler for 'PCX file'
-18:45:40: Debug: Adding duplicate image handler for 'IFF file'
-18:45:40: Debug: Adding duplicate image handler for 'Windows icon file'
-18:45:40: Debug: Adding duplicate image handler for 'Windows cursor file'
-18:45:40: Debug: Adding duplicate image handler for 'Windows animated cursor file'
-18:45:40: Debug: Adding duplicate image handler for 'TGA file'
-18:45:40: Debug: Adding duplicate image handler for 'XPM file'
-18:45:40: Debug: Adding duplicate image handler for 'WebP file'
+19:07:16: Debug: Adding duplicate image handler for 'PNG file'
+19:07:16: Debug: Adding duplicate image handler for 'JPEG file'
+19:07:16: Debug: Adding duplicate image handler for 'TIFF file'
+19:07:16: Debug: Adding duplicate image handler for 'GIF file'
+19:07:16: Debug: Adding duplicate image handler for 'PNM file'
+19:07:16: Debug: Adding duplicate image handler for 'PCX file'
+19:07:16: Debug: Adding duplicate image handler for 'IFF file'
+19:07:16: Debug: Adding duplicate image handler for 'Windows icon file'
+19:07:16: Debug: Adding duplicate image handler for 'Windows cursor file'
+19:07:16: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+19:07:16: Debug: Adding duplicate image handler for 'TGA file'
+19:07:16: Debug: Adding duplicate image handler for 'XPM file'
+19:07:16: Debug: Adding duplicate image handler for 'WebP file'
 Loading hardware/FRC_Sensor_CAN.kicad_pcb
-2026-09-09 18:45:40,809 WARNING Component H2 is missing from schematic data.
-2026-09-09 18:45:40,809 WARNING Component H1 is missing from schematic data.
-2026-09-09 18:45:40,809 WARNING Netlist/xml file is likely out of date.
-2026-09-09 18:45:40,852 INFO Compressing pcb data
-2026-09-09 18:45:41,127 INFO Dumping pcb data
-2026-09-09 18:45:41,129 INFO Created file /home/neuro/candi-clone/current/hardware/../output/assembly/interactive_bom.html
+2026-09-09 19:07:16,752 WARNING Component H2 is missing from schematic data.
+2026-09-09 19:07:16,752 WARNING Component H1 is missing from schematic data.
+2026-09-09 19:07:16,753 WARNING Netlist/xml file is likely out of date.
+2026-09-09 19:07:16,795 INFO Compressing pcb data
+2026-09-09 19:07:17,061 INFO Dumping pcb data
+2026-09-09 19:07:17,062 INFO Created file /home/neuro/candi-clone/current/hardware/../output/assembly/interactive_bom.html
 STEP file 'output/mechanical/FRC_Sensor_CAN.step' created.
 
-Export time 1.227 s
+Export time 1.225 s

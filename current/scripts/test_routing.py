@@ -16,6 +16,35 @@ def audit(*tracks, pads=(), vias=(), width_policy=None):
 
 
 class RoutingRules(unittest.TestCase):
+    def test_contact_halo_does_not_hide_overshoot(self):
+        pad=dict(net='SIG', layer=0, polygons=[[(-.2,-.2),(.2,-.2),(.2,.2),(-.2,.2)]])
+        self.assertIn('short_free_segments', audit(track((.22,0),(.27,0)), pads=[pad])['findings'])
+        self.assertIn('sharp_free_bends', audit(track((-.5,0),(.25,0)),
+                                              track((.25,0),(.25,.5)), pads=[pad])['findings'])
+
+    def test_parallel_copper_overlap_without_centerline_crossing(self):
+        self.assertIn('parallel_copper_overlap', audit(track((0,0),(3,0)),
+                                      track((1,.01),(4,.01)))['findings'])
+        self.assertEqual(audit(track((0,0),(3,0)),track((1,.3),(4,.3)))['result'],'PASS')
+        self.assertEqual(audit(track((0,0),(3,0)),track((1,.01),(4,.01),layer=2))['result'],'PASS')
+
+    def test_full_board_endpoints_require_centerline_contact(self):
+        data=dict(tracks=[dict(track((0,0),(1,0)),id='a'),
+                          dict(track((1.1,0),(2,0)),id='b')],
+                  pads=[],vias=[dict(net='SIG',at=p,width=.6,layers=[0]) for p in [(0,0),(2,0)]],
+                  endpoint_zone_contacts={})
+        self.assertEqual(len(inspect(data)['findings']['unjoined_endpoints']),2)
+        data['tracks'][0]['b']=(1.1,0)
+        self.assertNotIn('unjoined_endpoints',inspect(data)['findings'])
+
+    def test_filled_zone_entry_requires_explicit_evidence(self):
+        data=dict(tracks=[dict(track((0,0),(1,0),net='GND'),id='a')],pads=[],
+                  vias=[dict(net='GND',at=(0,0),width=.6,layers=[0])],endpoint_zone_contacts={})
+        self.assertIn('unjoined_endpoints',inspect(data)['findings'])
+        data['endpoint_zone_contacts']={'a':['b']}
+        self.assertEqual(inspect(data)['result'],'PASS')
+        self.assertEqual(inspect(data)['filled_zone_entries'],1)
+
     def test_straight_and_chamfer(self):
         self.assertEqual(audit(track((0,0),(1,0)), track((1,0),(2,1)),
                                track((2,1),(2,2)))['result'], 'PASS')

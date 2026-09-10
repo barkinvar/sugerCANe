@@ -1,7 +1,7 @@
 {
   "result": "PASS",
-  "segments": 2030,
-  "vias": 245,
+  "segments": 1533,
+  "vias": 242,
   "rules": {
     "direction_tolerance_mm": 2e-05,
     "minimum_free_segment_mm": 0.1,
@@ -14,26 +14,28 @@
     ],
     "explicit_free_junction_endpoints": true
   },
-  "free_branch_junctions": 34,
-  "short_contact_segments": 391,
+  "free_branch_junctions": 35,
+  "endpoint_gate_enforced": true,
+  "filled_zone_entries": 11,
+  "short_contact_segments": 50,
   "findings": {},
   "width_audit": {
     "policy_enforced": true,
     "routed_nets": 77,
-    "segments_checked": 2030,
+    "segments_checked": 1533,
     "nets": [
       {
         "net": "+3V3",
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 6,
-            "length_mm": 6.071295090390225
+            "segments": 5,
+            "length_mm": 6.061295090390225
           },
           {
             "width_mm": 0.25,
-            "segments": 176,
-            "length_mm": 232.98071234273786
+            "segments": 130,
+            "length_mm": 230.4031847571662
           }
         ],
         "reason": "0.25 mm distribution; 0.18 mm J8 sense/reference branch clears J8.7 ground pad on In2.Cu. Widening its existing path to 0.25 mm leaves only 0.180 mm clearance."
@@ -65,8 +67,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 11,
-            "length_mm": 14.83628915068422
+            "segments": 10,
+            "length_mm": 15.112838927887879
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -76,8 +78,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 22,
-            "length_mm": 39.355328374431394
+            "segments": 19,
+            "length_mm": 38.24163519406258
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -87,8 +89,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 33,
-            "length_mm": 60.37213950599934
+            "segments": 26,
+            "length_mm": 60.5273168826356
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -98,8 +100,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 25,
-            "length_mm": 51.93790552042613
+            "segments": 20,
+            "length_mm": 51.96290552042246
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -109,8 +111,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 30,
-            "length_mm": 64.5637937512426
+            "segments": 28,
+            "length_mm": 64.56379375124259
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -153,8 +155,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 34,
-            "length_mm": 16.249200816846972
+            "segments": 9,
+            "length_mm": 16.54418651662941
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -187,7 +189,7 @@
           {
             "width_mm": 0.25,
             "segments": 2,
-            "length_mm": 2.9006096654409843
+            "length_mm": 2.8131096654409857
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -219,8 +221,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 30,
-            "length_mm": 63.8921030468164
+            "segments": 16,
+            "length_mm": 59.27164513858573
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -230,8 +232,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 37,
-            "length_mm": 48.38678906861636
+            "segments": 23,
+            "length_mm": 46.904069859922444
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -241,8 +243,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 27,
-            "length_mm": 60.59196353558876
+            "segments": 19,
+            "length_mm": 56.641617938859696
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -252,13 +254,13 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 9,
-            "length_mm": 12.135496059521472
+            "segments": 6,
+            "length_mm": 12.51951539550523
           },
           {
             "width_mm": 0.8,
-            "segments": 29,
-            "length_mm": 45.118722693634275
+            "segments": 25,
+            "length_mm": 43.16138358223248
           }
         ],
         "reason": "0.8 mm reservoir/eFuse power path; 0.25 mm feedback, inhibit and enable-resistor branches (R60, R68, R70)."
@@ -279,8 +281,8 @@
         "widths": [
           {
             "width_mm": 0.2,
-            "segments": 25,
-            "length_mm": 10.429834440186898
+            "segments": 5,
+            "length_mm": 10.729834440185229
           }
         ],
         "reason": "Uniform low-current converter compensation route."
@@ -290,8 +292,8 @@
         "widths": [
           {
             "width_mm": 0.2,
-            "segments": 11,
-            "length_mm": 10.79643577750951
+            "segments": 8,
+            "length_mm": 10.804646455628166
           }
         ],
         "reason": "Uniform low-current converter feedback route."
@@ -301,8 +303,8 @@
         "widths": [
           {
             "width_mm": 0.2,
-            "segments": 14,
-            "length_mm": 14.605839635996972
+            "segments": 7,
+            "length_mm": 14.630839635996978
           }
         ],
         "reason": "Uniform low-current converter soft-start route."
@@ -312,13 +314,13 @@
         "widths": [
           {
             "width_mm": 0.3,
-            "segments": 3,
+            "segments": 2,
             "length_mm": 3.306828098979215
           },
           {
             "width_mm": 0.5,
-            "segments": 27,
-            "length_mm": 11.747108575874043
+            "segments": 5,
+            "length_mm": 11.505687219636734
           }
         ],
         "reason": "0.3 mm approach from U8.5 to the 0.5 mm inductor/diode path. A 0.5 mm approach would leave only 0.150 mm to U8.6; required track-to-pad clearance is 0.2 mm."
@@ -329,7 +331,7 @@
           {
             "width_mm": 0.18,
             "segments": 9,
-            "length_mm": 21.252948211871022
+            "length_mm": 21.24880607624729
           }
         ],
         "reason": "Uniform MCU/service route through the dense programming area."
@@ -361,7 +363,7 @@
         "widths": [
           {
             "width_mm": 0.4,
-            "segments": 8,
+            "segments": 7,
             "length_mm": 8.233084412271577
           }
         ],
@@ -372,8 +374,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 19,
-            "length_mm": 45.786731813454026
+            "segments": 15,
+            "length_mm": 45.413939607318234
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -384,7 +386,7 @@
           {
             "width_mm": 0.25,
             "segments": 15,
-            "length_mm": 55.74476970086083
+            "length_mm": 55.70256573214122
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -405,8 +407,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 25,
-            "length_mm": 43.66600014144124
+            "segments": 23,
+            "length_mm": 43.34756135604878
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -416,8 +418,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 24,
-            "length_mm": 22.414756973591796
+            "segments": 6,
+            "length_mm": 22.672601393151595
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -438,8 +440,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 16,
-            "length_mm": 22.24945053924403
+            "segments": 14,
+            "length_mm": 22.275256044179873
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -460,8 +462,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 24,
-            "length_mm": 18.48331498727817
+            "segments": 11,
+            "length_mm": 18.625624691163807
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -482,8 +484,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 17,
-            "length_mm": 20.316742886896094
+            "segments": 12,
+            "length_mm": 18.833434265926844
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -504,13 +506,13 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 254,
-            "length_mm": 476.99764161141
+            "segments": 239,
+            "length_mm": 475.2178842262864
           },
           {
             "width_mm": 0.3,
-            "segments": 7,
-            "length_mm": 4.844759197546795
+            "segments": 4,
+            "length_mm": 4.882259197546792
           },
           {
             "width_mm": 0.4,
@@ -530,7 +532,7 @@
         "widths": [
           {
             "width_mm": 0.2,
-            "segments": 6,
+            "segments": 4,
             "length_mm": 6.5862698372208115
           }
         ],
@@ -541,8 +543,8 @@
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 21,
-            "length_mm": 4.960534198847172
+            "segments": 5,
+            "length_mm": 5.1480339059327385
           }
         ],
         "reason": "Uniform short crystal output pin escape."
@@ -563,8 +565,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 52,
-            "length_mm": 132.2021103783731
+            "segments": 42,
+            "length_mm": 132.2453862130501
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -574,8 +576,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 26,
-            "length_mm": 70.38275152535617
+            "segments": 24,
+            "length_mm": 69.48905152535617
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -586,7 +588,7 @@
           {
             "width_mm": 0.25,
             "segments": 29,
-            "length_mm": 72.57140394936948
+            "length_mm": 72.57140424226253
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -596,8 +598,8 @@
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 14,
-            "length_mm": 28.139297769667017
+            "segments": 13,
+            "length_mm": 28.171620100137346
           }
         ],
         "reason": "Uniform MCU/service route through the dense programming area."
@@ -607,8 +609,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 32,
-            "length_mm": 70.79875236725267
+            "segments": 27,
+            "length_mm": 70.08787635329506
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -618,8 +620,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 44,
-            "length_mm": 66.79536251780931
+            "segments": 34,
+            "length_mm": 66.90357319592795
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -629,8 +631,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 25,
-            "length_mm": 30.979008340542073
+            "segments": 22,
+            "length_mm": 30.087219018660726
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -640,8 +642,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 12,
-            "length_mm": 9.541554323830768
+            "segments": 7,
+            "length_mm": 9.26717926011483
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -651,8 +653,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 50,
-            "length_mm": 71.66587636019443
+            "segments": 34,
+            "length_mm": 71.51755948389824
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -662,8 +664,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 30,
-            "length_mm": 63.31709998461788
+            "segments": 27,
+            "length_mm": 63.192836208799264
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -673,8 +675,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 31,
-            "length_mm": 69.37990370066429
+            "segments": 26,
+            "length_mm": 67.6523450708435
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -684,8 +686,8 @@
         "widths": [
           {
             "width_mm": 0.5,
-            "segments": 74,
-            "length_mm": 123.75413408958315
+            "segments": 45,
+            "length_mm": 120.22588523881697
           }
         ],
         "reason": "Uniform protected sensor-power distribution; 300 mA routed-copper drop checked separately."
@@ -695,13 +697,13 @@
         "widths": [
           {
             "width_mm": 0.35,
-            "segments": 11,
-            "length_mm": 20.34919010389117
+            "segments": 10,
+            "length_mm": 20.349190103891175
           },
           {
             "width_mm": 0.5,
-            "segments": 58,
-            "length_mm": 92.87006619234518
+            "segments": 35,
+            "length_mm": 87.88583057688585
           }
         ],
         "reason": "0.5 mm main distribution; 0.35 mm sections clear C4/C5/C13 and neighboring ground tracks. Widening constrained sections on their existing paths would reduce clearance to about 0.15 mm. Full 300 mA output-path drop is independently checked."
@@ -712,7 +714,7 @@
           {
             "width_mm": 0.25,
             "segments": 19,
-            "length_mm": 68.29575036941021
+            "length_mm": 68.20454225008233
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -733,8 +735,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 38,
-            "length_mm": 56.028764286167785
+            "segments": 32,
+            "length_mm": 55.6618685745499
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -744,8 +746,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 21,
-            "length_mm": 15.780445812754214
+            "segments": 7,
+            "length_mm": 15.995978821322536
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -760,7 +762,7 @@
           },
           {
             "width_mm": 0.25,
-            "segments": 20,
+            "segments": 19,
             "length_mm": 26.09823862331931
           }
         ],
@@ -771,13 +773,13 @@
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 14,
-            "length_mm": 41.96086937588512
+            "segments": 7,
+            "length_mm": 42.04622471494445
           },
           {
             "width_mm": 0.25,
-            "segments": 16,
-            "length_mm": 11.472665940288701
+            "segments": 10,
+            "length_mm": 11.520521279348031
           }
         ],
         "reason": "0.25 mm top routes; 0.18 mm inner route passes through dense signal-via/track clearances. Widening the existing inner run would leave 0.168-0.190 mm clearance."
@@ -787,8 +789,8 @@
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 22,
-            "length_mm": 38.61507068336545
+            "segments": 15,
+            "length_mm": 38.63542631531821
           }
         ],
         "reason": "Uniform MCU/service route through the dense programming area."
@@ -798,7 +800,7 @@
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 14,
+            "segments": 12,
             "length_mm": 27.387263684265523
           }
         ],
@@ -809,8 +811,8 @@
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 29,
-            "length_mm": 34.64737695183602
+            "segments": 15,
+            "length_mm": 34.81808733706143
           }
         ],
         "reason": "Uniform MCU/service route through the dense programming area."
@@ -820,8 +822,8 @@
         "widths": [
           {
             "width_mm": 0.18,
-            "segments": 31,
-            "length_mm": 30.63405738143444
+            "segments": 11,
+            "length_mm": 30.848554441896866
           }
         ],
         "reason": "Uniform MCU/service route through the dense programming area."
@@ -831,8 +833,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 27,
-            "length_mm": 23.698738296668058
+            "segments": 15,
+            "length_mm": 22.845141046056778
           }
         ],
         "reason": "Uniform 0.25 mm signal or local low-current route."
@@ -842,13 +844,13 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 14,
-            "length_mm": 5.389150429449551
+            "segments": 5,
+            "length_mm": 4.954531021678295
           },
           {
             "width_mm": 0.3,
-            "segments": 26,
-            "length_mm": 50.72295899065972
+            "segments": 20,
+            "length_mm": 47.2530266634105
           },
           {
             "width_mm": 0.48,
@@ -858,7 +860,7 @@
           {
             "width_mm": 0.8,
             "segments": 60,
-            "length_mm": 116.67061143057441
+            "length_mm": 112.27594433689339
           },
           {
             "width_mm": 0.9895,
@@ -884,18 +886,18 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 16,
-            "length_mm": 27.911690103891168
+            "segments": 8,
+            "length_mm": 27.78669010389117
           },
           {
             "width_mm": 0.5,
-            "segments": 23,
-            "length_mm": 39.296267832453886
+            "segments": 21,
+            "length_mm": 39.31435690052809
           },
           {
             "width_mm": 0.8,
-            "segments": 16,
-            "length_mm": 22.806701833132138
+            "segments": 13,
+            "length_mm": 22.717793103479533
           }
         ],
         "reason": "0.5 mm protected input trunk expands to 0.8 mm at the local buck input bypass; separate 0.25 mm branch feeds the high-impedance U1.5 enable input."
@@ -968,6 +970,25 @@
         "net": "BOOST_12V",
         "layer": 0,
         "at_mm": [
+          11.5,
+          37.5
+        ],
+        "widths_mm": [
+          0.25,
+          0.8
+        ],
+        "tracks": [
+          "bdda956c-540e-4036-b9da-a8e50b8a52b3",
+          "f53f8832-0b74-4816-846b-73debfee0f92",
+          "ffae83f7-97cf-4c05-b2ae-453a0145f7f6"
+        ],
+        "at_contact": true,
+        "reason": "Pad/via contact between separately sized branches."
+      },
+      {
+        "net": "BOOST_12V",
+        "layer": 0,
+        "at_mm": [
           13.5764,
           34.05
         ],
@@ -976,27 +997,45 @@
           0.8
         ],
         "tracks": [
+          "23b2e8e3-2c45-4834-a86b-8766a332d5d5",
           "6e5109d9-3189-4a38-9170-5cb23e3b4bb2",
-          "8f6d782d-fe09-4112-9dc0-61f90219b25f",
-          "cf4cfb9a-f2a3-45c5-bdfa-7a495a47b37d"
+          "8f6d782d-fe09-4112-9dc0-61f90219b25f"
         ],
         "at_contact": false,
         "reason": "Low-current 0.25 mm R70 inhibit-resistor branch leaves the 0.8 mm reservoir/eFuse supply."
       },
       {
-        "net": "BOOST_SW",
+        "net": "BOOST_12V",
         "layer": 0,
         "at_mm": [
-          21.0,
-          28.5
+          16.45,
+          40.5
         ],
         "widths_mm": [
-          0.3,
-          0.5
+          0.25,
+          0.8
         ],
         "tracks": [
-          "c22874ab-c238-4acf-988a-76178c17e53b",
-          "f8a388bc-0b19-4945-b9fd-b828321dc328"
+          "29fdf892-e335-47ee-b726-5c049e54e991",
+          "8352b43c-3e07-41d3-88e1-785975432432"
+        ],
+        "at_contact": true,
+        "reason": "Pad/via contact between separately sized branches."
+      },
+      {
+        "net": "GND",
+        "layer": 0,
+        "at_mm": [
+          6.6375,
+          46.25
+        ],
+        "widths_mm": [
+          0.25,
+          0.4
+        ],
+        "tracks": [
+          "2d650d1f-c451-46b3-8c6a-5de2c99d952b",
+          "9b75098e-b1fc-4cb6-98d2-d31af75e9bfd"
         ],
         "at_contact": true,
         "reason": "Pad/via contact between separately sized branches."
@@ -1013,26 +1052,8 @@
           0.3
         ],
         "tracks": [
-          "a0070529-42a0-4387-9c90-eca03298c408",
-          "c106bdd2-fc90-46e3-9f77-80402ef9c4de"
-        ],
-        "at_contact": true,
-        "reason": "Pad/via contact between separately sized branches."
-      },
-      {
-        "net": "GND",
-        "layer": 0,
-        "at_mm": [
-          14.6,
-          26.7
-        ],
-        "widths_mm": [
-          0.25,
-          0.3
-        ],
-        "tracks": [
-          "26ab0404-b785-4e0a-a1d1-0a0077c53138",
-          "a5dd1398-24fb-42fb-8391-14f62429cfea"
+          "7a9335e3-60c3-4648-ac56-9669a56ae866",
+          "a0070529-42a0-4387-9c90-eca03298c408"
         ],
         "at_contact": true,
         "reason": "Pad/via contact between separately sized branches."
@@ -1050,7 +1071,7 @@
         ],
         "tracks": [
           "230753a3-9de6-4130-a8a0-2f102665dc7a",
-          "b24110d4-4cd9-4265-ae02-b5afaa15ccba"
+          "8b04d8ed-9150-416a-9bfb-3df22dd6aa15"
         ],
         "at_contact": false,
         "reason": "Start of the 0.81 mm-long clearance neck beside the C4 ground return. Widening to even 0.6 mm leaves 0.191 mm clearance."
@@ -1067,7 +1088,7 @@
           0.8
         ],
         "tracks": [
-          "6e4dbbbd-6ebc-41b4-8499-9a90e6b09d61",
+          "2a52f706-ac26-4fb0-8293-798383f10843",
           "cdf0c87e-7acf-47ba-851f-5bc3e9d8a0b4"
         ],
         "at_contact": false,
@@ -1077,17 +1098,34 @@
         "net": "V5_INTERNAL",
         "layer": 0,
         "at_mm": [
-          21.525,
-          25.975
+          13.55,
+          25.725
+        ],
+        "widths_mm": [
+          0.25,
+          0.3
+        ],
+        "tracks": [
+          "2de4b9a6-9627-4b1e-bcd2-237972edb6c8",
+          "de50d8c9-5e24-4955-98f8-7709d303cdbd"
+        ],
+        "at_contact": true,
+        "reason": "Pad/via contact between separately sized branches."
+      },
+      {
+        "net": "V5_INTERNAL",
+        "layer": 0,
+        "at_mm": [
+          21.5,
+          25.95
         ],
         "widths_mm": [
           0.25,
           0.8
         ],
         "tracks": [
-          "2b2aa1be-06ed-4107-92b4-afc8a92c9871",
-          "6a4b673e-4cd0-41ea-9d2e-dcf2a2b130d7",
-          "c747282a-cfff-46b4-bd5f-144e0c95b5ed"
+          "36648699-61eb-4eee-9bd9-002b25bc6b04",
+          "b66906a4-e6e5-488c-a2bd-0be2c1d2d894"
         ],
         "at_contact": true,
         "reason": "Pad/via contact between separately sized branches."
@@ -1111,24 +1149,6 @@
         "reason": "Transition into the earlier consolidated parallel-route copper. Wider section retained to preserve copper cross-section and power-drop margin."
       },
       {
-        "net": "V5_INTERNAL",
-        "layer": 2,
-        "at_mm": [
-          12.70205,
-          27.25525
-        ],
-        "widths_mm": [
-          0.8,
-          0.9895
-        ],
-        "tracks": [
-          "0e93cd6a-3ad6-4dc0-a5e4-ec6fb890ec49",
-          "d4f4f208-d711-46f6-ab03-fba44aab09d3"
-        ],
-        "at_contact": true,
-        "reason": "Pad/via contact between separately sized branches."
-      },
-      {
         "net": "VIN_PROT",
         "layer": 0,
         "at_mm": [
@@ -1140,8 +1160,8 @@
           0.8
         ],
         "tracks": [
-          "1be62e7b-6ea7-4d96-bb28-aeb751e428ee",
-          "9a7c2322-3169-4c8e-8b47-eebfb49ea0c2"
+          "9a7c2322-3169-4c8e-8b47-eebfb49ea0c2",
+          "ae3c6719-e507-4eae-8853-ba59a3b02133"
         ],
         "at_contact": true,
         "reason": "Pad/via contact between separately sized branches."
@@ -1158,9 +1178,9 @@
           0.8
         ],
         "tracks": [
+          "354918d7-31c6-4e6a-84ba-db09417a6d1d",
           "39234fd0-78a1-4d3f-af88-f31fe190f693",
-          "4675e377-8f6d-47d9-9b83-834aed5d3fce",
-          "a4c12013-e936-49b8-8fda-f03a75c60871"
+          "4675e377-8f6d-47d9-9b83-834aed5d3fce"
         ],
         "at_contact": false,
         "reason": "Low-current 0.25 mm U1.5 enable branch leaves the 0.8 mm input supply; it is not the buck power-current path."
@@ -1170,10 +1190,10 @@
     "scope": "All segment widths and shared-endpoint width transitions. Different widths at pad/via contacts are intentional branch sizing; net reasons cover routes on different layers. Electrical load and copper-drop limits are checked separately."
   },
   "scope": "Routing geometry only. Copper round end caps are normal; no curved centerlines. Pad/via contacts allow local transitions; free branches require explicit nodes and chamfered geometry. Native DRC and independent Gerber connectivity/clearance must also pass.",
-  "board_sha256": "c6f6150f6a71395bcfd55faff9d0de88cd833f19438ebcd708ad3981c939c3d7",
+  "board_sha256": "11a7fe728a5c38fea9ccf797b009e49f00d5b57660013b24940de233ee9ede55",
   "source_hashes": {
-    "scripts/check_routing.py": "b9cc90c2b70134576a2b2e54fae9c12cb7e41ac77c7da781dd608f2c55d0d64a",
-    "scripts/export_routing_geometry.py": "a35183f74b2afdc5ef575fed722e655b6c17a8d7d00a303318dd90f026c5fa94",
+    "scripts/check_routing.py": "51daa946f018decc954554b24d4d282ee3bc62a9b46c177a70d6dcfdd799c374",
+    "scripts/export_routing_geometry.py": "dbd0c86081b323dc9087e42e8af8707e50d23a419b298d87d4013c3096904e52",
     "hardware/design/routing_widths.json": "295df1b12d30253ef772613b61a944d88e5f51e7935bc24735c7d7a05c87165c"
   }
 }
