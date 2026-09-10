@@ -49,6 +49,13 @@ files += ['reports/manufacturing/preview_source.json',*preview['output_sha256']]
 files += [d['file'] for d in json.loads((R/'bom/jlc_sourcing.json').read_text())['datasheets']]
 files += [p.relative_to(R).as_posix() for p in sorted((R/'host').glob('*.py')) if not p.name.startswith('test_')]
 files += ['tools/fixture_measurements.template.json','tools-requirements.lock']
+packages=json.loads((R/'reports/manufacturing/jlc_packages.json').read_text())
+assert packages['result']=='PASS package and placement-file checks; factory process approval pending'
+assert packages['board_sha256']==hashlib.sha256((R/'hardware/FRC_Sensor_CAN.kicad_pcb').read_bytes()).hexdigest()
+for path,digest in packages['input_hashes'].items():
+ assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale package review',path)
+files += ['docs/JLC_PACKAGE_REVIEW.md','bom/jlc_package_review.json',
+          'reports/manufacturing/jlc_packages.json','sources/datasheets/jlc_package_drawings.pdf']
 files += ['reports/electrical/component_margins.json','reports/manufacturing/clock_load_change.json','reports/manufacturing/buck_margin_change.json','reports/manufacturing/final_native_recheck.json',
           'docs/ORDER_READINESS.md','reports/electrical/boost_spice.json',
           'reports/electrical/input_spice.json','reports/electrical/power_replay.json']

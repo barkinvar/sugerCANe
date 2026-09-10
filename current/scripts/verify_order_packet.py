@@ -16,6 +16,13 @@ with zipfile.ZipFile(packet) as z:
         assert sha(z.read(name))==digest==sha((R/name).read_bytes()),name
     readcsv=lambda name:list(csv.DictReader(io.StringIO(z.read(name).decode())))
     bom=readcsv('bom/BOM_JLCPCB.csv');cpl=readcsv('output/assembly/CPL_JLCPCB.csv')
+    plan=json.loads(z.read('bom/assembly_plan.json'))
+    assert plan['factory_service']=='JLCPCB Standard PCBA, both sides'
+    packages=json.loads(z.read('reports/manufacturing/jlc_packages.json'))
+    assert packages['placements_by_side']=={'Top':50,'Bottom':79}
+    assert packages['board_sha256']==sha((R/'hardware/FRC_Sensor_CAN.kicad_pcb').read_bytes())
+    package_review=json.loads(z.read('bom/jlc_package_review.json'))
+    assert sha(z.read(package_review['drawing_bundle']))==package_review['drawing_bundle_sha256']
     hand=readcsv('bom/Hand_solder_BOM.csv')
     factory=Counter(ref.strip() for row in bom for ref in row['Designator'].split(','))
     manual=Counter(ref.strip() for row in hand for ref in row['References'].split(','))

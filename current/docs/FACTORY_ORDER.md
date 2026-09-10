@@ -2,7 +2,7 @@
 
 **Selected build: JLCPCB assembles 129 SMT parts (50 top / 79 bottom). You buy the original STM32F042K6T6 from DigiKey and solder U5, then fit the ten through-hole parts and three jumper caps.** The MCU footprint, four-layer stack and firmware stay the same; the compact layout uses 45.1% less board area. The final component review changed C25/C26 to **20 pF / C105173** for crystal startup margin, and U1/L1 to **LMR51430XDDCR / C5185863** plus **SRP7028A-8R2M / C2041815** for buck current headroom. All four use the existing footprints.
 
-**Before paying for PCBA:** obtain factory stack/process/inspection confirmation and an approved manufacturing package. The completed power-startup report passes transient screening; the available ZIPs remain marked REVIEW_ONLY pending factory and physical qualification. Use the files now to obtain and review a quotation. [Current evidence](ORDER_READINESS.md).
+**Before paying for PCBA:** obtain factory stack/process/inspection confirmation and an approved manufacturing package. The completed power-startup report passes transient screening; the available ZIPs remain marked REVIEW_ONLY pending factory and physical qualification. Use the files now to obtain and review a quotation. [Current evidence](ORDER_READINESS.md) · [Package/dimension review](JLC_PACKAGE_REVIEW.md).
 
 ## 1. Buy the parts you will fit
 
@@ -55,11 +55,11 @@ Start at [JLCPCB PCB quotation](https://jlcpcb.com/quote), upload the Gerber ZIP
 | Stencil | Both sides: 50 top / 79 bottom, nominal **0.10 mm**, supplied apertures; **no paste at U5** |
 | Programming / functional test | You perform these after installing U5 |
 
-D10's exact RGB LED requires Standard PCBA. Do not select Economic. The board is narrower than the published Standard minimum; have JLC confirm its panel/rail arrangement. Default rails alone must not be assumed to satisfy it. Request a symmetric four-layer stack with outer-to-inner dielectric ≤0.25 mm and 35 µm copper on every layer; do not accept 0.5 oz inner copper without another electrical review.
+D10's exact RGB LED requires Standard PCBA. Do not select Economic. The 44 × 48 mm board is below the published **70 × 70 mm Standard minimum**; have JLC confirm a sufficiently large panel with rails and fiducials. Default rails alone must not be assumed to satisfy it. Request a symmetric four-layer stack with outer-to-inner dielectric ≤0.25 mm and 35 µm copper on every layer; do not accept 0.5 oz inner copper without another electrical review.
 
 Upload and process BOM/CPL. **All 54 listed MPNs must be selected**, with no unexpected shortfall or unmatched parts. U5 and the ten through-hole parts are intentionally omitted; every other SMT part must be present, including C1, D10 and U9. Advancing past an unmatched part can omit it from assembly. [Official matching guidance](https://jlcpcb.com/help/article/component-matching-guidelines-for-pcba-orders).
 
-Inspect both placement previews against [top_assembly.pdf](../output/assembly/top_assembly.pdf) and [bottom_assembly.pdf](../output/assembly/bottom_assembly.pdf), particularly IC pin 1 and diode/capacitor polarity. CPL coordinates are millimetres from PCB lower-left, X right and Y up, with native KiCad counterclockwise rotation. The factory must reconcile its part-library orientations; do not guess a blanket 90° correction.
+Inspect both placement previews against [top_assembly.pdf](../output/assembly/top_assembly.pdf) and [bottom_assembly.pdf](../output/assembly/bottom_assembly.pdf), particularly IC pin 1 and diode/capacitor polarity. CPL coordinates are millimetres from PCB lower-left, X right and Y up, with native KiCad counterclockwise rotation. The factory must reconcile its part-library orientations; do not guess a blanket 90° correction. For Y1, Abracon permits a chamfer at pin 1 or pin 4, so check the pad map instead of using the chamfer alone. Confirm the exact OPSCO D10 revision against the supplied drawing.
 
 ## 4. Copy these notes into the PCBA order
 

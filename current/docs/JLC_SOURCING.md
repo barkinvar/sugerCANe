@@ -33,7 +33,7 @@ The exact JLC listings had 8,835 and 111 orderable pieces respectively in the Se
 
 ## Assembly scope and remaining availability
 
-Factory: 129 SMT placements, including high-reflow C1, D10, U7–U10 and all passives. User: U5 plus J1–J6, J8 and JP101/JP201/JP301, then three loose caps. [Assembly plan](../bom/assembly_plan.json) is the generator's source for this split. The finished board has 125 parts on top and 15 underneath.
+Factory: 129 SMT placements, including high-reflow C1, D10, U7–U10 and all passives. User: U5 plus J1–J6, J8 and JP101/JP201/JP301, then three loose caps. [Assembly plan](../bom/assembly_plan.json) is the generator's source for this split. The finished board has **61 parts on top and 79 underneath**; factory assembly is **50 top + 79 bottom**. The other eleven top-side parts are user fitted. [Complete compact package/dimension audit](JLC_PACKAGE_REVIEW.md).
 
 The exact MCU is DigiKey **497-14647-ND / STM32F042K6T6**, LQFP32. It is absent from JLC BOM/CPL and its 32 stencil apertures are omitted. JLC C69216 remains zero-stock history, not a factory shortage for the selected order. No Global Sourcing, My Parts or overseas MCU consignment is required. The QFN alternative was not implemented.
 
@@ -55,7 +55,7 @@ Do not infer a reflow recipe from an LED's solder-heat reliability test. This au
 
 With the user-fitted DigiKey MCU, ten-board parts are about **$27.08 per board before SMT attrition**, or **$27.96** with conservative JLC allowances. Two recommended spare MCUs add about $6.55 per batch, not per board. PCB, assembly, inspection, freight and taxes are additional. [Cost basis](COST_REDUCTION.md).
 
-Use Standard PCBA. Posted setup/stencil/loading plus two fixtures total **$132.81 per order** for 54 types; this is a partial fee estimate, not a quote. Confirm the panel/rails, 35 µm copper on every layer, reflow limits and U9 X-ray coverage before payment. [Review packet](../order/README.md).
+Use Standard PCBA. The former **$132.81** setup/stencil/loading/fixture estimate was for single-sided assembly and does not apply to this compact board. Obtain a two-sided Standard PCBA quotation for 54 types. Confirm the panel/rails, 35 µm copper on every layer, reflow limits and U9 X-ray coverage before payment. [Review packet](../order/README.md).
 
 ## Complete ten-board factory stock check
 

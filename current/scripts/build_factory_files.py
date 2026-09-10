@@ -5,6 +5,7 @@ from layout_contract import WIDTH, HEIGHT, BOTTOM_REFERENCES
 R=Path(__file__).resolve().parents[1]
 parts=json.loads((R/'hardware/design/circuit.json').read_text())['parts']
 plan=json.loads((R/'bom/assembly_plan.json').read_text())
+assert plan['factory_service']=='JLCPCB Standard PCBA, both sides'
 manifest=json.loads((R/'reports/manufacturing/board_manifest.json').read_text())
 physical={c['reference']:c for c in manifest['components']}
 bom=list(csv.DictReader((R/'bom/Factory_BOM.csv').open()))

@@ -3112,7 +3112,7 @@
   "order_decision": "HOLD: factory stack/process quotation and qualification pending; see release checks for separate electrical evidence. U5 is user-sourced from DigiKey; no factory MCU procurement required.",
   "limitations": "Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.",
   "input_hashes": {
-    "bom/assembly_plan.json": "3ddff6cab3d7df84938cd10b9cc9549515d288c65915f7252b9b6a726b85b627",
+    "bom/assembly_plan.json": "b48f5af36f49ccbf1a85be27147bb541fa351dc892727ba69142cc33cf9912b5",
     "bom/jlc_sourcing.json": "e505b96022a329033ddd7d9593011b5b22e8a1ab6b77356eeeeb9e5d3ae24680",
     "bom/catalog_china.json": "3cb57c828b0e136939f46a2980a53b9117f78b965ad60712e424dc3599c3ddf7",
     "bom/Factory_BOM.csv": "62a8c5ad0676564739a59d418e2586b3ad565db2b95ed4ec6a06a276838ae2ee",

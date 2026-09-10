@@ -126,6 +126,13 @@ tracked += ['reports/erc/final.json','reports/drc/final.json','reports/design_pa
 if not complete:tracked += ['reports/electrical/boost_spice_partial.json','reports/electrical/boost_spice_partial.png']
 tracked += ['bom/jlc_sourcing.json','reports/manufacturing/jlc_sourcing.json',*sourcing['input_hashes']]
 factory=read('reports/manufacturing/factory_files.json');plan=read('bom/assembly_plan.json')
+packages=read('reports/manufacturing/jlc_packages.json')
+assert packages['board_sha256']==routing['board_sha256']
+assert packages['result']=='PASS package and placement-file checks; factory process approval pending'
+for path,digest in packages['input_hashes'].items():
+ assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale package review',path)
+tracked += ['reports/manufacturing/jlc_packages.json',*packages['input_hashes']]
+assert plan['factory_service']=='JLCPCB Standard PCBA, both sides'
 assert factory['result']=='PASS' and factory['factory_smt_placements']==plan['factory_placements']==129
 assert factory['hand_solder_parts']==len(plan['hand_solder_references'])==11
 assert factory['hand_solder_mcu_joints']==32 and factory['hand_solder_through_hole_joints']==49

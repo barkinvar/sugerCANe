@@ -1,0 +1,131 @@
+{
+  "result": "PASS package and placement-file checks; factory process approval pending",
+  "board_sha256": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
+  "exact_mpn_types": 54,
+  "factory_placements": 129,
+  "footprint_families": 22,
+  "placements_by_side": {
+    "Bottom": 79,
+    "Top": 50
+  },
+  "all_reviewed_pads_match": true,
+  "all_native_pin_nets_match_model": true,
+  "cpl_matches_native_positions_sides_rotations": true,
+  "closest_same_side_envelopes_mm": [
+    [
+      0.3999999999999986,
+      "Q202",
+      "Q2"
+    ],
+    [
+      0.3999999999999986,
+      "Q301",
+      "Q3"
+    ],
+    [
+      0.4499999999999993,
+      "Q201",
+      "D202"
+    ],
+    [
+      0.5249999999999986,
+      "C74",
+      "U10"
+    ],
+    [
+      0.5249999999999986,
+      "U2",
+      "C6"
+    ],
+    [
+      0.5500000000000007,
+      "C3",
+      "U1"
+    ],
+    [
+      0.5749999999999993,
+      "R70",
+      "Q2"
+    ],
+    [
+      0.5999999999999979,
+      "C7",
+      "R1"
+    ],
+    [
+      0.5999999999999996,
+      "C51",
+      "U7"
+    ],
+    [
+      0.6000000000000005,
+      "D20",
+      "R42"
+    ]
+  ],
+  "closest_edge_envelopes_mm": [
+    [
+      0.7000000000000002,
+      "L1"
+    ],
+    [
+      0.9250000000000043,
+      "R312"
+    ],
+    [
+      0.9399999999999977,
+      "D301"
+    ],
+    [
+      0.9500000000000028,
+      "Q302"
+    ],
+    [
+      1.0499999999999972,
+      "R309"
+    ],
+    [
+      1.1,
+      "C13"
+    ],
+    [
+      1.4,
+      "C11"
+    ],
+    [
+      1.425,
+      "R50"
+    ],
+    [
+      1.425,
+      "R51"
+    ],
+    [
+      1.425,
+      "R74"
+    ]
+  ],
+  "minimum_within_footprint_pad_gap_mm": [
+    0.1499999999999999,
+    "U8",
+    "1",
+    "2"
+  ],
+  "factory_holds": [
+    "Standard PCBA both sides; >=70 x 70 mm factory panel with rails/fiducials and depanelization.",
+    "Factory placement preview: pin 1/polarity and bottom-side rotation; exact OPSCO LED revision.",
+    "Qualify two reflow passes including L1/L2/F1 underside retention, C1 dwell and D10 MSL4.",
+    "Confirm U9 center-pad solder/paste and X-ray inspection; inspect D10 and crystal hidden joints.",
+    "Confirm symmetric 1.6 mm four-layer stack with 35 um copper on every layer and <=0.25 mm outer dielectric."
+  ],
+  "limitations": "Package fit and file consistency only. Does not establish solder-joint yield, nozzle/fixture clearance, thermal qualification, electrical function or factory part allocation. Body envelope screen includes lead span and conservative family bounds; fuse envelope is nominal.",
+  "input_hashes": {
+    "bom/jlc_package_review.json": "5a6fda15e4e623a1c6f2813f2c829661ea01448bf0ce2acbc4e6d22d2c2aa458",
+    "sources/datasheets/jlc_package_drawings.pdf": "5c537e444b0dde537c762e06c3ea3f0f402872554ce68e6b8ca77b6ce171ac29",
+    "bom/assembly_plan.json": "b48f5af36f49ccbf1a85be27147bb541fa351dc892727ba69142cc33cf9912b5",
+    "bom/BOM_JLCPCB.csv": "65d87b4314cb78a52060040566e124783331d796e4b4def95172a4edeb509ad4",
+    "output/assembly/CPL_JLCPCB.csv": "542da3cf1f5e684c6d71b1dcf05a518cb22b74ac9ae09e722e1a39a8745ef1d6",
+    "hardware/design/circuit.json": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
+    "scripts/check_jlc_packages.py": "bd0345a2ec368b54d17e4b1bd5cee7a3aa88c5b9bca64f10be81c63f0f7432b4"
+  }
+}

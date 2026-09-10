@@ -10,7 +10,7 @@
   "other_fabrication_files_byte_identical": 13,
   "all_package_hashes_verified": true,
   "shopping_imports_verified": true,
-  "packet_sha256": "ab62ddcbd7e72c721ed8194efc14da50deeff6486f898a3de7ec9721e51515be",
+  "packet_sha256": "f9aa0f6626ac228fc4c4b29912588e9b8b673cb84b1fffbc8af33a9e82f57344",
   "clock_capacitors": {
     "references": [
       "C25",

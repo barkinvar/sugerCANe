@@ -12,7 +12,7 @@
   "position_origin": "PCB lower-left, X right / Y up, mm; native footprint rotation counterclockwise. Factory must reconcile part-library pin 1.",
   "matched_to": "Native manifest and model/BOM exact reference sets",
   "sha256": "542da3cf1f5e684c6d71b1dcf05a518cb22b74ac9ae09e722e1a39a8745ef1d6",
-  "assembly_plan_sha256": "3ddff6cab3d7df84938cd10b9cc9549515d288c65915f7252b9b6a726b85b627",
+  "assembly_plan_sha256": "b48f5af36f49ccbf1a85be27147bb541fa351dc892727ba69142cc33cf9912b5",
   "factory_part_allocation_confirmed": false,
   "factory_top_placements": 50,
   "factory_bottom_placements": 79,

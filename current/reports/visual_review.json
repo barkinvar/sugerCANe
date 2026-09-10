@@ -1,6 +1,6 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-10T20:03:48.163009+00:00",
+  "reviewed_utc": "2026-09-10T21:14:34.142054+00:00",
   "reviewer": "Codex visual inspection",
   "variant": "Rev H compact 44 x 48 mm prototype",
   "board_sha256": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
@@ -109,15 +109,15 @@
     },
     {
       "file": "output/documentation/ORDER_GUIDE.pdf",
-      "sha256": "cea9791ab3335988445b000db816b136c6bccecd2262230742ed2a6a526a0b22",
-      "scope": "Rendered mechanical/assembly/order pages and changed handbook sections inspected for readable layout, current dimensions, part counts and header mapping; all PDF text bounds checked separately.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "e545de0438f444b9d746708e8dfe4521670e3e619f983cd58829dcb1ba89491c",
+      "scope": "Rendered all three ordering-guide pages and handbook pages 5-8, 29-31 after package-review links, panel minimum and crystal-orientation note changed. Readable tables/text and page transitions; independent text-bounds check passed.",
+      "reviewed_utc": "2026-09-10T21:14:34.142054+00:00"
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "f0f4d34e6ae89e2099ae44bc717fbdbdfa454461ad0450ebba2b7eccf980c9d5",
-      "scope": "Rendered contents page 2 and compact-layout pages 5-8 reviewed after the grounding comparison was added; table, text, links and section transition are readable. All 46 pages passed the separate PDF text-bounds check.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "72a3e2f76dff872d6dc1390112b703bb2449d670e416047329ca62f4c33269c8",
+      "scope": "Rendered all three ordering-guide pages and handbook pages 5-8, 29-31 after package-review links, panel minimum and crystal-orientation note changed. Readable tables/text and page transitions; independent text-bounds check passed.",
+      "reviewed_utc": "2026-09-10T21:14:34.142054+00:00"
     },
     {
       "file": "output/review/u8_switch_route_fix.png",
@@ -130,6 +130,12 @@
       "sha256": "adbb6682276ac7987fab85827973668f0960706018aa84f5c6a8141248e81790",
       "reviewed_utc": "2026-09-10T19:43:06.927743+00:00",
       "scope": "Before/after Q1 bottom copper detail reviewed: the VIN_PROT branch enters pin 3 directly and clears pin 2. Width remains 0.80 mm. Full-board numerical contact scan is separate; zones, mask and drills are explicitly omitted from this detail."
+    },
+    {
+      "file": "sources/datasheets/jlc_package_drawings.pdf",
+      "sha256": "5c537e444b0dde537c762e06c3ea3f0f402872554ce68e6b8ca77b6ce171ac29",
+      "reviewed_utc": "2026-09-10T21:14:34.142054+00:00",
+      "scope": "Reviewed manufacturer package drawings; all 46 extracted pages render pixel-identically to original PDFs at 0.6 scale. Original URLs, hashes and page numbers mapped in bom/jlc_package_review.json. Dimensional review does not qualify factory reflow."
     }
   ],
   "limitations": "Visual inspection is not electrical, tolerance, assembly-yield or physical qualification. Unchanged historical routing-detail pictures and original artwork are not current-board evidence. Full engineering, factory and physical release decisions remain separate."

@@ -1,0 +1,3457 @@
+{
+  "checked_utc": "2026-09-10T21:13:23.968315+00:00",
+  "board_sha256": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
+  "catalog_endpoint": "https://jlcpcb.com/api/overseas-pcb-order/v1/smtComponentShopCart/getComponentDetail?componentCode={lcsc}",
+  "scope": "54 factory MPNs / 129 SMT placements on compact branch. Manufacturer drawings reviewed for case size, lead pitch, terminal positions and selected polarity/pin-1 details. Generic KiCad lands are accepted on dimensional overlap, not asserted identical to all vendor recommendations. No factory placement preview or process qualification has been received.",
+  "drawing_bundle": "sources/datasheets/jlc_package_drawings.pdf",
+  "drawing_bundle_sha256": "5c537e444b0dde537c762e06c3ea3f0f402872554ce68e6b8ca77b6ce171ac29",
+  "sources": {
+    "C13982": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_1809282212_Littelfuse-0451003-MRL_C13982.pdf",
+      "original_pdf_sha256": "0d3cfe7a63fd96e6c463ea1c7924238a213e7df8537a0e08099aecec86962d58",
+      "original_pages": [
+        3,
+        4
+      ],
+      "bundle_pages": [
+        1,
+        2
+      ]
+    },
+    "C17513": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_2205311800_UNI-ROYAL-Uniroyal-Elec-0805W8F1001T5E_C17513.pdf",
+      "original_pdf_sha256": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
+      "original_pages": [
+        4,
+        5
+      ],
+      "bundle_pages": [
+        3,
+        4
+      ]
+    },
+    "C137592": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_YAGEO-RC0805FR-0713KL_C137592.pdf",
+      "original_pdf_sha256": "e7dbabb0611925227ccfc429c14c8833a7b1f2c755684444124446f20b22a229",
+      "original_pages": [
+        4
+      ],
+      "bundle_pages": [
+        5
+      ]
+    },
+    "C122537": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_1810311438_YAGEO-RT0805BRD07100KL_C122537.pdf",
+      "original_pdf_sha256": "0a729d144519a7021c82a0ef242b064e467c70d44afcf9eabd6c7ffdc4b673a3",
+      "original_pages": [
+        4
+      ],
+      "bundle_pages": [
+        6
+      ]
+    },
+    "C62774": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_YAGEO-CC0805JRNPO9BN102_C62774.pdf",
+      "original_pdf_sha256": "495287fc811dc714366f2edd3bc974d98d2d80133266a0a73bb01ac01237e3eb",
+      "original_pages": [
+        3
+      ],
+      "bundle_pages": [
+        7
+      ]
+    },
+    "C107150": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_YAGEO-CC0805KRX7R9BB333_C107150.pdf",
+      "original_pdf_sha256": "61a606825ab314ea318cfb5362848a62fdffb851efa9818d642e9a541c56a648",
+      "original_pages": [
+        6
+      ],
+      "bundle_pages": [
+        8
+      ]
+    },
+    "C12891": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL31A226KAHNNNE_C12891.pdf",
+      "original_pdf_sha256": "96baebe4bd0ce363e87be28b5b003f511f1502e084a6fc4f02333ded56c808f6",
+      "original_pages": [
+        6
+      ],
+      "bundle_pages": [
+        9
+      ]
+    },
+    "C3844168": {
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2309061354_Samsung-Electro-Mechanics-CL32B106KBJNNWE_C3844168.pdf",
+      "original_pdf_sha256": "1f25d535eedde5eb5b19c28cd3dd60a0af97c63efa45396c03e17a4329658385",
+      "original_pages": [
+        1
+      ],
+      "bundle_pages": [
+        10
+      ]
+    },
+    "C92059": {
+      "url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1240.pdf",
+      "original_pdf_sha256": "affbdbc3402d5d78e683944e78f5a641ae7f22906a4e77e24978388e491b41e2",
+      "original_pages": [
+        1,
+        2
+      ],
+      "bundle_pages": [
+        11,
+        12
+      ]
+    },
+    "C83312": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Abracon-LLC-ABM3B-8-000MHZ-B2-T_C83312.pdf",
+      "original_pdf_sha256": "4f437ca01370e2d1b9a13a8222dc7085d6648d708c6aebfe6864b18095e1ffcd",
+      "original_pages": [
+        2
+      ],
+      "bundle_pages": [
+        13
+      ]
+    },
+    "aos_sot23": {
+      "url": "https://www.aosmd.com/sites/default/files/res/package/SOT23.pdf",
+      "original_pdf_sha256": "b6fac64d55f133ce74dd85ddddc618c3d5408e9531cb21e660f6a8ef3d8c5408",
+      "original_pages": [
+        1
+      ],
+      "bundle_pages": [
+        14
+      ]
+    },
+    "aos_so8": {
+      "url": "https://www.aosmd.com/sites/default/files/res/packaging_information/SO8.pdf",
+      "original_pdf_sha256": "b7257d5ae3f0d2f1d85db24506d3ef264296408b01859e8d5279e20c184da750",
+      "original_pages": [
+        1
+      ],
+      "bundle_pages": [
+        15
+      ]
+    },
+    "C51118": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Diodes-Incorporated-AP2112K-3-3TRG1_C51118.pdf",
+      "original_pdf_sha256": "ef8d376f2ec356e29172eb9e053819a0ebdcc576dba7fc9ab0505c568427920f",
+      "original_pages": [
+        14
+      ],
+      "bundle_pages": [
+        16
+      ]
+    },
+    "C92506": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Diodes-Incorporated-B240A-13-F_C92506.pdf",
+      "original_pdf_sha256": "19ab27e98e717e7012275062b715964897882f3ce95eab846f71d5f2b485ab5b",
+      "original_pages": [
+        4
+      ],
+      "bundle_pages": [
+        17
+      ]
+    },
+    "C5557780": {
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2312131232_Vishay-Intertech-BAT46W-E3-18_C5557780.pdf",
+      "original_pdf_sha256": "4ea57faf33043a9de414b03a81406ada6504abb7eaa6904ba73bbef5ac4fb682",
+      "original_pages": [
+        3
+      ],
+      "bundle_pages": [
+        18
+      ]
+    },
+    "C282529": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Nexperia-BSS138BK-215_C282529.pdf",
+      "original_pdf_sha256": "7ee99c2ff94d07a981fa018ea9c1b86302d179fbff5a466d29e21bebd6eba617",
+      "original_pages": [
+        11
+      ],
+      "bundle_pages": [
+        19
+      ]
+    },
+    "C5736151": {
+      "url": "https://www.ti.com/lit/ds/symlink/esd2can24-q1.pdf",
+      "original_pdf_sha256": "305b0aafdec918e96476fdf7a385cd2143e8b7664383842160c3ef1522d2bc5e",
+      "original_pages": [
+        23,
+        24
+      ],
+      "bundle_pages": [
+        20,
+        21
+      ]
+    },
+    "C22427665": {
+      "url": "https://www.ti.com/lit/ds/symlink/lm339lv.pdf",
+      "original_pdf_sha256": "ada590c823a157097031156f0700e1c12249399a6a1c603024bfed5f35345501",
+      "original_pages": [
+        52,
+        53
+      ],
+      "bundle_pages": [
+        22,
+        23
+      ]
+    },
+    "C5185863": {
+      "url": "https://www.ti.com/lit/ds/symlink/lmr51430.pdf",
+      "original_pdf_sha256": "f7d8053844fb07ae773844f023373c0c570507ca61603fe28dda15364987296c",
+      "original_pages": [
+        3,
+        30,
+        31
+      ],
+      "bundle_pages": [
+        24,
+        25,
+        26
+      ]
+    },
+    "C72599": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_2210210230_onsemi-MMSZ12T1G_C72599.pdf",
+      "original_pdf_sha256": "849f866ac91b3e2cee307474bf4b015bf2eac9ff42367ed5932099ee97fc6123",
+      "original_pages": [
+        6
+      ],
+      "bundle_pages": [
+        27
+      ]
+    },
+    "C2890035": {
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2108251530_OPSCO-Optoelectronics-SK6805-EC15_C2890035.pdf",
+      "original_pdf_sha256": "7862e1b38734e98826262766ff7b654292008c626bc265c91798eabcd447df0f",
+      "original_pages": [
+        4,
+        5
+      ],
+      "bundle_pages": [
+        28,
+        29
+      ]
+    },
+    "C110519": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Diodes-Incorporated-SMAJ13A-13-F_C110519.pdf",
+      "original_pdf_sha256": "70c17cee9c231f90b8f1cea2fa982fa2d31b4ba4823cda63a11e51ba302bd04f",
+      "original_pages": [
+        5
+      ],
+      "bundle_pages": [
+        30
+      ]
+    },
+    "C148230": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Littelfuse-SMAJ30A_C148230.pdf",
+      "original_pdf_sha256": "3f987f8fc0988aae0f14259b9d1953f26bdfe2525bbc4fc636477f6b221fc38a",
+      "original_pages": [
+        5
+      ],
+      "bundle_pages": [
+        31
+      ]
+    },
+    "C3698580": {
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2312121205_Vishay-Intertech-SMBJ22A-E3-52_C3698580.pdf",
+      "original_pdf_sha256": "a2ed16315329349afbdfcd1c6cf0e763f2f7ef070e3439c91d7076a64326c4e6",
+      "original_pages": [
+        5
+      ],
+      "bundle_pages": [
+        32
+      ]
+    },
+    "C7484": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_1809192136_Texas-Instruments-SN74AHCT1G125DBVR_C7484.pdf",
+      "original_pdf_sha256": "16939df0841808d2a3bfbf8d7815e6bec7cbfb3d728da1314d442baf244ff164",
+      "original_pages": [
+        9
+      ],
+      "bundle_pages": [
+        33
+      ]
+    },
+    "C2042118": {
+      "url": "https://www.bourns.com/docs/product-datasheets/srp5030ta.pdf",
+      "original_pdf_sha256": "4a4ce681e20e29b4b888dc3a783f7e30eb7a75541f16591b2c1da921b26c7e32",
+      "original_pages": [
+        1
+      ],
+      "bundle_pages": [
+        34
+      ]
+    },
+    "C2041815": {
+      "url": "https://www.bourns.com/docs/product-datasheets/srp7028a.pdf",
+      "original_pdf_sha256": "34d693b83229904a959efaa5bad0d294eae16c943244ee60cb27d842c713e512",
+      "original_pages": [
+        1
+      ],
+      "bundle_pages": [
+        35
+      ]
+    },
+    "C22433320": {
+      "url": "https://www.ti.com/lit/ds/symlink/tcan3413.pdf",
+      "original_pdf_sha256": "2c0e8963e7762bc91edf30a365cc10c31ce88e2ddda3b67a120c4158ae52930b",
+      "original_pages": [
+        42,
+        43
+      ],
+      "bundle_pages": [
+        36,
+        37
+      ]
+    },
+    "C111738": {
+      "url": "https://datasheet.lcsc.com/lcsc_datasheet_1809080208_Texas-Instruments-TPS2553DBVR-1_C111738.pdf",
+      "original_pdf_sha256": "e0b8b091487f52e36aefe2c6e2ba17fc45527454289f97da774d281eb533ddd7",
+      "original_pages": [
+        33,
+        34
+      ],
+      "bundle_pages": [
+        38,
+        39
+      ]
+    },
+    "C2155773": {
+      "url": "https://www.ti.com/lit/ds/symlink/tps2596.pdf",
+      "original_pdf_sha256": "66f6bae4494f7bfe7dfdc314e508f0291d9ca1e87265cca9b6fdfeaa5cb19fe9",
+      "original_pages": [
+        4,
+        44,
+        45,
+        46
+      ],
+      "bundle_pages": [
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    "C113659": {
+      "url": "https://www.ti.com/lit/ds/symlink/tps61085.pdf",
+      "original_pdf_sha256": "1bb954788393db7f1c4622d5ea790a942943c1ee17eae2df73425509404f33c3",
+      "original_pages": [
+        3,
+        29,
+        30
+      ],
+      "bundle_pages": [
+        44,
+        45,
+        46
+      ]
+    }
+  },
+  "parts": [
+    {
+      "mpn": "0451003.MRL",
+      "lcsc": "C13982",
+      "references": [
+        "F1"
+      ],
+      "manufacturer": "Littelfuse",
+      "catalog_package": "2410",
+      "footprint": "Fuse_Littelfuse-NANO2-451_453",
+      "source": "C13982",
+      "review": "compatible drawing and native land pattern",
+      "note": "2410 Nano2, not a generic 1206 fuse. Native 1.96 x 3.15 lands and 2.95 gap match drawing (6.87 vs 6.86 overall rounding). Envelope uses nominal body dimensions; supplier does not give body tolerances here.",
+      "catalog_stock": 45265,
+      "available_to_order": 45138,
+      "ten_board_budget_quantity": 12,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C13982"
+    },
+    {
+      "mpn": "0805W8F1001T5E",
+      "lcsc": "C17513",
+      "references": [
+        "R4",
+        "R110",
+        "R210",
+        "R310"
+      ],
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C17513",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 30916383,
+      "available_to_order": 29656525,
+      "ten_board_budget_quantity": 50,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": null,
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C17513"
+    },
+    {
+      "mpn": "0805W8F1002T5E",
+      "lcsc": "C17414",
+      "references": [
+        "R3",
+        "R21",
+        "R22",
+        "R40",
+        "R41",
+        "R105",
+        "R205",
+        "R305",
+        "R52",
+        "R71",
+        "R75",
+        "R31"
+      ],
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C17513",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 54671848,
+      "available_to_order": 52675660,
+      "ten_board_budget_quantity": 130,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": null,
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C17414"
+    },
+    {
+      "mpn": "0805W8F1003T5E",
+      "lcsc": "C149504",
+      "references": [
+        "R50",
+        "R111",
+        "R112",
+        "R211",
+        "R212",
+        "R311",
+        "R312",
+        "R70"
+      ],
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C17513",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 5067574,
+      "available_to_order": 4724900,
+      "ten_board_budget_quantity": 90,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": null,
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C149504"
+    },
+    {
+      "mpn": "0805W8F3300T5E",
+      "lcsc": "C17630",
+      "references": [
+        "R30"
+      ],
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C17513",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 2458200,
+      "available_to_order": 2303986,
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": null,
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C17630"
+    },
+    {
+      "mpn": "ABM3B-8.000MHZ-B2-T",
+      "lcsc": "C83312",
+      "references": [
+        "Y1"
+      ],
+      "manufacturer": "Abracon LLC",
+      "catalog_package": "SMD5032-4P",
+      "footprint": "Abracon_ABM3B_5.0x3.2mm",
+      "source": "C83312",
+      "review": "compatible drawing and native land pattern",
+      "note": "5.0 x 3.2 crystal; 1.8 x 1.2 pads at 4.0 x 2.4 center spacing match. Signal 1/3, grounded case 2/4. Chamfer may be at 1 or 4: do not use chamfer alone for rotation.",
+      "catalog_stock": 6791,
+      "available_to_order": 6741,
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C83312"
+    },
+    {
+      "mpn": "AO3401A",
+      "lcsc": "C15127",
+      "references": [
+        "Q101",
+        "Q201",
+        "Q301"
+      ],
+      "manufacturer": "Alpha & Omega Semicon",
+      "catalog_package": "SOT-23",
+      "footprint": "SOT-23",
+      "source": "aos_sot23",
+      "review": "compatible drawing and native land pattern",
+      "note": "AOS SOT23 outer span differs from some other SOT23 makers; native lands still cover 3.0 maximum span. Gate 1, source 2, drain 3.",
+      "catalog_stock": 623293,
+      "available_to_order": 515501,
+      "ten_board_budget_quantity": 34,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C15127"
+    },
+    {
+      "mpn": "AO4485",
+      "lcsc": "C51499",
+      "references": [
+        "Q1"
+      ],
+      "manufacturer": "Alpha & Omega Semicon",
+      "catalog_package": "SOIC-8",
+      "footprint": "SOIC-8_3.9x4.9mm_P1.27mm",
+      "source": "aos_so8",
+      "review": "compatible drawing and native land pattern",
+      "note": "AOS SO8 4.9 x 3.9 body, 1.27 pitch. Native 1.95 x 0.6 lands differ from example 2.2 x 0.8 but cover stated lead dimensions; not an exposed-pad package.",
+      "catalog_stock": 73002,
+      "available_to_order": 72599,
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C51499"
+    },
+    {
+      "mpn": "AP2112K-3.3TRG1",
+      "lcsc": "C51118",
+      "references": [
+        "U2"
+      ],
+      "manufacturer": "Diodes Incorporated",
+      "catalog_package": "SOT-25-5",
+      "footprint": "SOT-23-5",
+      "source": "C51118",
+      "review": "compatible drawing and native land pattern",
+      "note": "SOT25 is the manufacturer name for this SOT-23-5 outline. K suffix and 0.95 pitch match; not SO8 or SOT89.",
+      "catalog_stock": 61493,
+      "available_to_order": 59600,
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C51118"
+    },
+    {
+      "mpn": "B240A-13-F",
+      "lcsc": "C92506",
+      "references": [
+        "D4",
+        "D5"
+      ],
+      "manufacturer": "Diodes Incorporated",
+      "catalog_package": "SMA",
+      "footprint": "D_SMA",
+      "source": "C92506",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 163503,
+      "available_to_order": 163458,
+      "ten_board_budget_quantity": 24,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C92506"
+    },
+    {
+      "mpn": "BAT46W-E3-18",
+      "lcsc": "C5557780",
+      "references": [
+        "D102",
+        "D202",
+        "D302"
+      ],
+      "manufacturer": "Vishay Intertech",
+      "catalog_package": "SOD-123",
+      "footprint": "D_SOD-123",
+      "source": "C5557780",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 4739,
+      "available_to_order": 4733,
+      "ten_board_budget_quantity": 34,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C5557780"
+    },
+    {
+      "mpn": "BSS138BK,215",
+      "lcsc": "C282529",
+      "references": [
+        "Q102",
+        "Q202",
+        "Q302",
+        "Q2",
+        "Q3"
+      ],
+      "manufacturer": "Nexperia",
+      "catalog_package": "SOT-23",
+      "footprint": "SOT-23",
+      "source": "C282529",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 71055,
+      "available_to_order": 70856,
+      "ten_board_budget_quantity": 54,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C282529"
+    },
+    {
+      "mpn": "CC0805JRNPO9BN200",
+      "lcsc": "C105173",
+      "references": [
+        "C25",
+        "C26"
+      ],
+      "manufacturer": "YAGEO",
+      "catalog_package": "0805",
+      "footprint": "C_0805_2012Metric",
+      "source": "C62774",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 537740,
+      "available_to_order": 534085,
+      "ten_board_budget_quantity": 30,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C105173"
+    },
+    {
+      "mpn": "CC0805JRNPO9BN102",
+      "lcsc": "C62774",
+      "references": [
+        "C101",
+        "C201",
+        "C301"
+      ],
+      "manufacturer": "YAGEO",
+      "catalog_package": "0805",
+      "footprint": "C_0805_2012Metric",
+      "source": "C62774",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 1154776,
+      "available_to_order": 1144950,
+      "ten_board_budget_quantity": 40,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C62774"
+    },
+    {
+      "mpn": "CC0805KRX7R9BB333",
+      "lcsc": "C107150",
+      "references": [
+        "C69"
+      ],
+      "manufacturer": "YAGEO",
+      "catalog_package": "0805",
+      "footprint": "C_0805_2012Metric",
+      "source": "C107150",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 1804351,
+      "available_to_order": 1799721,
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C107150"
+    },
+    {
+      "mpn": "CL21B103KBANNNC",
+      "lcsc": "C1710",
+      "references": [
+        "C72",
+        "C73"
+      ],
+      "manufacturer": "Samsung Electro-Mechanics",
+      "catalog_package": "0805",
+      "footprint": "C_0805_2012Metric",
+      "source": "C12891",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 2918780,
+      "available_to_order": 2596768,
+      "ten_board_budget_quantity": 30,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C1710"
+    },
+    {
+      "mpn": "CL21B104KCFNNNE",
+      "lcsc": "C28233",
+      "references": [
+        "C3",
+        "C6",
+        "C11",
+        "C20",
+        "C21",
+        "C22",
+        "C27",
+        "C40",
+        "C41",
+        "C50",
+        "C51",
+        "C66",
+        "C74",
+        "C75"
+      ],
+      "manufacturer": "Samsung Electro-Mechanics",
+      "catalog_package": "0805",
+      "footprint": "C_0805_2012Metric",
+      "source": "C12891",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 1672779,
+      "available_to_order": 1378323,
+      "ten_board_budget_quantity": 150,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C28233"
+    },
+    {
+      "mpn": "CL21B105KBFNNNE",
+      "lcsc": "C28323",
+      "references": [
+        "C7",
+        "C23",
+        "C61",
+        "C65",
+        "C71"
+      ],
+      "manufacturer": "Samsung Electro-Mechanics",
+      "catalog_package": "0805",
+      "footprint": "C_0805_2012Metric",
+      "source": "C12891",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 3653125,
+      "available_to_order": 3037574,
+      "ten_board_budget_quantity": 60,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C28323"
+    },
+    {
+      "mpn": "CL21B473KBCNNNC",
+      "lcsc": "C53134",
+      "references": [
+        "C70"
+      ],
+      "manufacturer": "Samsung Electro-Mechanics",
+      "catalog_package": "0805",
+      "footprint": "C_0805_2012Metric",
+      "source": "C12891",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 240027,
+      "available_to_order": 215009,
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C53134"
+    },
+    {
+      "mpn": "CL21B475KAFNNNE",
+      "lcsc": "C98195",
+      "references": [
+        "C8",
+        "C24"
+      ],
+      "manufacturer": "Samsung Electro-Mechanics",
+      "catalog_package": "0805",
+      "footprint": "C_0805_2012Metric",
+      "source": "C12891",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 201522,
+      "available_to_order": 190971,
+      "ten_board_budget_quantity": 28,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C98195"
+    },
+    {
+      "mpn": "CL31A226KAHNNNE",
+      "lcsc": "C12891",
+      "references": [
+        "C4",
+        "C5",
+        "C13",
+        "C12",
+        "C60",
+        "C62",
+        "C63",
+        "C64"
+      ],
+      "manufacturer": "Samsung Electro-Mechanics",
+      "catalog_package": "1206",
+      "footprint": "C_1206_3216Metric",
+      "source": "C12891",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 989226,
+      "available_to_order": 761052,
+      "ten_board_budget_quantity": 84,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C12891"
+    },
+    {
+      "mpn": "CL32B106KBJNNWE",
+      "lcsc": "C3844168",
+      "references": [
+        "C2"
+      ],
+      "manufacturer": "Samsung Electro-Mechanics",
+      "catalog_package": "1210",
+      "footprint": "C_1210_3225Metric",
+      "source": "C3844168",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 636,
+      "available_to_order": 606,
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C3844168"
+    },
+    {
+      "mpn": "EEEFT1H470AP",
+      "lcsc": "C92059",
+      "references": [
+        "C1"
+      ],
+      "manufacturer": "PANASONIC",
+      "catalog_package": "SMD,D6.3xL5.8mm",
+      "footprint": "CP_Panasonic_FT_6.3x5.8",
+      "source": "C92059",
+      "review": "compatible drawing and native land pattern",
+      "note": "Size D standard FT: 6.3 x 5.8 can, 6.6 +/-0.2 base, 7.8 maximum terminal span. Lands 3.2 x 1.6 with 1.8 gap exactly match; pin 1 positive. Not the vibration-proof footprint.",
+      "catalog_stock": 1713,
+      "available_to_order": 1642,
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C92059"
+    },
+    {
+      "mpn": "ESD2CAN24DBZRQ1",
+      "lcsc": "C5736151",
+      "references": [
+        "D20"
+      ],
+      "manufacturer": "Texas Instruments",
+      "catalog_package": "SOT-23",
+      "footprint": "SOT-23",
+      "source": "C5736151",
+      "review": "compatible drawing and native land pattern",
+      "note": "DBZ/SOT23 1.9 spacing between pins 1/2, not smaller DCK/SC70. Pin 3 GND; pins 1/2 CAN lines.",
+      "catalog_stock": 2466,
+      "available_to_order": 2387,
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C5736151"
+    },
+    {
+      "mpn": "LM339LVDR",
+      "lcsc": "C22427665",
+      "references": [
+        "U7"
+      ],
+      "manufacturer": "Texas Instruments",
+      "catalog_package": "SOIC-14",
+      "footprint": "SOIC-14_3.9x8.7mm_P1.27mm",
+      "source": "C22427665",
+      "review": "compatible drawing and native land pattern",
+      "note": "D/SOIC14 1.27 pitch, not PW/TSSOP or RTE/WQFN.",
+      "catalog_stock": 110,
+      "available_to_order": 110,
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 3",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C22427665"
+    },
+    {
+      "mpn": "LMR51430XDDCR",
+      "lcsc": "C5185863",
+      "references": [
+        "U1"
+      ],
+      "manufacturer": "Texas Instruments",
+      "catalog_package": "SOT-23-6",
+      "footprint": "TSOT-23-6",
+      "source": "C5185863",
+      "review": "compatible drawing and native land pattern",
+      "note": "DDC six-lead thin SOT23, 0.95 pitch, maximum 3.05 lead span. TSOT-23-6 native lands cover it; no exposed pad.",
+      "catalog_stock": 8837,
+      "available_to_order": 8626,
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C5185863"
+    },
+    {
+      "mpn": "MMSZ12T1G",
+      "lcsc": "C72599",
+      "references": [
+        "D3"
+      ],
+      "manufacturer": "onsemi",
+      "catalog_package": "SOD-123",
+      "footprint": "D_SOD-123",
+      "source": "C72599",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 6581,
+      "available_to_order": 6517,
+      "ten_board_budget_quantity": 14,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C72599"
+    },
+    {
+      "mpn": "0805W8F1152T5E",
+      "lcsc": "C17418",
+      "references": [
+        "R61"
+      ],
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C17513",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 3377,
+      "available_to_order": 3238,
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": null,
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C17418"
+    },
+    {
+      "mpn": "RC0805FR-0713KL",
+      "lcsc": "C137592",
+      "references": [
+        "R63"
+      ],
+      "manufacturer": "YAGEO",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C137592",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 13487,
+      "available_to_order": 13478,
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C137592"
+    },
+    {
+      "mpn": "RC0805FR-0720KL",
+      "lcsc": "C114566",
+      "references": [
+        "R103",
+        "R203",
+        "R303"
+      ],
+      "manufacturer": "YAGEO",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C137592",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 1934416,
+      "available_to_order": 1908528,
+      "ten_board_budget_quantity": 40,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C114566"
+    },
+    {
+      "mpn": "0805W8F2203T5E",
+      "lcsc": "C17556",
+      "references": [
+        "R101",
+        "R201",
+        "R301"
+      ],
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C17513",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 334560,
+      "available_to_order": 283837,
+      "ten_board_budget_quantity": 40,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": null,
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C17556"
+    },
+    {
+      "mpn": "RC0805FR-072K61L",
+      "lcsc": "C273965",
+      "references": [
+        "R62"
+      ],
+      "manufacturer": "YAGEO",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C137592",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 2696,
+      "available_to_order": 2680,
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C273965"
+    },
+    {
+      "mpn": "RC0805FR-072M2L",
+      "lcsc": "C137552",
+      "references": [
+        "R104",
+        "R204",
+        "R304"
+      ],
+      "manufacturer": "YAGEO",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C137592",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 6862,
+      "available_to_order": 6844,
+      "ten_board_budget_quantity": 40,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C137552"
+    },
+    {
+      "mpn": "0805W8F5902T5E",
+      "lcsc": "C17763",
+      "references": [
+        "R10"
+      ],
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C17513",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 6306,
+      "available_to_order": 6189,
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": null,
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C17763"
+    },
+    {
+      "mpn": "0805W8F5231T5E",
+      "lcsc": "C17739",
+      "references": [
+        "R51"
+      ],
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C17513",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 3304,
+      "available_to_order": 2225,
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": null,
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C17739"
+    },
+    {
+      "mpn": "RC0805JR-070RL",
+      "lcsc": "C96345",
+      "references": [
+        "R20"
+      ],
+      "manufacturer": "YAGEO",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C137592",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 2063588,
+      "available_to_order": 2037966,
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C96345"
+    },
+    {
+      "mpn": "RC1206FR-0710KL",
+      "lcsc": "C132649",
+      "references": [
+        "R109",
+        "R209",
+        "R309"
+      ],
+      "manufacturer": "YAGEO",
+      "catalog_package": "1206",
+      "footprint": "R_1206_3216Metric",
+      "source": "C137592",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 1981602,
+      "available_to_order": 1934357,
+      "ten_board_budget_quantity": 40,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C132649"
+    },
+    {
+      "mpn": "1206W4F1200T5E",
+      "lcsc": "C17909",
+      "references": [
+        "R42"
+      ],
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "catalog_package": "1206",
+      "footprint": "R_1206_3216Metric",
+      "source": "C17513",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 770846,
+      "available_to_order": 702710,
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": null,
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C17909"
+    },
+    {
+      "mpn": "RT0805BRD07100KL",
+      "lcsc": "C122537",
+      "references": [
+        "R60",
+        "R65",
+        "R66",
+        "R68",
+        "R72",
+        "R73"
+      ],
+      "manufacturer": "YAGEO",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C122537",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 580372,
+      "available_to_order": 532529,
+      "ten_board_budget_quantity": 68,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C122537"
+    },
+    {
+      "mpn": "RT0805BRD07102KL",
+      "lcsc": "C865126",
+      "references": [
+        "R1"
+      ],
+      "manufacturer": "YAGEO",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C122537",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 9276,
+      "available_to_order": 9215,
+      "ten_board_budget_quantity": 14,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C865126"
+    },
+    {
+      "mpn": "RT0805BRD0712K1L",
+      "lcsc": "C865169",
+      "references": [
+        "R69"
+      ],
+      "manufacturer": "YAGEO",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C122537",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 6905,
+      "available_to_order": 6666,
+      "ten_board_budget_quantity": 14,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C865169"
+    },
+    {
+      "mpn": "RT0805BRD0713K7L",
+      "lcsc": "C865183",
+      "references": [
+        "R2"
+      ],
+      "manufacturer": "YAGEO",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C122537",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 137,
+      "available_to_order": 89,
+      "ten_board_budget_quantity": 14,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C865183"
+    },
+    {
+      "mpn": "RT0805BRD0720KL",
+      "lcsc": "C469660",
+      "references": [
+        "R67",
+        "R74"
+      ],
+      "manufacturer": "YAGEO",
+      "catalog_package": "0805",
+      "footprint": "R_0805_2012Metric",
+      "source": "C122537",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 55946,
+      "available_to_order": 41557,
+      "ten_board_budget_quantity": 24,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C469660"
+    },
+    {
+      "mpn": "SK6805-EC15",
+      "lcsc": "C2890035",
+      "references": [
+        "D10"
+      ],
+      "manufacturer": "OPSCO Optoelectronics",
+      "catalog_package": "SMD-4P,1.5x1.5mm",
+      "footprint": "LED_SK6805_EC15",
+      "source": "C2890035",
+      "review": "compatible drawing and native land pattern",
+      "note": "Exact OPSCO listing now links SK6805-EC15-001 A/1: 1.5 square, 0.55 square lands with 0.40 gap; pin 1 DIN, 2 VDD, 3 DOUT, 4 GND match. Factory must confirm supplied revision and preview; do not substitute other makers.",
+      "catalog_stock": 236890,
+      "available_to_order": 232445,
+      "ten_board_budget_quantity": 12,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 4",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 2,
+      "source_url": "https://jlcpcb.com/partdetail/C2890035"
+    },
+    {
+      "mpn": "SMAJ13A-13-F",
+      "lcsc": "C110519",
+      "references": [
+        "D6"
+      ],
+      "manufacturer": "Diodes Incorporated",
+      "catalog_package": "SMA",
+      "footprint": "D_SMA",
+      "source": "C110519",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 8086,
+      "available_to_order": 7888,
+      "ten_board_budget_quantity": 12,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C110519"
+    },
+    {
+      "mpn": "SMAJ30A",
+      "lcsc": "C148230",
+      "references": [
+        "D101",
+        "D201",
+        "D301"
+      ],
+      "manufacturer": "Littelfuse",
+      "catalog_package": "DO-214AC(SMA)",
+      "footprint": "D_SMA",
+      "source": "C148230",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 29957,
+      "available_to_order": 29228,
+      "ten_board_budget_quantity": 32,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C148230"
+    },
+    {
+      "mpn": "SMBJ22A-E3/52",
+      "lcsc": "C3698580",
+      "references": [
+        "D2"
+      ],
+      "manufacturer": "Vishay Intertech",
+      "catalog_package": "SMB(DO-214AA)",
+      "footprint": "D_SMB",
+      "source": "C3698580",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 204,
+      "available_to_order": 177,
+      "ten_board_budget_quantity": 12,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C3698580"
+    },
+    {
+      "mpn": "SN74AHCT1G125DBVR",
+      "lcsc": "C7484",
+      "references": [
+        "U10"
+      ],
+      "manufacturer": "Texas Instruments",
+      "catalog_package": "SOT-23-5",
+      "footprint": "SOT-23-5",
+      "source": "C7484",
+      "review": "compatible drawing and native land pattern",
+      "note": "Manufacturer case size and termination geometry fit the native land pattern; generic lands need not equal the example land pattern.",
+      "catalog_stock": 22874,
+      "available_to_order": 16016,
+      "ten_board_budget_quantity": 12,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C7484"
+    },
+    {
+      "mpn": "SRP5030TA-3R3M",
+      "lcsc": "C2042118",
+      "references": [
+        "L2"
+      ],
+      "manufacturer": "BOURNS",
+      "catalog_package": "SMD,5.2x5.7mm",
+      "footprint": "L_Bourns_SRP5030T",
+      "source": "C2042118",
+      "review": "compatible drawing and native land pattern",
+      "note": "Native footprint name SRP5030T, exact ordered part SRP5030TA: same reviewed 6.5 overall land span, 2.5 gap, 1.8 width. No pad change needed.",
+      "catalog_stock": 37,
+      "available_to_order": 35,
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C2042118"
+    },
+    {
+      "mpn": "SRP7028A-8R2M",
+      "lcsc": "C2041815",
+      "references": [
+        "L1"
+      ],
+      "manufacturer": "BOURNS",
+      "catalog_package": "SMD,7.3x6.6mm",
+      "footprint": "L_Bourns_SRP7028A_7.3x6.6mm",
+      "source": "C2041815",
+      "review": "compatible drawing and native land pattern",
+      "note": "8.4 overall land span, 2.5 gap, 3.5 width exactly match SRP7028A drawing.",
+      "catalog_stock": 116,
+      "available_to_order": 111,
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C2041815"
+    },
+    {
+      "mpn": "TCAN3413DR",
+      "lcsc": "C22433320",
+      "references": [
+        "U6"
+      ],
+      "manufacturer": "Texas Instruments",
+      "catalog_package": "SOIC-8",
+      "footprint": "SOIC-8_3.9x4.9mm_P1.27mm",
+      "source": "C22433320",
+      "review": "compatible drawing and native land pattern",
+      "note": "D/SOIC8 1.27 pitch, not DDF/SOT or DRB/VSON; no center pad.",
+      "catalog_stock": 3122,
+      "available_to_order": 2299,
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C22433320"
+    },
+    {
+      "mpn": "TPS2553DBVR-1",
+      "lcsc": "C111738",
+      "references": [
+        "U4"
+      ],
+      "manufacturer": "Texas Instruments",
+      "catalog_package": "SOT-23-6",
+      "footprint": "SOT-23-6",
+      "source": "C111738",
+      "review": "compatible drawing and native land pattern",
+      "note": "DBV 6 leads, 0.95 pitch; retain exact -1 latch-off suffix.",
+      "catalog_stock": 13061,
+      "available_to_order": 13035,
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C111738"
+    },
+    {
+      "mpn": "TPS259620DDAR",
+      "lcsc": "C2155773",
+      "references": [
+        "U9"
+      ],
+      "manufacturer": "Texas Instruments",
+      "catalog_package": "SO-8",
+      "footprint": "TPS2596_DDA8",
+      "source": "C2155773",
+      "review": "compatible drawing and native land pattern",
+      "note": "DDA8 PowerPAD, not plain SO8 despite catalog short label. 2.4 x 3.1 center copper covers maximum exposed pad; four 0.92 x 1.21 paste windows (59.85% gross rectangle area, rounded corners reduce actual coverage). Eight 1.27-pitch leads. Native perimeter lands differ from TI example but cover lead span. Preserve windowing; require factory SPI/X-ray review.",
+      "catalog_stock": 29,
+      "available_to_order": 24,
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C2155773"
+    },
+    {
+      "mpn": "TPS61085DGKR",
+      "lcsc": "C113659",
+      "references": [
+        "U8"
+      ],
+      "manufacturer": "Texas Instruments",
+      "catalog_package": "VSSOP-8-0.65mm",
+      "footprint": "VSSOP-8_3x3mm_P0.65mm",
+      "source": "C113659",
+      "review": "compatible drawing and native land pattern",
+      "note": "DGK VSSOP8, 0.65 pitch, 3 x 3 body; not PW/TSSOP8. Native 1.625 x 0.50 lands are larger than TI example 1.4 x 0.45; correct lead overlap, 0.15 adjacent copper gap. Confirm stencil/mask treatment.",
+      "catalog_stock": 2073,
+      "available_to_order": 2036,
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "moisture_level": "MSL 1",
+      "catalog_xray_flag": false,
+      "catalog_service_type": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C113659"
+    }
+  ],
+  "reviewed_footprints": {
+    "Fuse_Littelfuse-NANO2-451_453": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -2.455,
+            0.0
+          ],
+          "size": [
+            1.96,
+            3.15
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            2.455,
+            0.0
+          ],
+          "size": [
+            1.96,
+            3.15
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        6.1,
+        2.69
+      ]
+    },
+    "R_0805_2012Metric": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -0.9125,
+            0.0
+          ],
+          "size": [
+            1.025,
+            1.4
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            0.9125,
+            0.0
+          ],
+          "size": [
+            1.025,
+            1.4
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        2.1,
+        1.35
+      ]
+    },
+    "Abracon_ABM3B_5.0x3.2mm": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -2.0,
+            1.2
+          ],
+          "size": [
+            1.8,
+            1.2
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            2.0,
+            1.2
+          ],
+          "size": [
+            1.8,
+            1.2
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "3",
+          "xy": [
+            2.0,
+            -1.2
+          ],
+          "size": [
+            1.8,
+            1.2
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "4",
+          "xy": [
+            -2.0,
+            -1.2
+          ],
+          "size": [
+            1.8,
+            1.2
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        5.1,
+        3.3
+      ]
+    },
+    "SOT-23": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -0.9375,
+            -0.95
+          ],
+          "size": [
+            1.475,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            -0.9375,
+            0.95
+          ],
+          "size": [
+            1.475,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "3",
+          "xy": [
+            0.9375,
+            0.0
+          ],
+          "size": [
+            1.475,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        3.0,
+        3.1
+      ]
+    },
+    "SOIC-8_3.9x4.9mm_P1.27mm": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -2.475,
+            -1.905
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            -2.475,
+            -0.635
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "3",
+          "xy": [
+            -2.475,
+            0.635
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "4",
+          "xy": [
+            -2.475,
+            1.905
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "5",
+          "xy": [
+            2.475,
+            1.905
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "6",
+          "xy": [
+            2.475,
+            0.635
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "7",
+          "xy": [
+            2.475,
+            -0.635
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "8",
+          "xy": [
+            2.475,
+            -1.905
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        6.2,
+        5.0
+      ]
+    },
+    "SOT-23-5": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -1.1375,
+            -0.95
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            -1.1375,
+            0.0
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "3",
+          "xy": [
+            -1.1375,
+            0.95
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "4",
+          "xy": [
+            1.1375,
+            0.95
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "5",
+          "xy": [
+            1.1375,
+            -0.95
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        3.0,
+        3.1
+      ]
+    },
+    "D_SMA": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -2.0,
+            0.0
+          ],
+          "size": [
+            2.5,
+            1.8
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            2.0,
+            0.0
+          ],
+          "size": [
+            2.5,
+            1.8
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        5.59,
+        2.92
+      ]
+    },
+    "D_SOD-123": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -1.65,
+            0.0
+          ],
+          "size": [
+            0.9,
+            1.2
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            1.65,
+            0.0
+          ],
+          "size": [
+            0.9,
+            1.2
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        3.86,
+        1.8
+      ]
+    },
+    "C_0805_2012Metric": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -0.95,
+            0.0
+          ],
+          "size": [
+            1.0,
+            1.45
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            0.95,
+            0.0
+          ],
+          "size": [
+            1.0,
+            1.45
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        2.2,
+        1.45
+      ]
+    },
+    "C_1206_3216Metric": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -1.475,
+            0.0
+          ],
+          "size": [
+            1.15,
+            1.8
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            1.475,
+            0.0
+          ],
+          "size": [
+            1.15,
+            1.8
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        3.4,
+        1.8
+      ]
+    },
+    "C_1210_3225Metric": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -1.475,
+            0.0
+          ],
+          "size": [
+            1.15,
+            2.7
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            1.475,
+            0.0
+          ],
+          "size": [
+            1.15,
+            2.7
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        3.5,
+        2.7
+      ]
+    },
+    "CP_Panasonic_FT_6.3x5.8": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -2.5,
+            0.0
+          ],
+          "size": [
+            3.2,
+            1.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            2.5,
+            0.0
+          ],
+          "size": [
+            3.2,
+            1.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        7.8,
+        6.8
+      ]
+    },
+    "SOIC-14_3.9x8.7mm_P1.27mm": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -2.475,
+            -3.81
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            -2.475,
+            -2.54
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "3",
+          "xy": [
+            -2.475,
+            -1.27
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "4",
+          "xy": [
+            -2.475,
+            0.0
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "5",
+          "xy": [
+            -2.475,
+            1.27
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "6",
+          "xy": [
+            -2.475,
+            2.54
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "7",
+          "xy": [
+            -2.475,
+            3.81
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "8",
+          "xy": [
+            2.475,
+            3.81
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "9",
+          "xy": [
+            2.475,
+            2.54
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "10",
+          "xy": [
+            2.475,
+            1.27
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "11",
+          "xy": [
+            2.475,
+            0.0
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "12",
+          "xy": [
+            2.475,
+            -1.27
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "13",
+          "xy": [
+            2.475,
+            -2.54
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "14",
+          "xy": [
+            2.475,
+            -3.81
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        6.2,
+        8.75
+      ]
+    },
+    "TSOT-23-6": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -1.1375,
+            -0.95
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            -1.1375,
+            0.0
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "3",
+          "xy": [
+            -1.1375,
+            0.95
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "4",
+          "xy": [
+            1.1375,
+            0.95
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "5",
+          "xy": [
+            1.1375,
+            0.0
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "6",
+          "xy": [
+            1.1375,
+            -0.95
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        3.05,
+        3.05
+      ]
+    },
+    "R_1206_3216Metric": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -1.4625,
+            0.0
+          ],
+          "size": [
+            1.125,
+            1.75
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            1.4625,
+            0.0
+          ],
+          "size": [
+            1.125,
+            1.75
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        3.3,
+        1.7
+      ]
+    },
+    "LED_SK6805_EC15": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -0.475,
+            0.475
+          ],
+          "size": [
+            0.55,
+            0.55
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            0.475,
+            0.475
+          ],
+          "size": [
+            0.55,
+            0.55
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "3",
+          "xy": [
+            0.475,
+            -0.475
+          ],
+          "size": [
+            0.55,
+            0.55
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "4",
+          "xy": [
+            -0.475,
+            -0.475
+          ],
+          "size": [
+            0.55,
+            0.55
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        1.6,
+        1.6
+      ]
+    },
+    "D_SMB": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -2.15,
+            0.0
+          ],
+          "size": [
+            2.5,
+            2.3
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            2.15,
+            0.0
+          ],
+          "size": [
+            2.5,
+            2.3
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        5.59,
+        3.94
+      ]
+    },
+    "L_Bourns_SRP5030T": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -2.25,
+            0.0
+          ],
+          "size": [
+            2.0,
+            1.8
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            2.25,
+            0.0
+          ],
+          "size": [
+            2.0,
+            1.8
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        6.0,
+        5.4
+      ]
+    },
+    "L_Bourns_SRP7028A_7.3x6.6mm": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -2.725,
+            0.0
+          ],
+          "size": [
+            2.95,
+            3.5
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            2.725,
+            0.0
+          ],
+          "size": [
+            2.95,
+            3.5
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        7.6,
+        6.9
+      ]
+    },
+    "SOT-23-6": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -1.1375,
+            -0.95
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            -1.1375,
+            0.0
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "3",
+          "xy": [
+            -1.1375,
+            0.95
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "4",
+          "xy": [
+            1.1375,
+            0.95
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "5",
+          "xy": [
+            1.1375,
+            0.0
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "6",
+          "xy": [
+            1.1375,
+            -0.95
+          ],
+          "size": [
+            1.325,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        3.0,
+        3.05
+      ]
+    },
+    "TPS2596_DDA8": {
+      "pads": [
+        {
+          "n": "",
+          "xy": [
+            -0.57,
+            0.75
+          ],
+          "size": [
+            0.92,
+            1.21
+          ],
+          "rot": 0.0,
+          "copper": false,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "",
+          "xy": [
+            -0.57,
+            -0.75
+          ],
+          "size": [
+            0.92,
+            1.21
+          ],
+          "rot": 0.0,
+          "copper": false,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "",
+          "xy": [
+            0.57,
+            0.75
+          ],
+          "size": [
+            0.92,
+            1.21
+          ],
+          "rot": 0.0,
+          "copper": false,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "",
+          "xy": [
+            0.57,
+            -0.75
+          ],
+          "size": [
+            0.92,
+            1.21
+          ],
+          "rot": 0.0,
+          "copper": false,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "1",
+          "xy": [
+            -2.475,
+            -1.905
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            -2.475,
+            -0.635
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "3",
+          "xy": [
+            -2.475,
+            0.635
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "4",
+          "xy": [
+            -2.475,
+            1.905
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "5",
+          "xy": [
+            2.475,
+            1.905
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "6",
+          "xy": [
+            2.475,
+            0.635
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "7",
+          "xy": [
+            2.475,
+            -0.635
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "8",
+          "xy": [
+            2.475,
+            -1.905
+          ],
+          "size": [
+            1.95,
+            0.6
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "9",
+          "xy": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            2.4,
+            3.1
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": false,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        6.2,
+        5.0
+      ]
+    },
+    "VSSOP-8_3x3mm_P0.65mm": {
+      "pads": [
+        {
+          "n": "1",
+          "xy": [
+            -2.1125,
+            -0.975
+          ],
+          "size": [
+            1.625,
+            0.5
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "2",
+          "xy": [
+            -2.1125,
+            -0.325
+          ],
+          "size": [
+            1.625,
+            0.5
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "3",
+          "xy": [
+            -2.1125,
+            0.325
+          ],
+          "size": [
+            1.625,
+            0.5
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "4",
+          "xy": [
+            -2.1125,
+            0.975
+          ],
+          "size": [
+            1.625,
+            0.5
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "5",
+          "xy": [
+            2.1125,
+            0.975
+          ],
+          "size": [
+            1.625,
+            0.5
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "6",
+          "xy": [
+            2.1125,
+            0.325
+          ],
+          "size": [
+            1.625,
+            0.5
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "7",
+          "xy": [
+            2.1125,
+            -0.325
+          ],
+          "size": [
+            1.625,
+            0.5
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "n": "8",
+          "xy": [
+            2.1125,
+            -0.975
+          ],
+          "size": [
+            1.625,
+            0.5
+          ],
+          "rot": 0.0,
+          "copper": true,
+          "paste": true,
+          "drill": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_envelope_xy_mm": [
+        5.05,
+        3.1
+      ]
+    }
+  },
+  "factory_holds": [
+    "Standard PCBA both sides; >=70 x 70 mm factory panel with rails/fiducials and depanelization.",
+    "Factory placement preview: pin 1/polarity and bottom-side rotation; exact OPSCO LED revision.",
+    "Qualify two reflow passes including L1/L2/F1 underside retention, C1 dwell and D10 MSL4.",
+    "Confirm U9 center-pad solder/paste and X-ray inspection; inspect D10 and crystal hidden joints.",
+    "Confirm symmetric 1.6 mm four-layer stack with 35 um copper on every layer and <=0.25 mm outer dielectric."
+  ],
+  "limitations": "Package fit and file consistency only. Does not establish solder-joint yield, nozzle/fixture clearance, thermal qualification, electrical function or factory part allocation. Body envelope screen includes lead span and conservative family bounds; fuse envelope is nominal."
+}

@@ -6,6 +6,8 @@ Work is isolated on `codex/compact-board` in `/home/neuro/candi-compact-board`. 
 
 [Compare the PCB outlines at the same scale](../output/review/size_comparison.png).
 
+[Exact JLC package, dimensions and assembly review](JLC_PACKAGE_REVIEW.md) covers all 54 factory types and the remaining factory confirmations.
+
 ## Geometry and assembly
 
 Sensor terminal pad rows are Y=39 and 46 mm; voltage-header pads are Y=34.4 mm. Mounting holes are at (3.5,4) and (40.5,33) mm, measured from the top-left corner. The power/CAN terminals are at the opposite edge. J8 is now vertical: pin 1 is (16.8,2.5) mm, odd pins run down the left column and even pins down the right column. Electrical pin assignments remain unchanged. D10 is centered at (40,18.5) mm with a 6 mm duct reservation. The conservative connector-body envelope is 44 × 56.1 mm, before wires and access clearance. **The enclosure and harness access must be revised for these positions.**

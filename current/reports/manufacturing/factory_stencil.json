@@ -93,7 +93,7 @@
   "source": "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp",
   "output": "output/assembly/factory_top_paste.gtp",
   "input_hashes": {
-    "bom/assembly_plan.json": "3ddff6cab3d7df84938cd10b9cc9549515d288c65915f7252b9b6a726b85b627",
+    "bom/assembly_plan.json": "b48f5af36f49ccbf1a85be27147bb541fa351dc892727ba69142cc33cf9912b5",
     "hardware/FRC_Sensor_CAN.kicad_pcb": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
     "reports/manufacturing/board_manifest.json": "8b2ae938e67059a4c2339cda4b3b6c417e9b7d9fae5ddf4fd2c22e6e16efb5ee",
     "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "935cc2d6e7c573ad46e431ced63641e639d379215bcf1a1fdbfac6aafaaf9676",
