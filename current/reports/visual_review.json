@@ -1,33 +1,33 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-10T21:38:12.846765+00:00",
+  "reviewed_utc": "2026-09-10T22:27:25.265079+00:00",
   "reviewer": "Codex visual inspection",
   "variant": "Rev H compact 44 x 48 mm prototype",
-  "board_sha256": "ab3a65634b4c6ac7060d4e9328e048e01889160c2ea81d1b36b56be4f89f1d6b",
+  "board_sha256": "52335939cc3cbd214a217ff922a3b8f835be10f9253df6fa804ce7f5edc1dd4f",
   "artifacts": [
     {
       "file": "output/review/board_top.png",
-      "sha256": "79cce82ec2c6f6aace5308cce50bd725c7b890aac27ac96437eca40a26312e59",
-      "scope": "Final board renders, a close C1 crop, top assembly drawing and handbook pages 1-8 visually inspected. The 90-degree sugarCANe wordmark reads bottom to top left of C1; all letters clear the via hole below the s. Pixel-cane island and existing labels retained. Separate artwork check verifies unchanged native electrical content and non-front-silkscreen fabrication files.",
-      "reviewed_utc": "2026-09-10T21:38:12.846765+00:00"
+      "sha256": "be50df80e0a29743fb8106679ecfd9717c11b8c22e0fd80e709c48e8caaa6041",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "f947216939e699ba6e9d38e9459f9374bfe5a5e9a36d2ecedf2665500c384d17",
-      "scope": "Final board renders, a close C1 crop, top assembly drawing and handbook pages 1-8 visually inspected. The 90-degree sugarCANe wordmark reads bottom to top left of C1; all letters clear the via hole below the s. Pixel-cane island and existing labels retained. Separate artwork check verifies unchanged native electrical content and non-front-silkscreen fabrication files.",
-      "reviewed_utc": "2026-09-10T21:38:12.846765+00:00"
+      "sha256": "cb8b6bea2df9afd2d421de59e3394e6104fc3bcf41d952682a7d426f4996f92b",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/review/board_3d_final.png",
-      "sha256": "eb590d308fdbdd1527ea310dc6bdc1d19992a3635233cd9385f9b1890139e3b8",
-      "scope": "Final board renders, a close C1 crop, top assembly drawing and handbook pages 1-8 visually inspected. The 90-degree sugarCANe wordmark reads bottom to top left of C1; all letters clear the via hole below the s. Pixel-cane island and existing labels retained. Separate artwork check verifies unchanged native electrical content and non-front-silkscreen fabrication files.",
-      "reviewed_utc": "2026-09-10T21:38:12.846765+00:00"
+      "sha256": "ef8d4650aaaf627ae252e4717b996032f941b3f669dfe2ca3ebd8afb5a65b2e8",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/review/board_connectors.png",
-      "sha256": "c60ae8cf1b96e90c23fadc256d3ce6dfb6f470a813ca8c731d3bc8415bf257cc",
-      "scope": "Final board renders, a close C1 crop, top assembly drawing and handbook pages 1-8 visually inspected. The 90-degree sugarCANe wordmark reads bottom to top left of C1; all letters clear the via hole below the s. Pixel-cane island and existing labels retained. Separate artwork check verifies unchanged native electrical content and non-front-silkscreen fabrication files.",
-      "reviewed_utc": "2026-09-10T21:38:12.846765+00:00"
+      "sha256": "4abe3bf3d8924c2d75de8a53c0edf1a51279f5f4e03b9ec6510dd2f47cc11546",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/review/size_comparison.png",
@@ -37,87 +37,87 @@
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "sha256": "37a619751e090b075fcd28ca74030314d0d608c43a12164866cbe52408542002",
-      "scope": "Four-layer exported copper inspected in rendered PDF pages and a local U8 ground-via detail; PNG/SVG share the same plotted source. New through via and both earlier contact repairs retained. Numerical geometry/connectivity checks remain separate.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "6d77fc22f7ed738174832ed5b8d20d876359b1577fb510444f6510e83bd5a2cf",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/review/gerber_bottom_copper.png",
-      "sha256": "31922e32ebde1ad37591cda004165dc9f46a3bfce4b1b1701a44cec4a18f27f9",
-      "scope": "Four-layer exported copper inspected in rendered PDF pages and a local U8 ground-via detail; PNG/SVG share the same plotted source. New through via and both earlier contact repairs retained. Numerical geometry/connectivity checks remain separate.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "a4c57f7f5a2384e84750cfa9d31d68452379b0191edf8d0ead64a554b62cee02",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/review/gerber_bottom_copper.svg",
-      "sha256": "5c9618e27770c7d50a72415a4af7459469f3a59f8886a316a85deaa0a862ef5a",
-      "scope": "Four-layer exported copper inspected in rendered PDF pages and a local U8 ground-via detail; PNG/SVG share the same plotted source. New through via and both earlier contact repairs retained. Numerical geometry/connectivity checks remain separate.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "ba4303e4877c0602e244e2ff723febea0ba5659b6801a83a0e0abd2a4e38b5c3",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/review/gerber_inner_1_copper.png",
-      "sha256": "14c680d4024e5fb7dfc4ff8e159fdc2047b30d3034980e52473ca56b14f5174f",
-      "scope": "Four-layer exported copper inspected in rendered PDF pages and a local U8 ground-via detail; PNG/SVG share the same plotted source. New through via and both earlier contact repairs retained. Numerical geometry/connectivity checks remain separate.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "ac023b7d50ad4b955504edcaf890a18f9145fb2d0bcaab4c59bbf9b95da85ab4",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/review/gerber_inner_1_copper.svg",
-      "sha256": "455661d972bf7150bd2e86292317795fb4d73553e34dfb91b91eb0cbe3269413",
-      "scope": "Four-layer exported copper inspected in rendered PDF pages and a local U8 ground-via detail; PNG/SVG share the same plotted source. New through via and both earlier contact repairs retained. Numerical geometry/connectivity checks remain separate.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "690a1d0cf9c57b5e3a04077e7bbafd3bf33dafbc09a50881647788099ed795d1",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/review/gerber_inner_2_copper.png",
-      "sha256": "59586006d1b7186082165b09dad77b037ba860d3793cbbb907dace69a0027ad3",
-      "scope": "Four-layer exported copper inspected in rendered PDF pages and a local U8 ground-via detail; PNG/SVG share the same plotted source. New through via and both earlier contact repairs retained. Numerical geometry/connectivity checks remain separate.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "7c45ac735330e516e194e2c6257824d11c064fec798206ff61f54d722d56d865",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/review/gerber_inner_2_copper.svg",
-      "sha256": "b7c2c3804db68acb519a9348e6e764df017eb06debb0ecd639da4672af2061e7",
-      "scope": "Four-layer exported copper inspected in rendered PDF pages and a local U8 ground-via detail; PNG/SVG share the same plotted source. New through via and both earlier contact repairs retained. Numerical geometry/connectivity checks remain separate.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "a27e04b5fdc8e0d915574aabf36581b1cb39f8a18f8cfbb542917a7d32976229",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/review/gerber_top_copper.png",
-      "sha256": "88b7fac28cf104d09312bcd5d4c9ec6b4d90a49a5e5aff7ca4e88705a614481a",
-      "scope": "Four-layer exported copper inspected in rendered PDF pages and a local U8 ground-via detail; PNG/SVG share the same plotted source. New through via and both earlier contact repairs retained. Numerical geometry/connectivity checks remain separate.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "bec05e0e78d8e64ccfffb6fb29206148fd6fbcd5b5dbb28c9a3756b377349175",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/review/gerber_top_copper.svg",
-      "sha256": "6918a7a6deb40e587f4f599947975555b629b445ade47b8c7f922fb99153d9c9",
-      "scope": "Four-layer exported copper inspected in rendered PDF pages and a local U8 ground-via detail; PNG/SVG share the same plotted source. New through via and both earlier contact repairs retained. Numerical geometry/connectivity checks remain separate.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "84945cf0d12c52740efd2353861c8ba3156dcf5274064f8321ec55aee3ee26e3",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/assembly/top_assembly.pdf",
-      "sha256": "45bffe938c1797ef5caa167edf1df08bfe25e1ab02bfe9fc3dd04091ba2df63e",
-      "scope": "Final board renders, a close C1 crop, top assembly drawing and handbook pages 1-8 visually inspected. The 90-degree sugarCANe wordmark reads bottom to top left of C1; all letters clear the via hole below the s. Pixel-cane island and existing labels retained. Separate artwork check verifies unchanged native electrical content and non-front-silkscreen fabrication files.",
-      "reviewed_utc": "2026-09-10T21:38:12.846765+00:00"
+      "sha256": "e1a5dbd65966c515fd0201d1ac748e95d42faf29ccaadf930ee239f671fc6309",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/assembly/bottom_assembly.pdf",
-      "sha256": "8681af128f2fb872b4f015c2ee25ab26f6104dc8b912a136e97cf5b0a71642dd",
-      "scope": "Rendered mechanical/assembly/order pages and changed handbook sections inspected for readable layout, current dimensions, part counts and header mapping; all PDF text bounds checked separately.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "1a942e1804415b143d2376c4bb755be6bea76b34965da2416550144cd1d4ca93",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
-      "sha256": "06800d4b860fa58210c3d30397b56bf6091f12214b8bfa98e305f6131e74cc35",
-      "scope": "Rendered mechanical/assembly/order pages and changed handbook sections inspected for readable layout, current dimensions, part counts and header mapping; all PDF text bounds checked separately.",
-      "reviewed_utc": "2026-09-10T20:03:48.163009+00:00"
+      "sha256": "061172436c9d67b8a6dcaa027351a63cf9f58985335eb04edbd611ff2c6c7148",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/documentation/ORDER_GUIDE.pdf",
-      "sha256": "e545de0438f444b9d746708e8dfe4521670e3e619f983cd58829dcb1ba89491c",
-      "scope": "Rendered all three ordering-guide pages and handbook pages 5-8, 29-31 after package-review links, panel minimum and crystal-orientation note changed. Readable tables/text and page transitions; independent text-bounds check passed.",
-      "reviewed_utc": "2026-09-10T21:14:34.142054+00:00"
+      "sha256": "32409dd6b30650d6f145ba9f9490f2e631e3b2cc4b1ca5db973a69831e40e86e",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "fb98f7c34cb0762564cb0e30ef406250df63afa65c6411d2211e5f6a13b844c0",
-      "scope": "Final board renders, a close C1 crop, top assembly drawing and handbook pages 1-8 visually inspected. The 90-degree sugarCANe wordmark reads bottom to top left of C1; all letters clear the via hole below the s. Pixel-cane island and existing labels retained. Separate artwork check verifies unchanged native electrical content and non-front-silkscreen fabrication files.",
-      "reviewed_utc": "2026-09-10T21:38:12.846765+00:00"
+      "sha256": "216aa4856bd48d38ce3fd36009e5bc9514cc0130468a67bcc6988d0c03b95afc",
+      "scope": "Reviewed refreshed board renders, all four Gerber copper previews, assembly/mechanical drawings, all order-guide pages and affected handbook pages after 0.30 mm drilling / half-ounce inner-copper update. Artwork and component poses retained; nominal geometry and document presentation only. Manufacturing checks separately verify CPL/Gerber alignment and clearances.",
+      "reviewed_utc": "2026-09-10T22:27:25.265079+00:00"
     },
     {
       "file": "output/review/u8_switch_route_fix.png",

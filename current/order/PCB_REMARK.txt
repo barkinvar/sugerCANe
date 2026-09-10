@@ -1,0 +1,1 @@
+44x48mm finished PCB; preserve outline. 4 layers F.Cu/In1.Cu/In2.Cu/B.Cu, 1.6mm, ENIG. Copper: 1oz outer, 0.5oz inner; symmetric standard stack, outer-to-inner dielectric <=0.25mm. Minimum via: 0.30mm hole/0.50mm land; tented. Confirm stack and via plating. Add assembly rails/fiducials and depanel to 44x48mm. Preserve both silkscreens; put any factory mark on removable rails.

@@ -13,6 +13,7 @@ from gerbonara import LayerStack
 from gerbonara.graphic_objects import Flash
 from board_outline import verified_outline
 from layout_contract import WIDTH, HEIGHT, RADIUS, BOTTOM_REFERENCES
+from factory_coordinates import check_cpl
 
 ROOT = Path(__file__).resolve().parents[1]
 manifest = json.loads((ROOT / 'reports/manufacturing/board_manifest.json').read_text())
@@ -56,6 +57,7 @@ assert not unmatched
 assert sum(n for k, n in actual_drills.items() if not k[-1]) == 2
 
 pad_results = {}
+gerber_pads = []
 for side in ('top', 'bottom'):
     expected = Counter()
     for c in manifest['components']:
@@ -72,6 +74,7 @@ for side in ('top', 'bottom'):
             if net == 'N/C':
                 net = ''
             actual[(ref, pin, coord(obj.x), coord(obj.y), net)] += 1
+            gerber_pads.append((side, ref, pin, obj.x, obj.y))
     assert actual == expected, (side, actual - expected, expected - actual)
     pad_results[side] = sum(actual.values())
 
@@ -86,6 +89,8 @@ for row in placed:
     assert coord(row['PosX']) == coord(c['x_mm']) and coord(row['PosY']) == coord(c['y_mm'])
     assert abs((float(row['Rot']) - c['rotation_deg'] + 180) % 360 - 180) < 1e-5
     assert row['Side'] == c['side'] == ('bottom' if row['Ref'] in BOTTOM_REFERENCES else 'top')
+cpl=list(csv.DictReader((ROOT/'output/assembly/CPL_JLCPCB.csv').open()))
+factory_pads_checked=check_cpl(cpl,manifest['components'],gerber_pads)
 bottom_paste = stack[('bottom', 'paste')].instance.objects
 assert {o.attrs['.C'][0] for o in bottom_paste} == BOTTOM_REFERENCES
 assert len(bottom_paste) == sum(p['paste_bottom'] for r in BOTTOM_REFERENCES for p in by_ref[r]['pads'])
@@ -110,6 +115,8 @@ result = dict(result='PASS', parser='Gerbonara 1.6.3', graphic_layers=11,
               maximum_drill_coordinate_quantization_mm=drill_error,
               maximum_drill_diameter_quantization_mm=diameter_error,
               assembly_rows_verified=len(placed), purchased_references_verified=len(purchased),
+              factory_cpl_rows_verified=len(cpl),factory_cpl_gerber_pads_verified=factory_pads_checked,
+              factory_cpl_origin='Absolute Gerber/Excellon origin, no CPL-only offset or bottom X mirror',
               portable_models_verified=manifest['models_resolved'],
               parser_warnings=sorted({str(w.message) for w in parser_warnings}),
               limitations='X2 pad/net/coordinate and drill/placement parity; not a copper connectivity solver or fabrication-house CAM review.')

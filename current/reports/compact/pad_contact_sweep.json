@@ -2,7 +2,7 @@
   "result": "PASS",
   "baseline_commit": "4f238f9856be0e8ce036d0285594219fe225b4d0",
   "baseline_board_sha256": "f2a08206016cc9e3d576d27210aa77b042df628b72892f1a989f5f5c8db9e7a0",
-  "board_sha256": "ab3a65634b4c6ac7060d4e9328e048e01889160c2ea81d1b36b56be4f89f1d6b",
+  "board_sha256": "52335939cc3cbd214a217ff922a3b8f835be10f9253df6fa804ce7f5edc1dd4f",
   "before": {
     "pad_layer_shapes_checked": 561,
     "same_net_contact_pairs_checked": 495,
@@ -713,7 +713,7 @@
   ],
   "repaired_branch_to_q1_pin2_clearance_mm": 0.21669752235759843,
   "input_hashes": {
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "ab3a65634b4c6ac7060d4e9328e048e01889160c2ea81d1b36b56be4f89f1d6b",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "52335939cc3cbd214a217ff922a3b8f835be10f9253df6fa804ce7f5edc1dd4f",
     "scripts/check_routing.py": "127b56c0e23b1f476f1b77167850893426dc27652ffa3714d57d1c37742bcce8",
     "scripts/export_routing_geometry.py": "184ae2226e3b37849ae200420e333a554e60ba3c86afb542729f1c7de62b7224",
     "scripts/render_pad_contact_review.py": "1e5b80a47dfbaab06b71be49cebd9c06aeb5ac334d94903bbbd65ae9c8124751"

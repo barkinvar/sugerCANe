@@ -105,7 +105,15 @@ compact=read('reports/compact/layout_verification.json')
 assert compact['result']=='PASS' and compact['board_sha256']==routing['board_sha256']
 artwork=read('reports/compact/easteregg.json')
 assert artwork['result']=='PASS' and artwork['board_sha256']==routing['board_sha256']
-assert artwork['non_artwork_native_content_byte_identical']
+assert artwork['artwork_unchanged']
+fabrication=read('reports/manufacturing/fabrication_options.json')
+assert fabrication['board_sha256']==routing['board_sha256'] and fabrication['result']=='PASS limited fabrication change and DC allowances'
+for path,digest in fabrication['input_hashes'].items():
+ assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale fabrication change review',path)
+assert assembly['factory_cpl_rows_verified']==129 and assembly['factory_cpl_gerber_pads_verified']>0
+tracked += ['reports/manufacturing/fabrication_options.json',*fabrication['input_hashes'],
+            'scripts/factory_coordinates.py','scripts/test_factory_coordinates.py',
+            'scripts/build_factory_files.py','scripts/verify_manufacturing.py']
 for path,digest in artwork['input_hashes'].items():
  assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale artwork review',path)
 tracked += ['reports/compact/easteregg.json',*artwork['input_hashes']]

@@ -1,8 +1,8 @@
 {
   "result": "PASS",
   "variant": "Rev H compact 44 x 48 mm prototype",
-  "checked_utc": "2026-09-10T20:03:48.163009+00:00",
-  "board_sha256": "26ce31d823f83ae8a218a9bb427a7d6e6a2981fe58ffda37a7c71b8352139eed",
+  "checked_utc": "2026-09-10T22:27:25.265079+00:00",
+  "board_sha256": "52335939cc3cbd214a217ff922a3b8f835be10f9253df6fa804ce7f5edc1dd4f",
   "erc_violations": 0,
   "drc_violations": 0,
   "unconnected_items": 0,
@@ -10,47 +10,55 @@
   "vias": 246,
   "fabrication_files": {
     "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": {
-      "export_sha256": "7ed0f94fec186b684ed48d12e286fe3cbc1612f589f3f651432eedfb30e01956"
+      "export_sha256": "f39505968ecbf17f098c71198c890e024a9813cfd16c69ffcbb04cc632f4b41c"
     },
     "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": {
-      "export_sha256": "1bab0ec8d4e92822571b23fe3c40fec9ef8a1d70452b1caf9b68feddc000cc0b"
+      "export_sha256": "b67deed8ce25194c6d335ecec314020e9ef29454d78bbe293a6b2afc22bdf0d5"
     },
     "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": {
-      "export_sha256": "d18e49365176561c6ffd6ee86a6d9b1ece83fd1ac00c10e6e8a8e1539c00a697"
+      "export_sha256": "7f057cf860e92d710d01ebcf8aa99610b7307e91e30edeb3e60dcbe3347133fa"
     },
     "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": {
-      "export_sha256": "b71740dcff14e6bde17b3ef289e4828bed60b77d73274d508269f463e3939034"
+      "export_sha256": "017b424d132e0544fe13c40aabc3fecf1895ef87d05d7d84f3980a3b5b1e8a56"
     },
     "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": {
-      "export_sha256": "775dca44d713ff0c15bab27a98a55d50790501347345223f97c9a2b43d83c482"
+      "export_sha256": "0a21f5e4e87b031e99162b0e6d52e6d878fda991c82f3512289839bd1ac18b31"
     },
     "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": {
-      "export_sha256": "ee009bf6226a573033624ec5557a433ebb672c4aee18cb93a13312a5c85796fc"
+      "export_sha256": "5e0215c7cfb090c921ffe6ccc1f80fd9623ca94d3dfa3e9644744985f8c099d2"
     },
     "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": {
-      "export_sha256": "64e8cc5778db769b926ee60562c6c090b97cf23592f40255283c18ba8743f4f7"
+      "export_sha256": "8d881c02ab66a405012ec6fb6e9367b83a6afe138b237859f0a747df277ea8a8"
     },
     "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": {
-      "export_sha256": "935cc2d6e7c573ad46e431ced63641e639d379215bcf1a1fdbfac6aafaaf9676"
+      "export_sha256": "3d99e8485768caa48d3f9ba2de28f485f6380acb25abaab675e20df8a939d08a"
     },
     "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": {
-      "export_sha256": "fb6edde0b093ae692a9e40af692b2cce37dff0a3ea79507ed00e10c879ce1cb2"
+      "export_sha256": "18a240f84d2b6c42114e64c982f1e7c14b7ca5a0470683de9acd3e14ff29cd81"
     },
     "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": {
-      "export_sha256": "def973f8b02852c3eb0368369b7c14657be03414a6eb737aa49d6b94b4db77af"
+      "export_sha256": "c1a8e8c322cac057708b7511d1e4680ae785394b7bfb0362962474f661602c33"
     },
     "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": {
-      "export_sha256": "92a718c8ce9d8f96948657db9a10a63d7b4c85a1a9684f2cc1daff521651a9c4"
+      "export_sha256": "73f40c17cac0e3cc5b312319174311b88d50ba9d4ee74fd5833c3073df34e17a"
     },
     "output/fabrication/FRC_Sensor_CAN-NPTH.drl": {
-      "export_sha256": "d934392390c59404b2466a0273f482d0a0cca5bf782c604f62aa3a351d95205c"
+      "export_sha256": "bfa1e69ae971e48c5bc4b4b491e2a291d704c47a5f69e1bc882ca130b134c1eb"
     },
     "output/fabrication/FRC_Sensor_CAN-PTH.drl": {
-      "export_sha256": "4b368ead75fd951a2290d06fde2b50956779cf9f8b608c10396eb87a8e0069e2"
+      "export_sha256": "e1770d292d0febaf55b9ee42973bb0c78a7a31cf686586591b552f97ec21d2c8"
     },
     "output/fabrication/FRC_Sensor_CAN-job.gbrjob": {
-      "export_sha256": "c5f6799ae7b48c196632c8fb06267cc5840ecfdc8c0f0d6f3250826f6c5a4ca4"
+      "export_sha256": "38c74ec10e49eb443e8b1a42658e68a45e4ca5de0739f35fa1e0fdbdb514971f"
     }
   },
-  "scope": "Final native ERC/DRC and strict routing pass on the saved board. Independent Gerber geometry/connectivity and manufacturing parity pass. Physical and factory process qualification remain pending."
+  "scope": "Final native ERC/DRC and strict routing pass on the saved board. Independent Gerber geometry/connectivity and manufacturing parity pass. Physical and factory process qualification remain pending.",
+  "minimum_via_drill_mm": 0.3,
+  "copper_um_by_layer": {
+    "F.Cu": 35,
+    "In1.Cu": 17.5,
+    "In2.Cu": 17.5,
+    "B.Cu": 35
+  },
+  "factory_cpl_gerber_pads_verified": 322
 }

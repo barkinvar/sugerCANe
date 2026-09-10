@@ -52,7 +52,7 @@ for side,polys in g.islands.items():
     names=lambda n:sorted(g.root_nets[g.root(g.offset[side]+n)])
     assert edge>=.3-2*g.ERROR,(side,edge)
     assert mounting>=3.3-2*g.ERROR,(side,mounting)
-    annular=[]
+    annular=[];annular_requirements=[]
     for drill in g.drills:
         found=g.trees[side].query(Point(drill.x,drill.y),predicate='intersects')
         if not len(found):
@@ -60,7 +60,13 @@ for side,polys in g.islands.items():
         island=int(found[0])
         width=Point(drill.x,drill.y).distance(polys[island].boundary)-drill.aperture.diameter/2
         annular.append(width)
-    assert min(annular)>=.15-2*g.ERROR,(side,min(annular))
+        native=next(d for d in manifest['drills'] if d['plated'] and abs(d['x_mm']-drill.x)<.000501 and abs(d['y_mm']-drill.y)<.000501)
+        # Only the reviewed 0.50/0.30 through vias use a 0.10 mm annulus.
+        # Component holes and larger vias retain the existing 0.15 mm screen.
+        small=(native['source']=='via' and abs(native.get('copper_diameter_mm',0)-.5)<1e-6 and abs(native['diameter_mm']-.3)<1e-6)
+        limit=.10 if small else .15
+        assert width>=limit-2*g.ERROR,(side,drill.x,drill.y,width,limit)
+        annular_requirements.append(limit)
     report['copper'][side]=dict(minimum_other_net_clearance=distance,closest_nets=[names(i),names(j)],
                               minimum_board_edge_clearance=edge,minimum_mount_center_clearance=mounting,
                               minimum_plated_hole_annular_copper=min(annular))

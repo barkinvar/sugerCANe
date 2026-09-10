@@ -24,10 +24,16 @@ assert project==reference_project,'Unreviewed native project rule or configurati
 with tempfile.NamedTemporaryFile(suffix='.kicad_pcb') as f:
  f.write(baseline('hardware/FRC_Sensor_CAN.kicad_pcb'));f.flush();old=p.LoadBoard(f.name)
 new=p.LoadBoard(str(args.board))
+fabrication=CONTRACT['fabrication_options']
+small_vias=0
 for via in new.GetTracks():
  if isinstance(via,p.PCB_VIA):
-  assert p.ToMM(via.GetDrillValue())>=.2-1e-6
-  assert p.ToMM(via.GetWidth(p.F_Cu)-via.GetDrillValue())/2>=.15-1e-6,'Via annulus below 0.15 mm'
+  drill=p.ToMM(via.GetDrillValue());diameter=p.ToMM(via.GetWidth(p.F_Cu))
+  assert drill>=fabrication['minimum_via_drill_mm']-1e-6
+  small=abs(diameter-.5)<1e-6 and abs(drill-.3)<1e-6
+  small_vias+=small
+  limit=fabrication['small_via_annulus_mm'] if small else fabrication['other_via_minimum_annulus_mm']
+  assert (diameter-drill)/2>=limit-1e-6,('Via annulus below reviewed size-specific requirement',diameter,drill,limit)
 oldfp={f.GetReference():f for f in old.GetFootprints()};newfp={f.GetReference():f for f in new.GetFootprints()}
 assert set(oldfp)==set(newfp)==set(CONTRACT['placements'])
 changes=[]
@@ -99,11 +105,12 @@ for via in new.GetTracks():
   local_ground.append(dict(uuid=via.m_Uuid.AsString(),at_mm=list(p.ToMM(via.GetPosition())),pad_to_via_spacing_mm=distance,
    diameter_mm=p.ToMM(via.GetWidth(p.F_Cu)),drill_mm=p.ToMM(via.GetDrillValue()),through_via=True))
 assert local_ground,'Boost ground return lacks a local via in its bottom copper island and In2 plane'
+assert small_vias==fabrication['small_via_count'],'Reviewed small-via inventory changed'
 report=dict(result='PASS',variant=CONTRACT['variant'],baseline_commit=CONTRACT['baseline_commit'],
  baseline_size_mm=[52,74],size_mm=[WIDTH,HEIGHT],saved_area_mm2=52*74-WIDTH*HEIGHT,
  bounding_area_reduction_percent=100*(1-WIDTH*HEIGHT/(52*74)),bottom_references=sorted(BOTTOM_REFERENCES),
  placement_changes=changes,unchanged_electrical_sources={f:sha((R/f).read_bytes()) for f in unchanged},
- fabrication_rule_changes=fabrication_changes,minimum_via_annulus_mm=.15,
+ fabrication_rule_changes=fabrication_changes,fabrication_options=fabrication,minimum_via_annulus_mm=.1,
  project_sha256=sha(args.board.with_suffix('.kicad_pro').read_bytes()),
  preserved_critical_nets=sorted(set(transforms)-adjusted_nets),verified_critical_nets=sorted(transforms),
  preserved_critical_tracks_and_vias=len(old_routes)-adjusted_count,verified_critical_tracks_and_vias=len(new_routes),

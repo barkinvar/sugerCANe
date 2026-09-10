@@ -1,0 +1,482 @@
+{
+  "result": "PASS limited fabrication change and DC allowances",
+  "baseline_commit": "156d7dd",
+  "board_sha256": "52335939cc3cbd214a217ff922a3b8f835be10f9253df6fa804ce7f5edc1dd4f",
+  "via_drills_changed": 180,
+  "changed_via_uuids": [
+    "4ceca2a7-0a53-41e4-99b0-dbe635a2b403",
+    "660c188d-2702-486e-b5c0-4f3b7c617399",
+    "7b98c46b-39ad-4cc5-9f3a-2f48c1441435",
+    "dc4fa9a0-b7f0-421c-a6ae-8fa74dedab8c",
+    "17cd8850-e8d5-47d5-88c1-83cd4fe14722",
+    "3d98d333-24ae-45ce-8310-858cc66c2d66",
+    "6008ffc0-08d5-425f-83a1-061e9e895763",
+    "90a780ef-67df-4d30-8941-adb65d1d16b9",
+    "bcc47740-b09e-429a-a8dc-a4a51adf649a",
+    "155e0a64-9558-48d1-b7b2-20c232f62832",
+    "15f100d1-5dbd-48bd-aec1-dea22f99be59",
+    "3626227a-ed3d-4890-b60d-e84fbbc3d949",
+    "3c111a2a-b26e-4941-b4bc-a9b9a0b567b7",
+    "3d7785de-0d23-40cc-9c80-734e769dea06",
+    "5bf82645-0996-4693-9bc7-2b4eb9357007",
+    "69017341-9a59-4282-8944-0b34f39e80f0",
+    "6c067694-b924-43e6-a787-fa9564116b26",
+    "83e2d1ce-ffea-4911-8687-5f06bc97298c",
+    "8e7b0052-01cf-490c-8a8b-29f01e774c4a",
+    "9202b1c1-736a-47ef-a469-d1a5614fc21d",
+    "b10dd6d4-68db-4bc2-913c-677c5f888124",
+    "24cd6d4a-d529-4541-992c-ae0de45d395e",
+    "434bb720-b25f-4452-bf00-317632cf9f44",
+    "e119efc8-f820-4068-b5f4-ae74ce7ac6b1",
+    "041ded1d-6ebc-4a00-967b-5580b62c6a7d",
+    "0cad0af4-c3c4-4196-8707-2e8f9ffb9a60",
+    "13257482-6b96-48cf-bc14-79fbcf8d4afe",
+    "3af004aa-8cff-493d-825d-275c09f1c8e7",
+    "5af8961c-7f67-402a-903a-87b0f5a98023",
+    "a073f514-8907-41cb-a5a0-40df3dd6ca44",
+    "aa0148d6-ec4f-455c-9746-b676f84eb919",
+    "af4ebebf-d855-411a-a9f7-2106d9477a74",
+    "dd38e653-0757-466e-8cd6-cf6e7fa09c95",
+    "0c2c8188-126f-4b4f-8ad6-7730b8bdf380",
+    "1fd44374-7947-4c2a-bcca-e38f99a202b4",
+    "2ef2cdbb-bfb8-419e-9804-46a349309ff1",
+    "5e88463d-401a-4a6c-9eaf-a672aab59426",
+    "7861d5b8-b2c6-4b53-80f5-f9c25aeee28f",
+    "7d05834b-69ed-48c8-9715-cc51d866f4c0",
+    "a3f12451-0a03-42ec-9286-ead001154f82",
+    "aaa44709-ffc1-474f-ae7e-df3c0cbd65f7",
+    "e77f1c33-7624-4315-a49d-9334541408bd",
+    "f23a6960-2300-4923-ad1d-90393f12a464",
+    "1f9edfaf-fc49-49bc-9695-a6d87ad98810",
+    "310d527b-f106-4994-b892-51ee2e64e2d3",
+    "48bc3fd1-626f-4b6e-83ae-1ea255232756",
+    "50952f36-2c28-4919-8618-c4c0cbb55636",
+    "62bc125c-945f-42b0-a4fd-7e0c94c6d9fc",
+    "6ff963a5-8e2e-4e02-8e16-3de6877d2fe0",
+    "723f06a5-bd2f-4830-b5dd-7385d997b380",
+    "7f76fc56-96de-4969-b6aa-40bacfd6b733",
+    "9c1d4724-d12b-4065-a5b2-2537a964c3e5",
+    "b209164e-6e56-4993-bf1b-096e6897b07d",
+    "e13881c1-4189-419c-b483-5860d0350bc4",
+    "e9366a9c-d830-440b-876d-1b8a6437faa8",
+    "ebde20cb-ab86-430d-91c4-3e24b3b6bb4e",
+    "f441e623-9f1e-4dc4-a2f2-855ce9838a13",
+    "187328d4-c1fb-4f87-a3f3-7bee36035e84",
+    "68865dc1-1fef-4d57-ac2f-595889259176",
+    "a6b4c6f4-c2da-4c0d-8232-1ae809fcd246",
+    "c21d110d-c3a7-43e9-ae1d-6d239c3df424",
+    "dcfbfeed-b5c6-459a-bca4-0568776a288a",
+    "7ffad5dc-3d6f-415f-9e2d-1f318c46e7f0",
+    "a14bbca8-a3be-4733-89b7-84a092ec5ff8",
+    "cacc8a14-43b3-4d48-9ed7-cade33f975e9",
+    "ed4f095d-946b-4242-a0c5-830613d9323c",
+    "e225956b-0488-41ff-887d-9ca2fb97521a",
+    "158b8c1e-1a35-46d0-8ee5-b2251caf8332",
+    "08ee9503-cef1-44c1-b58a-aa9da71c39d6",
+    "3eaeef5a-4ef7-4ddb-b243-adfe71461b83",
+    "50bb7fd5-f9af-4c98-b806-c212c09d18a4",
+    "593b76f7-d80d-477c-90df-e698bb7d48ed",
+    "7a83f959-436b-4d99-80d7-62ea0eaf87b7",
+    "d507c77c-55d2-4d35-ada1-ac71df3fc43a",
+    "2ddd2f34-eddd-44e4-8efe-cee96e316250",
+    "2dfdaf72-ef3a-4a2f-ad82-c3b95637f178",
+    "50ba3515-f82a-4db0-aaa2-d3073f93b120",
+    "b1be8bd3-701b-441f-b828-e89cf9591a35",
+    "e3e9b627-d0be-4d3b-94bd-28315381ca2c",
+    "6cac8bca-d871-41d8-9d8e-c9facd49047d",
+    "b794790a-017f-4cd2-8318-9c7b6c85289c",
+    "40161272-dc78-4c3b-8428-cfc13a1a8a0a",
+    "74efd2b7-ca02-4870-a9d6-6a1e6985b792",
+    "81aadbc3-31dc-4dc7-bd9d-72d9fc234d06",
+    "f579a225-d695-47b1-b4e5-9443775869fe",
+    "4bd3873d-8f08-4306-98d8-d96839a19c09",
+    "894c1ed1-4105-41b3-8f1e-9440bccf21fb",
+    "a16dfc22-d0b9-496c-a5fc-ae284db2eba2",
+    "c976664a-cc40-4998-bb59-bcbf634ceb6c",
+    "5df4e847-3dd1-4bb1-98c0-4cc51d434edc",
+    "6fc3c877-0885-473c-ad60-91ddf7f33a9d",
+    "c3ccb5aa-4dcc-4687-a613-f8b94b51774d",
+    "dc33de48-5dd6-409e-b2cf-62aa3e6fa779",
+    "ee5f187e-3f58-40bc-870c-2d516f905d54",
+    "2784b330-813a-40bf-95cb-0e49f0df8aab",
+    "34686b29-78d5-4dd3-8df2-27b4d8c52849",
+    "cff0bd10-1902-4469-ad16-a51ccb308aef",
+    "034dbf29-10e3-40e8-b96d-e6d19ca5a080",
+    "739b9fda-0a10-41c1-8784-aee2c7fc0ff3",
+    "84957a5d-1631-4b53-848e-613474b289b9",
+    "87bbee9a-c881-47de-8b8c-bf8da1fbfbd0",
+    "ac827e6f-fc76-466d-b31a-3a2ae9cc7499",
+    "b1ef5475-d901-4911-a8af-9620affafca8",
+    "caa1bff0-7fe9-448d-bf9d-45e8f987fefa",
+    "e281ebf2-2b8a-47f2-9aa8-95d7105546ff",
+    "20ae1470-79a0-4a34-af6a-cdd8084ed2fb",
+    "5069d41b-7f47-4222-8f25-ef548610b075",
+    "7a2c5d32-4b12-4b07-9259-acf84c311519",
+    "a7697456-3021-4002-a50a-9b087d526cf2",
+    "ac186d8f-a3e1-47e6-9672-eb2a96869f26",
+    "e6fffd23-f0f6-4536-a4f3-05ecf60e0cec",
+    "ef42bf28-5b76-4bd5-b0d2-796fa09c823b",
+    "5b8edc33-df89-40b5-b6fb-4f67496e7c8b",
+    "69d66545-2f53-46db-9022-1c256a8afcaf",
+    "7b0be52f-2079-4dfc-a803-5522b4d58fb5",
+    "8da2e216-1bca-494f-b01c-efeb7b4e6fb7",
+    "a8db0b6b-82fe-490c-827e-d7d940ff7509",
+    "e0cfe732-34e4-40f3-bddd-a7bd2fc9d784",
+    "5e5ccb95-3968-4b7c-bfdd-eefe996c4512",
+    "143ff7d9-268a-43a0-88c9-6d0a7993579d",
+    "21259787-db53-4ddd-a775-4410bcb1b3a6",
+    "641240fa-5711-4431-ae31-7050dfc7aeb7",
+    "a78c0700-ed87-47db-a67c-3115ff407ae9",
+    "ad73ea57-17ad-4559-a62f-c51924e239e3",
+    "b6d3ea24-4cba-448f-9ca3-a1f70f00dba0",
+    "bdfdd3aa-d1ff-4923-8ec4-ecb394ddb8c9",
+    "d6a044f0-c835-4d9c-bbc9-faea193259ee",
+    "34b0b738-102a-4c85-93f4-807d2671d0a2",
+    "8abd6681-db29-4f04-b8e1-7109d742bdc6",
+    "526e3bec-1be2-4394-bec9-9bc659e3f58b",
+    "cebc0855-4232-4466-b6fc-574437ea3d4f",
+    "649fcae8-0c5c-4650-a634-ac7e4c4e7b58",
+    "dbed25a2-3d6c-4b0c-b5fc-f884a29b75f6",
+    "ff5e0a4b-845f-4d79-b79a-8fd99426a223",
+    "049991b0-c0df-4aa6-8f21-0dc63a9f71fd",
+    "1ad3bd62-800c-4b4f-9e3a-a0726d2510b9",
+    "3bfdebb7-6a57-4b1d-9a5b-6786193b8a1f",
+    "49390517-3c21-4821-9fc0-0360acd3a77b",
+    "5343b746-0aa0-416a-9058-592ae9eb2ce8",
+    "c74909c9-589c-4870-b0e5-a8a40cba977a",
+    "d9f5ef24-a75b-4e58-aa5e-ebfed211c092",
+    "1148b031-c26e-451d-b6e6-1726187479dc",
+    "2bbad559-cd0d-4900-9c81-e4bcd22ad713",
+    "3112447a-d35d-49fb-b155-dce807131d82",
+    "47c71e31-3bad-4920-9009-4783130c8adc",
+    "4e681c11-de02-4f03-8e1e-7c65a566d0cb",
+    "5cce7b68-dce8-45f4-ad8c-672756b99155",
+    "63c3ceb7-42c3-46a4-bfd2-047f59991cdd",
+    "b586d724-dfcf-4bf6-8c71-1e72115fdaa0",
+    "d243249f-2c38-40e7-935a-3e6c3183e083",
+    "2ffddbd6-624f-4ac1-aa1c-9c870185737f",
+    "46e1a08b-e0cf-40cb-b812-f020349c5917",
+    "f09f29a8-e72d-4c44-8178-0eb4d685cbd4",
+    "804cdd69-f764-4885-a722-57bace900628",
+    "0c054ebf-e7b3-4ef4-bae5-263fc01bf747",
+    "4f250339-6f5b-4301-b091-1bcefe8f2e41",
+    "5771eb87-ec8e-4b9e-91f4-407efe2cc06b",
+    "0eee66eb-9d2f-4a81-96c1-906d1f4097d9",
+    "ab8d5973-3e28-496a-86ee-c3c8979dd2f6",
+    "8b5c727a-ced2-4d30-92b2-6ff260dfebaf",
+    "ebee232a-1780-4cb4-8bc4-e6e79d3c8b13",
+    "06eafa25-1c21-44f2-99b4-89d67f2cd947",
+    "0c8596f5-b73f-4c3e-a5b7-0b0b24157663",
+    "6cd3d16c-9be4-4421-9364-49aeb086c8af",
+    "07e5df52-a5bb-4d19-a1c2-9d24d4d96c59",
+    "20426cd6-4a7b-4cf8-b1bb-24b907a3fd77",
+    "727a5731-37b8-43e2-8f94-9bdf74272977",
+    "053a0c28-f68d-4bd0-94b5-7063973c8e9d",
+    "2104ff81-871a-4628-bd02-cc639b6d2071",
+    "4d96e461-7366-4fb2-aa36-5c124d8fd746",
+    "4946a926-449e-4fc5-84c4-cef685b35343",
+    "8a7a341c-da64-4af5-b0ca-6bdfb0de29d0",
+    "c0fc3ec3-b69a-40e6-a8bb-946f8eaaa63e",
+    "ca37ee4e-c200-4ec0-aace-24c6958ee210",
+    "135fdcbd-2fd9-4ad4-b093-6ec2d5254e97",
+    "bf774ba8-8bbc-4ce0-a82b-920445001286",
+    "03a70549-96b7-4161-84a5-07b00397beb4",
+    "f39523c4-978e-43ac-9f14-a268372d1a69",
+    "342aa690-436b-486d-ac00-c029cab917fb",
+    "9b35da6e-82d7-400a-90ac-e8693721ef94"
+  ],
+  "minimum_via_drill_mm": 0.3,
+  "small_via_annulus_mm": 0.1,
+  "unchanged": "All footprints, pad sizes/nets, component positions/rotations, trace coordinates/widths, via centers/land diameters, copper fills, keepouts, mask/paste and silkscreen",
+  "copper_um_by_layer": {
+    "F.Cu": 35.0,
+    "In1.Cu": 17.5,
+    "In2.Cu": 17.5,
+    "B.Cu": 35.0
+  },
+  "dc_comparison": {
+    "previous_1oz_all_layers": {
+      "method": "Native routed-track resistor network with geometric pad/via/track contacts; nodal DC solve",
+      "trace_temperature_C": 85,
+      "copper_um_by_layer": {
+        "F.Cu": 35.0,
+        "In1.Cu": 35.0,
+        "In2.Cu": 35.0,
+        "B.Cu": 35.0
+      },
+      "via_plating_um": 18.0,
+      "copper_center_depths_mm": {
+        "F.Cu": 0.0175,
+        "In1.Cu": 0.2525,
+        "In2.Cu": 1.3275000000000001,
+        "B.Cu": 1.5625
+      },
+      "boost_input_A": 1.3,
+      "other_5V_sensor_A": 0.51,
+      "logic_A": 0.13,
+      "RGB_buffer_A": 0.02,
+      "buck_to_boost_drop_V": 0.04418372999230221,
+      "boost_to_efuse_drop_V": 0.006796099598614726,
+      "total_boost_path_drop_V": 0.04418372999230221,
+      "revised_PCB_allowance_V": 0.12,
+      "sensor_branch_drop_V_at_300mA": {
+        "SENSOR_5V": {
+          "1": 0.003827878781784522,
+          "2": 0.008375200737928537,
+          "3": 0.012922522694072541
+        },
+        "SENSOR_12V": {
+          "1": 0.01117857625421804,
+          "2": 0.007123474312493525,
+          "3": 0.0024346487907902364
+        }
+      },
+      "sensor_branch_allowance_V": 0.06,
+      "selector_to_connector_drop_V_at_300mA": {
+        "1": 0.0012347509940720295,
+        "2": 0.0011963286185847426,
+        "3": 0.0011592244282205718
+      },
+      "full_sensor_copper_drop_V_at_300mA": {
+        "SENSOR_5V": {
+          "1": 0.005062629775856552,
+          "2": 0.00957152935651328,
+          "3": 0.014081747122293113
+        },
+        "SENSOR_12V": {
+          "1": 0.012413327248290069,
+          "2": 0.008319802931078268,
+          "3": 0.0035938732190108082
+        }
+      },
+      "input_feed": {
+        "screen_current_A": 2.0,
+        "branch_drop_V": {
+          "VIN_RAW": 0.0021510774691585856,
+          "VIN_FUSED": 0.05049388432203516,
+          "VIN_PROT": 0.05976002632063775
+        },
+        "total_drop_V": 0.1124049881118315,
+        "resistance_ohm": 0.05620249405591575,
+        "analytical_normal_input_at_6V_A": 1.7259711902877457,
+        "drop_at_analytical_normal_input_V": 0.09700388556282886,
+        "full_entry_resistance_planning_budget_ohm": 0.276,
+        "budget_remaining_for_excluded_items_ohm": 0.21979750594408426,
+        "scope": "Copper-only partition of the existing entry-resistance assumption, not verification of that full budget. Excludes fuse, MOSFET, contacts, cables and ground return. 2 A is a DC screening point, not a thermal/current rating or maximum fault current."
+      },
+      "results": {
+        "V5_INTERNAL": {
+          "('L1', '2')": 0.044183729992301884,
+          "('L2', '1')": -3.2522639116696955e-16,
+          "('U4', '1')": 0.024511290518400126,
+          "('U2', '1')": 0.016713345379700793,
+          "('U10', '5')": 0.006910431348639353,
+          "('D10', '2')": 0.006807426619491801
+        },
+        "BOOST_12V": {
+          "('D4', '1')": -0.0,
+          "('U9', '4')": -0.006796099598614726
+        },
+        "SENSOR_5V": {
+          "1": {
+            "('U4', '6')": -1.574576674675586e-19,
+            "('JP101', '1')": -0.003827878781784522
+          },
+          "2": {
+            "('U4', '6')": -3.100334212325342e-20,
+            "('JP201', '1')": -0.008375200737928537
+          },
+          "3": {
+            "('U4', '6')": 8.22283252525038e-20,
+            "('JP301', '1')": -0.012922522694072541
+          }
+        },
+        "SENSOR_12V": {
+          "1": {
+            "('U9', '5')": -6.670071378263032e-19,
+            "('JP101', '3')": -0.01117857625421804
+          },
+          "2": {
+            "('U9', '5')": -3.50922617382704e-19,
+            "('JP201', '3')": -0.007123474312493525
+          },
+          "3": {
+            "('U9', '5')": 6.102000542120197e-20,
+            "('JP301', '3')": -0.0024346487907902364
+          }
+        },
+        "VIN_RAW": {
+          "('J1', '1')": -6.643152790807083e-20,
+          "('F1', '1')": -0.0021510774691585856
+        },
+        "VIN_FUSED": {
+          "('F1', '2')": -1.729050186628931e-16,
+          "('Q1', '5')": -0.05049388432203516
+        },
+        "VIN_PROT": {
+          "('Q1', '1')": -3.036994260299762e-17,
+          "('U1', '3')": -0.05976002632063775
+        },
+        "VPORT1": {
+          "('JP101', '2')": 0.0,
+          "('J4', '1')": -0.0012347509940720295
+        },
+        "VPORT2": {
+          "('JP201', '2')": 1.0025490230854401e-19,
+          "('J5', '1')": -0.0011963286185847426
+        },
+        "VPORT3": {
+          "('JP301', '2')": 3.814169395349735e-20,
+          "('J6', '1')": -0.0011592244282205718
+        }
+      },
+      "geometry_sha256": "de75782ba41c4018c26f9e809f91df90395e42c82821682399d4753a805ce1e5",
+      "scope": "Nominal etched dimensions, ideal pads/via annuli and finite transverse links between overlapping track centerlines. No current-crowding or temperature solution, ground return, connector contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json."
+    },
+    "current_1oz_outer_half_oz_inner": {
+      "method": "Native routed-track resistor network with geometric pad/via/track contacts; nodal DC solve",
+      "trace_temperature_C": 85,
+      "copper_um_by_layer": {
+        "F.Cu": 35.0,
+        "In1.Cu": 17.5,
+        "In2.Cu": 17.5,
+        "B.Cu": 35.0
+      },
+      "via_plating_um": 18.0,
+      "copper_center_depths_mm": {
+        "F.Cu": 0.0175,
+        "In1.Cu": 0.24375000000000002,
+        "In2.Cu": 1.33625,
+        "B.Cu": 1.5625
+      },
+      "boost_input_A": 1.3,
+      "other_5V_sensor_A": 0.51,
+      "logic_A": 0.13,
+      "RGB_buffer_A": 0.02,
+      "buck_to_boost_drop_V": 0.05215282344870187,
+      "boost_to_efuse_drop_V": 0.0076408251203379084,
+      "total_boost_path_drop_V": 0.05215282344870187,
+      "revised_PCB_allowance_V": 0.12,
+      "sensor_branch_drop_V_at_300mA": {
+        "SENSOR_5V": {
+          "1": 0.0038278787817845454,
+          "2": 0.012922522694072607,
+          "3": 0.02201716660636063
+        },
+        "SENSOR_12V": {
+          "1": 0.015867401775921823,
+          "2": 0.011812299834197194,
+          "3": 0.002434648790790248
+        }
+      },
+      "sensor_branch_allowance_V": 0.06,
+      "selector_to_connector_drop_V_at_300mA": {
+        "1": 0.0012347509940720295,
+        "2": 0.0011963286185847426,
+        "3": 0.0011592244282205718
+      },
+      "full_sensor_copper_drop_V_at_300mA": {
+        "SENSOR_5V": {
+          "1": 0.005062629775856575,
+          "2": 0.01411885131265735,
+          "3": 0.0231763910345812
+        },
+        "SENSOR_12V": {
+          "1": 0.017102152769993852,
+          "2": 0.013008628452781936,
+          "3": 0.00359387321901082
+        }
+      },
+      "input_feed": {
+        "screen_current_A": 2.0,
+        "branch_drop_V": {
+          "VIN_RAW": 0.0021510774691585856,
+          "VIN_FUSED": 0.0744421630917509,
+          "VIN_PROT": 0.05976002632063824
+        },
+        "total_drop_V": 0.13635326688154772,
+        "resistance_ohm": 0.06817663344077386,
+        "analytical_normal_input_at_6V_A": 1.7259711902877457,
+        "drop_at_analytical_normal_input_V": 0.1176709051695838,
+        "full_entry_resistance_planning_budget_ohm": 0.276,
+        "budget_remaining_for_excluded_items_ohm": 0.20782336655922617,
+        "scope": "Copper-only partition of the existing entry-resistance assumption, not verification of that full budget. Excludes fuse, MOSFET, contacts, cables and ground return. 2 A is a DC screening point, not a thermal/current rating or maximum fault current."
+      },
+      "results": {
+        "V5_INTERNAL": {
+          "('L1', '2')": 0.052152823448701605,
+          "('L2', '1')": -2.6401646855682097e-16,
+          "('U4', '1')": 0.03248038397479985,
+          "('U2', '1')": 0.021921710763649002,
+          "('U10', '5')": 0.0066799493977183644,
+          "('D10', '2')": 0.006577112121350888
+        },
+        "BOOST_12V": {
+          "('D4', '1')": -0.0,
+          "('U9', '4')": -0.0076408251203379084
+        },
+        "SENSOR_5V": {
+          "1": {
+            "('U4', '6')": -1.6322992180873292e-19,
+            "('JP101', '1')": -0.0038278787817845454
+          },
+          "2": {
+            "('U4', '6')": -2.3735299837424604e-19,
+            "('JP201', '1')": -0.012922522694072607
+          },
+          "3": {
+            "('U4', '6')": -1.2412133099848882e-19,
+            "('JP301', '1')": -0.02201716660636063
+          }
+        },
+        "SENSOR_12V": {
+          "1": {
+            "('U9', '5')": -8.198856669119678e-19,
+            "('JP101', '3')": -0.015867401775921823
+          },
+          "2": {
+            "('U9', '5')": 1.3456593702395124e-19,
+            "('JP201', '3')": -0.011812299834197194
+          },
+          "3": {
+            "('U9', '5')": -1.3772090845884243e-19,
+            "('JP301', '3')": -0.002434648790790248
+          }
+        },
+        "VIN_RAW": {
+          "('J1', '1')": -6.643152790807083e-20,
+          "('F1', '1')": -0.0021510774691585856
+        },
+        "VIN_FUSED": {
+          "('F1', '2')": 2.0502946377878877e-15,
+          "('Q1', '5')": -0.0744421630917509
+        },
+        "VIN_PROT": {
+          "('Q1', '1')": -1.9797792814945986e-16,
+          "('U1', '3')": -0.05976002632063824
+        },
+        "VPORT1": {
+          "('JP101', '2')": 0.0,
+          "('J4', '1')": -0.0012347509940720295
+        },
+        "VPORT2": {
+          "('JP201', '2')": 1.0025490230854401e-19,
+          "('J5', '1')": -0.0011963286185847426
+        },
+        "VPORT3": {
+          "('JP301', '2')": 3.814169395349735e-20,
+          "('J6', '1')": -0.0011592244282205718
+        }
+      },
+      "geometry_sha256": "de75782ba41c4018c26f9e809f91df90395e42c82821682399d4753a805ce1e5",
+      "scope": "Nominal etched dimensions, ideal pads/via annuli and finite transverse links between overlapping track centerlines. No current-crowding or temperature solution, ground return, connector contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json."
+    }
+  },
+  "manufacturer_basis": "https://jlcpcb.com/capabilities/Capabilities?type=1",
+  "limitations": "0.10 mm is nominal via annulus, not remaining copper after drill/registration tolerance. DC is evaluated at 85 C with 18 um average via plating; it excludes plane/ground-return resistance, current crowding and temperature rise. Half-ounce inner copper reduces lateral heat spreading. Factory DFM and physical qualification remain required.",
+  "input_hashes": {
+    "scripts/check_fabrication_options.py": "07571dd89252e4f377bc79ed1eae84a85bdb833dc52bf85c3b56ba66e4d21432",
+    "scripts/check_order_readiness.py": "458519bc3f0d80f6321682e8f92ed5cbcf0f275d4f17d01d219a86292cb98f5c",
+    "hardware/design/layout_contract.json": "42a4ce5d47ab739441a818e25943edeb71dac3a95eae13c07d1566f7a452a232"
+  }
+}

@@ -1839,16 +1839,25 @@
     "hardware/regulated_12v.kicad_sch": "bbec6fc9fb0604f0b3146ce5eb492a9980056257876507a704de8685270d9f36",
     "hardware/sensor_power.kicad_sch": "f7808b7fc9a76a190dd9a59c856ae6c4f504e92caea8deb139067b307e0af3ce"
   },
-  "fabrication_rule_changes": {
-    "min_through_hole_diameter": {
-      "baseline_mm": 0.3,
-      "value_mm": 0.2,
-      "reason": "Use 0.50 mm copper / 0.20 mm drilled through vias for dense low-current routing, retaining at least 0.15 mm annulus. Copper clearances, hole separation, power copper and critical converter/clock routes remain independently checked.",
-      "manufacturer_capability": "https://jlcpcb.com/capabilities/Capabilities"
-    }
+  "fabrication_rule_changes": {},
+  "fabrication_options": {
+    "baseline_commit": "156d7dd",
+    "minimum_via_drill_mm": 0.3,
+    "small_via_diameter_mm": 0.5,
+    "small_via_annulus_mm": 0.1,
+    "other_via_minimum_annulus_mm": 0.15,
+    "small_via_count": 180,
+    "copper_um_by_layer": {
+      "F.Cu": 35,
+      "In1.Cu": 17.5,
+      "In2.Cu": 17.5,
+      "B.Cu": 35
+    },
+    "reason": "JLC standard 0.30 mm drills with existing 0.50 mm via lands. Nominal 0.10 mm via annulus meets published multilayer fabrication guidance. No footprint, track, via-center or clearance change. Inner copper assessed by layer-aware DC screen; outer copper retained at 1 oz. Manufacturing registration, actual copper and thermal qualification remain factory/first-board checks.",
+    "source": "https://jlcpcb.com/capabilities/Capabilities?type=1"
   },
-  "minimum_via_annulus_mm": 0.15,
-  "project_sha256": "75af8bc8025b51a9eb8aadb84dd345280d4d4dac023baa555db7fbec5a66cff4",
+  "minimum_via_annulus_mm": 0.1,
+  "project_sha256": "bc605bc1de9321ebce59bd9cd42a013de901d69073d204e90783d38577749f91",
   "preserved_critical_nets": [
     "BOOST_COMP",
     "BOOST_COMP_RC",
@@ -2059,12 +2068,12 @@
         ],
         "pad_to_via_spacing_mm": 3.0738056623670946,
         "diameter_mm": 0.5,
-        "drill_mm": 0.2,
+        "drill_mm": 0.3,
         "through_via": true
       }
     ],
     "scope": "Same filled bottom-copper polygon and adjacent In2 GND plane; nominal geometry only, not return-path impedance qualification."
   },
-  "board_sha256": "ab3a65634b4c6ac7060d4e9328e048e01889160c2ea81d1b36b56be4f89f1d6b",
+  "board_sha256": "52335939cc3cbd214a217ff922a3b8f835be10f9253df6fa804ce7f5edc1dd4f",
   "limitations": "Checks nominal layout/electrical identity, rigidly transformed critical copper and exact reviewed local repairs. Supply interconnects are rerouted and independently DC-screened. Native DRC, routing style, exported copper checks and physical qualification remain separate."
 }

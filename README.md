@@ -86,6 +86,8 @@ Earlier expanded project copies and unused experiments were removed from the cur
 
 This branch contains the [compact **44 × 48 mm layout**](current/docs/COMPACT_BOARD.md), using **45.1% less area** than the original 52 × 74 mm board. All 140 fitted parts and electrical functions remain. The mounting holes, connectors and LED move to fit the smaller outline; use the updated mechanical drawings. See [routing checks](current/reports/routing_rules.json) and [all four copper layers](current/output/assembly/gerber_copper_review.pdf). [Size comparison](current/output/review/size_comparison.png).
 
+Ordering update: **0.30 mm minimum via holes, 1 oz outer / 0.5 oz inner copper**, and corrected CPL coordinates matching the Gerber origin. All component positions and trace geometry are retained. Re-upload the matching Gerber ZIP and CPL together. [Checks and order settings](current/docs/FABRICATION_OPTIONS.md).
+
 The input connector-to-fuse and fuse-to-MOSFET routes are now **0.7 mm wide** (14 segments widened from 0.5 mm). The protected input and converter paths retain their reviewed clearance necks. Width, clearance, connectivity and ground-pour checks cover **all four layers**; see the [power-path review](current/docs/ORDER_READINESS.md).
 
 | Copper layer | Role | PNG | SVG |

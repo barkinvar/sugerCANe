@@ -36,7 +36,8 @@ for track in board.GetTracks():
     if isinstance(track, p.PCB_VIA):
         pos = track.GetPosition()
         drills.append(dict(x_mm=p.ToMM(pos.x), y_mm=-p.ToMM(pos.y),
-                           diameter_mm=p.ToMM(track.GetDrillValue()), plated=True, source='via'))
+                           diameter_mm=p.ToMM(track.GetDrillValue()), copper_diameter_mm=p.ToMM(track.GetWidth(p.F_Cu)),
+                           plated=True, source='via'))
 out = dict(components=components, drills=drills,
            models_resolved=sum(bool(c['models']) for c in components))
 dest = ROOT / 'reports/manufacturing'

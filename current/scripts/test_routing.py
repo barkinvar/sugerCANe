@@ -182,13 +182,13 @@ class CopperNetwork(unittest.TestCase):
     rho=1.724e-5*(1+.00393*65)
     depths={'F.Cu':.0175,'In2.Cu':1.3275,'B.Cu':1.5625}
 
-    def drop(self, tracks, start, end, vias=(), reference=None):
+    def drop(self, tracks, start, end, vias=(), reference=None, thicknesses=None, via_plating_mm=.020):
         pads=[dict(ref=ref,number='1',contacts=[point])
               for ref,point in [('SRC',start),('LOAD',end)]]
         if reference is not None:pads.append(dict(ref='REF',number='1',contacts=[reference]))
         geo=dict(tracks=tracks,vias=list(vias),pads=pads,
                  layer_names={'0':'F.Cu','2':'B.Cu','6':'In2.Cu'})
-        v=dc_solver(geo,self.depths)(('SRC','1'),{('LOAD','1'):1},
+        v=dc_solver(geo,self.depths,thicknesses,via_plating_mm)(('SRC','1'),{('LOAD','1'):1},
                                    ('REF','1') if reference is not None else None)
         return v[str(('SRC','1'))]-v[str(('LOAD','1'))]
 
@@ -201,6 +201,19 @@ class CopperNetwork(unittest.TestCase):
         self.assertAlmostEqual(self.drop([self.line((0,0),(10,0))],(0,0,0),(10,0,0)),expected)
         self.assertAlmostEqual(self.drop([self.line((0,0),(4,0)),self.line((4,0),(10,0))],
                                          (0,0,0),(10,0,0)),expected)
+
+    def test_half_ounce_inner_layer_doubles_trace_resistance(self):
+        thicknesses={'F.Cu':.035,'In2.Cu':.0175,'B.Cu':.035}
+        expected=self.rho*10/(.25*.0175)
+        self.assertAlmostEqual(self.drop([self.line((0,0),(10,0),6)],(0,0,6),(10,0,6),thicknesses=thicknesses),expected)
+        self.assertAlmostEqual(self.drop([self.line((0,0),(10,0),0)],(0,0,0),(10,0,0),thicknesses=thicknesses),expected/2)
+
+    def test_mixed_layers_and_actual_via_plating(self):
+        via=dict(at=(5,0),width=.5,drill=.3,layers=[0,2,6])
+        thicknesses={'F.Cu':.035,'In2.Cu':.0175,'B.Cu':.035}
+        traces=[self.line((0,0),(5,0)),self.line((5,0),(5,5),6)]
+        expected=self.rho*5/(.25*.035)+self.rho*5/(.25*.0175)+self.rho*(1.3275-.0175)/(math.pi*.3*.018)
+        self.assertAlmostEqual(self.drop(traces,(0,0,0),(5,5,6),[via],thicknesses=thicknesses,via_plating_mm=.018),expected)
 
     def test_overlapping_end_caps_conduct(self):
         self.assertAlmostEqual(self.drop([self.line((0,0),(4.95,0)),self.line((5.05,0),(10,0))],

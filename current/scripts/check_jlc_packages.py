@@ -59,7 +59,7 @@ for ref, row in expected.items():
     pos = placements[ref]
     assert pos['Layer'] == side
     assert abs(float(pos['Mid X'].removesuffix('mm'))-x) < 1e-5
-    assert abs(float(pos['Mid Y'].removesuffix('mm'))-(48-y)) < 1e-5
+    assert abs(float(pos['Mid Y'].removesuffix('mm'))-(-y)) < 1e-5
     assert abs((float(pos['Rotation'])-angle+180) % 360-180) < 1e-5
     assert abs(angle/90-round(angle/90)) < 1e-6
     definition = review['reviewed_footprints'][package]

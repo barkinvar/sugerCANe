@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "local_links_checked": 277,
+  "local_links_checked": 289,
   "broken_links": [],
   "pdfs": [
     {
@@ -10,7 +10,7 @@
     },
     {
       "file": "output/documentation/ORDER_GUIDE.pdf",
-      "pages": 3,
+      "pages": 4,
       "text_within_page": true
     },
     {

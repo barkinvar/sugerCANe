@@ -57,7 +57,7 @@ for x in (0,WIDTH):
  c.line(*xy(x,0),*xy(x,-9))
 c.line(*xy(0,-7),*xy(WIDTH,-7));c.setFont('Helvetica',9);c.drawCentredString(*xy(WIDTH/2,-9),f'{WIDTH:.2f}')
 c.line(*xy(WIDTH,0),*xy(61,0));c.line(*xy(WIDTH,HEIGHT),*xy(61,HEIGHT));c.line(*xy(59,0),*xy(59,HEIGHT));c.drawString(*xy(61,29),f'{HEIGHT:.2f}')
-lines=[f'PCB: {WIDTH} x {HEIGHT} x 1.6 mm; corner radius {RADIUS} mm. Four layers, 1 oz copper.',
+lines=[f'PCB: {WIDTH} x {HEIGHT} x 1.6 mm; radius {RADIUS} mm. 4 layers: 1 oz outer / 0.5 oz inner.',
  'Mounts: '+', '.join(f'H{i+1} ({x:g}, {y:g})' for i,(x,y) in enumerate(CONTRACT['mounting_holes_top_left_mm']))+'; diameter 3.2 NPTH.',
  'Keep hardware contact diameter <=6.4 mm; use insulating supports as needed.',
  f'Conservative terminal envelope: {WIDTH} x {HEIGHT+8.1:.1f} mm, before wires/button clearance.',

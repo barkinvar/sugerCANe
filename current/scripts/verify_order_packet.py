@@ -2,9 +2,10 @@
 from collections import Counter
 from pathlib import Path
 import csv,hashlib,io,json,tempfile,zipfile
-from gerbonara import GerberFile
+from gerbonara import GerberFile, ExcellonFile
 from gerbonara.graphic_objects import Flash
 from layout_contract import HEIGHT, BOTTOM_REFERENCES
+from factory_coordinates import check_cpl
 
 R=Path(__file__).resolve().parents[1]
 packet=R/'order/sugarCANe_RevH_JLC_REVIEW_ONLY.zip'
@@ -45,9 +46,11 @@ with zipfile.ZipFile(packet) as z:
         n=native[row['Designator']]
         assert row['Layer'].lower()==n['side']==('bottom' if row['Designator'] in BOTTOM_REFERENCES else 'top')
         assert abs(float(row['Mid X'].removesuffix('mm'))-n['x_mm'])<1e-5
-        assert abs(float(row['Mid Y'].removesuffix('mm'))-(HEIGHT+n['y_mm']))<1e-5
+        assert abs(float(row['Mid Y'].removesuffix('mm'))-n['y_mm'])<1e-5
         assert abs((float(row['Rotation'])-n['rotation_deg']+180)%360-180)<1e-5
     gerber_data=z.read('order/sugarCANe_RevH_Gerbers_REVIEW_ONLY.zip')
+    for name in ('order/PCB_REMARK.txt','order/ASSEMBLY_REMARK.txt'):
+        assert len(z.read(name).decode().strip())<=500
     with zipfile.ZipFile(io.BytesIO(gerber_data)) as g:
         same=[]
         for name in g.namelist():
@@ -59,11 +62,16 @@ with zipfile.ZipFile(packet) as z:
         assert len(same)==13
         with tempfile.TemporaryDirectory(prefix='sugarcane-order-') as folder:
             d=Path(folder)
-            for name in ['FRC_Sensor_CAN-F_Paste.gtp','FRC_Sensor_CAN-F_Cu.gtl','FRC_Sensor_CAN-B_Paste.gbp']:
+            for name in ['FRC_Sensor_CAN-F_Paste.gtp','FRC_Sensor_CAN-F_Cu.gtl','FRC_Sensor_CAN-B_Paste.gbp','FRC_Sensor_CAN-B_Cu.gbl','FRC_Sensor_CAN-PTH.drl']:
                 (d/name).write_bytes(g.read(name))
             paste=GerberFile.open(d/'FRC_Sensor_CAN-F_Paste.gtp')
             copper=GerberFile.open(d/'FRC_Sensor_CAN-F_Cu.gtl')
             bottom=GerberFile.open(d/'FRC_Sensor_CAN-B_Paste.gbp')
+            bottom_copper=GerberFile.open(d/'FRC_Sensor_CAN-B_Cu.gbl')
+            gerber_pads=[(side,*o.attrs['.P'][:2],o.x,o.y) for side,layer in [('top',copper),('bottom',bottom_copper)] for o in layer.objects if isinstance(o,Flash) and '.P' in o.attrs]
+            assert check_cpl(cpl,list(native.values()),gerber_pads)==322
+            drills=ExcellonFile.open(d/'FRC_Sensor_CAN-PTH.drl')
+            assert min(o.aperture.diameter for o in drills.objects)>=.3
             assert len(paste.objects)+len(bottom.objects)==325
             assert {o.attrs['.C'][0] for o in bottom.objects}==BOTTOM_REFERENCES
             assert not [o for o in paste.objects if o.attrs.get('.C')==('U5',)]
@@ -81,6 +89,7 @@ report=dict(result='PASS assembly-package integrity; manufacturing release remai
     u5_bom_cpl_and_paste_omitted=True,u5_copper_pads_preserved=32,u9_paste_apertures_preserved=12,
     other_fabrication_files_byte_identical=13,all_package_hashes_verified=True,
     shopping_imports_verified=True,packet_sha256=sha(packet.read_bytes()),
+    factory_cpl_gerber_pads_verified=322,minimum_drill_mm=.3,
     clock_capacitors=dict(references=['C25','C26'],value='20pF',jlc_part='C105173'),
     upstream_buck='LMR51430XDDCR with SRP7028A-8R2M',
     board_sha256=sha((R/'hardware/FRC_Sensor_CAN.kicad_pcb').read_bytes()),

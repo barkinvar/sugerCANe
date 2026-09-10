@@ -14,7 +14,7 @@
       ],
       "minimum_board_edge_clearance": 0.30049999999999955,
       "minimum_mount_center_clearance": 3.302912399188364,
-      "minimum_plated_hole_annular_copper": 0.1490589805637563
+      "minimum_plated_hole_annular_copper": 0.09905898056375631
     },
     "bottom": {
       "minimum_other_net_clearance": 0.14999999999999858,
@@ -28,10 +28,10 @@
       ],
       "minimum_board_edge_clearance": 0.2999999999999998,
       "minimum_mount_center_clearance": 3.302912399188364,
-      "minimum_plated_hole_annular_copper": 0.1490589805637563
+      "minimum_plated_hole_annular_copper": 0.09905898056375631
     },
     "inner_2": {
-      "minimum_other_net_clearance": 0.2004984131073959,
+      "minimum_other_net_clearance": 0.2004984131073948,
       "closest_nets": [
         [
           "V5_INTERNAL"
@@ -42,7 +42,7 @@
       ],
       "minimum_board_edge_clearance": 0.30049999999999955,
       "minimum_mount_center_clearance": 3.302912355064711,
-      "minimum_plated_hole_annular_copper": 0.1490589805637563
+      "minimum_plated_hole_annular_copper": 0.09905898056375631
     },
     "inner_1": {
       "minimum_other_net_clearance": 0.20049854451051857,
@@ -56,7 +56,7 @@
       ],
       "minimum_board_edge_clearance": 0.30049999999999955,
       "minimum_mount_center_clearance": 3.3029122953196124,
-      "minimum_plated_hole_annular_copper": 0.1490589805637563
+      "minimum_plated_hole_annular_copper": 0.09905898056375631
     }
   },
   "mask": {
@@ -128,29 +128,29 @@
     }
   },
   "minimum_hole_to_hole_web": 0.40000000000000285,
-  "minimum_hole_edge_distance": 0.5499999999999986,
+  "minimum_hole_edge_distance": 0.49999999999999856,
   "sha256": {
-    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "7ed0f94fec186b684ed48d12e286fe3cbc1612f589f3f651432eedfb30e01956",
-    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "1bab0ec8d4e92822571b23fe3c40fec9ef8a1d70452b1caf9b68feddc000cc0b",
-    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "d18e49365176561c6ffd6ee86a6d9b1ece83fd1ac00c10e6e8a8e1539c00a697",
-    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "b71740dcff14e6bde17b3ef289e4828bed60b77d73274d508269f463e3939034",
-    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "775dca44d713ff0c15bab27a98a55d50790501347345223f97c9a2b43d83c482",
-    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "ee009bf6226a573033624ec5557a433ebb672c4aee18cb93a13312a5c85796fc",
-    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "64e8cc5778db769b926ee60562c6c090b97cf23592f40255283c18ba8743f4f7",
-    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "935cc2d6e7c573ad46e431ced63641e639d379215bcf1a1fdbfac6aafaaf9676",
-    "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": "fb6edde0b093ae692a9e40af692b2cce37dff0a3ea79507ed00e10c879ce1cb2",
-    "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": "def973f8b02852c3eb0368369b7c14657be03414a6eb737aa49d6b94b4db77af",
-    "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": "92a718c8ce9d8f96948657db9a10a63d7b4c85a1a9684f2cc1daff521651a9c4",
-    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "d934392390c59404b2466a0273f482d0a0cca5bf782c604f62aa3a351d95205c",
-    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "4b368ead75fd951a2290d06fde2b50956779cf9f8b608c10396eb87a8e0069e2"
+    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "f39505968ecbf17f098c71198c890e024a9813cfd16c69ffcbb04cc632f4b41c",
+    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "b67deed8ce25194c6d335ecec314020e9ef29454d78bbe293a6b2afc22bdf0d5",
+    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "7f057cf860e92d710d01ebcf8aa99610b7307e91e30edeb3e60dcbe3347133fa",
+    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "017b424d132e0544fe13c40aabc3fecf1895ef87d05d7d84f3980a3b5b1e8a56",
+    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "0a21f5e4e87b031e99162b0e6d52e6d878fda991c82f3512289839bd1ac18b31",
+    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "5e0215c7cfb090c921ffe6ccc1f80fd9623ca94d3dfa3e9644744985f8c099d2",
+    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "8d881c02ab66a405012ec6fb6e9367b83a6afe138b237859f0a747df277ea8a8",
+    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "3d99e8485768caa48d3f9ba2de28f485f6380acb25abaab675e20df8a939d08a",
+    "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": "18a240f84d2b6c42114e64c982f1e7c14b7ca5a0470683de9acd3e14ff29cd81",
+    "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": "c1a8e8c322cac057708b7511d1e4680ae785394b7bfb0362962474f661602c33",
+    "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": "73f40c17cac0e3cc5b312319174311b88d50ba9d4ee74fd5833c3073df34e17a",
+    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "bfa1e69ae971e48c5bc4b4b491e2a291d704c47a5f69e1bc882ca130b134c1eb",
+    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "e1770d292d0febaf55b9ee42973bb0c78a7a31cf686586591b552f97ec21d2c8"
   },
   "source_hashes": {
-    "scripts/verify_gerber_geometry.py": "a1bfaa1bdcc799bd509529181891004867e0dc42e100d96713682b12c224f435",
+    "scripts/verify_gerber_geometry.py": "d639de30844033ccbb94e6dda1a8e61c19b9cf637b8a2b5dcc09750aac9dac2f",
     "scripts/ground_geometry.py": "6b7384c2611082c4e13952ee9076c2ec9bd1d6dc0d5a9e0042dbc5280f144fe4",
     "scripts/verify_gerber_connectivity.py": "50e8f305e026592e3d60124fbc4eba14d61cbb4d01476ad1a30f08188c409d27",
     "scripts/board_outline.py": "46572ecc3a768143fa9f9c054cf618e8e3e602ed664f1a96745fcfa430096350",
     "scripts/layout_contract.py": "9598a57eebaece0e23c6472cbd3b3d61b3fe85ebb4e8065455d84972ea526596",
-    "hardware/design/layout_contract.json": "b26ecc942a35872b12e28b6e06028b8024cb26e8660d9aaca84eb89df2acf8b9"
+    "hardware/design/layout_contract.json": "42a4ce5d47ab739441a818e25943edeb71dac3a95eae13c07d1566f7a452a232"
   },
   "ground_scope": "Same-layer ground islands require 0.25 mm separation. A 0.24 mm erosion screen rejects necks splitting substantial ground areas (cores over 0.025 mm\u00b2); native zone minima are 0.30 mm on F.Cu, B.Cu and In1.Cu and 0.25 mm on In2.Cu; native ground pad connections require 0.25 mm. Sharp concave corners and intended thermal slots are not minimum-gap measurements. No current-crowding, ground-return impedance or fabrication-tolerance qualification.",
   "result": "PASS",

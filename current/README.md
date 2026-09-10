@@ -44,6 +44,8 @@ Change voltage jumpers only with power disconnected. A missing cap disconnects p
 
 The compact variant is **44 × 48 mm**, using **45.1% less area** than the original 52 × 74 mm board. It retains all 140 fitted parts and electrical functions, with 79 parts underneath. Mounting holes, connectors and the LED move to suit the smaller outline. See the [compact layout review](docs/COMPACT_BOARD.md), [routing checks](reports/routing_rules.json), [all four copper layers](output/assembly/gerber_copper_review.pdf) and [connector details](docs/CONNECTORS.md). [Size comparison](output/review/size_comparison.png).
 
+Ordering update: **0.30 mm minimum via holes, 1 oz outer / 0.5 oz inner copper**, and corrected CPL coordinates matching the Gerber origin. All component positions and trace geometry are retained. Re-upload the matching Gerber ZIP and CPL together. [Checks and order settings](docs/FABRICATION_OPTIONS.md).
+
 The input connector-to-fuse and fuse-to-MOSFET routes are now **0.7 mm wide** (14 segments widened from 0.5 mm). The protected input and converter paths retain their reviewed clearance necks. Width, clearance, connectivity and ground-pour checks cover **all four layers**; see the [power-path review](docs/ORDER_READINESS.md).
 
 | Copper layer | Role | PNG | SVG |

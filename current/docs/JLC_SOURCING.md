@@ -55,7 +55,7 @@ Do not infer a reflow recipe from an LED's solder-heat reliability test. This au
 
 With the user-fitted DigiKey MCU, ten-board parts are about **$27.08 per board before SMT attrition**, or **$27.96** with conservative JLC allowances. Two recommended spare MCUs add about $6.55 per batch, not per board. PCB, assembly, inspection, freight and taxes are additional. [Cost basis](COST_REDUCTION.md).
 
-Use Standard PCBA. The former **$132.81** setup/stencil/loading/fixture estimate was for single-sided assembly and does not apply to this compact board. Obtain a two-sided Standard PCBA quotation for 54 types. Confirm the panel/rails, 35 µm copper on every layer, reflow limits and U9 X-ray coverage before payment. [Review packet](../order/README.md).
+Use Standard PCBA. The former **$132.81** setup/stencil/loading/fixture estimate was for single-sided assembly and does not apply to this compact board. Obtain a two-sided Standard PCBA quotation for 54 types. Confirm the panel/rails, 35 µm outer / 17.5 µm inner copper, reflow limits and U9 X-ray coverage before payment. [Review packet](../order/README.md).
 
 ## Complete ten-board factory stock check
 

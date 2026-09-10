@@ -64,28 +64,36 @@ def copper_junctions(geo):
     return nodes,links,annuli
 
 
-def copper_depths(board_path):
-    """Copper-center depths from the saved stackup, in millimeters."""
+def copper_stack(board_path):
+    """Copper-center depths and thicknesses from the saved stack, in mm."""
     board=sexpdata.loads(Path(board_path).read_text())
     setup=next(v for v in board if isinstance(v,list) and str(v[0])=='setup')
     stack=next(v for v in setup if isinstance(v,list) and str(v[0])=='stackup')
-    depth=0.;result={}
+    depth=0.;result={};thicknesses={}
     for layer in stack[1:]:
      if str(layer[0])!='layer':continue
      fields={str(v[0]):v[1] for v in layer[2:] if isinstance(v,list)}
      if fields.get('type') not in ('copper','core','prepreg'):continue
      thickness=float(fields['thickness'])
      if fields['type']=='copper':
-      assert abs(thickness-.035)<1e-9, ('DC model requires 35 um on every copper layer',layer[1],thickness)
+      assert .017 <= thickness <= .071, ('Unsupported copper thickness',layer[1],thickness)
       result[str(layer[1])]=depth+thickness/2
+      thicknesses[str(layer[1])]=thickness
      depth+=thickness
     assert len(result)==4 and 1.5<depth<1.7,('Unexpected stackup',result,depth)
-    return result
+    return result,thicknesses
 
 
-def dc_solver(geo,depths):
+def copper_depths(board_path):
+    return copper_stack(board_path)[0]
+
+
+def dc_solver(geo,depths,thicknesses=None,via_plating_mm=.020):
     """Return a nodal DC solver for one net, with explicit copper contacts."""
     contact_nodes,contact_links,annuli=copper_junctions(geo)
+    if thicknesses is None:thicknesses={name:.035 for name in depths}
+    def thickness(layer):return thicknesses[geo['layer_names'][str(layer)]]
+    assert via_plating_mm > 0
     parent={};edges=[]
     def root(n):
      parent.setdefault(n,n)
@@ -106,7 +114,7 @@ def dc_solver(geo,depths):
     nodes=[n for n in parent if len(n)==3]
     rho=1.724e-5*(1+.00393*65) # ohm mm at 85C
     for a,b,length,width in contact_links:
-     if length>=.000001:edges.append((node(*a),node(*b),rho*length/(width*.035)))
+     if length>=.000001:edges.append((node(*a),node(*b),rho*length/(width*thickness(a[2]))))
     for t in geo['tracks']:
      a=np.array(t['start']);b=np.array(t['end']);length=np.linalg.norm(b-a);points=[]
      for n in nodes:
@@ -115,13 +123,13 @@ def dc_solver(geo,depths):
       if -.000001<=f<=1.000001 and np.linalg.norm(q-(a+f*(b-a)))<.000001:points.append((f,n))
      points.sort()
      for (f1,n1),(f2,n2) in zip(points,points[1:]):
-      if f2-f1>1e-10:edges.append((n1,n2,rho*length*(f2-f1)/(t['width']*.035)))
+      if f2-f1>1e-10:edges.append((n1,n2,rho*length*(f2-f1)/(t['width']*thickness(t['layer']))))
     for via in geo['vias']:
      ends=[n for n in nodes if n[:2]==tuple(round(q,6) for q in via['at'])]
      ends.sort(key=lambda n:depths[geo['layer_names'][str(n[2])]])
      for a,b in zip(ends,ends[1:]):
       span=depths[geo['layer_names'][str(b[2])]]-depths[geo['layer_names'][str(a[2])]]
-      edges.append((a,b,rho*span/(math.pi*via['drill']*.020)))
+      edges.append((a,b,rho*span/(math.pi*via['drill']*via_plating_mm)))
     nodes=sorted({root(n) for n in parent},key=str);index={n:i for i,n in enumerate(nodes)}
     G=np.zeros((len(nodes),len(nodes)))
     for a,b,R in edges:
@@ -140,7 +148,7 @@ def dc_solver(geo,depths):
 
 
 def power_distribution_screen(board_path=None):
-    """DC track/via network, 85 C, nominal 35 um copper, ideal conducting pads.
+    """DC track/via network, 85 C, native layer thickness, ideal conducting pads.
 
     Ignore power/ground plane resistance, connector/header/contact resistance and
     IC on-resistance here. The model checks the PCB-drop planning allowance only.
@@ -149,7 +157,8 @@ def power_distribution_screen(board_path=None):
     geometry = subprocess.check_output(['kicad-python', '-c', GEOMETRY_EXPORT,
         str(board_path.resolve())], text=True)
     report = json.loads(geometry)
-    depths=copper_depths(board_path)
+    depths,thicknesses=copper_stack(board_path)
+    via_plating_mm=.018  # JLC's published average; not a minimum guarantee.
     electrical=json.loads((ROOT/'reports/electrical/electrical_checks.json').read_text())
     input_paths={'VIN_RAW':(('J1','1'),('F1','1')),
                  'VIN_FUSED':(('F1','2'),('Q1','5')),
@@ -157,7 +166,7 @@ def power_distribution_screen(board_path=None):
     input_screen_A=2.0
     results = {}
     for net,geo in report.items():
-     solve=dc_solver(geo,depths)
+     solve=dc_solver(geo,depths,thicknesses,via_plating_mm)
      if net=='V5_INTERNAL':result=solve(('L1','2'),{('L2','1'):1.3,('U4','1'):.51,('U2','1'):.13,('U10','5'):.001,('D10','2'):.019},('R1','1'))
      elif net=='BOOST_12V':result=solve(('D4','1'),{('U9','4'):.41})
      elif net in ('SENSOR_5V','SENSOR_12V'):
@@ -187,8 +196,9 @@ def power_distribution_screen(board_path=None):
     input_resistance=sum(input_drops.values())/input_screen_A
     input_normal_A=electrical['power']['input_current_at_6V_A']
     input_budget=electrical['power']['entry_resistance_assumption_ohm']
+    assert input_resistance<input_budget,('Input copper exceeds full entry-resistance budget',input_resistance,input_budget)
     return dict(method='Native routed-track resistor network with geometric pad/via/track contacts; nodal DC solve',
-                trace_temperature_C=85, copper_um=35, via_plating_um=20,
+                trace_temperature_C=85, copper_um_by_layer={k:1000*v for k,v in thicknesses.items()}, via_plating_um=1000*via_plating_mm,
                 copper_center_depths_mm=depths,
                 boost_input_A=1.3, other_5V_sensor_A=.51, logic_A=.13, RGB_buffer_A=.02,
                 buck_to_boost_drop_V=before, boost_to_efuse_drop_V=after,

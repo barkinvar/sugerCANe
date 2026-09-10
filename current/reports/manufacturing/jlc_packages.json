@@ -1,6 +1,6 @@
 {
   "result": "PASS package and placement-file checks; factory process approval pending",
-  "board_sha256": "ab3a65634b4c6ac7060d4e9328e048e01889160c2ea81d1b36b56be4f89f1d6b",
+  "board_sha256": "52335939cc3cbd214a217ff922a3b8f835be10f9253df6fa804ce7f5edc1dd4f",
   "exact_mpn_types": 54,
   "factory_placements": 129,
   "footprint_families": 22,
@@ -120,12 +120,12 @@
   ],
   "limitations": "Package fit and file consistency only. Does not establish solder-joint yield, nozzle/fixture clearance, thermal qualification, electrical function or factory part allocation. Body envelope screen includes lead span and conservative family bounds; fuse envelope is nominal.",
   "input_hashes": {
-    "bom/jlc_package_review.json": "e8a79558831a3e0c08104a4e335b0e8552d63fc59998d76f67ef939df3dfdf9b",
+    "bom/jlc_package_review.json": "9a70f18885e9c45601521419973bd90fcae924d5e586872e15fedfb7db9dc1f7",
     "sources/datasheets/jlc_package_drawings.pdf": "5c537e444b0dde537c762e06c3ea3f0f402872554ce68e6b8ca77b6ce171ac29",
     "bom/assembly_plan.json": "b48f5af36f49ccbf1a85be27147bb541fa351dc892727ba69142cc33cf9912b5",
     "bom/BOM_JLCPCB.csv": "65d87b4314cb78a52060040566e124783331d796e4b4def95172a4edeb509ad4",
-    "output/assembly/CPL_JLCPCB.csv": "542da3cf1f5e684c6d71b1dcf05a518cb22b74ac9ae09e722e1a39a8745ef1d6",
+    "output/assembly/CPL_JLCPCB.csv": "ddbed817a750fc09421b00d895de979815c84973bcb0846d3dc380069ee7e594",
     "hardware/design/circuit.json": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
-    "scripts/check_jlc_packages.py": "bd0345a2ec368b54d17e4b1bd5cee7a3aa88c5b9bca64f10be81c63f0f7432b4"
+    "scripts/check_jlc_packages.py": "674e9861d0024790c2a3c530461b5bed798875eb960c090ab9ac0c8f1a4b4eb0"
   }
 }
