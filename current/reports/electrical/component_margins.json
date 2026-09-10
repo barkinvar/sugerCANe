@@ -317,7 +317,7 @@
   },
   "input_hashes": {
     "hardware/design/circuit.json": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "f2a08206016cc9e3d576d27210aa77b042df628b72892f1a989f5f5c8db9e7a0",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "0914c355dbdfe854247d9627f84cfd5622cc321e3bbc4cd0683f92fdec2c35ba",
     "reports/electrical/electrical_checks.json": "8875e81607c1f1e6f8048b847b20cfb0e09b9fd53edc5eb51d696a563bd6568c",
     "scripts/check_component_margins.py": "b22e5cd608fe72794a2f6b511fdff67210027de332add8ff80f2befa8b9d35ef"
   },

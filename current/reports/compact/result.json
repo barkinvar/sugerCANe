@@ -2,7 +2,7 @@
   "result": "PASS compact CAD, trace, exported copper and engineering checks; manufacturing release HOLD",
   "branch": "codex/compact-board",
   "worktree": "/home/neuro/candi-compact-board",
-  "board_sha256": "f2a08206016cc9e3d576d27210aa77b042df628b72892f1a989f5f5c8db9e7a0",
+  "board_sha256": "0914c355dbdfe854247d9627f84cfd5622cc321e3bbc4cd0683f92fdec2c35ba",
   "size_before_mm": [
     52,
     74
@@ -32,7 +32,8 @@
     "reports/manufacturing/gerber_geometry.json",
     "reports/manufacturing/gerber_connectivity.json",
     "reports/manufacturing/order_package.json",
-    "reports/compact/u8_route_fix.json"
+    "reports/compact/u8_route_fix.json",
+    "reports/compact/pad_contact_sweep.json"
   ],
   "protected_original_simulations": {
     "source_processes_signaled": false,
@@ -40,7 +41,7 @@
     "provenance": "reports/compact/completed_simulation_sources.json"
   },
   "original_branch": "main",
-  "checked_utc": "2026-09-10T19:34:05.864394+00:00",
+  "checked_utc": "2026-09-10T19:42:28.589976+00:00",
   "limitations": "Engineering screens do not establish physical perfection. Factory two-sided assembly/reflow quotation, allocation and physical thermal/EMC/fit qualification remain pending; package is review-only.",
-  "latest_repair": "Centered U8.5 switch-node pad entry at bottom Gerber (32,-20) mm; exact repair contract and four negative regression cases pass."
+  "latest_repair": "Full-board contact sweep removed both incidental Q1 pin 2 contacts; zero incidental contacts remain across 561 native pad/layer shapes and 493 same-net contact pairs."
 }

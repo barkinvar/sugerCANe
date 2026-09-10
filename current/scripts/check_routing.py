@@ -15,6 +15,58 @@ TOL = .00002  # 20 nm: native integer rounding only, not a routing angle allowan
 MIN_FREE_SEGMENT = .10
 
 
+def pad_contact_audit(data):
+    """Find stray pad contacts while allowing connected bends into that pad.
+
+    A track's round end can overlap a pad just before the next segment enters
+    it. That is an ordinary approach. A passing track touching the same pad
+    elsewhere needs its own local centerline connection; global net connectivity
+    must not hide an incidental corner contact or a redundant loop.
+    """
+    tracks = data['tracks']
+    lines = [LineString([t['a'], t['b']]) for t in tracks]
+    tree = STRtree(lines)
+    largest_radius = max((t['width']/2 for t in tracks), default=0)
+    incidental = []; approaches = []; pairs = 0
+    for pad in data['pads']:
+        copper = union_all([Polygon(q) for q in pad['polygons']])
+        inside = copper.buffer(-.005)  # 5 um interior avoids boundary-only entries.
+        nearby = [int(i) for i in tree.query(copper.buffer(largest_radius + TOL))
+                  if (tracks[i]['net'], tracks[i]['layer']) == (pad['net'], pad['layer'])]
+        contacts = [i for i in nearby if lines[i].buffer(tracks[i]['width']/2, quad_segs=64)
+                    .intersection(copper).area > 1e-7]
+        pairs += len(contacts)
+        grazing = [i for i in contacts if not lines[i].intersects(inside)]
+        if not grazing:
+            continue
+        # Only centerline joins within one local track radius of the pad count.
+        # A remote connection through another pad cannot excuse this contact.
+        neighborhood = copper.buffer(max(tracks[i]['width']/2 for i in nearby) + .005)
+        clipped = {i:lines[i].intersection(neighborhood) for i in nearby}
+        joined = collections.defaultdict(set)
+        for a in nearby:
+            for b in nearby:
+                if b > a and clipped[a].distance(clipped[b]) <= TOL:
+                    joined[a].add(b); joined[b].add(a)
+        entries = {i for i in nearby if lines[i].intersects(inside)}
+        for i in grazing:
+            reached = {i}; pending = [i]
+            while pending:
+                for neighbor in joined[pending.pop()] - reached:
+                    reached.add(neighbor); pending.append(neighbor)
+            local_entries = entries & reached
+            row = dict(reference=pad.get('ref'), pad=pad.get('number'),
+                       pad_at_mm=pad.get('at'), net=pad['net'], layer=pad['layer'],
+                       track=tracks[i]['id'],
+                       connected_entry_tracks=sorted(tracks[j]['id'] for j in local_entries))
+            (approaches if local_entries else incidental).append(row)
+    return dict(pad_layer_shapes_checked=len(data['pads']), same_net_contact_pairs_checked=pairs,
+                incidental_contacts=incidental, connected_approach_contacts=approaches,
+                scope='All native pad/track copper layers. Positive same-net overlaps require a '
+                      'local centerline entry into that pad; connected approach bends are allowed. '
+                      'Different-net clearance, via contacts and fabrication geometry have separate gates.')
+
+
 def branch_junctions(data):
     """Node centerline intersections as well as endpoints; distinguish real rays.
 
@@ -206,6 +258,9 @@ def inspect(data, width_policy=None):
         spec = (width_policy or {}).get('nets', {}).get(net, (width_policy or {}).get('default', {}))
         inventory.append(dict(net=net, widths=[dict(width_mm=w, segments=v[0], length_mm=v[1]) for w,v in sorted(rows.items())],
                               reason=spec.get('reason', 'Width policy not supplied.')))
+    pad_contacts = pad_contact_audit(data)
+    if pad_contacts['incidental_contacts']:
+        issues['incidental_pad_contacts'].extend(pad_contacts['incidental_contacts'])
     return dict(result='FAIL' if issues else 'PASS', segments=len(tracks), vias=len(data['vias']),
                 rules=dict(direction_tolerance_mm=TOL, minimum_free_segment_mm=MIN_FREE_SEGMENT,
                            minimum_free_bend_included_angle_deg=135, curved_tracks_allowed=False,
@@ -214,6 +269,7 @@ def inspect(data, width_policy=None):
                 endpoint_gate_enforced='endpoint_zone_contacts' in data,
                 filled_zone_entries=zone_entries,
                 short_contact_segments=contact_segments, findings=dict(issues),
+                pad_contact_audit=pad_contacts,
                 width_audit=dict(policy_enforced=width_policy is not None, routed_nets=len(widths),
                                  segments_checked=len(tracks), nets=inventory, transitions=transitions,
                                  free_transitions=sum(not t['at_contact'] for t in transitions),

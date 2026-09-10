@@ -100,6 +100,7 @@ tracked += ['hardware/FRC_Sensor_CAN.kicad_pro','hardware/FRC_Sensor_CAN.kicad_d
 tracked += ['scripts/ground_geometry.py','scripts/verify_gerber_geometry.py','scripts/layout_contract.py','hardware/design/layout_contract.json','scripts/check_compact_layout.py','reports/compact/layout_verification.json']
 tracked += ['scripts/test_compact_layout.py','reports/compact/layout-tests.log',
             'scripts/render_u8_route_review.py','reports/compact/u8_route_fix.json','output/review/u8_switch_route_fix.png']
+tracked += ['scripts/render_pad_contact_review.py','reports/compact/pad_contact_sweep.json','output/review/pad_contact_sweep.png']
 compact=read('reports/compact/layout_verification.json')
 assert compact['result']=='PASS' and compact['board_sha256']==routing['board_sha256']
 repair=read('reports/compact/u8_route_fix.json')
@@ -107,6 +108,13 @@ assert repair['result']=='PASS' and repair['board_sha256']==routing['board_sha25
 for path,digest in repair['input_hashes'].items():
  assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale U8 repair review',path)
 assert hashlib.sha256((R/repair['output']).read_bytes()).hexdigest()==repair['output_sha256']
+sweep=read('reports/compact/pad_contact_sweep.json')
+assert sweep['result']=='PASS' and sweep['board_sha256']==routing['board_sha256']
+assert not routing['pad_contact_audit']['incidental_contacts']
+assert sweep['after']==routing['pad_contact_audit'],'Contact sweep and routing gate disagree'
+for path,digest in sweep['input_hashes'].items():
+ assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale pad-contact sweep',path)
+assert hashlib.sha256((R/sweep['output']).read_bytes()).hexdigest()==sweep['output_sha256']
 tracked += ['scripts/check_component_margins.py','reports/electrical/component_margins.json',
             'reports/manufacturing/clock_load_change.json','reports/manufacturing/buck_margin_change.json']
 tracked += ['reports/erc/final.json','reports/drc/final.json','reports/design_parity.json','reports/board_constraints.json',
@@ -132,6 +140,7 @@ out=dict(revision='H SC12',status='PASS engineering checks; physical qualificati
 out['vendor_model_transient_cases']=[r['case']['name'] for r in (spice if complete else partial)['cases']]
 out['compact_layout']={k:compact[k] for k in ('size_mm','baseline_size_mm','bounding_area_reduction_percent','bottom_references','preserved_critical_nets','verified_critical_nets','preserved_critical_tracks_and_vias','verified_critical_tracks_and_vias')}
 out['compact_layout']['reviewed_critical_repair']='reports/compact/u8_route_fix.json'
+out['compact_layout']['pad_contact_sweep']='reports/compact/pad_contact_sweep.json'
 out['routing_rules']={key:routing[key] for key in ('result','segments','vias','rules')}
 out['input_transient_cases']=[r['name'] for r in input_spice['cases']]
 out['input_transient_scope']=input_spice['limitations']

@@ -37,6 +37,7 @@ files=['bom/BOM_JLCPCB.csv','bom/Factory_BOM.csv','bom/Hand_solder_BOM.csv','bom
  'reports/manufacturing/gerber_connectivity.json','reports/manufacturing/gerber_geometry.json','reports/manufacturing/verification.json',
  'output/review/board_top.png','output/review/board_bottom.png','output/review/board_3d_final.png','output/review/board_connectors.png','output/review/size_comparison.png',
  'reports/compact/completed_simulation_sources.json','reports/compact/u8_route_fix.json','output/review/u8_switch_route_fix.png',
+ 'reports/compact/pad_contact_sweep.json','output/review/pad_contact_sweep.png',
  'bom/jlc_sourcing.json',str(gerber.relative_to(R))]
 preview=json.loads((R/'reports/manufacturing/preview_source.json').read_text())
 assert hashlib.sha256((R/'scripts/render_gerber_previews.py').read_bytes()).hexdigest()==preview['script_sha256']

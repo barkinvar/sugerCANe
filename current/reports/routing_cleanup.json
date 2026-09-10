@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "variant": "Rev H compact 44 x 48 mm prototype",
-  "board_sha256": "f2a08206016cc9e3d576d27210aa77b042df628b72892f1a989f5f5c8db9e7a0",
+  "board_sha256": "0914c355dbdfe854247d9627f84cfd5622cc321e3bbc4cd0683f92fdec2c35ba",
   "baseline_commit": "1c03fd1",
   "baseline_segments": 1530,
   "baseline_vias": 242,
@@ -18,7 +18,8 @@
     "Power interconnects rerouted with original current and clearance requirements; independent DC screen required",
     "Signal jogs, redundant tracks and unused vias removed; all free bends and branches pass strict routing checks",
     "Ground stitching and minimum pour features verified on all four layers",
-    "U8.5 BOOST_SW corner contact replaced by centered pad entry; redundant parallel loop removed, diode leg widened to 0.50 mm and In2 return guard extended. Three tracks adjusted and one added; all other tracks, pads and vias unchanged from fbb77cb."
+    "U8.5 BOOST_SW corner contact replaced by centered pad entry; redundant parallel loop removed, diode leg widened to 0.50 mm and In2 return guard extended. Three tracks adjusted and one added; Other critical nets preserved.",
+    "Full-board scan: both stray VIN_PROT branch contacts at Q1 pin 2 removed by rerouting two 0.80 mm segments into pin 3. Pads, vias, all other tracks and critical copper unchanged from 4f238f9. New gate reports zero incidental pad contacts."
   ],
   "unchanged": [
     "Circuit, schematics, firmware, parts and pin mappings",
@@ -27,5 +28,6 @@
     "51 critical copper objects preserved by declared rigid transforms; four exact adjusted/added BOOST_SW objects separately audited"
   ],
   "scope": "Native DRC and strict trace geometry pass. Independent exported copper checks, DC screens, completed transient evidence and physical qualification are separate.",
-  "repair_report": "reports/compact/u8_route_fix.json"
+  "repair_report": "reports/compact/u8_route_fix.json",
+  "pad_contact_sweep": "reports/compact/pad_contact_sweep.json"
 }

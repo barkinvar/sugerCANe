@@ -45874,7 +45874,7 @@
 	)
 	(segment
 		(start 28.15 5.5)
-		(end 27.36 5.5)
+		(end 27.6 4.95)
 		(width 0.8)
 		(locked yes)
 		(layer "B.Cu")
@@ -45945,8 +45945,8 @@
 		(uuid "c5e29903-9c4a-4dd8-a1c2-6e259695b8ce")
 	)
 	(segment
-		(start 27.36 5.5)
-		(end 26.725 4.865)
+		(start 27.6 4.95)
+		(end 26.725 4.95)
 		(width 0.8)
 		(locked yes)
 		(layer "B.Cu")

@@ -6,11 +6,11 @@
   "full_power_transient_pass": true,
   "input_hashes": {
     "hardware/design/circuit.json": "601f385cde45b322eaf3d225e53c4d9e9869422d28709ac45784a295459df020",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "f2a08206016cc9e3d576d27210aa77b042df628b72892f1a989f5f5c8db9e7a0",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "0914c355dbdfe854247d9627f84cfd5622cc321e3bbc4cd0683f92fdec2c35ba",
     "reports/electrical/electrical_checks.json": "8875e81607c1f1e6f8048b847b20cfb0e09b9fd53edc5eb51d696a563bd6568c",
     "reports/electrical/boost_spice.json": "255e2ee5605ecd3690d006c201c7430930f48add0bedd8d04d862a38e2ec9cbb",
     "reports/design_parity.json": "d79cbd2f9a9dd988ede7c9394aad08e31f1f18c110d687679477102b4768bee5",
-    "reports/board_constraints.json": "b5850c821222e0bb0cba06c3d7ecd798390a43350928c0d61329c11df17a293a",
+    "reports/board_constraints.json": "3103d42601f156688d6b439b04d2013945cde632edebd23c87754850a19c866d",
     "scripts/check_boost_spice.py": "44d4c0f4d6fd7944d2dda0f4b9387391c9e35fdd984e57e5e4b8072c41089209",
     "scripts/check_electrical.py": "808407b9e13e16d28488a49adef050845fe51026a1ba0ad2cc45157fd63957a0",
     "scripts/check_order_readiness.py": "91f13f56b74606cf36a8e0683458b07489f95957dc2f84ad1efcc5e08868a6bb"
@@ -104,14 +104,14 @@
       "branch_drop_V": {
         "VIN_RAW": 0.0021510774691585856,
         "VIN_FUSED": 0.050403938257325594,
-        "VIN_PROT": 0.05734053365700854
+        "VIN_PROT": 0.05857733125700883
       },
-      "total_drop_V": 0.10989554938349272,
-      "resistance_ohm": 0.05494777469174636,
+      "total_drop_V": 0.111132346983493,
+      "resistance_ohm": 0.0555661734917465,
       "analytical_normal_input_at_6V_A": 1.7259711902877457,
-      "drop_at_analytical_normal_input_V": 0.09483827608837633,
+      "drop_at_analytical_normal_input_V": 0.09590561460128509,
       "full_entry_resistance_planning_budget_ohm": 0.276,
-      "budget_remaining_for_excluded_items_ohm": 0.22105222530825366,
+      "budget_remaining_for_excluded_items_ohm": 0.22043382650825352,
       "scope": "Copper-only partition of the existing entry-resistance assumption, not verification of that full budget. Excludes fuse, MOSFET, contacts, cables and ground return. 2 A is a DC screening point, not a thermal/current rating or maximum fault current."
     },
     "results": {
@@ -164,8 +164,8 @@
         "('Q1', '5')": -0.050403938257325594
       },
       "VIN_PROT": {
-        "('Q1', '1')": 2.246618075694108e-16,
-        "('U1', '3')": -0.05734053365700854
+        "('Q1', '1')": 1.3458955696578218e-16,
+        "('U1', '3')": -0.05857733125700883
       },
       "VPORT1": {
         "('JP101', '2')": 0.0,
@@ -180,7 +180,7 @@
         "('J6', '1')": -0.0011592244282205718
       }
     },
-    "geometry_sha256": "e4da3b5625f7e9d55181649c88a0296342be5e15ebf28a898f1d19f0dd0ea151",
+    "geometry_sha256": "de75782ba41c4018c26f9e809f91df90395e42c82821682399d4753a805ce1e5",
     "scope": "Nominal etched dimensions, ideal pads/via annuli and finite transverse links between overlapping track centerlines. No current-crowding or temperature solution, ground return, connector contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json."
   },
   "protection_boundary": {

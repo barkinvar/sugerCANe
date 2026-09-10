@@ -1,0 +1,705 @@
+{
+  "result": "PASS",
+  "baseline_commit": "4f238f9856be0e8ce036d0285594219fe225b4d0",
+  "baseline_board_sha256": "f2a08206016cc9e3d576d27210aa77b042df628b72892f1a989f5f5c8db9e7a0",
+  "board_sha256": "0914c355dbdfe854247d9627f84cfd5622cc321e3bbc4cd0683f92fdec2c35ba",
+  "before": {
+    "pad_layer_shapes_checked": 561,
+    "same_net_contact_pairs_checked": 495,
+    "incidental_contacts": [
+      {
+        "reference": "Q1",
+        "pad": "2",
+        "pad_at_mm": [
+          26.725,
+          6.135
+        ],
+        "net": "VIN_PROT",
+        "layer": 2,
+        "track": "cc4fb95b-8cda-4333-9ea0-7ba3260f8dcb",
+        "connected_entry_tracks": []
+      },
+      {
+        "reference": "Q1",
+        "pad": "2",
+        "pad_at_mm": [
+          26.725,
+          6.135
+        ],
+        "net": "VIN_PROT",
+        "layer": 2,
+        "track": "51587d46-cccf-47f3-ae44-edc0c1ff0629",
+        "connected_entry_tracks": []
+      }
+    ],
+    "connected_approach_contacts": [
+      {
+        "reference": "C74",
+        "pad": "1",
+        "pad_at_mm": [
+          41.95,
+          22.65
+        ],
+        "net": "V5_INTERNAL",
+        "layer": 0,
+        "track": "cc602f88-1a50-4b7a-8717-c08d4ecca590",
+        "connected_entry_tracks": [
+          "8d71a135-484c-45ae-bfdd-a22d3d1af329"
+        ]
+      },
+      {
+        "reference": "J5",
+        "pad": "1",
+        "pad_at_mm": [
+          18.5,
+          39.0
+        ],
+        "net": "VPORT2",
+        "layer": 2,
+        "track": "6d11ab6c-bcdc-4f33-bb24-e64438bbc527",
+        "connected_entry_tracks": [
+          "bbb78dba-e537-496c-a9c6-31fff7f86927"
+        ]
+      },
+      {
+        "reference": "J5",
+        "pad": "1",
+        "pad_at_mm": [
+          18.5,
+          46.0
+        ],
+        "net": "VPORT2",
+        "layer": 2,
+        "track": "6d11ab6c-bcdc-4f33-bb24-e64438bbc527",
+        "connected_entry_tracks": [
+          "a0cd93aa-03ac-41b2-8cee-f13db6aee438"
+        ]
+      },
+      {
+        "reference": "D10",
+        "pad": "2",
+        "pad_at_mm": [
+          39.525,
+          18.025
+        ],
+        "net": "V5_INTERNAL",
+        "layer": 0,
+        "track": "77aa2da6-65ed-4649-9e70-83e1c3aebd40",
+        "connected_entry_tracks": [
+          "4cb85f0b-78f8-446a-8c18-b518d6106d87",
+          "9faf0d2e-cb3b-4e9f-a0ac-e362467ab702"
+        ]
+      },
+      {
+        "reference": "R105",
+        "pad": "1",
+        "pad_at_mm": [
+          4.3125,
+          24.4
+        ],
+        "net": "+3V3",
+        "layer": 0,
+        "track": "8b8f56bc-73ef-436a-8718-900129089719",
+        "connected_entry_tracks": [
+          "68014d74-172b-433d-b727-a09ffb06baf3"
+        ]
+      },
+      {
+        "reference": "R65",
+        "pad": "1",
+        "pad_at_mm": [
+          17.4875,
+          15.9
+        ],
+        "net": "SENSOR_12V",
+        "layer": 0,
+        "track": "4e4b3aa1-1b01-4d3c-b89c-0b26debc9a90",
+        "connected_entry_tracks": [
+          "a2ed4925-33e5-4330-af54-f13c5e5856a0"
+        ]
+      },
+      {
+        "reference": "R203",
+        "pad": "1",
+        "pad_at_mm": [
+          15.2875,
+          19.9
+        ],
+        "net": "SENSE2",
+        "layer": 0,
+        "track": "0dcdc731-d392-4975-aec5-ffbc89953ea1",
+        "connected_entry_tracks": [
+          "817297de-bf97-4532-97b6-d9974e8e9d6a"
+        ]
+      },
+      {
+        "reference": "U2",
+        "pad": "3",
+        "pad_at_mm": [
+          13.4375,
+          25.25
+        ],
+        "net": "V5_INTERNAL",
+        "layer": 2,
+        "track": "c1271879-e1d8-4a73-aafa-99eb1962559d",
+        "connected_entry_tracks": [
+          "9a3b1e0a-87f7-4f2b-8c9f-8386989f2a23"
+        ]
+      },
+      {
+        "reference": "R111",
+        "pad": "1",
+        "pad_at_mm": [
+          16.4125,
+          38.7
+        ],
+        "net": "+3V3",
+        "layer": 2,
+        "track": "f3c0f9d3-f494-428d-92f0-fc315e1a0b81",
+        "connected_entry_tracks": [
+          "f9e7cdaf-9f3f-47da-8704-ea2499bfa309"
+        ]
+      },
+      {
+        "reference": "C64",
+        "pad": "1",
+        "pad_at_mm": [
+          22.5,
+          27.475
+        ],
+        "net": "BOOST_12V",
+        "layer": 2,
+        "track": "77d5a17d-ab08-4425-b109-80ff85fa7968",
+        "connected_entry_tracks": [
+          "b06c82e6-457f-4981-99d7-e652517b82e9"
+        ]
+      },
+      {
+        "reference": "Q1",
+        "pad": "3",
+        "pad_at_mm": [
+          26.725,
+          4.865
+        ],
+        "net": "VIN_PROT",
+        "layer": 2,
+        "track": "51587d46-cccf-47f3-ae44-edc0c1ff0629",
+        "connected_entry_tracks": [
+          "cc4fb95b-8cda-4333-9ea0-7ba3260f8dcb"
+        ]
+      },
+      {
+        "reference": "U4",
+        "pad": "1",
+        "pad_at_mm": [
+          1.8625,
+          43.45
+        ],
+        "net": "V5_INTERNAL",
+        "layer": 2,
+        "track": "83b60c01-32d9-4170-95cd-e7606ef0fa9d",
+        "connected_entry_tracks": [
+          "695209e5-af4e-4fa1-96f6-6a5f7f9c0e3c"
+        ]
+      },
+      {
+        "reference": "R41",
+        "pad": "1",
+        "pad_at_mm": [
+          22.4,
+          13.6125
+        ],
+        "net": "+3V3",
+        "layer": 2,
+        "track": "fe9f27d4-6906-42ba-b7ad-4005617b8656",
+        "connected_entry_tracks": [
+          "5404b36a-5c01-40a1-8c52-f3f54e480497",
+          "af6f8428-f299-4cae-af1e-9091e45e4be5",
+          "d9c05dd1-2031-46cd-9493-507e8632fe56",
+          "dedd1b78-b68e-4dee-bbe3-e494a5b5578c"
+        ]
+      },
+      {
+        "reference": "U8",
+        "pad": "5",
+        "pad_at_mm": [
+          30.8875,
+          19.975
+        ],
+        "net": "BOOST_SW",
+        "layer": 2,
+        "track": "c58c6da1-66e1-4fb1-b3ff-9aa2b8d80d4c",
+        "connected_entry_tracks": [
+          "5e4f71f9-120b-4208-aa9b-4f51ac11a37b",
+          "f35c8ee4-4b63-4804-9acd-f6bc4abed20b"
+        ]
+      },
+      {
+        "reference": "D5",
+        "pad": "1",
+        "pad_at_mm": [
+          15.8,
+          31.7
+        ],
+        "net": "SENSOR_12V",
+        "layer": 2,
+        "track": "b14d0b4a-ec8b-4695-a8e5-dde26831fd38",
+        "connected_entry_tracks": [
+          "be299491-ff8d-4583-bf7a-0fccc45f9e94"
+        ]
+      },
+      {
+        "reference": "C62",
+        "pad": "1",
+        "pad_at_mm": [
+          30.9,
+          31.25
+        ],
+        "net": "BOOST_12V",
+        "layer": 2,
+        "track": "d6522899-7e2f-4929-a417-5006bee99f69",
+        "connected_entry_tracks": [
+          "3029cb01-c58c-456b-ad6c-aee422711cb7",
+          "3dc9a24d-89cb-41ce-a0fa-6a49aa2346d6",
+          "6470eb18-7347-4314-87af-9a5281ea9ac2",
+          "662cfbbd-62fd-4d0b-b458-2ecb54126e73",
+          "a4693cbb-f9c8-407e-89c7-d0b009509341",
+          "c869a655-ff3a-47e3-9d4d-dca967e28749",
+          "d8d98fda-1992-47f0-a53a-d1c702cb64c5"
+        ]
+      },
+      {
+        "reference": "C61",
+        "pad": "1",
+        "pad_at_mm": [
+          28.5,
+          19.95
+        ],
+        "net": "V5_INTERNAL",
+        "layer": 2,
+        "track": "945ae67c-5b26-4946-bd1e-7d783c277fd8",
+        "connected_entry_tracks": [
+          "6ff782a2-648c-491a-9a9a-b04d37a0d851"
+        ]
+      },
+      {
+        "reference": "C69",
+        "pad": "1",
+        "pad_at_mm": [
+          34.55,
+          22.0
+        ],
+        "net": "BOOST_COMP_RC",
+        "layer": 2,
+        "track": "d54e5268-c5d8-4f96-9d1f-3c363a720711",
+        "connected_entry_tracks": [
+          "65b26591-81eb-4691-99b6-76542a4f6b84"
+        ]
+      },
+      {
+        "reference": "C4",
+        "pad": "1",
+        "pad_at_mm": [
+          9.0,
+          25.375
+        ],
+        "net": "V5_INTERNAL",
+        "layer": 2,
+        "track": "92524c0a-09aa-4633-a3f9-037fd66dc502",
+        "connected_entry_tracks": [
+          "912a6729-00df-416d-8f54-02ac0d0febf4"
+        ]
+      },
+      {
+        "reference": "C4",
+        "pad": "1",
+        "pad_at_mm": [
+          9.0,
+          25.375
+        ],
+        "net": "V5_INTERNAL",
+        "layer": 2,
+        "track": "4b3e567b-541f-47b0-ae9e-1d489f7c8540",
+        "connected_entry_tracks": [
+          "912a6729-00df-416d-8f54-02ac0d0febf4"
+        ]
+      }
+    ],
+    "scope": "All native pad/track copper layers. Positive same-net overlaps require a local centerline entry into that pad; connected approach bends are allowed. Different-net clearance, via contacts and fabrication geometry have separate gates."
+  },
+  "after": {
+    "pad_layer_shapes_checked": 561,
+    "same_net_contact_pairs_checked": 493,
+    "incidental_contacts": [],
+    "connected_approach_contacts": [
+      {
+        "reference": "C74",
+        "pad": "1",
+        "pad_at_mm": [
+          41.95,
+          22.65
+        ],
+        "net": "V5_INTERNAL",
+        "layer": 0,
+        "track": "cc602f88-1a50-4b7a-8717-c08d4ecca590",
+        "connected_entry_tracks": [
+          "8d71a135-484c-45ae-bfdd-a22d3d1af329"
+        ]
+      },
+      {
+        "reference": "J5",
+        "pad": "1",
+        "pad_at_mm": [
+          18.5,
+          39.0
+        ],
+        "net": "VPORT2",
+        "layer": 2,
+        "track": "6d11ab6c-bcdc-4f33-bb24-e64438bbc527",
+        "connected_entry_tracks": [
+          "bbb78dba-e537-496c-a9c6-31fff7f86927"
+        ]
+      },
+      {
+        "reference": "J5",
+        "pad": "1",
+        "pad_at_mm": [
+          18.5,
+          46.0
+        ],
+        "net": "VPORT2",
+        "layer": 2,
+        "track": "6d11ab6c-bcdc-4f33-bb24-e64438bbc527",
+        "connected_entry_tracks": [
+          "a0cd93aa-03ac-41b2-8cee-f13db6aee438"
+        ]
+      },
+      {
+        "reference": "D10",
+        "pad": "2",
+        "pad_at_mm": [
+          39.525,
+          18.025
+        ],
+        "net": "V5_INTERNAL",
+        "layer": 0,
+        "track": "77aa2da6-65ed-4649-9e70-83e1c3aebd40",
+        "connected_entry_tracks": [
+          "4cb85f0b-78f8-446a-8c18-b518d6106d87",
+          "9faf0d2e-cb3b-4e9f-a0ac-e362467ab702"
+        ]
+      },
+      {
+        "reference": "R105",
+        "pad": "1",
+        "pad_at_mm": [
+          4.3125,
+          24.4
+        ],
+        "net": "+3V3",
+        "layer": 0,
+        "track": "8b8f56bc-73ef-436a-8718-900129089719",
+        "connected_entry_tracks": [
+          "68014d74-172b-433d-b727-a09ffb06baf3"
+        ]
+      },
+      {
+        "reference": "R65",
+        "pad": "1",
+        "pad_at_mm": [
+          17.4875,
+          15.9
+        ],
+        "net": "SENSOR_12V",
+        "layer": 0,
+        "track": "4e4b3aa1-1b01-4d3c-b89c-0b26debc9a90",
+        "connected_entry_tracks": [
+          "a2ed4925-33e5-4330-af54-f13c5e5856a0"
+        ]
+      },
+      {
+        "reference": "R203",
+        "pad": "1",
+        "pad_at_mm": [
+          15.2875,
+          19.9
+        ],
+        "net": "SENSE2",
+        "layer": 0,
+        "track": "0dcdc731-d392-4975-aec5-ffbc89953ea1",
+        "connected_entry_tracks": [
+          "817297de-bf97-4532-97b6-d9974e8e9d6a"
+        ]
+      },
+      {
+        "reference": "U2",
+        "pad": "3",
+        "pad_at_mm": [
+          13.4375,
+          25.25
+        ],
+        "net": "V5_INTERNAL",
+        "layer": 2,
+        "track": "c1271879-e1d8-4a73-aafa-99eb1962559d",
+        "connected_entry_tracks": [
+          "9a3b1e0a-87f7-4f2b-8c9f-8386989f2a23"
+        ]
+      },
+      {
+        "reference": "R111",
+        "pad": "1",
+        "pad_at_mm": [
+          16.4125,
+          38.7
+        ],
+        "net": "+3V3",
+        "layer": 2,
+        "track": "f3c0f9d3-f494-428d-92f0-fc315e1a0b81",
+        "connected_entry_tracks": [
+          "f9e7cdaf-9f3f-47da-8704-ea2499bfa309"
+        ]
+      },
+      {
+        "reference": "C64",
+        "pad": "1",
+        "pad_at_mm": [
+          22.5,
+          27.475
+        ],
+        "net": "BOOST_12V",
+        "layer": 2,
+        "track": "77d5a17d-ab08-4425-b109-80ff85fa7968",
+        "connected_entry_tracks": [
+          "b06c82e6-457f-4981-99d7-e652517b82e9"
+        ]
+      },
+      {
+        "reference": "U4",
+        "pad": "1",
+        "pad_at_mm": [
+          1.8625,
+          43.45
+        ],
+        "net": "V5_INTERNAL",
+        "layer": 2,
+        "track": "83b60c01-32d9-4170-95cd-e7606ef0fa9d",
+        "connected_entry_tracks": [
+          "695209e5-af4e-4fa1-96f6-6a5f7f9c0e3c"
+        ]
+      },
+      {
+        "reference": "R41",
+        "pad": "1",
+        "pad_at_mm": [
+          22.4,
+          13.6125
+        ],
+        "net": "+3V3",
+        "layer": 2,
+        "track": "fe9f27d4-6906-42ba-b7ad-4005617b8656",
+        "connected_entry_tracks": [
+          "5404b36a-5c01-40a1-8c52-f3f54e480497",
+          "af6f8428-f299-4cae-af1e-9091e45e4be5",
+          "d9c05dd1-2031-46cd-9493-507e8632fe56",
+          "dedd1b78-b68e-4dee-bbe3-e494a5b5578c"
+        ]
+      },
+      {
+        "reference": "U8",
+        "pad": "5",
+        "pad_at_mm": [
+          30.8875,
+          19.975
+        ],
+        "net": "BOOST_SW",
+        "layer": 2,
+        "track": "c58c6da1-66e1-4fb1-b3ff-9aa2b8d80d4c",
+        "connected_entry_tracks": [
+          "5e4f71f9-120b-4208-aa9b-4f51ac11a37b",
+          "f35c8ee4-4b63-4804-9acd-f6bc4abed20b"
+        ]
+      },
+      {
+        "reference": "D5",
+        "pad": "1",
+        "pad_at_mm": [
+          15.8,
+          31.7
+        ],
+        "net": "SENSOR_12V",
+        "layer": 2,
+        "track": "b14d0b4a-ec8b-4695-a8e5-dde26831fd38",
+        "connected_entry_tracks": [
+          "be299491-ff8d-4583-bf7a-0fccc45f9e94"
+        ]
+      },
+      {
+        "reference": "C62",
+        "pad": "1",
+        "pad_at_mm": [
+          30.9,
+          31.25
+        ],
+        "net": "BOOST_12V",
+        "layer": 2,
+        "track": "d6522899-7e2f-4929-a417-5006bee99f69",
+        "connected_entry_tracks": [
+          "3029cb01-c58c-456b-ad6c-aee422711cb7",
+          "3dc9a24d-89cb-41ce-a0fa-6a49aa2346d6",
+          "6470eb18-7347-4314-87af-9a5281ea9ac2",
+          "662cfbbd-62fd-4d0b-b458-2ecb54126e73",
+          "a4693cbb-f9c8-407e-89c7-d0b009509341",
+          "c869a655-ff3a-47e3-9d4d-dca967e28749",
+          "d8d98fda-1992-47f0-a53a-d1c702cb64c5"
+        ]
+      },
+      {
+        "reference": "C61",
+        "pad": "1",
+        "pad_at_mm": [
+          28.5,
+          19.95
+        ],
+        "net": "V5_INTERNAL",
+        "layer": 2,
+        "track": "945ae67c-5b26-4946-bd1e-7d783c277fd8",
+        "connected_entry_tracks": [
+          "6ff782a2-648c-491a-9a9a-b04d37a0d851"
+        ]
+      },
+      {
+        "reference": "C69",
+        "pad": "1",
+        "pad_at_mm": [
+          34.55,
+          22.0
+        ],
+        "net": "BOOST_COMP_RC",
+        "layer": 2,
+        "track": "d54e5268-c5d8-4f96-9d1f-3c363a720711",
+        "connected_entry_tracks": [
+          "65b26591-81eb-4691-99b6-76542a4f6b84"
+        ]
+      },
+      {
+        "reference": "C4",
+        "pad": "1",
+        "pad_at_mm": [
+          9.0,
+          25.375
+        ],
+        "net": "V5_INTERNAL",
+        "layer": 2,
+        "track": "92524c0a-09aa-4633-a3f9-037fd66dc502",
+        "connected_entry_tracks": [
+          "912a6729-00df-416d-8f54-02ac0d0febf4"
+        ]
+      },
+      {
+        "reference": "C4",
+        "pad": "1",
+        "pad_at_mm": [
+          9.0,
+          25.375
+        ],
+        "net": "V5_INTERNAL",
+        "layer": 2,
+        "track": "4b3e567b-541f-47b0-ae9e-1d489f7c8540",
+        "connected_entry_tracks": [
+          "912a6729-00df-416d-8f54-02ac0d0febf4"
+        ]
+      }
+    ],
+    "scope": "All native pad/track copper layers. Positive same-net overlaps require a local centerline entry into that pad; connected approach bends are allowed. Different-net clearance, via contacts and fabrication geometry have separate gates."
+  },
+  "changed_tracks": [
+    {
+      "before": {
+        "id": "51587d46-cccf-47f3-ae44-edc0c1ff0629",
+        "net": "VIN_PROT",
+        "kind": "line",
+        "a": [
+          28.15,
+          5.5
+        ],
+        "b": [
+          27.36,
+          5.5
+        ],
+        "width": 0.8,
+        "layer": 2
+      },
+      "after": {
+        "id": "51587d46-cccf-47f3-ae44-edc0c1ff0629",
+        "net": "VIN_PROT",
+        "kind": "line",
+        "a": [
+          28.15,
+          5.5
+        ],
+        "b": [
+          27.6,
+          4.95
+        ],
+        "width": 0.8,
+        "layer": 2
+      }
+    },
+    {
+      "before": {
+        "id": "cc4fb95b-8cda-4333-9ea0-7ba3260f8dcb",
+        "net": "VIN_PROT",
+        "kind": "line",
+        "a": [
+          27.36,
+          5.5
+        ],
+        "b": [
+          26.725,
+          4.865
+        ],
+        "width": 0.8,
+        "layer": 2
+      },
+      "after": {
+        "id": "cc4fb95b-8cda-4333-9ea0-7ba3260f8dcb",
+        "net": "VIN_PROT",
+        "kind": "line",
+        "a": [
+          27.6,
+          4.95
+        ],
+        "b": [
+          26.725,
+          4.95
+        ],
+        "width": 0.8,
+        "layer": 2
+      }
+    }
+  ],
+  "pads_and_vias_unchanged": true,
+  "all_other_tracks_unchanged": true,
+  "corrected_locations": [
+    {
+      "reference": "Q1",
+      "pad": "2",
+      "layer": "B.Cu",
+      "gerber_xy_mm": [
+        27.36,
+        -5.5
+      ],
+      "incidental_contacts_removed": 2
+    }
+  ],
+  "repaired_branch_to_q1_pin2_clearance_mm": 0.21669752235759843,
+  "input_hashes": {
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "0914c355dbdfe854247d9627f84cfd5622cc321e3bbc4cd0683f92fdec2c35ba",
+    "scripts/check_routing.py": "127b56c0e23b1f476f1b77167850893426dc27652ffa3714d57d1c37742bcce8",
+    "scripts/export_routing_geometry.py": "184ae2226e3b37849ae200420e333a554e60ba3c86afb542729f1c7de62b7224",
+    "scripts/render_pad_contact_review.py": "82af2413a6e27471f4f67efda3dbf60f7e9b0432515a42d70d4ccd12f40d7318"
+  },
+  "output": "output/review/pad_contact_sweep.png",
+  "output_sha256": "adbb6682276ac7987fab85827973668f0960706018aa84f5c6a8141248e81790",
+  "limitations": "Native pad/track geometry screen. Connected approach bends are intentional; native DRC, exported copper checks, DC analysis and physical qualification remain separate."
+}

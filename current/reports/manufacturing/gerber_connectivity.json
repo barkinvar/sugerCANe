@@ -4,7 +4,7 @@
   "maximum_arc_approximation_error_mm": 0.001,
   "copper_area_mm2": {
     "top": 1353.3895816990976,
-    "bottom": 1338.7241675828968,
+    "bottom": 1338.501603041308,
     "inner_2": 1433.2216855430215,
     "inner_1": 1838.9983064902544
   },
@@ -27,6 +27,6 @@
   },
   "unassigned_copper_islands": 0,
   "unassigned_copper_area_mm2": 0.0,
-  "elapsed_seconds": 0.7675154259777628,
+  "elapsed_seconds": 0.7652122360304929,
   "limitations": "Plated holes represented as connected filled pad centers; no barrel manufacturing defect, annular-ring fracture, impedance, thermal or EMC model. Positive Gerber primitives only."
 }

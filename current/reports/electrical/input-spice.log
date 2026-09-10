@@ -1,10 +1,10 @@
 logic_limits True
-pnp True
-npn True
 pushpull True
-hysteresis True
-float_driven True
+npn True
+pnp True
 supply_reset True
+float_driven True
+hysteresis True
 float_open True
-logic_limits_half_step True
 pushpull_half_step True
+logic_limits_half_step True

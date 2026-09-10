@@ -19,6 +19,33 @@ def audit(*tracks, pads=(), vias=(), width_policy=None):
 
 
 class RoutingRules(unittest.TestCase):
+    def test_passing_track_cannot_graze_pad(self):
+        pad=dict(net='SIG',layer=0,polygons=[[(-.5,-.5),(.5,-.5),(.5,.5),(-.5,.5)]])
+        findings=audit(track((-2,.6),(2,.6)),pads=[pad])['findings']
+        self.assertEqual(len(findings['incidental_pad_contacts']),1)
+
+    def test_separate_pad_entry_does_not_excuse_corner_contact(self):
+        pad=dict(net='SIG',layer=0,polygons=[[(-.5,-.5),(.5,-.5),(.5,.5),(-.5,.5)]])
+        findings=audit(track((-2,.6),(2,.6)),track((0,-2),(0,0)),pads=[pad])['findings']
+        self.assertEqual(len(findings['incidental_pad_contacts']),1)
+
+    def test_connected_pad_approach_bend_is_valid(self):
+        pad=dict(net='SIG',layer=0,polygons=[[(-.5,-.5),(.5,-.5),(.5,.5),(-.5,.5)]])
+        result=audit(track((2,.6),(.6,.6),width=.3),track((.6,.6),(0,0),width=.3),pads=[pad])
+        self.assertNotIn('incidental_pad_contacts',result['findings'])
+        self.assertEqual(len(result['pad_contact_audit']['connected_approach_contacts']),1)
+
+    def test_remote_connection_does_not_excuse_pad_contact(self):
+        pad=dict(net='SIG',layer=0,polygons=[[(-.5,-.5),(.5,-.5),(.5,.5),(-.5,.5)]])
+        result=audit(track((2,.6),(-2,.6)),track((-2,.6),(-2,-2)),
+                     track((-2,-2),(0,-2)),track((0,-2),(0,0)),pads=[pad])
+        self.assertEqual(len(result['findings']['incidental_pad_contacts']),1)
+
+    def test_pad_contact_check_respects_layers(self):
+        pad=dict(net='SIG',layer=0,polygons=[[(-.5,-.5),(.5,-.5),(.5,.5),(-.5,.5)]])
+        result=audit(track((-2,.6),(2,.6),layer=2),pads=[pad])
+        self.assertNotIn('incidental_pad_contacts',result['findings'])
+
     def test_contact_halo_does_not_hide_overshoot(self):
         pad=dict(net='SIG', layer=0, polygons=[[(-.2,-.2),(.2,-.2),(.2,.2),(-.2,.2)]])
         self.assertIn('short_free_segments', audit(track((.22,0),(.27,0)), pads=[pad])['findings'])
