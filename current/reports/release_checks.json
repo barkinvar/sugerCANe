@@ -1,7 +1,12 @@
 {
   "revision": "H SC12",
   "status": "HOLD: JLC sourcing candidate; simulations deferred until user approval",
-  "order_decision": "HOLD: user approval and new simulations pending; MCU sourcing and factory stack/quote unconfirmed",
+  "order_decision": "HOLD: user approval and new simulations pending; MCU sourcing, C1 reflow and factory stack/quote unconfirmed",
+  "manufacturing_holds": [
+    "Exact MCU/public stock shortage; procurement unconfirmed",
+    "C1 profile (2) permits 235 C peak; nominal Standard process can reach 245 C",
+    "Factory qualification of all exact-part solder profiles and moisture handling is pending"
+  ],
   "simulation_deferred_by_user": true,
   "physical_tests_performed": false,
   "erc_violations": 0,
@@ -23,7 +28,7 @@
     "bom/BOM_grouped.csv": "707b009bab2720d4df2d9bd3da51f75166f313cf913b9c255e3e6eaa9be4178e",
     "bom/BOM_JLCPCB.csv": "10277d76b991fed2259d62a83f88b4f9f150c63aa82ec869b0895cd85abdcd5b",
     "bom/Factory_BOM.csv": "1bcd08b11bb784d48a6ee393300d054345cff93bd6e4d71e55e10136c156230f",
-    "bom/jlc_sourcing.json": "de699e17394fe23a5f3a5f6816fc92d455dab99e66c216bc6fcbb95467a26fc2",
+    "bom/jlc_sourcing.json": "2d367540ddf152dfb8985a9896ed081e92549517d75a47bc6a4d9f0e3fae9c18",
     "output/assembly/CPL_JLCPCB.csv": "faff9a8477f2f79eb601effea500a8eaf37dd6f02ebab33591ff9f4e656fbb0e",
     "reports/erc/final.json": "d2476346a2eb4d47fa31b10cb6071c88e5cc6bea552ded7fe6b79f965332a8ec",
     "reports/drc/final.json": "7630ee23ca71d39d684bd3cdc0118b7ce175d9c51705fa807d869609a13db643",
@@ -34,7 +39,7 @@
     "reports/manufacturing/verification.json": "51e6039630c6a53936be39202f5260c62aaa918544e0d28f117c5e3da910ca4e",
     "reports/manufacturing/gerber_connectivity.json": "1f90cc8f4a4b162bfbf82fad30b7618033a0a0ac6e27b6e1edb7cbe6f6a42d54",
     "reports/manufacturing/gerber_geometry.json": "f71f35e5d78926325df6302206d119b2c56fa05c017d154fe9d1262a19e1f2b3",
-    "reports/manufacturing/jlc_sourcing.json": "5a4ba236cc26bf4122079fcc97569aae6864652ec9c9780be1ef396289392fd4",
+    "reports/manufacturing/jlc_sourcing.json": "6994f764814b08fbe4f785b187c03bb01cbc8f532aef2ea788478f047306fe68",
     "reports/manufacturing/factory_files.json": "cd932d3db66704c6d13341d7a7c549f44180a7056a68eba9e5ecb39dc2b78f1b",
     "hardware/FRC_Sensor_CAN.kicad_sch": "d536746e8aea9ca88743493b2bd7c7d42fa3786f5bd90ebce42ce876038cdf36",
     "hardware/can.kicad_sch": "731ce88665c283b6e6c71f94d28fcf3137dfc1af43014fe3c6a016ce82000322",
@@ -47,5 +52,5 @@
     "hardware/regulated_12v.kicad_sch": "bbec6fc9fb0604f0b3146ce5eb492a9980056257876507a704de8685270d9f36",
     "hardware/sensor_power.kicad_sch": "f7808b7fc9a76a190dd9a59c856ae6c4f504e92caea8deb139067b307e0af3ce"
   },
-  "limitations": "CAD and sourcing consistency only. Full power/input screening, final factory allocation, stack and physical qualification remain pending."
+  "limitations": "CAD and sourcing consistency only. Full power/input screening, C1 reflow, final factory allocation, stack and physical qualification remain pending."
 }

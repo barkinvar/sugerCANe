@@ -29,7 +29,7 @@ For historical context, the original H RGB/header change added $0.18 in parts ve
 
 There are **130 top-side SMT placements across 55 exact MPN types** and **ten hand-soldered through-hole parts (49 joints)**. Hand fit J1–J6, J8 and JP101/JP201/JP301. The output eFuse's exposed-pad paste pattern and thermal vias remain required.
 
-Compared with G, the two additional SMT types add approximately $3.06 per Standard assembly order in feeder fees, or $0.31 per board at ten, before placement/inspection changes. If both are charged extended types under Economic assembly, the increment is approximately $0.61 per board. Exact eligibility and charges require a quote. Those historical increments are not a complete assembled-price comparison for the newly sourced BOM. [JLCPCB fee basis, checked 2026-09-09](https://jlcpcb.com/help/article/pcb-assembly-price).
+Compared with G, the two additional SMT types add approximately $3.06 per Standard assembly order in feeder fees, or $0.31 per board at ten, before placement/inspection changes. D10 requires Standard PCBA, so an Economic assembly comparison is not available for the current BOM. Those historical increments are not a complete assembled-price comparison for the newly sourced BOM. [JLCPCB fee basis, checked 2026-09-09](https://jlcpcb.com/help/article/pcb-assembly-price).
 
 The recessed service socket avoids buying a dedicated pogo cable. Reuse one programmer and mapped harness for all boards; an existing suitable ST-Link can avoid buying a new probe. [Programming options and one-time tool cost](STATUS_AND_PROGRAMMING.md).
 
@@ -41,7 +41,7 @@ At ten boards, budget **$3–6 extra per board** for assembly on both sides, ass
 
 ## Quotation and delivery
 
-Use the matched JLC BOM/CPL with the same top-side SMT scope for both Economic and Standard quotes. The snapshot contains 12 basic, one preferred extended and 42 ordinary extended SMT types. Posted setup/stencil/loading fees total $138.65 Economic or $134.34 Standard including two fixtures; placement, X-ray, PCB, handling and shipping are additional. Do not assume Economic is cheaper without the complete quote.
+Use the matched JLC BOM/CPL for **Standard PCBA** with top-side SMT. The exact OPSCO LED is Standard Only. Posted setup/stencil/loading fees total $134.34 including two fixtures at ten boards; placement, X-ray, PCB/panel rails, handling and shipping are additional. Standard charges loading for all 55 types, including basic/preferred parts; additional resistor swaps would save only pennies, so they were not implemented. C1's 235°C reflow limit also needs a qualified process or a reviewed capacitor replacement before ordering. [Assembly audit](JLC_SOURCING.md#solder-process-audit).
 
 The [assembly scenarios](../bom/assembly_scenarios.csv) are partial fee calculations, before attrition. No supplier has been contacted or order placed. The exact MCU must be sourced, while U9 and L2 have limited stock. No inventory is allocated.
 

@@ -8,7 +8,7 @@ The bold pixel **sugarCANe** wordmark and original pixel-cane illustration on a 
 
 Rev H adds one enclosure-facing RGB status LED and a hand-soldered recessed female programming socket for a ten-board batch. The LED is on the right, above the mounting hole, with a 6 mm circular area reserved for a printed light duct; see the [enclosure dimensions](docs/STATUS_AND_PROGRAMMING.md#enclosure-location). It retains Rev G's power protection and physical voltage jumpers. The 12 V reservoir is upstream of a controlled output eFuse; both rails have default-off enables and CAN fault reset. Two ADC channels measure the protected rails. [Engineering review](docs/ORDER_READINESS.md) · [verification and bench procedure](docs/VALIDATION.md). This design uses its own CAN protocol; it is not CTRE Phoenix or GrappleHook compatible.
 
-**Rev H status:** JLC sourcing candidate with all 55 SMT types matched; public stock covers 54 for ten boards. U5 needs exact-part sourcing. Native CAD checks pass; new simulations are deferred until user approval. Existing power/input reports are baseline evidence, with full coupled startup already incomplete. [Review the substitutions](docs/JLC_SOURCING.md) · [check summary](reports/release_checks.json).
+**Rev H status:** JLC sourcing candidate with all 55 SMT types matched; public stock covers 54 for ten boards. U5 needs exact-part sourcing. D10 requires Standard PCBA; C1's reflow profile remains an order hold. Native CAD checks pass; new simulations are deferred until user approval. Existing power/input reports are baseline evidence, with full coupled startup already incomplete. [Review the substitutions](docs/JLC_SOURCING.md) · [check summary](reports/release_checks.json).
 
 ![Rev H board](output/review/board_3d_final.png)
 

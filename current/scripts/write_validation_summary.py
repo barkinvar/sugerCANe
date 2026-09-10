@@ -16,10 +16,10 @@ for path,digest in routing['source_hashes'].items():
  assert digest==hashlib.sha256((R/path).read_bytes()).hexdigest(),('Stale routing evidence',path)
 assembly=read('reports/manufacturing/verification.json');assert assembly['result']=='PASS'
 copper=read('reports/manufacturing/gerber_connectivity.json');geometry=read('reports/manufacturing/gerber_geometry.json');assert copper['result']==geometry['result']=='PASS'
+sourcing=read('reports/manufacturing/jlc_sourcing.json')
+for path,digest in sourcing['input_hashes'].items():
+ assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale sourcing audit',path)
 if args.defer_simulation:
- sourcing=read('reports/manufacturing/jlc_sourcing.json')
- for path,digest in sourcing['input_hashes'].items():
-  assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale sourcing audit',path)
  paths=['hardware/FRC_Sensor_CAN.kicad_pcb','hardware/design/circuit.json','bom/BOM_grouped.csv',
   'bom/BOM_JLCPCB.csv','bom/Factory_BOM.csv','bom/jlc_sourcing.json','output/assembly/CPL_JLCPCB.csv',
   'reports/erc/final.json','reports/drc/final.json','reports/design_parity.json','reports/routing_rules.json',
@@ -28,13 +28,13 @@ if args.defer_simulation:
   'reports/manufacturing/jlc_sourcing.json','reports/manufacturing/factory_files.json']
  paths += [p.relative_to(R).as_posix() for p in sorted((R/'hardware').glob('*.kicad_sch'))]
  out=dict(revision='H SC12',status='HOLD: JLC sourcing candidate; simulations deferred until user approval',
-  order_decision=sourcing['order_decision'],simulation_deferred_by_user=True,physical_tests_performed=False,
+  order_decision=sourcing['order_decision'],manufacturing_holds=sourcing['manufacturing_holds'],simulation_deferred_by_user=True,physical_tests_performed=False,
   erc_violations=0,drc_violations=0,unconnected_items=0,model_schematic_pcb_parity=True,
   fitted_parts=140,manufacturing_layers=11,copper_layers=4,gerber_shorts=copper['shorts'],gerber_opens=copper['opens'],
   prior_simulation_evidence=dict(baseline_commit=read('bom/jlc_sourcing.json')['baseline_commit'],
     scope='Existing electrical reports belong to the pre-substitution BOM; no new simulation claim. Full coupled startup was already incomplete.'),
   input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in paths},
-  limitations='CAD and sourcing consistency only. Full power/input screening, final factory allocation, stack and physical qualification remain pending.')
+  limitations='CAD and sourcing consistency only. Full power/input screening, C1 reflow, final factory allocation, stack and physical qualification remain pending.')
  (R/'reports/release_checks.json').write_text(json.dumps(out,indent=2)+'\n')
  print(out['status']);sys.exit(0)
 fw=(R/'reports/firmware-tests.log').read_text();drivers=(R/'reports/driver/tests.log').read_text()
@@ -87,6 +87,7 @@ tracked += ['reports/erc/final.json','reports/drc/final.json','reports/design_pa
             'reports/manufacturing/gerber_geometry.json','reports/manufacturing/factory_files.json',
             'reports/document_review.json','reports/visual_review.json','output/documentation/SC12_RevH_Handbook.pdf']
 if not complete:tracked += ['reports/electrical/boost_spice_partial.json','reports/electrical/boost_spice_partial.png']
+tracked += ['bom/jlc_sourcing.json','reports/manufacturing/jlc_sourcing.json',*sourcing['input_hashes']]
 factory=read('reports/manufacturing/factory_files.json');assert factory['result']=='PASS' and factory['factory_smt_placements']==130 and factory['hand_solder_parts']==10
 tracked += [p.relative_to(R).as_posix() for p in sorted((R/'hardware').glob('*.kicad_sch')) if p.name!='FRC_Sensor_CAN.kicad_sch']
 out=dict(revision='H SC12',status='PASS engineering checks; physical qualification pending',physical_tests_performed=False,erc_violations=0,drc_violations=0,unconnected_items=0,model_schematic_pcb_parity=True,fitted_parts=140,portable_models=assembly['portable_models_verified'],manufacturing_layers=assembly['graphic_layers'],copper_layers=4,gerber_shorts=copper['shorts'],gerber_opens=copper['opens'],net_tie_isolation=copper['intentional_net_tie_isolation']['extra_shorts'],firmware_core_tests='PASS under ASan/UBSan',firmware_application_scenarios=scenarios,java_assertions=java,python_test_methods=13,can_service_tests="8 host methods plus 2148 simulated flash boundaries",arm_register_tests=read("reports/firmware-arm-registers.json")["result"],bridge_tests="Real TCP with mock CAN; 2026 and 2027 adapters compile",cpp_tests='PASS under ASan/UBSan; WPILib example compiled',analytical_CCM_loop_corners=loop['corners'],input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in tracked},limitations='No measured efficiency, thermal, surge, EMC, sensor startup, actual MCU/CAN, solder yield or enclosure fit qualification. See docs/VALIDATION.md.')
@@ -119,4 +120,8 @@ if not complete:
  else:
   out['failed_power_cases']=[r['case']['name'] for r in spice['cases'] if not r['pass']]
   out['combined_solver_repeat_pass']=spice.get('combined_solver_repeat',{}).get('pass',False)
+out['manufacturing_holds']=sourcing['manufacturing_holds']
+if sourcing['manufacturing_holds']:
+ out['status']='HOLD full release: unresolved sourcing or factory process qualification'
+ out['order_decision']='HOLD: '+'; '.join(sourcing['manufacturing_holds'])
 (R/'reports/release_checks.json').write_text(json.dumps(out,indent=2)+'\n');print(out['status'])

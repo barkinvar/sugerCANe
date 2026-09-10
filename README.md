@@ -10,7 +10,7 @@ A compact interface for **three NPN, PNP or logic sensors** on an FRC robot. Eac
 
 Rev H adds one RGB status LED on the right, with space for a printed light duct, and a recessed female programming socket for small batches. It retains G's protected sensor supplies, CAN fault reset and rail measurements. See [the engineering review](current/docs/ORDER_READINESS.md) for the evidence and remaining physical tests.
 
-**JLC sourcing candidate:** six passive types now use stocked equivalents, and all 55 SMT types have JLC codes. Stock covers 54 types for ten boards; the exact MCU still needs sourcing. Native CAD checks pass. New simulations wait for user approval, and the release stays on HOLD. [Substitutions and next steps](current/docs/JLC_SOURCING.md) · [check summary](current/reports/release_checks.json).
+**JLC sourcing candidate:** six passive types now use stocked equivalents, and all 55 SMT types have JLC codes. Stock covers 54 types for ten boards; the exact MCU still needs sourcing. D10 requires Standard PCBA, and C1's reflow profile needs resolution before ordering. Native CAD checks pass. New simulations wait for user approval, and the release stays on HOLD. [Substitutions and next steps](current/docs/JLC_SOURCING.md) · [check summary](current/reports/release_checks.json).
 
 ![SC12 Rev H](current/output/review/board_3d_final.png)
 

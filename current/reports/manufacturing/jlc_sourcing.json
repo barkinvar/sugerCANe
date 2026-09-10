@@ -1,6 +1,6 @@
 {
-  "result": "PASS sourcing-file consistency; HOLD public-stock shortage",
-  "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+  "result": "PASS sourcing-file consistency; HOLD manufacturing review",
+  "observed_utc": "2026-09-10T00:34:40.369868+00:00",
   "boards": 10,
   "factory_placements": 130,
   "matched_mpn_types": 55,
@@ -23,19 +23,74 @@
   "smt_parts_with_conservative_attrition_per_board_usd": 17.78,
   "manual_parts_per_board_usd": 8.7,
   "combined_parts_budget_per_board_usd": 26.48,
-  "economic_setup_stencil_loading_budget_per_order_usd": 138.65,
+  "selected_service": "Standard",
+  "economic_eligible": false,
+  "economic_blockers": [
+    {
+      "mpn": "SK6805-EC15",
+      "references": [
+        "D10"
+      ],
+      "source_url": "https://jlcpcb.com/partdetail/C2890035"
+    }
+  ],
+  "standard_setup_stencil_loading_two_fixtures_per_order_usd": 134.34,
+  "moisture_sensitive_parts": [
+    {
+      "references": [
+        "U7"
+      ],
+      "msl": "MSL 3"
+    },
+    {
+      "references": [
+        "D10"
+      ],
+      "msl": "MSL 4"
+    },
+    {
+      "references": [
+        "U5"
+      ],
+      "msl": "MSL 3"
+    }
+  ],
+  "nominal_standard_reflow_conflicts": [
+    {
+      "reference": "C1",
+      "mpn": "EEE-FK1H470P",
+      "profile": "Panasonic profile (2), diameter 8 mm",
+      "peak_C": 235,
+      "peak_duration_s": 5,
+      "time_at_or_above_200C_s": 60,
+      "maximum_cycles": 1,
+      "resolution": "HOLD: obtain a factory-qualified profile within these limits, or review a high-temperature capacitor and its footprint before changing the BOM.",
+      "series_datasheet": "sources/datasheets/panasonic_fk.pdf",
+      "soldering_datasheet": "sources/datasheets/panasonic_reflow.pdf"
+    }
+  ],
+  "manufacturing_holds": [
+    "Exact MCU/public stock shortage; procurement unconfirmed",
+    "C1 profile (2) permits 235 C peak; nominal Standard process can reach 245 C",
+    "Factory qualification of all exact-part solder profiles and moisture handling is pending"
+  ],
   "quantity_method": "Conservative budget: max(fitted quantity plus displayed lossNumber, leastPatchNumber, minPurchaseNum). Actual checkout attrition/minimums may differ.",
   "factory_allocation_confirmed": false,
   "only_reviewed_mpn_metadata_changed": true,
-  "order_decision": "HOLD: user approval and new simulations pending; MCU sourcing and factory stack/quote unconfirmed",
+  "order_decision": "HOLD: user approval and new simulations pending; MCU sourcing, C1 reflow and factory stack/quote unconfirmed",
   "limitations": "Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.",
   "input_hashes": {
-    "bom/jlc_sourcing.json": "de699e17394fe23a5f3a5f6816fc92d455dab99e66c216bc6fcbb95467a26fc2",
+    "bom/jlc_sourcing.json": "2d367540ddf152dfb8985a9896ed081e92549517d75a47bc6a4d9f0e3fae9c18",
     "bom/catalog_china.json": "2f6c5aa94e4fa244699916afbd5e3491fccada22058eac77c01d8ce95f949f41",
     "bom/Factory_BOM.csv": "1bcd08b11bb784d48a6ee393300d054345cff93bd6e4d71e55e10136c156230f",
     "bom/BOM_JLCPCB.csv": "10277d76b991fed2259d62a83f88b4f9f150c63aa82ec869b0895cd85abdcd5b",
+    "output/assembly/CPL_JLCPCB.csv": "faff9a8477f2f79eb601effea500a8eaf37dd6f02ebab33591ff9f4e656fbb0e",
     "hardware/design/circuit.json": "3f077ab74530cf41d072d848b7192e28bee21ccba3a22e8232b252556e57556c",
     "hardware/FRC_Sensor_CAN.kicad_pcb": "85f74e465e756b93e1b06f61adb20a1a58a1414991ad05d22cc8444673235f61",
-    "scripts/check_jlc_sourcing.py": "112402d52009883524ce9c6c141d1a79896f60b7c45bb2f4760a093ac263d5a6"
+    "scripts/check_jlc_sourcing.py": "d29d930f58ac858be07c4daa062358867d58d3d9408fdcfe1128dba8c444cdd0",
+    "sources/datasheets/yageo_np0.pdf": "495287fc811dc714366f2edd3bc974d98d2d80133266a0a73bb01ac01237e3eb",
+    "sources/datasheets/uniroyal_thick_film.pdf": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
+    "sources/datasheets/panasonic_fk.pdf": "b36857d089adaddf3042b33bf11d0f7d83bf70734e983f33b7827152e11854e3",
+    "sources/datasheets/panasonic_reflow.pdf": "5302db62f18432e9964c56852637c880569055ff5b962dba6d4b1a254ada8aac"
   }
 }

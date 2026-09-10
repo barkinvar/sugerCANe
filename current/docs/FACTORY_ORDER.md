@@ -1,6 +1,6 @@
 # Rev H prototype fabrication and assembly order
 
-Rev H now has a [JLC sourcing candidate](JLC_SOURCING.md): all 55 SMT types have JLC codes; 54 have sufficient public stock for ten boards. The exact MCU needs sourcing. New simulations are paused until user approval of the six passive substitutions. Review/quotation files are available; the full-release order package remains on HOLD. Previous Rev G ZIPs are historical and must not be ordered as Rev H.
+Rev H now has a [JLC sourcing candidate](JLC_SOURCING.md): all 55 SMT types have JLC codes; 54 have sufficient public stock for ten boards. The exact MCU needs sourcing, D10 requires Standard PCBA and C1 reflow remains unresolved. New simulations are paused until user approval of the six passive substitutions. Review/quotation files are available; the full-release order package remains on HOLD. Previous Rev G ZIPs are historical and must not be ordered as Rev H.
 
 For quotation, use [BOM_JLCPCB.csv](../bom/BOM_JLCPCB.csv), [CPL_JLCPCB.csv](../output/assembly/CPL_JLCPCB.csv), the [fabrication exports](../output/fabrication/) and [Factory_BOM.csv](../bom/Factory_BOM.csv) for exact-MPN matching. Read the [engineering review](ORDER_READINESS.md) and [physical acceptance procedure](VALIDATION.md). No factory quotation or order is included.
 
@@ -39,11 +39,13 @@ Use exact TPS61085DGKR for U8, latch-off TPS2553DBVR-1 for U4 and TPS259620DDAR 
 
 D10 is OPSCO SK6805-EC15 (C2890035), with the exact supplied A/1 pin layout; U10 is SN74AHCT1G125DBVR. Inspect VSSOP/MCU lead joints, diode polarity and all passive values. Perform unpowered shorts/selector checks, staged current-limited bring-up, firmware programming/readback and rail/input/CAN tests. Track every component substitution and lot.
 
+**Use Standard PCBA: D10 is catalogued Standard Only and MSL 4.** Control moisture exposure/baking as required for the exact part; U5 and U7 are MSL 3. **C1 reflow is an unresolved order hold:** EEE-FK1H470P uses Panasonic profile (2): 235°C peak, 5 seconds at peak, 60 seconds at or above 200°C, one cycle. JLC's nominal Standard profile is 240 ±5°C. Obtain a factory-qualified profile meeting the entire BOM's limits, or complete a capacitor/footprint substitution review before manufacture. Do not silently run the nominal profile or substitute a same-value capacitor. [Audit and manufacturer specifications](JLC_SOURCING.md#solder-process-audit).
+
 ## Sourcing, cost and delivery
 
 [Cost reduction and batch estimates](COST_REDUCTION.md) separate parts from assembly. The [public JLC snapshot](../bom/jlc_sourcing.json) covers all SMT MPNs, but it does not reserve inventory. U5 / STM32F042K6T6 / C69216 has no available public stock. Arrange exact-part JLC sourcing and confirm arrival before assembly; changing MCU silicon or package requires a separate design review.
 
-Request Economic and Standard PCBA quotes with the same SMT-only scope. The snapshot has 42 ordinary extended types; posted fixed fees are close ($138.65 Economic versus $134.34 Standard with two fixtures), so Economic is not automatically cheaper. Standard may need factory rails because the board is only 52 mm wide. Confirm the final four-layer stack, nominal 35 um copper on every layer and component-compatible reflow profile. No programming or functional-test service is included unless separately quoted; the user performs bring-up and programming.
+Request Standard PCBA with the SMT-only scope. Economic is unavailable for the current D10. Posted fixed fees total $134.34 including two fixtures at ten boards; other charges are extra. Factory rails/panelization must meet the 70 × 70 mm Standard minimum while preserving the delivered outline and connector access. Confirm the final four-layer stack, nominal 35 um copper on every layer and component-compatible reflow profile. No programming or functional-test service is included unless separately quoted; the user performs bring-up and programming.
 
 One-month delivery is unconfirmed. Obtain allocated-part dates, CAM/assembly timing and a destination-specific tracked express quote before scheduling the robot build. Procurement holds and customs may exceed the target. Order hand-fitted parts in parallel once the BOM is finalized.
 

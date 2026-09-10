@@ -1,6 +1,6 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-10T00:23:12.378655+00:00",
+  "reviewed_utc": "2026-09-10T00:39:18.296684+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
@@ -36,15 +36,15 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "050d5accd6d4d89dac6c9c333932e3f6806cc7f170f58f39ac342114da69e546",
-      "scope": "All 39 pages compared against 8d4deb4 at 1x. Changed pages 2, 3, 4, 5, 24, 25, 33, 34, 35, 36, 37, 38, 39 visually inspected after JLC sourcing update: readable tables/status, no clipped or overlapping content.",
-      "reviewed_utc": "2026-09-10T00:23:12.378655+00:00"
+      "sha256": "903e65950203a32f2856a11dc8677f3e538b8437c6f76e82ea9777a37fe54b07",
+      "scope": "All 39 pages compared against 26a31d8 at 1x; changed pages 3, 15, 24, 25, 33, 34 visually inspected. Standard-only assembly, C1 reflow hold, status and cost text remain readable without clipping or overlap.",
+      "reviewed_utc": "2026-09-10T00:39:18.296684+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
-      "sha256": "500e995b0c6d48755ab7e27797306207a7c26f7cc898caca6a4b044605e477c1",
-      "scope": "All 3 pages compared against 8d4deb4 at 1x. Changed pages 1, 2, 3 visually inspected after JLC sourcing update: readable tables/status, no clipped or overlapping content.",
-      "reviewed_utc": "2026-09-10T00:23:12.378655+00:00"
+      "sha256": "21bd517fd4b55f6f7cf781b0e09b3eaec7d70976d9d49200fe71da6df0ac76c9",
+      "scope": "All 3 pages compared against 26a31d8 at 1x; changed pages 1, 2 visually inspected. Standard-only assembly, C1 reflow hold, status and cost text remain readable without clipping or overlap.",
+      "reviewed_utc": "2026-09-10T00:39:18.296684+00:00"
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
@@ -206,5 +206,35 @@
     "board_sha256": "fd0300a03fefe04b3450b189a5eaf8c5ebc6f14a9a142200d0e18a809b69be98",
     "scope": "Routing cleanup only; no component, electrical-function, BOM or firmware changes. Final routing, DRC, parity, local bypass, exported Gerber and DC-drop reports are separate gates."
   },
-  "sourcing_geometry_note": "Board byte content matches 8d4deb4 after reversing only nine reviewed MPN strings. Existing physical renders and their visual reviews remain valid."
+  "sourcing_geometry_note": "Board byte content matches 8d4deb4 after reversing only nine reviewed MPN strings. Existing physical renders and their visual reviews remain valid.",
+  "assembly_audit_document_comparison": {
+    "baseline_commit": "26a31d8859a3b7bdf73beb16c652f51b8c65de3b",
+    "documents": {
+      "output/documentation/SC12_RevH_Handbook.pdf": {
+        "before_pages": 39,
+        "after_pages": 39,
+        "changed_pages": [
+          3,
+          15,
+          24,
+          25,
+          33,
+          34
+        ]
+      },
+      "output/documentation/BOM_RevH_SC12.pdf": {
+        "before_pages": 3,
+        "after_pages": 3,
+        "changed_pages": [
+          1,
+          2
+        ]
+      },
+      "output/mechanical/mechanical_drawing.pdf": {
+        "before_pages": 2,
+        "after_pages": 2,
+        "changed_pages": []
+      }
+    }
+  }
 }

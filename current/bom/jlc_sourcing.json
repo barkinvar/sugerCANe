@@ -1,10 +1,10 @@
 {
-  "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+  "observed_utc": "2026-09-10T00:34:40.369868+00:00",
   "batch_boards": 10,
   "baseline_commit": "8d4deb4f51a6603b7e28a6b035f7ab955d4dc5f1",
   "baseline_model_sha256": "cf9e272fb1d32b9ad6e04e69c37d37f8c2610410835bd46e6231c3692547903e",
   "baseline_board_sha256": "fd0300a03fefe04b3450b189a5eaf8c5ebc6f14a9a142200d0e18a809b69be98",
-  "scope": "Public JLC catalog snapshot; no reservation, cart, factory quotation or guaranteed delivery. MCU shortage remains.",
+  "scope": "Public JLC catalog snapshot; no reservation, cart, factory quotation or guaranteed delivery. MCU stock and C1 reflow remain unresolved; D10 requires Standard PCBA.",
   "quantity_method": "Conservative budget: max(fitted quantity plus displayed lossNumber, leastPatchNumber, minPurchaseNum). Actual checkout attrition/minimums may differ.",
   "substitutions": [
     {
@@ -93,6 +93,16 @@
       "file": "sources/datasheets/uniroyal_thick_film.pdf",
       "sha256": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
       "source_url": "https://datasheet.lcsc.com/lcsc_datasheet_2206010200_UNI-ROYAL-Uniroyal-Elec-0805W8F2203T5E_C17556.pdf"
+    },
+    {
+      "file": "sources/datasheets/panasonic_fk.pdf",
+      "sha256": "b36857d089adaddf3042b33bf11d0f7d83bf70734e983f33b7827152e11854e3",
+      "source_url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1181.pdf"
+    },
+    {
+      "file": "sources/datasheets/panasonic_reflow.pdf",
+      "sha256": "5302db62f18432e9964c56852637c880569055ff5b962dba6d4b1a254ada8aac",
+      "source_url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/DME0000COL48.pdf"
     }
   ],
   "parts": [
@@ -105,7 +115,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C13982",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 45514,
       "available_to_order": 45387,
       "minimum_purchase": 1,
@@ -146,7 +156,15 @@
       ],
       "ten_board_budget_quantity": 12,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "0451003.MRL",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "0805W8F1001T5E",
@@ -160,9 +178,9 @@
       ],
       "quantity_per_board": 4,
       "source_url": "https://jlcpcb.com/partdetail/C17513",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
-      "public_stock": 31296492,
-      "available_to_order": 30036572,
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "public_stock": 31295600,
+      "available_to_order": 30035680,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -201,7 +219,15 @@
       ],
       "ten_board_budget_quantity": 50,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "0805W8F1001T5E",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "Not stated"
     },
     {
       "mpn": "0805W8F1002T5E",
@@ -223,9 +249,9 @@
       ],
       "quantity_per_board": 12,
       "source_url": "https://jlcpcb.com/partdetail/C17414",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
-      "public_stock": 54982325,
-      "available_to_order": 52986124,
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "public_stock": 54980033,
+      "available_to_order": 52983832,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -264,7 +290,15 @@
       ],
       "ten_board_budget_quantity": 130,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "0805W8F1002T5E",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "Not stated"
     },
     {
       "mpn": "0805W8F1003T5E",
@@ -282,9 +316,9 @@
       ],
       "quantity_per_board": 8,
       "source_url": "https://jlcpcb.com/partdetail/C149504",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
-      "public_stock": 5110481,
-      "available_to_order": 4767802,
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "public_stock": 5110219,
+      "available_to_order": 4767540,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -323,7 +357,15 @@
       ],
       "ten_board_budget_quantity": 90,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "0805W8F1003T5E",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "Not stated"
     },
     {
       "mpn": "0805W8F3300T5E",
@@ -334,9 +376,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C17630",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
-      "public_stock": 2476056,
-      "available_to_order": 2322034,
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "public_stock": 2475999,
+      "available_to_order": 2321977,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -375,7 +417,15 @@
       ],
       "ten_board_budget_quantity": 20,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "0805W8F3300T5E",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "Not stated"
     },
     {
       "mpn": "ABM3B-8.000MHZ-B2-T",
@@ -386,7 +436,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C83312",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 7076,
       "available_to_order": 7026,
       "minimum_purchase": 1,
@@ -427,7 +477,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "ABM3B-8.000MHZ-B2-T",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "Not stated"
     },
     {
       "mpn": "AO3401A",
@@ -440,9 +498,9 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C15127",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
-      "public_stock": 421216,
-      "available_to_order": 313410,
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "public_stock": 418600,
+      "available_to_order": 310794,
       "minimum_purchase": 1,
       "minimum_assembly": 5,
       "attrition_allowance": 4,
@@ -481,7 +539,15 @@
       ],
       "ten_board_budget_quantity": 34,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "AO3401A",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "AO4485",
@@ -492,7 +558,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C51499",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 73264,
       "available_to_order": 72861,
       "minimum_purchase": 1,
@@ -533,7 +599,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "AO4485",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "AP2112K-3.3TRG1",
@@ -544,7 +618,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C51118",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 62484,
       "available_to_order": 60591,
       "minimum_purchase": 1,
@@ -585,7 +659,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "AP2112K-3.3TRG1",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "B240A-13-F",
@@ -597,7 +679,7 @@
       ],
       "quantity_per_board": 2,
       "source_url": "https://jlcpcb.com/partdetail/C92506",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 164297,
       "available_to_order": 164252,
       "minimum_purchase": 1,
@@ -638,7 +720,15 @@
       ],
       "ten_board_budget_quantity": 24,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "B240A-13-F",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "BAT46W-E3-18",
@@ -651,7 +741,7 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C5557780",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 4739,
       "available_to_order": 4733,
       "minimum_purchase": 1,
@@ -692,7 +782,15 @@
       ],
       "ten_board_budget_quantity": 34,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "BAT46W-E3-18",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "BSS138BK,215",
@@ -707,7 +805,7 @@
       ],
       "quantity_per_board": 5,
       "source_url": "https://jlcpcb.com/partdetail/C282529",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 71061,
       "available_to_order": 70862,
       "minimum_purchase": 1,
@@ -748,7 +846,15 @@
       ],
       "ten_board_budget_quantity": 54,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "BSS138BK,215",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "CC0805JRNPO9BN300",
@@ -760,7 +866,7 @@
       ],
       "quantity_per_board": 2,
       "source_url": "https://jlcpcb.com/partdetail/C107114",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 366601,
       "available_to_order": 342783,
       "minimum_purchase": 1,
@@ -801,7 +907,15 @@
       ],
       "ten_board_budget_quantity": 30,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "CC0805JRNPO9BN300",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "CC0805JRNPO9BN102",
@@ -814,7 +928,7 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C62774",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 1153391,
       "available_to_order": 1143565,
       "minimum_purchase": 1,
@@ -855,7 +969,15 @@
       ],
       "ten_board_budget_quantity": 40,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "CC0805JRNPO9BN102",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "CC0805KRX7R9BB333",
@@ -866,7 +988,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C107150",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 1808891,
       "available_to_order": 1804261,
       "minimum_purchase": 1,
@@ -907,7 +1029,15 @@
       ],
       "ten_board_budget_quantity": 20,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "CC0805KRX7R9BB333",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "CL21B103KBANNNC",
@@ -919,9 +1049,9 @@
       ],
       "quantity_per_board": 2,
       "source_url": "https://jlcpcb.com/partdetail/C1710",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
-      "public_stock": 3012167,
-      "available_to_order": 2689345,
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "public_stock": 3011347,
+      "available_to_order": 2688525,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -960,7 +1090,15 @@
       ],
       "ten_board_budget_quantity": 30,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "CL21B103KBANNNC",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "CL21B104KCFNNNE",
@@ -984,7 +1122,7 @@
       ],
       "quantity_per_board": 14,
       "source_url": "https://jlcpcb.com/partdetail/C28233",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 1686589,
       "available_to_order": 1397659,
       "minimum_purchase": 1,
@@ -1025,7 +1163,15 @@
       ],
       "ten_board_budget_quantity": 150,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "CL21B104KCFNNNE",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "CL21B105KBFNNNE",
@@ -1040,9 +1186,9 @@
       ],
       "quantity_per_board": 5,
       "source_url": "https://jlcpcb.com/partdetail/C28323",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
-      "public_stock": 3723915,
-      "available_to_order": 3108160,
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "public_stock": 3723710,
+      "available_to_order": 3107955,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -1081,7 +1227,15 @@
       ],
       "ten_board_budget_quantity": 60,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "CL21B105KBFNNNE",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "CL21B473KBCNNNC",
@@ -1092,7 +1246,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C53134",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 241826,
       "available_to_order": 219818,
       "minimum_purchase": 1,
@@ -1133,7 +1287,15 @@
       ],
       "ten_board_budget_quantity": 20,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "CL21B473KBCNNNC",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "CL21B475KAFNNNE",
@@ -1145,7 +1307,7 @@
       ],
       "quantity_per_board": 2,
       "source_url": "https://jlcpcb.com/partdetail/C98195",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 236503,
       "available_to_order": 225867,
       "minimum_purchase": 1,
@@ -1186,7 +1348,15 @@
       ],
       "ten_board_budget_quantity": 28,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "CL21B475KAFNNNE",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "CL31A226KAHNNNE",
@@ -1204,9 +1374,9 @@
       ],
       "quantity_per_board": 8,
       "source_url": "https://jlcpcb.com/partdetail/C12891",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
-      "public_stock": 1019730,
-      "available_to_order": 791384,
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "public_stock": 1017177,
+      "available_to_order": 788831,
       "minimum_purchase": 1,
       "minimum_assembly": 5,
       "attrition_allowance": 4,
@@ -1245,7 +1415,15 @@
       ],
       "ten_board_budget_quantity": 84,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "CL31A226KAHNNNE",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "CL32B106KBJNNWE",
@@ -1256,7 +1434,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C3844168",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 656,
       "available_to_order": 626,
       "minimum_purchase": 1,
@@ -1297,7 +1475,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "CL32B106KBJNNWE",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "EEE-FK1H470P",
@@ -1308,7 +1494,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C278400",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 4009,
       "available_to_order": 3776,
       "minimum_purchase": 1,
@@ -1349,7 +1535,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "EEEFK1H470P",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "ESD2CAN24DBZRQ1",
@@ -1360,7 +1554,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C5736151",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 2506,
       "available_to_order": 2427,
       "minimum_purchase": 1,
@@ -1401,7 +1595,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "ESD2CAN24DBZRQ1",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "LM339LVDR",
@@ -1412,7 +1614,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C22427665",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 110,
       "available_to_order": 110,
       "minimum_purchase": 1,
@@ -1453,7 +1655,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "LM339LVDR",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 3"
     },
     {
       "mpn": "LMR51420XDDCR",
@@ -1464,7 +1674,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C5246146",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 4183,
       "available_to_order": 4064,
       "minimum_purchase": 1,
@@ -1505,7 +1715,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "LMR51420XDDCR",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "MMSZ12T1G",
@@ -1516,7 +1734,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C72599",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 6635,
       "available_to_order": 6571,
       "minimum_purchase": 1,
@@ -1557,7 +1775,15 @@
       ],
       "ten_board_budget_quantity": 14,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "MMSZ12T1G",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "0805W8F1152T5E",
@@ -1568,7 +1794,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C17418",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 3377,
       "available_to_order": 3238,
       "minimum_purchase": 1,
@@ -1609,7 +1835,15 @@
       ],
       "ten_board_budget_quantity": 20,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "0805W8F1152T5E",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "Not stated"
     },
     {
       "mpn": "RC0805FR-0713KL",
@@ -1620,7 +1854,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C137592",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 13587,
       "available_to_order": 13578,
       "minimum_purchase": 1,
@@ -1661,7 +1895,15 @@
       ],
       "ten_board_budget_quantity": 20,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "RC0805FR-0713KL",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "RC0805FR-0720KL",
@@ -1674,7 +1916,7 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C114566",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 1941889,
       "available_to_order": 1916001,
       "minimum_purchase": 1,
@@ -1715,7 +1957,15 @@
       ],
       "ten_board_budget_quantity": 40,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "RC0805FR-0720KL",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "0805W8F2203T5E",
@@ -1728,7 +1978,7 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C17556",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 340523,
       "available_to_order": 289800,
       "minimum_purchase": 1,
@@ -1769,7 +2019,15 @@
       ],
       "ten_board_budget_quantity": 40,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "0805W8F2203T5E",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "Not stated"
     },
     {
       "mpn": "RC0805FR-072K61L",
@@ -1780,7 +2038,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C273965",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 2696,
       "available_to_order": 2680,
       "minimum_purchase": 1,
@@ -1821,7 +2079,15 @@
       ],
       "ten_board_budget_quantity": 20,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "RC0805FR-072K61L",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "RC0805FR-072M2L",
@@ -1834,7 +2100,7 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C137552",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 7172,
       "available_to_order": 7154,
       "minimum_purchase": 1,
@@ -1875,7 +2141,15 @@
       ],
       "ten_board_budget_quantity": 40,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "RC0805FR-072M2L",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "0805W8F5902T5E",
@@ -1886,7 +2160,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C17763",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 6406,
       "available_to_order": 6289,
       "minimum_purchase": 1,
@@ -1927,7 +2201,15 @@
       ],
       "ten_board_budget_quantity": 20,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "0805W8F5902T5E",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "Not stated"
     },
     {
       "mpn": "0805W8F5231T5E",
@@ -1938,7 +2220,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C17739",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 3304,
       "available_to_order": 2225,
       "minimum_purchase": 1,
@@ -1979,7 +2261,15 @@
       ],
       "ten_board_budget_quantity": 20,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "0805W8F5231T5E",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "Not stated"
     },
     {
       "mpn": "RC0805JR-070RL",
@@ -1990,7 +2280,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C96345",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 2075887,
       "available_to_order": 2050265,
       "minimum_purchase": 1,
@@ -2031,7 +2321,15 @@
       ],
       "ten_board_budget_quantity": 20,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "RC0805JR-070RL",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "RC1206FR-0710KL",
@@ -2044,7 +2342,7 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C132649",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 1983977,
       "available_to_order": 1936732,
       "minimum_purchase": 1,
@@ -2085,7 +2383,15 @@
       ],
       "ten_board_budget_quantity": 40,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "RC1206FR-0710KL",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "1206W4F1200T5E",
@@ -2096,9 +2402,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C17909",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
-      "public_stock": 779243,
-      "available_to_order": 711102,
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "public_stock": 779228,
+      "available_to_order": 711087,
       "minimum_purchase": 1,
       "minimum_assembly": 15,
       "attrition_allowance": 10,
@@ -2137,7 +2443,15 @@
       ],
       "ten_board_budget_quantity": 20,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "1206W4F1200T5E",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "Not stated"
     },
     {
       "mpn": "RT0805BRD07100KL",
@@ -2153,7 +2467,7 @@
       ],
       "quantity_per_board": 6,
       "source_url": "https://jlcpcb.com/partdetail/C122537",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 581611,
       "available_to_order": 533788,
       "minimum_purchase": 1,
@@ -2194,7 +2508,15 @@
       ],
       "ten_board_budget_quantity": 68,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "RT0805BRD07100KL",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "RT0805BRD07102KL",
@@ -2205,7 +2527,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C865126",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 9276,
       "available_to_order": 9215,
       "minimum_purchase": 1,
@@ -2246,7 +2568,15 @@
       ],
       "ten_board_budget_quantity": 14,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "RT0805BRD07102KL",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "RT0805BRD0712K1L",
@@ -2257,7 +2587,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C865169",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 6905,
       "available_to_order": 6666,
       "minimum_purchase": 1,
@@ -2298,7 +2628,15 @@
       ],
       "ten_board_budget_quantity": 14,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "RT0805BRD0712K1L",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "RT0805BRD0713K7L",
@@ -2309,7 +2647,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C865183",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 137,
       "available_to_order": 89,
       "minimum_purchase": 1,
@@ -2350,7 +2688,15 @@
       ],
       "ten_board_budget_quantity": 14,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "RT0805BRD0713K7L",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "RT0805BRD0720KL",
@@ -2362,7 +2708,7 @@
       ],
       "quantity_per_board": 2,
       "source_url": "https://jlcpcb.com/partdetail/C469660",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 41225,
       "available_to_order": 26836,
       "minimum_purchase": 1,
@@ -2403,7 +2749,15 @@
       ],
       "ten_board_budget_quantity": 24,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "RT0805BRD0720KL",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "SK6805-EC15",
@@ -2414,7 +2768,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C2890035",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 237924,
       "available_to_order": 233479,
       "minimum_purchase": 1,
@@ -2455,7 +2809,14 @@
       ],
       "ten_board_budget_quantity": 12,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "SK6805-EC15",
+      "catalog_status": "yes",
+      "catalog_product_type": 2,
+      "pcba_services": [
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 4"
     },
     {
       "mpn": "SMAJ13A-13-F",
@@ -2466,7 +2827,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C110519",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 13086,
       "available_to_order": 12888,
       "minimum_purchase": 1,
@@ -2507,7 +2868,15 @@
       ],
       "ten_board_budget_quantity": 12,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "SMAJ13A-13-F",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "SMAJ30A",
@@ -2520,7 +2889,7 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C148230",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 30164,
       "available_to_order": 29435,
       "minimum_purchase": 1,
@@ -2561,7 +2930,15 @@
       ],
       "ten_board_budget_quantity": 32,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "SMAJ30A",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "SMBJ22A-E3/52",
@@ -2572,7 +2949,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C3698580",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 204,
       "available_to_order": 177,
       "minimum_purchase": 1,
@@ -2613,7 +2990,15 @@
       ],
       "ten_board_budget_quantity": 12,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "SMBJ22A-E3/52",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "SN74AHCT1G125DBVR",
@@ -2624,9 +3009,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C7484",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
-      "public_stock": 23136,
-      "available_to_order": 16283,
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "public_stock": 23124,
+      "available_to_order": 16271,
       "minimum_purchase": 1,
       "minimum_assembly": 5,
       "attrition_allowance": 2,
@@ -2665,7 +3050,15 @@
       ],
       "ten_board_budget_quantity": 12,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "SN74AHCT1G125DBVR",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "SRP5030TA-3R3M",
@@ -2676,7 +3069,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C2042118",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 41,
       "available_to_order": 39,
       "minimum_purchase": 1,
@@ -2717,7 +3110,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "SRP5030TA-3R3M",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "SRP7028A-100M",
@@ -2728,7 +3129,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C2687402",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 5174,
       "available_to_order": 5146,
       "minimum_purchase": 1,
@@ -2769,7 +3170,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "SRP7028A-100M",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "STM32F042K6T6",
@@ -2780,7 +3189,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C69216",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 2,
       "available_to_order": 0,
       "minimum_purchase": 4,
@@ -2821,7 +3230,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": false,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "STM32F042K6T6",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 3"
     },
     {
       "mpn": "TCAN3413DR",
@@ -2832,7 +3249,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C22433320",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 3245,
       "available_to_order": 2422,
       "minimum_purchase": 1,
@@ -2873,7 +3290,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "TCAN3413DR",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "TPS2553DBVR-1",
@@ -2884,7 +3309,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C111738",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 13101,
       "available_to_order": 13075,
       "minimum_purchase": 1,
@@ -2925,7 +3350,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "TPS2553DBVR-1",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     },
     {
       "mpn": "TPS259620DDAR",
@@ -2936,7 +3369,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C2155773",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 30,
       "available_to_order": 25,
       "minimum_purchase": 1,
@@ -2977,7 +3410,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "TPS259620DDAR",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "Not stated"
     },
     {
       "mpn": "TPS61085DGKR",
@@ -2988,7 +3429,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C113659",
-      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
       "public_stock": 2288,
       "available_to_order": 2251,
       "minimum_purchase": 1,
@@ -3029,7 +3470,15 @@
       ],
       "ten_board_budget_quantity": 10,
       "ten_board_stock_sufficient": true,
-      "allocation_confirmed": false
+      "allocation_confirmed": false,
+      "catalog_mpn": "TPS61085DGKR",
+      "catalog_status": "yes",
+      "catalog_product_type": 0,
+      "pcba_services": [
+        "Economic",
+        "Standard"
+      ],
+      "moisture_sensitivity_level": "MSL 1"
     }
   ],
   "hand_solder": {
@@ -3046,5 +3495,29 @@
       "JP301"
     ],
     "reason": "Keep existing ten-part manual scope. Genuine Weidmuller 1824420000 has zero JLC stock, 1824430000 has no exact public match, Harwin M22-2010305 has only 11 for 30 needed. J8 is stocked but remains manual with the other headers."
+  },
+  "assembly_review": {
+    "selected_service": "Standard",
+    "capabilities_url": "https://jlcpcb.com/capabilities/pcb-assembly-capabilities",
+    "standard_nominal_peak_C": 240,
+    "standard_peak_tolerance_C": 5,
+    "factory_profile_confirmed": false,
+    "factory_profile_evidence": null,
+    "all_component_reflow_profiles_qualified": false,
+    "reflow_constraints": [
+      {
+        "reference": "C1",
+        "mpn": "EEE-FK1H470P",
+        "profile": "Panasonic profile (2), diameter 8 mm",
+        "peak_C": 235,
+        "peak_duration_s": 5,
+        "time_at_or_above_200C_s": 60,
+        "maximum_cycles": 1,
+        "resolution": "HOLD: obtain a factory-qualified profile within these limits, or review a high-temperature capacitor and its footprint before changing the BOM.",
+        "series_datasheet": "sources/datasheets/panasonic_fk.pdf",
+        "soldering_datasheet": "sources/datasheets/panasonic_reflow.pdf"
+      }
+    ],
+    "scope": "Catalog service eligibility is not solder-process qualification. D10 MSL 4 handling and all exact-part thermal limits require the factory process review; a 260 C solder-heat reliability test is not a reflow recipe."
   }
 }

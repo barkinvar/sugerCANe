@@ -8,7 +8,7 @@ assert checks['revision']=='H SC12' and checks['simulation_deferred_by_user'] is
 assert checks['status'].startswith('HOLD:')
 for path,digest in checks['input_hashes'].items():
  assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale candidate evidence',path)
-status='REVIEW / QUOTATION ONLY. Simulations await user approval; MCU stock and final factory stack are unresolved. Not authorized for manufacture.'
+status='REVIEW / QUOTATION ONLY. Standard PCBA required by D10. MCU stock, C1 reflow and final factory stack are unresolved. Simulations await user approval. Not authorized for manufacture.'
 gerber=R/'order/sugarCANe_RevH_Gerbers_REVIEW_ONLY.zip'
 with zipfile.ZipFile(gerber,'w',zipfile.ZIP_DEFLATED) as z:
  fabrication=[]
@@ -21,7 +21,8 @@ files=['bom/BOM_JLCPCB.csv','bom/Factory_BOM.csv','bom/Hand_solder_BOM.csv','bom
  'output/assembly/CPL_JLCPCB.csv','output/assembly/top_assembly.pdf','output/assembly/schematic.pdf',
  'output/documentation/BOM_RevH_SC12.pdf','docs/JLC_SOURCING.md','docs/FACTORY_ORDER.md',
  'firmware/build/factory.hex','firmware/build/application.sc12','tools/program_factory.tcl',
- 'reports/release_checks.json','reports/manufacturing/jlc_sourcing.json',str(gerber.relative_to(R))]
+ 'reports/release_checks.json','reports/manufacturing/jlc_sourcing.json',
+ 'sources/datasheets/panasonic_fk.pdf','sources/datasheets/panasonic_reflow.pdf',str(gerber.relative_to(R))]
 manifest=dict(status=status,files={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in files})
 dest=R/'order/sugarCANe_RevH_JLC_REVIEW_ONLY.zip'
 with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED) as z:

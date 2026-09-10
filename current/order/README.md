@@ -1,6 +1,6 @@
 # Rev H JLC review package
 
-**Review/quotation only. Do not authorize manufacture from this candidate.** Six passive types have been replaced with equal-rated JLC-listed parts. All 55 SMT types have codes; U5 still needs sourcing. New simulations wait for user approval. [Substitutions and plan](../docs/JLC_SOURCING.md) · [current check summary](../reports/release_checks.json).
+**Review/quotation only. Do not authorize manufacture from this candidate.** Six passive types have been replaced with equal-rated JLC-listed parts. All 55 SMT types have codes; U5 still needs sourcing. D10 requires Standard PCBA and C1's reflow profile is unresolved. New simulations wait for user approval. [Substitutions and plan](../docs/JLC_SOURCING.md) · [current check summary](../reports/release_checks.json).
 
 | Download | Use |
 |---|---|
@@ -9,6 +9,6 @@
 
 JLC fits 130 top SMT parts. The ten through-hole parts and three loose caps remain user-fitted. The package includes file hashes; it does not reserve parts, confirm a quotation or constitute an engineering release.
 
-After approval, rerun the simulations, resolve the incomplete combined startup and confirm MCU allocation and the factory stack. Issue the final order package only after reviewing those results. The user then orders. Full-release packaging gates remain unchanged.
+Resolve whether C1 needs a hardware change before the long simulation run. After approval, rerun the simulations, resolve the incomplete combined startup and confirm MCU allocation, C1 reflow and the factory stack. Issue the final order package only after reviewing those results. The user then orders. Full-release packaging also rejects unresolved sourcing or factory-process holds.
 
 [Factory instructions](../docs/FACTORY_ORDER.md) · [Historical packages](../../archive/README.md). Archived G packages do not contain H's LED/header and must not be mixed with H firmware.
