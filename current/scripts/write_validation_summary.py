@@ -16,6 +16,8 @@ for path,digest in routing['source_hashes'].items():
  assert digest==hashlib.sha256((R/path).read_bytes()).hexdigest(),('Stale routing evidence',path)
 assembly=read('reports/manufacturing/verification.json');assert assembly['result']=='PASS'
 copper=read('reports/manufacturing/gerber_connectivity.json');geometry=read('reports/manufacturing/gerber_geometry.json');assert copper['result']==geometry['result']=='PASS'
+for path,digest in geometry['source_hashes'].items():
+ assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale copper-geometry evidence',path)
 sourcing=read('reports/manufacturing/jlc_sourcing.json')
 for path,digest in sourcing['input_hashes'].items():
  assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale sourcing audit',path)
@@ -33,6 +35,8 @@ if args.defer_simulation:
   'reports/electrical/order_readiness.json','reports/routing_cleanup.json','reports/routing-tests.log',
   'scripts/test_routing.py','scripts/check_routing.py','scripts/export_routing_geometry.py',
   'hardware/design/routing_widths.json','scripts/write_validation_summary.py']
+ paths += ['scripts/ground_geometry.py','scripts/verify_gerber_geometry.py',
+           'scripts/check_board_constraints.py','hardware/FRC_Sensor_CAN.kicad_dru']
  paths += [p.relative_to(R).as_posix() for p in sorted((R/'hardware').glob('*.kicad_sch'))]
  out=dict(revision='H SC12',status='HOLD: JLC sourcing candidate; simulations deferred until user approval',
   order_decision=sourcing['order_decision'],manufacturing_holds=sourcing['manufacturing_holds'],simulation_deferred_by_user=True,physical_tests_performed=False,
@@ -89,6 +93,7 @@ tracked += ['hardware/FRC_Sensor_CAN.kicad_pro','hardware/FRC_Sensor_CAN.kicad_d
             'scripts/check_board_constraints.py','scripts/check_routing.py','scripts/export_routing_geometry.py',
             'scripts/test_routing.py','reports/routing-tests.log','reports/routing_rules.json','reports/routing_cleanup.json',
             'hardware/design/routing_widths.json']
+tracked += ['scripts/ground_geometry.py','scripts/verify_gerber_geometry.py']
 tracked += ['reports/erc/final.json','reports/drc/final.json','reports/design_parity.json','reports/board_constraints.json',
             'reports/variant_verification.json','reports/firmware-tests.log','reports/power-tests.log','reports/firmware-images.json',
             'reports/firmware-arm-registers.json','reports/driver/tests.log','reports/bridge2027-tests.log',

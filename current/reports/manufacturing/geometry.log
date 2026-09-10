@@ -1,21 +1,21 @@
-top 4376 primitives, 216 copper islands
+top 4374 primitives, 218 copper islands
 bottom 778 primitives, 124 copper islands
-inner_2 385 primitives, 203 copper islands
+inner_2 386 primitives, 204 copper islands
 inner_1 292 primitives, 219 copper islands
 {
   "result": "PASS",
   "method": "Gerbonara1.6.3 plus Shapely2.1.2 copper polygon union and plated-barrel graph",
   "maximum_arc_approximation_error_mm": 0.001,
   "copper_area_mm2": {
-    "top": 2758.025137189647,
-    "bottom": 2742.048697732142,
-    "inner_2": 3398.0030815584646,
-    "inner_1": 3550.7836853045983
+    "top": 2843.3327621520916,
+    "bottom": 2740.3247813324792,
+    "inner_2": 3395.1297856160313,
+    "inner_1": 3550.1179409901774
   },
   "layer_island_counts": {
-    "top": 216,
+    "top": 218,
     "bottom": 124,
-    "inner_2": 203,
+    "inner_2": 204,
     "inner_1": 219
   },
   "plated_barrels_joined": 291,
@@ -31,7 +31,7 @@ inner_1 292 primitives, 219 copper islands
   },
   "unassigned_copper_islands": 0,
   "unassigned_copper_area_mm2": 0.0,
-  "elapsed_seconds": 1.5705890089739114,
+  "elapsed_seconds": 1.401656831963919,
   "limitations": "Plated holes represented as connected filled pad centers; no barrel manufacturing defect, annular-ring fracture, impedance, thermal or EMC model. Positive Gerber primitives only."
 }
 {
@@ -49,7 +49,7 @@ inner_1 292 primitives, 219 copper islands
         ]
       ],
       "minimum_board_edge_clearance": 0.30049999999999955,
-      "minimum_mount_center_clearance": 3.302912301872909,
+      "minimum_mount_center_clearance": 3.302912355064711,
       "minimum_plated_hole_annular_copper": 0.14919153012561934
     },
     "bottom": {
@@ -63,25 +63,25 @@ inner_1 292 primitives, 219 copper islands
         ]
       ],
       "minimum_board_edge_clearance": 0.30049999999999955,
-      "minimum_mount_center_clearance": 3.302912399188364,
+      "minimum_mount_center_clearance": 3.302912355064711,
       "minimum_plated_hole_annular_copper": 0.14919153012561934
     },
     "inner_2": {
-      "minimum_other_net_clearance": 0.20049868929855078,
+      "minimum_other_net_clearance": 0.20049822194291775,
       "closest_nets": [
         [
-          "GND"
+          "POWER_5V_EN"
         ],
         [
-          "V5_INTERNAL"
+          "GND"
         ]
       ],
       "minimum_board_edge_clearance": 0.30049999999999955,
-      "minimum_mount_center_clearance": 3.3029123018729076,
+      "minimum_mount_center_clearance": 3.302912355064711,
       "minimum_plated_hole_annular_copper": 0.14919153012561934
     },
     "inner_1": {
-      "minimum_other_net_clearance": 0.20049950083528206,
+      "minimum_other_net_clearance": 0.20049923268990505,
       "closest_nets": [
         [
           "SENSOR_12V"
@@ -91,7 +91,7 @@ inner_1 292 primitives, 219 copper islands
         ]
       ],
       "minimum_board_edge_clearance": 0.30049999999999955,
-      "minimum_mount_center_clearance": 3.302912226811259,
+      "minimum_mount_center_clearance": 3.302911543110313,
       "minimum_plated_hole_annular_copper": 0.14919153012561934
     }
   },
@@ -118,23 +118,72 @@ inner_1 292 primitives, 219 copper islands
       "openings": 0
     }
   },
+  "ground_pours": {
+    "top": {
+      "result": "PASS",
+      "ground_islands": 19,
+      "minimum_separate_island_gap_mm": 0.26374725354589035,
+      "required_gap_mm": 0.25,
+      "neck_screen_width_mm": 0.24,
+      "minimum_surviving_core_area_mm2": 0.025,
+      "narrow_gaps": [],
+      "narrow_necks": []
+    },
+    "bottom": {
+      "result": "PASS",
+      "ground_islands": 11,
+      "minimum_separate_island_gap_mm": 0.4874089155534614,
+      "required_gap_mm": 0.25,
+      "neck_screen_width_mm": 0.24,
+      "minimum_surviving_core_area_mm2": 0.025,
+      "narrow_gaps": [],
+      "narrow_necks": []
+    },
+    "inner_2": {
+      "result": "PASS",
+      "ground_islands": 3,
+      "minimum_separate_island_gap_mm": 0.5178725057965531,
+      "required_gap_mm": 0.25,
+      "neck_screen_width_mm": 0.24,
+      "minimum_surviving_core_area_mm2": 0.025,
+      "narrow_gaps": [],
+      "narrow_necks": []
+    },
+    "inner_1": {
+      "result": "PASS",
+      "ground_islands": 1,
+      "minimum_separate_island_gap_mm": null,
+      "required_gap_mm": 0.25,
+      "neck_screen_width_mm": 0.24,
+      "minimum_surviving_core_area_mm2": 0.025,
+      "narrow_gaps": [],
+      "narrow_necks": []
+    }
+  },
   "minimum_hole_to_hole_web": 0.2851392996543623,
   "minimum_hole_edge_distance": 0.7950000000000004,
   "sha256": {
-    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "c29aa620141ab37e52df636e62c544b45222a2b641f1fe3970797558bdc656d8",
-    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "f5a3319a31c4f517a12e0c4750ee158343d4dd08e2e01f2a2931038a0bafcdd4",
-    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "bebc363c5f6a8e91a181767837babfcc58b49e404430d0672f06113d8f0bbdb9",
-    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "e5e6382cfae2f2c146d0d1412c4ade66fd8131d23e8f07d96b6b6ebfeeccec8b",
-    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "a60fd5e4441fb9aa7c67e99027455efd5202815ac14abbd414ce0b6dcf442881",
-    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "18080d0c70df03f6906f488e993619f61eff23d13e16f5d71e8f4aa1eae4f529",
-    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "bffdd8a1df233fbb8372897dcfb1edf9620f5cdb8082353eb00c6357708faa79",
-    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "de636aa5aaefb5bcb0c4a010d19de0e883b235e684df4f449e3980947472ebfa",
-    "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": "facefd9a2e5da02d14cb9e6fa01854d264dd7eb78dc7270e0799f4a92e991f79",
-    "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": "d9bf5523ecf2c0ff779acd97dae0d6a31e1fe45071c87bb2c06426d62b721237",
-    "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": "32bff4e10461c70b0ac9f07c099a11f61193f589025fbc4d87f15aab99a07ce2",
-    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "925a4687edc80d3bdf7392e49a952ddf373dc48ded0cc443c5b8b69bc79966af",
-    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "3b206abc4ecabd279b3f1fc0b927860d66a035636fbc5237106a149199a84f96"
+    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "7f74b4768dc14a227f82d49139ed5ae59d97706ad084c8f10c64ff02ca037d48",
+    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "33486e9f496bc69aedbabcadbed2f70513a4c65aa32bed798f156786637a4452",
+    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "bccfa9f67467ca7555e1806b95b90f68906b0c476437998a1f82c2bd06ddd201",
+    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "bc28f035b69a4a7061101dd1393201af4880869414fc02b7e91cb8e4e93ffa44",
+    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "bd4ca67e08079f2f1fb157e45a2c550d834187e629303496dcb1cb8b4c5db441",
+    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "3c7b828f589cfb50c6365ca362d823e03df8d08183970b1f1628210aa687aeea",
+    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "80f1e7a5f1735e858ae966c32dec5654dc5f45f7d0813b0898a78bed64479321",
+    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "2c5fcb4e23cb7192f91f2a9ec82d723a26f5535702bcf8192ce71c9670f09459",
+    "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": "044ee8a3c79c919c49bb34974a3d083c1ee3e2ddb73932e7ab566aa2343a42c8",
+    "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": "9c407cce87ea0eb71c5711dd49725d38295574cdb200885f730f9d864582c6d2",
+    "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": "159b212f40cf7c9d068182eb9dbf1d86ca6bd443013c05b953db6f870038c397",
+    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "946c656a2072456541fe4bbc8f41cf1b896e64e7263deaeccae8123fce65357d",
+    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "9985c3520241afa724f31d6965a5aba140eb0aa9d271a0a3fdd4894c8f19f38a"
   },
+  "source_hashes": {
+    "scripts/verify_gerber_geometry.py": "0a1c14994b4cca5568a10a6fbf84fa3ae9b6babd12405764572b00d6c579bc86",
+    "scripts/ground_geometry.py": "6b7384c2611082c4e13952ee9076c2ec9bd1d6dc0d5a9e0042dbc5280f144fe4",
+    "scripts/verify_gerber_connectivity.py": "50e8f305e026592e3d60124fbc4eba14d61cbb4d01476ad1a30f08188c409d27",
+    "scripts/board_outline.py": "0db9c26ec161464637131123cd862d8c9066ed7a8997dd0b6e2235c9f9c7785f"
+  },
+  "ground_scope": "Same-layer ground islands require 0.25 mm separation. A 0.24 mm erosion screen rejects necks splitting substantial ground areas (cores over 0.025 mm\u00b2); native zone minimum and pad-connection rules also require 0.25 mm. Sharp concave corners and intended thermal slots are not minimum-gap measurements. No current-crowding, ground-return impedance or fabrication-tolerance qualification.",
   "result": "PASS",
   "limits": "Etch geometry only, with1um arc approximation. Annular rings use filled pad copper and drill center/diameter, not drill wander or plated thickness tolerance. Mask and paste figures do not establish stencil release, registration or assembly yield. Nominal holes and copper are not fabricated measurements."
 }

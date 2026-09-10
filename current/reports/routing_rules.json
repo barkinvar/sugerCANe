@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "segments": 1533,
+  "segments": 1530,
   "vias": 242,
   "rules": {
     "direction_tolerance_mm": 2e-05,
@@ -14,7 +14,7 @@
     ],
     "explicit_free_junction_endpoints": true
   },
-  "free_branch_junctions": 35,
+  "free_branch_junctions": 34,
   "endpoint_gate_enforced": true,
   "filled_zone_entries": 11,
   "short_contact_segments": 50,
@@ -22,7 +22,7 @@
   "width_audit": {
     "policy_enforced": true,
     "routed_nets": 77,
-    "segments_checked": 1533,
+    "segments_checked": 1530,
     "nets": [
       {
         "net": "+3V3",
@@ -506,8 +506,8 @@
         "widths": [
           {
             "width_mm": 0.25,
-            "segments": 239,
-            "length_mm": 475.2178842262864
+            "segments": 236,
+            "length_mm": 472.2833108478785
           },
           {
             "width_mm": 0.3,
@@ -1190,7 +1190,7 @@
     "scope": "All segment widths and shared-endpoint width transitions. Different widths at pad/via contacts are intentional branch sizing; net reasons cover routes on different layers. Electrical load and copper-drop limits are checked separately."
   },
   "scope": "Routing geometry only. Copper round end caps are normal; no curved centerlines. Pad/via contacts allow local transitions; free branches require explicit nodes and chamfered geometry. Native DRC and independent Gerber connectivity/clearance must also pass.",
-  "board_sha256": "11a7fe728a5c38fea9ccf797b009e49f00d5b57660013b24940de233ee9ede55",
+  "board_sha256": "f6e7be17328081b06241a03ec6a706204e40f90e1e63c5d6ff4bc82f96823d04",
   "source_hashes": {
     "scripts/check_routing.py": "51daa946f018decc954554b24d4d282ee3bc62a9b46c177a70d6dcfdd799c374",
     "scripts/export_routing_geometry.py": "dbd0c86081b323dc9087e42e8af8707e50d23a419b298d87d4013c3096904e52",

@@ -4,6 +4,9 @@ import math
 import numpy as np
 from check_routing import inspect
 from check_order_readiness import dc_solver
+from ground_geometry import inspect_ground, polygons
+from shapely.geometry import box
+from shapely import union_all
 
 
 def track(a, b, *, net='SIG', layer=0, width=.25, kind='line'):
@@ -128,6 +131,24 @@ class RoutingRules(unittest.TestCase):
         policy=dict(default=dict(widths_mm=[.25]),nets={'SIG':dict(widths_mm=[.18,.25],layers={'0':[.25],'2':[.18]})},free_transitions=[])
         self.assertIn('unreviewed_track_width',audit(track((0,0),(1,0),width=.18),width_policy=policy)['findings'])
         self.assertEqual(audit(track((0,0),(1,0),width=.18,layer=2),width_policy=policy)['result'],'PASS')
+
+
+class GroundPours(unittest.TestCase):
+    def test_same_net_near_miss_fails(self):
+        result = inspect_ground([box(0,0,1,1), box(1.1,0,2.1,1)])
+        self.assertEqual(result['result'], 'FAIL')
+        self.assertAlmostEqual(result['narrow_gaps'][0]['gap_mm'], .1)
+
+    def test_deliberate_gap_passes(self):
+        self.assertEqual(inspect_ground([box(0,0,1,1),box(1.25,0,2.25,1)])['result'], 'PASS')
+
+    def test_thin_connection_between_large_regions_fails(self):
+        copper = union_all([box(0,0,1,1),box(2,0,3,1),box(.9,.4,2.1,.6)])
+        self.assertEqual(len(inspect_ground(polygons(copper))['narrow_necks']), 1)
+
+    def test_quarter_mm_connection_passes(self):
+        copper = union_all([box(0,0,1,1),box(2,0,3,1),box(.9,.375,2.1,.625)])
+        self.assertEqual(inspect_ground(polygons(copper))['result'], 'PASS')
 
 
 class CopperNetwork(unittest.TestCase):

@@ -242,8 +242,8 @@
   "routing_inventory": {
     "layers": {
       "F.Cu": {
-        "segments": 966,
-        "length_mm": 1539.5458540365257,
+        "segments": 963,
+        "length_mm": 1536.6112806581182,
         "non_45_degree_segments": []
       },
       "In1.Cu": {

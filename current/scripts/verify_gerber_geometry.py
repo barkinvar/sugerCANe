@@ -12,6 +12,7 @@ from shapely import union_all,STRtree
 from gerbonara.graphic_objects import Flash
 import verify_gerber_connectivity as g
 from board_outline import verified_outline
+from ground_geometry import inspect_ground
 
 ROOT=Path(__file__).resolve().parents[1]
 outline=verified_outline(g.stack.outline.instance.objects, g.ERROR)
@@ -19,7 +20,13 @@ manifest=json.loads((ROOT/'reports/manufacturing/board_manifest.json').read_text
 mounts=[(c['x_mm'],c['y_mm']) for c in manifest['components'] if c['reference'].startswith('H')]
 assert sorted(mounts)==[(3.5,-4.0),(48.5,-46.5)]
 report={'units':'mm','arc_approximation_tolerance_mm':g.ERROR,'copper':{},'mask':{},'paste':{}}
+report['ground_pours'] = {}
 for side,polys in g.islands.items():
+    ground = [poly for i, poly in enumerate(polys)
+              if g.root_nets[g.root(g.offset[side]+i)] == {'GND'}]
+    ground_review = inspect_ground(ground)
+    report['ground_pours'][side] = ground_review
+    assert ground_review['result'] == 'PASS', (side, ground_review)
     copper=union_all(polys)
     assert copper.difference(outline).area<1e-8
     edge=copper.distance(outline.boundary)
@@ -86,6 +93,10 @@ for side in ['top','bottom']:
             entry['minimum_area_ratio_at_0_10mm_stencil']=min(p.area/(p.length*.10) for p in islands)
         report[layer_type][side]=entry
 report['sha256']={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'output/fabrication').glob('*')) if p.suffix in ('.gbr','.gtl','.gbl','.gts','.gbs','.gtp','.gbp','.gto','.gbo','.gm1','.g1','.g2','.drl')}
+report['source_hashes'] = {name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
+                         for name in ['scripts/verify_gerber_geometry.py', 'scripts/ground_geometry.py',
+                                      'scripts/verify_gerber_connectivity.py', 'scripts/board_outline.py']}
+report['ground_scope'] = 'Same-layer ground islands require 0.25 mm separation. A 0.24 mm erosion screen rejects necks splitting substantial ground areas (cores over 0.025 mm²); native zone minimum and pad-connection rules also require 0.25 mm. Sharp concave corners and intended thermal slots are not minimum-gap measurements. No current-crowding, ground-return impedance or fabrication-tolerance qualification.'
 report['result']='PASS'
 report['limits']='Etch geometry only, with1um arc approximation. Annular rings use filled pad copper and drill center/diameter, not drill wander or plated thickness tolerance. Mask and paste figures do not establish stencil release, registration or assembly yield. Nominal holes and copper are not fabricated measurements.'
 (ROOT/'reports/manufacturing/gerber_geometry.json').write_text(json.dumps(report,indent=2)+'\n')

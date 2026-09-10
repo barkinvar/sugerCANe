@@ -13,6 +13,18 @@ assert len([r for r in fitted if r.startswith('C')])==40
 def pads(ref):return {d.GetNumber():d for d in fps[ref].Pads() if d.GetNumber()}
 def nets(ref):return {n:d.GetNetname() for n,d in pads(ref).items()}
 assert b.GetCopperLayerCount()==4
+ground_zones = [z for z in b.Zones() if not z.GetIsRuleArea()]
+assert len(ground_zones) == 4
+for zone in ground_zones:
+ assert zone.GetNetname() == 'GND'
+ assert abs(p.ToMM(zone.GetMinThickness())-.25) < 1e-6
+ assert abs(p.ToMM(zone.GetLocalClearance())-.2) < 1e-6
+ assert zone.GetIslandRemovalMode() == 0  # Always remove unconnected pour islands.
+ expected = p.ZONE_CONNECTION_THT_THERMAL if zone.GetLayer() in (p.F_Cu,p.B_Cu) else p.ZONE_CONNECTION_FULL
+ assert zone.GetPadConnection() == expected
+ assert abs(p.ToMM(zone.GetThermalReliefSpokeWidth())-.3) < 1e-6
+ assert abs(p.ToMM(zone.GetThermalReliefGap())-.25) < 1e-6
+assert abs(pads('J8')['7'].GetThermalSpokeAngleDegrees()-45) < 1e-6
 edges=[d for d in b.GetDrawings() if d.GetLayer()==p.Edge_Cuts]
 assert len(edges)==8
 arcs=[d for d in edges if d.GetShape()==p.SHAPE_T_ARC]

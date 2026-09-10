@@ -1,11 +1,11 @@
 {
   "method": "Independent Gerbonara/Shapely geometry with actual drill overlays; all four copper layers in PDF; bottom mirrored for underside view",
   "sha256": {
-    "FRC_Sensor_CAN-B_Cu.gbl": "c29aa620141ab37e52df636e62c544b45222a2b641f1fe3970797558bdc656d8",
-    "FRC_Sensor_CAN-F_Cu.gtl": "18080d0c70df03f6906f488e993619f61eff23d13e16f5d71e8f4aa1eae4f529",
-    "FRC_Sensor_CAN-In1_Cu.g1": "d9bf5523ecf2c0ff779acd97dae0d6a31e1fe45071c87bb2c06426d62b721237",
-    "FRC_Sensor_CAN-In2_Cu.g2": "32bff4e10461c70b0ac9f07c099a11f61193f589025fbc4d87f15aab99a07ce2",
-    "FRC_Sensor_CAN-NPTH.drl": "925a4687edc80d3bdf7392e49a952ddf373dc48ded0cc443c5b8b69bc79966af",
-    "FRC_Sensor_CAN-PTH.drl": "3b206abc4ecabd279b3f1fc0b927860d66a035636fbc5237106a149199a84f96"
+    "FRC_Sensor_CAN-B_Cu.gbl": "7f74b4768dc14a227f82d49139ed5ae59d97706ad084c8f10c64ff02ca037d48",
+    "FRC_Sensor_CAN-F_Cu.gtl": "3c7b828f589cfb50c6365ca362d823e03df8d08183970b1f1628210aa687aeea",
+    "FRC_Sensor_CAN-In1_Cu.g1": "9c407cce87ea0eb71c5711dd49725d38295574cdb200885f730f9d864582c6d2",
+    "FRC_Sensor_CAN-In2_Cu.g2": "159b212f40cf7c9d068182eb9dbf1d86ca6bd443013c05b953db6f870038c397",
+    "FRC_Sensor_CAN-NPTH.drl": "946c656a2072456541fe4bbc8f41cf1b896e64e7263deaeccae8123fce65357d",
+    "FRC_Sensor_CAN-PTH.drl": "9985c3520241afa724f31d6965a5aba140eb0aa9d271a0a3fdd4894c8f19f38a"
   }
 }

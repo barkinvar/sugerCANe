@@ -2,3 +2,6 @@
 (rule "VSSOP 0.65mm pitch adjacent pad spacing"
  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U8') && B.memberOfFootprint('U8')")
  (constraint clearance (min 0.15mm)))
+(rule "Ground pad connection width"
+ (condition "A.NetName == 'GND'")
+ (constraint connection_width (min 0.25mm)))

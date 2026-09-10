@@ -1,31 +1,31 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-10T02:08:41.743541+00:00",
+  "reviewed_utc": "2026-09-10T02:20:48.611323+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
       "file": "output/review/board_3d_final.png",
-      "sha256": "b924bd01cb1b7449a41df0411e2c687601154fe5f62ec0210f6cac7ff4f7cdd7",
-      "scope": "Refreshed oblique CAD inspected after contact/branch cleanup; component arrangement, connectors, optical courtyard, service socket and markings retained.",
-      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
+      "sha256": "8849687e184184de4bda20a56e50ca106085def89e5c3748cd20f424c0f74ec9",
+      "scope": "Refreshed oblique CAD inspected after ground-pour cleanup; component arrangement, connectors, optical courtyard, service socket and markings retained.",
+      "reviewed_utc": "2026-09-10T02:20:48.611323+00:00"
     },
     {
       "file": "output/review/board_top.png",
-      "sha256": "a8fcfdf93be6ae45207070c471b2c482cb0031a6cb272a94e9dda0b476630efa",
-      "scope": "Refreshed top CAD inspected with native contact close-ups and exported copper. Pad overshoots and redundant approaches removed.",
-      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
+      "sha256": "607b0e386a8707121245718c5e7e8c1e3db0a5d8c25804dafc375f56edeb7381",
+      "scope": "Refreshed top CAD inspected with native contact close-ups and exported copper. Solid SMT ground connections, corrected thermal spokes and deliberate pour gaps inspected.",
+      "reviewed_utc": "2026-09-10T02:20:48.611323+00:00"
     },
     {
       "file": "output/review/board_bottom.png",
-      "sha256": "f026693046aa23fca0d8f2b63cbca10a15538e86b003d093f9ce9db6282dbc5a",
-      "scope": "Refreshed underside CAD inspected with lower-side native close-ups. Selector overshoot and redundant loop removed; artwork retained.",
-      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
+      "sha256": "a78d7730baacb99412853b966b2ee7d0c47a3cedafed675756d53eb50b200101",
+      "scope": "Refreshed underside CAD inspected with lower-side native close-ups. Refilled ground copper inspected; artwork and trace routing retained.",
+      "reviewed_utc": "2026-09-10T02:20:48.611323+00:00"
     },
     {
       "file": "output/review/board_connectors.png",
-      "sha256": "20fd04d324c9598dc274781605619b36070ff22240351b27cf2be3fc132e475d",
+      "sha256": "735e741c1fc2b520d5dc566b867dc823b002f0c080efa084f175bd63cab8baab",
       "scope": "Refreshed connector-angle CAD inspected; connector entries and selector access retained.",
-      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
+      "reviewed_utc": "2026-09-10T02:20:48.611323+00:00"
     },
     {
       "file": "output/review/service_gui.png",
@@ -36,9 +36,9 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "26ea04056857a2ba86674630726abec3640a861fe204510c95c3eb9c9e5c6be4",
+      "sha256": "051775a4b2ae045465308ffda29a2b71ae58c952b0324eddc3ac7f9b1d961ffe",
       "scope": "All 39 pages raster-compared with baseline; changed pages 1, 3-5 and 35-37 inspected. Current routing and DC results and unchanged HOLD are readable.",
-      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
+      "reviewed_utc": "2026-09-10T02:20:48.611323+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
@@ -70,9 +70,9 @@
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
-      "sha256": "a497ca3099e64f2484f67458f35466223c88a3c90b77a7a06a0097564b83bec6",
-      "scope": "All four updated copper pages inspected after native DRC and independent copper clearance/connectivity passes. Changed signal routing, refill and three removed via holes reflected on all four layers.",
-      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
+      "sha256": "8e02f8a9f267e2891d3a52a8491150de4d2e2f53a096f1667d9c49335e0396c0",
+      "scope": "All four updated copper pages inspected after native DRC and independent copper clearance/connectivity passes. Ground-pour changes and local cutouts reflected on all four layers; no via/drill changes.",
+      "reviewed_utc": "2026-09-10T02:20:48.611323+00:00"
     },
     {
       "file": "reports/electrical/converter_loop.png",
@@ -118,15 +118,15 @@
     },
     {
       "file": "output/review/gerber_top_copper.png",
-      "sha256": "cae34a9cc0dbc329f8f22a36c86a28d1c7810e59209fbbe728b433c44dc5fb4e",
+      "sha256": "6d870eb74ab4ca7ac136ad7dbf1a6b9697b035428279925c8e666489921134fd",
       "scope": "Actual exported top copper inspected with four-layer PDF and native contact before/after details.",
-      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
+      "reviewed_utc": "2026-09-10T02:20:48.611323+00:00"
     },
     {
       "file": "output/review/gerber_bottom_copper.png",
-      "sha256": "f131b495f2bd9c4fe6a6ff37b84374b27cc269ee87c8e848db9ed3ec20d3b7fd",
+      "sha256": "ee79fd4cb007eba94cce314f655f091cdc61007f2e9ce911c74b2594792ec021",
       "scope": "Actual exported bottom copper inspected with four-layer PDF and lower-side native close-ups.",
-      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
+      "reviewed_utc": "2026-09-10T02:20:48.611323+00:00"
     },
     {
       "file": "output/fabrication/FRC_Sensor_CAN-NPTH-drl_map.pdf",
@@ -138,8 +138,8 @@
     {
       "file": "output/fabrication/FRC_Sensor_CAN-PTH-drl_map.pdf",
       "sha256": "4462ce32be01c7eb4fe7c9ec6abb11c9c2b36f13c864a8fca652d608be3056ee",
-      "scope": "Updated plated-drill map inspected; three redundant signal-via drills removed, other drill geometry retained.",
-      "reviewed_utc": "2026-09-10T02:08:41.743541+00:00"
+      "scope": "Drill map raster-identical to baseline; all 242 vias and component holes retained.",
+      "reviewed_utc": "2026-09-10T02:20:48.611323+00:00"
     },
     {
       "file": "output/review/routing_widths.png",
@@ -152,11 +152,18 @@
       "file": "output/review/routing_contacts.png",
       "sha256": "5ecb04042f7a6c918123eede5b157e8a34d7da945d085280a7c1c4b22f4f58de",
       "reviewed_utc": "2026-09-10T02:08:41.743541+00:00",
-      "scope": "Paired native-copper details inspected: lower-left bottom loop/supply junction, lower-right bottom selector hook, top redundant paths, retained inner service-connector clearance. Pours omitted for trace visibility."
+      "scope": "Paired native-copper details inspected: lower-left bottom loop/supply junction, lower-right bottom selector hook, top redundant paths, retained inner service-connector clearance. Pours omitted for trace visibility.",
+      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
+    },
+    {
+      "file": "output/review/ground_pours.png",
+      "sha256": "a0cf36639a594baf2acdb745c4971815412428f3e40680cabd10760c8cf4462b",
+      "reviewed_utc": "2026-09-10T02:20:48.611323+00:00",
+      "scope": "Six paired exported-copper details inspected: opposing ground tips, solid SMT ground, inner-layer narrow connection and local gap, J8.7 thermal spokes, and J6.2 thermal slot freed of a redundant track."
     }
   ],
   "limitations": "Native CAD, exported copper, document inspection and nominal routed-copper DC screening only. No new transient simulation, firmware replay or physical prototype qualification. Existing manufacturing HOLD retained.",
-  "page_comparison_baseline_commit": "61192b617bb36d81272f7f307956e48c4cadfdc2",
+  "page_comparison_baseline_commit": "6b8af41aceb15b1c07924ef581ba128545fca47f",
   "rendered_page_comparison": {
     "output/documentation/SC12_RevH_Handbook.pdf": {
       "before_pages": 39,
@@ -214,9 +221,7 @@
     "output/fabrication/FRC_Sensor_CAN-PTH-drl_map.pdf": {
       "before_pages": 1,
       "after_pages": 1,
-      "changed_pages": [
-        1
-      ]
+      "changed_pages": []
     }
   },
   "bottom_branding": {
@@ -242,130 +247,255 @@
       "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto",
       "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp",
       "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp",
+      "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs",
+      "output/fabrication/FRC_Sensor_CAN-F_Mask.gts",
       "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1"
     ],
     "method": "Exact text comparison excluding generator timestamps only.",
-    "baseline_commit": "61192b617bb36d81272f7f307956e48c4cadfdc2"
+    "baseline_commit": "6b8af41aceb15b1c07924ef581ba128545fca47f"
   },
   "routing_cleanup": {
     "result": "PASS",
-    "baseline_commit": "61192b617bb36d81272f7f307956e48c4cadfdc2",
+    "baseline_commit": "6b8af41aceb15b1c07924ef581ba128545fca47f",
     "before": {
-      "segments": 2030,
-      "vias": 245,
-      "total_centerline_length_mm": 3404.0661424158584,
-      "minimum_width_mm": 0.18
-    },
-    "after": {
       "segments": 1533,
       "vias": 242,
       "total_centerline_length_mm": 3363.9924097507806,
       "minimum_width_mm": 0.18
     },
+    "after": {
+      "segments": 1530,
+      "vias": 242,
+      "total_centerline_length_mm": 3361.0578363723725,
+      "minimum_width_mm": 0.18
+    },
     "unchanged_native_objects": [
-      "All footprints and pads, their positions and net assignments",
-      "Remaining 242 vias including thermal/ground stitching",
-      "Board outline, layer stack, keepouts, zone definitions, markings and models"
+      "All component positions, values, pad geometry and net assignments",
+      "All 242 vias and all signal/power routes",
+      "Outline, layer stack, keepouts, artwork and all other native objects"
     ],
-    "board_sha256": "11a7fe728a5c38fea9ccf797b009e49f00d5b57660013b24940de233ee9ede55",
-    "scope": "All-layer contact and branch cleanup. No component, circuit, BOM, firmware, layer-stack or marking changes. Three redundant signal vias removed; no additional routing vias. Separate fresh native CAD, copper DC and exported-Gerber checks required. Transient simulations remain deferred; no physical qualification claimed.",
-    "removed_redundant_vias": [
-      {
-        "id": "98c3dadb-99ff-4b5b-902a-850bea21e86e",
-        "net": "+3V3",
-        "at": [
-          5.8232,
-          57.5491
-        ],
-        "width": 0.65,
-        "layers": [
-          0,
-          2,
-          4,
-          6
-        ],
-        "remaining_connected_track_layers": [
-          0
-        ],
-        "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
-      },
-      {
-        "id": "1ea72085-26c6-4b4b-8cf5-6edde53809eb",
-        "net": "SENSE3",
-        "at": [
-          30.7255,
-          48.2871
-        ],
-        "width": 0.65,
-        "layers": [
-          0,
-          2,
-          4,
-          6
-        ],
-        "remaining_connected_track_layers": [
-          2
-        ],
-        "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
-      },
-      {
-        "id": "cf5b937a-86d1-4507-a784-398b44681f80",
-        "net": "SIG3",
-        "at": [
-          43.1172,
-          59.349999
-        ],
-        "width": 0.65,
-        "layers": [
-          0,
-          2,
-          4,
-          6
-        ],
-        "remaining_connected_track_layers": [
-          2
-        ],
-        "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
-      }
-    ],
-    "contact_cleanup": {
-      "segments_removed_net": 497,
-      "fixes": [
-        "Pad/via approaches shortened to remove overshoots and tiny stair steps on all routed layers.",
-        "Lower-left bottom BIAS_UP1_N loop and top BIAS_UP3_N duplicate paths removed.",
-        "SENSOR_5V, SENSOR_12V and V5_INTERNAL overlapping routes merged into shared endpoints and chamfered branches.",
-        "End-cap-only track and pad joins extended into real contacts; redundant C66 ground stub removed.",
-        "Local converter, crystal, power widths and ground-via stitching retained under existing constraints."
+    "board_sha256": "f6e7be17328081b06241a03ec6a706204e40f90e1e63c5d6ff4bc82f96823d04",
+    "scope": "Ground-pour geometry cleanup only. All component positions, signals, power paths and widths retained. Nominal geometry screens do not qualify ground-return impedance, current crowding, thermal/reflow behavior or a fabricated board; full simulations remain deferred.",
+    "ground_cleanup": {
+      "minimum_pour_width_mm": 0.25,
+      "minimum_pad_connection_mm": 0.25,
+      "minimum_separate_ground_gap_mm": 0.25,
+      "outer_pad_connections": "Solid for SMT; thermal relief for through-hole pads",
+      "inner_pad_connections": "Solid",
+      "thermal_spoke_width_mm": 0.3,
+      "thermal_gap_mm": 0.25,
+      "J8_pin7_spoke_angle_deg": 45,
+      "local_pour_cutouts": [
+        {
+          "layer": "F.Cu",
+          "bounds_top_left_mm": [
+            17,
+            23.58,
+            17.48,
+            23.92
+          ]
+        },
+        {
+          "layer": "F.Cu",
+          "bounds_top_left_mm": [
+            13.7,
+            37.25,
+            14.18,
+            37.65
+          ]
+        },
+        {
+          "layer": "In2.Cu",
+          "bounds_top_left_mm": [
+            46.42,
+            35.94,
+            46.86,
+            36.38
+          ]
+        },
+        {
+          "layer": "In1.Cu",
+          "bounds_top_left_mm": [
+            22.12,
+            61.08,
+            22.7,
+            61.43
+          ]
+        },
+        {
+          "layer": "In2.Cu",
+          "bounds_top_left_mm": [
+            22.12,
+            61.08,
+            22.7,
+            61.43
+          ]
+        }
       ],
-      "routing_rules": {
-        "direction_tolerance_mm": 2e-05,
-        "minimum_free_segment_mm": 0.1,
-        "minimum_free_bend_included_angle_deg": 135,
-        "curved_tracks_allowed": false,
-        "free_three_way_branch_sectors_deg": [
-          90,
-          135,
-          135
-        ],
-        "explicit_free_junction_endpoints": true
+      "removed_redundant_ground_segments": [
+        "231b4034-8880-48cb-9d96-d0e36b28832e",
+        "3325f43e-5d93-4e4d-82eb-86a9a098f58a",
+        "9ba89c20-9a7b-412c-80a9-f9a947f55c95"
+      ],
+      "removed_ground_route_reason": "The three-segment J6.2 approach crossed its thermal slot and created a small pocket. Native DRC confirms the pad retains its ground connection through the remaining thermal spokes and plated barrel; signal routes are untouched.",
+      "before_screen": {
+        "top": {
+          "result": "FAIL",
+          "ground_islands": 17,
+          "minimum_separate_island_gap_mm": 0.10745349850516683,
+          "required_gap_mm": 0.25,
+          "neck_screen_width_mm": 0.24,
+          "minimum_surviving_core_area_mm2": 0.025,
+          "narrow_gaps": [
+            {
+              "islands": [
+                6,
+                16
+              ],
+              "gap_mm": 0.10745349850516683,
+              "a_mm": [
+                31.446055,
+                -17.475084
+              ],
+              "b_mm": [
+                31.403401,
+                -17.376459
+              ]
+            }
+          ],
+          "narrow_necks": [
+            {
+              "island": 0,
+              "surviving_core_areas_mm2": [
+                47.13574565548927,
+                1.568013981113205
+              ]
+            },
+            {
+              "island": 3,
+              "surviving_core_areas_mm2": [
+                8.012273674959966,
+                1.6309698339300227
+              ]
+            },
+            {
+              "island": 4,
+              "surviving_core_areas_mm2": [
+                827.2862434936658,
+                16.593598361625304,
+                0.18936915120678688,
+                6.824424593926616,
+                0.7227819127904527
+              ]
+            },
+            {
+              "island": 6,
+              "surviving_core_areas_mm2": [
+                11.301277991947352,
+                0.06608834485847159
+              ]
+            },
+            {
+              "island": 11,
+              "surviving_core_areas_mm2": [
+                3.755096342443976,
+                32.096906977242234
+              ]
+            },
+            {
+              "island": 16,
+              "surviving_core_areas_mm2": [
+                277.58994691597604,
+                1.7915900800829947
+              ]
+            }
+          ]
+        },
+        "bottom": {
+          "result": "PASS",
+          "ground_islands": 11,
+          "minimum_separate_island_gap_mm": 0.35510100000000483,
+          "required_gap_mm": 0.25,
+          "neck_screen_width_mm": 0.24,
+          "minimum_surviving_core_area_mm2": 0.025,
+          "narrow_gaps": [],
+          "narrow_necks": []
+        },
+        "inner_2": {
+          "result": "FAIL",
+          "ground_islands": 2,
+          "minimum_separate_island_gap_mm": 0.6509992723129573,
+          "required_gap_mm": 0.25,
+          "neck_screen_width_mm": 0.24,
+          "minimum_surviving_core_area_mm2": 0.025,
+          "narrow_gaps": [],
+          "narrow_necks": [
+            {
+              "island": 0,
+              "surviving_core_areas_mm2": [
+                2883.090507750342,
+                82.84697113688254
+              ]
+            }
+          ]
+        },
+        "inner_1": {
+          "result": "PASS",
+          "ground_islands": 1,
+          "minimum_separate_island_gap_mm": null,
+          "required_gap_mm": 0.25,
+          "neck_screen_width_mm": 0.24,
+          "minimum_surviving_core_area_mm2": 0.025,
+          "narrow_gaps": [],
+          "narrow_necks": []
+        }
       },
-      "filled_zone_entries_retained": 11,
-      "endpoint_gate_enforced": true,
-      "routed_nets": 77,
-      "width_transitions": 13,
-      "free_width_transitions": 6,
-      "strengthened_gate_before_findings": {
-        "unjoined_endpoints": 110,
-        "parallel_copper_overlap": 14,
-        "short_free_segments": 48,
-        "redundant_collinear_joint": 2,
-        "unchamfered_free_branches": 2
+      "after_screen": {
+        "top": {
+          "result": "PASS",
+          "ground_islands": 19,
+          "minimum_separate_island_gap_mm": 0.26374725354589035,
+          "required_gap_mm": 0.25,
+          "neck_screen_width_mm": 0.24,
+          "minimum_surviving_core_area_mm2": 0.025,
+          "narrow_gaps": [],
+          "narrow_necks": []
+        },
+        "bottom": {
+          "result": "PASS",
+          "ground_islands": 11,
+          "minimum_separate_island_gap_mm": 0.4874089155534614,
+          "required_gap_mm": 0.25,
+          "neck_screen_width_mm": 0.24,
+          "minimum_surviving_core_area_mm2": 0.025,
+          "narrow_gaps": [],
+          "narrow_necks": []
+        },
+        "inner_2": {
+          "result": "PASS",
+          "ground_islands": 3,
+          "minimum_separate_island_gap_mm": 0.5178725057965531,
+          "required_gap_mm": 0.25,
+          "neck_screen_width_mm": 0.24,
+          "minimum_surviving_core_area_mm2": 0.025,
+          "narrow_gaps": [],
+          "narrow_necks": []
+        },
+        "inner_1": {
+          "result": "PASS",
+          "ground_islands": 1,
+          "minimum_separate_island_gap_mm": null,
+          "required_gap_mm": 0.25,
+          "neck_screen_width_mm": 0.24,
+          "minimum_surviving_core_area_mm2": 0.025,
+          "narrow_gaps": [],
+          "narrow_necks": []
+        }
       },
-      "strengthened_gate_after_findings": {},
-      "closed_same_layer_centerline_cycles_after": 0
+      "notch_review": "Five local pour cutouts retreat opposing tips, including two local gaps within a connected inner-plane island. Final morphological slit candidates above 0.005 mm\u00b2 are absent after excluding a 2 \u00b5m boundary band; sharp thermal-slot corners are intentional."
     }
   },
-  "sourcing_geometry_note": "Exact native comparison preserves every nonrouting object except three individually reviewed redundant signal vias. Components, stack, remaining vias and markings unchanged. Fresh CAD/DC/Gerber checks and renders reviewed.",
+  "sourcing_geometry_note": "Exact native comparison permits only four ground-zone minimum widths, two outer connection modes, five pour cutouts, J8.7 spoke angle, three redundant GND segments and cached fills. All component positions, signal/power routes, vias, stack and markings unchanged. Fresh CAD/DC/Gerber evidence reviewed.",
   "assembly_audit_document_comparison": {
     "baseline_commit": "26a31d8859a3b7bdf73beb16c652f51b8c65de3b",
     "documents": {
