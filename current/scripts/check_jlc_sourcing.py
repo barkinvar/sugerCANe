@@ -70,8 +70,24 @@ board_path=R/'hardware/FRC_Sensor_CAN.kicad_pcb'
 assert hashlib.sha256(board_path.read_bytes()).hexdigest()==route_review['board_sha256']
 for via in route_review.get('removed_redundant_vias', []):
  assert via['id'] not in board_path.read_text()
+native=sexpdata.loads(board_path.read_text())
+review=snapshot['equivalence_review']
+assert review['board_sha256']==route_review['board_sha256']
+assert len(review['substitutions'])==len(snapshot['substitutions'])==6
+def children(rows,name):
+ return [v for v in rows if isinstance(v,list) and str(v[0])==name]
+footprints={next(v[2] for v in children(f,'property') if v[1]=='Reference'):f for f in children(native,'footprint')}
+for approved,checked in zip(snapshot['substitutions'],review['substitutions']):
+ for key in ('references','old_mpn','new_mpn','footprint'):assert checked[key]==approved[key]
+ assert checked['two_terminal_nonpolar']
+ assert set(checked['sources']) <= {d['file'] for d in snapshot['datasheets']}
+ for ref in checked['references']:
+  pads=children(footprints[ref],'pad');assert {p[1] for p in pads}=={'1','2'} and len(pads)==2
+  for pad,x in zip(sorted(pads,key=lambda p:p[1]),checked['nominal_pad_centers_x_mm']):
+   assert children(pad,'size')[0][1:]==checked['nominal_pad_size_mm'],ref
+   assert children(pad,'at')[0][1:3]==[x,0],ref
 fixed=[]
-for row in sexpdata.loads(board_path.read_text()):
+for row in native:
  if isinstance(row,list):
   if str(row[0]) in ('segment','arc'):continue
   if str(row[0])=='zone':row=[v for v in row if not isinstance(v,list) or str(v[0]) not in ('filled_polygon','fill_segments')]
@@ -92,13 +108,13 @@ if assembly['factory_profile_confirmed']:
  evidence=assembly['factory_profile_evidence']
  assert evidence and hashlib.sha256((R/evidence['file']).read_bytes()).hexdigest()==evidence['sha256']
 holds=[]
-if shortages:holds.append('Exact MCU/public stock shortage; procurement unconfirmed')
+if shortages:holds.append('Insufficient orderable public stock: '+', '.join(r['mpn'] for r in shortages)+'; procurement unconfirmed')
 if ineligible:holds.append('Selected assembly service excludes BOM parts')
 if thermal_conflicts and not assembly['factory_profile_confirmed']:holds.append('C1 profile (2) permits 235 C peak; nominal Standard process can reach 245 C')
 if not assembly['all_component_reflow_profiles_qualified']:holds.append('Factory qualification of all exact-part solder profiles and moisture handling is pending')
 hand=float(next(r for r in csv.DictReader((R/'bom/cost_estimate.csv').open()) if r['boards']=='10')['hand_parts_cash_per_board_usd'])
 report=dict(result='PASS sourcing-file consistency; HOLD manufacturing review' if holds else 'PASS sourcing-file consistency; allocation unconfirmed',
- observed_utc=snapshot['observed_utc'],boards=10,factory_placements=130,matched_mpn_types=len(rows),stock_sufficient_types=len(rows)-len(shortages),
+ observed_utc=snapshot['observed_utc'],stock_observation_window_utc=snapshot['stock_observation_window_utc'],availability_definition=snapshot['availability_definition'],boards=10,factory_placements=130,matched_mpn_types=len(rows),stock_sufficient_types=len(rows)-len(shortages),
  shortage_types=shortages,basic_types=basic,preferred_extended_types=preferred,ordinary_extended_types=fees,
  smt_parts_with_conservative_attrition_per_board_usd=round(cash/10,2),manual_parts_per_board_usd=hand,
  combined_parts_budget_per_board_usd=round(cash/10+hand,2),
@@ -108,6 +124,7 @@ report=dict(result='PASS sourcing-file consistency; HOLD manufacturing review' i
  nominal_standard_reflow_conflicts=thermal_conflicts,manufacturing_holds=holds,
  quantity_method=snapshot['quantity_method'],factory_allocation_confirmed=False,
  electrical_model_only_reviewed_mpn_metadata_changed=True,reviewed_routing=route_review,
+ substitution_review=review,alternative_stock_review=snapshot['alternative_stock_review'],hand_solder_availability=snapshot['hand_solder'],
  order_decision='HOLD: user approval and new simulations pending; MCU sourcing, C1 reflow and factory stack/quote unconfirmed',
  limitations='Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.',
  input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in ['bom/jlc_sourcing.json','bom/catalog_china.json','bom/Factory_BOM.csv','bom/BOM_JLCPCB.csv','output/assembly/CPL_JLCPCB.csv','hardware/design/circuit.json','hardware/FRC_Sensor_CAN.kicad_pcb','scripts/check_jlc_sourcing.py',*[d['file'] for d in snapshot['datasheets']]]})

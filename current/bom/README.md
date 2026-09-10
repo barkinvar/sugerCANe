@@ -17,4 +17,4 @@ Use **Factory_BOM + CPL** for top-side SMT assembly. The user buys and fits the 
 
 Pair the factory BOM with [CPL_JLCPCB.csv](../output/assembly/CPL_JLCPCB.csv) and the [Gerber ZIP](../order/README.md). Do not include the ten hand-fitted components in factory SMT placement. [Cost explanation](../docs/COST_REDUCTION.md) includes substitutions and exclusions; [factory instructions](../docs/FACTORY_ORDER.md) define the scope.
 
-This is a [JLC sourcing candidate](../docs/JLC_SOURCING.md), pending user approval and new simulations. Public stock covers 54 of 55 SMT types for ten boards; U5 needs exact-part sourcing. No inventory is reserved or delivery promised.
+This is a [JLC sourcing candidate](../docs/JLC_SOURCING.md), pending user approval and new simulations. The September 9, 2026 live recheck covers every factory type: 54 of 55 have enough orderable stock for ten boards; U5 needs exact-part sourcing. No inventory is reserved or delivery promised.

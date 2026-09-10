@@ -1,6 +1,11 @@
 {
   "result": "PASS sourcing-file consistency; HOLD manufacturing review",
-  "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+  "observed_utc": "2026-09-10T02:24:23.936594+00:00",
+  "stock_observation_window_utc": [
+    "2026-09-10T02:23:39.448428+00:00",
+    "2026-09-10T02:24:23.936594+00:00"
+  ],
+  "availability_definition": "max(0, canPresaleNumber) from JLC public component detail; stockCount is recorded separately and is not treated as free inventory. No cart allocation or reservation.",
   "boards": 10,
   "factory_placements": 130,
   "matched_mpn_types": 55,
@@ -20,9 +25,9 @@
   "basic_types": 12,
   "preferred_extended_types": 1,
   "ordinary_extended_types": 42,
-  "smt_parts_with_conservative_attrition_per_board_usd": 17.78,
+  "smt_parts_with_conservative_attrition_per_board_usd": 17.79,
   "manual_parts_per_board_usd": 8.7,
-  "combined_parts_budget_per_board_usd": 26.48,
+  "combined_parts_budget_per_board_usd": 26.49,
   "selected_service": "Standard",
   "economic_eligible": false,
   "economic_blockers": [
@@ -70,7 +75,7 @@
     }
   ],
   "manufacturing_holds": [
-    "Exact MCU/public stock shortage; procurement unconfirmed",
+    "Insufficient orderable public stock: STM32F042K6T6; procurement unconfirmed",
     "C1 profile (2) permits 235 C peak; nominal Standard process can reach 245 C",
     "Factory qualification of all exact-part solder profiles and moisture handling is pending"
   ],
@@ -213,20 +218,357 @@
       }
     ]
   },
+  "substitution_review": {
+    "observed_utc": "2026-09-10T02:26:16.074445+00:00",
+    "board_sha256": "f6e7be17328081b06241a03ec6a706204e40f90e1e63c5d6ff4bc82f96823d04",
+    "scope": "Six changed passive types at nine placements checked against original and replacement manufacturer specifications and actual native pad dimensions. The other 49 factory types retain exact manufacturer/MPN. No BOM or CAD change in this audit.",
+    "substitutions": [
+      {
+        "references": [
+          "C25",
+          "C26"
+        ],
+        "old_mpn": "C0805C300J5GACTU",
+        "new_mpn": "CC0805JRNPO9BN300",
+        "role": "8 MHz crystal load capacitors",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:C_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1,
+          1.45
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.95,
+          0.95
+        ],
+        "value_pF": 30,
+        "tolerance_percent": 5,
+        "voltage_V": 50,
+        "dielectric": "C0G/NP0",
+        "tcc_ppm_C": 30,
+        "temperature_range_C": [
+          -55,
+          125
+        ],
+        "dissipation_factor_max_percent": 0.1,
+        "sources": [
+          "sources/datasheets/kemet_original.pdf",
+          "sources/datasheets/yageo_np0.pdf"
+        ],
+        "differences": "Body thickness and insulation-resistance limits differ. KEMET specifies 100 Gohm; Yageo minimum is 10 Gohm. At 8 MHz and 30 pF the capacitive reactance is about 663 ohm, so this leakage difference is negligible for the intended load. No claim of identical parasitics or verified oscillator startup."
+      },
+      {
+        "references": [
+          "R61"
+        ],
+        "old_mpn": "RC0805FR-0711K5L",
+        "new_mpn": "0805W8F1152T5E",
+        "role": "12 V boost feedback lower arm",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1.025,
+          1.4
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.9125,
+          0.9125
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.125,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 150,
+        "maximum_overload_V": 300,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      },
+      {
+        "references": [
+          "R101",
+          "R201",
+          "R301"
+        ],
+        "old_mpn": "RC0805FR-07220KL",
+        "new_mpn": "0805W8F2203T5E",
+        "role": "Digital sensor input divider series arm (all three channels)",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1.025,
+          1.4
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.9125,
+          0.9125
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.125,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 150,
+        "maximum_overload_V": 300,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      },
+      {
+        "references": [
+          "R10"
+        ],
+        "old_mpn": "RC0805FR-0759KL",
+        "new_mpn": "0805W8F5902T5E",
+        "role": "5 V sensor current-limit setting",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1.025,
+          1.4
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.9125,
+          0.9125
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.125,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 150,
+        "maximum_overload_V": 300,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      },
+      {
+        "references": [
+          "R51"
+        ],
+        "old_mpn": "RC0805FR-075K23L",
+        "new_mpn": "0805W8F5231T5E",
+        "role": "Comparator logic reference divider lower arm",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1.025,
+          1.4
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.9125,
+          0.9125
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.125,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 150,
+        "maximum_overload_V": 300,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      },
+      {
+        "references": [
+          "R42"
+        ],
+        "old_mpn": "RC1206FR-07120RL",
+        "new_mpn": "1206W4F1200T5E",
+        "role": "Switchable CAN termination",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_1206_3216Metric",
+        "nominal_pad_size_mm": [
+          1.125,
+          1.75
+        ],
+        "nominal_pad_centers_x_mm": [
+          -1.4625,
+          1.4625
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.25,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 200,
+        "maximum_overload_V": 400,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      }
+    ]
+  },
+  "alternative_stock_review": [
+    {
+      "lcsc": "C529323",
+      "mpn": "STM32F042K6T6TR",
+      "manufacturer": "STMicroelectronics",
+      "observed_utc": "2026-09-10T02:24:48.190690+00:00",
+      "available_to_order": 0,
+      "public_stock": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C529323",
+      "decision": "STM32F042K6T6TR changes tray to tape-and-reel only; direct electrical/package alternative, but zero stock so not implemented.",
+      "implemented": false
+    },
+    {
+      "lcsc": "C1337340",
+      "mpn": "STM32F042K6T7",
+      "manufacturer": "STMicroelectronics",
+      "observed_utc": "2026-09-10T02:24:49.743033+00:00",
+      "available_to_order": 0,
+      "public_stock": 6,
+      "source_url": "https://jlcpcb.com/partdetail/C1337340",
+      "decision": "STM32F042K6T7 retains silicon/memory/LQFP32 pinout with higher maximum ambient grade; also zero orderable stock. Not implemented.",
+      "implemented": false
+    },
+    {
+      "lcsc": "C92059",
+      "mpn": "EEEFT1H470AP",
+      "manufacturer": "PANASONIC",
+      "observed_utc": "2026-09-10T02:24:51.281218+00:00",
+      "available_to_order": 1815,
+      "public_stock": 1886,
+      "source_url": "https://jlcpcb.com/partdetail/C92059",
+      "decision": "EEEFT1H470AP is a 6.3 x 5.8 mm capacitor versus current 8 x 6.2 mm body. Do not substitute without land-pattern, ripple/ESR, stability and reflow review.",
+      "implemented": false
+    }
+  ],
+  "hand_solder_availability": {
+    "references": [
+      "J1",
+      "J2",
+      "J3",
+      "J4",
+      "J5",
+      "J6",
+      "J8",
+      "JP101",
+      "JP201",
+      "JP301"
+    ],
+    "reason": "Keep existing ten-part manual scope. Genuine Weidmuller 1824420000 has zero JLC stock, 1824430000 has no exact public match, Harwin M22-2010305 has only 11 for 30 needed. J8 is stocked but remains manual with the other headers.",
+    "live_jlc_check": [
+      {
+        "mpn": "1824420000",
+        "observed_utc": "2026-09-10T02:24:24.502492+00:00",
+        "source": "JLC public exact-MPN search",
+        "matches": [
+          {
+            "mpn": "1824420000",
+            "manufacturer": "WEIDMULLER",
+            "lcsc": "C5482136",
+            "available_to_order": 0,
+            "public_stock": 0
+          },
+          {
+            "mpn": "1824420000",
+            "manufacturer": "JLCPCB Assembly",
+            "lcsc": "C9900052667",
+            "available_to_order": 0,
+            "public_stock": 0
+          }
+        ]
+      },
+      {
+        "mpn": "1824430000",
+        "observed_utc": "2026-09-10T02:24:25.135392+00:00",
+        "source": "JLC public exact-MPN search",
+        "matches": []
+      },
+      {
+        "mpn": "M22-2010305",
+        "observed_utc": "2026-09-10T02:24:25.076432+00:00",
+        "source": "JLC public exact-MPN search",
+        "matches": [
+          {
+            "mpn": "M22-2010305",
+            "manufacturer": "Harwin",
+            "lcsc": "C7221766",
+            "available_to_order": 11,
+            "public_stock": 11
+          }
+        ]
+      },
+      {
+        "mpn": "SPN02SVEN-RC",
+        "observed_utc": "2026-09-10T02:25:27.117597+00:00",
+        "source": "JLC public exact-MPN search",
+        "matches": [
+          {
+            "mpn": "SPN02SVEN-RC",
+            "manufacturer": "Sullins Connector Solutions",
+            "lcsc": "C6495598",
+            "available_to_order": 0,
+            "public_stock": 0
+          }
+        ]
+      },
+      {
+        "mpn": "PM254V-12-10P-H85",
+        "manufacturer": "XFCN",
+        "lcsc": "C492399",
+        "observed_utc": "2026-09-10T02:25:26.552466+00:00",
+        "available_to_order": 36672,
+        "public_stock": 38916
+      }
+    ],
+    "external_supplier_status": "Manual parts remain a separate purchase. Older distributor stock observations are not refreshed by this JLC audit; delivery and allocation unconfirmed."
+  },
   "order_decision": "HOLD: user approval and new simulations pending; MCU sourcing, C1 reflow and factory stack/quote unconfirmed",
   "limitations": "Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.",
   "input_hashes": {
-    "bom/jlc_sourcing.json": "ae288f8f127598cf8fee641a0674ef2d32997ba3e78c272bffa14e190445ec82",
-    "bom/catalog_china.json": "2f6c5aa94e4fa244699916afbd5e3491fccada22058eac77c01d8ce95f949f41",
+    "bom/jlc_sourcing.json": "21276aa51f6144e4d8ad640ba3b7c588d5a08dabcaf2092ba40dee0a8a710d26",
+    "bom/catalog_china.json": "d8f8c2f38efb80a49c3079611d6c105d0b73f12eabf85eb4457c0269e1673448",
     "bom/Factory_BOM.csv": "1bcd08b11bb784d48a6ee393300d054345cff93bd6e4d71e55e10136c156230f",
     "bom/BOM_JLCPCB.csv": "10277d76b991fed2259d62a83f88b4f9f150c63aa82ec869b0895cd85abdcd5b",
     "output/assembly/CPL_JLCPCB.csv": "faff9a8477f2f79eb601effea500a8eaf37dd6f02ebab33591ff9f4e656fbb0e",
     "hardware/design/circuit.json": "3f077ab74530cf41d072d848b7192e28bee21ccba3a22e8232b252556e57556c",
     "hardware/FRC_Sensor_CAN.kicad_pcb": "f6e7be17328081b06241a03ec6a706204e40f90e1e63c5d6ff4bc82f96823d04",
-    "scripts/check_jlc_sourcing.py": "c964e1e820547e704426987f52f44539472e5aa8858ddf56e71e41f2eb0adee4",
+    "scripts/check_jlc_sourcing.py": "1ee07bdbe170f2c10cd61b9ce4667202ff4af3b4309271fcdd216c8d14f767ff",
     "sources/datasheets/yageo_np0.pdf": "495287fc811dc714366f2edd3bc974d98d2d80133266a0a73bb01ac01237e3eb",
     "sources/datasheets/uniroyal_thick_film.pdf": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
     "sources/datasheets/panasonic_fk.pdf": "b36857d089adaddf3042b33bf11d0f7d83bf70734e983f33b7827152e11854e3",
-    "sources/datasheets/panasonic_reflow.pdf": "5302db62f18432e9964c56852637c880569055ff5b962dba6d4b1a254ada8aac"
+    "sources/datasheets/panasonic_reflow.pdf": "5302db62f18432e9964c56852637c880569055ff5b962dba6d4b1a254ada8aac",
+    "sources/datasheets/yageo_rc_original.pdf": "7b6f0ae72708ca4b38126f84b5407a3e970a94cb60bc1a0afdaeb25a23d839bb",
+    "sources/datasheets/kemet_original.pdf": "948d3eb68896029f2248ae329805fd34aaab303141ed04c93631268f3e62f79b"
   }
 }

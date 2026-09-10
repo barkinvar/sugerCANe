@@ -1,5 +1,5 @@
 {
-  "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+  "observed_utc": "2026-09-10T02:24:23.936594+00:00",
   "batch_boards": 10,
   "baseline_commit": "8d4deb4f51a6603b7e28a6b035f7ab955d4dc5f1",
   "baseline_model_sha256": "cf9e272fb1d32b9ad6e04e69c37d37f8c2610410835bd46e6231c3692547903e",
@@ -103,6 +103,16 @@
       "file": "sources/datasheets/panasonic_reflow.pdf",
       "sha256": "5302db62f18432e9964c56852637c880569055ff5b962dba6d4b1a254ada8aac",
       "source_url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/DME0000COL48.pdf"
+    },
+    {
+      "file": "sources/datasheets/yageo_rc_original.pdf",
+      "sha256": "7b6f0ae72708ca4b38126f84b5407a3e970a94cb60bc1a0afdaeb25a23d839bb",
+      "source_url": "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
+    },
+    {
+      "file": "sources/datasheets/kemet_original.pdf",
+      "sha256": "948d3eb68896029f2248ae329805fd34aaab303141ed04c93631268f3e62f79b",
+      "source_url": "https://search.kemet.com/component-documentation/download/specsheet/C0805C300J5GACTU"
     }
   ],
   "parts": [
@@ -115,9 +125,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C13982",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 45514,
-      "available_to_order": 45387,
+      "observed_utc": "2026-09-10T02:23:39.448428+00:00",
+      "public_stock": 45372,
+      "available_to_order": 45245,
       "minimum_purchase": 1,
       "minimum_assembly": 5,
       "attrition_allowance": 2,
@@ -131,11 +141,11 @@
       "price_tiers_usd": [
         [
           1,
-          0.2555
+          0.2556
         ],
         [
           50,
-          0.2055
+          0.2056
         ],
         [
           150,
@@ -178,9 +188,9 @@
       ],
       "quantity_per_board": 4,
       "source_url": "https://jlcpcb.com/partdetail/C17513",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 31295600,
-      "available_to_order": 30035680,
+      "observed_utc": "2026-09-10T02:23:39.456292+00:00",
+      "public_stock": 31057718,
+      "available_to_order": 29797798,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -249,9 +259,9 @@
       ],
       "quantity_per_board": 12,
       "source_url": "https://jlcpcb.com/partdetail/C17414",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 54980033,
-      "available_to_order": 52983832,
+      "observed_utc": "2026-09-10T02:23:39.455480+00:00",
+      "public_stock": 54932810,
+      "available_to_order": 52936609,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -316,9 +326,9 @@
       ],
       "quantity_per_board": 8,
       "source_url": "https://jlcpcb.com/partdetail/C149504",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 5110219,
-      "available_to_order": 4767540,
+      "observed_utc": "2026-09-10T02:23:39.454540+00:00",
+      "public_stock": 5100702,
+      "available_to_order": 4758023,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -376,9 +386,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C17630",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 2475999,
-      "available_to_order": 2321977,
+      "observed_utc": "2026-09-10T02:23:40.066054+00:00",
+      "public_stock": 2472413,
+      "available_to_order": 2318391,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -436,7 +446,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C83312",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:40.041154+00:00",
       "public_stock": 7076,
       "available_to_order": 7026,
       "minimum_purchase": 1,
@@ -452,15 +462,15 @@
       "price_tiers_usd": [
         [
           1,
-          0.589
+          0.5892
         ],
         [
           10,
-          0.4703
+          0.4704
         ],
         [
           30,
-          0.4101
+          0.4102
         ],
         [
           100,
@@ -468,7 +478,7 @@
         ],
         [
           500,
-          0.3157
+          0.3158
         ],
         [
           1000,
@@ -498,9 +508,9 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C15127",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 418600,
-      "available_to_order": 310794,
+      "observed_utc": "2026-09-10T02:23:40.055670+00:00",
+      "public_stock": 419625,
+      "available_to_order": 311819,
       "minimum_purchase": 1,
       "minimum_assembly": 5,
       "attrition_allowance": 4,
@@ -534,7 +544,7 @@
         ],
         [
           6000,
-          0.0537
+          0.0538
         ]
       ],
       "ten_board_budget_quantity": 34,
@@ -558,9 +568,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C51499",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 73264,
-      "available_to_order": 72861,
+      "observed_utc": "2026-09-10T02:23:40.059813+00:00",
+      "public_stock": 73244,
+      "available_to_order": 72841,
       "minimum_purchase": 1,
       "minimum_assembly": 0,
       "attrition_allowance": 0,
@@ -574,7 +584,7 @@
       "price_tiers_usd": [
         [
           1,
-          0.295
+          0.2951
         ],
         [
           50,
@@ -582,7 +592,7 @@
         ],
         [
           150,
-          0.2003
+          0.2004
         ],
         [
           500,
@@ -618,9 +628,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C51118",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 62484,
-      "available_to_order": 60591,
+      "observed_utc": "2026-09-10T02:23:40.586808+00:00",
+      "public_stock": 62434,
+      "available_to_order": 60541,
       "minimum_purchase": 1,
       "minimum_assembly": 5,
       "attrition_allowance": 0,
@@ -638,11 +648,11 @@
         ],
         [
           50,
-          0.1357
+          0.1358
         ],
         [
           150,
-          0.1183
+          0.1184
         ],
         [
           500,
@@ -679,7 +689,7 @@
       ],
       "quantity_per_board": 2,
       "source_url": "https://jlcpcb.com/partdetail/C92506",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:40.593644+00:00",
       "public_stock": 164297,
       "available_to_order": 164252,
       "minimum_purchase": 1,
@@ -741,7 +751,7 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C5557780",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:40.611653+00:00",
       "public_stock": 4739,
       "available_to_order": 4733,
       "minimum_purchase": 1,
@@ -765,7 +775,7 @@
         ],
         [
           150,
-          0.0973
+          0.0974
         ],
         [
           500,
@@ -805,9 +815,9 @@
       ],
       "quantity_per_board": 5,
       "source_url": "https://jlcpcb.com/partdetail/C282529",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 71061,
-      "available_to_order": 70862,
+      "observed_utc": "2026-09-10T02:23:40.621670+00:00",
+      "public_stock": 71041,
+      "available_to_order": 70842,
       "minimum_purchase": 1,
       "minimum_assembly": 10,
       "attrition_allowance": 4,
@@ -866,7 +876,7 @@
       ],
       "quantity_per_board": 2,
       "source_url": "https://jlcpcb.com/partdetail/C107114",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:41.153707+00:00",
       "public_stock": 366601,
       "available_to_order": 342783,
       "minimum_purchase": 1,
@@ -928,9 +938,9 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C62774",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 1153391,
-      "available_to_order": 1143565,
+      "observed_utc": "2026-09-10T02:23:41.136229+00:00",
+      "public_stock": 1153173,
+      "available_to_order": 1143347,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -988,9 +998,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C107150",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 1808891,
-      "available_to_order": 1804261,
+      "observed_utc": "2026-09-10T02:23:41.157599+00:00",
+      "public_stock": 1804891,
+      "available_to_order": 1800261,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -1049,9 +1059,9 @@
       ],
       "quantity_per_board": 2,
       "source_url": "https://jlcpcb.com/partdetail/C1710",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 3011347,
-      "available_to_order": 2688525,
+      "observed_utc": "2026-09-10T02:23:41.162870+00:00",
+      "public_stock": 3001590,
+      "available_to_order": 2678768,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -1122,9 +1132,9 @@
       ],
       "quantity_per_board": 14,
       "source_url": "https://jlcpcb.com/partdetail/C28233",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 1686589,
-      "available_to_order": 1397659,
+      "observed_utc": "2026-09-10T02:23:41.682867+00:00",
+      "public_stock": 1680073,
+      "available_to_order": 1391143,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -1186,9 +1196,9 @@
       ],
       "quantity_per_board": 5,
       "source_url": "https://jlcpcb.com/partdetail/C28323",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 3723710,
-      "available_to_order": 3107955,
+      "observed_utc": "2026-09-10T02:23:41.749286+00:00",
+      "public_stock": 3712778,
+      "available_to_order": 3097023,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -1246,9 +1256,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C53134",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 241826,
-      "available_to_order": 219818,
+      "observed_utc": "2026-09-10T02:23:41.717615+00:00",
+      "public_stock": 240661,
+      "available_to_order": 218653,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -1307,7 +1317,7 @@
       ],
       "quantity_per_board": 2,
       "source_url": "https://jlcpcb.com/partdetail/C98195",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:41.735110+00:00",
       "public_stock": 236503,
       "available_to_order": 225867,
       "minimum_purchase": 1,
@@ -1323,7 +1333,7 @@
       "price_tiers_usd": [
         [
           1,
-          0.0607
+          0.0608
         ],
         [
           100,
@@ -1374,9 +1384,9 @@
       ],
       "quantity_per_board": 8,
       "source_url": "https://jlcpcb.com/partdetail/C12891",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 1017177,
-      "available_to_order": 788831,
+      "observed_utc": "2026-09-10T02:23:42.229167+00:00",
+      "public_stock": 1011687,
+      "available_to_order": 783341,
       "minimum_purchase": 1,
       "minimum_assembly": 5,
       "attrition_allowance": 4,
@@ -1390,7 +1400,7 @@
       "price_tiers_usd": [
         [
           1,
-          0.1693
+          0.1694
         ],
         [
           200,
@@ -1402,7 +1412,7 @@
         ],
         [
           2000,
-          0.0908
+          0.0909
         ],
         [
           10000,
@@ -1434,7 +1444,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C3844168",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:42.253270+00:00",
       "public_stock": 656,
       "available_to_order": 626,
       "minimum_purchase": 1,
@@ -1450,27 +1460,27 @@
       "price_tiers_usd": [
         [
           1,
-          0.7143
+          0.7145
         ],
         [
           10,
-          0.5988
+          0.5989
         ],
         [
           30,
-          0.5484
+          0.5485
         ],
         [
           100,
-          0.4865
+          0.4866
         ],
         [
           500,
-          0.4589
+          0.459
         ],
         [
           1000,
-          0.441
+          0.4411
         ]
       ],
       "ten_board_budget_quantity": 10,
@@ -1494,7 +1504,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C278400",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:42.271184+00:00",
       "public_stock": 4009,
       "available_to_order": 3776,
       "minimum_purchase": 1,
@@ -1510,7 +1520,7 @@
       "price_tiers_usd": [
         [
           1,
-          0.2942
+          0.2943
         ],
         [
           50,
@@ -1518,7 +1528,7 @@
         ],
         [
           150,
-          0.214
+          0.2141
         ],
         [
           1000,
@@ -1526,7 +1536,7 @@
         ],
         [
           2000,
-          0.1706
+          0.1707
         ],
         [
           5000,
@@ -1554,7 +1564,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C5736151",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:42.301659+00:00",
       "public_stock": 2506,
       "available_to_order": 2427,
       "minimum_purchase": 1,
@@ -1590,7 +1600,7 @@
         ],
         [
           6000,
-          0.1868
+          0.1869
         ]
       ],
       "ten_board_budget_quantity": 10,
@@ -1614,7 +1624,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C22427665",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:42.771218+00:00",
       "public_stock": 110,
       "available_to_order": 110,
       "minimum_purchase": 1,
@@ -1630,27 +1640,27 @@
       "price_tiers_usd": [
         [
           1,
-          0.5858
+          0.5859
         ],
         [
           10,
-          0.4654
+          0.4655
         ],
         [
           30,
-          0.4133
+          0.4134
         ],
         [
           100,
-          0.3482
+          0.3483
         ],
         [
           500,
-          0.3206
+          0.3207
         ],
         [
           1000,
-          0.3027
+          0.3028
         ]
       ],
       "ten_board_budget_quantity": 10,
@@ -1674,9 +1684,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C5246146",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 4183,
-      "available_to_order": 4064,
+      "observed_utc": "2026-09-10T02:23:42.790227+00:00",
+      "public_stock": 4159,
+      "available_to_order": 4040,
       "minimum_purchase": 1,
       "minimum_assembly": 2,
       "attrition_allowance": 0,
@@ -1690,27 +1700,27 @@
       "price_tiers_usd": [
         [
           1,
-          1.0218
+          1.0221
         ],
         [
           10,
-          0.8543
+          0.8544
         ],
         [
           30,
-          0.7696
+          0.7698
         ],
         [
           100,
-          0.6867
+          0.6868
         ],
         [
           500,
-          0.6362
+          0.6364
         ],
         [
           1000,
-          0.6102
+          0.6103
         ]
       ],
       "ten_board_budget_quantity": 10,
@@ -1734,9 +1744,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C72599",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 6635,
-      "available_to_order": 6571,
+      "observed_utc": "2026-09-10T02:24:23.936594+00:00",
+      "public_stock": 6581,
+      "available_to_order": 6517,
       "minimum_purchase": 1,
       "minimum_assembly": 5,
       "attrition_allowance": 4,
@@ -1758,7 +1768,7 @@
         ],
         [
           300,
-          0.0493
+          0.0494
         ],
         [
           3000,
@@ -1794,7 +1804,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C17418",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:42.853287+00:00",
       "public_stock": 3377,
       "available_to_order": 3238,
       "minimum_purchase": 1,
@@ -1854,7 +1864,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C137592",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:43.313755+00:00",
       "public_stock": 13587,
       "available_to_order": 13578,
       "minimum_purchase": 1,
@@ -1916,9 +1926,9 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C114566",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 1941889,
-      "available_to_order": 1916001,
+      "observed_utc": "2026-09-10T02:23:43.333525+00:00",
+      "public_stock": 1941304,
+      "available_to_order": 1915416,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -1978,9 +1988,9 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C17556",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 340523,
-      "available_to_order": 289800,
+      "observed_utc": "2026-09-10T02:23:43.415669+00:00",
+      "public_stock": 340343,
+      "available_to_order": 289620,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -2038,7 +2048,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C273965",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:43.854776+00:00",
       "public_stock": 2696,
       "available_to_order": 2680,
       "minimum_purchase": 1,
@@ -2100,9 +2110,9 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C137552",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 7172,
-      "available_to_order": 7154,
+      "observed_utc": "2026-09-10T02:23:43.890620+00:00",
+      "public_stock": 6962,
+      "available_to_order": 6944,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -2160,7 +2170,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C17763",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:43.963696+00:00",
       "public_stock": 6406,
       "available_to_order": 6289,
       "minimum_purchase": 1,
@@ -2220,7 +2230,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C17739",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:44.403272+00:00",
       "public_stock": 3304,
       "available_to_order": 2225,
       "minimum_purchase": 1,
@@ -2280,9 +2290,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C96345",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 2075887,
-      "available_to_order": 2050265,
+      "observed_utc": "2026-09-10T02:23:44.437405+00:00",
+      "public_stock": 2065887,
+      "available_to_order": 2040265,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 10,
@@ -2342,9 +2352,9 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C132649",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 1983977,
-      "available_to_order": 1936732,
+      "observed_utc": "2026-09-10T02:23:44.505362+00:00",
+      "public_stock": 1984457,
+      "available_to_order": 1937212,
       "minimum_purchase": 1,
       "minimum_assembly": 15,
       "attrition_allowance": 10,
@@ -2402,9 +2412,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C17909",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 779228,
-      "available_to_order": 711087,
+      "observed_utc": "2026-09-10T02:23:44.949582+00:00",
+      "public_stock": 778219,
+      "available_to_order": 710078,
       "minimum_purchase": 1,
       "minimum_assembly": 15,
       "attrition_allowance": 10,
@@ -2467,9 +2477,9 @@
       ],
       "quantity_per_board": 6,
       "source_url": "https://jlcpcb.com/partdetail/C122537",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 581611,
-      "available_to_order": 533788,
+      "observed_utc": "2026-09-10T02:23:44.981278+00:00",
+      "public_stock": 581391,
+      "available_to_order": 533568,
       "minimum_purchase": 1,
       "minimum_assembly": 20,
       "attrition_allowance": 8,
@@ -2527,7 +2537,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C865126",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:45.044076+00:00",
       "public_stock": 9276,
       "available_to_order": 9215,
       "minimum_purchase": 1,
@@ -2587,7 +2597,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C865169",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:45.491767+00:00",
       "public_stock": 6905,
       "available_to_order": 6666,
       "minimum_purchase": 1,
@@ -2647,7 +2657,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C865183",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:45.515045+00:00",
       "public_stock": 137,
       "available_to_order": 89,
       "minimum_purchase": 1,
@@ -2663,7 +2673,7 @@
       "price_tiers_usd": [
         [
           1,
-          0.0467
+          0.0468
         ],
         [
           200,
@@ -2708,7 +2718,7 @@
       ],
       "quantity_per_board": 2,
       "source_url": "https://jlcpcb.com/partdetail/C469660",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:45.586928+00:00",
       "public_stock": 41225,
       "available_to_order": 26836,
       "minimum_purchase": 1,
@@ -2724,11 +2734,11 @@
       "price_tiers_usd": [
         [
           1,
-          0.0742
+          0.0743
         ],
         [
           100,
-          0.0659
+          0.066
         ],
         [
           300,
@@ -2768,7 +2778,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C2890035",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:46.036563+00:00",
       "public_stock": 237924,
       "available_to_order": 233479,
       "minimum_purchase": 1,
@@ -2827,7 +2837,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C110519",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:46.057527+00:00",
       "public_stock": 13086,
       "available_to_order": 12888,
       "minimum_purchase": 1,
@@ -2843,7 +2853,7 @@
       "price_tiers_usd": [
         [
           1,
-          0.124
+          0.1241
         ],
         [
           50,
@@ -2889,7 +2899,7 @@
       ],
       "quantity_per_board": 3,
       "source_url": "https://jlcpcb.com/partdetail/C148230",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:46.131515+00:00",
       "public_stock": 30164,
       "available_to_order": 29435,
       "minimum_purchase": 1,
@@ -2905,11 +2915,11 @@
       "price_tiers_usd": [
         [
           1,
-          0.1453
+          0.1454
         ],
         [
           50,
-          0.1165
+          0.1166
         ],
         [
           150,
@@ -2949,7 +2959,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C3698580",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:46.596095+00:00",
       "public_stock": 204,
       "available_to_order": 177,
       "minimum_purchase": 1,
@@ -2965,11 +2975,11 @@
       "price_tiers_usd": [
         [
           1,
-          0.467
+          0.4671
         ],
         [
           10,
-          0.3726
+          0.3727
         ],
         [
           30,
@@ -2977,7 +2987,7 @@
         ],
         [
           100,
-          0.2815
+          0.2816
         ],
         [
           750,
@@ -3009,9 +3019,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C7484",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 23124,
-      "available_to_order": 16271,
+      "observed_utc": "2026-09-10T02:23:46.597017+00:00",
+      "public_stock": 23113,
+      "available_to_order": 16260,
       "minimum_purchase": 1,
       "minimum_assembly": 5,
       "attrition_allowance": 2,
@@ -3069,7 +3079,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C2042118",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:46.674169+00:00",
       "public_stock": 41,
       "available_to_order": 39,
       "minimum_purchase": 1,
@@ -3085,27 +3095,27 @@
       "price_tiers_usd": [
         [
           1,
-          2.3951
+          2.3956
         ],
         [
           10,
-          2.0371
+          2.0376
         ],
         [
           30,
-          1.8126
+          1.813
         ],
         [
           100,
-          1.5816
+          1.5819
         ],
         [
           500,
-          1.479
+          1.4794
         ],
         [
           1000,
-          1.4335
+          1.4338
         ]
       ],
       "ten_board_budget_quantity": 10,
@@ -3129,7 +3139,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C2687402",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:47.150892+00:00",
       "public_stock": 5174,
       "available_to_order": 5146,
       "minimum_purchase": 1,
@@ -3145,27 +3155,27 @@
       "price_tiers_usd": [
         [
           1,
-          0.9356
+          0.9358
         ],
         [
           10,
-          0.7729
+          0.7731
         ],
         [
           30,
-          0.6916
+          0.6917
         ],
         [
           100,
-          0.6118
+          0.612
         ],
         [
           500,
-          0.563
+          0.5631
         ],
         [
           1000,
-          0.5386
+          0.5387
         ]
       ],
       "ten_board_budget_quantity": 10,
@@ -3189,7 +3199,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C69216",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:47.149011+00:00",
       "public_stock": 2,
       "available_to_order": 0,
       "minimum_purchase": 4,
@@ -3205,27 +3215,27 @@
       "price_tiers_usd": [
         [
           1,
-          2.9157
+          2.9164
         ],
         [
           10,
-          2.4976
+          2.4981
         ],
         [
           30,
-          2.2356
+          2.2361
         ],
         [
           250,
-          1.9037
+          1.9041
         ],
         [
           500,
-          1.7817
+          1.7821
         ],
         [
           1000,
-          1.7296
+          1.73
         ]
       ],
       "ten_board_budget_quantity": 10,
@@ -3249,7 +3259,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C22433320",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:47.224145+00:00",
       "public_stock": 3245,
       "available_to_order": 2422,
       "minimum_purchase": 1,
@@ -3265,27 +3275,27 @@
       "price_tiers_usd": [
         [
           1,
-          1.0153
+          1.0156
         ],
         [
           10,
-          0.8331
+          0.8333
         ],
         [
           30,
-          0.742
+          0.7422
         ],
         [
           100,
-          0.6525
+          0.6526
         ],
         [
           500,
-          0.5988
+          0.5989
         ],
         [
           1000,
-          0.5711
+          0.5713
         ]
       ],
       "ten_board_budget_quantity": 10,
@@ -3309,7 +3319,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C111738",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:47.704120+00:00",
       "public_stock": 13101,
       "available_to_order": 13075,
       "minimum_purchase": 1,
@@ -3325,7 +3335,7 @@
       "price_tiers_usd": [
         [
           1,
-          0.2911
+          0.2912
         ],
         [
           50,
@@ -3333,7 +3343,7 @@
         ],
         [
           150,
-          0.206
+          0.2061
         ],
         [
           500,
@@ -3345,7 +3355,7 @@
         ],
         [
           6000,
-          0.1274
+          0.1275
         ]
       ],
       "ten_board_budget_quantity": 10,
@@ -3369,7 +3379,7 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C2155773",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
+      "observed_utc": "2026-09-10T02:23:47.697609+00:00",
       "public_stock": 30,
       "available_to_order": 25,
       "minimum_purchase": 1,
@@ -3385,27 +3395,27 @@
       "price_tiers_usd": [
         [
           1,
-          0.8152
+          0.8154
         ],
         [
           10,
-          0.6541
+          0.6543
         ],
         [
           30,
-          0.5728
+          0.5729
         ],
         [
           100,
-          0.493
+          0.4932
         ],
         [
           500,
-          0.4459
+          0.446
         ],
         [
           1000,
-          0.4198
+          0.4199
         ]
       ],
       "ten_board_budget_quantity": 10,
@@ -3429,9 +3439,9 @@
       ],
       "quantity_per_board": 1,
       "source_url": "https://jlcpcb.com/partdetail/C113659",
-      "observed_utc": "2026-09-10T00:34:40.369868+00:00",
-      "public_stock": 2288,
-      "available_to_order": 2251,
+      "observed_utc": "2026-09-10T02:23:47.764034+00:00",
+      "public_stock": 2078,
+      "available_to_order": 2041,
       "minimum_purchase": 1,
       "minimum_assembly": 2,
       "attrition_allowance": 0,
@@ -3445,27 +3455,27 @@
       "price_tiers_usd": [
         [
           1,
-          0.6004
+          0.6006
         ],
         [
           10,
-          0.4849
+          0.485
         ],
         [
           30,
-          0.4345
+          0.4346
         ],
         [
           100,
-          0.3726
+          0.3727
         ],
         [
           500,
-          0.3157
+          0.3158
         ],
         [
           1000,
-          0.2994
+          0.2995
         ]
       ],
       "ten_board_budget_quantity": 10,
@@ -3494,7 +3504,73 @@
       "JP201",
       "JP301"
     ],
-    "reason": "Keep existing ten-part manual scope. Genuine Weidmuller 1824420000 has zero JLC stock, 1824430000 has no exact public match, Harwin M22-2010305 has only 11 for 30 needed. J8 is stocked but remains manual with the other headers."
+    "reason": "Keep existing ten-part manual scope. Genuine Weidmuller 1824420000 has zero JLC stock, 1824430000 has no exact public match, Harwin M22-2010305 has only 11 for 30 needed. J8 is stocked but remains manual with the other headers.",
+    "live_jlc_check": [
+      {
+        "mpn": "1824420000",
+        "observed_utc": "2026-09-10T02:24:24.502492+00:00",
+        "source": "JLC public exact-MPN search",
+        "matches": [
+          {
+            "mpn": "1824420000",
+            "manufacturer": "WEIDMULLER",
+            "lcsc": "C5482136",
+            "available_to_order": 0,
+            "public_stock": 0
+          },
+          {
+            "mpn": "1824420000",
+            "manufacturer": "JLCPCB Assembly",
+            "lcsc": "C9900052667",
+            "available_to_order": 0,
+            "public_stock": 0
+          }
+        ]
+      },
+      {
+        "mpn": "1824430000",
+        "observed_utc": "2026-09-10T02:24:25.135392+00:00",
+        "source": "JLC public exact-MPN search",
+        "matches": []
+      },
+      {
+        "mpn": "M22-2010305",
+        "observed_utc": "2026-09-10T02:24:25.076432+00:00",
+        "source": "JLC public exact-MPN search",
+        "matches": [
+          {
+            "mpn": "M22-2010305",
+            "manufacturer": "Harwin",
+            "lcsc": "C7221766",
+            "available_to_order": 11,
+            "public_stock": 11
+          }
+        ]
+      },
+      {
+        "mpn": "SPN02SVEN-RC",
+        "observed_utc": "2026-09-10T02:25:27.117597+00:00",
+        "source": "JLC public exact-MPN search",
+        "matches": [
+          {
+            "mpn": "SPN02SVEN-RC",
+            "manufacturer": "Sullins Connector Solutions",
+            "lcsc": "C6495598",
+            "available_to_order": 0,
+            "public_stock": 0
+          }
+        ]
+      },
+      {
+        "mpn": "PM254V-12-10P-H85",
+        "manufacturer": "XFCN",
+        "lcsc": "C492399",
+        "observed_utc": "2026-09-10T02:25:26.552466+00:00",
+        "available_to_order": 36672,
+        "public_stock": 38916
+      }
+    ],
+    "external_supplier_status": "Manual parts remain a separate purchase. Older distributor stock observations are not refreshed by this JLC audit; delivery and allocation unconfirmed."
   },
   "assembly_review": {
     "selected_service": "Standard",
@@ -3655,5 +3731,269 @@
         "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
       }
     ]
-  }
+  },
+  "stock_observation_window_utc": [
+    "2026-09-10T02:23:39.448428+00:00",
+    "2026-09-10T02:24:23.936594+00:00"
+  ],
+  "availability_definition": "max(0, canPresaleNumber) from JLC public component detail; stockCount is recorded separately and is not treated as free inventory. No cart allocation or reservation.",
+  "catalog_endpoint": "https://jlcpcb.com/api/overseas-pcb-order/v1/smtComponentShopCart/getComponentDetail?componentCode={lcsc}",
+  "equivalence_review": {
+    "observed_utc": "2026-09-10T02:26:16.074445+00:00",
+    "board_sha256": "f6e7be17328081b06241a03ec6a706204e40f90e1e63c5d6ff4bc82f96823d04",
+    "scope": "Six changed passive types at nine placements checked against original and replacement manufacturer specifications and actual native pad dimensions. The other 49 factory types retain exact manufacturer/MPN. No BOM or CAD change in this audit.",
+    "substitutions": [
+      {
+        "references": [
+          "C25",
+          "C26"
+        ],
+        "old_mpn": "C0805C300J5GACTU",
+        "new_mpn": "CC0805JRNPO9BN300",
+        "role": "8 MHz crystal load capacitors",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:C_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1,
+          1.45
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.95,
+          0.95
+        ],
+        "value_pF": 30,
+        "tolerance_percent": 5,
+        "voltage_V": 50,
+        "dielectric": "C0G/NP0",
+        "tcc_ppm_C": 30,
+        "temperature_range_C": [
+          -55,
+          125
+        ],
+        "dissipation_factor_max_percent": 0.1,
+        "sources": [
+          "sources/datasheets/kemet_original.pdf",
+          "sources/datasheets/yageo_np0.pdf"
+        ],
+        "differences": "Body thickness and insulation-resistance limits differ. KEMET specifies 100 Gohm; Yageo minimum is 10 Gohm. At 8 MHz and 30 pF the capacitive reactance is about 663 ohm, so this leakage difference is negligible for the intended load. No claim of identical parasitics or verified oscillator startup."
+      },
+      {
+        "references": [
+          "R61"
+        ],
+        "old_mpn": "RC0805FR-0711K5L",
+        "new_mpn": "0805W8F1152T5E",
+        "role": "12 V boost feedback lower arm",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1.025,
+          1.4
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.9125,
+          0.9125
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.125,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 150,
+        "maximum_overload_V": 300,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      },
+      {
+        "references": [
+          "R101",
+          "R201",
+          "R301"
+        ],
+        "old_mpn": "RC0805FR-07220KL",
+        "new_mpn": "0805W8F2203T5E",
+        "role": "Digital sensor input divider series arm (all three channels)",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1.025,
+          1.4
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.9125,
+          0.9125
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.125,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 150,
+        "maximum_overload_V": 300,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      },
+      {
+        "references": [
+          "R10"
+        ],
+        "old_mpn": "RC0805FR-0759KL",
+        "new_mpn": "0805W8F5902T5E",
+        "role": "5 V sensor current-limit setting",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1.025,
+          1.4
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.9125,
+          0.9125
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.125,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 150,
+        "maximum_overload_V": 300,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      },
+      {
+        "references": [
+          "R51"
+        ],
+        "old_mpn": "RC0805FR-075K23L",
+        "new_mpn": "0805W8F5231T5E",
+        "role": "Comparator logic reference divider lower arm",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+        "nominal_pad_size_mm": [
+          1.025,
+          1.4
+        ],
+        "nominal_pad_centers_x_mm": [
+          -0.9125,
+          0.9125
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.125,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 150,
+        "maximum_overload_V": 300,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      },
+      {
+        "references": [
+          "R42"
+        ],
+        "old_mpn": "RC1206FR-07120RL",
+        "new_mpn": "1206W4F1200T5E",
+        "role": "Switchable CAN termination",
+        "result": "PASS application-specific electrical and footprint substitution review; physical qualification pending",
+        "two_terminal_nonpolar": true,
+        "footprint": "FRC_Sensor_CAN:R_1206_3216Metric",
+        "nominal_pad_size_mm": [
+          1.125,
+          1.75
+        ],
+        "nominal_pad_centers_x_mm": [
+          -1.4625,
+          1.4625
+        ],
+        "tolerance_percent": 1,
+        "rated_power_W": 0.25,
+        "tcr_ppm_C": 100,
+        "maximum_working_V": 200,
+        "maximum_overload_V": 400,
+        "temperature_range_C": [
+          -55,
+          155
+        ],
+        "sources": [
+          "sources/datasheets/yageo_rc_original.pdf",
+          "sources/datasheets/uniroyal_thick_film.pdf"
+        ],
+        "power_derating": "Both rate full power at 70 C and derate to zero at 155 C; voltage is also limited by sqrt(P*R).",
+        "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
+        "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
+      }
+    ]
+  },
+  "alternative_stock_review": [
+    {
+      "lcsc": "C529323",
+      "mpn": "STM32F042K6T6TR",
+      "manufacturer": "STMicroelectronics",
+      "observed_utc": "2026-09-10T02:24:48.190690+00:00",
+      "available_to_order": 0,
+      "public_stock": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C529323",
+      "decision": "STM32F042K6T6TR changes tray to tape-and-reel only; direct electrical/package alternative, but zero stock so not implemented.",
+      "implemented": false
+    },
+    {
+      "lcsc": "C1337340",
+      "mpn": "STM32F042K6T7",
+      "manufacturer": "STMicroelectronics",
+      "observed_utc": "2026-09-10T02:24:49.743033+00:00",
+      "available_to_order": 0,
+      "public_stock": 6,
+      "source_url": "https://jlcpcb.com/partdetail/C1337340",
+      "decision": "STM32F042K6T7 retains silicon/memory/LQFP32 pinout with higher maximum ambient grade; also zero orderable stock. Not implemented.",
+      "implemented": false
+    },
+    {
+      "lcsc": "C92059",
+      "mpn": "EEEFT1H470AP",
+      "manufacturer": "PANASONIC",
+      "observed_utc": "2026-09-10T02:24:51.281218+00:00",
+      "available_to_order": 1815,
+      "public_stock": 1886,
+      "source_url": "https://jlcpcb.com/partdetail/C92059",
+      "decision": "EEEFT1H470AP is a 6.3 x 5.8 mm capacitor versus current 8 x 6.2 mm body. Do not substitute without land-pattern, ripple/ESR, stability and reflow review.",
+      "implemented": false
+    }
+  ],
+  "alternative_stock_review_sources": [
+    "https://www.st.com/resource/en/datasheet/stm32f042k6.pdf#page=113",
+    "https://industrial.panasonic.com/kr/products/pt/aluminum-cap-smd/models/EEEFT1H470AP"
+  ]
 }

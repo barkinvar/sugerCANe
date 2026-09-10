@@ -5,18 +5,18 @@
     "supplier": "JLCPCB",
     "supplier_part": "C13982",
     "url": "https://jlcpcb.com/partdetail/C13982",
-    "stock_observed": 45387,
+    "stock_observed": 45245,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        0.2555
+        0.2556
       ],
       [
         50,
-        0.2055
+        0.2056
       ],
       [
         150,
@@ -50,7 +50,7 @@
     "supplier_part": "C17513",
     "url": "https://jlcpcb.com/partdetail/C17513",
     "lcsc": "C17513",
-    "stock_observed": 30036572,
+    "stock_observed": 29797798,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -92,7 +92,7 @@
     "supplier_part": "C17414",
     "url": "https://jlcpcb.com/partdetail/C17414",
     "lcsc": "C17414",
-    "stock_observed": 52986124,
+    "stock_observed": 52936609,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -134,7 +134,7 @@
     "supplier_part": "C149504",
     "url": "https://jlcpcb.com/partdetail/C149504",
     "lcsc": "C149504",
-    "stock_observed": 4767802,
+    "stock_observed": 4758023,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -214,7 +214,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C17556",
     "url": "https://jlcpcb.com/partdetail/C17556",
-    "stock_observed": 289800,
+    "stock_observed": 289620,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -256,7 +256,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C17630",
     "url": "https://jlcpcb.com/partdetail/C17630",
-    "stock_observed": 2322034,
+    "stock_observed": 2318391,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -381,7 +381,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C17909",
     "url": "https://jlcpcb.com/partdetail/C17909",
-    "stock_observed": 711102,
+    "stock_observed": 710078,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -504,15 +504,15 @@
     "tiers": [
       [
         1,
-        0.589
+        0.5892
       ],
       [
         10,
-        0.4703
+        0.4704
       ],
       [
         30,
-        0.4101
+        0.4102
       ],
       [
         100,
@@ -520,7 +520,7 @@
       ],
       [
         500,
-        0.3157
+        0.3158
       ],
       [
         1000,
@@ -539,7 +539,7 @@
     "supplier_part": "C15127",
     "url": "https://jlcpcb.com/partdetail/C15127",
     "lcsc": "C15127",
-    "stock_observed": 313410,
+    "stock_observed": 311819,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -566,7 +566,7 @@
       ],
       [
         6000,
-        0.0537
+        0.0538
       ]
     ],
     "digikey_sku": "",
@@ -579,14 +579,14 @@
     "supplier": "JLCPCB",
     "supplier_part": "C51499",
     "url": "https://jlcpcb.com/partdetail/C51499",
-    "stock_observed": 72861,
+    "stock_observed": 72841,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        0.295
+        0.2951
       ],
       [
         50,
@@ -594,7 +594,7 @@
       ],
       [
         150,
-        0.2003
+        0.2004
       ],
       [
         500,
@@ -620,7 +620,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C51118",
     "url": "https://jlcpcb.com/partdetail/C51118",
-    "stock_observed": 60591,
+    "stock_observed": 60541,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -631,11 +631,11 @@
       ],
       [
         50,
-        0.1357
+        0.1358
       ],
       [
         150,
-        0.1183
+        0.1184
       ],
       [
         500,
@@ -717,7 +717,7 @@
       ],
       [
         150,
-        0.0973
+        0.0974
       ],
       [
         500,
@@ -744,7 +744,7 @@
     "supplier_part": "C282529",
     "url": "https://jlcpcb.com/partdetail/C282529",
     "lcsc": "C282529",
-    "stock_observed": 70862,
+    "stock_observed": 70842,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -784,7 +784,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C62774",
     "url": "https://jlcpcb.com/partdetail/C62774",
-    "stock_observed": 1143565,
+    "stock_observed": 1143347,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -867,7 +867,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C107150",
     "url": "https://jlcpcb.com/partdetail/C107150",
-    "stock_observed": 1804261,
+    "stock_observed": 1800261,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -908,7 +908,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C1710",
     "url": "https://jlcpcb.com/partdetail/C1710",
-    "stock_observed": 2689345,
+    "stock_observed": 2678768,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -953,7 +953,7 @@
     "supplier_part": "C28233",
     "url": "https://jlcpcb.com/partdetail/C28233",
     "lcsc": "C28233",
-    "stock_observed": 1397659,
+    "stock_observed": 1391143,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -991,7 +991,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C28323",
     "url": "https://jlcpcb.com/partdetail/C28323",
-    "stock_observed": 3108160,
+    "stock_observed": 3097023,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1032,7 +1032,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C53134",
     "url": "https://jlcpcb.com/partdetail/C53134",
-    "stock_observed": 219818,
+    "stock_observed": 218653,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1080,7 +1080,7 @@
     "tiers": [
       [
         1,
-        0.0607
+        0.0608
       ],
       [
         100,
@@ -1114,14 +1114,14 @@
     "supplier": "JLCPCB",
     "supplier_part": "C12891",
     "url": "https://jlcpcb.com/partdetail/C12891",
-    "stock_observed": 791384,
+    "stock_observed": 783341,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        0.1693
+        0.1694
       ],
       [
         200,
@@ -1133,7 +1133,7 @@
       ],
       [
         2000,
-        0.0908
+        0.0909
       ],
       [
         10000,
@@ -1162,27 +1162,27 @@
     "tiers": [
       [
         1,
-        0.7143
+        0.7145
       ],
       [
         10,
-        0.5988
+        0.5989
       ],
       [
         30,
-        0.5484
+        0.5485
       ],
       [
         100,
-        0.4865
+        0.4866
       ],
       [
         500,
-        0.4589
+        0.459
       ],
       [
         1000,
-        0.441
+        0.4411
       ]
     ],
     "lcsc": "C3844168",
@@ -1203,7 +1203,7 @@
     "tiers": [
       [
         1,
-        0.2942
+        0.2943
       ],
       [
         50,
@@ -1211,7 +1211,7 @@
       ],
       [
         150,
-        0.214
+        0.2141
       ],
       [
         1000,
@@ -1219,7 +1219,7 @@
       ],
       [
         2000,
-        0.1706
+        0.1707
       ],
       [
         5000,
@@ -1264,7 +1264,7 @@
       ],
       [
         6000,
-        0.1868
+        0.1869
       ]
     ],
     "lcsc": "C5736151",
@@ -1285,27 +1285,27 @@
     "tiers": [
       [
         1,
-        0.5858
+        0.5859
       ],
       [
         10,
-        0.4654
+        0.4655
       ],
       [
         30,
-        0.4133
+        0.4134
       ],
       [
         100,
-        0.3482
+        0.3483
       ],
       [
         500,
-        0.3206
+        0.3207
       ],
       [
         1000,
-        0.3027
+        0.3028
       ]
     ],
     "lcsc": "C22427665",
@@ -1319,34 +1319,34 @@
     "supplier": "JLCPCB",
     "supplier_part": "C5246146",
     "url": "https://jlcpcb.com/partdetail/C5246146",
-    "stock_observed": 4064,
+    "stock_observed": 4040,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        1.0218
+        1.0221
       ],
       [
         10,
-        0.8543
+        0.8544
       ],
       [
         30,
-        0.7696
+        0.7698
       ],
       [
         100,
-        0.6867
+        0.6868
       ],
       [
         500,
-        0.6362
+        0.6364
       ],
       [
         1000,
-        0.6102
+        0.6103
       ]
     ],
     "lcsc": "C5246146",
@@ -1406,7 +1406,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C72599",
     "url": "https://jlcpcb.com/partdetail/C72599",
-    "stock_observed": 6571,
+    "stock_observed": 6517,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1421,7 +1421,7 @@
       ],
       [
         300,
-        0.0493
+        0.0494
       ],
       [
         3000,
@@ -1566,7 +1566,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C114566",
     "url": "https://jlcpcb.com/partdetail/C114566",
-    "stock_observed": 1916001,
+    "stock_observed": 1915416,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1681,7 +1681,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C137552",
     "url": "https://jlcpcb.com/partdetail/C137552",
-    "stock_observed": 7154,
+    "stock_observed": 6944,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1722,7 +1722,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C96345",
     "url": "https://jlcpcb.com/partdetail/C96345",
-    "stock_observed": 2050265,
+    "stock_observed": 2040265,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1763,7 +1763,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C132649",
     "url": "https://jlcpcb.com/partdetail/C132649",
-    "stock_observed": 1936732,
+    "stock_observed": 1937212,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1804,7 +1804,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C122537",
     "url": "https://jlcpcb.com/partdetail/C122537",
-    "stock_observed": 533788,
+    "stock_observed": 533568,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -1934,7 +1934,7 @@
     "tiers": [
       [
         1,
-        0.0467
+        0.0468
       ],
       [
         200,
@@ -1975,11 +1975,11 @@
     "tiers": [
       [
         1,
-        0.0742
+        0.0743
       ],
       [
         100,
-        0.0659
+        0.066
       ],
       [
         300,
@@ -2057,7 +2057,7 @@
     "tiers": [
       [
         1,
-        0.124
+        0.1241
       ],
       [
         50,
@@ -2098,11 +2098,11 @@
     "tiers": [
       [
         1,
-        0.1453
+        0.1454
       ],
       [
         50,
-        0.1165
+        0.1166
       ],
       [
         150,
@@ -2139,11 +2139,11 @@
     "tiers": [
       [
         1,
-        0.467
+        0.4671
       ],
       [
         10,
-        0.3726
+        0.3727
       ],
       [
         30,
@@ -2151,7 +2151,7 @@
       ],
       [
         100,
-        0.2815
+        0.2816
       ],
       [
         750,
@@ -2173,7 +2173,7 @@
     "supplier": "JLCPCB",
     "supplier_part": "C7484",
     "url": "https://jlcpcb.com/partdetail/C7484",
-    "stock_observed": 16283,
+    "stock_observed": 16260,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
@@ -2258,27 +2258,27 @@
     "tiers": [
       [
         1,
-        2.3951
+        2.3956
       ],
       [
         10,
-        2.0371
+        2.0376
       ],
       [
         30,
-        1.8126
+        1.813
       ],
       [
         100,
-        1.5816
+        1.5819
       ],
       [
         500,
-        1.479
+        1.4794
       ],
       [
         1000,
-        1.4335
+        1.4338
       ]
     ],
     "lcsc": "C2042118",
@@ -2299,27 +2299,27 @@
     "tiers": [
       [
         1,
-        0.9356
+        0.9358
       ],
       [
         10,
-        0.7729
+        0.7731
       ],
       [
         30,
-        0.6916
+        0.6917
       ],
       [
         100,
-        0.6118
+        0.612
       ],
       [
         500,
-        0.563
+        0.5631
       ],
       [
         1000,
-        0.5386
+        0.5387
       ]
     ],
     "lcsc": "C2687402",
@@ -2340,27 +2340,27 @@
     "tiers": [
       [
         1,
-        2.9157
+        2.9164
       ],
       [
         10,
-        2.4976
+        2.4981
       ],
       [
         30,
-        2.2356
+        2.2361
       ],
       [
         250,
-        1.9037
+        1.9041
       ],
       [
         500,
-        1.7817
+        1.7821
       ],
       [
         1000,
-        1.7296
+        1.73
       ]
     ],
     "lcsc": "C69216",
@@ -2382,27 +2382,27 @@
     "tiers": [
       [
         1,
-        1.0153
+        1.0156
       ],
       [
         10,
-        0.8331
+        0.8333
       ],
       [
         30,
-        0.742
+        0.7422
       ],
       [
         100,
-        0.6525
+        0.6526
       ],
       [
         500,
-        0.5988
+        0.5989
       ],
       [
         1000,
-        0.5711
+        0.5713
       ]
     ],
     "lcsc": "C22433320",
@@ -2423,7 +2423,7 @@
     "tiers": [
       [
         1,
-        0.2911
+        0.2912
       ],
       [
         50,
@@ -2431,7 +2431,7 @@
       ],
       [
         150,
-        0.206
+        0.2061
       ],
       [
         500,
@@ -2443,7 +2443,7 @@
       ],
       [
         6000,
-        0.1274
+        0.1275
       ]
     ],
     "lcsc": "C111738",
@@ -2464,27 +2464,27 @@
     "tiers": [
       [
         1,
-        0.8152
+        0.8154
       ],
       [
         10,
-        0.6541
+        0.6543
       ],
       [
         30,
-        0.5728
+        0.5729
       ],
       [
         100,
-        0.493
+        0.4932
       ],
       [
         500,
-        0.4459
+        0.446
       ],
       [
         1000,
-        0.4198
+        0.4199
       ]
     ],
     "lcsc": "C2155773",
@@ -2498,34 +2498,34 @@
     "supplier": "JLCPCB",
     "supplier_part": "C113659",
     "url": "https://jlcpcb.com/partdetail/C113659",
-    "stock_observed": 2251,
+    "stock_observed": 2041,
     "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        0.6004
+        0.6006
       ],
       [
         10,
-        0.4849
+        0.485
       ],
       [
         30,
-        0.4345
+        0.4346
       ],
       [
         100,
-        0.3726
+        0.3727
       ],
       [
         500,
-        0.3157
+        0.3158
       ],
       [
         1000,
-        0.2994
+        0.2995
       ]
     ],
     "lcsc": "C113659",

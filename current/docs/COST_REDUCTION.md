@@ -1,23 +1,23 @@
 # Rev H cost and assembly basis
 
-The [JLC sourcing candidate](JLC_SOURCING.md) lowers the ten-board parts estimate from $28.99 to **$25.61 per board before SMT attrition**. With a conservative allowance for displayed assembly losses/minimums, budget **$26.48 per board**. MCU sourcing is unresolved, so its quoted catalog price remains provisional. This is a supplier/pricing update with six equal-rated passive substitutions, not a reduction in power protection.
+The [JLC sourcing candidate](JLC_SOURCING.md) lowers the ten-board parts estimate from $28.99 to **$25.61 per board before SMT attrition**. With a conservative allowance for displayed assembly losses/minimums, budget **$26.49 per board**. MCU sourcing is unresolved, so its quoted catalog price remains provisional. This is a supplier/pricing update with six equal-rated passive substitutions, not a reduction in power protection.
 
 | Ten-board basis | Parts per board |
 |---|---:|
 | Previous mixed-supplier H estimate, before SMT attrition | $28.99 |
 | JLC-matched H estimate, before SMT attrition | $25.61 |
-| JLC-matched SMT parts with conservative attrition | $17.78 |
+| JLC-matched SMT parts with conservative attrition | $17.79 |
 | Hand-fitted parts and three caps | $8.70 |
-| Combined candidate budget with conservative attrition | **$26.48** |
+| Combined candidate budget with conservative attrition | **$26.49** |
 
 JLC prices/stock were checked September 9 in California (September 10 UTC). Hand-purchased parts retain their September 8 supplier observations. Most savings come from direct catalog matching and purchase minimums. The $3.38 difference compares estimates before SMT attrition; it is not a guaranteed invoice saving. PCB fabrication, assembly, programming/testing, freight, tax and duty remain extra.
 
 | Boards | Parts purchasing per board, before SMT attrition | Lot parts purchasing |
 |---|---:|---:|
 | 1 | $40.73 | $40.73 |
-| 5 | $28.09 | $140.45 |
-| 10 | $25.61 | $256.08 |
-| 25 | $23.49 | $587.23 |
+| 5 | $28.09 | $140.47 |
+| 10 | $25.61 | $256.12 |
+| 25 | $23.49 | $587.32 |
 
 These arithmetic scenarios do not establish supported assembly quantities or stock for that lot. The sourcing audit checks ten boards only, and currently identifies the MCU shortage. At one board, fitted consumption is $31.52 while purchase minimums raise cash outlay to $40.73; an actual PCBA order has its own minimum quantity.
 

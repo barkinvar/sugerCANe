@@ -1,6 +1,6 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-10T02:20:48.611323+00:00",
+  "reviewed_utc": "2026-09-10T02:27:54.254694+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
@@ -36,16 +36,15 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "051775a4b2ae045465308ffda29a2b71ae58c952b0324eddc3ac7f9b1d961ffe",
-      "scope": "All 39 pages raster-compared with baseline; changed pages 1, 3-5 and 35-37 inspected. Current routing and DC results and unchanged HOLD are readable.",
-      "reviewed_utc": "2026-09-10T02:20:48.611323+00:00"
+      "sha256": "834b6b9b970df69bfb13bf58cc6d2dcc38ba48e713eeab15eeab012cdb747671",
+      "scope": "All 39 pages raster-compared against b7d1930. Changed pages 3 and 33 visually inspected: dated stock recheck, MCU/C1 HOLD and updated cost remain readable without clipping or overlap.",
+      "reviewed_utc": "2026-09-10T02:27:54.254694+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
-      "sha256": "21bd517fd4b55f6f7cf781b0e09b3eaec7d70976d9d49200fe71da6df0ac76c9",
-      "scope": "All 3 pages compared against 26a31d8 at 1x; changed pages 1, 2 visually inspected. Standard-only assembly, C1 reflow hold, status and cost text remain readable without clipping or overlap.",
-      "reviewed_utc": "2026-09-10T00:39:18.296684+00:00",
-      "evidence": "Unchanged artifact hash; preceding documented visual review retained."
+      "sha256": "c20c1ea259999cf7a59e0f058b964b62a462cfbaaf02da3bf7fa021b01e23a80",
+      "scope": "All three pages visually inspected after live price refresh. Exact MPNs, references, values and footprints unchanged; first-tier prices updated. Table rows and manufacturing HOLD remain readable.",
+      "reviewed_utc": "2026-09-10T02:27:54.254694+00:00"
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
@@ -162,26 +161,25 @@
       "scope": "Six paired exported-copper details inspected: opposing ground tips, solid SMT ground, inner-layer narrow connection and local gap, J8.7 thermal spokes, and J6.2 thermal slot freed of a redundant track."
     }
   ],
-  "limitations": "Native CAD, exported copper, document inspection and nominal routed-copper DC screening only. No new transient simulation, firmware replay or physical prototype qualification. Existing manufacturing HOLD retained.",
-  "page_comparison_baseline_commit": "6b8af41aceb15b1c07924ef581ba128545fca47f",
+  "limitations": "Fresh public inventory, manufacturer-specification substitution review and document inspection only in this audit. Public inventory is unallocated. Previous CAD/DC evidence remains tied to unchanged design hashes; new power/input simulations and physical qualification remain pending.",
+  "page_comparison_baseline_commit": "b7d19301f7012e7988c00d7837fd9ac7328d995a",
   "rendered_page_comparison": {
     "output/documentation/SC12_RevH_Handbook.pdf": {
       "before_pages": 39,
       "after_pages": 39,
       "changed_pages": [
-        1,
         3,
-        4,
-        5,
-        35,
-        36,
-        37
+        33
       ]
     },
     "output/documentation/BOM_RevH_SC12.pdf": {
       "before_pages": 3,
       "after_pages": 3,
-      "changed_pages": []
+      "changed_pages": [
+        1,
+        2,
+        3
+      ]
     },
     "output/mechanical/mechanical_drawing.pdf": {
       "before_pages": 2,
@@ -201,12 +199,7 @@
     "output/assembly/gerber_copper_review.pdf": {
       "before_pages": 4,
       "after_pages": 4,
-      "changed_pages": [
-        1,
-        2,
-        3,
-        4
-      ]
+      "changed_pages": []
     },
     "output/assembly/bottom_markings.pdf": {
       "before_pages": 1,
@@ -495,7 +488,7 @@
       "notch_review": "Five local pour cutouts retreat opposing tips, including two local gaps within a connected inner-plane island. Final morphological slit candidates above 0.005 mm\u00b2 are absent after excluding a 2 \u00b5m boundary band; sharp thermal-slot corners are intentional."
     }
   },
-  "sourcing_geometry_note": "Exact native comparison permits only four ground-zone minimum widths, two outer connection modes, five pour cutouts, J8.7 spoke angle, three redundant GND segments and cached fills. All component positions, signal/power routes, vias, stack and markings unchanged. Fresh CAD/DC/Gerber evidence reviewed.",
+  "sourcing_geometry_note": "This stock and substitution audit changed no native CAD, BOM identities, footprints, nets, firmware or fabrication geometry. Nine replacement passive pad dimensions rechecked. Existing board renders and their prior visual review are unchanged.",
   "assembly_audit_document_comparison": {
     "baseline_commit": "26a31d8859a3b7bdf73beb16c652f51b8c65de3b",
     "documents": {

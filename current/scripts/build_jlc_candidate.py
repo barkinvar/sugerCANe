@@ -25,7 +25,8 @@ files=['bom/BOM_JLCPCB.csv','bom/Factory_BOM.csv','bom/Hand_solder_BOM.csv','bom
  'docs/ROUTING_RULES.md','reports/routing_rules.json','reports/routing_cleanup.json',
  'reports/electrical/order_readiness.json','output/review/routing_junctions.png',
  'hardware/design/routing_widths.json','output/review/routing_widths.png','output/review/routing_contacts.png','output/review/ground_pours.png',
- 'sources/datasheets/panasonic_fk.pdf','sources/datasheets/panasonic_reflow.pdf',str(gerber.relative_to(R))]
+ 'bom/jlc_sourcing.json',str(gerber.relative_to(R))]
+files += [d['file'] for d in json.loads((R/'bom/jlc_sourcing.json').read_text())['datasheets']]
 manifest=dict(status=status,files={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in files})
 dest=R/'order/sugarCANe_RevH_JLC_REVIEW_ONLY.zip'
 with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED) as z:
