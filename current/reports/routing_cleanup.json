@@ -1,16 +1,16 @@
 {
   "result": "PASS",
-  "baseline_commit": "e1e414610c446869f02546a1a50daa3a2530ad9b",
+  "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
   "before": {
-    "segments": 4113,
-    "vias": 245,
-    "total_centerline_length_mm": 3533.2358497275845,
-    "minimum_width_mm": 0.18
-  },
-  "after": {
     "segments": 1993,
     "vias": 245,
     "total_centerline_length_mm": 3418.299491757235,
+    "minimum_width_mm": 0.18
+  },
+  "after": {
+    "segments": 2040,
+    "vias": 245,
+    "total_centerline_length_mm": 3404.0661424158584,
     "minimum_width_mm": 0.18
   },
   "unchanged_native_objects": [
@@ -23,7 +23,42 @@
     "zone definitions and keepouts"
   ],
   "comparison": "Parsed native objects compared exactly, excluding tracks and regenerated zone-fill caches.",
-  "baseline_board_sha256": "4dbc9208492c918116b7ac64fa8dd2f690e22194182b16fcd156fdfab12a3d91",
-  "board_sha256": "fd0300a03fefe04b3450b189a5eaf8c5ebc6f14a9a142200d0e18a809b69be98",
-  "scope": "Routing cleanup only; no component, electrical-function, BOM or firmware changes. Final routing, DRC, parity, local bypass, exported Gerber and DC-drop reports are separate gates."
+  "baseline_board_sha256": "85f74e465e756b93e1b06f61adb20a1a58a1414991ad05d22cc8444673235f61",
+  "board_sha256": "1c946915a6149a831df1b5bcf4a19b8002a61e76d39a7b6f56c37613475185f0",
+  "nonrouting_objects_sha256": "e3ed96947f37f53acd3aa32f98a84c30a9bda0128c8a1a3aae78a1b45b0c116e",
+  "previous_cleanup": {
+    "result": "PASS",
+    "baseline_commit": "e1e414610c446869f02546a1a50daa3a2530ad9b",
+    "before": {
+      "segments": 4113,
+      "vias": 245,
+      "total_centerline_length_mm": 3533.2358497275845,
+      "minimum_width_mm": 0.18
+    },
+    "after": {
+      "segments": 1993,
+      "vias": 245,
+      "total_centerline_length_mm": 3418.299491757235,
+      "minimum_width_mm": 0.18
+    },
+    "unchanged_native_objects": [
+      "footprints and pads",
+      "vias",
+      "board outline",
+      "stackup",
+      "net names",
+      "top and bottom artwork/markings",
+      "zone definitions and keepouts"
+    ],
+    "comparison": "Parsed native objects compared exactly, excluding tracks and regenerated zone-fill caches.",
+    "baseline_board_sha256": "4dbc9208492c918116b7ac64fa8dd2f690e22194182b16fcd156fdfab12a3d91",
+    "board_sha256": "fd0300a03fefe04b3450b189a5eaf8c5ebc6f14a9a142200d0e18a809b69be98",
+    "scope": "Routing cleanup only; no component, electrical-function, BOM or firmware changes. Final routing, DRC, parity, local bypass, exported Gerber and DC-drop reports are separate gates."
+  },
+  "branch_rules_before": {
+    "unchamfered_free_branches": 22,
+    "implicit_free_junctions": 7
+  },
+  "branch_rules_after": {},
+  "scope": "Junction routing cleanup only. All electrical parts, component positions, vias, four-layer stack and artwork retained. A SIG3 loop and short 3.3 V overhang removed. Overlapping internal-5 V trunk consolidated to 0.9895 mm with 0.8 mm approaches; remaining track widths retained. Fresh CAD/DC, independent Gerber and render checks are separate evidence."
 }

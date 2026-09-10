@@ -65,7 +65,7 @@
       "all_top": true
     },
     "BUCK_SW": {
-      "total_track_length_mm": 8.258820343559643,
+      "total_track_length_mm": 8.233084412271571,
       "vias": 0,
       "all_top": true
     },
@@ -101,7 +101,7 @@
     }
   },
   "inner_service_and_monitor_routes": {
-    "+3V3": 16.707286348062908,
+    "+3V3": 16.431550416774837,
     "ADC_5V": 6.1305086527633215,
     "BIAS_DOWN1": 38.287036405740785,
     "BIAS_DOWN2": 36.830256121072814,
@@ -113,17 +113,17 @@
   },
   "power_net_geometry": {
     "SENSOR_12V": {
-      "total_track_length_mm": 123.84200205522713,
+      "total_track_length_mm": 123.7541340895831,
       "minimum_width_mm": 0.5,
       "via_count": 9
     },
     "BOOST_12V": {
-      "total_track_length_mm": 57.40421875315576,
+      "total_track_length_mm": 57.25421875315577,
       "minimum_width_mm": 0.25,
       "via_count": 2
     },
     "V5_INTERNAL": {
-      "total_track_length_mm": 191.80586505222064,
+      "total_track_length_mm": 180.67969841869046,
       "minimum_width_mm": 0.25,
       "via_count": 14
     },
@@ -138,7 +138,7 @@
       "via_count": 2
     },
     "VIN_PROT": {
-      "total_track_length_mm": 90.07679180383317,
+      "total_track_length_mm": 90.01465976947722,
       "minimum_width_mm": 0.25,
       "via_count": 7
     },
@@ -242,8 +242,8 @@
   "routing_inventory": {
     "layers": {
       "F.Cu": {
-        "segments": 1235,
-        "length_mm": 1565.975349767246,
+        "segments": 1268,
+        "length_mm": 1563.4075068876207,
         "non_45_degree_segments": []
       },
       "In1.Cu": {
@@ -252,13 +252,13 @@
         "non_45_degree_segments": []
       },
       "In2.Cu": {
-        "segments": 168,
-        "length_mm": 304.8788019902565,
+        "segments": 169,
+        "length_mm": 304.6030660589684,
         "non_45_degree_segments": []
       },
       "B.Cu": {
-        "segments": 590,
-        "length_mm": 1547.4453399997385,
+        "segments": 603,
+        "length_mm": 1536.0555694692764,
         "non_45_degree_segments": []
       }
     },

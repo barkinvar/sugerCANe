@@ -22,6 +22,8 @@ files=['bom/BOM_JLCPCB.csv','bom/Factory_BOM.csv','bom/Hand_solder_BOM.csv','bom
  'output/documentation/BOM_RevH_SC12.pdf','docs/JLC_SOURCING.md','docs/FACTORY_ORDER.md',
  'firmware/build/factory.hex','firmware/build/application.sc12','tools/program_factory.tcl',
  'reports/release_checks.json','reports/manufacturing/jlc_sourcing.json',
+ 'docs/ROUTING_RULES.md','reports/routing_rules.json','reports/routing_cleanup.json',
+ 'reports/electrical/order_readiness.json','output/review/routing_junctions.png',
  'sources/datasheets/panasonic_fk.pdf','sources/datasheets/panasonic_reflow.pdf',str(gerber.relative_to(R))]
 manifest=dict(status=status,files={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in files})
 dest=R/'order/sugarCANe_RevH_JLC_REVIEW_ONLY.zip'

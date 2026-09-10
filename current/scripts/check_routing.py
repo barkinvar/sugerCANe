@@ -2,7 +2,8 @@
 
 Connectivity/clearance remain separate native DRC and exported-Gerber gates.
 Pad/via copper permits short escapes and arbitrary branch angles at the contact;
-ordinary free-space bends and tiny zigzags receive no per-net exemptions.
+free-space branches require explicit endpoints and chamfered three-way geometry.
+Ordinary free-space bends and tiny zigzags receive no per-net exemptions.
 """
 from pathlib import Path
 import argparse, collections, hashlib, json, math, subprocess
@@ -12,6 +13,43 @@ from shapely.geometry import LineString, Point, Polygon
 R = Path(__file__).resolve().parents[1]
 TOL = .00002  # 20 nm: native integer rounding only, not a routing angle allowance.
 MIN_FREE_SEGMENT = .10
+
+
+def branch_junctions(data):
+    """Node centerline intersections as well as endpoints; distinguish real rays.
+
+    Segmentation is not connectivity: a tap into a segment interior is a node
+    even when KiCad stores the through route as one object.
+    """
+    tracks=data['tracks'];lines=[LineString([t['a'],t['b']]) for t in tracks]
+    tree=STRtree(lines);nodes=collections.defaultdict(set)
+    for i,t in enumerate(tracks):
+        for end in ('a','b'):
+            nodes[(t['net'],t['layer'],*[round(v,5) for v in t[end]])].add(i)
+        for j in tree.query(lines[i].buffer(TOL)):
+            j=int(j)
+            if j<=i or (t['net'],t['layer'])!=(tracks[j]['net'],tracks[j]['layer']):continue
+            cross=lines[i].intersection(lines[j])
+            if cross.geom_type=='Point':
+                nodes[(t['net'],t['layer'],*[round(v,5) for v in cross.coords[0]])].update((i,j))
+    result=[]
+    for key,ids in nodes.items():
+        node=Point(key[2:])
+        ids.update(int(i) for i in tree.query(node.buffer(TOL))
+                   if (tracks[int(i)]['net'],tracks[int(i)]['layer'])==key[:2]
+                   and lines[int(i)].distance(node)<=TOL)
+        rays=set();interior=[]
+        for i in ids:
+            t=tracks[i]
+            if min(math.dist(key[2:],t[e]) for e in ('a','b'))>TOL:interior.append(i)
+            for end in ('a','b'):
+                dx,dy=[t[end][k]-key[k+2] for k in (0,1)]
+                if math.hypot(dx,dy)>TOL:rays.add(round(math.degrees(math.atan2(dy,dx)))%360)
+        if len(rays)<3:continue
+        rays=sorted(rays);sectors=[(b-a)%360 for a,b in zip(rays,rays[1:]+rays[:1])]
+        result.append(dict(net=key[0],layer=key[1],at_mm=list(key[2:]),indices=sorted(ids),
+                           interior_indices=sorted(interior),rays_deg=rays,sectors_deg=sectors))
+    return result
 
 
 def inspect(data):
@@ -70,7 +108,7 @@ def inspect(data):
 
     for key, pair in adjacency.items():
         if len(pair) != 2:
-            continue  # T-junctions and multi-branch power distribution are intentional.
+            continue  # Branch geometry is checked separately below.
         (i, a), (j, b) = pair
         node = Point(key[2:])
         contact = contacts.get(key[:2])
@@ -90,12 +128,25 @@ def inspect(data):
             record('sharp_free_bends', i, j, at_mm=list(key[2:]), included_angle_deg=angle)
         elif angle > 179.99 and tracks[i]['width'] == tracks[j]['width']:
             record('redundant_collinear_joint', i, j, at_mm=list(key[2:]))
+    branches=[]
+    for junction in branch_junctions(data):
+        ids=junction['indices'];contact=contacts.get((junction['net'],junction['layer']))
+        w=max(tracks[i]['width'] for i in ids)
+        if contact is not None and contact.buffer(w/2+TOL).covers(Point(junction['at_mm'])):continue
+        branches.append(junction)
+        if junction['interior_indices']:
+            record('implicit_free_junctions',*ids,at_mm=junction['at_mm'])
+        sectors=sorted(junction['sectors_deg'])
+        if sectors not in ([90,135,135],[90,90,90,90]):
+            record('unchamfered_free_branches',*ids,at_mm=junction['at_mm'],sectors_deg=junction['sectors_deg'])
     return dict(result='FAIL' if issues else 'PASS', segments=len(tracks), vias=len(data['vias']),
                 rules=dict(direction_tolerance_mm=TOL, minimum_free_segment_mm=MIN_FREE_SEGMENT,
-                           minimum_free_bend_included_angle_deg=135, curved_tracks_allowed=False),
+                           minimum_free_bend_included_angle_deg=135, curved_tracks_allowed=False,
+                           free_three_way_branch_sectors_deg=[90,135,135],explicit_free_junction_endpoints=True),
+                free_branch_junctions=len(branches),
                 short_contact_segments=contact_segments, findings=dict(issues),
                 scope='Routing geometry only. Copper round end caps are normal; no curved centerlines. '
-                      'Pad/via contacts and true branch junctions allow local transitions. '
+                      'Pad/via contacts allow local transitions; free branches require explicit nodes and chamfered geometry. '
                       'Native DRC and independent Gerber connectivity/clearance must also pass.')
 
 

@@ -1,6 +1,7 @@
 """Audit the dated public JLC snapshot; availability is not reserved inventory."""
 from pathlib import Path
 import csv, hashlib, json, re
+import sexpdata
 
 R=Path(__file__).resolve().parents[1]
 snapshot=json.loads((R/'bom/jlc_sourcing.json').read_text())
@@ -54,12 +55,24 @@ for s in snapshot['substitutions']:
   assert model[ref]['footprint']==s['footprint']
 for d in snapshot['datasheets']:
  assert hashlib.sha256((R/d['file']).read_bytes()).hexdigest()==d['sha256']
-# The sourcing candidate must change only the reviewed MPN strings. This also
-# proves the existing physical renders still depict the exact saved geometry.
-for path,key in [('hardware/FRC_Sensor_CAN.kicad_pcb','baseline_board_sha256'),('hardware/design/circuit.json','baseline_model_sha256')]:
+# Electrical model changes are still limited to the reviewed MPN strings.
+for path,key in [('hardware/design/circuit.json','baseline_model_sha256')]:
  restored=(R/path).read_text()
  for s in snapshot['substitutions']:restored=restored.replace(s['new_mpn'],s['old_mpn'])
  assert hashlib.sha256(restored.encode()).hexdigest()==snapshot[key],('Change beyond sourcing metadata',path)
+# Subsequent user-authorized routing edits have their own exact board review.
+# All other native objects, including footprints, vias, stack and zone rules,
+# must match the sourcing candidate; only tracks and cached zone fill may differ.
+route_review=snapshot['routing_review']
+board_path=R/'hardware/FRC_Sensor_CAN.kicad_pcb'
+assert hashlib.sha256(board_path.read_bytes()).hexdigest()==route_review['board_sha256']
+fixed=[]
+for row in sexpdata.loads(board_path.read_text()):
+ if isinstance(row,list):
+  if str(row[0]) in ('segment','arc'):continue
+  if str(row[0])=='zone':row=[v for v in row if not isinstance(v,list) or str(v[0]) not in ('filled_polygon','fill_segments')]
+ fixed.append(row)
+assert hashlib.sha256(sexpdata.dumps(fixed).encode()).hexdigest()==route_review['nonrouting_objects_sha256']
 basic=sum(r['library_class']=='base' for r in rows)
 preferred=sum(r['library_class']=='expand' and r['preferred_extended'] for r in rows)
 fees=len(rows)-basic-preferred
@@ -89,7 +102,8 @@ report=dict(result='PASS sourcing-file consistency; HOLD manufacturing review' i
  standard_setup_stencil_loading_two_fixtures_per_order_usd=round(25.56+8.21+1.53*len(rows)+16.42,2),
  moisture_sensitive_parts=[dict(references=r['references'],msl=r['moisture_sensitivity_level']) for r in rows if r['moisture_sensitivity_level'] not in ('Not stated','MSL 1')],
  nominal_standard_reflow_conflicts=thermal_conflicts,manufacturing_holds=holds,
- quantity_method=snapshot['quantity_method'],factory_allocation_confirmed=False,only_reviewed_mpn_metadata_changed=True,
+ quantity_method=snapshot['quantity_method'],factory_allocation_confirmed=False,
+ electrical_model_only_reviewed_mpn_metadata_changed=True,reviewed_routing=route_review,
  order_decision='HOLD: user approval and new simulations pending; MCU sourcing, C1 reflow and factory stack/quote unconfirmed',
  limitations='Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.',
  input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in ['bom/jlc_sourcing.json','bom/catalog_china.json','bom/Factory_BOM.csv','bom/BOM_JLCPCB.csv','output/assembly/CPL_JLCPCB.csv','hardware/design/circuit.json','hardware/FRC_Sensor_CAN.kicad_pcb','scripts/check_jlc_sourcing.py',*[d['file'] for d in snapshot['datasheets']]]})

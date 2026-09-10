@@ -54,10 +54,26 @@ class RoutingRules(unittest.TestCase):
             self.assertIn('sharp_free_bends', audit(track((0,0),(1,0)),track((1,0),b))['findings'])
 
     def test_real_branch_junctions(self):
-        self.assertEqual(audit(track((0,0),(1,0)),track((1,0),(2,0)),
-                               track((1,0),(1,1)))['result'], 'PASS')
-        self.assertEqual(audit(track((0,0),(2,0)),track((1,0),(1,1)),
-                               track((1,0),(2,1)))['result'], 'PASS')
+        self.assertEqual(audit(track((0,-1),(1,0)),track((0,1),(1,0)),
+                               track((1,0),(2,0)))['result'], 'PASS')
+
+    def test_perpendicular_tap_requires_chamfer(self):
+        self.assertIn('unchamfered_free_branches',audit(track((0,0),(1,0)),track((1,0),(2,0)),
+                               track((1,0),(1,1)))['findings'])
+
+    def test_segment_interior_is_a_real_junction(self):
+        result=audit(track((0,0),(2,0)),track((1,0),(1,1)))
+        self.assertIn('implicit_free_junctions',result['findings'])
+        self.assertIn('unchamfered_free_branches',result['findings'])
+
+    def test_acute_side_tap_and_four_way_crossing(self):
+        self.assertIn('unchamfered_free_branches',audit(track((0,0),(1,0)),track((1,0),(2,0)),
+                               track((1,0),(2,1)))['findings'])
+        self.assertEqual(audit(*(track((0,0),end) for end in [(1,0),(-1,0),(0,1),(0,-1)]))['result'],'PASS')
+
+    def test_pad_contact_permits_perpendicular_branch(self):
+        pad=dict(net='SIG',layer=0,polygons=[[(-.3,-.3),(.3,-.3),(.3,.3),(-.3,.3)]])
+        self.assertEqual(audit(track((-1,0),(1,0)),track((0,0),(0,1)),pads=[pad])['result'],'PASS')
 
     def test_merge_only_equal_width_collinear_pieces(self):
         self.assertIn('redundant_collinear_joint', audit(track((0,0),(1,0)),track((1,0),(2,0)))['findings'])

@@ -8,7 +8,7 @@ Review these substitutions and resolve whether C1 needs a hardware change before
 
 ## Implemented substitutions
 
-Only the MPN changes at these nine placements. Values, tolerances, footprints, nets, routing and mechanical layout stay the same. Rev H firmware and MCU remain unchanged.
+These six substitutions change only the MPN at nine placements. Values, tolerances, footprints and nets are retained. A subsequent user-requested [branch cleanup](ROUTING_RULES.md) changes routing only; fresh CAD/DC checks and renders accompany it. Rev H firmware, MCU, component positions and four-layer stack remain unchanged.
 
 | References | Original MPN | Replacement MPN / JLC code | Retained specification |
 |---|---|---|---|

@@ -5,12 +5,12 @@
   "power_distribution_valid_for_current_layout": true,
   "full_power_transient_pass": false,
   "input_hashes": {
-    "hardware/design/circuit.json": "cf9e272fb1d32b9ad6e04e69c37d37f8c2610410835bd46e6231c3692547903e",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "fd0300a03fefe04b3450b189a5eaf8c5ebc6f14a9a142200d0e18a809b69be98",
+    "hardware/design/circuit.json": "3f077ab74530cf41d072d848b7192e28bee21ccba3a22e8232b252556e57556c",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "1c946915a6149a831df1b5bcf4a19b8002a61e76d39a7b6f56c37613475185f0",
     "reports/electrical/electrical_checks.json": "ad27f7e16f6cbff19cc68ec084b22389250dfca7802d8e8bf8d0f183b9c52f6f",
     "reports/electrical/boost_spice.json": "1569440df8c69b3db8e19c4b869508e76733b0c662a87ab44dec585ce2ef9abb",
     "reports/design_parity.json": "d79cbd2f9a9dd988ede7c9394aad08e31f1f18c110d687679477102b4768bee5",
-    "reports/board_constraints.json": "54d51afbe865286ebf8f1396c307314ffb0ba906fa38792000a6116a38a13f57",
+    "reports/board_constraints.json": "883982c07d2596645fece07088611150387e7a003d9aa49d78e15d38daabbf34",
     "scripts/check_boost_spice.py": "44d4c0f4d6fd7944d2dda0f4b9387391c9e35fdd984e57e5e4b8072c41089209",
     "scripts/check_electrical.py": "354526a2887a31aa5174141dfb0059f18d7fb59bf551eacd1fdd0249bc4b1561",
     "scripts/check_order_readiness.py": "a9d881c6c337c032e9489361b0a3f214e2cc09d14215b8c197d2a30228c0a817"
@@ -65,9 +65,9 @@
     "other_5V_sensor_A": 0.51,
     "logic_A": 0.13,
     "RGB_buffer_A": 0.02,
-    "buck_to_boost_drop_V": 0.05157477638311744,
-    "boost_to_efuse_drop_V": 0.011435964671943669,
-    "total_boost_path_drop_V": 0.05157477638311744,
+    "buck_to_boost_drop_V": 0.05131682356431527,
+    "boost_to_efuse_drop_V": 0.011234455022610007,
+    "total_boost_path_drop_V": 0.05131682356431527,
     "revised_PCB_allowance_V": 0.12,
     "sensor_branch_drop_V_at_300mA": {
       "SENSOR_5V": {
@@ -76,24 +76,24 @@
         "3": 0.03807802863396955
       },
       "SENSOR_12V": {
-        "1": 0.021141082616732608,
-        "2": 0.032075537365525764,
-        "3": 0.04097525068249517
+        "1": 0.021141082617161334,
+        "2": 0.03207553736650692,
+        "3": 0.04097525068409613
       }
     },
     "sensor_branch_allowance_V": 0.06,
     "results": {
       "V5_INTERNAL": {
-        "('L1', '2')": 0.03524833262255788,
-        "('L2', '1')": -0.01632644376055956,
-        "('U4', '1')": 0.034228264476995375,
-        "('U2', '1')": 0.02793983466995626,
-        "('U10', '5')": -2.6160985212707494e-05,
-        "('D10', '2')": 0.026941171785791078
+        "('L1', '2')": 0.0349908870942049,
+        "('L2', '1')": -0.016325936470110377,
+        "('U4', '1')": 0.0339708189486424,
+        "('U2', '1')": 0.027849561934290154,
+        "('U10', '5')": -2.6160985209915708e-05,
+        "('D10', '2')": 0.02685089905012556
       },
       "BOOST_12V": {
-        "('D4', '1')": 1.7334264114324962e-17,
-        "('U9', '4')": -0.011435964671943669
+        "('D4', '1')": -2.6300750226995957e-18,
+        "('U9', '4')": -0.011234455022610007
       },
       "SENSOR_5V": {
         "1": {
@@ -111,20 +111,20 @@
       },
       "SENSOR_12V": {
         "1": {
-          "('U9', '5')": -3.2941211418542655e-18,
-          "('JP101', '3')": -0.021141082616732608
+          "('U9', '5')": -1.705506044228301e-17,
+          "('JP101', '3')": -0.021141082617161334
         },
         "2": {
-          "('U9', '5')": -1.8733794408957446e-19,
-          "('JP201', '3')": -0.032075537365525764
+          "('U9', '5')": -3.0076478884867616e-17,
+          "('JP201', '3')": -0.03207553736650692
         },
         "3": {
-          "('U9', '5')": 1.6772673986648627e-18,
-          "('JP301', '3')": -0.04097525068249517
+          "('U9', '5')": 1.217047516785341e-18,
+          "('JP301', '3')": -0.04097525068409613
         }
       }
     },
-    "geometry_sha256": "dec2616e36e1241270c77ba8c5abba759750089262c4770508fc0c429050ac4e",
+    "geometry_sha256": "368294a81b9cf549daabf40611ad02501514b0f33ca906a3354d03d946356b47",
     "scope": "Nominal etched dimensions, ideal pads/via annuli and finite transverse links between overlapping track centerlines. No current-crowding or temperature solution, ground return, connector contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json."
   },
   "protection_boundary": {

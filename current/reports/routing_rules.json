@@ -1,19 +1,26 @@
 {
   "result": "PASS",
-  "segments": 1993,
+  "segments": 2040,
   "vias": 245,
   "rules": {
     "direction_tolerance_mm": 2e-05,
     "minimum_free_segment_mm": 0.1,
     "minimum_free_bend_included_angle_deg": 135,
-    "curved_tracks_allowed": false
+    "curved_tracks_allowed": false,
+    "free_three_way_branch_sectors_deg": [
+      90,
+      135,
+      135
+    ],
+    "explicit_free_junction_endpoints": true
   },
-  "short_contact_segments": 390,
+  "free_branch_junctions": 34,
+  "short_contact_segments": 391,
   "findings": {},
-  "scope": "Routing geometry only. Copper round end caps are normal; no curved centerlines. Pad/via contacts and true branch junctions allow local transitions. Native DRC and independent Gerber connectivity/clearance must also pass.",
-  "board_sha256": "85f74e465e756b93e1b06f61adb20a1a58a1414991ad05d22cc8444673235f61",
+  "scope": "Routing geometry only. Copper round end caps are normal; no curved centerlines. Pad/via contacts allow local transitions; free branches require explicit nodes and chamfered geometry. Native DRC and independent Gerber connectivity/clearance must also pass.",
+  "board_sha256": "1c946915a6149a831df1b5bcf4a19b8002a61e76d39a7b6f56c37613475185f0",
   "source_hashes": {
-    "scripts/check_routing.py": "1f88287a8bf9761cd7c3570b8d7b562ec14df69b2a6c89ddfdc40ec6bc9fd547",
+    "scripts/check_routing.py": "a7e9e297c7d318fa1b7e135315b756ef845a5c0d657688df29e0f95f245d6ae7",
     "scripts/export_routing_geometry.py": "a35183f74b2afdc5ef575fed722e655b6c17a8d7d00a303318dd90f026c5fa94"
   }
 }
