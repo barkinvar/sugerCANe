@@ -113,7 +113,13 @@ def convert(path):
                 ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
                 ('LINEBELOW', (0, 0), (-1, 0), .7, BLUE),
             ]))
-            flow.extend([KeepTogether([table]) if len(rows)<=8 else table, Spacer(1, 10)])
+            if len(rows)<=8:
+                # Keep a section title with its table when the table moves pages.
+                heading = ([flow.pop()] if flow and isinstance(flow[-1], Paragraph)
+                           and flow[-1].style.name == 'Heading' else [])
+                flow.extend([KeepTogether([*heading, table]), Spacer(1, 10)])
+            else:
+                flow.extend([table, Spacer(1, 10)])
     return flow
 
 class Guide(SimpleDocTemplate):

@@ -1,24 +1,24 @@
-top 6196 primitives, 221 copper islands
-bottom 1381 primitives, 126 copper islands
-inner_2 556 primitives, 206 copper islands
-inner_1 295 primitives, 222 copper islands
+top 4374 primitives, 218 copper islands
+bottom 778 primitives, 124 copper islands
+inner_2 386 primitives, 204 copper islands
+inner_1 292 primitives, 219 copper islands
 {
   "result": "PASS",
   "method": "Gerbonara1.6.3 plus Shapely2.1.2 copper polygon union and plated-barrel graph",
   "maximum_arc_approximation_error_mm": 0.001,
   "copper_area_mm2": {
-    "top": 2768.6201603059158,
-    "bottom": 2724.365195079475,
-    "inner_2": 3407.8746275389426,
-    "inner_1": 3549.1619891908845
+    "top": 2843.764154657316,
+    "bottom": 2740.611025694921,
+    "inner_2": 3395.1297856160313,
+    "inner_1": 3550.1179409901774
   },
   "layer_island_counts": {
-    "top": 221,
-    "bottom": 126,
-    "inner_2": 206,
-    "inner_1": 222
+    "top": 218,
+    "bottom": 124,
+    "inner_2": 204,
+    "inner_1": 219
   },
-  "plated_barrels_joined": 294,
+  "plated_barrels_joined": 291,
   "pad_layer_records": 455,
   "identified_nets": 81,
   "shorts": {},
@@ -31,7 +31,7 @@ inner_1 295 primitives, 222 copper islands
   },
   "unassigned_copper_islands": 0,
   "unassigned_copper_area_mm2": 0.0,
-  "elapsed_seconds": 1.2078920989879407,
+  "elapsed_seconds": 1.4154434980009682,
   "limitations": "Plated holes represented as connected filled pad centers; no barrel manufacturing defect, annular-ring fracture, impedance, thermal or EMC model. Positive Gerber primitives only."
 }
 Copper/drill review PNG, SVG and PDF refreshed from final Gerbers.

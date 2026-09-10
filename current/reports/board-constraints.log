@@ -129,12 +129,12 @@
     },
     "VIN_RAW": {
       "total_track_length_mm": 18.818961030678928,
-      "minimum_width_mm": 0.5,
+      "minimum_width_mm": 0.7,
       "via_count": 1
     },
     "VIN_FUSED": {
       "total_track_length_mm": 19.46927777466002,
-      "minimum_width_mm": 0.5,
+      "minimum_width_mm": 0.7,
       "via_count": 2
     },
     "VIN_PROT": {

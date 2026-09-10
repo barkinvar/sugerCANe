@@ -43,3 +43,14 @@ Parts purchasing is about **$25.61 per board at ten boards before SMT attrition*
 Change voltage jumpers only with power disconnected. A missing cap disconnects port power, not its signal wire. Input mode changes use CAN software. Rail voltage readback uses the MCU ADC and factory voltage-reference calibration. External signal inputs remain digital; rail measurement does not add user analog-input or encoder support.
 
 The 52 × 74 mm board has top-side assembly, rounded corners, improved edge clearances, a recessed debug socket and labelled voltage selectors. Its 1,530 straight track segments and 242 vias satisfy the [routing rules](docs/ROUTING_RULES.md). All-layer cleanup removes pad overshoots, redundant paths and stubs, with explicit chamfered branches. Ground pours use checked widths and gaps; see the [ground cleanup](output/review/ground_pours.png). Component positions and artwork are unchanged. See [before/after details](output/review/routing_contacts.png), [all four copper layers](output/assembly/gerber_copper_review.pdf) and [connector details](docs/CONNECTORS.md).
+
+The input connector-to-fuse and fuse-to-MOSFET routes are now **0.7 mm wide** (14 segments widened from 0.5 mm). The protected input and converter paths retain their reviewed clearance necks. Width, clearance, connectivity and ground-pour checks cover **all four layers**; see the [power-path review](docs/ORDER_READINESS.md).
+
+| Copper layer | Role | PNG | SVG |
+|---|---|---|---|
+| Top | Components, signals and power | [PNG](output/review/gerber_top_copper.png) | [SVG](output/review/gerber_top_copper.svg) |
+| Inner 1 | Ground plane | [PNG](output/review/gerber_inner_1_copper.png) | [SVG](output/review/gerber_inner_1_copper.svg) |
+| Inner 2 | Ground with selected signals and low-current supply branches | [PNG](output/review/gerber_inner_2_copper.png) | [SVG](output/review/gerber_inner_2_copper.svg) |
+| Bottom | Signals, power and ground | [PNG](output/review/gerber_bottom_copper.png) | [SVG](output/review/gerber_bottom_copper.svg) |
+
+These views show the actual exported copper and drills. Inner layers are viewed from the top; the bottom is mirrored for an underside view.

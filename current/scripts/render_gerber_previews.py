@@ -34,10 +34,11 @@ with PdfPages(ROOT/'output/assembly/gerber_copper_review.pdf') as pdf:
         ax.set_title('Viewed from '+view+'; exported copper and drills, without solder mask',fontsize=9,pad=10)
         fig.text(.06,.025,'Nominal manufacturing geometry only. Compare to native KiCad, assembly and fabrication files.',fontsize=8)
         fig.tight_layout(rect=(0,.045,1,.955))
-        if side in ('top','bottom'):
-            for ext in ['png','svg']:fig.savefig(ROOT/f'output/review/gerber_{side}_copper.{ext}',dpi=200)
+        for ext in ['png','svg']:fig.savefig(ROOT/f'output/review/gerber_{side}_copper.{ext}',dpi=200)
         pdf.savefig(fig);plt.close(fig)
-report={'method':'Independent Gerbonara/Shapely geometry with actual drill overlays; all four copper layers in PDF; bottom mirrored for underside view',
-        'sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'output/fabrication').iterdir()) if p.suffix in ('.gtl','.g1','.g2','.gbl','.drl')}}
+report={'method':'Independent Gerbonara/Shapely geometry with actual drill overlays; all four copper layers in PNG, SVG and PDF; inner layers viewed from top, bottom mirrored for underside view',
+        'sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'output/fabrication').iterdir()) if p.suffix in ('.gtl','.g1','.g2','.gbl','.drl')},
+        'output_sha256':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [ROOT/'output/assembly/gerber_copper_review.pdf',*sorted((ROOT/'output/review').glob('gerber_*_copper.*'))]},
+        'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
 (ROOT/'reports/manufacturing/preview_source.json').write_text(json.dumps(report,indent=2)+'\n')
 print('Copper/drill review PNG, SVG and PDF refreshed from final Gerbers.')

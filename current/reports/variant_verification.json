@@ -190,8 +190,8 @@
   "area_change_from_rev_g_percent": -0.050192737251116566,
   "cost_10_board_purchase_USD": {
     "rev_g": 28.8123,
-    "rev_h": 25.607799999999997,
-    "added_vs_rev_g": -3.204500000000003
+    "rev_h": 25.6121,
+    "added_vs_rev_g": -3.200199999999999
   },
   "firmware": "Hardware 8 / app 0.9.0 / boot 1.1.0 / protocol 4. Rev H image tag prevents accidental cross-revision LED firmware.",
   "scope": "Circuit contract and procurement arithmetic; native CAD/copper verification and physical testing remain separate."

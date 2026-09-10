@@ -3598,19 +3598,84 @@
   },
   "routing_review": {
     "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
-    "board_sha256": "f6e7be17328081b06241a03ec6a706204e40f90e1e63c5d6ff4bc82f96823d04",
+    "board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
     "nonrouting_objects_sha256": "5ee31ac375e66db8dff45cad8ffefd5df5df0aed11ec677c58b56d84f7d306f2",
-    "scope": "Authorized ground-pour cleanup. Four minimum widths, outer SMT/through-hole connection modes, five local cutouts, J8.7 spoke angle and three redundant GND segments reviewed; exact comparison preserves all other native objects. CAD/DC/Gerber checks refreshed; transient simulations deferred.",
+    "scope": "Authorized 14-segment input widening from 0.5 to 0.7 mm and regenerated fills. Exact native comparison preserves every other object. Four-layer CAD/Gerber and expanded DC checks refreshed; transient simulations deferred.",
     "previous_review": {
       "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
-      "board_sha256": "11a7fe728a5c38fea9ccf797b009e49f00d5b57660013b24940de233ee9ede55",
-      "nonrouting_objects_sha256": "e4353dfdb994feff9097c45d8a58a25a327f040cb739ecaafbf8ad4652c24cb1",
-      "scope": "Authorized contact/branch cleanup. Exact native comparison preserves every other object; three redundant signal vias removed. Width policy unchanged. CAD/DC/Gerber checks refreshed; transient simulations deferred.",
+      "board_sha256": "f6e7be17328081b06241a03ec6a706204e40f90e1e63c5d6ff4bc82f96823d04",
+      "nonrouting_objects_sha256": "5ee31ac375e66db8dff45cad8ffefd5df5df0aed11ec677c58b56d84f7d306f2",
+      "scope": "Authorized ground-pour cleanup. Four minimum widths, outer SMT/through-hole connection modes, five local cutouts, J8.7 spoke angle and three redundant GND segments reviewed; exact comparison preserves all other native objects. CAD/DC/Gerber checks refreshed; transient simulations deferred.",
       "previous_review": {
         "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
-        "board_sha256": "c6f6150f6a71395bcfd55faff9d0de88cd833f19438ebcd708ad3981c939c3d7",
-        "nonrouting_objects_sha256": "e3ed96947f37f53acd3aa32f98a84c30a9bda0128c8a1a3aae78a1b45b0c116e",
-        "scope": "Authorized branch and width cleanup; exact native nonrouting objects still match the sourcing candidate. All 77 routed nets reviewed; 68 segments widened, none narrowed; 40 unnecessary width-change junctions removed. CAD/DC/Gerber checks refreshed; new transient simulations remain deferred."
+        "board_sha256": "11a7fe728a5c38fea9ccf797b009e49f00d5b57660013b24940de233ee9ede55",
+        "nonrouting_objects_sha256": "e4353dfdb994feff9097c45d8a58a25a327f040cb739ecaafbf8ad4652c24cb1",
+        "scope": "Authorized contact/branch cleanup. Exact native comparison preserves every other object; three redundant signal vias removed. Width policy unchanged. CAD/DC/Gerber checks refreshed; transient simulations deferred.",
+        "previous_review": {
+          "baseline_commit": "ae55a5b6fce0856f229e74e25acd8c17e95c984b",
+          "board_sha256": "c6f6150f6a71395bcfd55faff9d0de88cd833f19438ebcd708ad3981c939c3d7",
+          "nonrouting_objects_sha256": "e3ed96947f37f53acd3aa32f98a84c30a9bda0128c8a1a3aae78a1b45b0c116e",
+          "scope": "Authorized branch and width cleanup; exact native nonrouting objects still match the sourcing candidate. All 77 routed nets reviewed; 68 segments widened, none narrowed; 40 unnecessary width-change junctions removed. CAD/DC/Gerber checks refreshed; new transient simulations remain deferred."
+        },
+        "removed_redundant_vias": [
+          {
+            "id": "98c3dadb-99ff-4b5b-902a-850bea21e86e",
+            "net": "+3V3",
+            "at": [
+              5.8232,
+              57.5491
+            ],
+            "width": 0.65,
+            "layers": [
+              0,
+              2,
+              4,
+              6
+            ],
+            "remaining_connected_track_layers": [
+              0
+            ],
+            "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+          },
+          {
+            "id": "1ea72085-26c6-4b4b-8cf5-6edde53809eb",
+            "net": "SENSE3",
+            "at": [
+              30.7255,
+              48.2871
+            ],
+            "width": 0.65,
+            "layers": [
+              0,
+              2,
+              4,
+              6
+            ],
+            "remaining_connected_track_layers": [
+              2
+            ],
+            "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+          },
+          {
+            "id": "cf5b937a-86d1-4507-a784-398b44681f80",
+            "net": "SIG3",
+            "at": [
+              43.1172,
+              59.349999
+            ],
+            "width": 0.65,
+            "layers": [
+              0,
+              2,
+              4,
+              6
+            ],
+            "remaining_connected_track_layers": [
+              2
+            ],
+            "reason": "No layer transition remains: two retained tracks meet at this position on the same layer. The former opposite-side stub was wholly inside the via annulus."
+          }
+        ]
       },
       "removed_redundant_vias": [
         {
@@ -3740,7 +3805,7 @@
   "catalog_endpoint": "https://jlcpcb.com/api/overseas-pcb-order/v1/smtComponentShopCart/getComponentDetail?componentCode={lcsc}",
   "equivalence_review": {
     "observed_utc": "2026-09-10T02:26:16.074445+00:00",
-    "board_sha256": "f6e7be17328081b06241a03ec6a706204e40f90e1e63c5d6ff4bc82f96823d04",
+    "board_sha256": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
     "scope": "Six changed passive types at nine placements checked against original and replacement manufacturer specifications and actual native pad dimensions. The other 49 factory types retain exact manufacturer/MPN. No BOM or CAD change in this audit.",
     "substitutions": [
       {
@@ -3955,7 +4020,8 @@
         "overload_test": "Both families specify 2.5 times rated working voltage or maximum overload voltage, whichever is lower, for 5 seconds. This is not a repetitive-surge qualification.",
         "differences": "Body dimensions/tolerances vary within the reviewed 0805/1206 land pattern. This review does not claim identical long-term drift or surge behavior."
       }
-    ]
+    ],
+    "layout_update_note": "Only VIN_RAW/VIN_FUSED track widths and cached fills changed; all substitution footprints, pads, nets and parts remain identical to the dated equivalence review."
   },
   "alternative_stock_review": [
     {

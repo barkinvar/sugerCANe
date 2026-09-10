@@ -7,8 +7,8 @@ inner_1 292 primitives, 219 copper islands
   "method": "Gerbonara1.6.3 plus Shapely2.1.2 copper polygon union and plated-barrel graph",
   "maximum_arc_approximation_error_mm": 0.001,
   "copper_area_mm2": {
-    "top": 2843.3327621520916,
-    "bottom": 2740.3247813324792,
+    "top": 2843.764154657316,
+    "bottom": 2740.611025694921,
     "inner_2": 3395.1297856160313,
     "inner_1": 3550.1179409901774
   },
@@ -31,7 +31,7 @@ inner_1 292 primitives, 219 copper islands
   },
   "unassigned_copper_islands": 0,
   "unassigned_copper_area_mm2": 0.0,
-  "elapsed_seconds": 1.401656831963919,
+  "elapsed_seconds": 1.213267759012524,
   "limitations": "Plated holes represented as connected filled pad centers; no barrel manufacturing defect, annular-ring fracture, impedance, thermal or EMC model. Positive Gerber primitives only."
 }
 {
@@ -163,19 +163,19 @@ inner_1 292 primitives, 219 copper islands
   "minimum_hole_to_hole_web": 0.2851392996543623,
   "minimum_hole_edge_distance": 0.7950000000000004,
   "sha256": {
-    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "7f74b4768dc14a227f82d49139ed5ae59d97706ad084c8f10c64ff02ca037d48",
-    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "33486e9f496bc69aedbabcadbed2f70513a4c65aa32bed798f156786637a4452",
-    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "bccfa9f67467ca7555e1806b95b90f68906b0c476437998a1f82c2bd06ddd201",
-    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "bc28f035b69a4a7061101dd1393201af4880869414fc02b7e91cb8e4e93ffa44",
-    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "bd4ca67e08079f2f1fb157e45a2c550d834187e629303496dcb1cb8b4c5db441",
-    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "3c7b828f589cfb50c6365ca362d823e03df8d08183970b1f1628210aa687aeea",
-    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "80f1e7a5f1735e858ae966c32dec5654dc5f45f7d0813b0898a78bed64479321",
-    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "2c5fcb4e23cb7192f91f2a9ec82d723a26f5535702bcf8192ce71c9670f09459",
-    "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": "044ee8a3c79c919c49bb34974a3d083c1ee3e2ddb73932e7ab566aa2343a42c8",
-    "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": "9c407cce87ea0eb71c5711dd49725d38295574cdb200885f730f9d864582c6d2",
-    "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": "159b212f40cf7c9d068182eb9dbf1d86ca6bd443013c05b953db6f870038c397",
-    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "946c656a2072456541fe4bbc8f41cf1b896e64e7263deaeccae8123fce65357d",
-    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "9985c3520241afa724f31d6965a5aba140eb0aa9d271a0a3fdd4894c8f19f38a"
+    "output/fabrication/FRC_Sensor_CAN-B_Cu.gbl": "29c5ed5d18d5a5c18d107d7ef3440d45f487192db5bd6af0268d944ed2da05f2",
+    "output/fabrication/FRC_Sensor_CAN-B_Mask.gbs": "e11fc1d8bf7353ff28858307abf92c6f2408f0c338d11e46e7446ce38a69d6ff",
+    "output/fabrication/FRC_Sensor_CAN-B_Paste.gbp": "9078af678d437453ffb575779e60630d1f00a704147e2bcb315cc6b7e9f30a79",
+    "output/fabrication/FRC_Sensor_CAN-B_Silkscreen.gbo": "463746dbc807f2c3bef3f14f6b606e54f33fb33214a969a329bf6a450a7d7f90",
+    "output/fabrication/FRC_Sensor_CAN-Edge_Cuts.gm1": "f5bec5e98c53b2c8118cf475a7be1674c6b3d94880ba45f64683c59c5d5de5c4",
+    "output/fabrication/FRC_Sensor_CAN-F_Cu.gtl": "3a1fa89e5a13fe6f71fc5140a5c1978b1108e8c6c41e4ddd1954db2b9a5fa4dd",
+    "output/fabrication/FRC_Sensor_CAN-F_Mask.gts": "9d7932c36bdcda65267280a23d29b9c0a01d235175893e2571cbbf60c5c6b4c3",
+    "output/fabrication/FRC_Sensor_CAN-F_Paste.gtp": "4ea0903777eec828767b3387bd403f11e3b44e3c345d33512efb0ecce73acc12",
+    "output/fabrication/FRC_Sensor_CAN-F_Silkscreen.gto": "9cf9c9da01be10c9c2a50573e1cb63ddefa7a4cf9a29d2df61e6c75b4f976609",
+    "output/fabrication/FRC_Sensor_CAN-In1_Cu.g1": "9e72a08ab0f105d480f2b0adb00510a359756965449d78fc1083c91feb307553",
+    "output/fabrication/FRC_Sensor_CAN-In2_Cu.g2": "ef42b1296cbfcf67617affa797e2ada52f199e1b73a0d434d6ca6b2e1be77b82",
+    "output/fabrication/FRC_Sensor_CAN-NPTH.drl": "287f2972c6d9b2a4dbcf142cf29756f6b31df3ea8ff8a8500159c251544851b8",
+    "output/fabrication/FRC_Sensor_CAN-PTH.drl": "8e69be119bde13d6c745e29ae3ef22d7d02e4bcfe11314a47ae94352d55c5d45"
   },
   "source_hashes": {
     "scripts/verify_gerber_geometry.py": "0a1c14994b4cca5568a10a6fbf84fa3ae9b6babd12405764572b00d6c579bc86",

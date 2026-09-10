@@ -26,6 +26,13 @@ files=['bom/BOM_JLCPCB.csv','bom/Factory_BOM.csv','bom/Hand_solder_BOM.csv','bom
  'reports/electrical/order_readiness.json','output/review/routing_junctions.png',
  'hardware/design/routing_widths.json','output/review/routing_widths.png','output/review/routing_contacts.png','output/review/ground_pours.png',
  'bom/jlc_sourcing.json',str(gerber.relative_to(R))]
+preview=json.loads((R/'reports/manufacturing/preview_source.json').read_text())
+assert hashlib.sha256((R/'scripts/render_gerber_previews.py').read_bytes()).hexdigest()==preview['script_sha256']
+for name,digest in preview['sha256'].items():
+ assert hashlib.sha256((R/'output/fabrication'/name).read_bytes()).hexdigest()==digest,('Stale copper preview source',name)
+for name,digest in preview['output_sha256'].items():
+ assert hashlib.sha256((R/name).read_bytes()).hexdigest()==digest,('Changed copper preview',name)
+files += ['reports/manufacturing/preview_source.json',*preview['output_sha256']]
 files += [d['file'] for d in json.loads((R/'bom/jlc_sourcing.json').read_text())['datasheets']]
 manifest=dict(status=status,files={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in files})
 dest=R/'order/sugarCANe_RevH_JLC_REVIEW_ONLY.zip'

@@ -7,8 +7,8 @@ inner_1 292 primitives, 219 copper islands
   "method": "Gerbonara1.6.3 plus Shapely2.1.2 copper polygon union and plated-barrel graph",
   "maximum_arc_approximation_error_mm": 0.001,
   "copper_area_mm2": {
-    "top": 2843.3327621520916,
-    "bottom": 2740.3247813324792,
+    "top": 2843.764154657316,
+    "bottom": 2740.611025694921,
     "inner_2": 3395.1297856160313,
     "inner_1": 3550.1179409901774
   },
@@ -31,6 +31,6 @@ inner_1 292 primitives, 219 copper islands
   },
   "unassigned_copper_islands": 0,
   "unassigned_copper_area_mm2": 0.0,
-  "elapsed_seconds": 1.364979978010524,
+  "elapsed_seconds": 1.4154434980009682,
   "limitations": "Plated holes represented as connected filled pad centers; no barrel manufacturing defect, annular-ring fracture, impedance, thermal or EMC model. Positive Gerber primitives only."
 }

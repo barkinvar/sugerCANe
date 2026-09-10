@@ -15,7 +15,7 @@ REPORT = ROOT / 'reports/electrical/order_readiness.json'
 GEOMETRY_EXPORT = r'''import pcbnew as p,json,sys
 b=p.LoadBoard(sys.argv[1])
 report={}
-for net in ('V5_INTERNAL','BOOST_12V','SENSOR_5V','SENSOR_12V'):
+for net in ('V5_INTERNAL','BOOST_12V','SENSOR_5V','SENSOR_12V','VIN_RAW','VIN_FUSED','VIN_PROT','VPORT1','VPORT2','VPORT3'):
  tracks=[];vias=[];pads=[]
  for t in b.GetTracks():
   if t.GetNetname()!=net:continue
@@ -75,7 +75,9 @@ def copper_depths(board_path):
      fields={str(v[0]):v[1] for v in layer[2:] if isinstance(v,list)}
      if fields.get('type') not in ('copper','core','prepreg'):continue
      thickness=float(fields['thickness'])
-     if fields['type']=='copper':result[str(layer[1])]=depth+thickness/2
+     if fields['type']=='copper':
+      assert abs(thickness-.035)<1e-9, ('DC model requires 35 um on every copper layer',layer[1],thickness)
+      result[str(layer[1])]=depth+thickness/2
      depth+=thickness
     assert len(result)==4 and 1.5<depth<1.7,('Unexpected stackup',result,depth)
     return result
@@ -147,14 +149,23 @@ def power_distribution_screen():
         str(ROOT/'hardware/FRC_Sensor_CAN.kicad_pcb')], text=True)
     report = json.loads(geometry)
     depths=copper_depths(ROOT/'hardware/FRC_Sensor_CAN.kicad_pcb')
+    electrical=json.loads((ROOT/'reports/electrical/electrical_checks.json').read_text())
+    input_paths={'VIN_RAW':(('J1','1'),('F1','1')),
+                 'VIN_FUSED':(('F1','2'),('Q1','5')),
+                 'VIN_PROT':(('Q1','1'),('U1','3'))}
+    input_screen_A=2.0
     results = {}
     for net,geo in report.items():
      solve=dc_solver(geo,depths)
      if net=='V5_INTERNAL':result=solve(('L1','2'),{('L2','1'):1.3,('U4','1'):.51,('U2','1'):.13,('U10','5'):.001,('D10','2'):.019},('R1','1'))
      elif net=='BOOST_12V':result=solve(('D4','1'),{('U9','4'):.41})
-     else:
+     elif net in ('SENSOR_5V','SENSOR_12V'):
       source=('U4','6') if net=='SENSOR_5V' else ('U9','5');pin='1' if net=='SENSOR_5V' else '3'
       result={str(ch):solve(source,{(f'JP{ch}01',pin):.3}) for ch in range(1,4)}
+     elif net in input_paths:
+      source,dest=input_paths[net];result=solve(source,{dest:input_screen_A})
+     else:
+      ch=int(net[-1]);result=solve((f'JP{ch}01','2'),{(f'J{ch+3}','1'):.3})
      results[net]=result
 
     before = results['V5_INTERNAL'][str(('L1', '2'))]-results['V5_INTERNAL'][str(('L2', '1'))]
@@ -165,8 +176,16 @@ def power_distribution_screen():
     sensor_drops = {net: {ch: -value[str((f'JP{ch}01', pin))]
                           for ch,value in results[net].items()}
                     for net,pin in [('SENSOR_5V','1'),('SENSOR_12V','3')]}
-    rail_allowance = json.loads((ROOT/'reports/electrical/electrical_checks.json').read_text())['rail_monitor']['ADC_error_budget']['post_switch_copper_allowance_V']
-    assert all(0 < v < rail_allowance for branch in sensor_drops.values() for v in branch.values()), sensor_drops
+    port_drops={str(ch):-results[f'VPORT{ch}'][str((f'J{ch+3}','1'))] for ch in range(1,4)}
+    full_sensor_drops={net:{ch:drop+port_drops[ch] for ch,drop in branches.items()}
+                       for net,branches in sensor_drops.items()}
+    rail_allowance = electrical['rail_monitor']['ADC_error_budget']['post_switch_copper_allowance_V']
+    assert all(0 < v < rail_allowance for branch in full_sensor_drops.values() for v in branch.values()), full_sensor_drops
+    input_drops={net:-results[net][str(dest)] for net,(source,dest) in input_paths.items()}
+    assert all(v>0 for v in input_drops.values()),input_drops
+    input_resistance=sum(input_drops.values())/input_screen_A
+    input_normal_A=electrical['power']['input_current_at_6V_A']
+    input_budget=electrical['power']['entry_resistance_assumption_ohm']
     return dict(method='Native routed-track resistor network with geometric pad/via/track contacts; nodal DC solve',
                 trace_temperature_C=85, copper_um=35, via_plating_um=20,
                 copper_center_depths_mm=depths,
@@ -174,6 +193,15 @@ def power_distribution_screen():
                 buck_to_boost_drop_V=before, boost_to_efuse_drop_V=after,
                 total_boost_path_drop_V=drop, revised_PCB_allowance_V=allowance,
                 sensor_branch_drop_V_at_300mA=sensor_drops, sensor_branch_allowance_V=rail_allowance,
+                selector_to_connector_drop_V_at_300mA=port_drops,
+                full_sensor_copper_drop_V_at_300mA=full_sensor_drops,
+                input_feed=dict(screen_current_A=input_screen_A, branch_drop_V=input_drops,
+                    total_drop_V=sum(input_drops.values()), resistance_ohm=input_resistance,
+                    analytical_normal_input_at_6V_A=input_normal_A,
+                    drop_at_analytical_normal_input_V=input_resistance*input_normal_A,
+                    full_entry_resistance_planning_budget_ohm=input_budget,
+                    budget_remaining_for_excluded_items_ohm=input_budget-input_resistance,
+                    scope='Copper-only partition of the existing entry-resistance assumption, not verification of that full budget. Excludes fuse, MOSFET, contacts, cables and ground return. 2 A is a DC screening point, not a thermal/current rating or maximum fault current.'),
                 results=results, geometry_sha256=hashlib.sha256(geometry.encode()).hexdigest(),
                 scope='Nominal etched dimensions, ideal pads/via annuli and finite transverse links between overlapping track centerlines. No current-crowding or temperature solution, ground return, connector contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json.')
 

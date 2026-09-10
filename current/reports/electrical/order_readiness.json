@@ -6,14 +6,14 @@
   "full_power_transient_pass": false,
   "input_hashes": {
     "hardware/design/circuit.json": "3f077ab74530cf41d072d848b7192e28bee21ccba3a22e8232b252556e57556c",
-    "hardware/FRC_Sensor_CAN.kicad_pcb": "f6e7be17328081b06241a03ec6a706204e40f90e1e63c5d6ff4bc82f96823d04",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "70b07b7769a7b592503aad1964682dfb0e01d0d1b5b20d0933c172ead03f1134",
     "reports/electrical/electrical_checks.json": "ad27f7e16f6cbff19cc68ec084b22389250dfca7802d8e8bf8d0f183b9c52f6f",
     "reports/electrical/boost_spice.json": "1569440df8c69b3db8e19c4b869508e76733b0c662a87ab44dec585ce2ef9abb",
     "reports/design_parity.json": "d79cbd2f9a9dd988ede7c9394aad08e31f1f18c110d687679477102b4768bee5",
-    "reports/board_constraints.json": "340aee0b49db4bd66567d64f63c03f0669e714af9a0f0e10d529d26a0cec7f61",
+    "reports/board_constraints.json": "5d5c66a155e81ab44e3365e04a14a44cbb54871dfc73563557208875b731422b",
     "scripts/check_boost_spice.py": "44d4c0f4d6fd7944d2dda0f4b9387391c9e35fdd984e57e5e4b8072c41089209",
     "scripts/check_electrical.py": "354526a2887a31aa5174141dfb0059f18d7fb59bf551eacd1fdd0249bc4b1561",
-    "scripts/check_order_readiness.py": "a9d881c6c337c032e9489361b0a3f214e2cc09d14215b8c197d2a30228c0a817"
+    "scripts/check_order_readiness.py": "6e450c7803b2dfc1c9b8a7637eda631283d21a6933c5c07bc794b7d03064355d"
   },
   "pin_review": {
     "checks": {
@@ -82,6 +82,38 @@
       }
     },
     "sensor_branch_allowance_V": 0.06,
+    "selector_to_connector_drop_V_at_300mA": {
+      "1": 0.0015212610480000006,
+      "2": 0.0015212610480000006,
+      "3": 0.0015212610480000006
+    },
+    "full_sensor_copper_drop_V_at_300mA": {
+      "SENSOR_5V": {
+        "1": 0.02693707343211101,
+        "2": 0.029975351509704113,
+        "3": 0.03830978151414536
+      },
+      "SENSOR_12V": {
+        "1": 0.023623202234612745,
+        "2": 0.03478757875318489,
+        "3": 0.04401253068633183
+      }
+    },
+    "input_feed": {
+      "screen_current_A": 2.0,
+      "branch_drop_V": {
+        "VIN_RAW": 0.019026119686880467,
+        "VIN_FUSED": 0.03090458019902227,
+        "VIN_PROT": 0.09143608119257328
+      },
+      "total_drop_V": 0.141366781078476,
+      "resistance_ohm": 0.070683390539238,
+      "analytical_normal_input_at_6V_A": 1.7259711902877457,
+      "drop_at_analytical_normal_input_V": 0.1219974957025822,
+      "full_entry_resistance_planning_budget_ohm": 0.276,
+      "budget_remaining_for_excluded_items_ohm": 0.20531660946076202,
+      "scope": "Copper-only partition of the existing entry-resistance assumption, not verification of that full budget. Excludes fuse, MOSFET, contacts, cables and ground return. 2 A is a DC screening point, not a thermal/current rating or maximum fault current."
+    },
     "results": {
       "V5_INTERNAL": {
         "('L1', '2')": 0.03515299890087088,
@@ -122,9 +154,33 @@
           "('U9', '5')": -9.071105961557131e-18,
           "('JP301', '3')": -0.04249126963833183
         }
+      },
+      "VIN_RAW": {
+        "('J1', '1')": -4.830608398948997e-19,
+        "('F1', '1')": -0.019026119686880467
+      },
+      "VIN_FUSED": {
+        "('F1', '2')": -2.7759628191922674e-20,
+        "('Q1', '5')": -0.03090458019902227
+      },
+      "VIN_PROT": {
+        "('Q1', '1')": -1.1934294165862926e-17,
+        "('U1', '3')": -0.09143608119257328
+      },
+      "VPORT1": {
+        "('JP101', '2')": 0.0,
+        "('J4', '1')": -0.0015212610480000006
+      },
+      "VPORT2": {
+        "('JP201', '2')": 0.0,
+        "('J5', '1')": -0.0015212610480000006
+      },
+      "VPORT3": {
+        "('JP301', '2')": 0.0,
+        "('J6', '1')": -0.0015212610480000006
       }
     },
-    "geometry_sha256": "b9c6b1f6edb90768918c5d97036e2b116d67151609f364b3219ee7f29fa2ed71",
+    "geometry_sha256": "b29c93ebb344fc5b9f51754905b9bc88a90bc65bfc0ba3b934313771c3ba8b0a",
     "scope": "Nominal etched dimensions, ideal pads/via annuli and finite transverse links between overlapping track centerlines. No current-crowding or temperature solution, ground return, connector contacts, cable or component resistance. Separate switch RON remains in electrical_checks.json."
   },
   "protection_boundary": {

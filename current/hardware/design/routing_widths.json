@@ -25,9 +25,9 @@
     "UART_RX": {"widths_mm": [0.18], "reason": "Uniform MCU/service route through the dense programming area."},
     "UART_TX": {"widths_mm": [0.18], "reason": "Uniform MCU/service route through the dense programming area."},
     "V5_INTERNAL": {"widths_mm": [0.25, 0.3, 0.48, 0.8, 0.9895], "reason": "0.8 mm power distribution; one 0.9895 mm bottom section preserves the consolidated parallel-route copper. A 0.81 mm-long 0.48 mm neck clears adjacent ground; 0.25/0.3 mm branches feed U8 control pins and the LED/level shifter. Full buck-to-boost current/drop is independently checked."},
-    "VIN_FUSED": {"widths_mm": [0.5], "reason": "Uniform input-power route."},
+    "VIN_FUSED": {"widths_mm": [0.7], "reason": "Uniform widened input-power route; nominal 2 A copper-only drop screened with finite via resistance. Adjacent pads constrain further widening."},
     "VIN_PROT": {"widths_mm": [0.25, 0.5, 0.8], "reason": "0.5 mm protected input trunk expands to 0.8 mm at the local buck input bypass; separate 0.25 mm branch feeds the high-impedance U1.5 enable input."},
-    "VIN_RAW": {"widths_mm": [0.5], "reason": "Uniform input-power route."},
+    "VIN_RAW": {"widths_mm": [0.7], "reason": "Uniform widened input-power route; nominal 2 A copper-only drop screened with finite via resistance. Adjacent pads constrain further widening."},
     "VPORT1": {"widths_mm": [0.5], "reason": "Uniform selector-to-sensor power route."},
     "VPORT2": {"widths_mm": [0.5], "reason": "Uniform selector-to-sensor power route."},
     "VPORT3": {"widths_mm": [0.5], "reason": "Uniform selector-to-sensor power route."}
