@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "segments": 1302,
+  "segments": 1303,
   "vias": 245,
   "rules": {
     "direction_tolerance_mm": 2e-05,
@@ -22,7 +22,7 @@
   "width_audit": {
     "policy_enforced": true,
     "routed_nets": 77,
-    "segments_checked": 1302,
+    "segments_checked": 1303,
     "nets": [
       {
         "net": "+3V3",
@@ -309,13 +309,13 @@
         "widths": [
           {
             "width_mm": 0.3,
-            "segments": 2,
-            "length_mm": 3.306828098979215
+            "segments": 3,
+            "length_mm": 2.069974746830582
           },
           {
             "width_mm": 0.5,
             "segments": 5,
-            "length_mm": 11.505687219636728
+            "length_mm": 10.066994039267918
           }
         ],
         "reason": "0.3 mm approach from U8.5 to the 0.5 mm inductor/diode path. A 0.5 mm approach would leave only 0.150 mm to U8.6; required track-to-pad clearance is 0.2 mm."
@@ -904,6 +904,42 @@
     ],
     "transitions": [
       {
+        "net": "BOOST_SW",
+        "layer": 2,
+        "at_mm": [
+          30.8875,
+          20.6125
+        ],
+        "widths_mm": [
+          0.3,
+          0.5
+        ],
+        "tracks": [
+          "61517e2f-1387-4752-a3e7-2a117a3ea970",
+          "f35c8ee4-4b63-4804-9acd-f6bc4abed20b"
+        ],
+        "at_contact": false,
+        "reason": "Widen the existing 0.30 mm U8.5 escape to 0.50 mm on the diode leg after clearing the pad row. Replaces the redundant corner-touching trunk without adding vias; exact geometry is pinned by the compact layout audit."
+      },
+      {
+        "net": "BOOST_SW",
+        "layer": 2,
+        "at_mm": [
+          32.175,
+          19.625
+        ],
+        "widths_mm": [
+          0.3,
+          0.5
+        ],
+        "tracks": [
+          "c58c6da1-66e1-4fb1-b3ff-9aa2b8d80d4c",
+          "e9e83021-ee0f-40c4-8d73-ffa578cc4ef9"
+        ],
+        "at_contact": false,
+        "reason": "Local transition from the 0.50 mm inductor trunk to the 0.30 mm centered U8.5 escape, retaining 0.20 mm minimum clearance to U8.6; exact geometry is pinned by the compact layout audit."
+      },
+      {
         "net": "V5_INTERNAL",
         "layer": 2,
         "at_mm": [
@@ -922,14 +958,14 @@
         "reason": "Pad/via contact between separately sized branches."
       }
     ],
-    "free_transitions": 0,
+    "free_transitions": 2,
     "scope": "All segment widths and shared-endpoint width transitions. Different widths at pad/via contacts are intentional branch sizing; net reasons cover routes on different layers. Electrical load and copper-drop limits are checked separately."
   },
   "scope": "Routing geometry only. Copper round end caps are normal; no curved centerlines. Pad/via contacts allow local transitions; free branches require explicit nodes and chamfered geometry. Native DRC and independent Gerber connectivity/clearance must also pass.",
-  "board_sha256": "5e43a87482b98fb8de0b105626381735209c22386c14bbe29e93f3bb7c3696dc",
+  "board_sha256": "f2a08206016cc9e3d576d27210aa77b042df628b72892f1a989f5f5c8db9e7a0",
   "source_hashes": {
     "scripts/check_routing.py": "51daa946f018decc954554b24d4d282ee3bc62a9b46c177a70d6dcfdd799c374",
     "scripts/export_routing_geometry.py": "184ae2226e3b37849ae200420e333a554e60ba3c86afb542729f1c7de62b7224",
-    "hardware/design/routing_widths.json": "10d0a0c67ea103a86354da86e20ce2c42607985a93cb6a9282c109b052584cc6"
+    "hardware/design/routing_widths.json": "ee6ece33cb23ae3f4dec01b12e4398397d6c3040af9837702a733133512e9467"
   }
 }

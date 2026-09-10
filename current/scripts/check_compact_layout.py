@@ -1,4 +1,4 @@
-"""Verify contracted compact placement and transformed critical copper identity."""
+"""Verify compact placement, critical copper identity and exact reviewed repairs."""
 from pathlib import Path
 import hashlib,json,subprocess,tempfile,math,argparse
 import pcbnew as p
@@ -61,15 +61,37 @@ def signature(t,transform=False):
  return(net,'track',layer,tuple(sorted([point(t.GetStart()),point(t.GetEnd())])),round(p.ToMM(t.GetWidth()),6))
 old_routes=sorted(signature(t,True) for t in old.GetTracks() if t.GetNetname() in transforms)
 new_routes=sorted(signature(t) for t in new.GetTracks() if t.GetNetname() in transforms)
-assert old_routes==new_routes,'Clock/converter copper differs beyond its declared rigid transform'
+old_by_id={t.m_Uuid.AsString():signature(t,True) for t in old.GetTracks() if t.GetNetname() in transforms}
+new_by_id={t.m_Uuid.AsString():signature(t) for t in new.GetTracks() if t.GetNetname() in transforms}
+def freeze(value):
+ return tuple(freeze(v) for v in value) if isinstance(value,list) else value
+expected_routes=list(old_routes);changed_ids=set();adjusted_nets=set();adjusted_count=0
+adjustments=CONTRACT.get('critical_route_adjustments',[])
+for repair in adjustments:
+ assert repair['net'] in transforms and repair['reason'] and repair['reviewed_from_commit']
+ adjusted_nets.add(repair['net'])
+ for item in repair['items']:
+  uid=item['uuid'];before=freeze(item['before']);after=freeze(item['after'])
+  assert uid not in changed_ids,('Duplicate critical repair',uid)
+  changed_ids.add(uid)
+  assert after[0]==repair['net'] and after[1]=='track'
+  assert old_by_id.get(uid)==before,('Critical repair baseline differs',uid)
+  assert new_by_id.get(uid)==after,('Critical repair differs from reviewed geometry',uid)
+  if before is not None:
+   assert before[0:3]==after[0:3],'Critical repair changed net, kind or layer'
+   expected_routes.remove(before);adjusted_count+=1
+  expected_routes.append(after)
+assert sorted(expected_routes)==new_routes,'Clock/converter copper differs beyond declared transforms and exact repairs'
 report=dict(result='PASS',variant=CONTRACT['variant'],baseline_commit=CONTRACT['baseline_commit'],
  baseline_size_mm=[52,74],size_mm=[WIDTH,HEIGHT],saved_area_mm2=52*74-WIDTH*HEIGHT,
  bounding_area_reduction_percent=100*(1-WIDTH*HEIGHT/(52*74)),bottom_references=sorted(BOTTOM_REFERENCES),
  placement_changes=changes,unchanged_electrical_sources={f:sha((R/f).read_bytes()) for f in unchanged},
  fabrication_rule_changes=fabrication_changes,minimum_via_annulus_mm=.15,
  project_sha256=sha(args.board.with_suffix('.kicad_pro').read_bytes()),
- preserved_critical_nets=sorted(transforms),preserved_critical_tracks_and_vias=len(old_routes),critical_route_transforms=CONTRACT['critical_route_transforms'],
+ preserved_critical_nets=sorted(set(transforms)-adjusted_nets),verified_critical_nets=sorted(transforms),
+ preserved_critical_tracks_and_vias=len(old_routes)-adjusted_count,verified_critical_tracks_and_vias=len(new_routes),
+ critical_route_adjustments=adjustments,critical_route_transforms=CONTRACT['critical_route_transforms'],
  board_sha256=sha(args.board.read_bytes()),
- limitations='Checks nominal layout/electrical identity and rigidly transformed critical copper. Supply interconnects are rerouted and independently DC-screened. Native DRC, routing style, exported copper checks and physical qualification remain separate.')
+ limitations='Checks nominal layout/electrical identity, rigidly transformed critical copper and exact reviewed local repairs. Supply interconnects are rerouted and independently DC-screened. Native DRC, routing style, exported copper checks and physical qualification remain separate.')
 args.output.write_text(json.dumps(report,indent=2)+'\n')
-print('PASS compact layout:',WIDTH,'x',HEIGHT,'mm;',len(BOTTOM_REFERENCES),'bottom parts;',len(old_routes),'critical copper items preserved')
+print('PASS compact layout:',WIDTH,'x',HEIGHT,'mm;',len(BOTTOM_REFERENCES),'bottom parts;',len(old_routes)-adjusted_count,'critical copper items preserved;',len(changed_ids),'exact repaired/added items verified')

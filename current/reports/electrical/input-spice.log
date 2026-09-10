@@ -1,7 +1,7 @@
 logic_limits True
-pushpull True
 pnp True
 npn True
+pushpull True
 hysteresis True
 float_driven True
 supply_reset True

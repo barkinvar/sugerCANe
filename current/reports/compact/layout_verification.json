@@ -1854,6 +1854,18 @@
     "BOOST_COMP_RC",
     "BOOST_FB",
     "BOOST_SS",
+    "BUCK_CB",
+    "BUCK_FB",
+    "BUCK_SW",
+    "HSE_IN",
+    "HSE_OUT",
+    "HSE_XTAL_OUT"
+  ],
+  "verified_critical_nets": [
+    "BOOST_COMP",
+    "BOOST_COMP_RC",
+    "BOOST_FB",
+    "BOOST_SS",
     "BOOST_SW",
     "BUCK_CB",
     "BUCK_FB",
@@ -1862,7 +1874,142 @@
     "HSE_OUT",
     "HSE_XTAL_OUT"
   ],
-  "preserved_critical_tracks_and_vias": 54,
+  "preserved_critical_tracks_and_vias": 51,
+  "verified_critical_tracks_and_vias": 55,
+  "critical_route_adjustments": [
+    {
+      "net": "BOOST_SW",
+      "reason": "Replace incidental corner contact at U8.5 with a centered 0.30 mm pad entry; eliminate the parallel switch-node loop, widen the D4 leg from 0.30 to 0.50 mm and extend the In2 return-plane guard.",
+      "reviewed_from_commit": "fbb77cb4d89d5443efa965c6bbcddf3715804a42",
+      "items": [
+        {
+          "uuid": "5e4f71f9-120b-4208-aa9b-4f51ac11a37b",
+          "before": null,
+          "after": [
+            "BOOST_SW",
+            "track",
+            2,
+            [
+              [
+                30.8875,
+                19.975
+              ],
+              [
+                31.825,
+                19.975
+              ]
+            ],
+            0.3
+          ]
+        },
+        {
+          "uuid": "61517e2f-1387-4752-a3e7-2a117a3ea970",
+          "before": [
+            "BOOST_SW",
+            "track",
+            2,
+            [
+              [
+                29.0,
+                22.5
+              ],
+              [
+                30.8875,
+                20.6125
+              ]
+            ],
+            0.3
+          ],
+          "after": [
+            "BOOST_SW",
+            "track",
+            2,
+            [
+              [
+                29.0,
+                22.5
+              ],
+              [
+                30.8875,
+                20.6125
+              ]
+            ],
+            0.5
+          ]
+        },
+        {
+          "uuid": "c58c6da1-66e1-4fb1-b3ff-9aa2b8d80d4c",
+          "before": [
+            "BOOST_SW",
+            "track",
+            2,
+            [
+              [
+                29.5,
+                22.625
+              ],
+              [
+                32.175,
+                19.95
+              ]
+            ],
+            0.5
+          ],
+          "after": [
+            "BOOST_SW",
+            "track",
+            2,
+            [
+              [
+                31.825,
+                19.975
+              ],
+              [
+                32.175,
+                19.625
+              ]
+            ],
+            0.3
+          ]
+        },
+        {
+          "uuid": "e9e83021-ee0f-40c4-8d73-ffa578cc4ef9",
+          "before": [
+            "BOOST_SW",
+            "track",
+            2,
+            [
+              [
+                32.175,
+                17.3
+              ],
+              [
+                32.175,
+                19.95
+              ]
+            ],
+            0.5
+          ],
+          "after": [
+            "BOOST_SW",
+            "track",
+            2,
+            [
+              [
+                32.175,
+                17.3
+              ],
+              [
+                32.175,
+                19.625
+              ]
+            ],
+            0.5
+          ]
+        }
+      ]
+    }
+  ],
   "critical_route_transforms": [
     {
       "nets": [
@@ -1900,6 +2047,6 @@
       "side": "top"
     }
   ],
-  "board_sha256": "5e43a87482b98fb8de0b105626381735209c22386c14bbe29e93f3bb7c3696dc",
-  "limitations": "Checks nominal layout/electrical identity and rigidly transformed critical copper. Supply interconnects are rerouted and independently DC-screened. Native DRC, routing style, exported copper checks and physical qualification remain separate."
+  "board_sha256": "f2a08206016cc9e3d576d27210aa77b042df628b72892f1a989f5f5c8db9e7a0",
+  "limitations": "Checks nominal layout/electrical identity, rigidly transformed critical copper and exact reviewed local repairs. Supply interconnects are rerouted and independently DC-screened. Native DRC, routing style, exported copper checks and physical qualification remain separate."
 }

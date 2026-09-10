@@ -1,11 +1,11 @@
 {
   "result": "PASS",
   "variant": "Rev H compact 44 x 48 mm prototype",
-  "board_sha256": "5e43a87482b98fb8de0b105626381735209c22386c14bbe29e93f3bb7c3696dc",
+  "board_sha256": "f2a08206016cc9e3d576d27210aa77b042df628b72892f1a989f5f5c8db9e7a0",
   "baseline_commit": "1c03fd1",
   "baseline_segments": 1530,
   "baseline_vias": 242,
-  "segments": 1302,
+  "segments": 1303,
   "vias": 245,
   "native_drc_violations": 0,
   "native_unconnected_items": 0,
@@ -17,13 +17,15 @@
     "79 fitted SMT parts on bottom, 61 fitted parts on top; connector and selector access retained",
     "Power interconnects rerouted with original current and clearance requirements; independent DC screen required",
     "Signal jogs, redundant tracks and unused vias removed; all free bends and branches pass strict routing checks",
-    "Ground stitching and minimum pour features verified on all four layers"
+    "Ground stitching and minimum pour features verified on all four layers",
+    "U8.5 BOOST_SW corner contact replaced by centered pad entry; redundant parallel loop removed, diode leg widened to 0.50 mm and In2 return guard extended. Three tracks adjusted and one added; all other tracks, pads and vias unchanged from fbb77cb."
   ],
   "unchanged": [
     "Circuit, schematics, firmware, parts and pin mappings",
     "Copper clearance, drill separation, trace width and thermal-spoke requirements",
     "Four-layer nominal 1.6 mm stack; In1 reserved for continuous ground",
-    "54 critical copper objects on 11 clock/converter nets preserved by declared rigid transforms"
+    "51 critical copper objects preserved by declared rigid transforms; four exact adjusted/added BOOST_SW objects separately audited"
   ],
-  "scope": "Native DRC and strict trace geometry pass. Independent exported copper checks, DC screens, completed transient evidence and physical qualification are separate."
+  "scope": "Native DRC and strict trace geometry pass. Independent exported copper checks, DC screens, completed transient evidence and physical qualification are separate.",
+  "repair_report": "reports/compact/u8_route_fix.json"
 }

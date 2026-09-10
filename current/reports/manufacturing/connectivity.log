@@ -1,5 +1,5 @@
 top 2155 primitives, 228 copper islands
-bottom 2587 primitives, 235 copper islands
+bottom 2588 primitives, 235 copper islands
 inner_2 632 primitives, 180 copper islands
 inner_1 295 primitives, 235 copper islands
 {
@@ -8,7 +8,7 @@ inner_1 295 primitives, 235 copper islands
   "maximum_arc_approximation_error_mm": 0.001,
   "copper_area_mm2": {
     "top": 1353.3895816990976,
-    "bottom": 1337.9951300299629,
+    "bottom": 1338.7241675828968,
     "inner_2": 1433.2216855430215,
     "inner_1": 1838.9983064902544
   },
@@ -31,6 +31,6 @@ inner_1 295 primitives, 235 copper islands
   },
   "unassigned_copper_islands": 0,
   "unassigned_copper_area_mm2": 0.0,
-  "elapsed_seconds": 0.7753370620193891,
+  "elapsed_seconds": 0.7663755299872719,
   "limitations": "Plated holes represented as connected filled pad centers; no barrel manufacturing defect, annular-ring fracture, impedance, thermal or EMC model. Positive Gerber primitives only."
 }

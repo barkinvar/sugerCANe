@@ -216,5 +216,32 @@
       "reason": "Preserved local buck bootstrap copper width."
     }
   },
-  "free_transitions": []
+  "free_transitions": [
+    {
+      "net": "BOOST_SW",
+      "layer": 2,
+      "at_mm": [
+        32.175,
+        19.625
+      ],
+      "widths_mm": [
+        0.3,
+        0.5
+      ],
+      "reason": "Local transition from the 0.50 mm inductor trunk to the 0.30 mm centered U8.5 escape, retaining 0.20 mm minimum clearance to U8.6; exact geometry is pinned by the compact layout audit."
+    },
+    {
+      "net": "BOOST_SW",
+      "layer": 2,
+      "at_mm": [
+        30.8875,
+        20.6125
+      ],
+      "widths_mm": [
+        0.3,
+        0.5
+      ],
+      "reason": "Widen the existing 0.30 mm U8.5 escape to 0.50 mm on the diode leg after clearing the pad row. Replaces the redundant corner-touching trunk without adding vias; exact geometry is pinned by the compact layout audit."
+    }
+  ]
 }

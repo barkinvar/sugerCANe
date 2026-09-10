@@ -1314,5 +1314,139 @@
       "reason": "Use 0.50 mm copper / 0.20 mm drilled through vias for dense low-current routing, retaining at least 0.15 mm annulus. Copper clearances, hole separation, power copper and critical converter/clock routes remain independently checked.",
       "manufacturer_capability": "https://jlcpcb.com/capabilities/Capabilities"
     }
-  }
+  },
+  "critical_route_adjustments": [
+    {
+      "net": "BOOST_SW",
+      "reason": "Replace incidental corner contact at U8.5 with a centered 0.30 mm pad entry; eliminate the parallel switch-node loop, widen the D4 leg from 0.30 to 0.50 mm and extend the In2 return-plane guard.",
+      "reviewed_from_commit": "fbb77cb4d89d5443efa965c6bbcddf3715804a42",
+      "items": [
+        {
+          "uuid": "5e4f71f9-120b-4208-aa9b-4f51ac11a37b",
+          "before": null,
+          "after": [
+            "BOOST_SW",
+            "track",
+            2,
+            [
+              [
+                30.8875,
+                19.975
+              ],
+              [
+                31.825,
+                19.975
+              ]
+            ],
+            0.3
+          ]
+        },
+        {
+          "uuid": "61517e2f-1387-4752-a3e7-2a117a3ea970",
+          "before": [
+            "BOOST_SW",
+            "track",
+            2,
+            [
+              [
+                29.0,
+                22.5
+              ],
+              [
+                30.8875,
+                20.6125
+              ]
+            ],
+            0.3
+          ],
+          "after": [
+            "BOOST_SW",
+            "track",
+            2,
+            [
+              [
+                29.0,
+                22.5
+              ],
+              [
+                30.8875,
+                20.6125
+              ]
+            ],
+            0.5
+          ]
+        },
+        {
+          "uuid": "c58c6da1-66e1-4fb1-b3ff-9aa2b8d80d4c",
+          "before": [
+            "BOOST_SW",
+            "track",
+            2,
+            [
+              [
+                29.5,
+                22.625
+              ],
+              [
+                32.175,
+                19.95
+              ]
+            ],
+            0.5
+          ],
+          "after": [
+            "BOOST_SW",
+            "track",
+            2,
+            [
+              [
+                31.825,
+                19.975
+              ],
+              [
+                32.175,
+                19.625
+              ]
+            ],
+            0.3
+          ]
+        },
+        {
+          "uuid": "e9e83021-ee0f-40c4-8d73-ffa578cc4ef9",
+          "before": [
+            "BOOST_SW",
+            "track",
+            2,
+            [
+              [
+                32.175,
+                17.3
+              ],
+              [
+                32.175,
+                19.95
+              ]
+            ],
+            0.5
+          ],
+          "after": [
+            "BOOST_SW",
+            "track",
+            2,
+            [
+              [
+                32.175,
+                17.3
+              ],
+              [
+                32.175,
+                19.625
+              ]
+            ],
+            0.5
+          ]
+        }
+      ]
+    }
+  ]
 }

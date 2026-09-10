@@ -166,7 +166,7 @@
       "layer": "B.Cu"
     },
     "BOOST_SW": {
-      "total_track_length_mm": 14.812515318615947,
+      "total_track_length_mm": 12.136968786098503,
       "vias": 0,
       "layer": "B.Cu"
     },
@@ -374,8 +374,8 @@
         "non_45_degree_segments": []
       },
       "B.Cu": {
-        "segments": 515,
-        "length_mm": 739.8385648402927,
+        "segments": 516,
+        "length_mm": 737.1630183077754,
         "non_45_degree_segments": []
       }
     },
