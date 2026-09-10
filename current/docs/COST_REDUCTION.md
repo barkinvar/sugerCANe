@@ -1,34 +1,35 @@
 # Rev H cost and assembly basis
 
-Rev H adds the RGB indicator and inexpensive header programming to Rev G. Parts purchasing rises by approximately **$0.18 per board at ten boards**, from $28.81 to **$28.99**. The 12 V output eFuse, controlled startup, rail measurement and removable power jumpers remain unchanged. The resulting parts budget remains about **$6.15 below Rev E**.
+The [JLC sourcing candidate](JLC_SOURCING.md) lowers the ten-board parts estimate from $28.99 to **$25.61 per board before SMT attrition**. With a conservative allowance for displayed assembly losses/minimums, budget **$26.48 per board**. MCU sourcing is unresolved, so its quoted catalog price remains provisional. This is a supplier/pricing update with six equal-rated passive substitutions, not a reduction in power protection.
 
-| Ten-board parts purchasing | Per board |
+| Ten-board basis | Parts per board |
 |---|---:|
-| Rev E | $35.14 |
-| Rev F | $27.17 |
-| Rev G | $28.81 |
-| Rev H | $28.99 |
+| Previous mixed-supplier H estimate, before SMT attrition | $28.99 |
+| JLC-matched H estimate, before SMT attrition | $25.61 |
+| JLC-matched SMT parts with conservative attrition | $17.78 |
+| Hand-fitted parts and three caps | $8.70 |
+| Combined candidate budget with conservative attrition | **$26.48** |
 
-The RGB LED and logic buffer cost about $0.20 together at the ten-board tier. Local bypass capacitors, a reset pulldown, series resistor and the hand-fitted J8 female socket complete the change. Removing the former green LED and sharing existing passive purchase packs offsets part of the added cost. See the exact circuit and procurement regression below; consumed-part prices and minimum-pack cash costs differ.
+JLC prices/stock were checked September 9 in California (September 10 UTC). Hand-purchased parts retain their September 8 supplier observations. Most savings come from direct catalog matching and purchase minimums. The $3.38 difference compares estimates before SMT attrition; it is not a guaranteed invoice saving. PCB fabrication, assembly, programming/testing, freight, tax and duty remain extra.
 
-| Boards | Parts purchasing per board | Lot parts purchasing |
+| Boards | Parts purchasing per board, before SMT attrition | Lot parts purchasing |
 |---|---:|---:|
-| 1 | $55.14 | $55.14 |
-| 5 | $33.18 | $165.89 |
-| 10 | $28.99 | $289.89 |
-| 25 | $26.57 | $664.16 |
+| 1 | $40.73 | $40.73 |
+| 5 | $28.09 | $140.45 |
+| 10 | $25.61 | $256.08 |
+| 25 | $23.49 | $587.23 |
 
-Supplier observations are dated September 8–9, 2026. Prices include minimum packs, six terminals, three voltage headers, one service header and three loose caps. PCB fabrication, assembly, attrition, programming, functional testing, freight, tax and duty are extra. At quantity one, consumed parts are $36.15; minimum purchase quantities raise the cash outlay to $55.14. These are estimates, not an allocated cart or factory quote.
+These arithmetic scenarios do not establish supported assembly quantities or stock for that lot. The sourcing audit checks ten boards only, and currently identifies the MCU shortage. At one board, fitted consumption is $31.52 while purchase minimums raise cash outlay to $40.73; an actual PCBA order has its own minimum quantity.
 
-[Cost CSV](../bom/cost_estimate.csv) · [per-MPN purchases](../bom/cost_detail.csv) · [supplier observations](../bom/catalog_china.json) · [revision comparison](../reports/variant_verification.json).
+[Cost CSV](../bom/cost_estimate.csv) · [per-MPN purchases](../bom/cost_detail.csv) · [public JLC evidence](../bom/jlc_sourcing.json) · [sourcing audit](../reports/manufacturing/jlc_sourcing.json).
 
-The female socket adds $0.044 per board at ten compared with the previous male header. Layout and silkscreen add no fitted parts, board area or second-side assembly.
+For historical context, the original H RGB/header change added $0.18 in parts versus G at the old supplier-price basis. Repricing the whole BOM now means the current H-to-G budget difference is not an isolated LED cost. Layout and silkscreen add no fitted parts, board area or second-side assembly.
 
 ## Assembly and programming choices
 
 There are **130 top-side SMT placements across 55 exact MPN types** and **ten hand-soldered through-hole parts (49 joints)**. Hand fit J1–J6, J8 and JP101/JP201/JP301. The output eFuse's exposed-pad paste pattern and thermal vias remain required.
 
-Compared with G, the two additional SMT types add approximately $3.06 per Standard assembly order in feeder fees, or $0.31 per board at ten, before placement/inspection changes. If both are charged extended types under Economic assembly, the increment is approximately $0.61 per board. Exact eligibility and charges require a quote. The per-board $0.18 parts increment is therefore not a complete assembled-price increment. [JLCPCB fee basis, checked 2026-09-09](https://jlcpcb.com/help/article/pcb-assembly-price).
+Compared with G, the two additional SMT types add approximately $3.06 per Standard assembly order in feeder fees, or $0.31 per board at ten, before placement/inspection changes. If both are charged extended types under Economic assembly, the increment is approximately $0.61 per board. Exact eligibility and charges require a quote. Those historical increments are not a complete assembled-price comparison for the newly sourced BOM. [JLCPCB fee basis, checked 2026-09-09](https://jlcpcb.com/help/article/pcb-assembly-price).
 
 The recessed service socket avoids buying a dedicated pogo cable. Reuse one programmer and mapped harness for all boards; an existing suitable ST-Link can avoid buying a new probe. [Programming options and one-time tool cost](STATUS_AND_PROGRAMMING.md).
 
@@ -40,6 +41,8 @@ At ten boards, budget **$3–6 extra per board** for assembly on both sides, ass
 
 ## Quotation and delivery
 
-Ask the Chinese assembler to quote top-side SMT only, with exact-MPN allocation and functional test priced separately. Compare Economic and Standard eligibility using the same scope. LCSC stock does not guarantee JLCPCB allocation; TPS259620 stock was limited when observed. No supplier has been contacted or order placed.
+Use the matched JLC BOM/CPL with the same top-side SMT scope for both Economic and Standard quotes. The snapshot contains 12 basic, one preferred extended and 42 ordinary extended SMT types. Posted setup/stencil/loading fees total $138.65 Economic or $134.34 Standard including two fixtures; placement, X-ray, PCB, handling and shipping are additional. Do not assume Economic is cheaper without the complete quote.
 
-The [assembly scenarios](../bom/assembly_scenarios.csv) are partial fee calculations. One-month delivery requires allocated-part dates, an assembly slot and destination-specific freight/customs timing. No arrival date is confirmed. [Factory instructions](FACTORY_ORDER.md).
+The [assembly scenarios](../bom/assembly_scenarios.csv) are partial fee calculations, before attrition. No supplier has been contacted or order placed. The exact MCU must be sourced, while U9 and L2 have limited stock. No inventory is allocated.
+
+One-month delivery requires confirmed component arrival, an assembly slot and destination-specific freight/customs timing. No arrival date is confirmed. [Factory instructions](FACTORY_ORDER.md).

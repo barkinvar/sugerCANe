@@ -5,9 +5,11 @@ R=Path(__file__).resolve().parents[1]
 parts={int(r['boards']):float(r['all_parts_cash_per_board_usd']) for r in csv.DictReader((R/'bom/cost_estimate.csv').open())}
 groups=list(csv.DictReader((R/'bom/BOM_grouped.csv').open()))
 mpns=len({g['MPN'] for g in groups if g['Assembly']=='Factory SMT'})
+snapshot=json.loads((R/'bom/jlc_sourcing.json').read_text())
+observed_extended=sum(r['library_class']=='expand' and not r['preferred_extended'] for r in snapshot['parts'])
 rows=[]
 for n in (5,10,25):
- for service,extended in [('Standard',mpns)]+[('Economic',e) for e in (10,20,30,mpns)]:
+ for service,extended in [('Standard',mpns)]+[('Economic',e) for e in sorted({10,20,30,observed_extended,mpns})]:
   fixed=25.56+8.21+1.53*mpns+16.42 if service=='Standard' else 8.18+1.53+3.07*extended
   rows.append(dict(boards=n,service=service,charged_feeder_types=extended,parts_per_board=parts[n],setup_stencil_feeders_fixture_per_order=round(fixed,2),partial_per_board=round(parts[n]+fixed/n,2)))
 with (R/'bom/assembly_scenarios.csv').open('w',newline='') as f:

@@ -11,6 +11,18 @@
   "removed_parts": [],
   "changed_parts": [
     {
+      "reference": "C25",
+      "fields": [
+        "mpn"
+      ]
+    },
+    {
+      "reference": "C26",
+      "fields": [
+        "mpn"
+      ]
+    },
+    {
       "reference": "D10",
       "fields": [
         "footprint",
@@ -34,6 +46,24 @@
       ]
     },
     {
+      "reference": "R10",
+      "fields": [
+        "mpn"
+      ]
+    },
+    {
+      "reference": "R101",
+      "fields": [
+        "mpn"
+      ]
+    },
+    {
+      "reference": "R201",
+      "fields": [
+        "mpn"
+      ]
+    },
+    {
       "reference": "R30",
       "fields": [
         "mpn",
@@ -43,13 +73,114 @@
       ]
     },
     {
+      "reference": "R301",
+      "fields": [
+        "mpn"
+      ]
+    },
+    {
+      "reference": "R42",
+      "fields": [
+        "mpn"
+      ]
+    },
+    {
+      "reference": "R51",
+      "fields": [
+        "mpn"
+      ]
+    },
+    {
+      "reference": "R61",
+      "fields": [
+        "mpn"
+      ]
+    },
+    {
       "reference": "U5",
       "fields": [
         "pins"
       ]
     }
   ],
-  "unchanged": "All sensor-power, protection, comparator/bias, CAN and clock circuits. MCU part/pin assignments unchanged; PB3 now sends RGB data. J8 electrical pin numbers retained, physical pattern replaced.",
+  "procurement_substitutions": [
+    {
+      "references": [
+        "C25",
+        "C26"
+      ],
+      "old_mpn": "C0805C300J5GACTU",
+      "new_mpn": "CC0805JRNPO9BN300",
+      "lcsc": "C107114",
+      "value": "30pF",
+      "footprint": "FRC_Sensor_CAN:C_0805_2012Metric",
+      "reason": "Original public stock is below the conservative ten-board need including attrition.",
+      "ratings_verified": "30pF 50V NP0 \u00b15% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+    },
+    {
+      "references": [
+        "R61"
+      ],
+      "old_mpn": "RC0805FR-0711K5L",
+      "new_mpn": "0805W8F1152T5E",
+      "lcsc": "C17418",
+      "value": "11.5k",
+      "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+      "reason": "Original public stock is below the conservative ten-board need including attrition.",
+      "ratings_verified": "-55\u2103~+155\u2103 11.5k\u03a9 125mW 150V Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS"
+    },
+    {
+      "references": [
+        "R101",
+        "R201",
+        "R301"
+      ],
+      "old_mpn": "RC0805FR-07220KL",
+      "new_mpn": "0805W8F2203T5E",
+      "lcsc": "C17556",
+      "value": "220k",
+      "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+      "reason": "Original public stock is below the conservative ten-board need including attrition.",
+      "ratings_verified": "-55\u2103~+155\u2103 125mW 150V 220k\u03a9 Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS"
+    },
+    {
+      "references": [
+        "R10"
+      ],
+      "old_mpn": "RC0805FR-0759KL",
+      "new_mpn": "0805W8F5902T5E",
+      "lcsc": "C17763",
+      "value": "59k",
+      "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+      "reason": "Original public stock is below the conservative ten-board need including attrition.",
+      "ratings_verified": "-55\u2103~+155\u2103 125mW 150V 59k\u03a9 Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS"
+    },
+    {
+      "references": [
+        "R51"
+      ],
+      "old_mpn": "RC0805FR-075K23L",
+      "new_mpn": "0805W8F5231T5E",
+      "lcsc": "C17739",
+      "value": "5.23k",
+      "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+      "reason": "Original public stock is below the conservative ten-board need including attrition.",
+      "ratings_verified": "-55\u2103~+155\u2103 125mW 150V 5.23k\u03a9 Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS"
+    },
+    {
+      "references": [
+        "R42"
+      ],
+      "old_mpn": "RC1206FR-07120RL",
+      "new_mpn": "1206W4F1200T5E",
+      "lcsc": "C17909",
+      "value": "120",
+      "footprint": "FRC_Sensor_CAN:R_1206_3216Metric",
+      "reason": "Original public stock is below the conservative ten-board need including attrition.",
+      "ratings_verified": "-55\u2103~+155\u2103 120\u03a9 200V 250mW Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 1206 Chip Resistor - Surface Mount ROHS"
+    }
+  ],
+  "unchanged": "Sensor-power, protection, comparator/bias, CAN and clock topology/values retained. Six passive MPN types replaced with equal-rated JLC-listed parts. MCU part/pin assignments unchanged; PB3 now sends RGB data. J8 electrical pin numbers retained, physical pattern replaced.",
   "board_mm": [
     52,
     74
@@ -59,8 +190,8 @@
   "area_change_from_rev_g_percent": -0.050192737251116566,
   "cost_10_board_purchase_USD": {
     "rev_g": 28.8123,
-    "rev_h": 28.988599999999998,
-    "added_vs_rev_g": 0.17629999999999768
+    "rev_h": 25.607799999999997,
+    "added_vs_rev_g": -3.204500000000003
   },
   "firmware": "Hardware 8 / app 0.9.0 / boot 1.1.0 / protocol 4. Rev H image tag prevents accidental cross-revision LED firmware.",
   "scope": "Circuit contract and procurement arithmetic; native CAD/copper verification and physical testing remain separate."

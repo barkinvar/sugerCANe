@@ -11,8 +11,8 @@ C21,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
 C22,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
 C23,CL21B105KBFNNNE,1uF,FRC_Sensor_CAN:C_0805_2012Metric,50V,10%,,X7R,"Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."
 C24,CL21B475KAFNNNE,4.7uF,FRC_Sensor_CAN:C_0805_2012Metric,25V,10%,,X7R,"Retained sourcing substitution: value, dielectric, voltage, tolerance and footprint retained; assess effective capacitance."
-C25,C0805C300J5GACTU,30pF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,C0G,
-C26,C0805C300J5GACTU,30pF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,C0G,
+C25,CC0805JRNPO9BN300,30pF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,C0G,
+C26,CC0805JRNPO9BN300,30pF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,C0G,
 C27,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
 C3,CL21B104KCFNNNE,100nF,FRC_Sensor_CAN:C_0805_2012Metric,100V,10%,,X7R,
 C301,CC0805JRNPO9BN102,1nF,FRC_Sensor_CAN:C_0805_2012Metric,50V,5%,,C0G,
@@ -75,8 +75,8 @@ Q3,"BSS138BK,215",BSS138BK,FRC_Sensor_CAN:SOT-23,,,,,"MCU HIGH turns on Q3, remo
 Q301,AO3401A,AO3401A,FRC_Sensor_CAN:SOT-23,,,,,"3.3 V bias source, active-low gate. BAT46W isolates positive field voltage."
 Q302,"BSS138BK,215",BSS138BK,FRC_Sensor_CAN:SOT-23,,,,,"60 V bias sink, active-high gate; 6.5 ohm max at VGS=2.5 V, 25 C."
 R1,RT0805BRD07102KL,102k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,Precision feedback top resistor; 5.067 V nominal internal rail.
-R10,RC0805FR-0759KL,59k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
-R101,RC0805FR-07220KL,220k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,One series resistor; loses Rev B single-resistor-short tolerance. 150 V working rating; input 0-30 V target.
+R10,0805W8F5902T5E,59k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
+R101,0805W8F2203T5E,220k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,One series resistor; loses Rev B single-resistor-short tolerance. 150 V working rating; input 0-30 V target.
 R103,RC0805FR-0720KL,20k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
 R104,RC0805FR-072M2L,2.2M,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,Positive feedback; fixed Schmitt thresholds with shared reference.
 R105,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
@@ -86,7 +86,7 @@ R111,0805W8F1003T5E,100k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,"100k gate 
 R112,0805W8F1003T5E,100k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,"100k gate return holds bias OFF during reset, bootloader and unconfigured startup."
 R2,RT0805BRD0713K7L,13.7k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,Precision feedback bottom resistor; sets 5.067 V with R1=102k.
 R20,RC0805JR-070RL,0,FRC_Sensor_CAN:R_0805_2012Metric,,jumper,0.125,,Drive-level/startup measurement position. Tune only after oscillator characterization.
-R201,RC0805FR-07220KL,220k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,One series resistor; loses Rev B single-resistor-short tolerance. 150 V working rating; input 0-30 V target.
+R201,0805W8F2203T5E,220k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,One series resistor; loses Rev B single-resistor-short tolerance. 150 V working rating; input 0-30 V target.
 R203,RC0805FR-0720KL,20k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
 R204,RC0805FR-072M2L,2.2M,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,Positive feedback; fixed Schmitt thresholds with shared reference.
 R205,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
@@ -98,7 +98,7 @@ R212,0805W8F1003T5E,100k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,"100k gate 
 R22,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
 R3,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,Gate pull-down; maximum 1 mA nominal zener current at 22 V input.
 R30,0805W8F3300T5E,330,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,330 ohm LED data series resistor; short local route after level buffer.
-R301,RC0805FR-07220KL,220k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,One series resistor; loses Rev B single-resistor-short tolerance. 150 V working rating; input 0-30 V target.
+R301,0805W8F2203T5E,220k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,One series resistor; loses Rev B single-resistor-short tolerance. 150 V working rating; input 0-30 V target.
 R303,RC0805FR-0720KL,20k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
 R304,RC0805FR-072M2L,2.2M,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,Positive feedback; fixed Schmitt thresholds with shared reference.
 R305,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
@@ -110,12 +110,12 @@ R312,0805W8F1003T5E,100k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,"100k gate 
 R4,0805W8F1001T5E,1k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,3V3 bleed retained for conservative powered-off leakage budget; 3.3 mA load.
 R40,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
 R41,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
-R42,RC1206FR-07120RL,120,FRC_Sensor_CAN:R_1206_3216Metric,,1%,0.25,,Use termination only if board is the physical end of the CAN trunk.
+R42,1206W4F1200T5E,120,FRC_Sensor_CAN:R_1206_3216Metric,,1%,0.25,,Use termination only if board is the physical end of the CAN trunk.
 R50,0805W8F1003T5E,100k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
-R51,RC0805FR-075K23L,5.23k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
+R51,0805W8F5231T5E,5.23k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,
 R52,0805W8F1002T5E,10k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,10k logic-rail bleed bounds reverse-diode leakage with board power removed; not galvanic isolation.
 R60,RT0805BRD07100KL,100k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,"Feedback upper arm, retained 0.1% 100k."
-R61,RC0805FR-0711K5L,11.5k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,"Feedback lower arm, 1%. 12.003V nominal with 1.238V reference."
+R61,0805W8F1152T5E,11.5k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,"Feedback lower arm, 1%. 12.003V nominal with 1.238V reference."
 R62,RC0805FR-072K61L,2.61k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,Nominal output current limit about 357mA; user load rating remains 300mA shared on 12V.
 R63,RC0805FR-0713KL,13k,FRC_Sensor_CAN:R_0805_2012Metric,,1%,0.125,,13k compensation resistor; 33nF lowers compensation zero for derated output bank.
 R65,RT0805BRD07100KL,100k,FRC_Sensor_CAN:R_0805_2012Metric,,0.1%,0.125,,Two series 100k resistors plus 20k bottom give 11:1 rail sensing; 30V maps to 2.73V.

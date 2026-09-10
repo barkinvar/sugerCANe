@@ -5801,7 +5801,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-075K23L"
+		(property "MPN" "0805W8F5231T5E"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -9907,7 +9907,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-0759KL"
+		(property "MPN" "0805W8F5902T5E"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -10698,7 +10698,7 @@
 				)
 			)
 		)
-		(property "MPN" "C0805C300J5GACTU"
+		(property "MPN" "CC0805JRNPO9BN300"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -24824,7 +24824,7 @@
 				)
 			)
 		)
-		(property "MPN" "C0805C300J5GACTU"
+		(property "MPN" "CC0805JRNPO9BN300"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -27673,7 +27673,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-07220KL"
+		(property "MPN" "0805W8F2203T5E"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -30082,7 +30082,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-0711K5L"
+		(property "MPN" "0805W8F1152T5E"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -30510,7 +30510,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-07220KL"
+		(property "MPN" "0805W8F2203T5E"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -32219,7 +32219,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-07220KL"
+		(property "MPN" "0805W8F2203T5E"
 			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
@@ -34402,7 +34402,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC1206FR-07120RL"
+		(property "MPN" "1206W4F1200T5E"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)

@@ -10,7 +10,7 @@ A compact interface for **three NPN, PNP or logic sensors** on an FRC robot. Eac
 
 Rev H adds one RGB status LED on the right, with space for a printed light duct, and a recessed female programming socket for small batches. It retains G's protected sensor supplies, CAN fault reset and rail measurements. See [the engineering review](current/docs/ORDER_READINESS.md) for the evidence and remaining physical tests.
 
-Fresh checks pass for the native PCB, firmware, all ten input-transient cases, eight standalone power cases and sixteen firmware waveform replays. Full combined power startup remains incomplete; the release stays on HOLD. See the [check summary](current/reports/release_checks.json).
+**JLC sourcing candidate:** six passive types now use stocked equivalents, and all 55 SMT types have JLC codes. Stock covers 54 types for ten boards; the exact MCU still needs sourcing. Native CAD checks pass. New simulations wait for user approval, and the release stays on HOLD. [Substitutions and next steps](current/docs/JLC_SOURCING.md) · [check summary](current/reports/release_checks.json).
 
 ![SC12 Rev H](current/output/review/board_3d_final.png)
 
@@ -22,10 +22,10 @@ Fresh checks pass for the native PCB, firmware, all ten input-transient cases, e
 | Signals | Positive 0–30 V targets; NPN / PNP / push-pull / floating detection / keeper |
 | Size and assembly | 52 × 74 mm, four copper layers; **all components on top** |
 | User assembly | Six terminals, three voltage headers, one service socket and three removable caps |
-| Parts estimate | **$28.99 per board at 10 boards**; $55.14 for one board, including minimum packs |
+| Parts estimate | **$25.61 per board at 10 boards** before SMT attrition; **$26.48** with conservative allowance |
 | Cost exclusions | PCB, assembly, freight, tax and testing; no factory quotation yet |
 
-RGB diagnostics and socket programming add approximately **$0.18 per board in parts at ten boards** versus G. Assembly and the reusable programmer are separate. [Cost basis](current/docs/COST_REDUCTION.md).
+The updated supplier estimate is $3.38 lower per board than the preceding $28.99 estimate, before SMT attrition. MCU price remains provisional until sourced. Assembly and the reusable programmer are separate. [Cost basis](current/docs/COST_REDUCTION.md).
 
 ## Find what you need
 

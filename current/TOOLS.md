@@ -1,5 +1,7 @@
 # Tools and reproduction
 
+**Current workflow:** the JLC sourcing candidate is waiting for user approval before new simulations. Use the CAD/sourcing-only sequence below while it is pending; the full validation commands later in this guide run simulations.
+
 Run the [pre-fabrication review](docs/ORDER_READINESS.md) after refreshing the native board and electrical evidence: `python scripts/check_order_readiness.py`. Its `--verify-report` mode checks retained hashes and recalculates routed-copper voltage drop. It does not reroute the PCB or perform physical testing.
 
 The saved native KiCad schematic/PCB are authoritative. Circuit data, schematic, BOM and PCB must agree. Historical placement/router experiments have been removed; validation never reroutes the board.
@@ -42,6 +44,32 @@ Optional desktop setup preview: `python scripts/check_gui.py` with a working dis
 
 Compiler objects, downloaded Java dependencies, test runners, caches and scratch renderings are ignored. The retained firmware third-party subset supports STM32F042 and GCC; see its [provenance](firmware/third_party/README.md). All checks are engineering evidence; [physical qualification](docs/VALIDATION.md) remains required.
 
+## JLC candidate before simulation approval
+
+`bom/jlc_sourcing.json` records the reviewed public catalog observation, manufacturer/MPN/code matches, six passive substitutions, price tiers and stock allowances. `check_jlc_sourcing.py` audits that snapshot against the actual BOM/model; it does not query or reserve live inventory. Recheck the linked JLC listings before purchase.
+
+```sh
+python hardware/design/circuit.py
+python scripts/build_bom.py
+python scripts/estimate_cost.py
+python scripts/check_jlc_sourcing.py
+kicad-python scripts/check_variant.py
+kicad-python scripts/check_board_constraints.py
+bash scripts/export_manufacturing.sh
+kicad-python scripts/export_board_manifest.py
+python scripts/build_factory_files.py
+python scripts/verify_manufacturing.py
+python scripts/verify_gerber_geometry.py
+python scripts/verify_gerber_connectivity.py
+python scripts/write_validation_summary.py --defer-simulation
+python scripts/build_documents.py --drawings-only
+python scripts/build_handbook.py
+python scripts/review_documents.py
+python scripts/build_jlc_candidate.py
+```
+
+`--defer-simulation` publishes only the CAD/sourcing evidence with an explicit HOLD. It does not certify the existing power/input reports against a changed BOM. The separate review ZIP builder labels its outputs REVIEW_ONLY; it cannot satisfy the full-release gates. After user approval, resume full electrical validation and resolve MCU sourcing before issuing the order package.
+
 ## Sensor-input transient simulation
 
 The separate sensor-input screen is fast and runs as part of release validation:
@@ -55,7 +83,7 @@ It uses the original TI comparator model linked for LM339LV, the three native in
 
 ## Power transient simulation
 
-The latest H rerun has eight freshly completed standalone/load-step cases. The two full coupled-startup traces remain incomplete, so the factory/release gate remains on HOLD. The [standalone results](reports/electrical/boost_spice_partial.json) and [waveforms](reports/electrical/boost_spice_partial.png) are separate from the full-suite report.
+The pre-substitution H baseline has eight completed standalone/load-step cases. The two full coupled-startup traces remain incomplete, so the factory/release gate remains on HOLD. The [standalone results](reports/electrical/boost_spice_partial.json) and [waveforms](reports/electrical/boost_spice_partial.png) are separate from the full-suite report.
 
 The optional native simulator is **ngspice 42 with KLU, XSPICE and PSpice compatibility**. Original manufacturer model files and hashes are retained in `sources/spice/`. The harness reads the maintained circuit's pin connections and component values; it generates simulator-specific copies, decks and raw traces under ignored `tmp/spice/`. The full run includes nine cases plus a complete combined-startup solver repeat; the coupled switching models can take several hours.
 

@@ -16,7 +16,10 @@ for d in ('output/documentation','output/mechanical','order'):(R/d).mkdir(parent
 styles=getSampleStyleSheet();styles['Normal'].fontSize=8;styles['Normal'].leading=11
 P=lambda s:Paragraph(escape(str(s)),styles['Normal'])
 rows=list(csv.DictReader((R/'bom/BOM_grouped.csv').open()))
-story=[Paragraph('SC12 - Revision H purchasing BOM',styles['Title']),P('140 fitted parts: 130 factory SMT + 10 user-fitted through-hole parts. Three loose caps extra. Parts purchasing estimate: $28.99/board at 10 boards; PCB, assembly, attrition, freight and tax extra. See cost_estimate.csv. Unbuilt prototype.'),Spacer(1,12)]
+estimate=next(r for r in csv.DictReader((R/'bom/cost_estimate.csv').open()) if r['boards']=='10')
+candidate=json.loads((R/'reports/release_checks.json').read_text()).get('simulation_deferred_by_user',False)
+status='JLC sourcing candidate: MCU stock unresolved; simulation pending approval. See docs/JLC_SOURCING.md.' if candidate else 'Unbuilt prototype; check current sourcing and release status before ordering.'
+story=[Paragraph('SC12 - Revision H purchasing BOM',styles['Title']),P(f"140 fitted parts: 130 factory SMT + 10 user-fitted through-hole parts. Three loose caps extra. Parts estimate: ${estimate['all_parts_cash_per_board_usd']}/board at 10 boards before SMT attrition; PCB, assembly, freight and tax extra. {status}"),Spacer(1,12)]
 data=[[P(t) for t in ['Qty','MPN / supplier part','References','Value / package','Extended USD first tier']]]
 for row in rows:data.append([P(row['Quantity']),P(row['MPN']+' / '+row['Supplier_part']),P(row['References']),P(row['Value']+' / '+row['Footprint'].split(':')[-1]),P(row['Extended_USD_first_tier'])])
 t=Table(data,colWidths=[28,145,175,165,52],repeatRows=1)

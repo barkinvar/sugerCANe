@@ -4,6 +4,7 @@ import argparse,json,re,hashlib,subprocess,sys
 R=Path(__file__).resolve().parents[1]
 ap=argparse.ArgumentParser(description=__doc__)
 ap.add_argument('--allow-incomplete',action='store_true',help='Publish completed checks with HOLD status when the full power run is incomplete; no release approval')
+ap.add_argument('--defer-simulation',action='store_true',help='Record CAD/sourcing checks only, with HOLD status; do not validate or rerun prior simulation evidence')
 args=ap.parse_args()
 def read(path):return json.loads((R/path).read_text())
 erc=read('reports/erc/final.json');drc=read('reports/drc/final.json')
@@ -15,6 +16,27 @@ for path,digest in routing['source_hashes'].items():
  assert digest==hashlib.sha256((R/path).read_bytes()).hexdigest(),('Stale routing evidence',path)
 assembly=read('reports/manufacturing/verification.json');assert assembly['result']=='PASS'
 copper=read('reports/manufacturing/gerber_connectivity.json');geometry=read('reports/manufacturing/gerber_geometry.json');assert copper['result']==geometry['result']=='PASS'
+if args.defer_simulation:
+ sourcing=read('reports/manufacturing/jlc_sourcing.json')
+ for path,digest in sourcing['input_hashes'].items():
+  assert hashlib.sha256((R/path).read_bytes()).hexdigest()==digest,('Stale sourcing audit',path)
+ paths=['hardware/FRC_Sensor_CAN.kicad_pcb','hardware/design/circuit.json','bom/BOM_grouped.csv',
+  'bom/BOM_JLCPCB.csv','bom/Factory_BOM.csv','bom/jlc_sourcing.json','output/assembly/CPL_JLCPCB.csv',
+  'reports/erc/final.json','reports/drc/final.json','reports/design_parity.json','reports/routing_rules.json',
+  'reports/board_constraints.json','reports/variant_verification.json','reports/manufacturing/verification.json',
+  'reports/manufacturing/gerber_connectivity.json','reports/manufacturing/gerber_geometry.json',
+  'reports/manufacturing/jlc_sourcing.json','reports/manufacturing/factory_files.json']
+ paths += [p.relative_to(R).as_posix() for p in sorted((R/'hardware').glob('*.kicad_sch'))]
+ out=dict(revision='H SC12',status='HOLD: JLC sourcing candidate; simulations deferred until user approval',
+  order_decision=sourcing['order_decision'],simulation_deferred_by_user=True,physical_tests_performed=False,
+  erc_violations=0,drc_violations=0,unconnected_items=0,model_schematic_pcb_parity=True,
+  fitted_parts=140,manufacturing_layers=11,copper_layers=4,gerber_shorts=copper['shorts'],gerber_opens=copper['opens'],
+  prior_simulation_evidence=dict(baseline_commit=read('bom/jlc_sourcing.json')['baseline_commit'],
+    scope='Existing electrical reports belong to the pre-substitution BOM; no new simulation claim. Full coupled startup was already incomplete.'),
+  input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in paths},
+  limitations='CAD and sourcing consistency only. Full power/input screening, final factory allocation, stack and physical qualification remain pending.')
+ (R/'reports/release_checks.json').write_text(json.dumps(out,indent=2)+'\n')
+ print(out['status']);sys.exit(0)
 fw=(R/'reports/firmware-tests.log').read_text();drivers=(R/'reports/driver/tests.log').read_text()
 scenarios=re.findall(r'application: (\w+) passed',fw);assert '2148 simulated' in fw and 'Ran 8 tests' in fw
 assert len(scenarios)==19 and 'core:' in fw and 'wire encoding passed' in fw

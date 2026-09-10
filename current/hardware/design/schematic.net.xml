@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/neuro/candi-clone/current/hardware/FRC_Sensor_CAN.kicad_sch</source>
-    <date>2026-09-09T16:48:23</date>
+    <date>2026-09-09T17:20:15</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -1035,14 +1035,14 @@
       <value>11.5k</value>
       <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
       <fields>
-        <field name="MPN">RC0805FR-0711K5L</field>
+        <field name="MPN">0805W8F1152T5E</field>
         <field name="Notes">Feedback lower arm, 1%. 12.003V nominal with 1.238V reference.</field>
         <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
-      <property name="MPN" value="RC0805FR-0711K5L"/>
+      <property name="MPN" value="0805W8F1152T5E"/>
       <property name="Notes" value="Feedback lower arm, 1%. 12.003V nominal with 1.238V reference."/>
       <property name="Sheetname" value="Internal 5 V to 12 V converter"/>
       <property name="Sheetfile" value="regulated_12v.kicad_sch"/>
@@ -1356,14 +1356,14 @@
       <value>59k</value>
       <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
       <fields>
-        <field name="MPN">RC0805FR-0759KL</field>
+        <field name="MPN">0805W8F5902T5E</field>
         <field name="Notes"/>
         <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
-      <property name="MPN" value="RC0805FR-0759KL"/>
+      <property name="MPN" value="0805W8F5902T5E"/>
       <property name="Notes" value=""/>
       <property name="Sheetname" value="Protected sensor power rails"/>
       <property name="Sheetfile" value="sensor_power.kicad_sch"/>
@@ -1994,14 +1994,14 @@
       <value>30pF</value>
       <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
       <fields>
-        <field name="MPN">C0805C300J5GACTU</field>
+        <field name="MPN">CC0805JRNPO9BN300</field>
         <field name="Notes"/>
         <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
-      <property name="MPN" value="C0805C300J5GACTU"/>
+      <property name="MPN" value="CC0805JRNPO9BN300"/>
       <property name="Notes" value=""/>
       <property name="Sheetname" value="Controller, clock, debug and status"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
@@ -2020,14 +2020,14 @@
       <value>30pF</value>
       <footprint>FRC_Sensor_CAN:C_0805_2012Metric</footprint>
       <fields>
-        <field name="MPN">C0805C300J5GACTU</field>
+        <field name="MPN">CC0805JRNPO9BN300</field>
         <field name="Notes"/>
         <field name="Footprint">FRC_Sensor_CAN:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="C" description=""/>
-      <property name="MPN" value="C0805C300J5GACTU"/>
+      <property name="MPN" value="CC0805JRNPO9BN300"/>
       <property name="Notes" value=""/>
       <property name="Sheetname" value="Controller, clock, debug and status"/>
       <property name="Sheetfile" value="controller.kicad_sch"/>
@@ -2610,14 +2610,14 @@
       <value>120</value>
       <footprint>FRC_Sensor_CAN:R_1206_3216Metric</footprint>
       <fields>
-        <field name="MPN">RC1206FR-07120RL</field>
+        <field name="MPN">1206W4F1200T5E</field>
         <field name="Notes">Use termination only if board is the physical end of the CAN trunk.</field>
         <field name="Footprint">FRC_Sensor_CAN:R_1206_3216Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
-      <property name="MPN" value="RC1206FR-07120RL"/>
+      <property name="MPN" value="1206W4F1200T5E"/>
       <property name="Notes" value="Use termination only if board is the physical end of the CAN trunk."/>
       <property name="Sheetname" value="CAN physical interface and termination"/>
       <property name="Sheetfile" value="can.kicad_sch"/>
@@ -2961,14 +2961,14 @@
       <value>5.23k</value>
       <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
       <fields>
-        <field name="MPN">RC0805FR-075K23L</field>
+        <field name="MPN">0805W8F5231T5E</field>
         <field name="Notes"/>
         <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
-      <property name="MPN" value="RC0805FR-075K23L"/>
+      <property name="MPN" value="0805W8F5231T5E"/>
       <property name="Notes" value=""/>
       <property name="Sheetname" value="Input 1: fixed-threshold digital input"/>
       <property name="Sheetfile" value="input1.kicad_sch"/>
@@ -3013,14 +3013,14 @@
       <value>220k</value>
       <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
       <fields>
-        <field name="MPN">RC0805FR-07220KL</field>
+        <field name="MPN">0805W8F2203T5E</field>
         <field name="Notes">One series resistor; loses Rev B single-resistor-short tolerance. 150 V working rating; input 0-30 V target.</field>
         <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
-      <property name="MPN" value="RC0805FR-07220KL"/>
+      <property name="MPN" value="0805W8F2203T5E"/>
       <property name="Notes" value="One series resistor; loses Rev B single-resistor-short tolerance. 150 V working rating; input 0-30 V target."/>
       <property name="Sheetname" value="Input 1: fixed-threshold digital input"/>
       <property name="Sheetfile" value="input1.kicad_sch"/>
@@ -3407,14 +3407,14 @@
       <value>220k</value>
       <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
       <fields>
-        <field name="MPN">RC0805FR-07220KL</field>
+        <field name="MPN">0805W8F2203T5E</field>
         <field name="Notes">One series resistor; loses Rev B single-resistor-short tolerance. 150 V working rating; input 0-30 V target.</field>
         <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
-      <property name="MPN" value="RC0805FR-07220KL"/>
+      <property name="MPN" value="0805W8F2203T5E"/>
       <property name="Notes" value="One series resistor; loses Rev B single-resistor-short tolerance. 150 V working rating; input 0-30 V target."/>
       <property name="Sheetname" value="Input 2: fixed-threshold digital input"/>
       <property name="Sheetfile" value="input2.kicad_sch"/>
@@ -3801,14 +3801,14 @@
       <value>220k</value>
       <footprint>FRC_Sensor_CAN:R_0805_2012Metric</footprint>
       <fields>
-        <field name="MPN">RC0805FR-07220KL</field>
+        <field name="MPN">0805W8F2203T5E</field>
         <field name="Notes">One series resistor; loses Rev B single-resistor-short tolerance. 150 V working rating; input 0-30 V target.</field>
         <field name="Footprint">FRC_Sensor_CAN:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="FRC_Sensor_CAN" part="R" description=""/>
-      <property name="MPN" value="RC0805FR-07220KL"/>
+      <property name="MPN" value="0805W8F2203T5E"/>
       <property name="Notes" value="One series resistor; loses Rev B single-resistor-short tolerance. 150 V working rating; input 0-30 V target."/>
       <property name="Sheetname" value="Input 3: fixed-threshold digital input"/>
       <property name="Sheetfile" value="input3.kicad_sch"/>

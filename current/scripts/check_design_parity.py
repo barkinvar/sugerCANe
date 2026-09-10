@@ -43,6 +43,8 @@ for comp in x.findall('./components/comp'):
     if ref not in parts:errors.append(f'Unexpected schematic component {ref}');continue
     if comp.findtext('value')!=parts[ref]['value']:errors.append(f'{ref}: schematic value differs')
     if comp.findtext('footprint')!=parts[ref]['footprint']:errors.append(f'{ref}: schematic footprint differs')
+    fields={f.attrib['name']:f.text or '' for f in comp.findall('./fields/field')}
+    if fields.get('MPN','')!=parts[ref].get('mpn',''):errors.append(f'{ref}: schematic MPN differs')
 result={'physical_components':len(parts),'model_pin_count':sum(len(c['pins']) for c in parts.values()),
         'unique_named_nets':len({n for c in parts.values() for n in c['pins'].values() if n}),
         'schematic_nodes':len(sch),'board_numbered_pads':sum(map(len,board.values())),

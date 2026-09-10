@@ -1,0 +1,3050 @@
+{
+  "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+  "batch_boards": 10,
+  "baseline_commit": "8d4deb4f51a6603b7e28a6b035f7ab955d4dc5f1",
+  "baseline_model_sha256": "cf9e272fb1d32b9ad6e04e69c37d37f8c2610410835bd46e6231c3692547903e",
+  "baseline_board_sha256": "fd0300a03fefe04b3450b189a5eaf8c5ebc6f14a9a142200d0e18a809b69be98",
+  "scope": "Public JLC catalog snapshot; no reservation, cart, factory quotation or guaranteed delivery. MCU shortage remains.",
+  "quantity_method": "Conservative budget: max(fitted quantity plus displayed lossNumber, leastPatchNumber, minPurchaseNum). Actual checkout attrition/minimums may differ.",
+  "substitutions": [
+    {
+      "references": [
+        "C25",
+        "C26"
+      ],
+      "old_mpn": "C0805C300J5GACTU",
+      "new_mpn": "CC0805JRNPO9BN300",
+      "lcsc": "C107114",
+      "value": "30pF",
+      "footprint": "FRC_Sensor_CAN:C_0805_2012Metric",
+      "reason": "Original public stock is below the conservative ten-board need including attrition.",
+      "ratings_verified": "30pF 50V NP0 \u00b15% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+    },
+    {
+      "references": [
+        "R61"
+      ],
+      "old_mpn": "RC0805FR-0711K5L",
+      "new_mpn": "0805W8F1152T5E",
+      "lcsc": "C17418",
+      "value": "11.5k",
+      "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+      "reason": "Original public stock is below the conservative ten-board need including attrition.",
+      "ratings_verified": "-55\u2103~+155\u2103 11.5k\u03a9 125mW 150V Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS"
+    },
+    {
+      "references": [
+        "R101",
+        "R201",
+        "R301"
+      ],
+      "old_mpn": "RC0805FR-07220KL",
+      "new_mpn": "0805W8F2203T5E",
+      "lcsc": "C17556",
+      "value": "220k",
+      "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+      "reason": "Original public stock is below the conservative ten-board need including attrition.",
+      "ratings_verified": "-55\u2103~+155\u2103 125mW 150V 220k\u03a9 Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS"
+    },
+    {
+      "references": [
+        "R10"
+      ],
+      "old_mpn": "RC0805FR-0759KL",
+      "new_mpn": "0805W8F5902T5E",
+      "lcsc": "C17763",
+      "value": "59k",
+      "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+      "reason": "Original public stock is below the conservative ten-board need including attrition.",
+      "ratings_verified": "-55\u2103~+155\u2103 125mW 150V 59k\u03a9 Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS"
+    },
+    {
+      "references": [
+        "R51"
+      ],
+      "old_mpn": "RC0805FR-075K23L",
+      "new_mpn": "0805W8F5231T5E",
+      "lcsc": "C17739",
+      "value": "5.23k",
+      "footprint": "FRC_Sensor_CAN:R_0805_2012Metric",
+      "reason": "Original public stock is below the conservative ten-board need including attrition.",
+      "ratings_verified": "-55\u2103~+155\u2103 125mW 150V 5.23k\u03a9 Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS"
+    },
+    {
+      "references": [
+        "R42"
+      ],
+      "old_mpn": "RC1206FR-07120RL",
+      "new_mpn": "1206W4F1200T5E",
+      "lcsc": "C17909",
+      "value": "120",
+      "footprint": "FRC_Sensor_CAN:R_1206_3216Metric",
+      "reason": "Original public stock is below the conservative ten-board need including attrition.",
+      "ratings_verified": "-55\u2103~+155\u2103 120\u03a9 200V 250mW Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 1206 Chip Resistor - Surface Mount ROHS"
+    }
+  ],
+  "datasheets": [
+    {
+      "file": "sources/datasheets/yageo_np0.pdf",
+      "sha256": "495287fc811dc714366f2edd3bc974d98d2d80133266a0a73bb01ac01237e3eb",
+      "source_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_YAGEO-CC0805JRNPO9BN300_C107114.pdf"
+    },
+    {
+      "file": "sources/datasheets/uniroyal_thick_film.pdf",
+      "sha256": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
+      "source_url": "https://datasheet.lcsc.com/lcsc_datasheet_2206010200_UNI-ROYAL-Uniroyal-Elec-0805W8F2203T5E_C17556.pdf"
+    }
+  ],
+  "parts": [
+    {
+      "mpn": "0451003.MRL",
+      "manufacturer": "Littelfuse",
+      "lcsc": "C13982",
+      "references": [
+        "F1"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C13982",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 45514,
+      "available_to_order": 45387,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 2,
+      "preorder_minimum": 36,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "2410",
+      "description": "-55\u2103~+125\u2103 0.459 125V 125V 2.5mm 3A 50A 6.1mm Surface Mount Fuse 2410 Disposable fuses ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_1809282212_Littelfuse-0451003-MRL_C13982.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.2555
+        ],
+        [
+          50,
+          0.2055
+        ],
+        [
+          150,
+          0.181
+        ],
+        [
+          1000,
+          0.1543
+        ],
+        [
+          2000,
+          0.1483
+        ],
+        [
+          5000,
+          0.1447
+        ]
+      ],
+      "ten_board_budget_quantity": 12,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "0805W8F1001T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "lcsc": "C17513",
+      "references": [
+        "R4",
+        "R110",
+        "R210",
+        "R310"
+      ],
+      "quantity_per_board": 4,
+      "source_url": "https://jlcpcb.com/partdetail/C17513",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 31296492,
+      "available_to_order": 30036572,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 2714,
+      "library_class": "base",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 125mW 150V 1k\u03a9 Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2205311800_UNI-ROYAL-Uniroyal-Elec-0805W8F1001T5E_C17513.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0042
+        ],
+        [
+          1000,
+          0.0033
+        ],
+        [
+          5000,
+          0.0027
+        ],
+        [
+          10000,
+          0.0024
+        ],
+        [
+          50000,
+          0.0022
+        ],
+        [
+          50200,
+          0.0022
+        ]
+      ],
+      "ten_board_budget_quantity": 50,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "0805W8F1002T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "lcsc": "C17414",
+      "references": [
+        "R3",
+        "R21",
+        "R22",
+        "R40",
+        "R41",
+        "R105",
+        "R205",
+        "R305",
+        "R52",
+        "R71",
+        "R75",
+        "R31"
+      ],
+      "quantity_per_board": 12,
+      "source_url": "https://jlcpcb.com/partdetail/C17414",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 54982325,
+      "available_to_order": 52986124,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 2889,
+      "library_class": "base",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 10k\u03a9 125mW 150V Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0805W8F1002T5E_C17414.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0039
+        ],
+        [
+          1000,
+          0.0031
+        ],
+        [
+          5000,
+          0.0023
+        ],
+        [
+          10000,
+          0.002
+        ],
+        [
+          50000,
+          0.0018
+        ],
+        [
+          50200,
+          0.0018
+        ]
+      ],
+      "ten_board_budget_quantity": 130,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "0805W8F1003T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "lcsc": "C149504",
+      "references": [
+        "R50",
+        "R111",
+        "R112",
+        "R211",
+        "R212",
+        "R311",
+        "R312",
+        "R70"
+      ],
+      "quantity_per_board": 8,
+      "source_url": "https://jlcpcb.com/partdetail/C149504",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 5110481,
+      "available_to_order": 4767802,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 1906,
+      "library_class": "base",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 100k\u03a9 125mW 150V Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2205312316_UNI-ROYAL-Uniroyal-Elec-0805W8F1003T5E_C149504.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0059
+        ],
+        [
+          1000,
+          0.0047
+        ],
+        [
+          5000,
+          0.0041
+        ],
+        [
+          10000,
+          0.0037
+        ],
+        [
+          50000,
+          0.0035
+        ],
+        [
+          100000,
+          0.0034
+        ]
+      ],
+      "ten_board_budget_quantity": 90,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "0805W8F3300T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "lcsc": "C17630",
+      "references": [
+        "R30"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C17630",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 2476056,
+      "available_to_order": 2322034,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 2083,
+      "library_class": "base",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 125mW 150V 330\u03a9 Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2205311830_UNI-ROYAL-Uniroyal-Elec-0805W8F3300T5E_C17630.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0054
+        ],
+        [
+          1000,
+          0.0043
+        ],
+        [
+          5000,
+          0.0037
+        ],
+        [
+          10000,
+          0.0034
+        ],
+        [
+          50000,
+          0.003
+        ],
+        [
+          100000,
+          0.0029
+        ]
+      ],
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "ABM3B-8.000MHZ-B2-T",
+      "manufacturer": "Abracon LLC",
+      "lcsc": "C83312",
+      "references": [
+        "Y1"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C83312",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 7076,
+      "available_to_order": 7026,
+      "minimum_purchase": 1,
+      "minimum_assembly": 2,
+      "attrition_allowance": 0,
+      "preorder_minimum": 20,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SMD5032-4P",
+      "description": "-20\u2103~+70\u2103 18pF 200\u03a9 8MHz \u00b120ppm \u00b150ppm SMD5032-4P Crystals ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Abracon-LLC-ABM3B-8-000MHZ-B2-T_C83312.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.589
+        ],
+        [
+          10,
+          0.4703
+        ],
+        [
+          30,
+          0.4101
+        ],
+        [
+          100,
+          0.3499
+        ],
+        [
+          500,
+          0.3157
+        ],
+        [
+          1000,
+          0.2962
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "AO3401A",
+      "manufacturer": "Alpha & Omega Semicon",
+      "lcsc": "C15127",
+      "references": [
+        "Q101",
+        "Q201",
+        "Q301"
+      ],
+      "quantity_per_board": 3,
+      "source_url": "https://jlcpcb.com/partdetail/C15127",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 421216,
+      "available_to_order": 313410,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 4,
+      "preorder_minimum": 119,
+      "library_class": "base",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SOT-23",
+      "description": "1 P-Channel 14nC@10V 30V 47m\u03a9@10V\u300160m\u03a9@4.5V\u300185m\u03a9@2.5V 4A 55pF 645pF 80pF 900mV SOT-23 MOSFETs ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2412061733_Alpha---Omega-Semicon-AO3401A_C15127.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0943
+        ],
+        [
+          50,
+          0.0757
+        ],
+        [
+          150,
+          0.0661
+        ],
+        [
+          500,
+          0.0583
+        ],
+        [
+          3000,
+          0.0555
+        ],
+        [
+          6000,
+          0.0537
+        ]
+      ],
+      "ten_board_budget_quantity": 34,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "AO4485",
+      "manufacturer": "Alpha & Omega Semicon",
+      "lcsc": "C51499",
+      "references": [
+        "Q1"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C51499",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 73264,
+      "available_to_order": 72861,
+      "minimum_purchase": 1,
+      "minimum_assembly": 0,
+      "attrition_allowance": 0,
+      "preorder_minimum": 31,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SOIC-8",
+      "description": "-55\u2103~+150\u2103 1 P-Channel 1.7V 10A 15m\u03a9@10V 180pF 3.1W 3nF 40V 55nC@10V SOIC-8 MOSFETs ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_1809200040_Alpha---Omega-Semicon-AO4485_C51499.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.295
+        ],
+        [
+          50,
+          0.2287
+        ],
+        [
+          150,
+          0.2003
+        ],
+        [
+          500,
+          0.1648
+        ],
+        [
+          3000,
+          0.1491
+        ],
+        [
+          6000,
+          0.1395
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "AP2112K-3.3TRG1",
+      "manufacturer": "Diodes Incorporated",
+      "lcsc": "C51118",
+      "references": [
+        "U2"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C51118",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 62484,
+      "available_to_order": 60591,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 0,
+      "preorder_minimum": 66,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SOT-25-5",
+      "description": "-40\u2103~+85\u2103@(Ta) 1 250mV@(600mA) 3.3V 50uVrms 55uA 600mA 65dB@(1kHz) 6V Fixed Over Current Protection\u3001Thermal Shutdown\u3001Enable control Positive SOT-25-5 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Diodes-Incorporated-AP2112K-3-3TRG1_C51118.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.1712
+        ],
+        [
+          50,
+          0.1357
+        ],
+        [
+          150,
+          0.1183
+        ],
+        [
+          500,
+          0.1029
+        ],
+        [
+          3000,
+          0.0941
+        ],
+        [
+          6000,
+          0.0917
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "B240A-13-F",
+      "manufacturer": "Diodes Incorporated",
+      "lcsc": "C92506",
+      "references": [
+        "D4",
+        "D5"
+      ],
+      "quantity_per_board": 2,
+      "source_url": "https://jlcpcb.com/partdetail/C92506",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 164297,
+      "available_to_order": 164252,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 4,
+      "preorder_minimum": 116,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SMA",
+      "description": "-65\u2103~+150\u2103 1 Independent 2A 40V 500mV@2A 500uA@40V 50A SMA Schottky Diodes ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Diodes-Incorporated-B240A-13-F_C92506.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0951
+        ],
+        [
+          50,
+          0.0778
+        ],
+        [
+          150,
+          0.0692
+        ],
+        [
+          500,
+          0.0627
+        ],
+        [
+          2500,
+          0.0565
+        ],
+        [
+          5000,
+          0.0539
+        ]
+      ],
+      "ten_board_budget_quantity": 24,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "BAT46W-E3-18",
+      "manufacturer": "Vishay Intertech",
+      "lcsc": "C5557780",
+      "references": [
+        "D102",
+        "D202",
+        "D302"
+      ],
+      "quantity_per_board": 3,
+      "source_url": "https://jlcpcb.com/partdetail/C5557780",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 4739,
+      "available_to_order": 4733,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 4,
+      "preorder_minimum": 83,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SOD-123",
+      "description": "1 Independent 100V 150mA 1V@250mA 5uA@75V 750mA SOD-123 Schottky Diodes ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2312131232_Vishay-Intertech-BAT46W-E3-18_C5557780.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.1309
+        ],
+        [
+          50,
+          0.1086
+        ],
+        [
+          150,
+          0.0973
+        ],
+        [
+          500,
+          0.0891
+        ],
+        [
+          2500,
+          0.0824
+        ],
+        [
+          5000,
+          0.079
+        ]
+      ],
+      "ten_board_budget_quantity": 34,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "BSS138BK,215",
+      "manufacturer": "Nexperia",
+      "lcsc": "C282529",
+      "references": [
+        "Q102",
+        "Q202",
+        "Q302",
+        "Q2",
+        "Q3"
+      ],
+      "quantity_per_board": 5,
+      "source_url": "https://jlcpcb.com/partdetail/C282529",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 71061,
+      "available_to_order": 70862,
+      "minimum_purchase": 1,
+      "minimum_assembly": 10,
+      "attrition_allowance": 4,
+      "preorder_minimum": 170,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SOT-23",
+      "description": "-55\u2103~+150\u2103 1 N-channel 1.6V 1.6\u03a9@10V 350mW 360mA 56pF 60V 700pC@4.5V N-Channel SOT-23 MOSFETs ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Nexperia-BSS138BK-215_C282529.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0669
+        ],
+        [
+          100,
+          0.0529
+        ],
+        [
+          300,
+          0.0459
+        ],
+        [
+          3000,
+          0.0398
+        ],
+        [
+          6000,
+          0.0355
+        ],
+        [
+          9000,
+          0.0336
+        ]
+      ],
+      "ten_board_budget_quantity": 54,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "CC0805JRNPO9BN300",
+      "manufacturer": "YAGEO",
+      "lcsc": "C107114",
+      "references": [
+        "C25",
+        "C26"
+      ],
+      "quantity_per_board": 2,
+      "source_url": "https://jlcpcb.com/partdetail/C107114",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 366601,
+      "available_to_order": 342783,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 1544,
+      "library_class": "expand",
+      "preferred_extended": true,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "30pF 50V NP0 \u00b15% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_YAGEO-CC0805JRNPO9BN300_C107114.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0073
+        ],
+        [
+          1000,
+          0.0058
+        ],
+        [
+          4000,
+          0.0047
+        ],
+        [
+          8000,
+          0.0042
+        ],
+        [
+          48000,
+          0.0037
+        ],
+        [
+          100000,
+          0.0035
+        ]
+      ],
+      "ten_board_budget_quantity": 30,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "CC0805JRNPO9BN102",
+      "manufacturer": "YAGEO",
+      "lcsc": "C62774",
+      "references": [
+        "C101",
+        "C201",
+        "C301"
+      ],
+      "quantity_per_board": 3,
+      "source_url": "https://jlcpcb.com/partdetail/C62774",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 1153391,
+      "available_to_order": 1143565,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 772,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "1nF 50V NP0 \u00b15% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_YAGEO-CC0805JRNPO9BN102_C62774.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0137
+        ],
+        [
+          500,
+          0.0116
+        ],
+        [
+          1500,
+          0.0104
+        ],
+        [
+          4000,
+          0.0097
+        ],
+        [
+          24000,
+          0.0091
+        ],
+        [
+          48000,
+          0.0088
+        ]
+      ],
+      "ten_board_budget_quantity": 40,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "CC0805KRX7R9BB333",
+      "manufacturer": "YAGEO",
+      "lcsc": "C107150",
+      "references": [
+        "C69"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C107150",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 1808891,
+      "available_to_order": 1804261,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 747,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "33nF 50V X7R \u00b110% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_YAGEO-CC0805KRX7R9BB333_C107150.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.012
+        ],
+        [
+          1000,
+          0.0103
+        ],
+        [
+          4000,
+          0.0093
+        ],
+        [
+          8000,
+          0.0087
+        ],
+        [
+          48000,
+          0.0082
+        ],
+        [
+          100000,
+          0.008
+        ]
+      ],
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "CL21B103KBANNNC",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "lcsc": "C1710",
+      "references": [
+        "C72",
+        "C73"
+      ],
+      "quantity_per_board": 2,
+      "source_url": "https://jlcpcb.com/partdetail/C1710",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 3012167,
+      "available_to_order": 2689345,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 862,
+      "library_class": "base",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "10nF 50V X7R \u00b110% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL21B103KBANNNC_C1710.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.013
+        ],
+        [
+          500,
+          0.0104
+        ],
+        [
+          1500,
+          0.0092
+        ],
+        [
+          4000,
+          0.0081
+        ],
+        [
+          24000,
+          0.0077
+        ],
+        [
+          48000,
+          0.0075
+        ]
+      ],
+      "ten_board_budget_quantity": 30,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "CL21B104KCFNNNE",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "lcsc": "C28233",
+      "references": [
+        "C3",
+        "C6",
+        "C11",
+        "C20",
+        "C21",
+        "C22",
+        "C27",
+        "C40",
+        "C41",
+        "C50",
+        "C51",
+        "C66",
+        "C74",
+        "C75"
+      ],
+      "quantity_per_board": 14,
+      "source_url": "https://jlcpcb.com/partdetail/C28233",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 1686589,
+      "available_to_order": 1397659,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 221,
+      "library_class": "base",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "100V 100nF X7R \u00b110% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL21B104KCFNNNE_C28233.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0407
+        ],
+        [
+          500,
+          0.0323
+        ],
+        [
+          2000,
+          0.0284
+        ],
+        [
+          4000,
+          0.0256
+        ],
+        [
+          24000,
+          0.0245
+        ],
+        [
+          50000,
+          0.0236
+        ]
+      ],
+      "ten_board_budget_quantity": 150,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "CL21B105KBFNNNE",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "lcsc": "C28323",
+      "references": [
+        "C7",
+        "C23",
+        "C61",
+        "C65",
+        "C71"
+      ],
+      "quantity_per_board": 5,
+      "source_url": "https://jlcpcb.com/partdetail/C28323",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 3723915,
+      "available_to_order": 3108160,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 263,
+      "library_class": "base",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "1uF 50V X7R \u00b110% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL21B105KBFNNNE_C28323.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0433
+        ],
+        [
+          100,
+          0.0341
+        ],
+        [
+          300,
+          0.0292
+        ],
+        [
+          2000,
+          0.0253
+        ],
+        [
+          4000,
+          0.024
+        ],
+        [
+          10000,
+          0.023
+        ]
+      ],
+      "ten_board_budget_quantity": 60,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "CL21B473KBCNNNC",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "lcsc": "C53134",
+      "references": [
+        "C70"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C53134",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 241826,
+      "available_to_order": 219818,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 659,
+      "library_class": "base",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "47nF 50V X7R \u00b110% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL21B473KBCNNNC_C53134.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0173
+        ],
+        [
+          500,
+          0.0136
+        ],
+        [
+          1500,
+          0.0115
+        ],
+        [
+          4000,
+          0.0103
+        ],
+        [
+          24000,
+          0.0092
+        ],
+        [
+          48000,
+          0.0086
+        ]
+      ],
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "CL21B475KAFNNNE",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "lcsc": "C98195",
+      "references": [
+        "C8",
+        "C24"
+      ],
+      "quantity_per_board": 2,
+      "source_url": "https://jlcpcb.com/partdetail/C98195",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 236503,
+      "available_to_order": 225867,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 8,
+      "preorder_minimum": 175,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "25V 4.7uF X7R \u00b110% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL21B475KAFNNNE_C98195.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0607
+        ],
+        [
+          100,
+          0.0513
+        ],
+        [
+          300,
+          0.0466
+        ],
+        [
+          2000,
+          0.0357
+        ],
+        [
+          4000,
+          0.0342
+        ],
+        [
+          10000,
+          0.0334
+        ]
+      ],
+      "ten_board_budget_quantity": 28,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "CL31A226KAHNNNE",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "lcsc": "C12891",
+      "references": [
+        "C4",
+        "C5",
+        "C13",
+        "C12",
+        "C60",
+        "C62",
+        "C63",
+        "C64"
+      ],
+      "quantity_per_board": 8,
+      "source_url": "https://jlcpcb.com/partdetail/C12891",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 1019730,
+      "available_to_order": 791384,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 4,
+      "preorder_minimum": 53,
+      "library_class": "base",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "1206",
+      "description": "22uF 25V X5R \u00b110% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL31A226KAHNNNE_C12891.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.1693
+        ],
+        [
+          200,
+          0.1286
+        ],
+        [
+          600,
+          0.1086
+        ],
+        [
+          2000,
+          0.0908
+        ],
+        [
+          10000,
+          0.086
+        ],
+        [
+          20000,
+          0.083
+        ]
+      ],
+      "ten_board_budget_quantity": 84,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "CL32B106KBJNNWE",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "lcsc": "C3844168",
+      "references": [
+        "C2"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C3844168",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 656,
+      "available_to_order": 626,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 0,
+      "preorder_minimum": 15,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "1210",
+      "description": "10uF 50V X7R \u00b110% 1210 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2309061354_Samsung-Electro-Mechanics-CL32B106KBJNNWE_C3844168.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.7143
+        ],
+        [
+          10,
+          0.5988
+        ],
+        [
+          30,
+          0.5484
+        ],
+        [
+          100,
+          0.4865
+        ],
+        [
+          500,
+          0.4589
+        ],
+        [
+          1000,
+          0.441
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "EEE-FK1H470P",
+      "manufacturer": "PANASONIC",
+      "lcsc": "C278400",
+      "references": [
+        "C1"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C278400",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 4009,
+      "available_to_order": 3776,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 0,
+      "preorder_minimum": 31,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SMD,D8xL6.2mm",
+      "description": "-55\u2103~+105\u2103 146.3mA@120Hz 2000hrs@105\u2103 47uF 50V 6.5mm 8mm \u00b120% SMD,D8xL6.2mm Aluminum Electrolytic Capacitors - SMD ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1811141444_PANASONIC-EEEFK1H470P_C278400.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.2942
+        ],
+        [
+          50,
+          0.2381
+        ],
+        [
+          150,
+          0.214
+        ],
+        [
+          1000,
+          0.1841
+        ],
+        [
+          2000,
+          0.1706
+        ],
+        [
+          5000,
+          0.1626
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "ESD2CAN24DBZRQ1",
+      "manufacturer": "Texas Instruments",
+      "lcsc": "C5736151",
+      "references": [
+        "D20"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C5736151",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 2506,
+      "available_to_order": 2427,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 0,
+      "preorder_minimum": 26,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SOT-23",
+      "description": "-55\u2103~+150\u2103 2 210W@8/20us 24V 35.5V 37V 3pF 5.7A@8/20us 50nA Bidirectional ESD IEC 61000-4-2 SOT-23 ESD and Surge Protection (TVS/ESD) ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2309210115_Texas-Instruments-ESD2CAN24DBZRQ1_C5736151.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.3486
+        ],
+        [
+          50,
+          0.2796
+        ],
+        [
+          150,
+          0.25
+        ],
+        [
+          500,
+          0.2132
+        ],
+        [
+          3000,
+          0.1968
+        ],
+        [
+          6000,
+          0.1868
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "LM339LVDR",
+      "manufacturer": "Texas Instruments",
+      "lcsc": "C22427665",
+      "references": [
+        "U7"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C22427665",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 110,
+      "available_to_order": 110,
+      "minimum_purchase": 1,
+      "minimum_assembly": 0,
+      "attrition_allowance": 0,
+      "preorder_minimum": 20,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SOIC-14",
+      "description": "-40\u2103~+125\u2103 1.5uV/\u2103 1.65V~5.5V 1pA 25uA 400uV 5pA 600ns 65dB Four channels Open Drain Rail-to-rail input SOIC-14 Comparators ROHS",
+      "datasheet_url": "",
+      "price_tiers_usd": [
+        [
+          1,
+          0.5858
+        ],
+        [
+          10,
+          0.4654
+        ],
+        [
+          30,
+          0.4133
+        ],
+        [
+          100,
+          0.3482
+        ],
+        [
+          500,
+          0.3206
+        ],
+        [
+          1000,
+          0.3027
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "LMR51420XDDCR",
+      "manufacturer": "Texas Instruments",
+      "lcsc": "C5246146",
+      "references": [
+        "U1"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C5246146",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 4183,
+      "available_to_order": 4064,
+      "minimum_purchase": 1,
+      "minimum_assembly": 2,
+      "attrition_allowance": 0,
+      "preorder_minimum": 9,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SOT-23-6",
+      "description": "-40\u2103~+150\u2103@(TJ) 1 2A 4.5V~36V 500kHz 600mV~34.2V Adjustable Buck Buck Built-in Yes SOT-23-6 DC-DC Converters ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2309210104_Texas-Instruments-LMR51420XDDCR_C5246146.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          1.0218
+        ],
+        [
+          10,
+          0.8543
+        ],
+        [
+          30,
+          0.7696
+        ],
+        [
+          100,
+          0.6867
+        ],
+        [
+          500,
+          0.6362
+        ],
+        [
+          1000,
+          0.6102
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "MMSZ12T1G",
+      "manufacturer": "onsemi",
+      "lcsc": "C72599",
+      "references": [
+        "D3"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C72599",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 6635,
+      "available_to_order": 6571,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 4,
+      "preorder_minimum": 158,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SOD-123",
+      "description": "-55\u2103~+150\u2103 100nA@8V 11.4V~12.6V 12V 25\u03a9 500mW Independent SOD-123 Zener Diodes ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2210210230_onsemi-MMSZ12T1G_C72599.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0723
+        ],
+        [
+          100,
+          0.057
+        ],
+        [
+          300,
+          0.0493
+        ],
+        [
+          3000,
+          0.0407
+        ],
+        [
+          6000,
+          0.036
+        ],
+        [
+          9000,
+          0.0337
+        ]
+      ],
+      "ten_board_budget_quantity": 14,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "0805W8F1152T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "lcsc": "C17418",
+      "references": [
+        "R61"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C17418",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 3377,
+      "available_to_order": 3238,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 2799,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 11.5k\u03a9 125mW 150V Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2206010216_UNI-ROYAL-Uniroyal-Elec-0805W8F1152T5E_C17418.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0041
+        ],
+        [
+          1000,
+          0.0032
+        ],
+        [
+          5000,
+          0.0027
+        ],
+        [
+          10000,
+          0.0025
+        ],
+        [
+          50000,
+          0.0022
+        ],
+        [
+          50200,
+          0.0022
+        ]
+      ],
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "RC0805FR-0713KL",
+      "manufacturer": "YAGEO",
+      "lcsc": "C137592",
+      "references": [
+        "R63"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C137592",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 13587,
+      "available_to_order": 13578,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 1866,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 125mW 13k\u03a9 150V Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_YAGEO-RC0805FR-0713KL_C137592.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0055
+        ],
+        [
+          1000,
+          0.0048
+        ],
+        [
+          5000,
+          0.0044
+        ],
+        [
+          10000,
+          0.0042
+        ],
+        [
+          50000,
+          0.0039
+        ],
+        [
+          50200,
+          0.0039
+        ]
+      ],
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "RC0805FR-0720KL",
+      "manufacturer": "YAGEO",
+      "lcsc": "C114566",
+      "references": [
+        "R103",
+        "R203",
+        "R303"
+      ],
+      "quantity_per_board": 3,
+      "source_url": "https://jlcpcb.com/partdetail/C114566",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 1941889,
+      "available_to_order": 1916001,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 1298,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 125mW 150V 20k\u03a9 Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_YAGEO-RC0805FR-0720KL_C114566.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0079
+        ],
+        [
+          1000,
+          0.0069
+        ],
+        [
+          5000,
+          0.0064
+        ],
+        [
+          10000,
+          0.0061
+        ],
+        [
+          50000,
+          0.0058
+        ],
+        [
+          100000,
+          0.0056
+        ]
+      ],
+      "ten_board_budget_quantity": 40,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "0805W8F2203T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "lcsc": "C17556",
+      "references": [
+        "R101",
+        "R201",
+        "R301"
+      ],
+      "quantity_per_board": 3,
+      "source_url": "https://jlcpcb.com/partdetail/C17556",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 340523,
+      "available_to_order": 289800,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 2185,
+      "library_class": "base",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 125mW 150V 220k\u03a9 Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2206010200_UNI-ROYAL-Uniroyal-Elec-0805W8F2203T5E_C17556.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.005
+        ],
+        [
+          1000,
+          0.0041
+        ],
+        [
+          5000,
+          0.0035
+        ],
+        [
+          10000,
+          0.0032
+        ],
+        [
+          50000,
+          0.0029
+        ],
+        [
+          50200,
+          0.0029
+        ]
+      ],
+      "ten_board_budget_quantity": 40,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "RC0805FR-072K61L",
+      "manufacturer": "YAGEO",
+      "lcsc": "C273965",
+      "references": [
+        "R62"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C273965",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 2696,
+      "available_to_order": 2680,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 1378,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 125mW 150V 2.61k\u03a9 Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_YAGEO-RC0805FR-072K61L_C273965.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0075
+        ],
+        [
+          1000,
+          0.0065
+        ],
+        [
+          5000,
+          0.0059
+        ],
+        [
+          10000,
+          0.0055
+        ],
+        [
+          50000,
+          0.0052
+        ],
+        [
+          100000,
+          0.0051
+        ]
+      ],
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "RC0805FR-072M2L",
+      "manufacturer": "YAGEO",
+      "lcsc": "C137552",
+      "references": [
+        "R104",
+        "R204",
+        "R304"
+      ],
+      "quantity_per_board": 3,
+      "source_url": "https://jlcpcb.com/partdetail/C137552",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 7172,
+      "available_to_order": 7154,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 1400,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 125mW 150V 2.2M\u03a9 Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_YAGEO-RC0805FR-072M2L_C137552.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0073
+        ],
+        [
+          1000,
+          0.0064
+        ],
+        [
+          5000,
+          0.0058
+        ],
+        [
+          10000,
+          0.0055
+        ],
+        [
+          50000,
+          0.0052
+        ],
+        [
+          100000,
+          0.0051
+        ]
+      ],
+      "ten_board_budget_quantity": 40,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "0805W8F5902T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "lcsc": "C17763",
+      "references": [
+        "R10"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C17763",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 6406,
+      "available_to_order": 6289,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 4976,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 125mW 150V 59k\u03a9 Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2205311830_UNI-ROYAL-Uniroyal-Elec-0805W8F5902T5E_C17763.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0023
+        ],
+        [
+          1000,
+          0.0018
+        ],
+        [
+          5000,
+          0.0015
+        ],
+        [
+          10000,
+          0.0014
+        ],
+        [
+          50000,
+          0.0012
+        ],
+        [
+          50200,
+          0.0012
+        ]
+      ],
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "0805W8F5231T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "lcsc": "C17739",
+      "references": [
+        "R51"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C17739",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 3304,
+      "available_to_order": 2225,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 4976,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 125mW 150V 5.23k\u03a9 Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2206010200_UNI-ROYAL-Uniroyal-Elec-0805W8F5231T5E_C17739.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0023
+        ],
+        [
+          1000,
+          0.0018
+        ],
+        [
+          5000,
+          0.0016
+        ],
+        [
+          10000,
+          0.0014
+        ],
+        [
+          50000,
+          0.0013
+        ],
+        [
+          50200,
+          0.0013
+        ]
+      ],
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "RC0805JR-070RL",
+      "manufacturer": "YAGEO",
+      "lcsc": "C96345",
+      "references": [
+        "R20"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C96345",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 2075887,
+      "available_to_order": 2050265,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 10,
+      "preorder_minimum": 1600,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 0\u03a9 125mW 150V Thick Film Resistor \u00b15% 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_YAGEO-RC0805JR-070RL_C96345.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0066
+        ],
+        [
+          1000,
+          0.0056
+        ],
+        [
+          5000,
+          0.0049
+        ],
+        [
+          10000,
+          0.0045
+        ],
+        [
+          50000,
+          0.0042
+        ],
+        [
+          100000,
+          0.004
+        ]
+      ],
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "RC1206FR-0710KL",
+      "manufacturer": "YAGEO",
+      "lcsc": "C132649",
+      "references": [
+        "R109",
+        "R209",
+        "R309"
+      ],
+      "quantity_per_board": 3,
+      "source_url": "https://jlcpcb.com/partdetail/C132649",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 1983977,
+      "available_to_order": 1936732,
+      "minimum_purchase": 1,
+      "minimum_assembly": 15,
+      "attrition_allowance": 10,
+      "preorder_minimum": 996,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "1206",
+      "description": "-55\u2103~+155\u2103 10k\u03a9 200V 250mW Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 1206 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_YAGEO-RC1206FR-0710KL_C132649.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0111
+        ],
+        [
+          500,
+          0.009
+        ],
+        [
+          1500,
+          0.0079
+        ],
+        [
+          5000,
+          0.007
+        ],
+        [
+          25000,
+          0.0064
+        ],
+        [
+          50000,
+          0.0061
+        ]
+      ],
+      "ten_board_budget_quantity": 40,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "1206W4F1200T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "lcsc": "C17909",
+      "references": [
+        "R42"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C17909",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 779243,
+      "available_to_order": 711102,
+      "minimum_purchase": 1,
+      "minimum_assembly": 15,
+      "attrition_allowance": 10,
+      "preorder_minimum": 1493,
+      "library_class": "base",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "1206",
+      "description": "-55\u2103~+155\u2103 120\u03a9 200V 250mW Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 1206 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2206010145_UNI-ROYAL-Uniroyal-Elec-1206W4F1200T5E_C17909.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0074
+        ],
+        [
+          1000,
+          0.006
+        ],
+        [
+          5000,
+          0.0052
+        ],
+        [
+          10000,
+          0.0047
+        ],
+        [
+          50000,
+          0.0043
+        ],
+        [
+          100000,
+          0.0041
+        ]
+      ],
+      "ten_board_budget_quantity": 20,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "RT0805BRD07100KL",
+      "manufacturer": "YAGEO",
+      "lcsc": "C122537",
+      "references": [
+        "R60",
+        "R65",
+        "R66",
+        "R68",
+        "R72",
+        "R73"
+      ],
+      "quantity_per_board": 6,
+      "source_url": "https://jlcpcb.com/partdetail/C122537",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 581611,
+      "available_to_order": 533788,
+      "minimum_purchase": 1,
+      "minimum_assembly": 20,
+      "attrition_allowance": 8,
+      "preorder_minimum": 246,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 100k\u03a9 125mW 150V Thin Film Resistor \u00b10.1% \u00b125ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_1810311438_YAGEO-RT0805BRD07100KL_C122537.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0437
+        ],
+        [
+          200,
+          0.0365
+        ],
+        [
+          600,
+          0.0334
+        ],
+        [
+          5000,
+          0.0297
+        ],
+        [
+          10000,
+          0.0287
+        ],
+        [
+          20000,
+          0.028
+        ]
+      ],
+      "ten_board_budget_quantity": 68,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "RT0805BRD07102KL",
+      "manufacturer": "YAGEO",
+      "lcsc": "C865126",
+      "references": [
+        "R1"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C865126",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 9276,
+      "available_to_order": 9215,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 4,
+      "preorder_minimum": 191,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 102k\u03a9 125mW 150V Thin Film Resistor \u00b10.1% \u00b125ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2210182200_YAGEO-RT0805BRD07102KL_C865126.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0471
+        ],
+        [
+          200,
+          0.0386
+        ],
+        [
+          600,
+          0.0339
+        ],
+        [
+          5000,
+          0.0311
+        ],
+        [
+          10000,
+          0.0287
+        ],
+        [
+          20000,
+          0.0274
+        ]
+      ],
+      "ten_board_budget_quantity": 14,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "RT0805BRD0712K1L",
+      "manufacturer": "YAGEO",
+      "lcsc": "C865169",
+      "references": [
+        "R69"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C865169",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 6905,
+      "available_to_order": 6666,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 4,
+      "preorder_minimum": 169,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 12.1k\u03a9 125mW 150V Thin Film Resistor \u00b10.1% \u00b125ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2210182200_YAGEO-RT0805BRD0712K1L_C865169.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0533
+        ],
+        [
+          200,
+          0.0448
+        ],
+        [
+          600,
+          0.0402
+        ],
+        [
+          5000,
+          0.0375
+        ],
+        [
+          10000,
+          0.035
+        ],
+        [
+          20000,
+          0.0337
+        ]
+      ],
+      "ten_board_budget_quantity": 14,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "RT0805BRD0713K7L",
+      "manufacturer": "YAGEO",
+      "lcsc": "C865183",
+      "references": [
+        "R2"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C865183",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 137,
+      "available_to_order": 89,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 4,
+      "preorder_minimum": 192,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 125mW 13.7k\u03a9 150V Thin Film Resistor \u00b10.1% \u00b125ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2203081130_YAGEO-RT0805BRD0713K7L_C865183.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0467
+        ],
+        [
+          200,
+          0.0383
+        ],
+        [
+          600,
+          0.0337
+        ],
+        [
+          5000,
+          0.0308
+        ],
+        [
+          10000,
+          0.0284
+        ],
+        [
+          20000,
+          0.0271
+        ]
+      ],
+      "ten_board_budget_quantity": 14,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "RT0805BRD0720KL",
+      "manufacturer": "YAGEO",
+      "lcsc": "C469660",
+      "references": [
+        "R67",
+        "R74"
+      ],
+      "quantity_per_board": 2,
+      "source_url": "https://jlcpcb.com/partdetail/C469660",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 41225,
+      "available_to_order": 26836,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 4,
+      "preorder_minimum": 136,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "0805",
+      "description": "-55\u2103~+155\u2103 125mW 150V 20k\u03a9 Thin Film Resistor \u00b10.1% \u00b125ppm/\u2103 0805 Chip Resistor - Surface Mount ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2311211102_YAGEO-RT0805BRD0720KL_C469660.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0742
+        ],
+        [
+          100,
+          0.0659
+        ],
+        [
+          300,
+          0.0617
+        ],
+        [
+          1000,
+          0.0585
+        ],
+        [
+          5000,
+          0.056
+        ],
+        [
+          10000,
+          0.0547
+        ]
+      ],
+      "ten_board_budget_quantity": 24,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "SK6805-EC15",
+      "manufacturer": "OPSCO Optoelectronics",
+      "lcsc": "C2890035",
+      "references": [
+        "D10"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C2890035",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 237924,
+      "available_to_order": 233479,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 2,
+      "preorder_minimum": 112,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SMD-4P,1.5x1.5mm",
+      "description": "-40\u2103~+80\u2103 0.5mA 0.65mm 1.5mm 1.5mm 120mcd~240mcd 160\u00b0 1kHz 2000V 20mcd~40mcd 3.5V~5.5V 460nm~470nm 50mcd~100mcd 520nm~530nm 620nm~625nm 800Kbit/s Built-in power-on reset circuit\u3001Built-in one-way transmission function Semi-transparent lens SMD-4P,1.5x1.5mm RGB LEDs(Built-in IC) ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2108251530_OPSCO-Optoelectronics-SK6805-EC15_C2890035.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.0995
+        ],
+        [
+          50,
+          0.0804
+        ],
+        [
+          150,
+          0.0707
+        ],
+        [
+          500,
+          0.0625
+        ],
+        [
+          2500,
+          0.0552
+        ],
+        [
+          4500,
+          0.0533
+        ]
+      ],
+      "ten_board_budget_quantity": 12,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "SMAJ13A-13-F",
+      "manufacturer": "Diodes Incorporated",
+      "lcsc": "C110519",
+      "references": [
+        "D6"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C110519",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 13086,
+      "available_to_order": 12888,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 2,
+      "preorder_minimum": 90,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SMA",
+      "description": "-55\u2103~+150\u2103 13V 15.9V 18.6A 21.5V 400W 5uA TVS Unidirectional SMA ESD and Surge Protection (TVS/ESD) ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Diodes-Incorporated-SMAJ13A-13-F_C110519.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.124
+        ],
+        [
+          50,
+          0.1001
+        ],
+        [
+          150,
+          0.0881
+        ],
+        [
+          500,
+          0.0791
+        ],
+        [
+          2500,
+          0.0718
+        ],
+        [
+          5000,
+          0.0682
+        ]
+      ],
+      "ten_board_budget_quantity": 12,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "SMAJ30A",
+      "manufacturer": "Littelfuse",
+      "lcsc": "C148230",
+      "references": [
+        "D101",
+        "D201",
+        "D301"
+      ],
+      "quantity_per_board": 3,
+      "source_url": "https://jlcpcb.com/partdetail/C148230",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 30164,
+      "available_to_order": 29435,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 2,
+      "preorder_minimum": 77,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "DO-214AC(SMA)",
+      "description": "-65\u2103~+150\u2103 1uA 30V 36.8V 400W@10/1000us 48.4V 8.3A@10/1000us IEC 61000-4-2\u3001IEC 61000-4-4 TVS Unidirectional DO-214AC(SMA) ESD and Surge Protection (TVS/ESD) ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_Littelfuse-SMAJ30A_C148230.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.1453
+        ],
+        [
+          50,
+          0.1165
+        ],
+        [
+          150,
+          0.1021
+        ],
+        [
+          500,
+          0.0912
+        ],
+        [
+          2500,
+          0.0689
+        ],
+        [
+          5000,
+          0.0645
+        ]
+      ],
+      "ten_board_budget_quantity": 32,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "SMBJ22A-E3/52",
+      "manufacturer": "Vishay Intertech",
+      "lcsc": "C3698580",
+      "references": [
+        "D2"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C3698580",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 204,
+      "available_to_order": 177,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 2,
+      "preorder_minimum": 25,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SMB(DO-214AA)",
+      "description": "-55\u2103~+150\u2103 16.9A 1uA 22V 24.4V 35.5V 600W TVS Unidirectional SMB(DO-214AA) ESD and Surge Protection (TVS/ESD) ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2312121205_Vishay-Intertech-SMBJ22A-E3-52_C3698580.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.467
+        ],
+        [
+          10,
+          0.3726
+        ],
+        [
+          30,
+          0.332
+        ],
+        [
+          100,
+          0.2815
+        ],
+        [
+          750,
+          0.2311
+        ],
+        [
+          1500,
+          0.2181
+        ]
+      ],
+      "ten_board_budget_quantity": 12,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "SN74AHCT1G125DBVR",
+      "manufacturer": "Texas Instruments",
+      "lcsc": "C7484",
+      "references": [
+        "U10"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C7484",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 23136,
+      "available_to_order": 16283,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 2,
+      "preorder_minimum": 113,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SOT-23-5",
+      "description": "-40\u2103~+125\u2103 1 1 10uA 4.5V~5.5V 6.5ns@5V,15pF 74AHCT 8mA 8mA Output enable Tri-State Unidirectional SOT-23-5 Buffers, Drivers, Receivers, Transceivers ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_1809192136_Texas-Instruments-SN74AHCT1G125DBVR_C7484.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.1001
+        ],
+        [
+          50,
+          0.0798
+        ],
+        [
+          150,
+          0.0695
+        ],
+        [
+          500,
+          0.0619
+        ],
+        [
+          3000,
+          0.052
+        ],
+        [
+          6000,
+          0.0489
+        ]
+      ],
+      "ten_board_budget_quantity": 12,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "SRP5030TA-3R3M",
+      "manufacturer": "BOURNS",
+      "lcsc": "C2042118",
+      "references": [
+        "L2"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C2042118",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 41,
+      "available_to_order": 39,
+      "minimum_purchase": 1,
+      "minimum_assembly": 0,
+      "attrition_allowance": 0,
+      "preorder_minimum": 4,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SMD,5.2x5.7mm",
+      "description": "3.3uH 32m\u03a9 5A 8A \u00b120% SMD,5.2x5.7mm Power Inductors ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_BOURNS-SRP5030TA-3R3M_C2042118.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          2.3951
+        ],
+        [
+          10,
+          2.0371
+        ],
+        [
+          30,
+          1.8126
+        ],
+        [
+          100,
+          1.5816
+        ],
+        [
+          500,
+          1.479
+        ],
+        [
+          1000,
+          1.4335
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "SRP7028A-100M",
+      "manufacturer": "BOURNS",
+      "lcsc": "C2687402",
+      "references": [
+        "L1"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C2687402",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 5174,
+      "available_to_order": 5146,
+      "minimum_purchase": 1,
+      "minimum_assembly": 0,
+      "attrition_allowance": 0,
+      "preorder_minimum": 12,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SMD,7.3x6.6mm",
+      "description": "10uH 3.5A 6A 75m\u03a9 \u00b120% SMD,7.3x6.6mm Power Inductors ROHS",
+      "datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2106070105_BOURNS-SRP7028A-100M_C2687402.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.9356
+        ],
+        [
+          10,
+          0.7729
+        ],
+        [
+          30,
+          0.6916
+        ],
+        [
+          100,
+          0.6118
+        ],
+        [
+          500,
+          0.563
+        ],
+        [
+          1000,
+          0.5386
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "STM32F042K6T6",
+      "manufacturer": "STMicroelectronics",
+      "lcsc": "C69216",
+      "references": [
+        "U5"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C69216",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 2,
+      "available_to_order": 0,
+      "minimum_purchase": 4,
+      "minimum_assembly": 0,
+      "attrition_allowance": 0,
+      "preorder_minimum": 4,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "LQFP-32(7x7)",
+      "description": "-40\u2103~+85\u2103 1.65V~3.6V 12bit 26 32 Bit 32KB 48MHz 6KB ARM Cortex-M0 Built-in FLASH LQFP-32(7x7) Microcontrollers (MCU/MPU/SOC) ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2304140030_STMicroelectronics-STM32F042K6T6_C69216.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          2.9157
+        ],
+        [
+          10,
+          2.4976
+        ],
+        [
+          30,
+          2.2356
+        ],
+        [
+          250,
+          1.9037
+        ],
+        [
+          500,
+          1.7817
+        ],
+        [
+          1000,
+          1.7296
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": false,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "TCAN3413DR",
+      "manufacturer": "Texas Instruments",
+      "lcsc": "C22433320",
+      "references": [
+        "U6"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C22433320",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 3245,
+      "available_to_order": 2422,
+      "minimum_purchase": 1,
+      "minimum_assembly": 0,
+      "attrition_allowance": 0,
+      "preorder_minimum": 9,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SOIC-8",
+      "description": "-40\u2103~+125\u2103 1 3V~3.6V 42mA 4uA 5Mbps CAN FD Transceiver Low-power mode\u3001Wake-up function\u3001TXD dominant timeout\u3001ESD protection\u3001Undervoltage Protection\u3001Thermal shutdown protection\u3001Bus fault protection\u3001Integrated level shifting\u3001Hot-swap protection SOIC-8 CAN Transceivers ROHS",
+      "datasheet_url": "",
+      "price_tiers_usd": [
+        [
+          1,
+          1.0153
+        ],
+        [
+          10,
+          0.8331
+        ],
+        [
+          30,
+          0.742
+        ],
+        [
+          100,
+          0.6525
+        ],
+        [
+          500,
+          0.5988
+        ],
+        [
+          1000,
+          0.5711
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "TPS2553DBVR-1",
+      "manufacturer": "Texas Instruments",
+      "lcsc": "C111738",
+      "references": [
+        "U4"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C111738",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 13101,
+      "available_to_order": 13075,
+      "minimum_purchase": 1,
+      "minimum_assembly": 5,
+      "attrition_allowance": 0,
+      "preorder_minimum": 31,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SOT-23-6",
+      "description": "-40\u2103~+150\u2103 1 1.5A 2.5V~6.5V 85m\u03a9 Active High High Side Switch \u8fc7\u538b\u4fdd\u62a4\u3001\u8f6f\u542f\u52a8\u3001\u6b20\u538b\u9501\u5b9a\u3001\u53cd\u5411\u7535\u538b\u4fdd\u62a4\u3001\u96c6\u6210\u7535\u8377\u6cf5\u3001Overcurrent Protection\u3001Over temperature protection\u3001\u9501\u5b58\u4fdd\u62a4\u3001Short-Circuit  Protection\u3001\u53cd\u5411\u7535\u6d41\u963b\u65ad SOT-23-6 Power Distribution Switches ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_1809080208_Texas-Instruments-TPS2553DBVR-1_C111738.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.2911
+        ],
+        [
+          50,
+          0.2316
+        ],
+        [
+          150,
+          0.206
+        ],
+        [
+          500,
+          0.1742
+        ],
+        [
+          3000,
+          0.1359
+        ],
+        [
+          6000,
+          0.1274
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "TPS259620DDAR",
+      "manufacturer": "Texas Instruments",
+      "lcsc": "C2155773",
+      "references": [
+        "U9"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C2155773",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 30,
+      "available_to_order": 25,
+      "minimum_purchase": 1,
+      "minimum_assembly": 0,
+      "attrition_allowance": 0,
+      "preorder_minimum": 14,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "SO-8",
+      "description": "-40\u2103~+125\u2103 2.7V~19V 2A \u00b110.4% SO-8 Power Management - Specialized ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_2410121923_Texas-Instruments-TPS259620DDAR_C2155773.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.8152
+        ],
+        [
+          10,
+          0.6541
+        ],
+        [
+          30,
+          0.5728
+        ],
+        [
+          100,
+          0.493
+        ],
+        [
+          500,
+          0.4459
+        ],
+        [
+          1000,
+          0.4198
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    },
+    {
+      "mpn": "TPS61085DGKR",
+      "manufacturer": "Texas Instruments",
+      "lcsc": "C113659",
+      "references": [
+        "U8"
+      ],
+      "quantity_per_board": 1,
+      "source_url": "https://jlcpcb.com/partdetail/C113659",
+      "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+      "public_stock": 2288,
+      "available_to_order": 2251,
+      "minimum_purchase": 1,
+      "minimum_assembly": 2,
+      "attrition_allowance": 0,
+      "preorder_minimum": 19,
+      "library_class": "expand",
+      "preferred_extended": false,
+      "assembly_mode": "smtWeld",
+      "package": "VSSOP-8-0.65mm",
+      "description": "-40\u2103~+85\u2103@(TA)\u3001-40\u2103~+125\u2103@(TJ) 1 100uA 2.3V~6V 2.8V~18.5V 2A 650kHz\u30011.2MHz Adjustable Boost Boost Built-in No VSSOP-8-0.65mm DC-DC Converters ROHS",
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc_datasheet_1810010731_Texas-Instruments-TPS61085DGKR_C113659.pdf",
+      "price_tiers_usd": [
+        [
+          1,
+          0.6004
+        ],
+        [
+          10,
+          0.4849
+        ],
+        [
+          30,
+          0.4345
+        ],
+        [
+          100,
+          0.3726
+        ],
+        [
+          500,
+          0.3157
+        ],
+        [
+          1000,
+          0.2994
+        ]
+      ],
+      "ten_board_budget_quantity": 10,
+      "ten_board_stock_sufficient": true,
+      "allocation_confirmed": false
+    }
+  ],
+  "hand_solder": {
+    "references": [
+      "J1",
+      "J2",
+      "J3",
+      "J4",
+      "J5",
+      "J6",
+      "J8",
+      "JP101",
+      "JP201",
+      "JP301"
+    ],
+    "reason": "Keep existing ten-part manual scope. Genuine Weidmuller 1824420000 has zero JLC stock, 1824430000 has no exact public match, Harwin M22-2010305 has only 11 for 30 needed. J8 is stocked but remains manual with the other headers."
+  }
+}

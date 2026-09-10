@@ -2,17 +2,17 @@
   "0451003.MRL": {
     "mpn": "0451003.MRL",
     "manufacturer": "Littelfuse",
-    "supplier": "LCSC",
+    "supplier": "JLCPCB",
     "supplier_part": "C13982",
-    "url": "https://www.lcsc.com/product-detail/C13982.html",
-    "stock_observed": 45525,
-    "observed_date": "2026-09-08",
-    "moq": 5,
-    "multiple": 5,
+    "url": "https://jlcpcb.com/partdetail/C13982",
+    "stock_observed": 45387,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
     "tiers": [
       [
-        5,
-        0.2556
+        1,
+        0.2555
       ],
       [
         50,
@@ -20,13 +20,25 @@
       ],
       [
         150,
-        0.1811
+        0.181
+      ],
+      [
+        1000,
+        0.1543
+      ],
+      [
+        2000,
+        0.1483
+      ],
+      [
+        5000,
+        0.1447
       ]
     ],
     "lcsc": "C13982",
     "digikey_sku": "F2583CT-ND",
     "digikey_url": "https://www.digikey.com/en/products/detail/littelfuse-inc/0451003-MRL/700824",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
   "0805W8F1001T5E": {
     "mpn": "0805W8F1001T5E",
@@ -34,17 +46,17 @@
     "digikey_sku": "",
     "digikey_url": "",
     "previous_mpn": "RC0805FR-071KL",
-    "supplier": "LCSC",
+    "supplier": "JLCPCB",
     "supplier_part": "C17513",
-    "url": "https://www.lcsc.com/product-detail/C17513.html",
+    "url": "https://jlcpcb.com/partdetail/C17513",
     "lcsc": "C17513",
-    "stock_observed": 26345600,
-    "observed_date": "2026-09-08",
-    "moq": 100,
-    "multiple": 100,
+    "stock_observed": 30036572,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
     "tiers": [
       [
-        100,
+        1,
         0.0042
       ],
       [
@@ -54,9 +66,21 @@
       [
         5000,
         0.0027
+      ],
+      [
+        10000,
+        0.0024
+      ],
+      [
+        50000,
+        0.0022
+      ],
+      [
+        50200,
+        0.0022
       ]
     ],
-    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified"
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
   "0805W8F1002T5E": {
     "mpn": "0805W8F1002T5E",
@@ -64,17 +88,17 @@
     "digikey_sku": "",
     "digikey_url": "",
     "previous_mpn": "RC0805FR-0710KL",
-    "supplier": "LCSC",
+    "supplier": "JLCPCB",
     "supplier_part": "C17414",
-    "url": "https://www.lcsc.com/product-detail/C17414.html",
+    "url": "https://jlcpcb.com/partdetail/C17414",
     "lcsc": "C17414",
-    "stock_observed": 47196100,
-    "observed_date": "2026-09-08",
-    "moq": 100,
-    "multiple": 100,
+    "stock_observed": 52986124,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
     "tiers": [
       [
-        100,
+        1,
         0.0039
       ],
       [
@@ -84,9 +108,21 @@
       [
         5000,
         0.0023
+      ],
+      [
+        10000,
+        0.002
+      ],
+      [
+        50000,
+        0.0018
+      ],
+      [
+        50200,
+        0.0018
       ]
     ],
-    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified"
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
   "0805W8F1003T5E": {
     "mpn": "0805W8F1003T5E",
@@ -94,18 +130,18 @@
     "digikey_sku": "",
     "digikey_url": "",
     "previous_mpn": "RC0805FR-07100KL",
-    "supplier": "LCSC",
+    "supplier": "JLCPCB",
     "supplier_part": "C149504",
-    "url": "https://www.lcsc.com/product-detail/C149504.html",
+    "url": "https://jlcpcb.com/partdetail/C149504",
     "lcsc": "C149504",
-    "stock_observed": 3765700,
-    "observed_date": "2026-09-08",
-    "moq": 100,
-    "multiple": 100,
+    "stock_observed": 4767802,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
     "tiers": [
       [
-        100,
-        0.006
+        1,
+        0.0059
       ],
       [
         1000,
@@ -114,9 +150,272 @@
       [
         5000,
         0.0041
+      ],
+      [
+        10000,
+        0.0037
+      ],
+      [
+        50000,
+        0.0035
+      ],
+      [
+        100000,
+        0.0034
       ]
     ],
-    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified"
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "0805W8F1152T5E": {
+    "mpn": "0805W8F1152T5E",
+    "manufacturer": "UNI-ROYAL",
+    "supplier": "JLCPCB",
+    "supplier_part": "C17418",
+    "url": "https://jlcpcb.com/partdetail/C17418",
+    "stock_observed": 3238,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0041
+      ],
+      [
+        1000,
+        0.0032
+      ],
+      [
+        5000,
+        0.0027
+      ],
+      [
+        10000,
+        0.0025
+      ],
+      [
+        50000,
+        0.0022
+      ],
+      [
+        50200,
+        0.0022
+      ]
+    ],
+    "lcsc": "C17418",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "previous_mpn": "RC0805FR-0711K5L"
+  },
+  "0805W8F2203T5E": {
+    "mpn": "0805W8F2203T5E",
+    "manufacturer": "UNI-ROYAL",
+    "supplier": "JLCPCB",
+    "supplier_part": "C17556",
+    "url": "https://jlcpcb.com/partdetail/C17556",
+    "stock_observed": 289800,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.005
+      ],
+      [
+        1000,
+        0.0041
+      ],
+      [
+        5000,
+        0.0035
+      ],
+      [
+        10000,
+        0.0032
+      ],
+      [
+        50000,
+        0.0029
+      ],
+      [
+        50200,
+        0.0029
+      ]
+    ],
+    "lcsc": "C17556",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "previous_mpn": "RC0805FR-07220KL"
+  },
+  "0805W8F3300T5E": {
+    "mpn": "0805W8F3300T5E",
+    "manufacturer": "UNI-ROYAL",
+    "supplier": "JLCPCB",
+    "supplier_part": "C17630",
+    "url": "https://jlcpcb.com/partdetail/C17630",
+    "stock_observed": 2322034,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0054
+      ],
+      [
+        1000,
+        0.0043
+      ],
+      [
+        5000,
+        0.0037
+      ],
+      [
+        10000,
+        0.0034
+      ],
+      [
+        50000,
+        0.003
+      ],
+      [
+        100000,
+        0.0029
+      ]
+    ],
+    "lcsc": "C17630",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "0805W8F5231T5E": {
+    "mpn": "0805W8F5231T5E",
+    "manufacturer": "UNI-ROYAL",
+    "supplier": "JLCPCB",
+    "supplier_part": "C17739",
+    "url": "https://jlcpcb.com/partdetail/C17739",
+    "stock_observed": 2225,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0023
+      ],
+      [
+        1000,
+        0.0018
+      ],
+      [
+        5000,
+        0.0016
+      ],
+      [
+        10000,
+        0.0014
+      ],
+      [
+        50000,
+        0.0013
+      ],
+      [
+        50200,
+        0.0013
+      ]
+    ],
+    "lcsc": "C17739",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "previous_mpn": "RC0805FR-075K23L"
+  },
+  "0805W8F5902T5E": {
+    "mpn": "0805W8F5902T5E",
+    "manufacturer": "UNI-ROYAL",
+    "supplier": "JLCPCB",
+    "supplier_part": "C17763",
+    "url": "https://jlcpcb.com/partdetail/C17763",
+    "stock_observed": 6289,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0023
+      ],
+      [
+        1000,
+        0.0018
+      ],
+      [
+        5000,
+        0.0015
+      ],
+      [
+        10000,
+        0.0014
+      ],
+      [
+        50000,
+        0.0012
+      ],
+      [
+        50200,
+        0.0012
+      ]
+    ],
+    "lcsc": "C17763",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "previous_mpn": "RC0805FR-0759KL"
+  },
+  "1206W4F1200T5E": {
+    "mpn": "1206W4F1200T5E",
+    "manufacturer": "UNI-ROYAL",
+    "supplier": "JLCPCB",
+    "supplier_part": "C17909",
+    "url": "https://jlcpcb.com/partdetail/C17909",
+    "stock_observed": 711102,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0074
+      ],
+      [
+        1000,
+        0.006
+      ],
+      [
+        5000,
+        0.0052
+      ],
+      [
+        10000,
+        0.0047
+      ],
+      [
+        50000,
+        0.0043
+      ],
+      [
+        100000,
+        0.0041
+      ]
+    ],
+    "lcsc": "C17909",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "previous_mpn": "RC1206FR-07120RL"
   },
   "1824420000": {
     "mpn": "1824420000",
@@ -195,177 +494,454 @@
   "ABM3B-8.000MHZ-B2-T": {
     "mpn": "ABM3B-8.000MHZ-B2-T",
     "manufacturer": "Abracon",
-    "supplier": "DigiKey",
-    "supplier_part": "535-9720-1-ND",
-    "url": "https://www.digikey.com/en/products/detail/abracon-llc/ABM3B-8-000MHZ-B2-T/1873166",
-    "stock_observed": 70541,
-    "observed_date": "2026-09-07",
+    "supplier": "JLCPCB",
+    "supplier_part": "C83312",
+    "url": "https://jlcpcb.com/partdetail/C83312",
+    "stock_observed": 7026,
+    "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        0.76
+        0.589
+      ],
+      [
+        10,
+        0.4703
+      ],
+      [
+        30,
+        0.4101
+      ],
+      [
+        100,
+        0.3499
+      ],
+      [
+        500,
+        0.3157
+      ],
+      [
+        1000,
+        0.2962
       ]
     ],
-    "lcsc": "",
+    "lcsc": "C83312",
     "digikey_sku": "535-9720-1-ND",
     "digikey_url": "https://www.digikey.com/en/products/detail/abracon-llc/ABM3B-8-000MHZ-B2-T/1873166",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "AO3401A": {
+    "mpn": "AO3401A",
+    "manufacturer": "Alpha & Omega Semiconductor",
+    "supplier": "JLCPCB",
+    "supplier_part": "C15127",
+    "url": "https://jlcpcb.com/partdetail/C15127",
+    "lcsc": "C15127",
+    "stock_observed": 313410,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0943
+      ],
+      [
+        50,
+        0.0757
+      ],
+      [
+        150,
+        0.0661
+      ],
+      [
+        500,
+        0.0583
+      ],
+      [
+        3000,
+        0.0555
+      ],
+      [
+        6000,
+        0.0537
+      ]
+    ],
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
   "AO4485": {
     "mpn": "AO4485",
     "manufacturer": "Alpha & Omega Semiconductor",
-    "supplier": "LCSC",
+    "supplier": "JLCPCB",
     "supplier_part": "C51499",
-    "url": "https://www.lcsc.com/product-detail/C51499.html",
-    "stock_observed": 72965,
-    "observed_date": "2026-09-08",
-    "moq": 5,
-    "multiple": 5,
+    "url": "https://jlcpcb.com/partdetail/C51499",
+    "stock_observed": 72861,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
     "tiers": [
       [
-        5,
-        0.2971
+        1,
+        0.295
       ],
       [
         50,
-        0.2303
+        0.2287
       ],
       [
         150,
-        0.2017
+        0.2003
+      ],
+      [
+        500,
+        0.1648
+      ],
+      [
+        3000,
+        0.1491
+      ],
+      [
+        6000,
+        0.1395
       ]
     ],
     "lcsc": "C51499",
-    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
     "digikey_sku": "785-1551-1-ND",
     "digikey_url": "https://www.digikey.com/en/products/detail/alpha-omega-semiconductor-inc/AO4485/3152385"
   },
   "AP2112K-3.3TRG1": {
     "mpn": "AP2112K-3.3TRG1",
     "manufacturer": "Diodes Incorporated",
-    "supplier": "DigiKey",
-    "supplier_part": "AP2112K-3.3TRG1DICT-ND",
-    "url": "https://www.digikey.com/en/products/detail/diodes-incorporated/AP2112K-3-3TRG1/4470746",
-    "stock_observed": 159040,
-    "observed_date": "2026-09-07",
+    "supplier": "JLCPCB",
+    "supplier_part": "C51118",
+    "url": "https://jlcpcb.com/partdetail/C51118",
+    "stock_observed": 60591,
+    "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        0.28
+        0.1712
+      ],
+      [
+        50,
+        0.1357
+      ],
+      [
+        150,
+        0.1183
+      ],
+      [
+        500,
+        0.1029
+      ],
+      [
+        3000,
+        0.0941
+      ],
+      [
+        6000,
+        0.0917
       ]
     ],
-    "lcsc": "",
+    "lcsc": "C51118",
     "digikey_sku": "AP2112K-3.3TRG1DICT-ND",
     "digikey_url": "https://www.digikey.com/en/products/detail/diodes-incorporated/AP2112K-3-3TRG1/4470746",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "B240A-13-F": {
+    "mpn": "B240A-13-F",
+    "manufacturer": "Diodes Incorporated",
+    "supplier": "JLCPCB",
+    "supplier_part": "C92506",
+    "url": "https://jlcpcb.com/partdetail/C92506",
+    "stock_observed": 164252,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0951
+      ],
+      [
+        50,
+        0.0778
+      ],
+      [
+        150,
+        0.0692
+      ],
+      [
+        500,
+        0.0627
+      ],
+      [
+        2500,
+        0.0565
+      ],
+      [
+        5000,
+        0.0539
+      ]
+    ],
+    "lcsc": "C92506",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
   "BAT46W-E3-18": {
     "mpn": "BAT46W-E3-18",
     "manufacturer": "Vishay",
-    "supplier": "LCSC",
+    "supplier": "JLCPCB",
     "supplier_part": "C5557780",
-    "url": "https://www.lcsc.com/product-detail/C5557780.html",
-    "stock_observed": 4735,
-    "observed_date": "2026-09-08",
-    "moq": 5,
-    "multiple": 5,
-    "tiers": [
-      [
-        5,
-        0.1307
-      ],
-      [
-        50,
-        0.1084
-      ],
-      [
-        150,
-        0.0973
-      ]
-    ],
-    "lcsc": "C5557780",
-    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
-    "digikey_sku": "BAT46W-E3-18GICT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/BAT46W-E3-18/4826890"
-  },
-  "C0805C300J5GACTU": {
-    "mpn": "C0805C300J5GACTU",
-    "manufacturer": "KEMET",
-    "supplier": "DigiKey",
-    "supplier_part": "399-C0805C300J5GACTUCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/kemet/C0805C300J5GACTU/2209733",
-    "stock_observed": 9211,
-    "observed_date": "2026-09-07",
+    "url": "https://jlcpcb.com/partdetail/C5557780",
+    "stock_observed": 4733,
+    "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        0.33
+        0.1309
+      ],
+      [
+        50,
+        0.1086
+      ],
+      [
+        150,
+        0.0973
+      ],
+      [
+        500,
+        0.0891
+      ],
+      [
+        2500,
+        0.0824
+      ],
+      [
+        5000,
+        0.079
       ]
     ],
-    "lcsc": "",
-    "digikey_sku": "399-C0805C300J5GACTUCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/kemet/C0805C300J5GACTU/2209733",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
+    "lcsc": "C5557780",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "digikey_sku": "BAT46W-E3-18GICT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/BAT46W-E3-18/4826890"
+  },
+  "BSS138BK,215": {
+    "mpn": "BSS138BK,215",
+    "manufacturer": "Nexperia",
+    "supplier": "JLCPCB",
+    "supplier_part": "C282529",
+    "url": "https://jlcpcb.com/partdetail/C282529",
+    "lcsc": "C282529",
+    "stock_observed": 70862,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0669
+      ],
+      [
+        100,
+        0.0529
+      ],
+      [
+        300,
+        0.0459
+      ],
+      [
+        3000,
+        0.0398
+      ],
+      [
+        6000,
+        0.0355
+      ],
+      [
+        9000,
+        0.0336
+      ]
+    ],
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
   "CC0805JRNPO9BN102": {
     "mpn": "CC0805JRNPO9BN102",
     "manufacturer": "YAGEO",
-    "supplier": "LCSC",
+    "supplier": "JLCPCB",
     "supplier_part": "C62774",
-    "url": "https://www.lcsc.com/product-detail/C62774.html",
-    "stock_observed": 578150,
-    "observed_date": "2026-09-08",
-    "moq": 50,
-    "multiple": 50,
+    "url": "https://jlcpcb.com/partdetail/C62774",
+    "stock_observed": 1143565,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
     "tiers": [
       [
-        50,
-        0.0199
+        1,
+        0.0137
       ],
       [
         500,
-        0.0178
+        0.0116
       ],
       [
         1500,
-        0.0166
+        0.0104
+      ],
+      [
+        4000,
+        0.0097
+      ],
+      [
+        24000,
+        0.0091
+      ],
+      [
+        48000,
+        0.0088
       ]
     ],
     "lcsc": "C62774",
     "digikey_sku": "",
     "digikey_url": "",
-    "factory_stock_status": "LCSC listing observed; JLCPCB allocation and feeder classification require quotation"
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
-  "CC0805KRX7R9BB333": {
-    "mpn": "CC0805KRX7R9BB333",
+  "CC0805JRNPO9BN300": {
+    "mpn": "CC0805JRNPO9BN300",
     "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "311-1374-1-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB333/2103112",
-    "stock_observed": 24641,
-    "observed_date": "2026-09-07",
+    "supplier": "JLCPCB",
+    "supplier_part": "C107114",
+    "url": "https://jlcpcb.com/partdetail/C107114",
+    "stock_observed": 342783,
+    "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        0.14
+        0.0073
       ],
       [
-        10,
-        0.078
+        1000,
+        0.0058
+      ],
+      [
+        4000,
+        0.0047
+      ],
+      [
+        8000,
+        0.0042
+      ],
+      [
+        48000,
+        0.0037
+      ],
+      [
+        100000,
+        0.0035
       ]
     ],
-    "lcsc": "",
+    "lcsc": "C107114",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "previous_mpn": "C0805C300J5GACTU"
+  },
+  "CC0805KRX7R9BB333": {
+    "mpn": "CC0805KRX7R9BB333",
+    "manufacturer": "YAGEO",
+    "supplier": "JLCPCB",
+    "supplier_part": "C107150",
+    "url": "https://jlcpcb.com/partdetail/C107150",
+    "stock_observed": 1804261,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.012
+      ],
+      [
+        1000,
+        0.0103
+      ],
+      [
+        4000,
+        0.0093
+      ],
+      [
+        8000,
+        0.0087
+      ],
+      [
+        48000,
+        0.0082
+      ],
+      [
+        100000,
+        0.008
+      ]
+    ],
+    "lcsc": "C107150",
     "digikey_sku": "311-1374-1-ND",
     "digikey_url": "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB333/2103112",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "CL21B103KBANNNC": {
+    "mpn": "CL21B103KBANNNC",
+    "manufacturer": "Samsung Electro-Mechanics",
+    "supplier": "JLCPCB",
+    "supplier_part": "C1710",
+    "url": "https://jlcpcb.com/partdetail/C1710",
+    "stock_observed": 2689345,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.013
+      ],
+      [
+        500,
+        0.0104
+      ],
+      [
+        1500,
+        0.0092
+      ],
+      [
+        4000,
+        0.0081
+      ],
+      [
+        24000,
+        0.0077
+      ],
+      [
+        48000,
+        0.0075
+      ]
+    ],
+    "lcsc": "C1710",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
   "CL21B104KCFNNNE": {
     "mpn": "CL21B104KCFNNNE",
@@ -373,189 +949,408 @@
     "digikey_sku": "",
     "digikey_url": "",
     "previous_mpn": "CC0805KRX7R9BB104",
-    "supplier": "LCSC",
+    "supplier": "JLCPCB",
     "supplier_part": "C28233",
-    "url": "https://www.lcsc.com/product-detail/C28233.html",
+    "url": "https://jlcpcb.com/partdetail/C28233",
     "lcsc": "C28233",
-    "stock_observed": 605350,
-    "observed_date": "2026-09-08",
-    "moq": 50,
-    "multiple": 50,
+    "stock_observed": 1397659,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
     "tiers": [
       [
-        50,
-        0.0411
+        1,
+        0.0407
       ],
       [
         500,
-        0.0325
+        0.0323
       ],
       [
         2000,
-        0.0287
+        0.0284
+      ],
+      [
+        4000,
+        0.0256
+      ],
+      [
+        24000,
+        0.0245
+      ],
+      [
+        50000,
+        0.0236
       ]
     ],
-    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified"
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "CL21B105KBFNNNE": {
+    "mpn": "CL21B105KBFNNNE",
+    "manufacturer": "Samsung Electro-Mechanics",
+    "supplier": "JLCPCB",
+    "supplier_part": "C28323",
+    "url": "https://jlcpcb.com/partdetail/C28323",
+    "stock_observed": 3108160,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0433
+      ],
+      [
+        100,
+        0.0341
+      ],
+      [
+        300,
+        0.0292
+      ],
+      [
+        2000,
+        0.0253
+      ],
+      [
+        4000,
+        0.024
+      ],
+      [
+        10000,
+        0.023
+      ]
+    ],
+    "lcsc": "C28323",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "CL21B473KBCNNNC": {
+    "mpn": "CL21B473KBCNNNC",
+    "manufacturer": "Samsung Electro-Mechanics",
+    "supplier": "JLCPCB",
+    "supplier_part": "C53134",
+    "url": "https://jlcpcb.com/partdetail/C53134",
+    "stock_observed": 219818,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0173
+      ],
+      [
+        500,
+        0.0136
+      ],
+      [
+        1500,
+        0.0115
+      ],
+      [
+        4000,
+        0.0103
+      ],
+      [
+        24000,
+        0.0092
+      ],
+      [
+        48000,
+        0.0086
+      ]
+    ],
+    "lcsc": "C53134",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "CL21B475KAFNNNE": {
+    "mpn": "CL21B475KAFNNNE",
+    "manufacturer": "Samsung Electro-Mechanics",
+    "supplier": "JLCPCB",
+    "supplier_part": "C98195",
+    "url": "https://jlcpcb.com/partdetail/C98195",
+    "stock_observed": 225867,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0607
+      ],
+      [
+        100,
+        0.0513
+      ],
+      [
+        300,
+        0.0466
+      ],
+      [
+        2000,
+        0.0357
+      ],
+      [
+        4000,
+        0.0342
+      ],
+      [
+        10000,
+        0.0334
+      ]
+    ],
+    "lcsc": "C98195",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
   "CL31A226KAHNNNE": {
     "mpn": "CL31A226KAHNNNE",
     "manufacturer": "Samsung Electro-Mechanics",
-    "supplier": "LCSC",
+    "supplier": "JLCPCB",
     "supplier_part": "C12891",
-    "url": "https://www.lcsc.com/product-detail/C12891.html",
-    "stock_observed": 211520,
-    "observed_date": "2026-09-08",
-    "moq": 20,
-    "multiple": 20,
+    "url": "https://jlcpcb.com/partdetail/C12891",
+    "stock_observed": 791384,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
     "tiers": [
       [
-        20,
-        0.1709
+        1,
+        0.1693
       ],
       [
         200,
-        0.1297
+        0.1286
       ],
       [
         600,
-        0.1096
+        0.1086
+      ],
+      [
+        2000,
+        0.0908
+      ],
+      [
+        10000,
+        0.086
+      ],
+      [
+        20000,
+        0.083
       ]
     ],
     "lcsc": "C12891",
-    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
     "digikey_sku": "1276-3047-1-ND",
     "digikey_url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL31A226KAHNNNE/3888705"
   },
   "CL32B106KBJNNWE": {
     "mpn": "CL32B106KBJNNWE",
     "manufacturer": "Samsung Electro-Mechanics",
-    "supplier": "LCSC",
+    "supplier": "JLCPCB",
     "supplier_part": "C3844168",
-    "url": "https://www.lcsc.com/product-detail/C3844168.html",
-    "stock_observed": 220,
-    "observed_date": "2026-09-08",
-    "moq": 5,
-    "multiple": 5,
+    "url": "https://jlcpcb.com/partdetail/C3844168",
+    "stock_observed": 626,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
     "tiers": [
       [
-        5,
-        0.4984
+        1,
+        0.7143
       ],
       [
-        50,
-        0.417
+        10,
+        0.5988
       ],
       [
-        150,
-        0.3822
+        30,
+        0.5484
+      ],
+      [
+        100,
+        0.4865
+      ],
+      [
+        500,
+        0.4589
+      ],
+      [
+        1000,
+        0.441
       ]
     ],
     "lcsc": "C3844168",
     "digikey_sku": "1276-3388-1-ND",
     "digikey_url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL32B106KBJNNWE/3891474",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
   "EEE-FK1H470P": {
     "mpn": "EEE-FK1H470P",
     "manufacturer": "Panasonic",
-    "supplier": "DigiKey",
-    "supplier_part": "PCE3815CT-ND",
-    "url": "https://www.digikey.com/en/products/detail/panasonic-industry/EEE-FK1H470P/765984",
-    "stock_observed": 10108,
-    "observed_date": "2026-09-08",
+    "supplier": "JLCPCB",
+    "supplier_part": "C278400",
+    "url": "https://jlcpcb.com/partdetail/C278400",
+    "stock_observed": 3776,
+    "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        0.93
+        0.2942
       ],
       [
-        10,
-        0.589
+        50,
+        0.2381
+      ],
+      [
+        150,
+        0.214
+      ],
+      [
+        1000,
+        0.1841
+      ],
+      [
+        2000,
+        0.1706
+      ],
+      [
+        5000,
+        0.1626
       ]
     ],
-    "lcsc": "",
+    "lcsc": "C278400",
     "digikey_sku": "PCE3815CT-ND",
     "digikey_url": "https://www.digikey.com/en/products/detail/panasonic-industry/EEE-FK1H470P/765984",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
   "ESD2CAN24DBZRQ1": {
     "mpn": "ESD2CAN24DBZRQ1",
     "manufacturer": "Texas Instruments",
-    "supplier": "DigiKey",
-    "supplier_part": "296-ESD2CAN24DBZRQ1CT-ND",
-    "url": "https://www.digikey.com/en/products/detail/texas-instruments/ESD2CAN24DBZRQ1/16982262",
-    "stock_observed": 255809,
-    "observed_date": "2026-09-07",
+    "supplier": "JLCPCB",
+    "supplier_part": "C5736151",
+    "url": "https://jlcpcb.com/partdetail/C5736151",
+    "stock_observed": 2427,
+    "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        0.87
+        0.3486
+      ],
+      [
+        50,
+        0.2796
+      ],
+      [
+        150,
+        0.25
+      ],
+      [
+        500,
+        0.2132
+      ],
+      [
+        3000,
+        0.1968
+      ],
+      [
+        6000,
+        0.1868
       ]
     ],
-    "lcsc": "",
+    "lcsc": "C5736151",
     "digikey_sku": "296-ESD2CAN24DBZRQ1CT-ND",
     "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/ESD2CAN24DBZRQ1/16982262",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
   "LM339LVDR": {
     "mpn": "LM339LVDR",
     "manufacturer": "Texas Instruments",
-    "supplier": "DigiKey",
-    "supplier_part": "296-LM339LVDRCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/texas-instruments/LM339LVDR/21598795",
-    "stock_observed": 1085,
-    "observed_date": "2026-09-08",
+    "supplier": "JLCPCB",
+    "supplier_part": "C22427665",
+    "url": "https://jlcpcb.com/partdetail/C22427665",
+    "stock_observed": 110,
+    "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        0.42
+        0.5858
       ],
       [
         10,
-        0.293
+        0.4654
+      ],
+      [
+        30,
+        0.4133
+      ],
+      [
+        100,
+        0.3482
+      ],
+      [
+        500,
+        0.3206
+      ],
+      [
+        1000,
+        0.3027
       ]
     ],
-    "lcsc": "",
+    "lcsc": "C22427665",
     "digikey_sku": "296-LM339LVDRCT-ND",
     "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/LM339LVDR/21598795",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
   "LMR51420XDDCR": {
     "mpn": "LMR51420XDDCR",
     "manufacturer": "Texas Instruments",
-    "supplier": "LCSC",
+    "supplier": "JLCPCB",
     "supplier_part": "C5246146",
-    "url": "https://www.lcsc.com/product-detail/C5246146.html",
-    "stock_observed": 109,
-    "observed_date": "2026-09-08",
+    "url": "https://jlcpcb.com/partdetail/C5246146",
+    "stock_observed": 4064,
+    "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        1.0292
+        1.0218
       ],
       [
         10,
-        0.8604
+        0.8543
       ],
       [
         30,
-        0.7752
+        0.7696
       ],
       [
         100,
-        0.6916
+        0.6867
+      ],
+      [
+        500,
+        0.6362
+      ],
+      [
+        1000,
+        0.6102
       ]
     ],
     "lcsc": "C5246146",
-    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
     "digikey_sku": "296-LMR51420XDDCRCT-ND",
     "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/LMR51420XDDCR/16705125"
   },
@@ -608,1199 +1403,43 @@
   "MMSZ12T1G": {
     "mpn": "MMSZ12T1G",
     "manufacturer": "onsemi",
-    "supplier": "DigiKey",
-    "supplier_part": "MMSZ12T1GOSCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/onsemi/MMSZ12T1G/1139870",
-    "stock_observed": 34429,
-    "observed_date": "2026-09-07",
+    "supplier": "JLCPCB",
+    "supplier_part": "C72599",
+    "url": "https://jlcpcb.com/partdetail/C72599",
+    "stock_observed": 6571,
+    "observed_date": "2026-09-10",
     "moq": 1,
     "multiple": 1,
     "tiers": [
       [
         1,
-        0.17
-      ],
-      [
-        10,
-        0.102
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "MMSZ12T1GOSCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/onsemi/MMSZ12T1G/1139870",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "RC0805FR-0720KL": {
-    "mpn": "RC0805FR-0720KL",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "311-20.0KCRCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0720KL/730667",
-    "stock_observed": 27443,
-    "observed_date": "2026-09-07",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.1
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "311-20.0KCRCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0720KL/730667",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "RC0805FR-07220KL": {
-    "mpn": "RC0805FR-07220KL",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "311-220KCRCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-07220KL/727742",
-    "stock_observed": 74744,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.11
-      ],
-      [
-        10,
-        0.036
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "311-220KCRCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-07220KL/727742",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "RC0805FR-072M2L": {
-    "mpn": "RC0805FR-072M2L",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "311-2.20MCRCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-072M2L/727677",
-    "stock_observed": 35399,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.1
-      ],
-      [
-        10,
-        0.034
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "311-2.20MCRCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-072M2L/727677",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "RC0805FR-0759KL": {
-    "mpn": "RC0805FR-0759KL",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "311-59.0KCRCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0759KL/728045",
-    "stock_observed": 29786,
-    "observed_date": "2026-09-07",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.1
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "311-59.0KCRCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0759KL/728045",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "RC0805FR-075K23L": {
-    "mpn": "RC0805FR-075K23L",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "311-5.23KCRCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-075K23L/727993",
-    "stock_observed": 8358,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.1
-      ],
-      [
-        10,
-        0.034
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "311-5.23KCRCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-075K23L/727993",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "RC0805JR-070RL": {
-    "mpn": "RC0805JR-070RL",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "311-0.0ARCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805JR-070RL/728216",
-    "stock_observed": 1733368,
-    "observed_date": "2026-09-07",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.1
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "311-0.0ARCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805JR-070RL/728216",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "RC1206FR-0710KL": {
-    "mpn": "RC1206FR-0710KL",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "311-10.0KFRCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RC1206FR-0710KL/728483",
-    "stock_observed": 2088085,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.11
-      ],
-      [
-        10,
-        0.05
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "311-10.0KFRCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC1206FR-0710KL/728483",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "RC1206FR-07120RL": {
-    "mpn": "RC1206FR-07120RL",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "311-120FRCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RC1206FR-07120RL/728523",
-    "stock_observed": 126570,
-    "observed_date": "2026-09-07",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.1
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "311-120FRCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC1206FR-07120RL/728523",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "RT0805BRD07100KL": {
-    "mpn": "RT0805BRD07100KL",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "YAG1759CT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RT0805BRD07100KL/1075539",
-    "stock_observed": 59818,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.1
-      ],
-      [
-        10,
-        0.08
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "YAG1759CT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RT0805BRD07100KL/1075539",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "RT0805BRD07102KL": {
-    "mpn": "RT0805BRD07102KL",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "YAG4817CT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RT0805BRD07102KL/1075541",
-    "stock_observed": 2938,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.1
-      ],
-      [
-        10,
-        0.08
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "YAG4817CT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RT0805BRD07102KL/1075541",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "RT0805BRD0713K7L": {
-    "mpn": "RT0805BRD0713K7L",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "YAG4829CT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RT0805BRD0713K7L/1075594",
-    "stock_observed": 4402,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.1
-      ],
-      [
-        10,
-        0.08
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "YAG4829CT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RT0805BRD0713K7L/1075594",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "SMAJ30A": {
-    "mpn": "SMAJ30A",
-    "manufacturer": "Littelfuse",
-    "supplier": "LCSC",
-    "supplier_part": "C148230",
-    "url": "https://www.lcsc.com/product-detail/C148230.html",
-    "stock_observed": 30185,
-    "observed_date": "2026-09-08",
-    "moq": 5,
-    "multiple": 5,
-    "tiers": [
-      [
-        5,
-        0.1459
-      ],
-      [
-        50,
-        0.1169
-      ],
-      [
-        150,
-        0.1023
-      ]
-    ],
-    "lcsc": "C148230",
-    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
-    "digikey_sku": "SMAJ30ALFCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/littelfuse-inc/SMAJ30A/762294"
-  },
-  "SMBJ22A-E3/52": {
-    "mpn": "SMBJ22A-E3/52",
-    "manufacturer": "Vishay",
-    "supplier": "DigiKey",
-    "supplier_part": "SMBJ22A-E3/52GICT-ND",
-    "url": "https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/SMBJ22A-E3-52/1119260",
-    "stock_observed": 705,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.56
-      ],
-      [
-        10,
-        0.348
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "SMBJ22A-E3/52GICT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/SMBJ22A-E3-52/1119260",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "SPN02SVEN-RC": {
-    "mpn": "SPN02SVEN-RC",
-    "manufacturer": "Sullins Connector Solutions",
-    "supplier": "DigiKey",
-    "supplier_part": "S9340-ND",
-    "url": "https://www.digikey.com/en/products/detail/sullins-connector-solutions/SPN02SVEN-RC/2618265",
-    "stock_observed": 175712,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.1
-      ],
-      [
-        10,
-        0.06
-      ],
-      [
-        25,
-        0.0564
-      ],
-      [
-        50,
-        0.0538
+        0.0723
       ],
       [
         100,
-        0.0513
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "S9340-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/sullins-connector-solutions/SPN02SVEN-RC/2618265",
-    "factory_stock_status": "Loose accessory; closed-top 2 mm shunt, 3 per board"
-  },
-  "SRP5030TA-3R3M": {
-    "mpn": "SRP5030TA-3R3M",
-    "manufacturer": "Bourns",
-    "supplier": "DigiKey",
-    "supplier_part": "SRP5030TA-3R3MCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP5030TA-3R3M/5429672",
-    "stock_observed": 4922,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        1.17
-      ],
-      [
-        10,
-        0.964
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "SRP5030TA-3R3MCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP5030TA-3R3M/5429672",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "SRP7028A-100M": {
-    "mpn": "SRP7028A-100M",
-    "manufacturer": "Bourns",
-    "supplier": "DigiKey",
-    "supplier_part": "SRP7028A-100MCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP7028A-100M/4876733",
-    "stock_observed": 9366,
-    "observed_date": "2026-09-07",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        1.1
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "SRP7028A-100MCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP7028A-100M/4876733",
-    "factory_stock_status": "External procurement candidate; JLCPCB stock not confirmed"
-  },
-  "STM32F042K6T6": {
-    "mpn": "STM32F042K6T6",
-    "manufacturer": "STMicroelectronics",
-    "supplier": "DigiKey",
-    "supplier_part": "497-14647-ND",
-    "url": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294",
-    "stock_observed": 3072,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        4.34
-      ],
-      [
-        10,
-        3.277
-      ],
-      [
-        50,
-        2.8492
-      ],
-      [
-        100,
-        2.7169
-      ]
-    ],
-    "lcsc": "C69216",
-    "digikey_sku": "497-14647-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294",
-    "factory_stock_status": "JLCPCB catalog supports Economic/Standard; allocation unavailable. LCSC out of stock, use external sourcing if needed.",
-    "jlcpcb_url": "https://jlcpcb.com/partdetail/STMicroelectronics-STM32F042K6T6/C69216"
-  },
-  "TCAN3413DR": {
-    "mpn": "TCAN3413DR",
-    "manufacturer": "Texas Instruments",
-    "supplier": "LCSC",
-    "supplier_part": "C22433320",
-    "url": "https://www.lcsc.com/product-detail/C22433320.html",
-    "stock_observed": 233,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        1.0227
-      ],
-      [
-        10,
-        0.8391
-      ],
-      [
-        30,
-        0.7473
-      ],
-      [
-        100,
-        0.6572
-      ]
-    ],
-    "lcsc": "C22433320",
-    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
-    "digikey_sku": "296-TCAN3413DRCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/TCAN3413DR/22147484"
-  },
-  "TPS2553DBVR-1": {
-    "mpn": "TPS2553DBVR-1",
-    "manufacturer": "Texas Instruments",
-    "supplier": "LCSC",
-    "supplier_part": "C111738",
-    "url": "https://www.lcsc.com/product-detail/C111738.html",
-    "stock_observed": 13285,
-    "observed_date": "2026-09-08",
-    "moq": 5,
-    "multiple": 5,
-    "tiers": [
-      [
-        5,
-        0.2935
-      ],
-      [
-        50,
-        0.2334
-      ],
-      [
-        150,
-        0.2077
-      ]
-    ],
-    "lcsc": "C111738",
-    "factory_stock_status": "LCSC listing verified; JLCPCB allocation/classification unverified",
-    "digikey_sku": "296-39380-1-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/TPS2553DBVR-1/2047901"
-  },
-  "AO3401A": {
-    "mpn": "AO3401A",
-    "manufacturer": "Alpha & Omega Semiconductor",
-    "supplier": "LCSC",
-    "supplier_part": "C15127",
-    "url": "https://www.lcsc.com/product-detail/C15127.html",
-    "lcsc": "C15127",
-    "stock_observed": 14725,
-    "observed_date": "2026-09-08",
-    "moq": 5,
-    "multiple": 5,
-    "tiers": [
-      [
-        5,
-        0.095
-      ],
-      [
-        50,
-        0.0764
-      ],
-      [
-        150,
-        0.0668
-      ],
-      [
-        500,
-        0.0589
-      ]
-    ],
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC listing observed; JLCPCB allocation/classification unverified"
-  },
-  "BSS138BK,215": {
-    "mpn": "BSS138BK,215",
-    "manufacturer": "Nexperia",
-    "supplier": "LCSC",
-    "supplier_part": "C282529",
-    "url": "https://www.lcsc.com/product-detail/C282529.html",
-    "lcsc": "C282529",
-    "stock_observed": 77720,
-    "observed_date": "2026-09-08",
-    "moq": 10,
-    "multiple": 10,
-    "tiers": [
-      [
-        10,
-        0.0674
-      ],
-      [
-        100,
-        0.0533
+        0.057
       ],
       [
         300,
-        0.0463
+        0.0493
       ],
       [
         3000,
-        0.0401
-      ]
-    ],
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC listing observed; JLCPCB allocation/classification unverified"
-  },
-  "TPS61085DGKR": {
-    "mpn": "TPS61085DGKR",
-    "manufacturer": "Texas Instruments",
-    "supplier": "LCSC",
-    "supplier_part": "C113659",
-    "url": "https://www.lcsc.com/product-detail/C113659.html",
-    "stock_observed": 2813,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.6001
-      ],
-      [
-        10,
-        0.4846
-      ],
-      [
-        30,
-        0.4342
-      ],
-      [
-        100,
-        0.3724
-      ]
-    ],
-    "lcsc": "C113659",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC listing observed; JLCPCB allocation and feeder classification require quotation"
-  },
-  "B240A-13-F": {
-    "mpn": "B240A-13-F",
-    "manufacturer": "Diodes Incorporated",
-    "supplier": "LCSC",
-    "supplier_part": "C92506",
-    "url": "https://www.lcsc.com/product-detail/C92506.html",
-    "stock_observed": 164445,
-    "observed_date": "2026-09-08",
-    "moq": 5,
-    "multiple": 5,
-    "tiers": [
-      [
-        5,
-        0.096
-      ],
-      [
-        50,
-        0.0785
-      ],
-      [
-        150,
-        0.0698
-      ]
-    ],
-    "lcsc": "C92506",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC listing observed; JLCPCB allocation and feeder classification require quotation"
-  },
-  "CL21B105KBFNNNE": {
-    "mpn": "CL21B105KBFNNNE",
-    "manufacturer": "Samsung Electro-Mechanics",
-    "supplier": "LCSC",
-    "supplier_part": "C28323",
-    "url": "https://www.lcsc.com/product-detail/C28323.html",
-    "stock_observed": 1155800,
-    "observed_date": "2026-09-08",
-    "moq": 10,
-    "multiple": 10,
-    "tiers": [
-      [
-        10,
-        0.0443
-      ],
-      [
-        100,
-        0.035
-      ],
-      [
-        300,
-        0.0301
-      ]
-    ],
-    "lcsc": "C28323",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC listing observed; JLCPCB allocation and feeder classification require quotation"
-  },
-  "CL21B475KAFNNNE": {
-    "mpn": "CL21B475KAFNNNE",
-    "manufacturer": "Samsung Electro-Mechanics",
-    "supplier": "LCSC",
-    "supplier_part": "C98195",
-    "url": "https://www.lcsc.com/product-detail/C98195.html",
-    "stock_observed": 196770,
-    "observed_date": "2026-09-08",
-    "moq": 10,
-    "multiple": 10,
-    "tiers": [
-      [
-        10,
-        0.0611
-      ],
-      [
-        100,
-        0.0517
-      ],
-      [
-        300,
-        0.0469
-      ]
-    ],
-    "lcsc": "C98195",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC listing observed; JLCPCB allocation and feeder classification require quotation"
-  },
-  "RC0805FR-0711K5L": {
-    "mpn": "RC0805FR-0711K5L",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "311-11.5KCRCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0711K5L/727556",
-    "stock_observed": 27893,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.1
-      ],
-      [
-        10,
-        0.034
-      ],
-      [
-        25,
-        0.0256
-      ],
-      [
-        100,
-        0.0171
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "311-11.5KCRCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0711K5L/727556",
-    "factory_stock_status": "External procurement; quote exact MPN before ordering"
-  },
-  "RC0805FR-0721K5L": {
-    "mpn": "RC0805FR-0721K5L",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "311-21.5KCRCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0721K5L/727730",
-    "stock_observed": 2825,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.11
-      ],
-      [
-        10,
-        0.036
-      ],
-      [
-        25,
-        0.0272
-      ],
-      [
-        100,
-        0.0181
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "311-21.5KCRCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0721K5L/727730",
-    "factory_stock_status": "External procurement; quote exact MPN before ordering"
-  },
-  "RC0805FR-0713KL": {
-    "mpn": "RC0805FR-0713KL",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "311-13.0KCRCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0713KL/730531",
-    "stock_observed": 54671,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.1
-      ],
-      [
-        10,
-        0.034
-      ],
-      [
-        25,
-        0.0256
-      ],
-      [
-        100,
-        0.0171
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "311-13.0KCRCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0713KL/730531",
-    "factory_stock_status": "External procurement; quote exact MPN before ordering"
-  },
-  "RC0805FR-071K8L": {
-    "mpn": "RC0805FR-071K8L",
-    "manufacturer": "YAGEO",
-    "supplier": "DigiKey",
-    "supplier_part": "311-1.80KCRCT-ND",
-    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-071K8L/727520",
-    "stock_observed": 153772,
-    "observed_date": "2026-09-08",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.1
-      ],
-      [
-        10,
-        0.034
-      ],
-      [
-        25,
-        0.0256
-      ],
-      [
-        50,
-        0.0208
-      ],
-      [
-        100,
-        0.0171
-      ]
-    ],
-    "lcsc": "",
-    "digikey_sku": "311-1.80KCRCT-ND",
-    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-071K8L/727520",
-    "factory_stock_status": "External procurement; quote exact MPN before ordering"
-  },
-  "TPS259620DDAR": {
-    "mpn": "TPS259620DDAR",
-    "manufacturer": "Texas Instruments",
-    "supplier": "LCSC",
-    "supplier_part": "C2155773",
-    "url": "https://www.lcsc.com/product-detail/C2155773.html",
-    "stock_observed": 18,
-    "observed_date": "2026-09-09",
-    "moq": 1,
-    "multiple": 1,
-    "tiers": [
-      [
-        1,
-        0.8227
-      ],
-      [
-        10,
-        0.6602
-      ],
-      [
-        30,
-        0.5781
-      ],
-      [
-        100,
-        0.4976
-      ],
-      [
-        500,
-        0.45
-      ],
-      [
-        1000,
-        0.4237
-      ]
-    ],
-    "lcsc": "C2155773",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC observation; factory allocation/feeder charges require quotation"
-  },
-  "RT0805BRD0720KL": {
-    "mpn": "RT0805BRD0720KL",
-    "manufacturer": "YAGEO",
-    "supplier": "LCSC",
-    "supplier_part": "C469660",
-    "url": "https://www.lcsc.com/product-detail/C469660.html",
-    "stock_observed": 13480,
-    "observed_date": "2026-09-09",
-    "moq": 10,
-    "multiple": 10,
-    "tiers": [
-      [
-        10,
-        0.0749
-      ],
-      [
-        100,
-        0.0664
-      ],
-      [
-        300,
-        0.0622
-      ],
-      [
-        1000,
-        0.059
-      ]
-    ],
-    "lcsc": "C469660",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC observation; factory allocation/feeder charges require quotation"
-  },
-  "RT0805BRD0712K1L": {
-    "mpn": "RT0805BRD0712K1L",
-    "manufacturer": "YAGEO",
-    "supplier": "LCSC",
-    "supplier_part": "C865169",
-    "url": "https://www.lcsc.com/product-image/C865169.html",
-    "stock_observed": 6360,
-    "observed_date": "2026-09-09",
-    "moq": 20,
-    "multiple": 20,
-    "tiers": [
-      [
-        20,
-        0.0531
-      ],
-      [
-        200,
-        0.0447
-      ],
-      [
-        600,
-        0.0401
-      ],
-      [
-        5000,
-        0.0373
-      ]
-    ],
-    "lcsc": "C865169",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC observation; factory allocation/feeder charges require quotation"
-  },
-  "RC0805FR-072K61L": {
-    "mpn": "RC0805FR-072K61L",
-    "manufacturer": "YAGEO",
-    "supplier": "LCSC",
-    "supplier_part": "C273965",
-    "url": "https://www.lcsc.com/product-detail/C273965.html",
-    "stock_observed": 3600,
-    "observed_date": "2026-09-09",
-    "moq": 100,
-    "multiple": 100,
-    "tiers": [
-      [
-        100,
-        0.004
-      ],
-      [
-        1000,
-        0.003
-      ],
-      [
-        5000,
-        0.0026
-      ]
-    ],
-    "lcsc": "C273965",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC observation; factory allocation/feeder charges require quotation"
-  },
-  "CL21B473KBCNNNC": {
-    "mpn": "CL21B473KBCNNNC",
-    "manufacturer": "Samsung Electro-Mechanics",
-    "supplier": "LCSC",
-    "supplier_part": "C53134",
-    "url": "https://www.lcsc.com/product-detail/C53134.html",
-    "stock_observed": 122400,
-    "observed_date": "2026-09-09",
-    "moq": 50,
-    "multiple": 50,
-    "tiers": [
-      [
-        50,
-        0.0174
-      ],
-      [
-        500,
-        0.0137
-      ],
-      [
-        1500,
-        0.0116
-      ],
-      [
-        4000,
-        0.0104
-      ]
-    ],
-    "lcsc": "C53134",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC observation; factory allocation/feeder charges require quotation"
-  },
-  "CL21B103KBANNNC": {
-    "mpn": "CL21B103KBANNNC",
-    "manufacturer": "Samsung Electro-Mechanics",
-    "supplier": "LCSC",
-    "supplier_part": "C1710",
-    "url": "https://www.lcsc.com/product-detail/C1710.html",
-    "stock_observed": 1722850,
-    "observed_date": "2026-09-09",
-    "moq": 50,
-    "multiple": 50,
-    "tiers": [
-      [
-        50,
-        0.0131
-      ],
-      [
-        500,
-        0.0104
-      ],
-      [
-        1500,
-        0.0092
-      ],
-      [
-        4000,
-        0.0081
-      ]
-    ],
-    "lcsc": "C1710",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "JLCPCB C1710 listed Basic; allocation and quotation still required"
-  },
-  "SMAJ13A-13-F": {
-    "mpn": "SMAJ13A-13-F",
-    "manufacturer": "Diodes Incorporated",
-    "supplier": "LCSC",
-    "supplier_part": "C110519",
-    "url": "https://www.lcsc.com/product-detail/C110519.html",
-    "stock_observed": 12785,
-    "observed_date": "2026-09-09",
-    "moq": 5,
-    "multiple": 5,
-    "tiers": [
-      [
-        5,
-        0.1246
-      ],
-      [
-        50,
-        0.1005
-      ],
-      [
-        150,
-        0.0885
-      ],
-      [
-        500,
-        0.0794
-      ]
-    ],
-    "lcsc": "C110519",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC observation; factory allocation/feeder charges require quotation"
-  },
-  "SK6805-EC15": {
-    "mpn": "SK6805-EC15",
-    "manufacturer": "OPSCO Optoelectronics",
-    "supplier": "LCSC",
-    "supplier_part": "C2890035",
-    "url": "https://www.lcsc.com/product-detail/C2890035.html",
-    "stock_observed": 262605,
-    "observed_date": "2026-09-09",
-    "moq": 5,
-    "multiple": 5,
-    "tiers": [
-      [
-        5,
-        0.0956
-      ],
-      [
-        50,
-        0.0768
-      ],
-      [
-        150,
-        0.0664
-      ],
-      [
-        500,
-        0.0602
-      ],
-      [
-        2500,
-        0.0548
-      ],
-      [
-        4500,
-        0.0518
-      ]
-    ],
-    "lcsc": "C2890035",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC stock observed; JLCPCB allocation unconfirmed. Header uses undiscounted price."
-  },
-  "SN74AHCT1G125DBVR": {
-    "mpn": "SN74AHCT1G125DBVR",
-    "manufacturer": "Texas Instruments",
-    "supplier": "LCSC",
-    "supplier_part": "C7484",
-    "url": "https://www.lcsc.com/product-detail/C7484.html",
-    "stock_observed": 9585,
-    "observed_date": "2026-09-09",
-    "moq": 5,
-    "multiple": 5,
-    "tiers": [
-      [
-        5,
-        0.1009
-      ],
-      [
-        50,
-        0.0804
-      ],
-      [
-        150,
-        0.0701
-      ],
-      [
-        500,
-        0.0624
-      ],
-      [
-        3000,
-        0.0523
+        0.0407
       ],
       [
         6000,
-        0.0493
+        0.036
+      ],
+      [
+        9000,
+        0.0337
       ]
     ],
-    "lcsc": "C7484",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC stock observed; JLCPCB allocation unconfirmed. Header uses undiscounted price."
-  },
-  "0805W8F3300T5E": {
-    "mpn": "0805W8F3300T5E",
-    "manufacturer": "UNI-ROYAL",
-    "supplier": "LCSC",
-    "supplier_part": "C17630",
-    "url": "https://www.lcsc.com/product-detail/C17630.html",
-    "stock_observed": 1818400,
-    "observed_date": "2026-09-09",
-    "moq": 100,
-    "multiple": 100,
-    "tiers": [
-      [
-        100,
-        0.0054
-      ],
-      [
-        1000,
-        0.0044
-      ],
-      [
-        5000,
-        0.0037
-      ],
-      [
-        10000,
-        0.0034
-      ],
-      [
-        50000,
-        0.0031
-      ],
-      [
-        100000,
-        0.0029
-      ]
-    ],
-    "lcsc": "C17630",
-    "digikey_sku": "",
-    "digikey_url": "",
-    "factory_stock_status": "LCSC stock observed; JLCPCB allocation unconfirmed. Header uses undiscounted price."
+    "lcsc": "C72599",
+    "digikey_sku": "MMSZ12T1GOSCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/onsemi/MMSZ12T1G/1139870",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   },
   "PM254V-12-10P-H85": {
     "mpn": "PM254V-12-10P-H85",
@@ -1842,5 +1481,1056 @@
     "digikey_sku": "",
     "digikey_url": "",
     "factory_stock_status": "LCSC stock observed; user hand-solders socket. Undiscounted price; not a factory allocation."
+  },
+  "RC0805FR-0713KL": {
+    "mpn": "RC0805FR-0713KL",
+    "manufacturer": "YAGEO",
+    "supplier": "JLCPCB",
+    "supplier_part": "C137592",
+    "url": "https://jlcpcb.com/partdetail/C137592",
+    "stock_observed": 13578,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0055
+      ],
+      [
+        1000,
+        0.0048
+      ],
+      [
+        5000,
+        0.0044
+      ],
+      [
+        10000,
+        0.0042
+      ],
+      [
+        50000,
+        0.0039
+      ],
+      [
+        50200,
+        0.0039
+      ]
+    ],
+    "lcsc": "C137592",
+    "digikey_sku": "311-13.0KCRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0713KL/730531",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "RC0805FR-071K8L": {
+    "mpn": "RC0805FR-071K8L",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "311-1.80KCRCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-071K8L/727520",
+    "stock_observed": 153772,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.1
+      ],
+      [
+        10,
+        0.034
+      ],
+      [
+        25,
+        0.0256
+      ],
+      [
+        50,
+        0.0208
+      ],
+      [
+        100,
+        0.0171
+      ]
+    ],
+    "lcsc": "",
+    "digikey_sku": "311-1.80KCRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-071K8L/727520",
+    "factory_stock_status": "External procurement; quote exact MPN before ordering"
+  },
+  "RC0805FR-0720KL": {
+    "mpn": "RC0805FR-0720KL",
+    "manufacturer": "YAGEO",
+    "supplier": "JLCPCB",
+    "supplier_part": "C114566",
+    "url": "https://jlcpcb.com/partdetail/C114566",
+    "stock_observed": 1916001,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0079
+      ],
+      [
+        1000,
+        0.0069
+      ],
+      [
+        5000,
+        0.0064
+      ],
+      [
+        10000,
+        0.0061
+      ],
+      [
+        50000,
+        0.0058
+      ],
+      [
+        100000,
+        0.0056
+      ]
+    ],
+    "lcsc": "C114566",
+    "digikey_sku": "311-20.0KCRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0720KL/730667",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "RC0805FR-0721K5L": {
+    "mpn": "RC0805FR-0721K5L",
+    "manufacturer": "YAGEO",
+    "supplier": "DigiKey",
+    "supplier_part": "311-21.5KCRCT-ND",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0721K5L/727730",
+    "stock_observed": 2825,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.11
+      ],
+      [
+        10,
+        0.036
+      ],
+      [
+        25,
+        0.0272
+      ],
+      [
+        100,
+        0.0181
+      ]
+    ],
+    "lcsc": "",
+    "digikey_sku": "311-21.5KCRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0721K5L/727730",
+    "factory_stock_status": "External procurement; quote exact MPN before ordering"
+  },
+  "RC0805FR-072K61L": {
+    "mpn": "RC0805FR-072K61L",
+    "manufacturer": "YAGEO",
+    "supplier": "JLCPCB",
+    "supplier_part": "C273965",
+    "url": "https://jlcpcb.com/partdetail/C273965",
+    "stock_observed": 2680,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0075
+      ],
+      [
+        1000,
+        0.0065
+      ],
+      [
+        5000,
+        0.0059
+      ],
+      [
+        10000,
+        0.0055
+      ],
+      [
+        50000,
+        0.0052
+      ],
+      [
+        100000,
+        0.0051
+      ]
+    ],
+    "lcsc": "C273965",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "RC0805FR-072M2L": {
+    "mpn": "RC0805FR-072M2L",
+    "manufacturer": "YAGEO",
+    "supplier": "JLCPCB",
+    "supplier_part": "C137552",
+    "url": "https://jlcpcb.com/partdetail/C137552",
+    "stock_observed": 7154,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0073
+      ],
+      [
+        1000,
+        0.0064
+      ],
+      [
+        5000,
+        0.0058
+      ],
+      [
+        10000,
+        0.0055
+      ],
+      [
+        50000,
+        0.0052
+      ],
+      [
+        100000,
+        0.0051
+      ]
+    ],
+    "lcsc": "C137552",
+    "digikey_sku": "311-2.20MCRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-072M2L/727677",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "RC0805JR-070RL": {
+    "mpn": "RC0805JR-070RL",
+    "manufacturer": "YAGEO",
+    "supplier": "JLCPCB",
+    "supplier_part": "C96345",
+    "url": "https://jlcpcb.com/partdetail/C96345",
+    "stock_observed": 2050265,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0066
+      ],
+      [
+        1000,
+        0.0056
+      ],
+      [
+        5000,
+        0.0049
+      ],
+      [
+        10000,
+        0.0045
+      ],
+      [
+        50000,
+        0.0042
+      ],
+      [
+        100000,
+        0.004
+      ]
+    ],
+    "lcsc": "C96345",
+    "digikey_sku": "311-0.0ARCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC0805JR-070RL/728216",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "RC1206FR-0710KL": {
+    "mpn": "RC1206FR-0710KL",
+    "manufacturer": "YAGEO",
+    "supplier": "JLCPCB",
+    "supplier_part": "C132649",
+    "url": "https://jlcpcb.com/partdetail/C132649",
+    "stock_observed": 1936732,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0111
+      ],
+      [
+        500,
+        0.009
+      ],
+      [
+        1500,
+        0.0079
+      ],
+      [
+        5000,
+        0.007
+      ],
+      [
+        25000,
+        0.0064
+      ],
+      [
+        50000,
+        0.0061
+      ]
+    ],
+    "lcsc": "C132649",
+    "digikey_sku": "311-10.0KFRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RC1206FR-0710KL/728483",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "RT0805BRD07100KL": {
+    "mpn": "RT0805BRD07100KL",
+    "manufacturer": "YAGEO",
+    "supplier": "JLCPCB",
+    "supplier_part": "C122537",
+    "url": "https://jlcpcb.com/partdetail/C122537",
+    "stock_observed": 533788,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0437
+      ],
+      [
+        200,
+        0.0365
+      ],
+      [
+        600,
+        0.0334
+      ],
+      [
+        5000,
+        0.0297
+      ],
+      [
+        10000,
+        0.0287
+      ],
+      [
+        20000,
+        0.028
+      ]
+    ],
+    "lcsc": "C122537",
+    "digikey_sku": "YAG1759CT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RT0805BRD07100KL/1075539",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "RT0805BRD07102KL": {
+    "mpn": "RT0805BRD07102KL",
+    "manufacturer": "YAGEO",
+    "supplier": "JLCPCB",
+    "supplier_part": "C865126",
+    "url": "https://jlcpcb.com/partdetail/C865126",
+    "stock_observed": 9215,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0471
+      ],
+      [
+        200,
+        0.0386
+      ],
+      [
+        600,
+        0.0339
+      ],
+      [
+        5000,
+        0.0311
+      ],
+      [
+        10000,
+        0.0287
+      ],
+      [
+        20000,
+        0.0274
+      ]
+    ],
+    "lcsc": "C865126",
+    "digikey_sku": "YAG4817CT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RT0805BRD07102KL/1075541",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "RT0805BRD0712K1L": {
+    "mpn": "RT0805BRD0712K1L",
+    "manufacturer": "YAGEO",
+    "supplier": "JLCPCB",
+    "supplier_part": "C865169",
+    "url": "https://jlcpcb.com/partdetail/C865169",
+    "stock_observed": 6666,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0533
+      ],
+      [
+        200,
+        0.0448
+      ],
+      [
+        600,
+        0.0402
+      ],
+      [
+        5000,
+        0.0375
+      ],
+      [
+        10000,
+        0.035
+      ],
+      [
+        20000,
+        0.0337
+      ]
+    ],
+    "lcsc": "C865169",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "RT0805BRD0713K7L": {
+    "mpn": "RT0805BRD0713K7L",
+    "manufacturer": "YAGEO",
+    "supplier": "JLCPCB",
+    "supplier_part": "C865183",
+    "url": "https://jlcpcb.com/partdetail/C865183",
+    "stock_observed": 89,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0467
+      ],
+      [
+        200,
+        0.0383
+      ],
+      [
+        600,
+        0.0337
+      ],
+      [
+        5000,
+        0.0308
+      ],
+      [
+        10000,
+        0.0284
+      ],
+      [
+        20000,
+        0.0271
+      ]
+    ],
+    "lcsc": "C865183",
+    "digikey_sku": "YAG4829CT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/yageo/RT0805BRD0713K7L/1075594",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "RT0805BRD0720KL": {
+    "mpn": "RT0805BRD0720KL",
+    "manufacturer": "YAGEO",
+    "supplier": "JLCPCB",
+    "supplier_part": "C469660",
+    "url": "https://jlcpcb.com/partdetail/C469660",
+    "stock_observed": 26836,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0742
+      ],
+      [
+        100,
+        0.0659
+      ],
+      [
+        300,
+        0.0617
+      ],
+      [
+        1000,
+        0.0585
+      ],
+      [
+        5000,
+        0.056
+      ],
+      [
+        10000,
+        0.0547
+      ]
+    ],
+    "lcsc": "C469660",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "SK6805-EC15": {
+    "mpn": "SK6805-EC15",
+    "manufacturer": "OPSCO Optoelectronics",
+    "supplier": "JLCPCB",
+    "supplier_part": "C2890035",
+    "url": "https://jlcpcb.com/partdetail/C2890035",
+    "stock_observed": 233479,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.0995
+      ],
+      [
+        50,
+        0.0804
+      ],
+      [
+        150,
+        0.0707
+      ],
+      [
+        500,
+        0.0625
+      ],
+      [
+        2500,
+        0.0552
+      ],
+      [
+        4500,
+        0.0533
+      ]
+    ],
+    "lcsc": "C2890035",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "SMAJ13A-13-F": {
+    "mpn": "SMAJ13A-13-F",
+    "manufacturer": "Diodes Incorporated",
+    "supplier": "JLCPCB",
+    "supplier_part": "C110519",
+    "url": "https://jlcpcb.com/partdetail/C110519",
+    "stock_observed": 12888,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.124
+      ],
+      [
+        50,
+        0.1001
+      ],
+      [
+        150,
+        0.0881
+      ],
+      [
+        500,
+        0.0791
+      ],
+      [
+        2500,
+        0.0718
+      ],
+      [
+        5000,
+        0.0682
+      ]
+    ],
+    "lcsc": "C110519",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "SMAJ30A": {
+    "mpn": "SMAJ30A",
+    "manufacturer": "Littelfuse",
+    "supplier": "JLCPCB",
+    "supplier_part": "C148230",
+    "url": "https://jlcpcb.com/partdetail/C148230",
+    "stock_observed": 29435,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.1453
+      ],
+      [
+        50,
+        0.1165
+      ],
+      [
+        150,
+        0.1021
+      ],
+      [
+        500,
+        0.0912
+      ],
+      [
+        2500,
+        0.0689
+      ],
+      [
+        5000,
+        0.0645
+      ]
+    ],
+    "lcsc": "C148230",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "digikey_sku": "SMAJ30ALFCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/littelfuse-inc/SMAJ30A/762294"
+  },
+  "SMBJ22A-E3/52": {
+    "mpn": "SMBJ22A-E3/52",
+    "manufacturer": "Vishay",
+    "supplier": "JLCPCB",
+    "supplier_part": "C3698580",
+    "url": "https://jlcpcb.com/partdetail/C3698580",
+    "stock_observed": 177,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.467
+      ],
+      [
+        10,
+        0.3726
+      ],
+      [
+        30,
+        0.332
+      ],
+      [
+        100,
+        0.2815
+      ],
+      [
+        750,
+        0.2311
+      ],
+      [
+        1500,
+        0.2181
+      ]
+    ],
+    "lcsc": "C3698580",
+    "digikey_sku": "SMBJ22A-E3/52GICT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/SMBJ22A-E3-52/1119260",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "SN74AHCT1G125DBVR": {
+    "mpn": "SN74AHCT1G125DBVR",
+    "manufacturer": "Texas Instruments",
+    "supplier": "JLCPCB",
+    "supplier_part": "C7484",
+    "url": "https://jlcpcb.com/partdetail/C7484",
+    "stock_observed": 16283,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.1001
+      ],
+      [
+        50,
+        0.0798
+      ],
+      [
+        150,
+        0.0695
+      ],
+      [
+        500,
+        0.0619
+      ],
+      [
+        3000,
+        0.052
+      ],
+      [
+        6000,
+        0.0489
+      ]
+    ],
+    "lcsc": "C7484",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "SPN02SVEN-RC": {
+    "mpn": "SPN02SVEN-RC",
+    "manufacturer": "Sullins Connector Solutions",
+    "supplier": "DigiKey",
+    "supplier_part": "S9340-ND",
+    "url": "https://www.digikey.com/en/products/detail/sullins-connector-solutions/SPN02SVEN-RC/2618265",
+    "stock_observed": 175712,
+    "observed_date": "2026-09-08",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.1
+      ],
+      [
+        10,
+        0.06
+      ],
+      [
+        25,
+        0.0564
+      ],
+      [
+        50,
+        0.0538
+      ],
+      [
+        100,
+        0.0513
+      ]
+    ],
+    "lcsc": "",
+    "digikey_sku": "S9340-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/sullins-connector-solutions/SPN02SVEN-RC/2618265",
+    "factory_stock_status": "Loose accessory; closed-top 2 mm shunt, 3 per board"
+  },
+  "SRP5030TA-3R3M": {
+    "mpn": "SRP5030TA-3R3M",
+    "manufacturer": "Bourns",
+    "supplier": "JLCPCB",
+    "supplier_part": "C2042118",
+    "url": "https://jlcpcb.com/partdetail/C2042118",
+    "stock_observed": 39,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        2.3951
+      ],
+      [
+        10,
+        2.0371
+      ],
+      [
+        30,
+        1.8126
+      ],
+      [
+        100,
+        1.5816
+      ],
+      [
+        500,
+        1.479
+      ],
+      [
+        1000,
+        1.4335
+      ]
+    ],
+    "lcsc": "C2042118",
+    "digikey_sku": "SRP5030TA-3R3MCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP5030TA-3R3M/5429672",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "SRP7028A-100M": {
+    "mpn": "SRP7028A-100M",
+    "manufacturer": "Bourns",
+    "supplier": "JLCPCB",
+    "supplier_part": "C2687402",
+    "url": "https://jlcpcb.com/partdetail/C2687402",
+    "stock_observed": 5146,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.9356
+      ],
+      [
+        10,
+        0.7729
+      ],
+      [
+        30,
+        0.6916
+      ],
+      [
+        100,
+        0.6118
+      ],
+      [
+        500,
+        0.563
+      ],
+      [
+        1000,
+        0.5386
+      ]
+    ],
+    "lcsc": "C2687402",
+    "digikey_sku": "SRP7028A-100MCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP7028A-100M/4876733",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "STM32F042K6T6": {
+    "mpn": "STM32F042K6T6",
+    "manufacturer": "STMicroelectronics",
+    "supplier": "JLCPCB",
+    "supplier_part": "C69216",
+    "url": "https://jlcpcb.com/partdetail/C69216",
+    "stock_observed": 0,
+    "observed_date": "2026-09-10",
+    "moq": 4,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        2.9157
+      ],
+      [
+        10,
+        2.4976
+      ],
+      [
+        30,
+        2.2356
+      ],
+      [
+        250,
+        1.9037
+      ],
+      [
+        500,
+        1.7817
+      ],
+      [
+        1000,
+        1.7296
+      ]
+    ],
+    "lcsc": "C69216",
+    "digikey_sku": "497-14647-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F042K6T6/4815294",
+    "factory_stock_status": "HOLD: insufficient public JLC stock; exact-part sourcing and arrival unconfirmed",
+    "jlcpcb_url": "https://jlcpcb.com/partdetail/STMicroelectronics-STM32F042K6T6/C69216"
+  },
+  "TCAN3413DR": {
+    "mpn": "TCAN3413DR",
+    "manufacturer": "Texas Instruments",
+    "supplier": "JLCPCB",
+    "supplier_part": "C22433320",
+    "url": "https://jlcpcb.com/partdetail/C22433320",
+    "stock_observed": 2422,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        1.0153
+      ],
+      [
+        10,
+        0.8331
+      ],
+      [
+        30,
+        0.742
+      ],
+      [
+        100,
+        0.6525
+      ],
+      [
+        500,
+        0.5988
+      ],
+      [
+        1000,
+        0.5711
+      ]
+    ],
+    "lcsc": "C22433320",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "digikey_sku": "296-TCAN3413DRCT-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/TCAN3413DR/22147484"
+  },
+  "TPS2553DBVR-1": {
+    "mpn": "TPS2553DBVR-1",
+    "manufacturer": "Texas Instruments",
+    "supplier": "JLCPCB",
+    "supplier_part": "C111738",
+    "url": "https://jlcpcb.com/partdetail/C111738",
+    "stock_observed": 13075,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.2911
+      ],
+      [
+        50,
+        0.2316
+      ],
+      [
+        150,
+        0.206
+      ],
+      [
+        500,
+        0.1742
+      ],
+      [
+        3000,
+        0.1359
+      ],
+      [
+        6000,
+        0.1274
+      ]
+    ],
+    "lcsc": "C111738",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved",
+    "digikey_sku": "296-39380-1-ND",
+    "digikey_url": "https://www.digikey.com/en/products/detail/texas-instruments/TPS2553DBVR-1/2047901"
+  },
+  "TPS259620DDAR": {
+    "mpn": "TPS259620DDAR",
+    "manufacturer": "Texas Instruments",
+    "supplier": "JLCPCB",
+    "supplier_part": "C2155773",
+    "url": "https://jlcpcb.com/partdetail/C2155773",
+    "stock_observed": 25,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.8152
+      ],
+      [
+        10,
+        0.6541
+      ],
+      [
+        30,
+        0.5728
+      ],
+      [
+        100,
+        0.493
+      ],
+      [
+        500,
+        0.4459
+      ],
+      [
+        1000,
+        0.4198
+      ]
+    ],
+    "lcsc": "C2155773",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
+  },
+  "TPS61085DGKR": {
+    "mpn": "TPS61085DGKR",
+    "manufacturer": "Texas Instruments",
+    "supplier": "JLCPCB",
+    "supplier_part": "C113659",
+    "url": "https://jlcpcb.com/partdetail/C113659",
+    "stock_observed": 2251,
+    "observed_date": "2026-09-10",
+    "moq": 1,
+    "multiple": 1,
+    "tiers": [
+      [
+        1,
+        0.6004
+      ],
+      [
+        10,
+        0.4849
+      ],
+      [
+        30,
+        0.4345
+      ],
+      [
+        100,
+        0.3726
+      ],
+      [
+        500,
+        0.3157
+      ],
+      [
+        1000,
+        0.2994
+      ]
+    ],
+    "lcsc": "C113659",
+    "digikey_sku": "",
+    "digikey_url": "",
+    "factory_stock_status": "Public JLC stock sufficient for 10 boards plus allowance; not reserved"
   }
 }

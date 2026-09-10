@@ -1,0 +1,66 @@
+"""Audit the dated public JLC snapshot; availability is not reserved inventory."""
+from pathlib import Path
+import csv, hashlib, json
+
+R=Path(__file__).resolve().parents[1]
+snapshot=json.loads((R/'bom/jlc_sourcing.json').read_text())
+model=json.loads((R/'hardware/design/circuit.json').read_text())['parts']
+factory=list(csv.DictReader((R/'bom/Factory_BOM.csv').open()))
+jlc=list(csv.DictReader((R/'bom/BOM_JLCPCB.csv').open()))
+catalog=json.loads((R/'bom/catalog_china.json').read_text())
+rows=snapshot['parts'];by_mpn={r['mpn']:r for r in rows}
+assert len(rows)==len(by_mpn)==len(factory)==len(jlc)==55
+assert {r['MPN'] for r in factory}==set(by_mpn)
+assert all(r['LCSC Part #'] for r in jlc)
+refs=set();shortages=[];cash=0
+for f,j in zip(factory,jlc):
+ r=by_mpn[f['MPN']];s=catalog[f['MPN']]
+ assert r['lcsc']==f['LCSC_Part']==j['LCSC Part #']==s['lcsc']
+ assert f['MPN']==j['Comment'] and f['Designator']==j['Designator']
+ assert set(f['Designator'].split(', '))==set(r['references'])
+ assert int(f['Quantity'])==r['quantity_per_board']==len(r['references'])
+ assert r['assembly_mode']=='smtWeld' and r['allocation_confirmed'] is False
+ for ref in r['references']:
+  assert ref not in refs and model[ref]['mpn']==r['mpn']
+  assert model[ref]['footprint']==f['Footprint']
+  refs.add(ref)
+ need=snapshot['batch_boards']*r['quantity_per_board']
+ budget=max(need+r['attrition_allowance'],r['minimum_assembly'],r['minimum_purchase'])
+ assert budget==r['ten_board_budget_quantity']
+ sufficient=r['available_to_order']>=budget
+ assert sufficient==r['ten_board_stock_sufficient']
+ if not sufficient:shortages.append(dict(mpn=r['mpn'],lcsc=r['lcsc'],references=r['references'],required=budget,available=r['available_to_order'],source_url=r['source_url']))
+ price=max((t for t in r['price_tiers_usd'] if t[0]<=budget),key=lambda t:t[0])[1]
+ cash+=budget*price
+assert len(refs)==130
+manual=set(snapshot['hand_solder']['references'])
+assert len(manual)==10 and not refs&manual
+assert refs|manual=={r for r,c in model.items() if not c.get('exclude_bom')}
+for s in snapshot['substitutions']:
+ for ref in s['references']:
+  assert model[ref]['mpn']==s['new_mpn'] and model[ref]['value']==s['value']
+  assert model[ref]['footprint']==s['footprint']
+for d in snapshot['datasheets']:
+ assert hashlib.sha256((R/d['file']).read_bytes()).hexdigest()==d['sha256']
+# The sourcing candidate must change only the reviewed MPN strings. This also
+# proves the existing physical renders still depict the exact saved geometry.
+for path,key in [('hardware/FRC_Sensor_CAN.kicad_pcb','baseline_board_sha256'),('hardware/design/circuit.json','baseline_model_sha256')]:
+ restored=(R/path).read_text()
+ for s in snapshot['substitutions']:restored=restored.replace(s['new_mpn'],s['old_mpn'])
+ assert hashlib.sha256(restored.encode()).hexdigest()==snapshot[key],('Change beyond sourcing metadata',path)
+basic=sum(r['library_class']=='base' for r in rows)
+preferred=sum(r['library_class']=='expand' and r['preferred_extended'] for r in rows)
+fees=len(rows)-basic-preferred
+hand=float(next(r for r in csv.DictReader((R/'bom/cost_estimate.csv').open()) if r['boards']=='10')['hand_parts_cash_per_board_usd'])
+report=dict(result='PASS sourcing-file consistency; HOLD public-stock shortage' if shortages else 'PASS sourcing-file consistency; allocation unconfirmed',
+ observed_utc=snapshot['observed_utc'],boards=10,factory_placements=130,matched_mpn_types=len(rows),stock_sufficient_types=len(rows)-len(shortages),
+ shortage_types=shortages,basic_types=basic,preferred_extended_types=preferred,ordinary_extended_types=fees,
+ smt_parts_with_conservative_attrition_per_board_usd=round(cash/10,2),manual_parts_per_board_usd=hand,
+ combined_parts_budget_per_board_usd=round(cash/10+hand,2),
+ economic_setup_stencil_loading_budget_per_order_usd=round(8.18+1.53+3.07*fees,2),
+ quantity_method=snapshot['quantity_method'],factory_allocation_confirmed=False,only_reviewed_mpn_metadata_changed=True,
+ order_decision='HOLD: user approval and new simulations pending; MCU sourcing and factory stack/quote unconfirmed',
+ limitations='Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.',
+ input_hashes={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in ['bom/jlc_sourcing.json','bom/catalog_china.json','bom/Factory_BOM.csv','bom/BOM_JLCPCB.csv','hardware/design/circuit.json','hardware/FRC_Sensor_CAN.kicad_pcb','scripts/check_jlc_sourcing.py']})
+(R/'reports/manufacturing/jlc_sourcing.json').write_text(json.dumps(report,indent=2)+'\n')
+print(json.dumps(report,indent=2))

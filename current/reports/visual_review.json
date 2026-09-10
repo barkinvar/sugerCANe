@@ -1,6 +1,6 @@
 {
   "result": "Visual review completed",
-  "reviewed_utc": "2026-09-09T23:52:16.918628+00:00",
+  "reviewed_utc": "2026-09-10T00:23:12.378655+00:00",
   "reviewer": "Codex visual inspection",
   "artifacts": [
     {
@@ -36,36 +36,36 @@
     },
     {
       "file": "output/documentation/SC12_RevH_Handbook.pdf",
-      "sha256": "22fc3a1e98751f506cb6a15a8b6cf83df85e9add06e1de91e1cad8018fccb705",
-      "scope": "All 38 pages compared to e1e4146 at 1.5x. Changed pages 1, 3, 4, 5, 35 and 36 visually inspected: current render, enforced routing, corrected DC model/results and reproduction instructions. All other pages pixel-identical.",
-      "reviewed_utc": "2026-09-09T23:52:16.918628+00:00"
+      "sha256": "050d5accd6d4d89dac6c9c333932e3f6806cc7f170f58f39ac342114da69e546",
+      "scope": "All 39 pages compared against 8d4deb4 at 1x. Changed pages 2, 3, 4, 5, 24, 25, 33, 34, 35, 36, 37, 38, 39 visually inspected after JLC sourcing update: readable tables/status, no clipped or overlapping content.",
+      "reviewed_utc": "2026-09-10T00:23:12.378655+00:00"
     },
     {
       "file": "output/documentation/BOM_RevH_SC12.pdf",
-      "sha256": "6dcda8e3c2ffe9f7426b0e7fcce7c344e274e119a566bb8e8fa8e3f5e249774d",
-      "scope": "All three rendered pages are pixel-identical to the preceding reviewed BOM; its visual review is retained. BOM and parts price unchanged.",
-      "reviewed_utc": "2026-09-09T21:28:24.716091+00:00",
-      "evidence": "Unchanged artifact; preceding documented visual review retained."
+      "sha256": "500e995b0c6d48755ab7e27797306207a7c26f7cc898caca6a4b044605e477c1",
+      "scope": "All 3 pages compared against 8d4deb4 at 1x. Changed pages 1, 2, 3 visually inspected after JLC sourcing update: readable tables/status, no clipped or overlapping content.",
+      "reviewed_utc": "2026-09-10T00:23:12.378655+00:00"
     },
     {
       "file": "output/mechanical/mechanical_drawing.pdf",
-      "sha256": "9f01a25690cc4a0142cf40b85e46614eba36c72b35dd191f4bcb29e1943716d9",
-      "scope": "Both pages reviewed: R1.5 contour and callout, same 52x74 outline bounds, mounting holes, connectors, LED duct, service socket and pin map.",
-      "reviewed_utc": "2026-09-09T21:28:24.716091+00:00",
-      "evidence": "Unchanged artifact; preceding documented visual review retained."
+      "sha256": "9768ff75073035cc20d1729501652b98f1263df04e1cdf499c70e0edf7b8b4ee",
+      "scope": "All 2 rendered pages are pixel-identical to reviewed 8d4deb4; MPN metadata changes do not alter visible drawing.",
+      "reviewed_utc": "2026-09-10T00:23:12.378655+00:00",
+      "evidence": "Raster comparison of every page; preceding visual review retained."
     },
     {
       "file": "output/assembly/schematic.pdf",
-      "sha256": "5deedab49075e784ef1b626358562ef316261e28a01a64da52e326b82728e90f",
-      "scope": "All ten rendered pages are pixel-identical to the preceding reviewed schematic; prior visual review retained.",
-      "reviewed_utc": "2026-09-09T21:59:37.589781+00:00",
-      "evidence": "Unchanged artifact; preceding documented visual review retained."
+      "sha256": "dcba81909b2dfcd785eb7c5a39da0fdadd903ecc36c54e506476e4ab4f6c09cf",
+      "scope": "All 10 rendered pages are pixel-identical to reviewed 8d4deb4; MPN metadata changes do not alter visible drawing.",
+      "reviewed_utc": "2026-09-10T00:23:12.378655+00:00",
+      "evidence": "Raster comparison of every page; preceding visual review retained."
     },
     {
       "file": "output/assembly/top_assembly.pdf",
-      "sha256": "308e20ab4b3a293879f145a91b1ecd3ed5dfd9ccc6ab555c5c76b7a094bd75c4",
-      "scope": "Assembly page reviewed: all three voltage-label pairs above their headers, with unchanged footprint outlines and references.",
-      "reviewed_utc": "2026-09-09T22:05:35.554121+00:00"
+      "sha256": "0b86a983ca45011ee485ee353905938c641240ac317444c1e1d98058bf6f6e77",
+      "scope": "All 1 rendered pages are pixel-identical to reviewed 8d4deb4; MPN metadata changes do not alter visible drawing.",
+      "reviewed_utc": "2026-09-10T00:23:12.378655+00:00",
+      "evidence": "Raster comparison of every page; preceding visual review retained."
     },
     {
       "file": "output/assembly/gerber_copper_review.pdf",
@@ -82,9 +82,10 @@
     },
     {
       "file": "output/assembly/bottom_markings.pdf",
-      "sha256": "9ade726034a8ca597c9e820ae6733516e913e2d05acbc3ab13facaa8a4e32a65",
-      "scope": "Rendered underside drawing reviewed: readable pixel sugarCANe name, separated letters, explicit g descender and open lowercase e. Original cane stands on a convex island with a stepped underside; no corner ornaments or additional text. Terminals and mounting holes remain clear. Drawing outline is Edge.Cuts, not printed silk.",
-      "reviewed_utc": "2026-09-09T23:35:29.145933+00:00"
+      "sha256": "694786b998ec98aefeef804ed7fa11cd9ceb7b5c54fd7e014d90fa18f24a631d",
+      "scope": "All 1 rendered pages are pixel-identical to reviewed 8d4deb4; MPN metadata changes do not alter visible drawing.",
+      "reviewed_utc": "2026-09-10T00:23:12.378655+00:00",
+      "evidence": "Raster comparison of every page; preceding visual review retained."
     },
     {
       "file": "reports/electrical/input_spice.png",
@@ -204,5 +205,6 @@
     "baseline_board_sha256": "4dbc9208492c918116b7ac64fa8dd2f690e22194182b16fcd156fdfab12a3d91",
     "board_sha256": "fd0300a03fefe04b3450b189a5eaf8c5ebc6f14a9a142200d0e18a809b69be98",
     "scope": "Routing cleanup only; no component, electrical-function, BOM or firmware changes. Final routing, DRC, parity, local bypass, exported Gerber and DC-drop reports are separate gates."
-  }
+  },
+  "sourcing_geometry_note": "Board byte content matches 8d4deb4 after reversing only nine reviewed MPN strings. Existing physical renders and their visual reviews remain valid."
 }

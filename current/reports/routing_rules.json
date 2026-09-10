@@ -11,7 +11,7 @@
   "short_contact_segments": 390,
   "findings": {},
   "scope": "Routing geometry only. Copper round end caps are normal; no curved centerlines. Pad/via contacts and true branch junctions allow local transitions. Native DRC and independent Gerber connectivity/clearance must also pass.",
-  "board_sha256": "fd0300a03fefe04b3450b189a5eaf8c5ebc6f14a9a142200d0e18a809b69be98",
+  "board_sha256": "85f74e465e756b93e1b06f61adb20a1a58a1414991ad05d22cc8444673235f61",
   "source_hashes": {
     "scripts/check_routing.py": "1f88287a8bf9761cd7c3570b8d7b562ec14df69b2a6c89ddfdc40ec6bc9fd547",
     "scripts/export_routing_geometry.py": "a35183f74b2afdc5ef575fed722e655b6c17a8d7d00a303318dd90f026c5fa94"

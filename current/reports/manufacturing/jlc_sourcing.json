@@ -1,0 +1,41 @@
+{
+  "result": "PASS sourcing-file consistency; HOLD public-stock shortage",
+  "observed_utc": "2026-09-10T00:19:45.436918+00:00",
+  "boards": 10,
+  "factory_placements": 130,
+  "matched_mpn_types": 55,
+  "stock_sufficient_types": 54,
+  "shortage_types": [
+    {
+      "mpn": "STM32F042K6T6",
+      "lcsc": "C69216",
+      "references": [
+        "U5"
+      ],
+      "required": 10,
+      "available": 0,
+      "source_url": "https://jlcpcb.com/partdetail/C69216"
+    }
+  ],
+  "basic_types": 12,
+  "preferred_extended_types": 1,
+  "ordinary_extended_types": 42,
+  "smt_parts_with_conservative_attrition_per_board_usd": 17.78,
+  "manual_parts_per_board_usd": 8.7,
+  "combined_parts_budget_per_board_usd": 26.48,
+  "economic_setup_stencil_loading_budget_per_order_usd": 138.65,
+  "quantity_method": "Conservative budget: max(fitted quantity plus displayed lossNumber, leastPatchNumber, minPurchaseNum). Actual checkout attrition/minimums may differ.",
+  "factory_allocation_confirmed": false,
+  "only_reviewed_mpn_metadata_changed": true,
+  "order_decision": "HOLD: user approval and new simulations pending; MCU sourcing and factory stack/quote unconfirmed",
+  "limitations": "Catalog snapshots and displayed price tiers are not a cart, guaranteed stock, complete assembled cost, qualified reflow profile or lead-time commitment.",
+  "input_hashes": {
+    "bom/jlc_sourcing.json": "de699e17394fe23a5f3a5f6816fc92d455dab99e66c216bc6fcbb95467a26fc2",
+    "bom/catalog_china.json": "2f6c5aa94e4fa244699916afbd5e3491fccada22058eac77c01d8ce95f949f41",
+    "bom/Factory_BOM.csv": "1bcd08b11bb784d48a6ee393300d054345cff93bd6e4d71e55e10136c156230f",
+    "bom/BOM_JLCPCB.csv": "10277d76b991fed2259d62a83f88b4f9f150c63aa82ec869b0895cd85abdcd5b",
+    "hardware/design/circuit.json": "3f077ab74530cf41d072d848b7192e28bee21ccba3a22e8232b252556e57556c",
+    "hardware/FRC_Sensor_CAN.kicad_pcb": "85f74e465e756b93e1b06f61adb20a1a58a1414991ad05d22cc8444673235f61",
+    "scripts/check_jlc_sourcing.py": "112402d52009883524ce9c6c141d1a79896f60b7c45bb2f4760a093ac263d5a6"
+  }
+}

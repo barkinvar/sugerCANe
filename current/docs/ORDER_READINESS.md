@@ -1,10 +1,10 @@
 # Rev H pre-fabrication review
 
-Rev H retains Rev G's power-path repairs and adds RGB diagnostics plus a recessed female service socket. The current native PCB, pin mapping, manufacturing exports, firmware and input simulations pass their checks. No physical board has been tested.
+**Current order decision: HOLD.** The [JLC sourcing candidate](JLC_SOURCING.md) changes six passive MPN types at nine placements, preserving electrical values and layout. Native CAD/manufacturing and BOM consistency are checked. New power/input simulations are deferred until user approval, and U5 still needs exact-part sourcing. No physical board has been tested.
 
-The latest rerun completed all eight standalone power cases and both input half-timestep repeats. The two full coupled-startup traces remain incomplete, so the order decision is **HOLD for full power evidence**. Sixteen one-way waveform replays also pass through the actual firmware power monitor, including ADC-error corners.
+The electrical results below describe the preceding BOM at commit `8d4deb4`. Eight standalone power cases, ten input cases and sixteen firmware waveform replays passed there; both full coupled-startup traces remained incomplete. Retained reports are baseline evidence and have not been revalidated against the substituted BOM.
 
-The native routed-copper calculation is fresh for the cleaned routing. At the stated 85°C/nominal-copper assumptions, the buck-output-to-boost-input drop is 51.57 mV against a 120 mV allowance. The worst sensor branch drops 40.98 mV at 300 mA against a 60 mV allowance. The clearance, rounded-outline, female socket and jumper-label changes remain in the checked CAD.
+The native routed-copper calculation was calculated for the cleaned routing before the MPN substitutions. At the stated 85°C/nominal-copper assumptions, the buck-output-to-boost-input drop is 51.57 mV against a 120 mV allowance. The worst sensor branch drops 40.98 mV at 300 mA against a 60 mV allowance. The clearance, rounded-outline, female socket and jumper-label changes remain in the checked CAD.
 
 The DC model now recognizes overlapping track copper, contacts inside a straight segment and via connections on multiple layers, using the saved stackup depths. Buck-to-boost drop is measured between those two terminals; the older value was relative to the buck feedback tap. These figures therefore are not a direct before/after performance comparison. Six resistor-network regression fixtures check known resistance, segment subdivision, contacts, via depths, voltage-reference independence and genuine opens. The model still assumes ideal pad/via-annulus copper and does not solve current crowding or heating.
 
